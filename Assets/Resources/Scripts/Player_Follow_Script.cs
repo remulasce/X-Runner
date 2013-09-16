@@ -17,7 +17,7 @@ public class Player_Follow_Script : MonoBehaviour {
         if (player.GetComponent<Player_Movement_Script>().isActive)
         {
             Vector3 tempVector = transform.position;
-            tempVector.x = player.transform.position.x;
+            tempVector.x = player.transform.position.x + 8;
             tempVector.y = player.transform.position.y;
             transform.position = tempVector;
         }
