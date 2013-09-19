@@ -29,6 +29,9 @@ public class Player_Movement_Script : MonoBehaviour {
             this.rigidbody.AddForce(new Vector3(0, forceValuePreJump, 0));
             isJumping = true;
 			canJump = false;
+			
+			Application.LoadLevelAdditive("test_add_scene");
+			//Application.LoadLevel("test_add_scene");
         }
 		if ((Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Space)) && isJumping)
         {
@@ -66,3 +69,4 @@ public class Player_Movement_Script : MonoBehaviour {
         }
     }
 }
+
