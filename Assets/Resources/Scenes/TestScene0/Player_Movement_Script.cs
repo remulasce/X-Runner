@@ -14,7 +14,9 @@ public class Player_Movement_Script : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		//We should persist for the next level transition
+		DontDestroyOnLoad(this);
+		
 	}
 	
 	void DoXVelocity()
@@ -30,7 +32,7 @@ public class Player_Movement_Script : MonoBehaviour {
             isJumping = true;
 			canJump = false;
 			
-			Application.LoadLevelAdditive("test_add_scene");
+			//Application.LoadLevelAdditive("test_add_scene");
 			//Application.LoadLevel("test_add_scene");
         }
 		if ((Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Space)) && isJumping)
@@ -67,6 +69,19 @@ public class Player_Movement_Script : MonoBehaviour {
             canJump = true;
             isJumping = false;
         }
+		
+		//Next level stuff: Persist some stuff for the next level
+		if (other.gameObject.CompareTag("Ship") && Application.loadedLevelName == "test_scene_0")
+		{
+			print ("Hit goal, moving to next level");
+			
+			Transform ship = (Transform)(GameObject.FindGameObjectWithTag("Ship").GetComponent<Transform>());
+			DontDestroyOnLoad(ship);
+			LoadHandler.level0ship = ship;
+			
+			
+			Application.LoadLevel("test_scene_1");
+		}
     }
 }
 

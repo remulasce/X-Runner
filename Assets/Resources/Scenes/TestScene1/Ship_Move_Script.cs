@@ -11,7 +11,7 @@ public class Ship_Move_Script : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
+		DontDestroyOnLoad (this);
     }
 
     // Update is called once per frame
@@ -24,15 +24,15 @@ public class Ship_Move_Script : MonoBehaviour {
         }
 
         Vector3 tempVector = transform.position;
-        tempVector.x += movementSpeed * Time.deltaTime;
+        tempVector.y += movementSpeed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.A))
         {
-            tempVector.y += evasiveSpeed * Time.deltaTime;
+            tempVector.x -= evasiveSpeed * Time.deltaTime;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.D))
         {
-            tempVector.y -= evasiveSpeed * Time.deltaTime;
+            tempVector.x += evasiveSpeed * Time.deltaTime;
         }
         transform.position = tempVector;
     }
