@@ -7,8 +7,7 @@ public class CanabaltCamera : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		DontDestroyOnLoad(this);
-		LoadHandler.level0Camera = this.GetComponent<Camera>();
+		
 	}
 	
 	// Update is called once per frame
