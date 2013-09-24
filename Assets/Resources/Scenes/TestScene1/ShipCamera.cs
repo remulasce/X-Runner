@@ -9,19 +9,12 @@ public class ShipCamera : MonoBehaviour {
 	void Start () {
 		//Snap us to the previous camera, or wherever, so we can
 		//	do transition
+		this.transform.position = _Loader_L1.start.camera_pos;
+		this.transform.rotation = _Loader_L1.start.camera_rot;
+
 		
-		if (LoadHandler.level0Camera != null)
-		{
-			this.transform.position = LoadHandler.level0Camera.transform.position;
-			this.transform.rotation = LoadHandler.level0Camera.transform.rotation;
-			
-			//Destroy(LoadHandler.level0Camera);
-			LoadHandler.level0Camera.enabled = false;
-			
-			print (LoadHandler.level0Camera.enabled);
-			
-			follow = LoadHandler.level0ship;
-		}
+		follow = _Loader_L1.start.ship.GetComponent<Transform>();
+	
 		
 	}
 	

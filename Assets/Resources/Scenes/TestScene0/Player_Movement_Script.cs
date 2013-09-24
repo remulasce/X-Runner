@@ -73,14 +73,7 @@ public class Player_Movement_Script : MonoBehaviour {
 		//Next level stuff: Persist some stuff for the next level
 		if (other.gameObject.CompareTag("Ship") && Application.loadedLevelName == "test_scene_0")
 		{
-			print ("Hit goal, moving to next level");
-			
-			Transform ship = (Transform)(GameObject.FindGameObjectWithTag("Ship").GetComponent<Transform>());
-			DontDestroyOnLoad(ship);
-			LoadHandler.level0ship = ship;
-			
-			
-			Application.LoadLevel("test_scene_1");
+			_Loader_L0.loader.EndLevel();
 		}
     }
 }

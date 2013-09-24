@@ -404,7 +404,7 @@ Transform:
   m_PrefabInternal: {fileID: 1872009176}
   m_GameObject: {fileID: 1355638708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.2818222, y: 3, z: 0}
+  m_LocalPosition: {x: 1.12688446, y: 3, z: 0}
   m_LocalScale: {x: 6, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -431,6 +431,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1452797654}
+  - 114: {fileID: 1452797655}
   m_Layer: 0
   m_Name: _Loader
   m_TagString: Untagged
@@ -449,6 +450,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1452797655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452797653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f92f29ed0c454fa280564ace82ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theCamera: {fileID: 1638722764}
+  ground: {fileID: 306960817}
 --- !u!1 &1618375810
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +630,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: b9e33306107b5054a9f168ef459edf0a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 76.2818222
+      value: 1.12688446
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b9e33306107b5054a9f168ef459edf0a, type: 2}
       propertyPath: m_LocalPosition.y
