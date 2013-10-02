@@ -11,6 +11,12 @@ public class Player_Movement_Script : MonoBehaviour {
     public bool canJump = true;
 
     public bool isActive = true;
+    public float timeJumpThreshold = 0.5f; // Will be used to allow for when the script can check if the player is in the air
+
+    [HideInInspector]
+    public bool isInAir = false; // If the player is in the air, the camera will follow in y (prevents jenky camera movement)
+
+    private float timeWhenLastJumped = 0.0f; // Will check when the player last jumped
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +37,8 @@ public class Player_Movement_Script : MonoBehaviour {
             this.rigidbody.AddForce(new Vector3(0, forceValuePreJump, 0));
             isJumping = true;
 			canJump = false;
+            isInAir = true;
+            timeWhenLastJumped = Time.time;
 			
 			//Application.LoadLevelAdditive("test_add_scene");
 			//Application.LoadLevel("test_add_scene");
@@ -61,13 +69,17 @@ public class Player_Movement_Script : MonoBehaviour {
     void OnCollisionEnter(Collision other) 
     {
 		//Tags are precompiled into an enum, so they don't have to do string operations.
-		//Check to make sure the thing we hit was below us
-		//Also, don't bother.
-        if (/*other.gameObject.CompareTag("Platform") &&*/ other.contacts[0].normal.y > 0)
+		//Check to make sure the thing we hit was below us		
+        if (other.contacts[0].normal.y > 0)
         {
-			print ("Can Jump Now "+Time.time);
+			//print ("Can Jump Now "+Time.time);
             canJump = true;
             isJumping = false;
+            if (isInAir && (Time.time - timeWhenLastJumped > 0.5f))
+            {
+                print("Not in air anymore"+Time.time);
+                isInAir = false;
+            }
         }
 		
 		//Next level stuff: Persist some stuff for the next level
