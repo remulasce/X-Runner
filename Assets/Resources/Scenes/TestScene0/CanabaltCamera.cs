@@ -5,7 +5,8 @@ public class CanabaltCamera : MonoBehaviour {
 	
 	public GameObject player;
 
-    public float moveOffset = 8.0f;
+    public float moveOffsetX = 8.0f;
+    public float moveOffsetY = 1.0f;
 
     // Used for camera zooming
     [Range(-5.0f, -100.0f)]
@@ -19,7 +20,7 @@ public class CanabaltCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        this.transform.position = new Vector3(player.transform.position.x + moveOffset, player.transform.position.y, startingZPosition);
+        this.transform.position = new Vector3(player.transform.position.x + moveOffsetX, player.transform.position.y + moveOffsetY, startingZPosition);
 	}
 	
 	// Update is called once per frame
@@ -27,10 +28,10 @@ public class CanabaltCamera : MonoBehaviour {
 		if (this.gameObject.activeSelf)
 		{
 			Vector3 tempVector = transform.position;
-            tempVector.x = player.transform.position.x + moveOffset;
+            tempVector.x = player.transform.position.x + moveOffsetX;
             if (player.GetComponent<Player_Movement_Script>().isInAir)
             {
-                tempVector.y = player.transform.position.y;
+                tempVector.y = player.transform.position.y + moveOffsetY;
             }
             transform.position = tempVector;
 		}
