@@ -71,7 +71,7 @@ public class Player_Movement_Script : MonoBehaviour {
 
     void OnCollisionEnter(Collision other) 
     {
-        if (other.contacts[0].normal.x < -0.95 && other.gameObject.CompareTag("Terrain")) // Then stop -- you hit the wall while jumping
+        if (other.contacts[0].normal.x < -0.5 && other.gameObject.CompareTag("Terrain")) // Then stop -- you hit the wall while jumping
         {
             hitWallSideways = true;
         }
