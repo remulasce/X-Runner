@@ -17,17 +17,20 @@ public class Player_Movement_Script : MonoBehaviour {
     public bool isInAir = false; // If the player is in the air, the camera will follow in y (prevents jenky camera movement)
 
     private float timeWhenLastJumped = 0.0f; // Will check when the player last jumped
+    private bool hitWallSideways = false;
 
 	// Use this for initialization
 	void Start () {
 		//We should persist for the next level transition
-		DontDestroyOnLoad(this);
-		
+		DontDestroyOnLoad(this);		
 	}
 	
 	void DoXVelocity()
 	{
-		this.transform.position += new Vector3(movementSpeed * Time.deltaTime, 0, 0);
+        if (!hitWallSideways)
+        {
+            this.transform.position += new Vector3(movementSpeed * Time.deltaTime, 0, 0);
+        }
 	}
 	
 	void DoJump()
@@ -62,22 +65,27 @@ public class Player_Movement_Script : MonoBehaviour {
 		
 		DoXVelocity();
 		DoJump();
-		
 
+        //print(rigidbody.velocity);
     }
 
     void OnCollisionEnter(Collision other) 
     {
-		//Tags are precompiled into an enum, so they don't have to do string operations.
+        if (other.contacts[0].normal.x < -0.95 && other.gameObject.CompareTag("Terrain")) // Then stop -- you hit the wall while jumping
+        {
+            hitWallSideways = true;
+        }
+        //Tags are precompiled into an enum, so they don't have to do string operations.
 		//Check to make sure the thing we hit was below us		
-        if (other.contacts[0].normal.y > 0)
+        else if (other.contacts[0].normal.y > 0)
         {
 			//print ("Can Jump Now "+Time.time);
             canJump = true;
             isJumping = false;
+            hitWallSideways = false;
             if (isInAir && (Time.time - timeWhenLastJumped > 0.5f))
             {
-                print("Not in air anymore"+Time.time);
+                //print("Not in air anymore"+Time.time);
                 isInAir = false;
             }
         }
