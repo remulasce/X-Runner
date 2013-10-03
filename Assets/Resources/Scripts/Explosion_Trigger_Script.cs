@@ -21,6 +21,7 @@ public class Explosion_Trigger_Script : MonoBehaviour {
         {
             Debug.Log("Explosion Trigger Hit!");
             explodingPlatform.rigidbody.constraints = RigidbodyConstraints.None;
+            explodingPlatform.GetComponent<Destructive_Platform_Script>().ApplyStagedForce();
         }
     }
 }
