@@ -16,7 +16,12 @@ public class Explosion_Trigger_Script : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider other)
-    {       
+    {
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+        
         Debug.Log("Explosion Trigger Hit!");
         foreach (GameObject explodingPlatform in explodingPlatforms)
         {
