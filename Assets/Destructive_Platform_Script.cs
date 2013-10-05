@@ -8,6 +8,8 @@ public class Destructive_Platform_Script : MonoBehaviour {
     public float forceMagnitude = 0.0f;
     public Vector3 constantVectorForce = Vector3.zero;
     public float timeToApplyCF = 0.0f;
+    public float delayToApplyForces = 0.0f;
+    public RigidbodyConstraints postActivationConstraints = RigidbodyConstraints.None;
 
     private float startTime = 0.0f;
 
@@ -26,6 +28,13 @@ public class Destructive_Platform_Script : MonoBehaviour {
 
     public void ApplyStagedForce()
     {
+        StartCoroutine("ApplyForceDelay");
+    }
+
+    public IEnumerator ApplyForceDelay()
+    {
+        yield return new WaitForSeconds(delayToApplyForces);
+        this.rigidbody.constraints = postActivationConstraints;
         this.rigidbody.AddForceAtPosition(forceToApply * forceMagnitude * -UnityEngine.Physics.gravity.y, pointToApplyForce + this.transform.position);
         startTime = Time.time;
     }

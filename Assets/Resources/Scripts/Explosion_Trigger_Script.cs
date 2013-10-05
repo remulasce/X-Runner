@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Explosion_Trigger_Script : MonoBehaviour {
 
-    public GameObject explodingPlatform;
+    public GameObject[] explodingPlatforms;
 
 	// Use this for initialization
 	void Start () {
@@ -16,12 +16,14 @@ public class Explosion_Trigger_Script : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider other)
-    {
-        if (explodingPlatform != null)
+    {       
+        Debug.Log("Explosion Trigger Hit!");
+        foreach (GameObject explodingPlatform in explodingPlatforms)
         {
-            Debug.Log("Explosion Trigger Hit!");
-            explodingPlatform.rigidbody.constraints = RigidbodyConstraints.None;
-            explodingPlatform.GetComponent<Destructive_Platform_Script>().ApplyStagedForce();
-        }
+            if (explodingPlatform != null)
+            {                
+                explodingPlatform.GetComponent<Destructive_Platform_Script>().ApplyStagedForce();
+            }
+        }        
     }
 }
