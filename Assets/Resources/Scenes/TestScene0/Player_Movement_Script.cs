@@ -22,7 +22,7 @@ public class Player_Movement_Script : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//We should persist for the next level transition
-		DontDestroyOnLoad(this);		
+		//DontDestroyOnLoad(this);		not any more, because that was bogus.
 	}
 	
 	void DoXVelocity()
@@ -58,6 +58,17 @@ public class Player_Movement_Script : MonoBehaviour {
 		}
 	}
 	
+	//If we're below the ground, respawn us above it and (ahead) us a little.
+	//	Ahead for the vertical slice since it's not possible to win if you don't
+	//	have the triggers set properly.
+	void CheckDead()
+	{
+		if (this.transform.position.y < -10)
+		{
+			this.transform.position = new Vector3(this.transform.position.x + 10, 1, 0);
+		}
+	}
+	
 	// Update is called once per frame
 	void Update () {
         if (!isActive) {return;}
@@ -65,6 +76,7 @@ public class Player_Movement_Script : MonoBehaviour {
 		
 		DoXVelocity();
 		DoJump();
+		CheckDead();
 
         //print(rigidbody.velocity);
     }
