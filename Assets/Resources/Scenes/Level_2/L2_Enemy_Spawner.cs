@@ -4,7 +4,9 @@ using System.Collections;
 
 /** This is an enemy spawner! */
 public class L2_Enemy_Spawner : MonoBehaviour {
-
+	
+	public L2_Elite_Script elite;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -16,16 +18,32 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	WaveType[] roster = { 
 		WaveType.Side, 
 		WaveType.EliteVisit,
+		WaveType.Side,
 		WaveType.Line,
+		WaveType.Line,
+		WaveType.Side,
+		WaveType.Side,
+		WaveType.Line,
+		WaveType.Line,
+		WaveType.Side,
 		//WaveType.Loop,
 		WaveType.EliteVisit,
 		WaveType.Line,
 		WaveType.Side,
 		WaveType.Line,
+		WaveType.Side,
+		WaveType.Line,
+		WaveType.Line,
+		WaveType.Side,
 		WaveType.EliteVisit,
 		//WaveType.Loop,
 		WaveType.Line,
+		WaveType.Side,
 		WaveType.Line,
+		WaveType.Line,
+		WaveType.Side,
+		WaveType.Line,
+		WaveType.Side,
 		WaveType.EliteBoss };
 		
 	
@@ -42,7 +60,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 				yield return new WaitForSeconds(2);
 				break;
 			case WaveType.EliteVisit:
-				MakeEliteComeHang(2);
+				MakeEliteComeHang(5);
 				yield return new WaitForSeconds(2);
 				break;
 			case WaveType.Line:
@@ -101,13 +119,15 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	void MakeEliteComeHang(float seconds)
 	{
 		//Temp: Just do something else
-		SpawnHorizLine(6);
+		//SpawnHorizLine(6);
+		elite.AppearFor(seconds);
 	}
 	
 	//Make the elite come and do a final boss fight.
 	void MakeEliteBoss()
 	{
-		SpawnHorizLine(10);
+		//SpawnHorizLine(10);
+		elite.DoBoss();
 	}
 	
 	// Update is called once per frame
