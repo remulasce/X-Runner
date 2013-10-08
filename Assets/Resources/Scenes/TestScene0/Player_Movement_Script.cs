@@ -97,7 +97,7 @@ public class Player_Movement_Script : MonoBehaviour {
         //Tags are precompiled into an enum, so they don't have to do string operations.
 		//Check to make sure the thing we hit was below us	
 
-        Debug.Log(other.contacts[0].normal);
+        //Debug.Log(other.contacts[0].normal);
 
         if (other.contacts[0].normal.y > 0)
         {

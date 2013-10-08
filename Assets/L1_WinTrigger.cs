@@ -18,7 +18,8 @@ public class L1_WinTrigger : MonoBehaviour {
 	{
 		if (col.gameObject.CompareTag("Player"))
 		{
-			Application.LoadLevel("Level_2_TDS");
+			//Application.LoadLevel("Level_2_TDS");
+			this.transform.parent.animation.Play();
 		}
 	}
 	

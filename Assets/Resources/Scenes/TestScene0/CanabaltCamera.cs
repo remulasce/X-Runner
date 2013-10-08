@@ -28,11 +28,23 @@ public class CanabaltCamera : MonoBehaviour {
 		if (this.gameObject.activeSelf)
 		{
 			Vector3 tempVector = transform.position;
-            tempVector.x = player.transform.position.x + moveOffsetX;
-            if (player.GetComponent<Player_Movement_Script>().isInAir && player.transform.position.y > 0.0f)
-            {
-                tempVector.y = player.transform.position.y + moveOffsetY;
-            }
+			
+			//We're not necessarily following a player all the time
+			if (player.CompareTag("Player"))
+			{
+	            tempVector.x = player.transform.position.x + moveOffsetX;
+	            if (player.GetComponent<Player_Movement_Script>().isInAir && player.transform.position.y > 0.0f)
+	            {
+	                tempVector.y = player.transform.position.y + moveOffsetY;
+	            }
+			}
+			else
+			{
+				tempVector.x = player.transform.position.x;
+				tempVector.y = player.transform.position.y;
+			
+			}
+			
             transform.position = tempVector;
 		}
 	}
