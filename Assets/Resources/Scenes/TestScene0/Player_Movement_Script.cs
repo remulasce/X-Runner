@@ -11,7 +11,7 @@ public class Player_Movement_Script : MonoBehaviour {
     public bool canJump = true;
 
     public bool isActive = true;
-    public float timeJumpThreshold = 0.5f; // Will be used to allow for when the script can check if the player is in the air
+    public float timeJumpThreshold = 0.5f; // Will be used to allow for when the script can check if the player is in the air    
 
     [HideInInspector]
     public bool isInAir = false; // If the player is in the air, the camera will follow in y (prevents jenky camera movement)
@@ -65,7 +65,10 @@ public class Player_Movement_Script : MonoBehaviour {
 	{
 		if (this.transform.position.y < -10)
 		{
-			this.transform.position = new Vector3(this.transform.position.x + 10, 1, 0);
+            this.rigidbody.velocity = Vector3.zero;
+            this.transform.position = new Vector3(this.transform.position.x, 1, 0);
+            this.rigidbody.AddForce(new Vector3(500, 0, 0));
+            hitWallSideways = false;
 		}
 	}
 	
@@ -83,13 +86,12 @@ public class Player_Movement_Script : MonoBehaviour {
 
     void OnCollisionEnter(Collision other) 
     {
-        if (other.contacts[0].normal.x < -0.5 && other.gameObject.CompareTag("Terrain")) // Then stop -- you hit the wall while jumping
-        {
-            hitWallSideways = true;
-        }
         //Tags are precompiled into an enum, so they don't have to do string operations.
-		//Check to make sure the thing we hit was below us		
-        else if (other.contacts[0].normal.y > 0)
+		//Check to make sure the thing we hit was below us	
+
+        Debug.Log(other.contacts[0].normal);
+
+        if (other.contacts[0].normal.y > 0)
         {
 			//print ("Can Jump Now "+Time.time);
             canJump = true;
@@ -101,6 +103,11 @@ public class Player_Movement_Script : MonoBehaviour {
                 isInAir = false;
             }
         }
+
+        if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !hitWallSideways) // Then stop -- you hit the wall while jumping
+        {
+            hitWallSideways = true;
+        }
 		
 		//Next level stuff: Persist some stuff for the next level
 		if (other.gameObject.CompareTag("Ship") && Application.loadedLevelName == "test_scene_0")
@@ -108,5 +115,11 @@ public class Player_Movement_Script : MonoBehaviour {
 			_Loader_L0.loader.EndLevel();
 		}
     }
+
+    /*ADDERESS THIS LATER*/
+    //void OnCollisionExit(Collision other)
+    //{
+    //    canJump = false; // Will be set to false when the player leaves a platform so a jump in midair cannot occur 
+    //}
 }
 

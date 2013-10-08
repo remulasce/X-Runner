@@ -29,7 +29,7 @@ public class CanabaltCamera : MonoBehaviour {
 		{
 			Vector3 tempVector = transform.position;
             tempVector.x = player.transform.position.x + moveOffsetX;
-            if (player.GetComponent<Player_Movement_Script>().isInAir)
+            if (player.GetComponent<Player_Movement_Script>().isInAir && player.transform.position.y > 0.0f)
             {
                 tempVector.y = player.transform.position.y + moveOffsetY;
             }
