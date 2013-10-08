@@ -16,6 +16,9 @@ public class Player_Movement_Script : MonoBehaviour {
     [HideInInspector]
     public bool isInAir = false; // If the player is in the air, the camera will follow in y (prevents jenky camera movement)
 
+    public bool isJetPackActive = false; // Will allow the player to float for longer when this is active
+    public float jetPackFloatingForce = 0.0f;
+
     private float timeWhenLastJumped = 0.0f; // Will check when the player last jumped
     private bool hitWallSideways = false;
 
@@ -37,6 +40,7 @@ public class Player_Movement_Script : MonoBehaviour {
 	{
 		if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) && canJump)
         {
+            this.rigidbody.velocity = Vector3.zero;
             this.rigidbody.AddForce(new Vector3(0, forceValuePreJump, 0));
             isJumping = true;
 			canJump = false;
@@ -55,6 +59,10 @@ public class Player_Movement_Script : MonoBehaviour {
 		if (isJumping)
 		{
 			this.rigidbody.AddForce(new Vector3(0, forceValuePostJump, 0));
+            if (isJetPackActive) // Add in the extra jetpack force if the player has attained it
+            {
+                this.rigidbody.AddForce(new Vector3(0, jetPackFloatingForce, 0));
+            }
 		}
 	}
 	
