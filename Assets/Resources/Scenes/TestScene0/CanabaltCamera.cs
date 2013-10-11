@@ -20,7 +20,11 @@ public class CanabaltCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        this.transform.position = new Vector3(player.transform.position.x + moveOffsetX, player.transform.position.y + moveOffsetY, startingZPosition);
+        this.transform.position = new Vector3(
+            player.transform.position.x + moveOffsetX, 
+            player.transform.position.y + moveOffsetY, 
+            startingZPosition
+            );
 	}
 	
 	// Update is called once per frame
@@ -32,7 +36,7 @@ public class CanabaltCamera : MonoBehaviour {
 			//We're not necessarily following a player all the time
 			if (player.CompareTag("Player"))
 			{
-	            tempVector.x = player.transform.position.x + moveOffsetX;
+                tempVector.x = player.transform.position.x + moveOffsetX - player.GetComponent<Player_Movement_Script>().horizontalMovement.playerOffset;
 	            if (player.GetComponent<Player_Movement_Script>().isInAir && player.transform.position.y > 0.0f)
 	            {
 	                tempVector.y = player.transform.position.y + moveOffsetY;
@@ -40,9 +44,8 @@ public class CanabaltCamera : MonoBehaviour {
 			}
 			else
 			{
-				tempVector.x = player.transform.position.x;
-				tempVector.y = player.transform.position.y;
-			
+                tempVector.x = player.transform.position.x;
+				tempVector.y = player.transform.position.y;			
 			}
 			
             transform.position = tempVector;

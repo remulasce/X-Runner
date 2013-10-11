@@ -17,7 +17,25 @@ public class Player_Movement_Script : MonoBehaviour {
     public bool isInAir = false; // If the player is in the air, the camera will follow in y (prevents jenky camera movement)
 
     public bool isJetPackActive = false; // Will allow the player to float for longer when this is active
-    public float jetPackFloatingForce = 0.0f;
+    public float jetPackFloatingForce = 0.0f; // This force will be added to the player's regular floating velocity
+
+    // Values for being able to move left and right
+    [System.Serializable]
+    public class HorizontalMovementData
+    {
+        [Range(-5.0f, 0.0f)]
+        public float leftMovementThreshold = 0.0f;
+
+        [Range(0.0f, 20.0f)]
+        public float rightMovementThreshold = 0.0f;
+
+        [Range(0.0f, 15.0f)]
+        public float movementSpeed = 0.0f;
+
+        public float playerOffset = 0.0f;
+    }
+
+    public HorizontalMovementData horizontalMovement = new HorizontalMovementData();
 
     private float timeWhenLastJumped = 0.0f; // Will check when the player last jumped
     private bool hitWallSideways = false;
@@ -65,6 +83,40 @@ public class Player_Movement_Script : MonoBehaviour {
             }
 		}
 	}
+
+    void DoSideWaysMovement()
+    {
+        if (isJumping && isInAir) // Player cannot move while in jump
+        {
+            return;
+        }        
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            if (horizontalMovement.playerOffset > horizontalMovement.leftMovementThreshold)
+            {
+                horizontalMovement.playerOffset -= horizontalMovement.movementSpeed * Time.deltaTime;
+                this.transform.position -= new Vector3(horizontalMovement.movementSpeed * Time.deltaTime, 0, 0);
+            }
+            else
+            {
+                horizontalMovement.playerOffset = horizontalMovement.leftMovementThreshold;
+            }
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            if (horizontalMovement.playerOffset < horizontalMovement.rightMovementThreshold)
+            {
+                horizontalMovement.playerOffset += horizontalMovement.movementSpeed * Time.deltaTime;
+                this.transform.position += new Vector3(horizontalMovement.movementSpeed * Time.deltaTime, 0, 0);
+            }
+            else 
+            {
+                horizontalMovement.playerOffset = horizontalMovement.rightMovementThreshold;
+            }
+        }        
+        //Debug.Log("Movement Offset: " + horizontalMovement.playerOffset);
+    }
 	
 	//If we're below the ground, respawn us above it and (ahead) us a little.
 	//	Ahead for the vertical slice since it's not possible to win if you don't
@@ -83,8 +135,8 @@ public class Player_Movement_Script : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (!isActive) {return;}
-        
-		
+
+        DoSideWaysMovement();
 		DoXVelocity();
 		DoJump();
 		CheckDead();
