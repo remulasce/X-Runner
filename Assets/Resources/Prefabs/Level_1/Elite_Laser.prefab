@@ -11,12 +11,11 @@ GameObject:
   - 33: {fileID: 3300000}
   - 65: {fileID: 6500000}
   - 23: {fileID: 2300000}
-  - 111: {fileID: 11100000}
   - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
   m_Layer: 0
-  m_Name: Crashing_Ship_Window
-  m_TagString: Untagged
+  m_Name: Elite_Laser
+  m_TagString: L1_Elite_Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.44595337, y: 27.0875568, z: 96.7601929}
-  m_LocalScale: {x: 8.16316986, y: 3.06641221, z: 14.920702}
+  m_LocalPosition: {x: 95.6287994, y: 0, z: -7.78388977}
+  m_LocalScale: {x: .5, y: .5, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -44,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6ec1bbc30bd22e44b81c3a422cd13b0f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -84,24 +83,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!111 &11100000
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: fbe2793a9b835e040b1fa4fe5032a7c4, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: fbe2793a9b835e040b1fa4fe5032a7c4, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
-  m_UserAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,10 +91,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a38e7926dade7124db4c132a53c9cd7c, type: 3}
+  m_Script: {fileID: 11500000, guid: d40fbc965dee2434cb40ebbfc6400846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInteractWith: {fileID: 0}
+  target: {fileID: 0}
+  laserSpeed: 25
+  targetOffset: {x: 0, y: 0, z: 0}
+  nonTargetDirection: {x: 0, y: 0, z: 1}
+  postCollisionParticleSystem: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
