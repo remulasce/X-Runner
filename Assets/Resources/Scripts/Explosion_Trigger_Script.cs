@@ -22,7 +22,7 @@ public class Explosion_Trigger_Script : MonoBehaviour {
             return;
         }
         
-        Debug.Log("Explosion Trigger Hit!");
+        //Debug.Log("Explosion Trigger Hit!");
         foreach (GameObject explodingPlatform in explodingPlatforms)
         {
             if (explodingPlatform != null)

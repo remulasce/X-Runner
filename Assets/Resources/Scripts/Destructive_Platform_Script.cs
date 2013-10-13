@@ -11,6 +11,8 @@ public class Destructive_Platform_Script : MonoBehaviour {
     public float delayToApplyForces = 0.0f;
     public RigidbodyConstraints postActivationConstraints = RigidbodyConstraints.None;
 
+    public GameObject postActivationParticleSystem;
+
     private float startTime = 0.0f;
 
 	// Use this for initialization
@@ -37,5 +39,11 @@ public class Destructive_Platform_Script : MonoBehaviour {
         this.rigidbody.constraints = postActivationConstraints;
         this.rigidbody.AddForceAtPosition(forceToApply * forceMagnitude * -UnityEngine.Physics.gravity.y, pointToApplyForce + this.transform.position);
         startTime = Time.time;
+
+        // If there is a particle System Attached, play it
+        if (postActivationParticleSystem)
+        {
+            postActivationParticleSystem.particleSystem.Play();            
+        }
     }
 }
