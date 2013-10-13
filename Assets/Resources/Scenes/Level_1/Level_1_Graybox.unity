@@ -15569,7 +15569,7 @@ Transform:
   m_GameObject: {fileID: 626472868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.44595337, y: 27.0875568, z: 96.7601929}
-  m_LocalScale: {x: 8.16316986, y: 3.06641221, z: 14.920702}
+  m_LocalScale: {x: 10, y: 5, z: 20}
   m_Children: []
   m_Father: {fileID: 1006293852}
 --- !u!111 &626472873
@@ -15612,11 +15612,11 @@ Rigidbody:
   m_PrefabInternal: {fileID: 1473968029}
   m_GameObject: {fileID: 626472868}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -16780,6 +16780,10 @@ Prefab:
     - target: {fileID: 400000, guid: 9ec3b009c4a5c3a41b72cbeb11c9af5d, type: 2}
       propertyPath: m_LocalRotation.w
       value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9ec3b009c4a5c3a41b72cbeb11c9af5d, type: 2}
+      propertyPath: m_Name
+      value: PS_Explosion_Ship
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ec3b009c4a5c3a41b72cbeb11c9af5d, type: 2}
@@ -23481,9 +23485,13 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1006293852}
     m_Modifications:
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -18.4955444
+      value: -22.9848709
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -23525,6 +23533,46 @@ Prefab:
       propertyPath: postCollisionParticleSystem
       value: 
       objectReference: {fileID: 1947142570}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].target
+      value: 
+      objectReference: {fileID: 626472868}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].target
+      value: 
+      objectReference: {fileID: 2047753708}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].targetOffset.z
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1947142570}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].laserSpeed
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_TagString
+      value: L1_Elite_Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].delay
+      value: .25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
   m_RootGameObject: {fileID: 1834276212}
@@ -25284,7 +25332,7 @@ GameObject:
   - 198: {fileID: 979893601}
   - 199: {fileID: 979893600}
   m_Layer: 0
-  m_Name: PS_Explosion_Small
+  m_Name: PS_Explosion_Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39159,6 +39207,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 5400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
   m_RootGameObject: {fileID: 626472868}
@@ -49253,7 +49309,7 @@ GameObject:
   - 114: {fileID: 1834276214}
   m_Layer: 0
   m_Name: Elite_Ship_Laser_Trigger
-  m_TagString: Untagged
+  m_TagString: L1_Elite_Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49265,7 +49321,7 @@ Transform:
   m_PrefabInternal: {fileID: 904192874}
   m_GameObject: {fileID: 1834276212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.4955444, y: 1.93388939, z: .199371338}
+  m_LocalPosition: {x: -22.9848709, y: 1.93388939, z: .199371338}
   m_LocalScale: {x: 1, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 1006293852}
@@ -49281,10 +49337,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 626472868}
-  targetOffset: {x: 0, y: 0, z: -10}
-  laserSpeed: 2000
-  postCollisionParticleSystem: {fileID: 1947142570}
+  targets:
+  - target: {fileID: 626472868}
+    targetOffset: {x: 0, y: 0, z: -20}
+    laserSpeed: 1500
+    postCollisionParticleSystem: {fileID: 1947142570}
+    delay: 0
+  - target: {fileID: 2047753708}
+    targetOffset: {x: 0, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 0}
+    delay: .25
 --- !u!65 &1834276215
 BoxCollider:
   m_ObjectHideFlags: 0

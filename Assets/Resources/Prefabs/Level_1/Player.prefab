@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 21f48d22ea8e9c54fb567abfc7e9c5c9, type: 2}
+  - {fileID: 2100000, guid: b4ee995c09e5bb84083b227ccb90838b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -90,6 +90,13 @@ MonoBehaviour:
   isActive: 1
   timeJumpThreshold: .5
   isInAir: 0
+  isJetPackActive: 0
+  jetPackFloatingForce: 0
+  horizontalMovement:
+    leftMovementThreshold: 0
+    rightMovementThreshold: 0
+    movementSpeed: 0
+    playerOffset: 0
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

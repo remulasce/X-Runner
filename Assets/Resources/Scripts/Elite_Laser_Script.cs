@@ -14,9 +14,7 @@ public class Elite_Laser_Script : MonoBehaviour {
 	void Start () {
         if (target)
         {
-            Transform addedTransform = target.transform;
-            addedTransform.position += targetOffset;
-            this.transform.LookAt(addedTransform.transform, this.transform.up); // Set the direction here
+            this.transform.LookAt(target.transform.position + targetOffset, this.transform.up); // Set the direction here
         }
         else
         {
@@ -35,9 +33,7 @@ public class Elite_Laser_Script : MonoBehaviour {
         
         if (target)
         {
-            Transform addedTransform = target.transform;
-            addedTransform.position += targetOffset;
-            this.transform.LookAt(addedTransform.transform, this.transform.up); // Set the direction here
+            this.transform.LookAt(target.transform.position + targetOffset, this.transform.up); // Set the direction here
         }
         else
         {
@@ -60,6 +56,11 @@ public class Elite_Laser_Script : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.CompareTag("L1_Elite_Laser")) // Do not want enemy lasers to hit and destroy each other
+        {
+            return;
+        }
+        
         if (postCollisionParticleSystem)
         {
             postCollisionParticleSystem.transform.position = other.contacts[0].point; // Set the particle system to the collision point
