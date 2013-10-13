@@ -20,7 +20,7 @@ public class Elite_Laser_Script : MonoBehaviour {
         {
             this.transform.LookAt(nonTargetDirection, this.transform.up); // Set the direction here
         }
-        Debug.Log(this.transform.forward);
+        //Debug.Log(this.transform.forward);
 	}
 
     // Use this for initialization from another object
@@ -39,7 +39,7 @@ public class Elite_Laser_Script : MonoBehaviour {
         {
             this.transform.LookAt(nonTargetDirection, this.transform.up); // Set the direction here
         }
-        Debug.Log(this.transform.forward);
+        //Debug.Log(this.transform.forward);
     }
 
 	// Update is called once per frame
@@ -65,8 +65,10 @@ public class Elite_Laser_Script : MonoBehaviour {
         {
             postCollisionParticleSystem.transform.position = other.contacts[0].point; // Set the particle system to the collision point
             postCollisionParticleSystem.particleSystem.Play();
-            postCollisionParticleSystem.transform.parent = other.gameObject.transform;
-        }        
+            postCollisionParticleSystem.transform.parent = other.gameObject.transform;            
+        }
+
+        Debug.Log("Laser Hit: " + other.gameObject.name);
 
         Object.Destroy(this.gameObject);
     }

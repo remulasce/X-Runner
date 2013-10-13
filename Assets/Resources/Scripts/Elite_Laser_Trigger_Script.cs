@@ -42,8 +42,7 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
         {
             for (int i = 0; i < targets.Length; i++)
             {
-                StartCoroutine("DelayLaserShot", targets[i]);
-                Debug.Log("Laser Trigger Hit!");
+                StartCoroutine("DelayLaserShot", targets[i]);                
             }
         }
     }

@@ -24,7 +24,7 @@ public class CanabaltCamera : MonoBehaviour {
             player.transform.position.x + moveOffsetX, 
             player.transform.position.y + moveOffsetY, 
             startingZPosition
-            );
+        );
 	}
 	
 	// Update is called once per frame

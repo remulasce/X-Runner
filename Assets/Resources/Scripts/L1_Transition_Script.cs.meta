@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 242737e79bfa8c240aaf45c50c8a3bb6
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - fakePlayer: {instanceID: 0}
+  - fakeShip: {instanceID: 0}
+  - mainCamera: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
