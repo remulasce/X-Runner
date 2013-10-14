@@ -18758,7 +18758,7 @@ Transform:
   m_GameObject: {fileID: 626472868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.44595337, y: 27.0875568, z: 96.7601929}
-  m_LocalScale: {x: 18.0200748, y: 7.5, z: 24}
+  m_LocalScale: {x: 15, y: 5, z: 15}
   m_Children: []
   m_Father: {fileID: 1006293852}
 --- !u!111 &626472873
@@ -20847,7 +20847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceToApply: {x: 0, y: -1, z: 0}
-  pointToApplyForce: {x: 0, y: 0, z: 55}
+  pointToApplyForce: {x: 0, y: 0, z: 30}
   forceMagnitude: 2e+06
   constantVectorForce: {x: 0, y: 9600000, z: 0}
   timeToApplyCF: 8
@@ -38898,7 +38898,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: pointToApplyForce.z
-      value: 55
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: m_Size.x
@@ -46979,15 +46979,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 18.0200748
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_LocalScale.y
-      value: 7.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_LocalScale.z
-      value: 24
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
