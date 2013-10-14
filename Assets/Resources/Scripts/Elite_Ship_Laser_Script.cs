@@ -26,7 +26,7 @@ public class Elite_Ship_Laser_Script : MonoBehaviour {
         laser.GetComponent<Elite_Laser_Script>().Initialize(target, offSet, laserSpeed, postCollisionParticleSystem);
         
         currentCannon++;
-        if (currentCannon > cannons.Length)
+        if (currentCannon >= cannons.Length)
         {
             currentCannon = 0;
         }
