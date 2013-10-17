@@ -6474,6 +6474,7 @@ MonoBehaviour:
     rightMovementThreshold: 20
     movementSpeed: 7
     playerOffset: 0
+    forcePushOffWall: -3000
 --- !u!23 &137554355
 Renderer:
   m_ObjectHideFlags: 0
@@ -7064,7 +7065,7 @@ Animation:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158324610}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 8b17262bbae24494b94d7672de727d0e, type: 2}
   m_Animations:

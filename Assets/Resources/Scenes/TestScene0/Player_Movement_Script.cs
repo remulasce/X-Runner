@@ -33,6 +33,9 @@ public class Player_Movement_Script : MonoBehaviour {
         public float movementSpeed = 0.0f;
 
         public float playerOffset = 0.0f;
+
+        [Range(-10000.0f, 0.0f)]
+        public float forcePushOffWall = -3000.0f;
     }
 
     public HorizontalMovementData horizontalMovement = new HorizontalMovementData();
@@ -126,8 +129,7 @@ public class Player_Movement_Script : MonoBehaviour {
 		if (this.transform.position.y < -10)
 		{
             this.rigidbody.velocity = Vector3.zero;
-            this.transform.position = new Vector3(this.transform.position.x, 1, 0);
-            this.rigidbody.AddForce(new Vector3(500, 0, 0));
+            this.transform.position = new Vector3(this.transform.position.x, 1, 0);            
             hitWallSideways = false;
 		}
 	}
@@ -164,9 +166,10 @@ public class Player_Movement_Script : MonoBehaviour {
             }
         }
 
-        if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !hitWallSideways) // Then stop -- you hit the wall while jumping
+        if (other.contacts[0].normal.x < -0.5 && other.gameObject.CompareTag("Terrain") && !hitWallSideways) // Then stop -- you hit the wall while jumping
         {
             hitWallSideways = true;
+            this.rigidbody.AddForce(new Vector3(horizontalMovement.forcePushOffWall, 0, 0));
         }
 		
 		//Next level stuff: Persist some stuff for the next level

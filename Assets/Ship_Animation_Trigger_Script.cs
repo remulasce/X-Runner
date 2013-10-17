@@ -17,7 +17,7 @@ public class Ship_Animation_Trigger_Script : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (eliteShip)
+        if (eliteShip && other.gameObject.CompareTag("Player"))
         {
             eliteShip.animation.Play();
         }
