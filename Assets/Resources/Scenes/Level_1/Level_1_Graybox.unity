@@ -1092,7 +1092,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: forceValuePostJump
-      value: 650
+      value: 45000
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_TagString
@@ -1100,7 +1100,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: forceValuePreJump
-      value: 60000
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: movementSpeed
@@ -1124,11 +1124,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: jetPackFloatingForce
-      value: 700
+      value: 40000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: isJetPackActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: canJump
@@ -6460,15 +6460,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 16.5
-  forceValuePostJump: 650
-  forceValuePreJump: 60000
+  forceValuePostJump: 45000
+  forceValuePreJump: 50000
   isJumping: 0
   canJump: 1
   isActive: 1
   timeJumpThreshold: .5
   isInAir: 0
-  isJetPackActive: 0
-  jetPackFloatingForce: 700
+  isJetPackActive: 1
+  jetPackFloatingForce: 40000
   horizontalMovement:
     leftMovementThreshold: -5
     rightMovementThreshold: 20
@@ -52966,8 +52966,8 @@ Transform:
   m_LocalPosition: {x: 516.327942, y: 11.7191305, z: -11.1251831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1415521076}
   - {fileID: 1337463581}
+  - {fileID: 1415521076}
   - {fileID: 755874709}
   m_Father: {fileID: 0}
 --- !u!1001 &1621032768

@@ -76,10 +76,10 @@ public class Player_Movement_Script : MonoBehaviour {
 		//Jump farther if we keep the space bar held down longer.
 		if (isJumping)
 		{
-			this.rigidbody.AddForce(new Vector3(0, forceValuePostJump, 0));
+			this.rigidbody.AddForce(new Vector3(0, forceValuePostJump * Time.deltaTime, 0));
             if (isJetPackActive) // Add in the extra jetpack force if the player has attained it
             {
-                this.rigidbody.AddForce(new Vector3(0, jetPackFloatingForce, 0));
+                this.rigidbody.AddForce(new Vector3(0, jetPackFloatingForce * Time.deltaTime, 0));
             }
 		}
 	}
