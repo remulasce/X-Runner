@@ -17,8 +17,11 @@ public class DeSpawn_Script : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Object Destroyed:" + other.gameObject.name);
-        
-        Object.Destroy(other.gameObject);
+        //Debug.Log("Object Destroyed:" + other.gameObject.name);
+
+        // HACK ALERT -- particle system I do not want destroyed are getting destroyed when they are parented to these objects say, after a laser shot.  Will transform trick to not destroy entire object
+        // Object.Destroy(other.gameObject);
+
+        other.gameObject.rigidbody.detectCollisions = false;
     }
 }

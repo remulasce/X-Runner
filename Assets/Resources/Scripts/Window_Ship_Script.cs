@@ -15,7 +15,8 @@ public class Window_Ship_Script : MonoBehaviour {
         if (!animation.isPlaying)
         {
             objectToInteractWith.GetComponent<Destructive_Platform_Script>().ApplyStagedForce();
-            Object.Destroy(this.gameObject);
+            this.transform.position = Vector3.zero;
+            //Object.Destroy(this.gameObject);
         }
 	}
 }

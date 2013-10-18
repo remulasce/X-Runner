@@ -166,7 +166,7 @@ public class Player_Movement_Script : MonoBehaviour {
             }
         }
 
-        if (other.contacts[0].normal.x < -0.5 && other.gameObject.CompareTag("Terrain") && !hitWallSideways) // Then stop -- you hit the wall while jumping
+        if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !hitWallSideways) // Then stop -- you hit the wall while jumping
         {
             hitWallSideways = true;
             this.rigidbody.AddForce(new Vector3(horizontalMovement.forcePushOffWall, 0, 0));

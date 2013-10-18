@@ -14,11 +14,11 @@ public class Elite_Laser_Script : MonoBehaviour {
 	void Start () {
         if (target)
         {
-            this.transform.LookAt(target.transform.position + targetOffset, this.transform.up); // Set the direction here
+            this.transform.LookAt(target.transform.position + targetOffset, new Vector3(0,1,0)); // Set the direction here
         }
         else
         {
-            this.transform.LookAt(nonTargetDirection, this.transform.up); // Set the direction here
+            this.transform.LookAt(nonTargetDirection, new Vector3(0,1,0)); // Set the direction here
         }
         //Debug.Log(this.transform.forward);
 	}
@@ -33,11 +33,11 @@ public class Elite_Laser_Script : MonoBehaviour {
         
         if (target)
         {
-            this.transform.LookAt(target.transform.position + targetOffset, this.transform.up); // Set the direction here
+            this.transform.LookAt(target.transform.position + targetOffset, new Vector3(0,1,0)); // Set the direction here
         }
         else
         {
-            this.transform.LookAt(nonTargetDirection, this.transform.up); // Set the direction here
+            this.transform.LookAt(nonTargetDirection, new Vector3(0,1,0)); // Set the direction here
         }
         //Debug.Log(this.transform.forward);
     }
@@ -68,7 +68,7 @@ public class Elite_Laser_Script : MonoBehaviour {
             postCollisionParticleSystem.transform.parent = other.gameObject.transform;            
         }
 
-        Debug.Log("Laser Hit: " + other.gameObject.name);
+        //Debug.Log("Laser Hit: " + other.gameObject.name);
 
         Object.Destroy(this.gameObject);
     }

@@ -11,10 +11,10 @@ GameObject:
   - 33: {fileID: 3300000}
   - 65: {fileID: 6500000}
   - 23: {fileID: 2300000}
-  - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: Elite_Laser
+  m_Name: Elite_Laser_Homing
   m_TagString: L1_Elite_Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 95.6287994, y: 0, z: -7.78388977}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 2, y: 2, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 6ec1bbc30bd22e44b81c3a422cd13b0f, type: 2}
+  - {fileID: 2100000, guid: 270ca6e9336432946ab66f9fbedb6676, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -83,7 +83,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11400000
+--- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,14 +91,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d40fbc965dee2434cb40ebbfc6400846, type: 3}
+  m_Script: {fileID: 11500000, guid: 1553de0ebe3257744abde056bda4db72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  laserSpeed: 25
+  laserSpeed: 50
   targetOffset: {x: 0, y: 0, z: 0}
   nonTargetDirection: {x: 0, y: 0, z: 1}
   postCollisionParticleSystem: {fileID: 0}
+  initialOffset: {x: 0, y: 0, z: 0}
+  percentToCloseOffset: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

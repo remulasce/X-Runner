@@ -29,4 +29,15 @@ public class Elite_Ship_Laser_Script : MonoBehaviour {
             currentCannon = 0;
         }
     }
+
+    public void FireHomingLaserAt(GameObject target, Vector3 offSet, float laserSpeed, GameObject postCollisionParticleSystem, Elite_Laser_Trigger_Script.homingTargetInformation hm)
+    {
+        GameObject laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_1/Elite_Laser_Homing"), cannons[currentCannon].transform.position, Quaternion.identity);
+        laser.GetComponent<Elite_Laser_Homing_Script>().Initialize(target, offSet, laserSpeed, postCollisionParticleSystem, hm);
+        currentCannon++;
+        if (currentCannon >= cannons.Length)
+        {
+            currentCannon = 0;
+        }
+    }
 }

@@ -12,6 +12,17 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
     public GameObject postCollisionParticleSystem; // Sometimes, if the laser hits something, a particle system should go off.
      * */
 
+    public enum laserType { REGULAR, HOMING };
+
+    [System.Serializable]
+    public class homingTargetInformation
+    {
+        public Vector3 initialHomingOffset = Vector3.zero;
+        [Range(0.0f, 0.9999999f)]
+        public float percentToCloseOffset = 0.0f; // How fast the distance between the initial homing offset will be covered from 0 to 0.9999999
+        public float closingMagnitude = 1.0f; // If the mangitude of the distance between the target reaches this distance, the missile will no longer home onto the target
+    }
+
     [System.Serializable]
     public class targetInformation
     {
@@ -21,6 +32,10 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
         public float laserSpeed;
         public GameObject postCollisionParticleSystem; // Sometimes, if the laser hits something, a particle system should go off.
         public float delay;
+        public laserType laserType;
+
+        // Special Values for if the laserType is homing
+        public homingTargetInformation homingMissileProperties;    
     };
 
     public targetInformation[] targets; // Will be settable from the inspector
@@ -42,7 +57,14 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
         {
             for (int i = 0; i < targets.Length; i++)
             {
-                StartCoroutine("DelayLaserShot", targets[i]);                
+                if (targets[i].laserType == laserType.REGULAR)
+                {
+                    StartCoroutine("DelayLaserShot", targets[i]);
+                }
+                else if (targets[i].laserType == laserType.HOMING)
+                {
+                    StartCoroutine("DelayHomingLaserShot", targets[i]);
+                }
             }
         }
     }
@@ -51,5 +73,11 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
     {
         yield return new WaitForSeconds(t.delay);
         eliteShipLaserScript.FireLaserAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem);
+    }
+
+    public IEnumerator DelayHomingLaserShot(targetInformation t)
+    {
+        yield return new WaitForSeconds(t.delay);
+        eliteShipLaserScript.FireHomingLaserAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem, t.homingMissileProperties);
     }
 }
