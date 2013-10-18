@@ -36751,7 +36751,7 @@ MonoBehaviour:
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 500
     postCollisionParticleSystem: {fileID: 979893598}
-    delay: 2.5
+    delay: 2.25
     laserType: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
@@ -45057,7 +45057,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].delay
-      value: 2.5
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: m_Name
@@ -62730,7 +62730,7 @@ MonoBehaviour:
   forceMagnitude: 0
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
-  delayToApplyForces: 16
+  delayToApplyForces: 18
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
 --- !u!54 &1605324234
@@ -86704,7 +86704,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: delayToApplyForces
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: constantVectorForce.y
