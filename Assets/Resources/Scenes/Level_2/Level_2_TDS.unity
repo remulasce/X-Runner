@@ -354,6 +354,26 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.acceleration
+      value: 2250
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.startupBoost
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.startupCutoff
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.maxSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.frictionConstant
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}
@@ -499,14 +519,21 @@ Transform:
 --- !u!114 &1556197952
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390,
+    type: 2}
+  m_PrefabInternal: {fileID: 1276527799}
   m_GameObject: {fileID: 1556197947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d7e7b7a4b274f2439c108e1819e594d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement:
+    maxSpeed: 12
+    acceleration: 2250
+    startupBoost: 500
+    startupCutoff: 500
+    frictionConstant: 100
 --- !u!54 &1556197953
 Rigidbody:
   m_ObjectHideFlags: 0
