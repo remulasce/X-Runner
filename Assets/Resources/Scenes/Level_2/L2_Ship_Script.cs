@@ -53,7 +53,7 @@ public class L2_Ship_Script : MonoBehaviour
 
         if (viewPortPos.x < boundaryData.lowerHorizontalRange)
         {
-            Debug.Log("Past Lower Boundary X");            
+            //Debug.Log("Past Lower Boundary X");            
             return false; // Then the player cannot move in this direction anymore
         }
         return true;
@@ -65,7 +65,7 @@ public class L2_Ship_Script : MonoBehaviour
 
         if (viewPortPos.x > boundaryData.upperHorizontalRange)
         {
-            Debug.Log("Past Upper Boundary X");
+            //Debug.Log("Past Upper Boundary X");
             return false; // Then the player cannot move in this direction anymore
         }
         return true;
@@ -77,7 +77,7 @@ public class L2_Ship_Script : MonoBehaviour
 
         if (viewPortPos.y < boundaryData.lowerVerticalRange)
         {
-            Debug.Log("Past Lower Boundary Y");
+            //Debug.Log("Past Lower Boundary Y");
             return false; // Then the player cannot move in this direction anymore
         }
 
@@ -90,7 +90,7 @@ public class L2_Ship_Script : MonoBehaviour
 
         if (viewPortPos.y > boundaryData.upperVerticalRange)
         {
-            Debug.Log("Past Upper Boundary Y");
+            //Debug.Log("Past Upper Boundary Y");
             return false; // Then the player cannot move in this direction anymore
         }
         return true;

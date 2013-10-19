@@ -15,8 +15,12 @@ public class CanabaltCamera : MonoBehaviour {
     [Range(-5.0f, -100.0f)]
     public float endZoomPoint = -20.0f;
 
-    [Range(0.001f, 1.0f)]
+    [Range(0.001f, 5.0f)]
     public float zoomSpeed = 0.001f;
+
+    private bool isZooming = false;
+    private float currentZPosition = -9.0f;
+    private float lerpValue = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +29,7 @@ public class CanabaltCamera : MonoBehaviour {
             player.transform.position.y + moveOffsetY, 
             startingZPosition
         );
+        currentZPosition = startingZPosition;
 	}
 	
 	// Update is called once per frame
@@ -50,5 +55,30 @@ public class CanabaltCamera : MonoBehaviour {
 			
             transform.position = tempVector;
 		}
+
+        zoomCamera();
 	}
+
+    public void ZoomToPosition(float zPos, float zSpeed)
+    {
+        endZoomPoint = zPos;
+        zoomSpeed = zSpeed;
+        isZooming = true;
+    }
+
+    private void zoomCamera()
+    {
+        if (isZooming)
+        {
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, Mathf.Lerp(currentZPosition, endZoomPoint, Mathf.Clamp(lerpValue, 0.0f, 1.0f)));
+            lerpValue += zoomSpeed * Time.deltaTime;
+
+            if (lerpValue > 1.0f)
+            {
+                lerpValue = 0.0f;
+                isZooming = false;
+                currentZPosition = this.transform.position.z;
+            }
+        }
+    }
 }

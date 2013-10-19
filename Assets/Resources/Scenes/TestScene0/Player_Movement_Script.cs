@@ -63,21 +63,33 @@ public class Player_Movement_Script : MonoBehaviour {
         }
 
         RaycastHit hit;
-        Ray ray = new Ray(this.transform.position, new Vector3(0, -1, 0));
 
-       
+        Ray[] rays = new Ray[3];
+        rays[0] = new Ray(this.transform.position, new Vector3(0, -1, 0));
+        rays[1] = new Ray(new Vector3(this.transform.position.x - 0.75f, this.transform.position.y, this.transform.position.z), new Vector3(0, -1, 0));
+        rays[2] = new Ray(new Vector3(this.transform.position.x + 0.75f, this.transform.position.y, this.transform.position.z), new Vector3(0, -1, 0));
 
-        // Check to see if there is a floor below the player
-        if (!Physics.Raycast(ray, out hit, rayCastDistance))
+        int numberOfRaysHitGround = 0;
+
+        // Check to see if there is a floor below the player for all of the rays
+        for (int i = 0; i < rays.Length; i++)
         {
-            Debug.DrawRay(ray.origin, ray.direction * rayCastDistance, Color.red, 1.0f);
+            if (!Physics.Raycast(rays[i], out hit, rayCastDistance))
+            {
+                Debug.DrawRay(rays[i].origin, rays[i].direction * rayCastDistance, Color.red, 10.0f);
+            }
+            else
+            {
+                Debug.DrawRay(rays[i].origin, rays[i].direction * rayCastDistance, Color.cyan, 10.0f);
+                numberOfRaysHitGround++;
+            }
+        }
+
+        if (numberOfRaysHitGround == 0)
+        {
             isInAir = true;
             canJump = false;
         }
-        else
-        {
-            Debug.DrawRay(ray.origin, ray.direction * rayCastDistance, Color.cyan, 1.0f);
-        }        
 	}
 	
 	void DoJump()
