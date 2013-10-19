@@ -22,6 +22,8 @@ public class Player_Movement_Script : MonoBehaviour {
     // Make a reference to the camera
     public CanabaltCamera mainCamera;
 
+    // ray cast distance for ground check
+    private float rayCastDistance = 3.0f;
 
     // Values for being able to move left and right
     [System.Serializable]
@@ -66,15 +68,15 @@ public class Player_Movement_Script : MonoBehaviour {
        
 
         // Check to see if there is a floor below the player
-        if (!Physics.Raycast(ray, out hit, 2.0f))
+        if (!Physics.Raycast(ray, out hit, rayCastDistance))
         {
-            Debug.DrawRay(ray.origin, ray.direction * 2.0f, Color.red, 1.0f);
+            Debug.DrawRay(ray.origin, ray.direction * rayCastDistance, Color.red, 1.0f);
             isInAir = true;
             canJump = false;
         }
         else
         {
-            Debug.DrawRay(ray.origin, ray.direction * 2.0f, Color.cyan, 1.0f);
+            Debug.DrawRay(ray.origin, ray.direction * rayCastDistance, Color.cyan, 1.0f);
         }
 	}
 	
@@ -188,14 +190,14 @@ public class Player_Movement_Script : MonoBehaviour {
             canJump = true;
             isJumping = false;
             hitWallSideways = false;
-            if (isInAir && (Time.time - timeWhenLastJumped > 0.5f))
+            if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
             {
                 //print("Not in air anymore"+Time.time);
                 isInAir = false;
             }
         }
 
-        else if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !hitWallSideways) // Then stop -- you hit the wall while jumping
+        if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !hitWallSideways) // Then stop -- you hit the wall while jumping
         {
             hitWallSideways = true;
             this.rigidbody.AddForce(new Vector3(horizontalMovement.forcePushOffWall, 0, 0));
