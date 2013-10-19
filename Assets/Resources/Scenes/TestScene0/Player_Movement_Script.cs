@@ -19,6 +19,10 @@ public class Player_Movement_Script : MonoBehaviour {
     public bool isJetPackActive = false; // Will allow the player to float for longer when this is active
     public float jetPackFloatingForce = 0.0f; // This force will be added to the player's regular floating velocity
 
+    // Make a reference to the camera
+    public CanabaltCamera mainCamera;
+
+
     // Values for being able to move left and right
     [System.Serializable]
     public class HorizontalMovementData
@@ -54,6 +58,23 @@ public class Player_Movement_Script : MonoBehaviour {
         if (!hitWallSideways)
         {
             this.transform.position += new Vector3(movementSpeed * Time.deltaTime, 0, 0);
+        }
+
+        RaycastHit hit;
+        Ray ray = new Ray(this.transform.position, new Vector3(0, -1, 0));
+
+       
+
+        // Check to see if there is a floor below the player
+        if (!Physics.Raycast(ray, out hit, 2.0f))
+        {
+            Debug.DrawRay(ray.origin, ray.direction * 2.0f, Color.red, 1.0f);
+            isInAir = true;
+            canJump = false;
+        }
+        else
+        {
+            Debug.DrawRay(ray.origin, ray.direction * 2.0f, Color.cyan, 1.0f);
         }
 	}
 	
@@ -120,17 +141,25 @@ public class Player_Movement_Script : MonoBehaviour {
         }        
         //Debug.Log("Movement Offset: " + horizontalMovement.playerOffset);
     }
+
+    // Respawn Function
+    void Respawn()
+    {
+        this.rigidbody.velocity = Vector3.zero;
+        this.transform.position = new Vector3(this.transform.position.x, 1, 0);
+        mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, mainCamera.transform.position.z);
+        hitWallSideways = false;
+        isInAir = true;
+    }
 	
 	//If we're below the ground, respawn us above it and (ahead) us a little.
 	//	Ahead for the vertical slice since it's not possible to win if you don't
 	//	have the triggers set properly.
 	void CheckDead()
 	{
-		if (this.transform.position.y < -10)
+		if (this.transform.position.y < -15)
 		{
-            this.rigidbody.velocity = Vector3.zero;
-            this.transform.position = new Vector3(this.transform.position.x, 1, 0);            
-            hitWallSideways = false;
+            Respawn();
 		}
 	}
 	
@@ -170,6 +199,11 @@ public class Player_Movement_Script : MonoBehaviour {
         {
             hitWallSideways = true;
             this.rigidbody.AddForce(new Vector3(horizontalMovement.forcePushOffWall, 0, 0));
+        }
+
+        if (other.gameObject.CompareTag("L1_Elite_Laser")) // Then respawn player & reset camera position
+        {
+            Respawn();
         }
 		
 		//Next level stuff: Persist some stuff for the next level

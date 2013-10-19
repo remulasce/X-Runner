@@ -1018,15 +1018,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -382.407166
+      value: -382.239929
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .213053465
+      value: .212918401
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.08970833e-06
+      value: -3.89367342e-05
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1090,12 +1090,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: horizontalMovement.rightMovementThreshold
-      value: 20
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: horizontalMovement.movementSpeed
-      value: 7
+      value: 6.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1911888144}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
@@ -1900,6 +1904,70 @@ Prefab:
   m_RootGameObject: {fileID: 1295699892}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &55613996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+  m_PrefabInternal: {fileID: 832432130}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 55613997}
+  - 65: {fileID: 55613999}
+  - 114: {fileID: 55613998}
+  m_Layer: 0
+  m_Name: Big_Missile_Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &55613997
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+  m_PrefabInternal: {fileID: 832432130}
+  m_GameObject: {fileID: 55613996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 113.835938, y: -11.7191305, z: 11.1251831}
+  m_LocalScale: {x: 1, y: 100, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1619578818}
+--- !u!114 &55613998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 832432130}
+  m_GameObject: {fileID: 55613996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - target: {fileID: 410078150}
+    targetOffset: {x: 17, y: 0, z: 0}
+    laserSpeed: 200
+    postCollisionParticleSystem: {fileID: 979893598}
+    delay: 0
+    laserType: 2
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 200, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+--- !u!65 &55613999
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: cc274b43591a6014289dcf86782a8e4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 832432130}
+  m_GameObject: {fileID: 55613996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &56250415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,7 +3436,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84647434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.94928169, z: 0}
   m_LocalScale: {x: 1.70000005, y: 1.70000005, z: 1}
   m_Children: []
   m_Father: {fileID: 427022449}
@@ -6817,10 +6885,11 @@ MonoBehaviour:
   isInAir: 0
   isJetPackActive: 0
   jetPackFloatingForce: 60000
+  mainCamera: {fileID: 1911888144}
   horizontalMovement:
     leftMovementThreshold: -5
-    rightMovementThreshold: 20
-    movementSpeed: 7
+    rightMovementThreshold: 7
+    movementSpeed: 6.5
     playerOffset: 0
     forcePushOffWall: -3000
 --- !u!23 &137554355
@@ -6873,7 +6942,7 @@ Transform:
   m_PrefabInternal: {fileID: 34011258}
   m_GameObject: {fileID: 137554353}
   m_LocalRotation: {x: -.499999851, y: -.500000179, z: .5, w: .50000006}
-  m_LocalPosition: {x: -382.407166, y: .213053465, z: -9.08970833e-06}
+  m_LocalPosition: {x: -382.239929, y: .212918401, z: -3.89367342e-05}
   m_LocalScale: {x: .176863015, y: .176863015, z: .176863015}
   m_Children: []
   m_Father: {fileID: 1315659808}
@@ -18004,7 +18073,7 @@ Transform:
   m_PrefabInternal: {fileID: 1847835397}
   m_GameObject: {fileID: 396026588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 419.842072, y: 0, z: 4.72853518}
+  m_LocalPosition: {x: 407.868011, y: 0, z: 4.72853518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1580173294}
@@ -18129,6 +18198,113 @@ Prefab:
   m_RootGameObject: {fileID: 1257045813}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &410078150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+  m_PrefabInternal: {fileID: 1216876624}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 410078151}
+  - 33: {fileID: 410078156}
+  - 65: {fileID: 410078155}
+  - 23: {fileID: 410078154}
+  - 54: {fileID: 410078153}
+  - 114: {fileID: 410078152}
+  m_Layer: 0
+  m_Name: Hangar_Destructive_Platform
+  m_TagString: Terrain
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410078151
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+  m_PrefabInternal: {fileID: 1216876624}
+  m_GameObject: {fileID: 410078150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 150.186035, y: -20.1430359, z: 11.1251831}
+  m_LocalScale: {x: 165.268784, y: 11, z: 10}
+  m_Children: []
+  m_Father: {fileID: 1619578818}
+--- !u!114 &410078152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1216876624}
+  m_GameObject: {fileID: 410078150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3219a6252f35e65468295ac8504aa198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceToApply: {x: 0, y: -1, z: 0}
+  pointToApplyForce: {x: -100, y: 0, z: 0}
+  forceMagnitude: 2000
+  constantVectorForce: {x: 0, y: 1950, z: 0}
+  timeToApplyCF: 6
+  delayToApplyForces: 0
+  postActivationConstraints: 0
+  postActivationParticleSystem: {fileID: 0}
+--- !u!54 &410078153
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1216876624}
+  m_GameObject: {fileID: 410078150}
+  serializedVersion: 2
+  m_Mass: 2000
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
+--- !u!23 &410078154
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1216876624}
+  m_GameObject: {fileID: 410078150}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 58f61dfb3209e7845af4cf92e14e669a, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+--- !u!65 &410078155
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1216876624}
+  m_GameObject: {fileID: 410078150}
+  m_Material: {fileID: 13400000, guid: 67db31eead11e8d6d00011d98d76c639, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &410078156
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1216876624}
+  m_GameObject: {fileID: 410078150}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &412327963
 Prefab:
   m_ObjectHideFlags: 0
@@ -18167,6 +18343,938 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3ceac51f395b3747bc75bb029736ea2, type: 2}
   m_RootGameObject: {fileID: 1636636862}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &419247120
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1619578818}
+    m_Modifications:
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.size
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 90.5576782
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.7191305
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.1251831
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 626472868}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: laserSpeed
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targetOffset.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1947142570}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1428059647}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1717343822}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1947142570}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1714055269}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].delay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].delay
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].delay
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_Name
+      value: Laser_Barriage_Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 2088987887}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1172950330}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1212040638}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 986150043}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1761418589}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].delay
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].delay
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].delay
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].delay
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].delay
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1679018177}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 221672443}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].delay
+      value: 1.10000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1583980140}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].delay
+      value: 1.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 877333175}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].delay
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 328382916}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].delay
+      value: 1.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 521863914}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].delay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].delay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1511283679}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].laserType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].delay
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].homingMissileProperties.initialHomingOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].homingMissileProperties.closingMagnitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].homingMissileProperties.closingMagnitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].homingMissileProperties.closingMagnitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].homingMissileProperties.closingMagnitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].homingMissileProperties.closingMagnitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].homingMissileProperties.initialHomingOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].homingMissileProperties.initialHomingOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].homingMissileProperties.initialHomingOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].homingMissileProperties.initialHomingOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].homingMissileProperties.initialHomingOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].homingMissileProperties.closingMagnitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[16].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[16].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[16].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[16].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 2092093265}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[16].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[17].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[17].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[17].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[17].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 910466920}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[17].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[18].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[18].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[18].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[18].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 128657453}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[18].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[19].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[19].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[19].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[19].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1747565145}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[19].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[20].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[20].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[20].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[20].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1747565145}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[20].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[21].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[21].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[21].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[21].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 259301726}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[21].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[22].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[22].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[22].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[22].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1422215298}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[22].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[23].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[23].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[23].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[23].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1552139774}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[23].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[24].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[24].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[24].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[24].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1875465369}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[24].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[25].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[25].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[25].laserSpeed
+      value: 2301
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[25].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1455334668}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[25].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[26].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[26].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[26].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[26].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1622628359}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[26].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[27].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[27].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[27].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[27].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1576376514}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[27].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[28].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[28].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[28].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[28].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1323604287}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[28].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[29].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[29].targetOffset.x
+      value: 11.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[29].laserSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[29].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 292938083}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[29].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[16].delay
+      value: 1.60000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[17].delay
+      value: 1.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[18].delay
+      value: 1.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[19].delay
+      value: 1.89999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[20].delay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[21].delay
+      value: 2.0999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[22].delay
+      value: 2.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[23].delay
+      value: 2.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[24].delay
+      value: 2.4000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[25].delay
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[26].delay
+      value: 2.5999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[27].delay
+      value: 2.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[28].delay
+      value: 2.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[29].delay
+      value: 2.9000001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+  m_RootGameObject: {fileID: 1426980512}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &427022448
@@ -19417,66 +20525,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc884daf9ce958c4cbb1f506588e991a, type: 2}
   m_RootGameObject: {fileID: 1214679330}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
---- !u!1001 &498079828
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1619578818}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 141.100006
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -20.1430321
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 16.1251793
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 147.25
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-  m_RootGameObject: {fileID: 1337463580}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1001 &498512054
@@ -25481,9 +26529,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceToApply: {x: 0, y: -1, z: 0}
-  pointToApplyForce: {x: 0, y: 0, z: 45}
+  pointToApplyForce: {x: 0, y: 0, z: 35}
   forceMagnitude: 2e+06
-  constantVectorForce: {x: 0, y: 9500000, z: 0}
+  constantVectorForce: {x: 0, y: 9400000, z: 0}
   timeToApplyCF: 8
   delayToApplyForces: 2
   postActivationConstraints: 0
@@ -28959,6 +30007,534 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1054931105}
   m_GameObject: {fileID: 831086186}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &832432130
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1619578818}
+    m_Modifications:
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 113.835938
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.7191305
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.1251831
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 626472868}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: laserSpeed
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targetOffset.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1947142570}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].target
+      value: 
+      objectReference: {fileID: 410078150}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 979893598}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].laserSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].laserSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1511283679}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].laserSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1761418589}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].laserSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 986150043}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].delay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].delay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_Name
+      value: Big_Missile_Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].target
+      value: 
+      objectReference: {fileID: 410078150}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].laserSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 979893598}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].target
+      value: 
+      objectReference: {fileID: 2103125376}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].laserSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].target
+      value: 
+      objectReference: {fileID: 2103125376}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].laserSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].target
+      value: 
+      objectReference: {fileID: 2103125376}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].laserSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].target
+      value: 
+      objectReference: {fileID: 2103125376}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].laserSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].delay
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].delay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].delay
+      value: 1.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].delay
+      value: 2.0999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].delay
+      value: 2.4000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].target
+      value: 
+      objectReference: {fileID: 929223317}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].laserSpeed
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1428059647}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].delay
+      value: 1.10000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].target
+      value: 
+      objectReference: {fileID: 929223317}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].laserSpeed
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1428059647}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].delay
+      value: 1.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].target
+      value: 
+      objectReference: {fileID: 929223317}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].laserSpeed
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1428059647}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].delay
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].target
+      value: 
+      objectReference: {fileID: 929223317}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].laserSpeed
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1428059647}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].delay
+      value: 1.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].target
+      value: 
+      objectReference: {fileID: 929223317}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].laserSpeed
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1428059647}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].delay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].target
+      value: 
+      objectReference: {fileID: 929223317}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].laserSpeed
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1428059647}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].delay
+      value: 1.60000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].targetOffset.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].targetOffset.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].targetOffset.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].targetOffset.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].targetOffset.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].targetOffset.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].targetOffset.x
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].delay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].targetOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].targetOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].targetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].targetOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].laserType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].laserType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].laserType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].laserType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].laserType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].laserType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].laserType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].laserType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].laserType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].target
+      value: 
+      objectReference: {fileID: 137554353}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].laserSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].postCollisionParticleSystem
+      value: 
+      objectReference: {fileID: 1947142570}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].laserType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].delay
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].homingMissileProperties.initialHomingOffset.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].homingMissileProperties.closingMagnitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].homingMissileProperties.closingMagnitude
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].homingMissileProperties.closingMagnitude
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].homingMissileProperties.closingMagnitude
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].homingMissileProperties.closingMagnitude
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].homingMissileProperties.initialHomingOffset.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].homingMissileProperties.percentToCloseOffset
+      value: .925000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].homingMissileProperties.percentToCloseOffset
+      value: .925000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].homingMissileProperties.initialHomingOffset.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].homingMissileProperties.initialHomingOffset.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].homingMissileProperties.percentToCloseOffset
+      value: .925000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].homingMissileProperties.initialHomingOffset.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].homingMissileProperties.percentToCloseOffset
+      value: .925000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].homingMissileProperties.initialHomingOffset.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].homingMissileProperties.closingMagnitude
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+  m_RootGameObject: {fileID: 55613996}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &833008723
 Prefab:
   m_ObjectHideFlags: 0
@@ -44831,15 +46407,15 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].target
       value: 
-      objectReference: {fileID: 2103125376}
+      objectReference: {fileID: 410078150}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].laserSpeed
-      value: 500
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 137554353}
+      objectReference: {fileID: 979893598}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].target
       value: 
@@ -44890,7 +46466,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].delay
-      value: 1.20000005
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].delay
@@ -45086,7 +46662,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].laserType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].laserType
@@ -45183,6 +46759,18 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].homingMissileProperties.percentToCloseOffset
       value: .925000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].homingMissileProperties.initialHomingOffset.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].homingMissileProperties.percentToCloseOffset
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].homingMissileProperties.closingMagnitude
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
@@ -46991,6 +48579,106 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1854321739}
+--- !u!1001 &1216876624
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1619578818}
+    m_Modifications:
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 150.186035
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -20.1430359
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.1251831
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_Name
+      value: Hangar_Destructive_Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: forceToApply.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: forceToApply.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: forceMagnitude
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: delayToApplyForces
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: forceToApply.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: pointToApplyForce.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 165.268784
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: postActivationConstraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_Mass
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: constantVectorForce.y
+      value: 1950
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: timeToApplyCF
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+  m_RootGameObject: {fileID: 410078150}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &1221638177
 Prefab:
   m_ObjectHideFlags: 0
@@ -47538,7 +49226,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: constantVectorForce.y
-      value: 9500000
+      value: 9400000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: timeToApplyCF
@@ -47546,7 +49234,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: pointToApplyForce.z
-      value: 45
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: m_Size.x
@@ -47825,6 +49513,61 @@ Transform:
   - {fileID: 104524275}
   - {fileID: 1759295781}
   m_Father: {fileID: 0}
+--- !u!1 &1254822588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+  m_PrefabInternal: {fileID: 1631396824}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1254822589}
+  - 65: {fileID: 1254822591}
+  - 114: {fileID: 1254822590}
+  m_Layer: 0
+  m_Name: Destructible_Platform_Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1254822589
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+  m_PrefabInternal: {fileID: 1631396824}
+  m_GameObject: {fileID: 1254822588}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 154.457886, y: -9.52756977, z: 11.1251802}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1619578818}
+--- !u!114 &1254822590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 0ec712b2966a5f04d890137475517a0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1631396824}
+  m_GameObject: {fileID: 1254822588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d444547b0f4b44d8a06041c95d0bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explodingPlatforms:
+  - {fileID: 410078150}
+--- !u!65 &1254822591
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 0ec712b2966a5f04d890137475517a0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1631396824}
+  m_GameObject: {fileID: 1254822588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 100, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1256389430
 GameObject:
   m_ObjectHideFlags: 0
@@ -52663,92 +54406,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1844771563}
   m_GameObject: {fileID: 1335990719}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1337463580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-  m_PrefabInternal: {fileID: 498079828}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1337463581}
-  - 33: {fileID: 1337463585}
-  - 65: {fileID: 1337463584}
-  - 23: {fileID: 1337463583}
-  - 54: {fileID: 1337463582}
-  m_Layer: 0
-  m_Name: Gray_Crate
-  m_TagString: Terrain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1337463581
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 81be3b051ca4ef043b82021e27c5e026, type: 2}
-  m_PrefabInternal: {fileID: 498079828}
-  m_GameObject: {fileID: 1337463580}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 141.100006, y: -20.1430321, z: 16.1251793}
-  m_LocalScale: {x: 147.25, y: 11, z: 20}
-  m_Children: []
-  m_Father: {fileID: 1619578818}
---- !u!54 &1337463582
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 81be3b051ca4ef043b82021e27c5e026,
-    type: 2}
-  m_PrefabInternal: {fileID: 498079828}
-  m_GameObject: {fileID: 1337463580}
-  serializedVersion: 2
-  m_Mass: 1e+09
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 1
---- !u!23 &1337463583
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 81be3b051ca4ef043b82021e27c5e026,
-    type: 2}
-  m_PrefabInternal: {fileID: 498079828}
-  m_GameObject: {fileID: 1337463580}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 4985058007c82634594aa2120dafc300, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
---- !u!65 &1337463584
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 81be3b051ca4ef043b82021e27c5e026,
-    type: 2}
-  m_PrefabInternal: {fileID: 498079828}
-  m_GameObject: {fileID: 1337463580}
-  m_Material: {fileID: 13400000, guid: 67db31eead11e8d6d00011d98d76c639, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1337463585
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 81be3b051ca4ef043b82021e27c5e026,
-    type: 2}
-  m_PrefabInternal: {fileID: 498079828}
-  m_GameObject: {fileID: 1337463580}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1344364251
 GameObject:
   m_ObjectHideFlags: 0
@@ -55994,6 +57651,360 @@ Prefab:
   m_RootGameObject: {fileID: 1961598420}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1426980512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+  m_PrefabInternal: {fileID: 419247120}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1426980513}
+  - 65: {fileID: 1426980515}
+  - 114: {fileID: 1426980514}
+  m_Layer: 0
+  m_Name: Laser_Barriage_Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426980513
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+  m_PrefabInternal: {fileID: 419247120}
+  m_GameObject: {fileID: 1426980512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 90.5576782, y: -11.7191305, z: 11.1251831}
+  m_LocalScale: {x: 1, y: 100, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1619578818}
+--- !u!114 &1426980514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 419247120}
+  m_GameObject: {fileID: 1426980512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1428059647}
+    delay: 0
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1511283679}
+    delay: .100000001
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1717343822}
+    delay: 3
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1947142570}
+    delay: .200000003
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1714055269}
+    delay: .300000012
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 2088987887}
+    delay: .400000006
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1172950330}
+    delay: .5
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1212040638}
+    delay: .600000024
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 986150043}
+    delay: .699999988
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1761418589}
+    delay: .800000012
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1679018177}
+    delay: 1
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 221672443}
+    delay: 1.10000002
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1583980140}
+    delay: 1.20000005
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 877333175}
+    delay: 1.29999995
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 328382916}
+    delay: 1.39999998
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 521863914}
+    delay: 1.5
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 2092093265}
+    delay: 1.60000002
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 910466920}
+    delay: 1.70000005
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 128657453}
+    delay: 1.79999995
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1747565145}
+    delay: 1.89999998
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1747565145}
+    delay: 2
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 259301726}
+    delay: 2.0999999
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1422215298}
+    delay: 2.20000005
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1552139774}
+    delay: 2.29999995
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1875465369}
+    delay: 2.4000001
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 2301
+    postCollisionParticleSystem: {fileID: 1455334668}
+    delay: 2.5
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1622628359}
+    delay: 2.5999999
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1576376514}
+    delay: 2.70000005
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 1323604287}
+    delay: 2.79999995
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 292938083}
+    delay: 2.9000001
+    laserType: 0
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+--- !u!65 &1426980515
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: cc274b43591a6014289dcf86782a8e4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 419247120}
+  m_GameObject: {fileID: 1426980512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1428059647
 GameObject:
   m_ObjectHideFlags: 0
@@ -69596,9 +71607,12 @@ Transform:
   m_LocalPosition: {x: 516.327942, y: 11.7191305, z: -11.1251831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1337463581}
+  - {fileID: 55613997}
+  - {fileID: 1254822589}
   - {fileID: 1415521076}
+  - {fileID: 410078151}
   - {fileID: 755874709}
+  - {fileID: 1426980513}
   m_Father: {fileID: 0}
 --- !u!1001 &1621032768
 Prefab:
@@ -70887,6 +72901,54 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+--- !u!1001 &1631396824
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1619578818}
+    m_Modifications:
+    - target: {fileID: 11400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+      propertyPath: explodingPlatforms.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 154.457886
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -9.52756977
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.1251802
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+      propertyPath: explodingPlatforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 410078150}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0ec712b2966a5f04d890137475517a0b, type: 2}
+  m_RootGameObject: {fileID: 1254822588}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1634101768
 GameObject:
   m_ObjectHideFlags: 0
@@ -82113,7 +84175,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 419.842072
+      value: 407.868011
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
       propertyPath: m_LocalPosition.y

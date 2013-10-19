@@ -12,7 +12,7 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
     public GameObject postCollisionParticleSystem; // Sometimes, if the laser hits something, a particle system should go off.
      * */
 
-    public enum laserType { REGULAR, HOMING };
+    public enum laserType { REGULAR, HOMING, BIG_MISSILE };
 
     [System.Serializable]
     public class homingTargetInformation
@@ -65,6 +65,10 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
                 {
                     StartCoroutine("DelayHomingLaserShot", targets[i]);
                 }
+                else if (targets[i].laserType == laserType.BIG_MISSILE)
+                {
+                    StartCoroutine("DelayBigMissileShot", targets[i]);
+                }
             }
         }
     }
@@ -79,5 +83,11 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
     {
         yield return new WaitForSeconds(t.delay);
         eliteShipLaserScript.FireHomingLaserAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem, t.homingMissileProperties);
+    }
+
+    public IEnumerator DelayBigMissileShot(targetInformation t)
+    {
+        yield return new WaitForSeconds(t.delay);
+        eliteShipLaserScript.FireBigMissileAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem, t.homingMissileProperties);
     }
 }
