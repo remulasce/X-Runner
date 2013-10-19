@@ -22,6 +22,11 @@ public class CanabaltCamera : MonoBehaviour {
     private float currentZPosition = -9.0f;
     private float lerpValue = 0.0f;
 
+    private bool isShaking = false;
+    private float shakeDuration = 1.0f;
+    private float shakePower = 1.0f;
+    private float shakeStartTime = 1.0f;
+
 	// Use this for initialization
 	void Start () {
         this.transform.position = new Vector3(
@@ -56,7 +61,8 @@ public class CanabaltCamera : MonoBehaviour {
             transform.position = tempVector;
 		}
 
-        zoomCamera();
+        ZoomCamera();
+        ShakeCamera();
 	}
 
     public void ZoomToPosition(float zPos, float zSpeed)
@@ -66,7 +72,7 @@ public class CanabaltCamera : MonoBehaviour {
         isZooming = true;
     }
 
-    private void zoomCamera()
+    private void ZoomCamera()
     {
         if (isZooming)
         {
@@ -78,6 +84,27 @@ public class CanabaltCamera : MonoBehaviour {
                 lerpValue = 0.0f;
                 isZooming = false;
                 currentZPosition = this.transform.position.z;
+            }
+        }
+    }
+
+    public void BeginShake(float sDuration, float sPower)
+    {
+        shakeDuration = sDuration;
+        shakePower = sPower;
+        isShaking = true;
+        shakeStartTime = Time.time;
+    }
+
+    private void ShakeCamera()
+    {
+        if (isShaking)
+        {
+            this.transform.position += new Vector3(Random.Range(-shakePower, shakePower), Random.Range(-shakePower, shakePower), 0);
+
+            if (Time.time - shakeStartTime > shakeDuration)
+            {
+                isShaking = false;
             }
         }
     }
