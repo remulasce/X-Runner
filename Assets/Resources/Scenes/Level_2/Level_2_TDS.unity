@@ -356,15 +356,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: movement.acceleration
-      value: 2250
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: movement.startupBoost
-      value: 500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: movement.startupCutoff
-      value: 500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: movement.maxSpeed
@@ -373,6 +373,22 @@ Prefab:
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: movement.frictionConstant
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: boundaryData.lowerHorizontalRange
+      value: .0350000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: boundaryData.upperHorizontalRange
+      value: .964999974
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: boundaryData.upperVerticalRange
+      value: .959999979
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: boundaryData.lowerVerticalRange
+      value: .0399999991
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
@@ -528,11 +544,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7e7b7a4b274f2439c108e1819e594d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boundaryData:
+    lowerHorizontalRange: .0350000001
+    upperHorizontalRange: .964999974
+    lowerVerticalRange: .0399999991
+    upperVerticalRange: .959999979
   movement:
     maxSpeed: 12
-    acceleration: 2250
-    startupBoost: 500
-    startupCutoff: 500
+    acceleration: 2500
+    startupBoost: 750
+    startupCutoff: 750
     frictionConstant: 100
 --- !u!54 &1556197953
 Rigidbody:

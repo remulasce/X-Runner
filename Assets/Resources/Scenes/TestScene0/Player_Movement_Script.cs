@@ -77,7 +77,7 @@ public class Player_Movement_Script : MonoBehaviour {
         else
         {
             Debug.DrawRay(ray.origin, ray.direction * rayCastDistance, Color.cyan, 1.0f);
-        }
+        }        
 	}
 	
 	void DoJump()
