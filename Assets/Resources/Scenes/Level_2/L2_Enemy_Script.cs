@@ -9,12 +9,12 @@ public class L2_Enemy_Script : MonoBehaviour {
 	
 	//Where we are in our expected lifespan
 	enum LifeState { Entry, Loiter, Exit };
-	LifeState state;
+	LifeState state = LifeState.Entry;
 	float lastStateTime = 0;
 	
 	//Use this to help with our movement:
 	Vector3 target = new Vector3(0,0,0);
-	float maxSpeed = 4;
+	float maxSpeed = 8f;
 	
 	// Use this for initialization
 	void Start () {
@@ -28,6 +28,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//	waves all over each other.
 	public void SetWaveAI(L2_Enemy_Spawner.Wave parent, Vector3 offset)
 	{
+		//SetLifeState(LifeState.Entry);
 		this.wave = parent;
 		this.offset = offset;
 	}
@@ -41,9 +42,12 @@ public class L2_Enemy_Script : MonoBehaviour {
 		}
 	}
 	
+	/** "At" means "Close Enough", so manually move all the way if
+	 * you need to be actually at the exact position.
+	 * */
 	bool AtTarget()
 	{
-		return ((this.target == this.transform.position));
+		return ((this.target - this.transform.position).sqrMagnitude < .1f);
 	}
 	void DoEntry()
 	{
@@ -53,7 +57,8 @@ public class L2_Enemy_Script : MonoBehaviour {
 			target = new Vector3(wave.nb.endPos.x, wave.nb.endPos.y) + offset;
 			if (AtTarget())
 			{
-				this.transform.position = target + offset;
+				//AtTarget() returns if "close enough", so make sure we're perfect.
+				this.transform.position = target;
 				SetLifeState(LifeState.Loiter);
 			}
 			break;
@@ -80,6 +85,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//This will not check if we're already in the state
 	void SetLifeState(LifeState state)
 	{
+		print ("Changing State: "+state);
 		this.lastStateTime = Time.time;
 		this.state = state;	
 	}
@@ -91,19 +97,22 @@ public class L2_Enemy_Script : MonoBehaviour {
 		if (Time.time < this.lastStateTime+.5f)
 		{
 			this.target = this.transform.position + this.offset
-				+ new Vector3(this.wave.xb.dst.x, this.wave.xb.dst.y) * 10000;
+				+ (this.wave.xb.dir * 10000);
+			
 		}
 	}
 		
 	//Track towards the target.
 	void DoTargetMovement()
 	{
+		//return;
 		Vector3 delta = (this.target - this.transform.position);
-		this.rigidbody.MovePosition(delta / delta.magnitude * Mathf.Min(maxSpeed, delta.magnitude));
+		this.rigidbody.MovePosition(this.transform.position + Time.deltaTime*(delta.normalized * Mathf.Min(maxSpeed, 2*delta.magnitude)));
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//return;
 		DoTargetMovement();
 		
 		switch (state)

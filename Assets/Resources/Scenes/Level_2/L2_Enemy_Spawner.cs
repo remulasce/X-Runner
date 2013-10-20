@@ -56,10 +56,13 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	 * It's organized this way so there's less to type.
 	 */
 	void Spawn() {
-		print("Spawning");
+		print("Making spawn list...");
 		
 		
-		W (ft_hl(10), nb_st(-100,0,0,0), lb_no(), at_no(), xt_no(), xb_no(), 1);
+		W (ft_hl(10), nb_go(-20,0,0,0), lb_no(), at_no(), xt_tm(3), xb_go(1,1), 1);
+		W (ft_hl (20), nb_go (20,20,0,10), lb_no(), at_no (), xt_im(), xb_go(-1,0), 2);
+		W (ft_hl(4), nb_go(-20,20,0,8), lb_no(), at_no(), xt_no(), xb_go(11,1), 1);
+		print ("Done making spawn list");
 	}
 	
 	/** This is where I do things. Basic "define what you want and it's dealt with here */
@@ -85,8 +88,8 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		return ft;
 	}
 	
-	/** eNtry Behavior STandard: Go from point offscreen to onscreen */
-	EntryBehavior nb_st(float stx, float sty, float endx, float endy)
+	/** eNtry Behavior: GO from point offscreen to onscreen */
+	EntryBehavior nb_go(float stx, float sty, float endx, float endy)
 	{
 		EntryBehavior nb = new EntryBehavior();
 		nb.type = EntryBehavior.T.FlyIn;
@@ -119,13 +122,39 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		xt.type = ExitTrigger.T.DontExit;
 		return xt;
 	}
+	/** eXit Trigger TiMed */
+	ExitTrigger xt_tm(float seconds)
+	{
+		ExitTrigger xt = new ExitTrigger();
+		xt.type = ExitTrigger.T.ExitAfter;
+		xt.exitTime = seconds;
+		return xt;
+	}
+	/** eXit Trigger IMmediately */
+	ExitTrigger xt_im()
+	{
+		ExitTrigger xt = new ExitTrigger();
+		xt.type = ExitTrigger.T.ExitImmediately;
+		return xt;
+	}
+	
 	
 	/** eXit Behavior "NOne" (shouldn't be used if we need to exit...) */
 	ExitBehavior xb_no()
 	{
 		ExitBehavior xb = new ExitBehavior();
-		xb.type = ExitBehavior.T.GotoDst;
-		return new ExitBehavior();
+		xb.type = ExitBehavior.T.No;
+		return xb;
+	}
+	/** eXit Behavior GO in a direction-
+	 * This may be normalized to the enemy maxspeed.
+	 * */
+	ExitBehavior xb_go(float dx, float dy)
+	{
+		ExitBehavior xb = new ExitBehavior();
+		xb.type = ExitBehavior.T.GoDir;
+		xb.dir = new Vector3(dx, dy, 0);
+		return xb;
 	}
 	
 	
@@ -137,10 +166,8 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	{
 		foreach (Wave w in waveList)
 		{
-			
-			
-			
-			// w.Spawn() or something
+			print ("Spawning");
+			w.Spawn();
 			yield return new WaitForSeconds(w.waveDuration);
 		}
 	}
@@ -182,10 +209,10 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 			case FormationType.T.HorizontalLine:
 				for (int i=0; i < ft.num; i++)
 				{
-					Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) - new Vector3((i/ft.num-1/2f)*3, 0, 0);
-					GameObject e = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/Level2/Enemy"));
+					Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) - new Vector3((i - ft.num/2)*2, 0, 0);
+					GameObject e = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Basic"), pos, Quaternion.identity);
 					
-					e.GetComponent<L2_Enemy_Script>().SetWaveAI(this, -new Vector3((i/ft.num-1/2f)*3, 0, 0));
+					e.GetComponent<L2_Enemy_Script>().SetWaveAI(this, -new Vector3((i - ft.num/2)*2, 0, 0));
 					this.enemies.Add(e);
 				}
 				break;
@@ -214,8 +241,8 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		public enum T { FlyIn };
 		public T type;
 		
-		public Vector2 startPos;
-		public Vector2 endPos;
+		public Vector3 startPos;
+		public Vector3 endPos;
 	}
 	/** What the wave does before it exits.
 	 */
@@ -242,10 +269,10 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	/** How this exits, if it does. */
 	public class ExitBehavior
 	{
-		public enum T { GotoDst };
+		public enum T { GoDir, No };
 		public T type;
 		
-		public Vector2 dst;
+		public Vector3 dir;
 	}	
 	
 	public class AttackType
