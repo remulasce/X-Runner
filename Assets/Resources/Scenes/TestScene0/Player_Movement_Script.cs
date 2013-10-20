@@ -102,6 +102,11 @@ public class Player_Movement_Script : MonoBehaviour {
 			canJump = false;
             isInAir = true;
             timeWhenLastJumped = Time.time;
+
+            if (isJetPackActive)
+            {
+                this.GetComponentInChildren<ParticleSystem>().Play();
+            }
 			
 			//Application.LoadLevelAdditive("test_add_scene");
 			//Application.LoadLevel("test_add_scene");
@@ -109,6 +114,10 @@ public class Player_Movement_Script : MonoBehaviour {
 		if ((Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Space)) && isJumping)
         {
             isJumping = false;
+            if (isJetPackActive)
+            {
+                this.GetComponentInChildren<ParticleSystem>().Stop();
+            }
         }
 		
 		//Jump farther if we keep the space bar held down longer.
@@ -128,6 +137,7 @@ public class Player_Movement_Script : MonoBehaviour {
         {
             return;
         }        
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (horizontalMovement.playerOffset > horizontalMovement.leftMovementThreshold)
@@ -171,7 +181,7 @@ public class Player_Movement_Script : MonoBehaviour {
 	//	have the triggers set properly.
 	void CheckDead()
 	{
-		if (this.transform.position.y < -15)
+		if (this.transform.position.y < -25)
 		{
             Respawn();
 		}
@@ -207,6 +217,11 @@ public class Player_Movement_Script : MonoBehaviour {
                 //print("Not in air anymore"+Time.time);
                 isInAir = false;
             }
+
+            if (isJetPackActive)
+            {
+                this.GetComponentInChildren<ParticleSystem>().Stop();
+            }
         }
 
         if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !hitWallSideways) // Then stop -- you hit the wall while jumping
@@ -215,7 +230,7 @@ public class Player_Movement_Script : MonoBehaviour {
             this.rigidbody.AddForce(new Vector3(horizontalMovement.forcePushOffWall, 0, 0));
         }
 
-        if (other.gameObject.CompareTag("L1_Elite_Laser")) // Then respawn player & reset camera position
+        if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile")) // Then respawn player & reset camera position
         {
             Respawn();
         }

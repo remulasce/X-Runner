@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Elite_Laser_Homing
-  m_TagString: L1_Elite_Laser
+  m_TagString: L1_Elite_Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,8 +99,9 @@ MonoBehaviour:
   targetOffset: {x: 0, y: 0, z: 0}
   nonTargetDirection: {x: 0, y: 0, z: 1}
   postCollisionParticleSystem: {fileID: 0}
-  initialOffset: {x: 0, y: 0, z: 0}
+  initialHomingOffset: {x: 0, y: 0, z: 0}
   percentToCloseOffset: 0
+  closingMagnitude: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

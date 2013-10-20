@@ -13,6 +13,8 @@ public class L1_Transition_Script : MonoBehaviour {
 		print ("l2trans onstart");
 		//Take the actual player from the camera- it knows.
 		GameObject player = mainCamera.player;
+
+        fakePlayer.renderer.enabled = true;        
 		
 		mainCamera.player = fakePlayer;
 		
@@ -22,6 +24,7 @@ public class L1_Transition_Script : MonoBehaviour {
 	public void onEnterShip()
 	{
 		mainCamera.player = fakeShip;
+        fakePlayer.renderer.enabled = false;
 	}
 	
 	public void onFinishTransition()
