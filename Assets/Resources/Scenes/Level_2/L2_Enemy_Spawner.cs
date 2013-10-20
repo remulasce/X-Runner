@@ -57,11 +57,21 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	 */
 	void Spawn() {
 		print("Making spawn list...");
-		
-		
-		W (ft_hl(10), nb_go(-20,0,0,0), lb_no(), at_ld(1.0f), xt_tm(3), xb_go(1,1), 1);
-		W (ft_hl (20), nb_go (20,20,0,10), lb_no(), at_ld (1.0f), xt_im(), xb_go(-1,0), 2);
-		W (ft_hl(4), nb_go(-20,20,0,8), lb_no(), at_ld(1.0f), xt_no(), xb_go(11,1), 1);
+
+        /*
+         * Parameter Types
+         * FormationTypes: ft_hl(number of ships) (Horizontal), 
+         * EntryBehavior: nb_go(start, end) (go from start to end)
+         * LoiterBehavior: lb_no() (Don't hang around)
+         * AttackType: at_no() (no attack), at_ld(time) (fire down laser). at_lt() (laser fired towards player), at_hm() (homing missile)
+         * ExitTrigger: xt_no() (no exit), xt_tm (time) (Delay leave), xt_im (immediate), 
+         * ExitBehavior: xb_no() (never leave), xt_go() (leave towards a position)
+         * timeTillNextWave: Seconds
+         */
+
+        W(ft_hl(10), nb_go(-20, 0, 0, 0), lb_no(), at_lt(1.0f), xt_tm(3), xb_go(1, 1), 1);
+        W(ft_hl(20), nb_go(20, 20, 0, 10), lb_no(), at_hm(1.0f), xt_im(), xb_go(-1, 0), 2);
+        W(ft_hl(4), nb_go(-20, 20, 0, 8), lb_no(), at_ld(1.0f), xt_no(), xb_go(11, 1), 1);
 		print ("Done making spawn list");
 	}
 	
@@ -121,6 +131,24 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		at.fireInterval = fireInterval;
 		return at;
 	}
+
+    /** AttackType LaserTarget (laser Fired Towards Player) */
+    AttackType at_lt(float fireInterval)
+    {
+        AttackType at = new AttackType();
+        at.type = AttackType.T.LaserTarget;
+        at.fireInterval = fireInterval;
+        return at;
+    }
+
+    /** AttackType HomingMissile (homing missile) */
+    AttackType at_hm(float fireInterval)
+    {
+        AttackType at = new AttackType();
+        at.type = AttackType.T.HomingMissile;
+        at.fireInterval = fireInterval;
+        return at;
+    }
 	
 	/** eXit Trigger "NO exit" */
 	ExitTrigger xt_no()

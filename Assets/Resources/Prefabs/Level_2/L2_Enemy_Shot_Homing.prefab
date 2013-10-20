@@ -13,9 +13,9 @@ GameObject:
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400000}
-  m_Layer: 10
-  m_Name: L2_Player_Ship
-  m_TagString: Player
+  m_Layer: 9
+  m_Name: L2_Enemy_Shot_Homing
+  m_TagString: L2_EnemyShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.78527832, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: -4.37113883e-08}
+  m_LocalPosition: {x: .990794659, y: 1.96640408, z: -7.83145714}
+  m_LocalScale: {x: .5, y: .5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: fe38bee21442027418fc23bf91e770c1, type: 2}
+  - {fileID: 2100000, guid: af97503d08d5678458cf182254cc75aa, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -69,8 +69,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 2
+  m_Constraints: 8
+  m_CollisionDetection: 0
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -91,20 +91,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d7e7b7a4b274f2439c108e1819e594d, type: 3}
+  m_Script: {fileID: 11500000, guid: b45e2960f364dfd4885a3d5b9b5c30fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundaryData:
-    lowerHorizontalRange: .5
-    upperHorizontalRange: .5
-    lowerVerticalRange: .5
-    upperVerticalRange: .5
-  movement:
-    maxSpeed: 40
-    acceleration: 100
-    startupBoost: 40
-    startupCutoff: 40
-    frictionConstant: 8
+  speed: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

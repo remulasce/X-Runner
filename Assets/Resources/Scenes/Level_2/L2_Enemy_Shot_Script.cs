@@ -7,8 +7,9 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 	public float speed;
 	
 	// Use this for initialization
-	void Start () {
-		this.rigidbody.velocity = new Vector3(0, speed, 0);
+	protected void Start () {
+        this.transform.forward = new Vector3(0, -1, 0);
+        this.rigidbody.velocity = transform.forward * speed;
 	}
 	
 	//Don't keep drifting forever

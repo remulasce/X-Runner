@@ -115,14 +115,16 @@ public class L2_Enemy_Script : MonoBehaviour {
 			print ("Wait, what?");
 			break;
 		case (L2_Enemy_Spawner.AttackType.T.LaserDrop):
-            Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Drop"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
             //Make an enemy shot
+            Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Drop"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));            
 			break;
 		case (L2_Enemy_Spawner.AttackType.T.LaserTarget):
 			//Make an enemy shot
+            Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Target"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
 			break;
 		case (L2_Enemy_Spawner.AttackType.T.HomingMissile):
 			//Make an enemy shot
+            Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
 			break;
 		}
 	}
