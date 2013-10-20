@@ -258,4 +258,13 @@ public class L2_Ship_Script : MonoBehaviour
 		slowDown ();
 		limitSpeed ();		
 	}
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.CompareTag("L2_EnemyShot"))
+        {
+            print("Ship got shot!");
+
+        }
+    }
 }

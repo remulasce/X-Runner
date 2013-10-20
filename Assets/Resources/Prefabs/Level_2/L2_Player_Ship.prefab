@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 10
   m_Name: L2_Player_Ship
-  m_TagString: L2_Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,6 +94,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7e7b7a4b274f2439c108e1819e594d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boundaryData:
+    lowerHorizontalRange: .5
+    upperHorizontalRange: .5
+    lowerVerticalRange: .5
+    upperVerticalRange: .5
   movement:
     maxSpeed: 40
     acceleration: 100

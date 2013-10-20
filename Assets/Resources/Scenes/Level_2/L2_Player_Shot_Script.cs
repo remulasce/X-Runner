@@ -28,7 +28,7 @@ public class L2_Player_Shot_Script : MonoBehaviour {
 	
 	//If we hit an enemy, kill ourself.
 	//Leave the enemy to check if it should die.
-	void OnTriggerEnter(Collider col)
+    void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.CompareTag("L2_Enemy"))
 		{

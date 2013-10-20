@@ -177,7 +177,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//When we get hit by a player shot, we should die.
 	//Leave killing the shot to the shot itself, in case
 	//	we make stuff that can go through things
-	void OnTriggerEnter(Collider col)
+    void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.CompareTag("L2_PlayerShot"))
 		{
