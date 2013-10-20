@@ -2,10 +2,34 @@
 using System.Collections;
 
 public class L2_Enemy_Script : MonoBehaviour {
-
+	
+	//Used to know how we should behave.
+	L2_Enemy_Spawner.Wave wave;
+	Vector3 offset = new Vector3(0,0,0);
+	
+	//Where we are in our expected lifespan
+	enum LifeState { Entry, Loiter, Exit };
+	LifeState state;
+	float lastStateTime = 0;
+	
+	//Use this to help with our movement:
+	Vector3 target = new Vector3(0,0,0);
+	float maxSpeed = 4;
+	
 	// Use this for initialization
 	void Start () {
+		lastStateTime = Time.time;
+	}
 	
+	//Set how we're going to behave.
+	//For convenience, we're just going to assume we're in a Wave
+	//	and acta lie it.
+	//Offset is a little offset from the targetPositions, so we don't have
+	//	waves all over each other.
+	public void SetWaveAI(L2_Enemy_Spawner.Wave parent, Vector3 offset)
+	{
+		this.wave = parent;
+		this.offset = offset;
 	}
 	
 	
@@ -17,9 +41,86 @@ public class L2_Enemy_Script : MonoBehaviour {
 		}
 	}
 	
+	bool AtTarget()
+	{
+		return ((this.target == this.transform.position));
+	}
+	void DoEntry()
+	{
+		switch (wave.nb.type)
+		{
+		case L2_Enemy_Spawner.EntryBehavior.T.FlyIn:
+			target = new Vector3(wave.nb.endPos.x, wave.nb.endPos.y) + offset;
+			if (AtTarget())
+			{
+				this.transform.position = target + offset;
+				SetLifeState(LifeState.Loiter);
+			}
+			break;
+		}
+	}
+	
+	void DoLoiter()
+	{
+		switch (wave.xt.type)
+		{
+		case L2_Enemy_Spawner.ExitTrigger.T.ExitImmediately:
+			SetLifeState (LifeState.Exit);
+			break;
+		case L2_Enemy_Spawner.ExitTrigger.T.ExitAfter:
+			if ((Time.time - this.lastStateTime) > wave.xt.exitTime)
+			{
+				SetLifeState(LifeState.Exit);
+			}
+			break;
+		}
+		//No need to check for "Dont Exit" case.
+	}
+	
+	//This will not check if we're already in the state
+	void SetLifeState(LifeState state)
+	{
+		this.lastStateTime = Time.time;
+		this.state = state;	
+	}
+			
+	void DoExit()
+	{
+		//Hacky event-thingie.
+		//Also, assume we're doing that one exit that we know how to do.
+		if (Time.time < this.lastStateTime+.5f)
+		{
+			this.target = this.transform.position + this.offset
+				+ new Vector3(this.wave.xb.dst.x, this.wave.xb.dst.y) * 10000;
+		}
+	}
+		
+	//Track towards the target.
+	void DoTargetMovement()
+	{
+		Vector3 delta = (this.target - this.transform.position);
+		this.rigidbody.MovePosition(delta / delta.magnitude * Mathf.Min(maxSpeed, delta.magnitude));
+	}
+	
 	// Update is called once per frame
 	void Update () {
+		DoTargetMovement();
+		
+		switch (state)
+		{
+		case (LifeState.Entry):
+			DoEntry();
+			break;
+		case (LifeState.Loiter):
+			DoLoiter();
+			break;
+		case (LifeState.Exit):
+			DoExit();
+			break;
+		}
+		
 		killIfOutBounds();
+		
 	}
 	
 	//When we get hit by a player shot, we should die.

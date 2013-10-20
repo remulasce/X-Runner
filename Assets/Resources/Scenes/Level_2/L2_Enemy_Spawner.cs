@@ -59,16 +59,6 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		print("Spawning");
 		
 		
-		/** This is where you do things */
-		
-		//Spawn a wave of 10 dudes, spaced 5 apart, that do nothing,
-		// and spawn the next wave 6 seconds later.
-		/*
-		W( ft_hl(10, 5), lt_ss(), ...etc..., 6 );
-		//Do more things that I haven't outlined yet.
-		W( hl (1, 0), );
-		*/
-		
 		W (ft_hl(10), nb_st(-100,0,0,0), lb_no(), at_no(), xt_no(), xb_no(), 1);
 	}
 	
@@ -78,7 +68,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		//Start
 		// This will do things.
 		waveList.Add(new Wave(f, en, l, a, ext, exb, timeTillNextWave));
-			
+	
 	}
 	
 	
@@ -147,6 +137,9 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	{
 		foreach (Wave w in waveList)
 		{
+			
+			
+			
 			// w.Spawn() or something
 			yield return new WaitForSeconds(w.waveDuration);
 		}
@@ -160,7 +153,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	 * Also determines how long to wait before the
 	 * 	following wave.
 	 */
-	class Wave
+	public class Wave
 	{
 		public FormationType ft;
 		public EntryBehavior nb;
@@ -169,15 +162,43 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		public ExitTrigger xt;
 		public ExitBehavior xb;
 		public float waveDuration;
+		
+		IList enemies = new ArrayList();
+		
 		public Wave(FormationType ft, EntryBehavior nb, LoiterBehavior lb, AttackType at, ExitTrigger xt, ExitBehavior xb, float timeTillNextWave)
 		{
 			this.ft = ft; this.nb = nb; this.lb = lb; this.at = at; this.xt = xt; this.xb = xb; this.waveDuration = timeTillNextWave;
 		}
+		
+		//Spawn creates all of our stuff
+		//The Enemy itself will take care of doing its own things.
+		public void Spawn()
+		{
+			
+			//Make the thing.
+			switch (ft.type)
+			{
+			//For now, all we have.
+			case FormationType.T.HorizontalLine:
+				for (int i=0; i < ft.num; i++)
+				{
+					Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) - new Vector3((i/ft.num-1/2f)*3, 0, 0);
+					GameObject e = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/Level2/Enemy"));
+					
+					e.GetComponent<L2_Enemy_Script>().SetWaveAI(this, -new Vector3((i/ft.num-1/2f)*3, 0, 0));
+					this.enemies.Add(e);
+				}
+				break;
+			}
+			
+			//Start our coroutine that will make it do later things.
+		}
+		
 	}
 	/* The composition of the wave, eg 10 enemies in line, etc.
 	 *	Is defacto responsible for determining the "center" of the wave.
 	 */
-	class FormationType
+	public class FormationType
 	{
 		public enum T { HorizontalLine };
 		public T type;
@@ -188,7 +209,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	/* The way in which the wave enters, and where it goes.
 	 * Basically is just "from where" "to where".
 	 */
-	class EntryBehavior
+	public class EntryBehavior
 	{
 		public enum T { FlyIn };
 		public T type;
@@ -198,7 +219,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	}
 	/** What the wave does before it exits.
 	 */
-	class LoiterBehavior
+	public class LoiterBehavior
 	{
 		public enum T { Nothing, SwoopOccasionally, GotoWaypoints, TargetPlayer }
 		public T type;
@@ -209,7 +230,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		If set to exit immediately, then loiterbehavior
 		won't be done at all.
 	*/
-	class ExitTrigger
+	public class ExitTrigger
 	{
 		public enum T { ExitImmediately, ExitAfter, DontExit };
 		public T type;
@@ -219,7 +240,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	}
 	
 	/** How this exits, if it does. */
-	class ExitBehavior
+	public class ExitBehavior
 	{
 		public enum T { GotoDst };
 		public T type;
@@ -227,7 +248,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		public Vector2 dst;
 	}	
 	
-	class AttackType
+	public class AttackType
 	{
 		public enum T { None, LaserDrop, LaserTarget, HomingMissile };
 		public T type;
