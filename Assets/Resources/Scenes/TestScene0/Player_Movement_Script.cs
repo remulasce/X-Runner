@@ -171,7 +171,7 @@ public class Player_Movement_Script : MonoBehaviour {
 	//	have the triggers set properly.
 	void CheckDead()
 	{
-		if (this.transform.position.y < -15)
+		if (this.transform.position.y < -25)
 		{
             Respawn();
 		}
