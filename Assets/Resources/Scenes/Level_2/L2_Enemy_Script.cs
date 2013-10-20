@@ -16,9 +16,13 @@ public class L2_Enemy_Script : MonoBehaviour {
 	Vector3 target = new Vector3(0,0,0);
 	float maxSpeed = 8f;
 	
+	//Shooting
+	float nextFire = 0;
+	
 	// Use this for initialization
 	void Start () {
 		lastStateTime = Time.time;
+		nextFire = Time.time + Random.Range(0f, 1f);
 	}
 	
 	//Set how we're going to behave.
@@ -101,7 +105,42 @@ public class L2_Enemy_Script : MonoBehaviour {
 			
 		}
 	}
+	
+	//Actually fire whatever thing we have
+	void FireOurWeapon()
+	{
+		switch (wave.at.type)
+		{
+		case (L2_Enemy_Spawner.AttackType.T.None):
+			print ("Wait, what?");
+			break;
+		case (L2_Enemy_Spawner.AttackType.T.LaserDrop):
+			//Make an enemy shot
+			break;
+		case (L2_Enemy_Spawner.AttackType.T.LaserTarget):
+			//Make an enemy shot
+			break;
+		case (L2_Enemy_Spawner.AttackType.T.HomingMissile):
+			//Make an enemy shot
+			break;
+		}
+	}
+	
 		
+	//See if we can shoot somethings.
+	//There is some randomness added, so not everything fires
+	// in waves.
+	void DoShooting()
+	{
+		if (wave.at.type == L2_Enemy_Spawner.AttackType.T.None) { return; }
+		
+		if (Time.time > nextFire)
+		{
+			FireOurWeapon();
+			nextFire = Time.time + Random.Range(wave.at.fireInterval,  wave.at.fireInterval*3/2f);
+		}
+	}
+	
 	//Track towards the target.
 	void DoTargetMovement()
 	{
@@ -127,6 +166,8 @@ public class L2_Enemy_Script : MonoBehaviour {
 			DoExit();
 			break;
 		}
+		
+		DoShooting();
 		
 		killIfOutBounds();
 		

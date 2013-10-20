@@ -113,7 +113,14 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		at.type = AttackType.T.None;
 		return at;
 	}
-	
+	/** AttackType LaserDrop (basic lasergoesdown) */
+	AttackType at_ld(float fireInterval)
+	{
+		AttackType at = new AttackType();
+		at.type = AttackType.T.LaserDrop;
+		at.fireInterval = fireInterval;
+		return at;
+	}
 	
 	/** eXit Trigger "NO exit" */
 	ExitTrigger xt_no()
@@ -279,6 +286,8 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	{
 		public enum T { None, LaserDrop, LaserTarget, HomingMissile };
 		public T type;
+		
+		public float fireInterval;
 	}
 	
 	
