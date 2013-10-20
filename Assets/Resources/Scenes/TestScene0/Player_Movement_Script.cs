@@ -215,7 +215,7 @@ public class Player_Movement_Script : MonoBehaviour {
             this.rigidbody.AddForce(new Vector3(horizontalMovement.forcePushOffWall, 0, 0));
         }
 
-        if (other.gameObject.CompareTag("L1_Elite_Laser")) // Then respawn player & reset camera position
+        if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile")) // Then respawn player & reset camera position
         {
             Respawn();
         }

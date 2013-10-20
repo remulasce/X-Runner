@@ -27,6 +27,7 @@ public class Camera_Shake_Trigger_Script : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        print(other.gameObject.tag);
         if (other.gameObject.CompareTag(objectToCompareTagWith.tag))
         {
             mainCamera.BeginShake(shakeDuration, shakePower);
