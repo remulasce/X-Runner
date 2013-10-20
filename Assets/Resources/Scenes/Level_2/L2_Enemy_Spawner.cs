@@ -14,6 +14,33 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
 	}
 	
+	/** SpawnAPI:
+	
+	Wave Formations:
+		Horizontal Line
+		BigGrid
+	
+	Wave Entries:
+		Top -> position
+		
+	Enemy Actions:
+		Shooting
+		Loitering
+		Swooping in
+		Exit
+		
+	Elite Actions:
+		Enter
+		Loiter (Waypoints, Randomness)
+		Exit
+		Attack Settings
+		
+	Boss Setup:
+		Should be combination of all these, with a bit of 
+		  scripting glue
+		  
+		 */
+	
 	enum WaveType { Side, Line, /*Loop,*/ EliteVisit, EliteBoss };
 	WaveType[] roster = { 
 		WaveType.Side, 
