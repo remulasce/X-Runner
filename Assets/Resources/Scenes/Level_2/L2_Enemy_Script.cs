@@ -18,11 +18,15 @@ public class L2_Enemy_Script : MonoBehaviour {
 	
 	//Shooting
 	float nextFire = 0;
+
+    // Reference to player
+    L2_Ship_Script player;
 	
 	// Use this for initialization
 	void Start () {
 		lastStateTime = Time.time;
 		nextFire = Time.time + Random.Range(0f, 1f);
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<L2_Ship_Script>();
 	}
 	
 	//Set how we're going to behave.
@@ -109,7 +113,13 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//Actually fire whatever thing we have
 	void FireOurWeapon()
 	{
-		switch (wave.at.type)
+        if (player.isDead) // Do not fire a laser when the player is dead
+        {
+            return;
+        }
+
+        
+        switch (wave.at.type)
 		{
 		case (L2_Enemy_Spawner.AttackType.T.None):
 			print ("Wait, what?");

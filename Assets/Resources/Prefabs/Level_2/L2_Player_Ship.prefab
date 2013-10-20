@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.78527832, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 8.10000038, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,16 +95,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundaryData:
-    lowerHorizontalRange: .5
-    upperHorizontalRange: .5
-    lowerVerticalRange: .5
-    upperVerticalRange: .5
+    lowerHorizontalRange: .0350000001
+    upperHorizontalRange: .964999974
+    lowerVerticalRange: .0399999991
+    upperVerticalRange: .959999979
   movement:
-    maxSpeed: 40
-    acceleration: 100
-    startupBoost: 40
-    startupCutoff: 40
-    frictionConstant: 8
+    maxSpeed: 12
+    acceleration: 2500
+    startupBoost: 750
+    startupCutoff: 750
+    frictionConstant: 100
+  explosion: {fileID: 0}
+  isDead: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
