@@ -102,6 +102,11 @@ public class Player_Movement_Script : MonoBehaviour {
 			canJump = false;
             isInAir = true;
             timeWhenLastJumped = Time.time;
+
+            if (isJetPackActive)
+            {
+                this.GetComponentInChildren<ParticleSystem>().Play();
+            }
 			
 			//Application.LoadLevelAdditive("test_add_scene");
 			//Application.LoadLevel("test_add_scene");
@@ -109,6 +114,10 @@ public class Player_Movement_Script : MonoBehaviour {
 		if ((Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Space)) && isJumping)
         {
             isJumping = false;
+            if (isJetPackActive)
+            {
+                this.GetComponentInChildren<ParticleSystem>().Stop();
+            }
         }
 		
 		//Jump farther if we keep the space bar held down longer.
@@ -128,6 +137,7 @@ public class Player_Movement_Script : MonoBehaviour {
         {
             return;
         }        
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (horizontalMovement.playerOffset > horizontalMovement.leftMovementThreshold)
@@ -206,6 +216,11 @@ public class Player_Movement_Script : MonoBehaviour {
             {
                 //print("Not in air anymore"+Time.time);
                 isInAir = false;
+            }
+
+            if (isJetPackActive)
+            {
+                this.GetComponentInChildren<ParticleSystem>().Stop();
             }
         }
 
