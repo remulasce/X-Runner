@@ -7,7 +7,7 @@ public class L2_Enemy_Shot_Target_Script : L2_Enemy_Shot_Script
     protected GameObject player;
 
 	// Use this for initialization
-	protected void Start () {
+	protected new void Start () {
         base.Start();
         player = GameObject.FindGameObjectWithTag("Player");
         this.transform.LookAt(player.transform.position);
@@ -15,7 +15,8 @@ public class L2_Enemy_Shot_Target_Script : L2_Enemy_Shot_Script
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+    protected new void Update()
+    {
+        base.Update();
 	}
 }

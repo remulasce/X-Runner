@@ -15,7 +15,7 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 	//Don't keep drifting forever
 	void killIfOutBounds()
 	{
-		if (Mathf.Abs(this.transform.position.x)+Mathf.Abs(this.transform.position.y) > 1000)
+        if (Mathf.Abs(this.transform.position.magnitude) > 20)
 		{
 			Destroy (this.gameObject);
 		}
@@ -23,7 +23,7 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 	
 	
 	// Update is called once per frame
-	void Update () {
+	protected void Update () {
 		//The RigidBody velocity handles all our movement nicely
 		killIfOutBounds();
 	}

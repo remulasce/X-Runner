@@ -40,11 +40,20 @@ public class L2_Ship_Script : MonoBehaviour
     public BoundaryData boundaryData = new BoundaryData();
 
     public MovementData movement = new MovementData();
+
+    public float spawnTime = 1.0f;
+
+    public Detonator explosion;
+
+    [HideInInspector]
+    public bool isDead = false;
+    
+    private Vector3 startPosition = Vector3.zero;
 	
 	// Use this for initialization
 	void Start ()
-	{
-	
+    {        
+        startPosition = this.transform.position;
 	}
 
     private bool checkLowerBoundaryX()
@@ -262,9 +271,21 @@ public class L2_Ship_Script : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag("L2_EnemyShot"))
-        {
-            print("Ship got shot!");
-
+        {            
+            explosion.transform.position = this.transform.position;
+            explosion.Explode();
+            isDead = true;
+            this.transform.position = new Vector3(0, 0, 1000);
+            StartCoroutine("respawn");
         }
+    }
+
+    IEnumerator respawn()
+    {
+        print("respawning...");
+        yield return new WaitForSeconds(spawnTime);
+        this.transform.position = startPosition;
+        this.rigidbody.velocity = Vector3.zero;
+        isDead = false;
     }
 }
