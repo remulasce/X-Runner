@@ -20,13 +20,17 @@ public class L2_Enemy_Script : MonoBehaviour {
 	float nextFire = 0;
 
     // Reference to player
-    L2_Ship_Script player;
+    L2_Ship_Script player;    
+
+    // Detonator
+    private Detonator explosion;
 	
 	// Use this for initialization
 	void Start () {
 		lastStateTime = Time.time;
 		nextFire = Time.time + Random.Range(0f, 1f);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<L2_Ship_Script>();
+        explosion = this.GetComponentInChildren<Detonator>();
 	}
 	
 	//Set how we're going to behave.
@@ -44,7 +48,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	
 	void killIfOutBounds()
 	{
-		if (Mathf.Abs(this.transform.position.magnitude) > 100)
+		if (Mathf.Abs(this.transform.position.magnitude) > 500)
 		{
 			Destroy(this);
 		}
@@ -193,7 +197,10 @@ public class L2_Enemy_Script : MonoBehaviour {
 	{
 		if (col.gameObject.CompareTag("L2_PlayerShot"))
 		{
-			Destroy(this.gameObject);
+            explosion.transform.parent = null;
+            explosion.transform.position = this.transform.position;
+            explosion.Explode();
+            Destroy(this.gameObject);
 		}			
 	}
 }
