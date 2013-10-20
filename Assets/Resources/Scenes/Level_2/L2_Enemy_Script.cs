@@ -27,6 +27,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		//This gets called after SetWaveAI, because Unity.
 		lastStateTime = Time.time;
 		nextFire = Time.time + Random.Range(0f, 1f);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<L2_Ship_Script>();
@@ -40,9 +41,11 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//	waves all over each other.
 	public void SetWaveAI(L2_Enemy_Spawner.Wave parent, Vector3 offset)
 	{
-		//SetLifeState(LifeState.Entry);
+		//This actually gets called before Start, apparently.
+		SetLifeState(LifeState.Entry);
 		this.wave = parent;
 		this.offset = offset;
+		this.nextFire = Time.time + Random.Range(0f, this.wave.at.fireInterval);
 	}
 	
 	
@@ -154,7 +157,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 		if (Time.time > nextFire)
 		{
 			FireOurWeapon();
-			nextFire = Time.time + Random.Range(wave.at.fireInterval,  wave.at.fireInterval*3/2f);
+			nextFire = Time.time + Random.Range(wave.at.fireInterval*1/2f,  wave.at.fireInterval*3/2f);
 		}
 	}
 	
