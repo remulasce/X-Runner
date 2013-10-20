@@ -115,7 +115,8 @@ public class L2_Enemy_Script : MonoBehaviour {
 			print ("Wait, what?");
 			break;
 		case (L2_Enemy_Spawner.AttackType.T.LaserDrop):
-			//Make an enemy shot
+            Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Drop"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
+            //Make an enemy shot
 			break;
 		case (L2_Enemy_Spawner.AttackType.T.LaserTarget):
 			//Make an enemy shot
@@ -176,12 +177,11 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//When we get hit by a player shot, we should die.
 	//Leave killing the shot to the shot itself, in case
 	//	we make stuff that can go through things
-	void OnCollisionEnter(Collision col)
+	void OnTriggerEnter(Collider col)
 	{
 		if (col.gameObject.CompareTag("L2_PlayerShot"))
 		{
 			Destroy(this.gameObject);
-		}
-			
+		}			
 	}
 }

@@ -14,8 +14,8 @@ GameObject:
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400000}
   m_Layer: 11
-  m_Name: L2_Player_Shot
-  m_TagString: L2_PlayerShot
+  m_Name: L2_Enemy_Shot_Drop
+  m_TagString: L2_EnemyShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,10 +91,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd1c61360346a984a85c249c0d443f94, type: 3}
+  m_Script: {fileID: 11500000, guid: bda6c9629e7e26d46bb18a4c11230a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  speed: -60
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

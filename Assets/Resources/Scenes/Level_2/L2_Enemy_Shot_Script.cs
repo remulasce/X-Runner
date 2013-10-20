@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class L2_Player_Shot_Script : MonoBehaviour {
+public class L2_Enemy_Shot_Script : MonoBehaviour
+{
 	
 	public float speed;
 	
@@ -28,9 +29,9 @@ public class L2_Player_Shot_Script : MonoBehaviour {
 	
 	//If we hit an enemy, kill ourself.
 	//Leave the enemy to check if it should die.
-	void OnTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider col)
 	{
-		if (col.gameObject.CompareTag("L2_Enemy"))
+		if (col.gameObject.CompareTag("Player"))
 		{
 			Destroy(this.gameObject);
 		}
