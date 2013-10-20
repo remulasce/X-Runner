@@ -7,158 +7,231 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	
 	public L2_Elite_Script elite;
 	
-	// Use this for initialization
+
 	void Start () 
 	{
-		StartCoroutine(SpawnStuff());
-
+		//Spawn fills the spawnList
+		Spawn();
+		//DoSpawning goes through the spawnList and does the spawning
+		StartCoroutine(DoSpawning());
 	}
 	
 	/** SpawnAPI:
 	
-	Wave Formations:
-		Horizontal Line
-		BigGrid
-	
-	Wave Entries:
-		Top -> position
-		
-	Enemy Actions:
-		Shooting
-		Loitering
-		Swooping in
-		Exit
-		
-	Elite Actions:
-		Enter
-		Loiter (Waypoints, Randomness)
-		Exit
-		Attack Settings
-		
-	Boss Setup:
-		Should be combination of all these, with a bit of 
-		  scripting glue
-		  
-		 */
-	
-	enum WaveType { Side, Line, /*Loop,*/ EliteVisit, EliteBoss };
-	WaveType[] roster = { 
-		WaveType.Side, 
-		WaveType.EliteVisit,
-		WaveType.Side,
-		WaveType.Line,
-		WaveType.Line,
-		WaveType.Side,
-		WaveType.Side,
-		WaveType.Line,
-		WaveType.Line,
-		WaveType.Side,
-		//WaveType.Loop,
-		WaveType.EliteVisit,
-		WaveType.Line,
-		WaveType.Side,
-		WaveType.Line,
-		WaveType.Side,
-		WaveType.Line,
-		WaveType.Line,
-		WaveType.Side,
-		WaveType.EliteVisit,
-		//WaveType.Loop,
-		WaveType.Line,
-		WaveType.Side,
-		WaveType.Line,
-		WaveType.Line,
-		WaveType.Side,
-		WaveType.Line,
-		WaveType.Side,
-		WaveType.EliteBoss };
-		
+	Wave:
+	Type:
+		-Horizontal (numguys, spacing)
+	Entry:
+		StartPos: (x,y)
+		EndPos: (x,y)
+	Behavior while Onscreen:
+		-SitStill
+		-SwoopOccasionally
+		-GotoWaypoints (waypointlist)
+		-TargetPlayer
+	ExitTiming:
+		-ExitImmediately
+		-ExitAfter (numseconds)
+		-DontExit
+	ExitMethod:
+		-GotoPoint: (x,y)
+	AttackMethod:
+		-None
+		-LaserDrop
+		-LaserTarget
+		-Homing Missile
+	NextWaveIn: (numseconds)
 	
 	
-    IEnumerator SpawnStuff() {
-        print ("Spawn routine started");
+	-- Elite API later --
+	*/
+	
+	
+	
+	/** This doesn't actually do spawning-
+	 * what it does is fill the waveList,
+	 * whcih the Spawner will use to actually
+	 * do spawning.
+	 * 
+	 * It's organized this way so there's less to type.
+	 */
+	void Spawn() {
+		print("Spawning");
 		
-		foreach (WaveType w in roster)
-		{
-			switch (w)
-			{
-			case WaveType.EliteBoss:
-				MakeEliteBoss();
-				yield return new WaitForSeconds(2);
-				break;
-			case WaveType.EliteVisit:
-				MakeEliteComeHang(5);
-				yield return new WaitForSeconds(2);
-				break;
-			case WaveType.Line:
-				SpawnHorizLine(8);
-				yield return new WaitForSeconds(2);
-				break;
-				/*
-			case WaveType.Loop:
-				SpawnLoop(4);
-				yield return new WaitForSeconds(2);
-				break; (*/
-			case WaveType.Side:
-				SpawnSideSweep(8);
-				yield return new WaitForSeconds(2);
-				break;
+		
+		/** This is where you do things */
+		
+		//Spawn a wave of 10 dudes, spaced 5 apart, that do nothing,
+		// and spawn the next wave 6 seconds later.
+		/*
+		W( ft_hl(10, 5), lt_ss(), ...etc..., 6 );
+		//Do more things that I haven't outlined yet.
+		W( hl (1, 0), );
+		*/
+		
+		W (ft_hl(10), nb_st(-100,0,0,0), lb_no(), at_no(), xt_no(), xb_no(), 1);
+	}
+	
+	/** This is where I do things. Basic "define what you want and it's dealt with here */
+	void W(FormationType f, EntryBehavior en, LoiterBehavior l, AttackType a, ExitTrigger ext, ExitBehavior exb, float timeTillNextWave)
+	{
+		//Start
+		// This will do things.
+		waveList.Add(new Wave(f, en, l, a, ext, exb, timeTillNextWave));
 			
-			}
+	}
+	
+	
+	
+	
+	/** Helpers so you don't have to W(new BlaType1(), new BlaType2() ....) */
+	
+	/** FormationType Horizontal Line */
+	FormationType ft_hl(int num)
+	{
+		FormationType ft = new FormationType();
+		ft.type = FormationType.T.HorizontalLine;
+		ft.num = num;
+		return ft;
+	}
+	
+	/** eNtry Behavior STandard: Go from point offscreen to onscreen */
+	EntryBehavior nb_st(float stx, float sty, float endx, float endy)
+	{
+		EntryBehavior nb = new EntryBehavior();
+		nb.type = EntryBehavior.T.FlyIn;
+		nb.startPos = new Vector2(stx, sty);
+		nb.endPos = new Vector2(endx, endy);
+		return nb;
+	}
+	
+	/** LoiterBehavior do NOthing */
+	LoiterBehavior lb_no()
+	{
+		LoiterBehavior lb = new LoiterBehavior();
+		lb.type = LoiterBehavior.T.Nothing;
+		return lb;
+	}
+	
+	/** AttackType "NO attack" */
+	AttackType at_no()
+	{
+		AttackType at = new AttackType();
+		at.type = AttackType.T.None;
+		return at;
+	}
+	
+	
+	/** eXit Trigger "NO exit" */
+	ExitTrigger xt_no()
+	{
+		ExitTrigger xt = new ExitTrigger();
+		xt.type = ExitTrigger.T.DontExit;
+		return xt;
+	}
+	
+	/** eXit Behavior "NOne" (shouldn't be used if we need to exit...) */
+	ExitBehavior xb_no()
+	{
+		ExitBehavior xb = new ExitBehavior();
+		xb.type = ExitBehavior.T.GotoDst;
+		return new ExitBehavior();
+	}
+	
+	
+	/** Where we go through and actually make everything that was made
+	 * via W(...)
+	 */
+	IList waveList = new ArrayList();
+	IEnumerator DoSpawning()
+	{
+		foreach (Wave w in waveList)
+		{
+			// w.Spawn() or something
+			yield return new WaitForSeconds(w.waveDuration);
 		}
+	}
+	
+	
+
+	
+	
+	/** The overall wave, composed of the subtypes
+	 * Also determines how long to wait before the
+	 * 	following wave.
+	 */
+	class Wave
+	{
+		public FormationType ft;
+		public EntryBehavior nb;
+		public LoiterBehavior lb;
+		public AttackType at;
+		public ExitTrigger xt;
+		public ExitBehavior xb;
+		public float waveDuration;
+		public Wave(FormationType ft, EntryBehavior nb, LoiterBehavior lb, AttackType at, ExitTrigger xt, ExitBehavior xb, float timeTillNextWave)
+		{
+			this.ft = ft; this.nb = nb; this.lb = lb; this.at = at; this.xt = xt; this.xb = xb; this.waveDuration = timeTillNextWave;
+		}
+	}
+	/* The composition of the wave, eg 10 enemies in line, etc.
+	 *	Is defacto responsible for determining the "center" of the wave.
+	 */
+	class FormationType
+	{
+		public enum T { HorizontalLine };
+		public T type;
+		// Subclass maybe, but you should use the helper fxns and not touch
+		// the classes themselves.
+		public int num;
+	}
+	/* The way in which the wave enters, and where it goes.
+	 * Basically is just "from where" "to where".
+	 */
+	class EntryBehavior
+	{
+		public enum T { FlyIn };
+		public T type;
 		
-		yield break;
+		public Vector2 startPos;
+		public Vector2 endPos;
 	}
-	
-	/** Convenience methods for pseudo-scripting */
-	
-	//Spawns a bunch of enemies to the side of screen, which
-	//	all run across that screen.
-	void SpawnSideSweep(int numenemies)
+	/** What the wave does before it exits.
+	 */
+	class LoiterBehavior
 	{
-		for (int i=0; i < numenemies; i++)
-		{
-			Rigidbody b = ((GameObject)Instantiate(Resources.Load ("Prefabs/Level_2/L2_Enemy_Basic"))).rigidbody;
-			b.position = new Vector3(16 + i*2f, 13, 0);
-			b.rigidbody.velocity = new Vector3(-8, 0, 0);
-		}
+		public enum T { Nothing, SwoopOccasionally, GotoWaypoints, TargetPlayer }
+		public T type;
 	}
-	
-	//Spawn a horizontal line of enemies from the top of the screen,
-	// which all go down so as to try to crush the player.
-	void SpawnHorizLine(int numenemies)
+	/** What causes the wave to exit (thus executing
+		the ExitBehavior)
+		
+		If set to exit immediately, then loiterbehavior
+		won't be done at all.
+	*/
+	class ExitTrigger
 	{
-		for (int i = 0; i < numenemies; i++)
-		{
-			Rigidbody b = ((GameObject)Instantiate(Resources.Load ("Prefabs/Level_2/L2_Enemy_Basic"))).rigidbody;
-			b.position = new Vector3((i - numenemies/2)*2, 20, 0);
-			b.rigidbody.velocity = new Vector3(0, -6, 0);
-		}
+		public enum T { ExitImmediately, ExitAfter, DontExit };
+		public T type;
+		
+		public float exitTime;
+		public IList waypoints;
 	}
 	
-	//Spawn some enemies which come in from the side, and do a loopdeeloop.
-	void SpawnLoop(int num)
+	/** How this exits, if it does. */
+	class ExitBehavior
 	{
-		///Actually, don't do this.
-	}
+		public enum T { GotoDst };
+		public T type;
+		
+		public Vector2 dst;
+	}	
 	
-	//Makes the Elite come and hang around for num seconds, then leave.
-	void MakeEliteComeHang(float seconds)
+	class AttackType
 	{
-		//Temp: Just do something else
-		//SpawnHorizLine(6);
-		elite.AppearFor(seconds);
+		public enum T { None, LaserDrop, LaserTarget, HomingMissile };
+		public T type;
 	}
 	
-	//Make the elite come and do a final boss fight.
-	void MakeEliteBoss()
-	{
-		//SpawnHorizLine(10);
-		elite.DoBoss();
-	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
