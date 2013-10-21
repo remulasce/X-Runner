@@ -527,7 +527,7 @@ Prefab:
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 1538767958}
+      objectReference: {fileID: 1630494970}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}
@@ -758,7 +758,7 @@ MonoBehaviour:
     startupCutoff: 750
     frictionConstant: 100
   spawnTime: 1
-  explosion: {fileID: 1538767958}
+  explosion: {fileID: 1630494970}
   isDead: 0
 --- !u!54 &1556197953
 Rigidbody:
