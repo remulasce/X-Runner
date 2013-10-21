@@ -41,7 +41,11 @@ public class L2_Ship_Script : MonoBehaviour
 
     public MovementData movement = new MovementData();
 
+    // How long it takes for the player to spawn after getting blown up
     public float spawnTime = 1.0f;
+
+    // How long the player is invincible after re-spawning
+    public float shieldTime = 1.0f;
 
     public Detonator explosion;
 
@@ -49,6 +53,8 @@ public class L2_Ship_Script : MonoBehaviour
     public bool isDead = false;
     
     private Vector3 startPosition = Vector3.zero;
+
+    private bool isShielded = false;
 	
 	// Use this for initialization
 	void Start ()
@@ -270,22 +276,35 @@ public class L2_Ship_Script : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag("L2_EnemyShot"))
+        if (col.gameObject.CompareTag("L2_EnemyShot") && !isShielded)
         {            
             explosion.transform.position = this.transform.position;
             explosion.Explode();
             isDead = true;
             this.transform.position = new Vector3(0, 0, 1000);
-            StartCoroutine("respawn");
+            StartCoroutine("Respawn");
         }
     }
 
-    IEnumerator respawn()
+    IEnumerator Respawn()
     {
-        print("respawning...");
+        print("Respawning...");
         yield return new WaitForSeconds(spawnTime);
         this.transform.position = startPosition;
         this.rigidbody.velocity = Vector3.zero;
         isDead = false;
+        print("Respawned!");
+        isShielded = true;
+        StartCoroutine("ResetShield");
+    }
+
+    IEnumerator ResetShield()
+    {        
+        // Add in VFX here
+        print("Shielded!");
+        yield return new WaitForSeconds(shieldTime);
+        // Stop the VFX here
+        print("NOT Shielded...");
+        isShielded = false;
     }
 }

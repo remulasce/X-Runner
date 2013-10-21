@@ -15,10 +15,10 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 	//Don't keep drifting forever
 	void killIfOutBounds()
 	{
-        if (Mathf.Abs(this.transform.position.magnitude) > 20)
-		{
-			Destroy (this.gameObject);
-		}
+        if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds))
+        {
+            Destroy(this.gameObject);
+        }
 	}
 	
 	
@@ -30,7 +30,7 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 	
 	//If we hit an enemy, kill ourself.
 	//Leave the enemy to check if it should die.
-    void OnCollisionEnter(Collision col)
+    protected void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.CompareTag("Player"))
 		{

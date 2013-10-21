@@ -13,7 +13,7 @@ public class L2_Player_Shot_Script : MonoBehaviour {
 	//Don't keep drifting forever
 	void killIfOutBounds()
 	{
-		if (Mathf.Abs(this.transform.position.x)+Mathf.Abs(this.transform.position.y) > 1000)
+		if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds))
 		{
 			Destroy (this.gameObject);
 		}

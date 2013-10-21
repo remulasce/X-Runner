@@ -118,6 +118,54 @@ Prefab:
   m_RootGameObject: {fileID: 292744465}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &116106042
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.00792872906
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.01460242
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.00329834223
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+      propertyPath: explodeOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+      propertyPath: destroyTime
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+  m_RootGameObject: {fileID: 1538767957}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &153611053
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +599,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   other: {fileID: 153611058}
+--- !u!1 &1538767957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+  m_PrefabInternal: {fileID: 116106042}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1538767959}
+  - 114: {fileID: 1538767958}
+  m_Layer: 0
+  m_Name: Detonator-Heatwave(Pro)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1538767958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389,
+    type: 2}
+  m_PrefabInternal: {fileID: 116106042}
+  m_GameObject: {fileID: 1538767957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4007f1233a9b74fa9be42583fafba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 10
+  color: {r: 1, g: .423000008, b: 0, a: .5}
+  explodeOnStart: 0
+  duration: 3
+  detail: 1
+  upwardsBias: 0
+  destroyTime: 0
+  useWorldSpace: 1
+  direction: {x: 0, y: 0, z: 0}
+  fireballAMaterial: {fileID: 0}
+  fireballBMaterial: {fileID: 0}
+  smokeAMaterial: {fileID: 0}
+  smokeBMaterial: {fileID: 0}
+  shockwaveMaterial: {fileID: 0}
+  sparksMaterial: {fileID: 0}
+  glowMaterial: {fileID: 0}
+  heatwaveMaterial: {fileID: 0}
+  autoCreateFireball: 1
+  autoCreateSparks: 1
+  autoCreateShockwave: 1
+  autoCreateSmoke: 1
+  autoCreateGlow: 1
+  autoCreateLight: 1
+  autoCreateForce: 1
+  autoCreateHeatwave: 1
+--- !u!4 &1538767959
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: b5aa57d4bf54d5d4cb8a2bcc8eec4389, type: 2}
+  m_PrefabInternal: {fileID: 116106042}
+  m_GameObject: {fileID: 1538767957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.00792872906, y: 1.01460242, z: -.00329834223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &1556197947
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +758,7 @@ MonoBehaviour:
     startupCutoff: 750
     frictionConstant: 100
   spawnTime: 1
+  shieldTime: 2
   explosion: {fileID: 1630494970}
   isDead: 0
 --- !u!54 &1556197953
@@ -698,6 +811,18 @@ Prefab:
     - target: {fileID: 400000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
+      propertyPath: explodeOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
+      propertyPath: destroyTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
+      propertyPath: m_Name
+      value: Detonator-Simple_player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
@@ -764,7 +889,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -779,7 +904,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1622866094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.10228539, z: -10}
+  m_LocalPosition: {x: 0, y: 8.10228539, z: -13.2296848}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -793,8 +918,8 @@ GameObject:
   - 4: {fileID: 1630494971}
   - 114: {fileID: 1630494970}
   m_Layer: 0
-  m_Name: Detonator-Simple
-  m_TagString: D_Explosion
+  m_Name: Detonator-Simple_player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -813,11 +938,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 10
   color: {r: .961538434, g: .665680468, b: 0, a: .549019635}
-  explodeOnStart: 1
+  explodeOnStart: 0
   duration: 2.04645371
   detail: 1.10993302
   upwardsBias: 0
-  destroyTime: 7
+  destroyTime: 0
   useWorldSpace: 1
   direction: {x: 0, y: 0, z: 0}
   fireballAMaterial: {fileID: 2100000, guid: 35c8aea4fddc3f842bd829a8fd3d7e1c, type: 2}

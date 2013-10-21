@@ -39745,7 +39745,7 @@ GameObject:
   - 54: {fileID: 981884008}
   m_Layer: 10
   m_Name: L2_Player_Ship
-  m_TagString: L2_Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39763,16 +39763,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundaryData:
-    lowerHorizontalRange: .5
-    upperHorizontalRange: .5
-    lowerVerticalRange: .5
-    upperVerticalRange: .5
+    lowerHorizontalRange: .0350000001
+    upperHorizontalRange: .964999974
+    lowerVerticalRange: .0399999991
+    upperVerticalRange: .959999979
   movement:
-    maxSpeed: 40
-    acceleration: 100
-    startupBoost: 40
-    startupCutoff: 40
-    frictionConstant: 8
+    maxSpeed: 12
+    acceleration: 2500
+    startupBoost: 750
+    startupCutoff: 750
+    frictionConstant: 100
+  spawnTime: 1
+  explosion: {fileID: 0}
+  isDead: 0
 --- !u!23 &981884004
 Renderer:
   m_ObjectHideFlags: 0
@@ -100416,6 +100419,10 @@ Prefab:
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6500000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
