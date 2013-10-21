@@ -40,6 +40,11 @@ public class ShieldUvAnimation : MonoBehaviour
     {
         if (other.gameObject.CompareTag(tagToCompareFor))
         {            
+            if (other.gameObject.name.Contains("Homing"))
+            {
+                other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().transform.parent = null;                
+                other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().Explode();
+            }
             Object.Destroy(other.gameObject);
             StartCoroutine("RevertShieldColor");
         }

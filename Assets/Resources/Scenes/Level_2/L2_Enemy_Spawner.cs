@@ -67,22 +67,22 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * ExitTrigger: xt_no() (no exit), xt_tm (time) (Delay leave), xt_im (immediate), 
          * ExitBehavior: xb_no() (never leave), xt_go() (leave towards a position)
          * timeTillNextWave: Seconds
-         */        
+         */
 
         W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 38, 0, 15), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 13f);
+        W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 13f);
 
         W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 38, 0, 15), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 34, 0, 11), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 12f);
-        
 
-        W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 38, 0, 15), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 34, 0, 11), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
+
+        W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_hm(10.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(15), nb_go(0, 38, 0, 15), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(15), nb_go(0, 34, 0, 11), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 32, 0, 9),  lb_no(), at_hm(10.0f), xt_no(), xb_no(), 0f);
 
 		print ("Done making spawn list");

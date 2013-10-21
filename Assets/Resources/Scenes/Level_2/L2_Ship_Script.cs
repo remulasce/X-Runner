@@ -281,8 +281,9 @@ public class L2_Ship_Script : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag("L2_EnemyShot") && !isShielded)
-        {            
+        if ((col.gameObject.CompareTag("L2_EnemyShot") || col.gameObject.CompareTag("L2_HomingShot")) && !isShielded)
+        {
+            Destroy(col.gameObject);            
             explosion.transform.position = this.transform.position;
             explosion.Explode();
             isDead = true;

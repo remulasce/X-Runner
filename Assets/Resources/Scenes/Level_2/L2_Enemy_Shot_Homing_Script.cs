@@ -4,9 +4,13 @@ using System.Collections;
 public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 {
 
+    // Detonator
+    private Detonator explosion;
+
 	// Use this for initialization
 	protected new void Start () {
         base.Start();
+        explosion = this.GetComponentInChildren<Detonator>();
 	}
 	
 	// Update is called once per frame
@@ -20,12 +24,20 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
         }
 	}
 
-    protected new void OnCollisionEnter(Collision col)
+    protected void OnCollisionEnter(Collision col)
     {
-        base.OnCollisionEnter(col);
         if (col.gameObject.CompareTag("L2_PlayerShot"))
         {
+            explosion.transform.parent = null;
+            explosion.transform.position = this.transform.position;
+            explosion.Explode();
+            Destroy(col.gameObject);
             Destroy(this.gameObject);
         }
+    }
+
+    public Detonator GetExplosion()
+    {
+        return explosion;
     }
 }
