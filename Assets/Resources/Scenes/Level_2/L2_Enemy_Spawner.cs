@@ -68,10 +68,12 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * ExitBehavior: xb_no() (never leave), xt_go() (leave towards a position)
          * timeTillNextWave: Seconds
          */
-
-        W(ft_hl(10), nb_go(-20, 0, 0, 0), lb_no(), at_lt(4f), xt_tm(3), xb_go(1, 1), 1);
-        W(ft_hl(20), nb_go(20, 20, 0, 10), lb_no(), at_hm(4f), xt_im(), xb_go(-1, 0), 2);
-        W(ft_hl(4), nb_go(-20, 20, 0, 8), lb_no(), at_ld(4f), xt_no(), xb_go(11, 1), 1);
+		//Fake wave for timing purposes
+		W (ft_hl(0), nb_go(0,0,0,0), lb_no (), at_no(), xt_no(), xb_no(), 3);
+        /** should be 3 seconds */
+		W(ft_hl(10), nb_go(-30, 8, 0, 8), lb_no(), at_lt(4f), xt_tm(3), xb_go(1, 1), 3);
+        W(ft_hl(20), nb_go(20, 20, 0, 10), lb_no(), at_hm(4f), xt_im(), xb_go(-1, 0), 3);
+        W(ft_hl(4), nb_go(-20, 20, 0, 8), lb_no(), at_ld(4f), xt_no(), xb_go(11, 1), 4);
 		print ("Done making spawn list");
 	}
 	
