@@ -46,6 +46,7 @@ public class L2_Ship_Script : MonoBehaviour
 
     // How long the player is invincible after re-spawning
     public float shieldTime = 1.0f;
+    private float shieldSize;
 
     public Detonator explosion;
 
@@ -60,6 +61,10 @@ public class L2_Ship_Script : MonoBehaviour
 	void Start ()
     {        
         startPosition = this.transform.position;
+        shieldSize = this.transform.GetChild(0).localScale.x;
+
+        isShielded = true;
+        StartCoroutine("ResetShield");
 	}
 
     private bool checkLowerBoundaryX()
@@ -299,11 +304,11 @@ public class L2_Ship_Script : MonoBehaviour
     }
 
     IEnumerator ResetShield()
-    {        
-        // Add in VFX here
+    {
+        this.transform.GetChild(0).localScale = new Vector3(shieldSize, shieldSize, shieldSize);
         print("Shielded!");
         yield return new WaitForSeconds(shieldTime);
-        // Stop the VFX here
+        this.transform.GetChild(0).animation.Play();
         print("NOT Shielded...");
         isShielded = false;
     }
