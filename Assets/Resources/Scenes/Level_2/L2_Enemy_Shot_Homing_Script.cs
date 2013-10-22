@@ -25,7 +25,10 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 		//Stop following if he dies
 		else
 		{
-			Destroy (this.gameObject);
+            explosion.transform.parent = null;
+            explosion.transform.position = this.transform.position;
+            explosion.Explode();
+            Destroy (this.gameObject);
 		}
 	}
 
