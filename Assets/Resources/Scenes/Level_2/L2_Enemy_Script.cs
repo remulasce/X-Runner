@@ -51,9 +51,9 @@ public class L2_Enemy_Script : MonoBehaviour {
 	
 	void killIfOutBounds()
 	{
-		if (Mathf.Abs(this.transform.position.magnitude) > 200)
+		if (Mathf.Abs(this.transform.position.magnitude) > 60)
 		{
-			Destroy(this);
+			Destroy(this.gameObject);
 		}
 	}
 	
@@ -62,7 +62,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	 * */
 	bool AtTarget()
 	{
-		return ((this.target - this.transform.position).sqrMagnitude < .1f);
+		return ((this.target - this.transform.position).sqrMagnitude < .001f);
 	}
 	void DoEntry()
 	{
