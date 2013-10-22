@@ -71,9 +71,9 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 38, 0, 15), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 13f);
+        W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
 
-        W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_ld(10.0f), xt_no(), xb_no(), -5f);
         W(ft_hl(15), nb_go(0, 38, 0, 15), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 34, 0, 11), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 12f);
@@ -214,14 +214,44 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	{
 		foreach (Wave w in waveList)
 		{
-			print ("Spawning");
-			w.Spawn();
-			yield return new WaitForSeconds(w.waveDuration);
+            if (!w.hasSpawned)
+            {
+                if (w.waveDuration >= 0)
+                {
+                    print("Spawning");
+                    w.Spawn();
+                    w.hasSpawned = true;
+                    yield return new WaitForSeconds(w.waveDuration);
+                }
+                else
+                {
+                    GameObject[] ships = GameObject.FindGameObjectsWithTag("L2_Enemy");
+
+                    if (ships.Length > 1) // Have to count the Elite as somthing separate
+                    {
+                        
+                        StartCoroutine("RestartSpawning");
+                        break;
+                    }
+                    else // Once there are no regular ships left, spawning continues after the delay from destroying the current wave expires
+                    {
+                        yield return new WaitForSeconds(-w.waveDuration);
+                        print("Spawning");
+                        w.Spawn();
+                        w.hasSpawned = true;                        
+                    }
+                }
+            }
 		}
 	}
-	
-	
 
+
+    IEnumerator RestartSpawning()
+    {
+        yield return new WaitForSeconds(0.5f);
+        print("Attempting to spawn again...");
+        StartCoroutine("DoSpawning");
+    }
 	
 	
 	/** The overall wave, composed of the subtypes
@@ -237,6 +267,8 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		public ExitTrigger xt;
 		public ExitBehavior xb;
 		public float waveDuration;
+
+        public bool hasSpawned = false;
 		
 		IList enemies = new ArrayList();
 		

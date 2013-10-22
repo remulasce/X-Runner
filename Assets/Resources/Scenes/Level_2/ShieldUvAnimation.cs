@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// For reference, I found this at: http://wiki.unity3d.com/index.php?title=Shield
+
 public class ShieldUvAnimation : MonoBehaviour
 {
     public GameObject iShield;

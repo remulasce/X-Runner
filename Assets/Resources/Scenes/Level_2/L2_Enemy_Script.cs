@@ -51,7 +51,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	
 	void killIfOutBounds()
 	{
-		if (Mathf.Abs(this.transform.position.magnitude) > 500)
+		if (Mathf.Abs(this.transform.position.magnitude) > 200)
 		{
 			Destroy(this);
 		}
