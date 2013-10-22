@@ -15,6 +15,7 @@ public class Player_Movement_Script : MonoBehaviour {
 
     [HideInInspector]
     public bool isInAir = false; // If the player is in the air, the camera will follow in y (prevents jenky camera movement)
+	
 
     public bool isJetPackActive = false; // Will allow the player to float for longer when this is active
     public float jetPackFloatingForce = 0.0f; // This force will be added to the player's regular floating velocity
@@ -40,15 +41,16 @@ public class Player_Movement_Script : MonoBehaviour {
 
         public float playerOffset = 0.0f;
 
-        [Range(-10000.0f, 0.0f)]
-        public float forcePushOffWall = -3000.0f;
+        [Range(-100.0f, 0.0f)]
+        public float accelerationPushOffWall = 0.0f;
     }
 
     public HorizontalMovementData horizontalMovement = new HorizontalMovementData();
 
     private float timeWhenLastJumped = 0.0f; // Will check when the player last jumped
-    private bool hitWallSideways = false;
-
+    private bool onWall = false; //For wall-jumping. If you're good, you can wall jump indefinitely.
+	private int wallJumpsLeft = 3;
+	
 	// Use this for initialization
 	void Start () {
 		//We should persist for the next level transition
@@ -57,9 +59,10 @@ public class Player_Movement_Script : MonoBehaviour {
 	
 	void DoXVelocity()
 	{
-        if (!hitWallSideways)
+        if (!onWall)
         {
-            this.transform.position += new Vector3(movementSpeed * Time.deltaTime, 0, 0);
+            //this.transform.position += new Vector3(movementSpeed * Time.deltaTime, 0, 0);
+			this.rigidbody.MovePosition(this.transform.position + new Vector3(movementSpeed * Time.deltaTime, 0, 0));
         }
 
         RaycastHit hit;
@@ -68,7 +71,8 @@ public class Player_Movement_Script : MonoBehaviour {
         rays[0] = new Ray(this.transform.position, new Vector3(0, -1, 0));
         rays[1] = new Ray(new Vector3(this.transform.position.x - 0.75f, this.transform.position.y, this.transform.position.z), new Vector3(0, -1, 0));
         rays[2] = new Ray(new Vector3(this.transform.position.x + 0.75f, this.transform.position.y, this.transform.position.z), new Vector3(0, -1, 0));
-
+		
+		
         int numberOfRaysHitGround = 0;
 
         // Check to see if there is a floor below the player for all of the rays
@@ -94,6 +98,13 @@ public class Player_Movement_Script : MonoBehaviour {
 	
 	void DoJump()
 	{
+		//Save ourselves with a wall jump
+		if (!canJump && onWall && wallJumpsLeft > 0 && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)))
+		{
+			canJump = true;
+			wallJumpsLeft--;
+			onWall = false;
+		}
 		if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) && canJump)
         {
             this.rigidbody.velocity = Vector3.zero;
@@ -172,7 +183,7 @@ public class Player_Movement_Script : MonoBehaviour {
         this.rigidbody.velocity = Vector3.zero;
         this.transform.position = new Vector3(this.transform.position.x, 1, 0);
         mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, mainCamera.transform.position.z);
-        hitWallSideways = false;
+        onWall = false;
         isInAir = true;
     }
 	
@@ -211,7 +222,8 @@ public class Player_Movement_Script : MonoBehaviour {
 			//print ("Can Jump Now "+Time.time);
             canJump = true;
             isJumping = false;
-            hitWallSideways = false;
+            onWall = false;
+			wallJumpsLeft = 3;
             if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
             {
                 //print("Not in air anymore"+Time.time);
@@ -224,10 +236,11 @@ public class Player_Movement_Script : MonoBehaviour {
             }
         }
 
-        if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !hitWallSideways) // Then stop -- you hit the wall while jumping
+        if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !onWall) // Wall Jump Test
         {
-            hitWallSideways = true;
-            this.rigidbody.AddForce(new Vector3(horizontalMovement.forcePushOffWall, 0, 0));
+            onWall = true;
+            this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
+			
         }
 
         if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile")) // Then respawn player & reset camera position
