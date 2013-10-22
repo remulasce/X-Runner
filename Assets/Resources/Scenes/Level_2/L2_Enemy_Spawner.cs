@@ -69,6 +69,9 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * timeTillNextWave: Seconds
          */
 
+        W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
+
+        /*
         W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 38, 0, 15), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
@@ -76,14 +79,15 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_ld(10.0f), xt_no(), xb_no(), -5f);
         W(ft_hl(15), nb_go(0, 38, 0, 15), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 34, 0, 11), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 12f);
+        W(ft_hl(15), nb_go(0, 34, 0, 11), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
 
 
-        W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_hm(10.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(15), nb_go(0, 40, 0, 17), lb_no(), at_hm(10.0f), xt_no(), xb_no(), -0.01f);
         W(ft_hl(15), nb_go(0, 38, 0, 15), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 36, 0, 13), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 34, 0, 11), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(15), nb_go(0, 32, 0, 9),  lb_no(), at_hm(10.0f), xt_no(), xb_no(), 0f);
+         * */
 
 		print ("Done making spawn list");
 	}

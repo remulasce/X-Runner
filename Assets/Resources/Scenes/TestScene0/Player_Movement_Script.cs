@@ -133,7 +133,7 @@ public class Player_Movement_Script : MonoBehaviour {
 
     void DoSideWaysMovement()
     {
-        if ((isJumping || isInAir) && !isJetPackActive) // Player cannot move while in jump, unless the jetpack has been attained
+        if ((isJumping || isInAir) && !isJumping) // Player cannot move while in jump, unless the jetpack has been attained
         {
             return;
         }        
