@@ -7008,7 +7008,7 @@ MonoBehaviour:
     rightMovementThreshold: 7.5
     movementSpeed: 7
     playerOffset: 0
-    forcePushOffWall: -3000
+    accelerationPushOffWall: -15
 --- !u!23 &137554355
 Renderer:
   m_ObjectHideFlags: 0
@@ -85856,6 +85856,10 @@ Prefab:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1911888144}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: horizontalMovement.accelerationPushOffWall
+      value: -15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
   m_RootGameObject: {fileID: 137554353}
