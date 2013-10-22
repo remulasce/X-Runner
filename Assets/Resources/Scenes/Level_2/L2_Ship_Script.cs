@@ -281,7 +281,7 @@ public class L2_Ship_Script : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if ((col.gameObject.CompareTag("L2_EnemyShot") || col.gameObject.CompareTag("L2_HomingShot")) && !isShielded)
+        if ((col.gameObject.CompareTag("L2_EnemyShot") && !isShielded))
         {
             Destroy(col.gameObject);            
             explosion.transform.position = this.transform.position;
@@ -289,6 +289,24 @@ public class L2_Ship_Script : MonoBehaviour
             isDead = true;
             this.transform.position = new Vector3(0, 0, 1000);
             StartCoroutine("Respawn");
+        }
+
+        if (col.gameObject.CompareTag("L2_Enemy"))
+        {
+
+            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
+            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
+            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
+            Destroy(col.gameObject);
+
+            if (!this.isShielded)
+            {
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                isDead = true;
+                this.transform.position = new Vector3(0, 0, 1000);
+                StartCoroutine("Respawn");
+            }            
         }
     }
 

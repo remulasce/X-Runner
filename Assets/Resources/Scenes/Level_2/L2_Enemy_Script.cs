@@ -206,4 +206,9 @@ public class L2_Enemy_Script : MonoBehaviour {
             Destroy(this.gameObject);
 		}			
 	}
+
+    public Detonator GetExplosion()
+    {
+        return explosion;
+    }
 }
