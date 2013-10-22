@@ -653,7 +653,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: movement.frictionConstant
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: reloadTime
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
@@ -874,6 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7e7b7a4b274f2439c108e1819e594d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reloadTime: .200000003
   boundaryData:
     lowerHorizontalRange: .0350000001
     upperHorizontalRange: .964999974
@@ -884,7 +889,7 @@ MonoBehaviour:
     acceleration: 3500
     startupBoost: 4000
     startupCutoff: 4000
-    frictionConstant: 100
+    frictionConstant: 10
   spawnTime: 1
   shieldTime: 3
   explosion: {fileID: 1630494970}

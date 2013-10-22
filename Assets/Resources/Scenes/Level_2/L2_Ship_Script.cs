@@ -13,12 +13,17 @@ public class L2_Ship_Script : MonoBehaviour
         public float acceleration = 100;
 
         //When we're far from maxvelocity, we add some extra force to get us going
-        public float startupBoost = 40;
+        public float startupBoost = 00;
         //At what speed we should stop applying the startup boost.
-        public float startupCutoff = 40;
-        public float frictionConstant = 8f;
+        public float startupCutoff = 00;
+		//Friction will only be applied when not accelerating in the current direction,
+		//	so we don't have to change the acceleration & boost things every time we
+		//	change this.
+        public float frictionConstant = 0f;
     }
 
+	public float reloadTime = .5f;
+	
     [System.Serializable]
     public class BoundaryData
     {
@@ -56,6 +61,9 @@ public class L2_Ship_Script : MonoBehaviour
     private Vector3 startPosition = Vector3.zero;
 
     private bool isShielded = false;
+	private float lastShot = 0;
+	
+	
 	
 	// Use this for initialization
 	void Start ()
@@ -119,8 +127,8 @@ public class L2_Ship_Script : MonoBehaviour
 	//Add the arrow-key primary movement
 	void addControl ()
 	{
-		float dx = Input.GetAxis ("Horizontal");
-		float dy = Input.GetAxis ("Vertical");
+		float dx = Input.GetAxisRaw ("Horizontal");
+		float dy = Input.GetAxisRaw ("Vertical");
 
         //----------------------------------------
 
@@ -169,8 +177,8 @@ public class L2_Ship_Script : MonoBehaviour
 	// responsiveness
 	void addStartupBoost ()
 	{
-		float dx = Input.GetAxis ("Horizontal");
-		float dy = Input.GetAxis ("Vertical");
+		float dx = Input.GetAxisRaw ("Horizontal");
+		float dy = Input.GetAxisRaw ("Vertical");
 		
 		float vx = this.rigidbody.velocity.x;
 		float vy = this.rigidbody.velocity.y;
@@ -245,7 +253,24 @@ public class L2_Ship_Script : MonoBehaviour
             this.rigidbody.velocity = new Vector3(this.rigidbody.velocity.x, 0, 0);
         }
         
-        this.rigidbody.AddForce(-movement.frictionConstant * this.rigidbody.velocity * Time.deltaTime);
+		//Control
+		float dx = Input.GetAxisRaw ("Horizontal");
+		float dy = Input.GetAxisRaw ("Vertical");
+		
+        
+		//Friction will only be responsible for bringing a ship to a halt with no control-
+		//  regular acceleration should ensure its curve is sufficient for a ship travelling
+		//	full speed in the other direction.
+		if (dx == 0)
+		{
+			float boost = 1;
+			if (Mathf.Abs(this.rigidbody.velocity.x) < 1) { boost = 2 - Mathf.Abs(this.rigidbody.velocity.x); }
+			this.rigidbody.AddForce(new Vector3(-movement.frictionConstant * boost * this.rigidbody.velocity.x * Time.deltaTime, 0, 0), ForceMode.VelocityChange);
+		}
+		if (dy == 0)
+		{
+			this.rigidbody.AddForce(new Vector3(0, -movement.frictionConstant * this.rigidbody.velocity.y * Time.deltaTime, 0), ForceMode.VelocityChange);
+		}
 	}
 	
 	//Enforce max speed limit
@@ -264,9 +289,9 @@ public class L2_Ship_Script : MonoBehaviour
 	//Make a shot if we're shooting
 	void doShooting ()
 	{
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKey(KeyCode.Space) && Time.time > lastShot + reloadTime) {
 			Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 0, 180));
-			
+			lastShot = Time.time;
 		}
 	}
 	// Update is called once per frame
