@@ -276,7 +276,7 @@ public class L2_Ship_Script : MonoBehaviour
 		addControl ();
 		addStartupBoost ();        
 		slowDown ();
-		limitSpeed ();		
+		limitSpeed ();	
 	}
 
     void OnCollisionEnter(Collision col)

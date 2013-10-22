@@ -69,17 +69,32 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * timeTillNextWave: Seconds
          */
 
-        W(ft_hl(1), nb_go(0, 20, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 5f);
+        W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 5f);
 
         W(ft_hl(5), nb_go(-10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go( 45, 0), 1f);
         W(ft_hl(5), nb_go( 10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go(-45, 0), 5f);
 
-        W(ft_hl(9), nb_go(0, 30, 0, 10), lb_no(), at_lt(15.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(9), nb_go(0, 28, 0, 8), lb_no(), at_ld(15.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(9), nb_go(0, 26, 0, 6), lb_no(), at_ld(15.0f), xt_no(), xb_no(), -1f);
+        W(ft_hl(9), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(9), nb_go(0, 28, 0, 8), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(9), nb_go(0, 26, 0, 6), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
 
-        W(ft_hl(7), nb_go(-10, -15, 0, 0), lb_no(), at_lt(6.0f), xt_im(), xb_go(45, 0), 1f);
-        W(ft_hl(7), nb_go( 10, -15, 0, 0), lb_no(), at_lt(6.0f), xt_im(), xb_go(45, 0), 5f);
+        W(ft_hl(3), nb_go(-15, -15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), -1f);
+        W(ft_hl(5), nb_go(15, -15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 1f);
+
+        W(ft_hl(3), nb_go( 15, 12, 0, -5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 3f);
+        W(ft_hl(5), nb_go(-15, 12, 0, -7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 1f);
+
+        W(ft_hl(3), nb_go(0, 15, 0, 2), lb_no(), at_hm(2.0f), xt_tm(3.0f), xb_no(), 3f);
+        W(ft_hl(3), nb_go(0, -15, 0, -2), lb_no(), at_hm(2.0f), xt_tm(3.0f), xb_no(), 0f);
+        W(ft_hl(5), nb_go(0, 15, -5, 2), lb_no(), at_hm(2.0f), xt_tm(3.0f), xb_no(), 1f);
+        W(ft_hl(5), nb_go(0, -15, 5, -2), lb_no(), at_hm(2.0f), xt_tm(3.0f), xb_no(), 0f);
+
+        W(ft_hl(11), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), -.01f);
+        W(ft_hl(11), nb_go(0, 28, 0, 8), lb_no(),  at_lt(7.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(11), nb_go(0, 26, 0, 6), lb_no(),  at_ld(7.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(11), nb_go(0, 24, 0, 4), lb_no(),  at_ld(7.0f), xt_no(), xb_no(), 0f);
+
+
 
 		print ("Done making spawn list");
 	}

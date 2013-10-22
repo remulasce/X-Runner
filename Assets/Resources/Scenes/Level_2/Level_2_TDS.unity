@@ -635,6 +635,22 @@ Prefab:
       propertyPath: explosion
       value: 
       objectReference: {fileID: 1630494970}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.acceleration
+      value: 3500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.startupBoost
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.startupCutoff
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.maxSpeed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}
@@ -860,10 +876,10 @@ MonoBehaviour:
     lowerVerticalRange: .0399999991
     upperVerticalRange: .959999979
   movement:
-    maxSpeed: 12
-    acceleration: 2500
-    startupBoost: 750
-    startupCutoff: 750
+    maxSpeed: 15
+    acceleration: 3500
+    startupBoost: 1500
+    startupCutoff: 1500
     frictionConstant: 100
   spawnTime: 1
   shieldTime: 3

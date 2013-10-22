@@ -166,7 +166,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	{
 		//return;
 		Vector3 delta = (this.target - this.transform.position);
-		this.rigidbody.MovePosition(this.transform.position + Time.deltaTime*(delta.normalized * Mathf.Min(maxSpeed, 2*delta.magnitude)));
+		this.rigidbody.MovePosition(this.transform.position + Time.deltaTime*(delta.normalized * Mathf.Min(maxSpeed, 7.5f*delta.magnitude)));
 	}
 	
 	// Update is called once per frame
