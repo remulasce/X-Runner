@@ -641,15 +641,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: movement.startupBoost
-      value: 1500
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: movement.startupCutoff
-      value: 1500
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: movement.maxSpeed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.frictionConstant
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
@@ -878,8 +882,8 @@ MonoBehaviour:
   movement:
     maxSpeed: 15
     acceleration: 3500
-    startupBoost: 1500
-    startupCutoff: 1500
+    startupBoost: 4000
+    startupCutoff: 4000
     frictionConstant: 100
   spawnTime: 1
   shieldTime: 3

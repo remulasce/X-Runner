@@ -14,7 +14,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	
 	//Use this to help with our movement:
 	Vector3 target = new Vector3(0,0,0);
-	float maxSpeed = 8f;
+	public float maxSpeed = 7f;
 	
 	//Shooting
 	float nextFire = 0;

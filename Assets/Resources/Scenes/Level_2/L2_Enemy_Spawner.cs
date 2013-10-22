@@ -69,33 +69,76 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * timeTillNextWave: Seconds
          */
 
+        // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 5f);
 
+        // Inital Fighter Wave
         W(ft_hl(5), nb_go(-10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go( 45, 0), 1f);
         W(ft_hl(5), nb_go( 10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go(-45, 0), 5f);
 
-        W(ft_hl(9), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(9), nb_go(0, 28, 0, 8), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(9), nb_go(0, 26, 0, 6), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
+        // First Blockade
+        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(13), nb_go(0, 28, 0, 8), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(11), nb_go(0, 26, 0, 6), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
 
-        W(ft_hl(3), nb_go(-15, -15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), -1f);
-        W(ft_hl(5), nb_go(15, -15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 1f);
+        // Second Fighter Wave
+        W(ft_hl(3), nb_go(15, -15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), -1f);
+        W(ft_hl(3), nb_go(-15, -15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 3f);
 
-        W(ft_hl(3), nb_go( 15, 12, 0, -5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 3f);
-        W(ft_hl(5), nb_go(-15, 12, 0, -7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 1f);
+        W(ft_hl(3), nb_go(-15, 15, 0, -5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 0f);
+        W(ft_hl(3), nb_go(15, 15, 0, -7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 1.5f);
 
-        W(ft_hl(3), nb_go(0, 15, 0, 2), lb_no(), at_hm(2.0f), xt_tm(3.0f), xb_no(), 3f);
-        W(ft_hl(3), nb_go(0, -15, 0, -2), lb_no(), at_hm(2.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(5), nb_go(0, 15, -5, 2), lb_no(), at_hm(2.0f), xt_tm(3.0f), xb_no(), 1f);
-        W(ft_hl(5), nb_go(0, -15, 5, -2), lb_no(), at_hm(2.0f), xt_tm(3.0f), xb_no(), 0f);
+        // Third Fighter Wave
+        W(ft_hl(3), nb_go( 25,  8,  0,  2), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
+        W(ft_hl(3), nb_go( 25,  8,  0, -2), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
+        W(ft_hl(3), nb_go(-25,  8,  5,  0), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
+        W(ft_hl(3), nb_go(-25,  8, -5,  0), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
 
-        W(ft_hl(11), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), -.01f);
-        W(ft_hl(11), nb_go(0, 28, 0, 8), lb_no(),  at_lt(7.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(11), nb_go(0, 26, 0, 6), lb_no(),  at_ld(7.0f), xt_no(), xb_no(), 0f);
+        // Second Blockade
+        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), -.01f);
+        W(ft_hl(15), nb_go(0, 28, 0, 8), lb_no(),  at_lt(7.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(13), nb_go(0, 26, 0, 6), lb_no(),  at_ld(7.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(11), nb_go(0, 24, 0, 4), lb_no(),  at_ld(7.0f), xt_no(), xb_no(), 0f);
 
+        // Giant Vertical Wave
+        W(ft_hl(15), nb_go(0, 40, 0, -60), lb_no(), at_no(), xt_im(), xb_go(0, -60), -.01f);
+        W(ft_hl(15), nb_go(0, 38, 0, -62), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 36, 0, -64), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 34, 0, -66), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 32, 0, -68), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 30, 0, -70), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 28, 0, -72), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 26, 0, -74), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 24, 0, -76), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 22, 0, -78), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 20, 0, -80), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 18, 0, -82), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 16, 0, -84), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
+        W(ft_hl(15), nb_go(0, 14, 0, -86), lb_no(), at_no(), xt_im(), xb_go(0, -60), 8f);
 
+        // Filler Wave 1
+        W(ft_hl(4), nb_go(15, 15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), 0f);
+        W(ft_hl(4), nb_go(-15, 15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), 1.5f);
 
+        // Filler Wave 2
+        W(ft_hl(3), nb_go(20, 8, 0, 2), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
+        W(ft_hl(3), nb_go(20, 8, 0, -2), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
+        W(ft_hl(3), nb_go(-20, 8, 5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
+        W(ft_hl(3), nb_go(-20, 8, -5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
+
+        // Final Blockade Bottom
+        W(ft_hl(11), nb_go(0, -30, 0, -6), lb_no(), at_hm(12.0f), xt_no(), xb_no(), -0.1f);
+        W(ft_hl(9), nb_go(0, -28, 0, -4), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(7), nb_go(0, -26, 0, -2), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 1.5f);
+
+        // Final Blockade Top
+        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(15.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(15), nb_go(0, 28, 0, 8), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(15), nb_go(0, 26, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 0f);       
+        
+
+        // Insert Boss Here        
+        
 		print ("Done making spawn list");
 	}
 	
