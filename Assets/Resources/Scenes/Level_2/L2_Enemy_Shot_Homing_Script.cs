@@ -22,6 +22,11 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
             this.transform.LookAt(player.transform.position);
             this.rigidbody.velocity = this.transform.forward * speed;
         }
+		//Stop following if he dies
+		else
+		{
+			Destroy (this.gameObject);
+		}
 	}
 
     protected void OnCollisionEnter(Collision col)
