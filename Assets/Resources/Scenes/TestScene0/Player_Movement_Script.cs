@@ -41,8 +41,8 @@ public class Player_Movement_Script : MonoBehaviour {
 
         public float playerOffset = 0.0f;
 
-        [Range(-10000.0f, 0.0f)]
-        public float accelerationPushOffWall = -100.0f;
+        [Range(-100.0f, 0.0f)]
+        public float accelerationPushOffWall = 0.0f;
     }
 
     public HorizontalMovementData horizontalMovement = new HorizontalMovementData();
