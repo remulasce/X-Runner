@@ -238,7 +238,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		public ExitBehavior xb;
 		public float waveDuration;
 		
-		IList enemies = new ArrayList();
+		public IList enemies = new ArrayList();
 		
 		public Wave(FormationType ft, EntryBehavior nb, LoiterBehavior lb, AttackType at, ExitTrigger xt, ExitBehavior xb, float timeTillNextWave)
 		{
@@ -261,12 +261,16 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 					GameObject e = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Basic"), pos, Quaternion.identity);
 					
 					e.GetComponent<L2_Enemy_Script>().SetWaveAI(this, -new Vector3((i - ft.num/2)*2, 0, 0));
-					this.enemies.Add(e);
+					this.enemies.Add(e.gameObject);
 				}
 				break;
 			}
-			
-			//Start our coroutine that will make it do later things.
+		}
+		
+		// The wave can do a little logic based on what happens to its enemies.
+		public void WeDied(GameObject g)
+		{
+			enemies.Remove(g);
 		}
 		
 	}

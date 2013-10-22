@@ -77,7 +77,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 				SetLifeState(LifeState.Loiter);
 			}
 			break;
-		}
+		}		
 	}
 	
 	void DoLoiter()
@@ -203,6 +203,10 @@ public class L2_Enemy_Script : MonoBehaviour {
             explosion.transform.parent = null;
             explosion.transform.position = this.transform.position;
             explosion.Explode();
+			if (wave != null)
+			{
+				wave.WeDied(this.gameObject);
+			}
             Destroy(this.gameObject);
 		}			
 	}
