@@ -83,7 +83,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -25.5152225
+      value: -16.0626621
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -407,7 +407,7 @@ Transform:
   m_PrefabInternal: {fileID: 81397259}
   m_GameObject: {fileID: 292744465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5152225, y: 5.09434223, z: 0}
+  m_LocalPosition: {x: -16.0626621, y: 5.09434223, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -891,7 +891,7 @@ MonoBehaviour:
     startupCutoff: 4000
     frictionConstant: 10
   spawnTime: 1
-  shieldTime: 3
+  shieldTime: 1
   explosion: {fileID: 1630494970}
   isDead: 0
 --- !u!54 &1556197953

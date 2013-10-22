@@ -53,7 +53,7 @@ public class L2_Elite_Script : MonoBehaviour {
 	private float lastShot = 0;
 	void DoShooting()
 	{
-		if (Time.time > lastShot + .5f)
+		if (Time.time > lastShot + .75f)
 		{
 			GameObject.Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.identity);
 			lastShot = Time.time + Random.Range(-.1f, .1f);
@@ -67,7 +67,7 @@ public class L2_Elite_Script : MonoBehaviour {
 		if (col.gameObject.CompareTag("L2_PlayerShot"))
 		{
 			//Don't die too early!
-			if (boss && health <= 5)
+			if (!boss && health <= 5)
 			{
 				return;
 			}
