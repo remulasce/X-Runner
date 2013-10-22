@@ -57,6 +57,11 @@ public class L2_Elite_Script : MonoBehaviour {
 		}
 	}
 	
+	/** Temporary(?) Elite control. It tries to follow what's in the wave. */
+	public void DoWave(Wave w)
+	{
+		
+	}
 	
 	public void Hide()
 	{

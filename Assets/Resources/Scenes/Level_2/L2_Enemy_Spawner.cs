@@ -67,11 +67,17 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * ExitTrigger: xt_no() (no exit), xt_tm (time) (Delay leave), xt_im (immediate), 
          * ExitBehavior: xb_no() (never leave), xt_go() (leave towards a position)
          * timeTillNextWave: Seconds
+         * 
+         * There's also some sketchy hardcoded things for the Elite, which should be done
+         * 	  with care.
          */
 
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 5f);
 
+		//Elite makes a pass at you
+		E (EliteBehavior.QuickPass);
+		
         // Inital Fighter Wave
         W(ft_hl(5), nb_go(-10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go( 45, 0), 1f);
         W(ft_hl(5), nb_go( 10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go(-45, 0), 5f);
@@ -80,14 +86,18 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(13), nb_go(0, 28, 0, 8), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(11), nb_go(0, 26, 0, 6), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
-
+		E (EliteBehavior.HangBehind);
+		
+		
         // Second Fighter Wave
         W(ft_hl(3), nb_go(15, -15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), -1f);
         W(ft_hl(3), nb_go(-15, -15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 3f);
 
         W(ft_hl(3), nb_go(-15, 15, 0, -5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 0f);
         W(ft_hl(3), nb_go(15, 15, 0, -7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 1.5f);
-
+		E (EliteBehavior.QuickPass);
+		
+		
         // Third Fighter Wave
         W(ft_hl(3), nb_go( 25,  8,  0,  2), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
         W(ft_hl(3), nb_go( 25,  8,  0, -2), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
@@ -119,13 +129,19 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         // Filler Wave 1
         W(ft_hl(4), nb_go(15, 15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), 0f);
         W(ft_hl(4), nb_go(-15, 15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), 1.5f);
-
+		
+		//Elite quick visit
+		E (EliteBehavior.QuickPass);
+		
         // Filler Wave 2
         W(ft_hl(3), nb_go(20, 8, 0, 2), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
         W(ft_hl(3), nb_go(20, 8, 0, -2), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
         W(ft_hl(3), nb_go(-20, 8, 5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
         W(ft_hl(3), nb_go(-20, 8, -5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
-
+		
+		//Elite comes and stays for real.
+		E(EliteBehavior.FinalBattle);
+		
         // Final Blockade Bottom
         W(ft_hl(11), nb_go(0, -30, 0, -6), lb_no(), at_hm(12.0f), xt_no(), xb_no(), -0.1f);
         W(ft_hl(9), nb_go(0, -28, 0, -4), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 0f);
@@ -137,7 +153,8 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_hl(15), nb_go(0, 26, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 0f);       
         
 
-        // Insert Boss Here        
+        // 1-on-1 Elite battle
+		//Not any different for now
         
 		print ("Done making spawn list");
 	}
@@ -151,7 +168,25 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	
 	}
 	
-	
+	enum EliteBehavior { QuickPass, HangBehind, FinalBattle };
+	/* Calls to the Elite. These really all get put into a Wave, which gets treated specially.
+	 * It's really only coded to do the ~3 things I need the Elite to do right now.
+	 */
+	void E(EliteBehavior e)
+	{
+		switch (e)
+		{
+		case EliteBehavior.QuickPass:
+			W (FormationType.T.ElitePass, nb_go (-15, 16, 5, -4), lb_no(), at_am(0, -5), xt_im(), xb_go (0, -20), 0);
+			break;
+		case EliteBehavior.HangBehind:
+			W (FormationType.T.EliteStayBack, nb_go (-15, 10, 0, 10), lb_no (), at_lt(), xt_tm (4), xb_go(0, 20), 0);
+			break;
+		case EliteBehavior.FinalBattle:
+			W (FormationType.T.EliteBattle, nb_go (0, 20, 0, 10), lb_no(), at_hm(), xt_no (), xb_no ());
+			break;
+		}
+	}
 	
 	
 	/** Helpers so you don't have to W(new BlaType1(), new BlaType2() ....) */
@@ -198,7 +233,18 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		at.fireInterval = fireInterval;
 		return at;
 	}
-
+	/* AttackType LaserAim (laser aimed at fixed location)
+	 * only implemented for Elite for now.
+	 */
+	AttackType at_la(float tx, float ty, float fireInterval)
+	{
+		AttackType at = new AttackType();
+        at.type = AttackType.T.LaserAim;
+        at.fireInterval = fireInterval;
+		at.target = new Vector3(tx, ty, 0);
+        return at;
+	}
+	//Aim and Target should probably have switched names.
     /** AttackType LaserTarget (laser Fired Towards Player) */
     AttackType at_lt(float fireInterval)
     {
@@ -273,7 +319,16 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                 if (w.waveDuration >= 0)
                 {
                     print("Spawning");
-                    w.Spawn();
+					//if it's just enemies, the Wave can make them
+					if (w.ft == FormationType.T.HorizontalLine)
+					{
+                    	w.Spawn();
+					}
+					//Otherwise it's our temporary hardcoded Elite
+					else
+					{
+						elite.doWave(w);
+					}
                     w.hasSpawned = true;
                     yield return new WaitForSeconds(w.waveDuration);
                 }
@@ -350,7 +405,6 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 					this.enemies.Add(e);
 				}
 				break;
-			}
 			
 			//Start our coroutine that will make it do later things.
 		}
@@ -358,10 +412,11 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	}
 	/* The composition of the wave, eg 10 enemies in line, etc.
 	 *	Is defacto responsible for determining the "center" of the wave.
+	 *  Includes sketchy hardcoded Elite behavior for now.
 	 */
-	public class FormationType
+ 	public class FormationType
 	{
-		public enum T { HorizontalLine };
+		public enum T { HorizontalLine, ElitePass, EliteStayBack, EliteBattle };
 		public T type;
 		// Subclass maybe, but you should use the helper fxns and not touch
 		// the classes themselves.
@@ -411,10 +466,11 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	
 	public class AttackType
 	{
-		public enum T { None, LaserDrop, LaserTarget, HomingMissile };
+		public enum T { None, LaserDrop, LaserTarget, HomingMissile, LaserAim };
 		public T type;
 		
 		public float fireInterval;
+		public Vector3 target;
 	}
 	
 	
