@@ -20,6 +20,8 @@ public class Player_Gravity_Trigger_Script : MonoBehaviour {
             other.GetComponent<Player_Gravity_Script>().isGravityInverted = !other.GetComponent<Player_Gravity_Script>().isGravityInverted;
             other.GetComponent<Player_Movement_Script>().isInAir = true;
             other.GetComponent<Player_Movement_Script>().canJump = false;
+            other.GetComponent<Player_Movement_Script>().isJumping = false;
+            other.GetComponentInChildren<ParticleSystem>().Stop();
         }
     }
 }

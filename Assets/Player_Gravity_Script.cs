@@ -11,7 +11,7 @@ public class Player_Gravity_Script : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (isGravityInverted)
         {
             this.rigidbody.useGravity = false;
