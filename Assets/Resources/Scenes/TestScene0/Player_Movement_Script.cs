@@ -26,6 +26,9 @@ public class Player_Movement_Script : MonoBehaviour {
     // ray cast distance for ground check
     private float rayCastDistance = 3.0f;
 
+    // Reference to gravity script
+    private Player_Gravity_Script playerGravityScript;
+
     // Values for being able to move left and right
     [System.Serializable]
     public class HorizontalMovementData
@@ -55,6 +58,7 @@ public class Player_Movement_Script : MonoBehaviour {
 	void Start () {
 		//We should persist for the next level transition
 		//DontDestroyOnLoad(this);		not any more, because that was bogus.
+        playerGravityScript = this.gameObject.GetComponent<Player_Gravity_Script>();
 	}
 	
 	void DoXVelocity()
@@ -71,6 +75,14 @@ public class Player_Movement_Script : MonoBehaviour {
         rays[0] = new Ray(this.transform.position, new Vector3(0, -1, 0));
         rays[1] = new Ray(new Vector3(this.transform.position.x - 0.75f, this.transform.position.y, this.transform.position.z), new Vector3(0, -1, 0));
         rays[2] = new Ray(new Vector3(this.transform.position.x + 0.75f, this.transform.position.y, this.transform.position.z), new Vector3(0, -1, 0));
+
+        if (playerGravityScript.isGravityInverted) // Make sure to invert the direction of the rays if gravity is reversed, because the ground will be above the player
+        {
+            for (int i = 0; i < rays.Length; i++)
+            {
+                rays[i].direction *= -1;
+            }
+        }
 		
 		
         int numberOfRaysHitGround = 0;
@@ -94,6 +106,24 @@ public class Player_Movement_Script : MonoBehaviour {
             isInAir = true;
             canJump = false;
         }
+        else
+        {
+            ////print ("Can Jump Now "+Time.time);
+            //canJump = true;
+            //isJumping = false;
+            //onWall = false;
+            //wallJumpsLeft = 3;
+            //if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+            //{
+            //    //print("Not in air anymore"+Time.time);
+            //    isInAir = false;
+            //}
+
+            //if (isJetPackActive)
+            //{
+            //    this.GetComponentInChildren<ParticleSystem>().Stop();
+            //}
+        }
 	}
 	
 	void DoJump()
@@ -108,7 +138,14 @@ public class Player_Movement_Script : MonoBehaviour {
 		if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) && canJump)
         {
             this.rigidbody.velocity = Vector3.zero;
-            this.rigidbody.AddForce(new Vector3(0, forceValuePreJump, 0));
+            if (!playerGravityScript.isGravityInverted)
+            {
+                this.rigidbody.AddForce(new Vector3(0, forceValuePreJump, 0));
+            }
+            else
+            {
+                this.rigidbody.AddForce(new Vector3(0, -forceValuePreJump, 0));
+            }
             isJumping = true;
 			canJump = false;
             isInAir = true;
@@ -134,10 +171,24 @@ public class Player_Movement_Script : MonoBehaviour {
 		//Jump farther if we keep the space bar held down longer.
 		if (isJumping)
 		{
-			this.rigidbody.AddForce(new Vector3(0, forceValuePostJump * Time.deltaTime, 0));
+            if (!playerGravityScript.isGravityInverted)
+            {
+                this.rigidbody.AddForce(new Vector3(0, forceValuePostJump * Time.deltaTime, 0));
+            }
+            else
+            {
+                this.rigidbody.AddForce(new Vector3(0, -forceValuePostJump * Time.deltaTime, 0));
+            }
             if (isJetPackActive) // Add in the extra jetpack force if the player has attained it
             {
-                this.rigidbody.AddForce(new Vector3(0, jetPackFloatingForce * Time.deltaTime, 0));
+                if (!playerGravityScript.isGravityInverted)
+                {
+                    this.rigidbody.AddForce(new Vector3(0, jetPackFloatingForce * Time.deltaTime, 0));
+                }
+                else
+                {
+                    this.rigidbody.AddForce(new Vector3(0, -jetPackFloatingForce * Time.deltaTime, 0));
+                }
             }
 		}
 	}
@@ -207,7 +258,7 @@ public class Player_Movement_Script : MonoBehaviour {
 		DoJump();
 		CheckDead();
 
-        //print(rigidbody.velocity);
+        print(rigidbody.velocity);
     }
 
     void OnCollisionEnter(Collision other) 
@@ -217,22 +268,48 @@ public class Player_Movement_Script : MonoBehaviour {
 
         //Debug.Log(other.contacts[0].normal);
 
-        if (other.contacts[0].normal.y > 0)
-        {
-			//print ("Can Jump Now "+Time.time);
-            canJump = true;
-            isJumping = false;
-            onWall = false;
-			wallJumpsLeft = 3;
-            if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
-            {
-                //print("Not in air anymore"+Time.time);
-                isInAir = false;
-            }
+        // Think about maybe putting this into the raycast code, but for right now, this seems to be working
 
-            if (isJetPackActive)
+        if (!playerGravityScript.isGravityInverted)
+        {
+            if (other.contacts[0].normal.y > 0)
             {
-                this.GetComponentInChildren<ParticleSystem>().Stop();
+                //print ("Can Jump Now "+Time.time);
+                canJump = true;
+                isJumping = false;
+                onWall = false;
+                wallJumpsLeft = 3;
+                if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                {
+                    //print("Not in air anymore"+Time.time);
+                    isInAir = false;
+                }
+
+                if (isJetPackActive)
+                {
+                    this.GetComponentInChildren<ParticleSystem>().Stop();
+                }
+            }
+        }
+        else
+        {
+            if (other.contacts[0].normal.y < 0)
+            {
+                //print ("Can Jump Now "+Time.time);
+                canJump = true;
+                isJumping = false;
+                onWall = false;
+                wallJumpsLeft = 3;
+                if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                {
+                    //print("Not in air anymore"+Time.time);
+                    isInAir = false;
+                }
+
+                if (isJetPackActive)
+                {
+                    this.GetComponentInChildren<ParticleSystem>().Stop();
+                }
             }
         }
 
