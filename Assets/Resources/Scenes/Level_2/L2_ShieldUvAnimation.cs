@@ -3,7 +3,7 @@ using System.Collections;
 
 // For reference, I found this at: http://wiki.unity3d.com/index.php?title=Shield
 
-public class ShieldUvAnimation : MonoBehaviour
+public class L2_ShieldUvAnimation : MonoBehaviour
 {
     public GameObject iShield;
     public float iSpeed;

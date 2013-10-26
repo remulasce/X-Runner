@@ -52,7 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomPosition: -20
-  camera: {fileID: 0}
+  zoomSpeed: 1
+  mainCamera: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
