@@ -127,7 +127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: isJetPackActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: jetPackFloatingForce
@@ -135,11 +135,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: forceValuePreJump
-      value: 65000
+      value: 55000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: forceValuePostJump
-      value: 50000
+      value: 55000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
@@ -294,14 +294,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  forceValuePostJump: 50000
-  forceValuePreJump: 65000
+  forceValuePostJump: 55000
+  forceValuePreJump: 55000
   isJumping: 0
   canJump: 1
   isActive: 1
   timeJumpThreshold: .5
   isInAir: 0
-  isJetPackActive: 1
+  isJetPackActive: 0
   jetPackFloatingForce: 30000
   mainCamera: {fileID: 984399179}
   horizontalMovement:
