@@ -115,7 +115,7 @@ Prefab:
       objectReference: {fileID: 984399179}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: movementSpeed
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 13600000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_IsTrigger
@@ -123,11 +123,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: horizontalMovement.movementSpeed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: isJetPackActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: jetPackFloatingForce
+      value: 30000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: forceValuePreJump
+      value: 65000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: forceValuePostJump
+      value: 50000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
@@ -281,21 +293,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2569d3d0a8ca99c4292089419043ab7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 6
-  forceValuePostJump: 55000
-  forceValuePreJump: 70000
+  movementSpeed: 5
+  forceValuePostJump: 50000
+  forceValuePreJump: 65000
   isJumping: 0
   canJump: 1
   isActive: 1
   timeJumpThreshold: .5
   isInAir: 0
   isJetPackActive: 1
-  jetPackFloatingForce: 60000
+  jetPackFloatingForce: 30000
   mainCamera: {fileID: 984399179}
   horizontalMovement:
     leftMovementThreshold: -5
     rightMovementThreshold: 7.5
-    movementSpeed: 3
+    movementSpeed: 2
     playerOffset: 0
     accelerationPushOffWall: 0
 --- !u!23 &547519644
@@ -693,7 +705,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 8e3507f66313dbd44883d2be93a5338c, type: 2}
       propertyPath: gravityMagnitude
-      value: -40
+      value: -30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e3507f66313dbd44883d2be93a5338c, type: 2}
@@ -869,7 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd6be8541863be4f9d64c0c2d197d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityMagnitude: -40
+  gravityMagnitude: -30
 --- !u!65 &1480819048
 BoxCollider:
   m_ObjectHideFlags: 0
