@@ -71,21 +71,23 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * There's also some sketchy hardcoded things for the Elite, which should be done
          * 	  with care.
          */
-
+		
+		W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 3f);
+		//Elite makes a pass at you
+		E (EliteBehavior.QuickPass);
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 5f);
 
-		//Elite makes a pass at you
-		E (EliteBehavior.QuickPass);
+
 		
         // Inital Fighter Wave
         W(ft_hl(5), nb_go(-10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go( 45, 0), 1f);
         W(ft_hl(5), nb_go( 10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go(-45, 0), 5f);
 
         // First Blockade
-        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(13), nb_go(0, 28, 0, 8), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(11), nb_go(0, 26, 0, 6), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(13), nb_go(0, 28, 0, 8), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(11), nb_go(0, 26, 0, 6), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
 		E (EliteBehavior.HangBehind);
 		
 		
@@ -177,13 +179,14 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		switch (e)
 		{
 		case EliteBehavior.QuickPass:
-			W (FormationType.T.ElitePass, nb_go (-15, 16, 5, -4), lb_no(), at_am(0, -5), xt_im(), xb_go (0, -20), 0);
+			//W (FormationType.T.ElitePass, nb_go);
+			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, -20), 0f);
 			break;
 		case EliteBehavior.HangBehind:
-			W (FormationType.T.EliteStayBack, nb_go (-15, 10, 0, 10), lb_no (), at_lt(), xt_tm (4), xb_go(0, 20), 0);
+			W (ft_eb(), nb_go (-15, 10, 0, 8), lb_no (), at_lt(2), xt_tm (4), xb_go(0, 20), 0);
 			break;
 		case EliteBehavior.FinalBattle:
-			W (FormationType.T.EliteBattle, nb_go (0, 20, 0, 10), lb_no(), at_hm(), xt_no (), xb_no ());
+			W (ft_ef(), nb_go (0, 20, 0, 8), lb_no(), at_hm(4), xt_no (), xb_no (), 0);
 			break;
 		}
 	}
@@ -199,6 +202,31 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		ft.num = num;
 		return ft;
 	}
+	
+	/** Hack: Formationtype elite pass*/
+	FormationType ft_ep()
+	{
+		FormationType ft = new FormationType();
+		ft.type = FormationType.T.ElitePass;
+		return ft;
+	}
+	/** Hack: Formationtype elite hide and shoot in back row*/
+	FormationType ft_eb()
+	{
+		FormationType ft = new FormationType();
+		ft.type = FormationType.T.EliteStayBack;
+		return ft;
+	}
+	/** Hack: Elite comes and stays for final battle */
+	FormationType ft_ef()
+	{
+		FormationType ft = new FormationType();
+		ft.type = FormationType.T.EliteBattle;
+		return ft;
+	}
+	
+	
+	
 	
 	/** eNtry Behavior: GO from point offscreen to onscreen */
 	EntryBehavior nb_go(float stx, float sty, float endx, float endy)
@@ -320,14 +348,14 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                 {
                     print("Spawning");
 					//if it's just enemies, the Wave can make them
-					if (w.ft == FormationType.T.HorizontalLine)
+					if (w.ft.type == FormationType.T.HorizontalLine)
 					{
                     	w.Spawn();
 					}
 					//Otherwise it's our temporary hardcoded Elite
 					else
 					{
-						elite.doWave(w);
+						elite.DoWave(w);
 					}
                     w.hasSpawned = true;
                     yield return new WaitForSeconds(w.waveDuration);
@@ -405,6 +433,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 					this.enemies.Add(e);
 				}
 				break;
+			}
 			
 			//Start our coroutine that will make it do later things.
 		}

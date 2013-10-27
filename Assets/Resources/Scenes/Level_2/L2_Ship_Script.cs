@@ -22,7 +22,7 @@ public class L2_Ship_Script : MonoBehaviour
         public float frictionConstant = 0f;
     }
 
-	public float reloadTime = .5f;
+	public float reloadTime = .3f;
 	
     [System.Serializable]
     public class BoundaryData
