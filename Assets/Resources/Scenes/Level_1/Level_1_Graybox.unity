@@ -7179,6 +7179,7 @@ GameObject:
   - 33: {fileID: 137554357}
   - 23: {fileID: 137554355}
   - 114: {fileID: 137554354}
+  - 114: {fileID: 137554359}
   - 136: {fileID: 137554360}
   - 54: {fileID: 137554356}
   m_Layer: 0
@@ -7272,6 +7273,19 @@ Transform:
   m_Children:
   - {fileID: 2086955351}
   m_Father: {fileID: 1315659808}
+--- !u!114 &137554359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 08452011b09d8104b9f034ac3655954b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1796701900}
+  m_GameObject: {fileID: 137554353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd3f5c1ac1697f449b58c1283e66315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGravityInverted: 0
 --- !u!136 &137554360
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24291,6 +24305,73 @@ Prefab:
   m_RootGameObject: {fileID: 1119947180}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &527868305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 527868309}
+  - 33: {fileID: 527868308}
+  - 64: {fileID: 527868307}
+  - 23: {fileID: 527868306}
+  m_Layer: 0
+  m_Name: BG_Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &527868306
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527868305}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 5939bd336aea36d4d949cfd742f1d2ec, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+--- !u!64 &527868307
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527868305}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &527868308
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527868305}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &527868309
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527868305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.511139, y: 52.9660568, z: 506.470459}
+  m_LocalScale: {x: 1500, y: 1000, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1254231323}
 --- !u!1 &527898420
 GameObject:
   m_ObjectHideFlags: 0
@@ -30126,8 +30207,8 @@ Transform:
   m_LocalPosition: {x: 185.949402, y: 22.7378483, z: 1.70380402}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 527898421}
   - {fileID: 1435930267}
+  - {fileID: 527898421}
   - {fileID: 1479037389}
   m_Father: {fileID: 0}
 --- !u!1001 &773140781
@@ -48274,9 +48355,9 @@ Transform:
   m_LocalPosition: {x: 59.378727, y: 46.4624786, z: -2.91640854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1086243269}
   - {fileID: 164630580}
   - {fileID: 784525323}
+  - {fileID: 1086243269}
   m_Father: {fileID: 0}
 --- !u!1001 &1164794701
 Prefab:
@@ -53417,6 +53498,7 @@ Transform:
   - {fileID: 1571227072}
   - {fileID: 89047737}
   - {fileID: 104524275}
+  - {fileID: 527868309}
   - {fileID: 1759295781}
   m_Father: {fileID: 0}
 --- !u!1 &1254822588
@@ -73228,14 +73310,14 @@ Transform:
   - {fileID: 1662485240}
   - {fileID: 2065267016}
   - {fileID: 2068490526}
-  - {fileID: 1239989930}
-  - {fileID: 1381477103}
-  - {fileID: 899388911}
-  - {fileID: 228889443}
-  - {fileID: 1526576696}
-  - {fileID: 91478727}
   - {fileID: 1930038772}
+  - {fileID: 228889443}
+  - {fileID: 1381477103}
+  - {fileID: 91478727}
   - {fileID: 1233885782}
+  - {fileID: 1526576696}
+  - {fileID: 1239989930}
+  - {fileID: 899388911}
   - {fileID: 714716558}
   - {fileID: 1552687578}
   - {fileID: 1605324232}
