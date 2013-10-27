@@ -52,7 +52,7 @@ public class Player_Movement_Script : MonoBehaviour {
 
     private float timeWhenLastJumped = 0.0f; // Will check when the player last jumped
     private bool onWall = false; //For wall-jumping. If you're good, you can wall jump indefinitely.
-	private int wallJumpsLeft = 3;
+	public int wallJumpsLeft = 3;
 	
 	// Use this for initialization
 	void Start () {
