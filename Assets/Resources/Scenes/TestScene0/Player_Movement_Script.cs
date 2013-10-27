@@ -258,7 +258,7 @@ public class Player_Movement_Script : MonoBehaviour {
 		DoJump();
 		CheckDead();
 
-        print(rigidbody.velocity);
+        //print(rigidbody.velocity);
     }
 
     void OnCollisionEnter(Collision other) 
