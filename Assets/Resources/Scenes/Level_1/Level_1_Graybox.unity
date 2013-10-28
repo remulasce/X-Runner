@@ -7218,6 +7218,8 @@ MonoBehaviour:
     movementSpeed: 7
     playerOffset: 0
     accelerationPushOffWall: -15
+  wallJumpsAllowed: 3
+  wallJumpsLeft: 3
 --- !u!23 &137554355
 Renderer:
   m_ObjectHideFlags: 0
@@ -92980,6 +92982,7 @@ MonoBehaviour:
   startingZPosition: -20
   endZoomPoint: -20
   zoomSpeed: .00100000005
+  flipSpeed: .00100000005
 --- !u!1 &1912669755
 GameObject:
   m_ObjectHideFlags: 0

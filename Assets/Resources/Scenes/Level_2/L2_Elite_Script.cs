@@ -74,7 +74,7 @@ public class L2_Elite_Script : MonoBehaviour {
 			health--;
 			if (health <= 0)
 			{
-				Application.LoadLevel ("Level_1_Graybox");
+				Application.LoadLevel ("Level_3_Graybox");
 			}
 		}
 	}
