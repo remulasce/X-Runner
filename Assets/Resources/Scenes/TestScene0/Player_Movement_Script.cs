@@ -52,6 +52,7 @@ public class Player_Movement_Script : MonoBehaviour {
 
     private float timeWhenLastJumped = 0.0f; // Will check when the player last jumped
     private bool onWall = false; //For wall-jumping. If you're good, you can wall jump indefinitely.
+    public int wallJumpsAllowed = 3;
 	public int wallJumpsLeft = 3;
 	
 	// Use this for initialization
@@ -59,6 +60,7 @@ public class Player_Movement_Script : MonoBehaviour {
 		//We should persist for the next level transition
 		//DontDestroyOnLoad(this);		not any more, because that was bogus.
         playerGravityScript = this.gameObject.GetComponent<Player_Gravity_Script>();
+        wallJumpsLeft = wallJumpsAllowed;
 	}
 	
 	void DoXVelocity()
@@ -243,9 +245,9 @@ public class Player_Movement_Script : MonoBehaviour {
 	//	have the triggers set properly.
 	void CheckDead()
 	{
-		if (this.transform.position.y < -25)
+		if (this.transform.position.y < -25) // Make a better condition
 		{
-            Respawn();
+            //Respawn();
 		}
 	}
 	
@@ -278,7 +280,7 @@ public class Player_Movement_Script : MonoBehaviour {
                 canJump = true;
                 isJumping = false;
                 onWall = false;
-                wallJumpsLeft = 3;
+                wallJumpsLeft = wallJumpsAllowed;
                 if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
                 {
                     //print("Not in air anymore"+Time.time);
@@ -299,7 +301,7 @@ public class Player_Movement_Script : MonoBehaviour {
                 canJump = true;
                 isJumping = false;
                 onWall = false;
-                wallJumpsLeft = 3;
+                wallJumpsLeft = wallJumpsAllowed;
                 if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
                 {
                     //print("Not in air anymore"+Time.time);

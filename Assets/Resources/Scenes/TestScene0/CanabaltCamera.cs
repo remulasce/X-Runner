@@ -53,14 +53,14 @@ public class CanabaltCamera : MonoBehaviour {
 			if (player.CompareTag("Player"))
 			{
                 tempVector.x = player.transform.position.x + moveOffsetX - player.GetComponent<Player_Movement_Script>().horizontalMovement.playerOffset;
-	            if (player.GetComponent<Player_Movement_Script>().isInAir && player.transform.position.y > 0.0f)
-	            {
+                //if (player.GetComponent<Player_Movement_Script>().isInAir && player.transform.position.y > 0.0f)
+                //{
                     tempVector.y = player.transform.position.y;
                     if (!isFlipping)
                     {
                         tempVector.y += moveOffsetY;
                     }
-	            }
+	            //}
 			}
 			else
 			{
