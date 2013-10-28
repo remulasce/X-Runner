@@ -83,7 +83,7 @@ public class Player_Movement_Script : MonoBehaviour {
                         || (spawners[j].name.Length == 13 && (i + 1).ToString().Length == 2)
                         || (spawners[j].name.Length == 12 && (i + 1).ToString().Length == 1))
                     {
-                        print((i + 1) + " " + spawners.Length);
+                        //print((i + 1) + " " + spawners.Length);
                         tempArray[i] = spawners[j];
                         break;
                     }                    
