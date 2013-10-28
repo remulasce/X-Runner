@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Player_Movement_Script : MonoBehaviour {
 
@@ -29,6 +30,9 @@ public class Player_Movement_Script : MonoBehaviour {
     // Reference to gravity script
     private Player_Gravity_Script playerGravityScript;
 
+    // Reference to all of the spawners
+    public GameObject[] spawners;
+
     // Values for being able to move left and right
     [System.Serializable]
     public class HorizontalMovementData
@@ -54,6 +58,9 @@ public class Player_Movement_Script : MonoBehaviour {
     private bool onWall = false; //For wall-jumping. If you're good, you can wall jump indefinitely.
     public int wallJumpsAllowed = 3;
 	public int wallJumpsLeft = 3;
+
+    // Used for Spawning
+    public bool isDead = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -61,6 +68,31 @@ public class Player_Movement_Script : MonoBehaviour {
 		//DontDestroyOnLoad(this);		not any more, because that was bogus.
         playerGravityScript = this.gameObject.GetComponent<Player_Gravity_Script>();
         wallJumpsLeft = wallJumpsAllowed;
+
+        spawners = GameObject.FindGameObjectsWithTag("Spawnpoint");
+
+        GameObject[] tempArray = new GameObject[spawners.Length];
+        for (int i = 0; i < tempArray.Length; i++)
+        {
+            for (int j = 0; j < spawners.Length; j++)
+            {                
+                if (spawners[j].name.Contains((i + 1).ToString()))
+                {
+                    /*SpawnPoint_ = Length 11 + the number of numerals afterward */
+                    if ((spawners[j].name.Length == 14 && (i + 1).ToString().Length == 3)
+                        || (spawners[j].name.Length == 13 && (i + 1).ToString().Length == 2)
+                        || (spawners[j].name.Length == 12 && (i + 1).ToString().Length == 1))
+                    {
+                        print((i + 1) + " " + spawners.Length);
+                        tempArray[i] = spawners[j];
+                        break;
+                    }                    
+                }
+            }
+        }
+
+        spawners = tempArray;
+
 	}
 	
 	void DoXVelocity()
@@ -235,9 +267,19 @@ public class Player_Movement_Script : MonoBehaviour {
     {
         this.rigidbody.velocity = Vector3.zero;
         this.transform.position = new Vector3(this.transform.position.x, 1, 0);
+        // Run through all of the spawners and see where the correct one to spawn is
+        for (int i = 0; i < spawners.Length; i++)
+        {
+            if ((spawners[i].transform.position.x > this.transform.position.x) && spawners[i].GetComponent<Spawn_Point_Script>().checkForGround())
+            {
+                this.transform.position = spawners[i].transform.position;
+                break;
+            }
+        }
         mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, mainCamera.transform.position.z);
         onWall = false;
         isInAir = true;
+        isDead = false;
     }
 	
 	//If we're below the ground, respawn us above it and (ahead) us a little.
@@ -245,9 +287,9 @@ public class Player_Movement_Script : MonoBehaviour {
 	//	have the triggers set properly.
 	void CheckDead()
 	{
-		if (this.transform.position.y < -25) // Make a better condition
+		if (isDead) // Make a better condition
 		{
-            //Respawn();
+            Respawn();
 		}
 	}
 	
