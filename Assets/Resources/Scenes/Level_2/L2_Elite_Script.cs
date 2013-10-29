@@ -24,6 +24,7 @@ public class L2_Elite_Script : MonoBehaviour {
 	
 	//Help with AI loitering
 	public float nextLoiterChange;
+	public int curWaypoint = 0;
 	
 	
 	float nextShot;
@@ -153,10 +154,30 @@ public class L2_Elite_Script : MonoBehaviour {
 				
 				target = w1 + Random.Range(0, 1f) * w12;
 			}
+			DoTargetMovement();	
+			break;
+		case L2_Enemy_Spawner.LoiterBehavior.T.GotoWaypoints:
+			if (!AtTarget())
+			{
+				if (Time.time > nextLoiterChange)
+				{
+					DoTargetMovement();
+				}
+			}
+			else
+			{
+				curWaypoint++;
+				if (curWaypoint == wave.lb.waypoints.Count)
+				{
+					curWaypoint = 0;
+				}
+				target = (Vector3)wave.lb.waypoints[curWaypoint];
+				nextLoiterChange = Time.time + wave.lb.timeEach;
+				
+			}
 			break;
 		}
 		
-		DoTargetMovement();
 	}
 	
 	void DoExitMovement()
