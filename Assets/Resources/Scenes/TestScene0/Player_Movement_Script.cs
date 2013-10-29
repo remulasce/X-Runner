@@ -21,6 +21,10 @@ public class Player_Movement_Script : MonoBehaviour {
     public bool isJetPackActive = false; // Will allow the player to float for longer when this is active
     public float jetPackFloatingForce = 0.0f; // This force will be added to the player's regular floating velocity
 
+    // Variable to prevent bug with player getting stuck to the wall.
+    private const int maxWallFrameHits = 10;
+    private int numberOfFramesHit = 0;
+
     // Make a reference to the camera
     public CanabaltCamera mainCamera;
 
@@ -359,9 +363,9 @@ public class Player_Movement_Script : MonoBehaviour {
 
         if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !onWall) // Wall Jump Test
         {
+            numberOfFramesHit = 0;
             onWall = true;
-            this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
-			
+            this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);			
         }
 
         if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile")) // Then respawn player & reset camera position
@@ -374,6 +378,70 @@ public class Player_Movement_Script : MonoBehaviour {
 		{
 			_Loader_L0.loader.EndLevel();
 		}
+    }
+
+    void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("Terrain"))
+        {
+            if (numberOfFramesHit < maxWallFrameHits)
+            {
+                numberOfFramesHit++;
+                print(numberOfFramesHit);
+            }
+            else
+            {
+                numberOfFramesHit = 0;
+                if (!playerGravityScript.isGravityInverted)
+                {
+                    if (other.contacts[0].normal.y > 0)
+                    {
+                        //print ("Can Jump Now "+Time.time);
+                        canJump = true;
+                        isJumping = false;
+                        onWall = false;
+                        wallJumpsLeft = wallJumpsAllowed;
+                        if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                        {
+                            //print("Not in air anymore"+Time.time);
+                            isInAir = false;
+                        }
+
+                        if (isJetPackActive)
+                        {
+                            this.GetComponentInChildren<ParticleSystem>().Stop();
+                        }
+                    }
+                }
+                else
+                {
+                    if (other.contacts[0].normal.y < 0)
+                    {
+                        //print ("Can Jump Now "+Time.time);
+                        canJump = true;
+                        isJumping = false;
+                        onWall = false;
+                        wallJumpsLeft = wallJumpsAllowed;
+                        if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                        {
+                            //print("Not in air anymore"+Time.time);
+                            isInAir = false;
+                        }
+
+                        if (isJetPackActive)
+                        {
+                            this.GetComponentInChildren<ParticleSystem>().Stop();
+                        }
+                    }
+                }
+
+                if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !onWall) // Wall Jump Test
+                {
+                    onWall = true;
+                    this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
+                }
+            }
+        }
     }
 
     /*ADDERESS THIS LATER*/
