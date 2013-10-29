@@ -65,7 +65,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * LoiterBehavior: lb_no() (Don't hang around)
          * AttackType: at_no() (no attack), at_ld(time) (fire down laser). at_lt() (laser fired towards player), at_hm() (homing missile)
          * ExitTrigger: xt_no() (no exit), xt_tm (time) (Delay leave), xt_im (immediate), 
-         * ExitBehavior: xb_no() (never leave), xt_go() (leave towards a position)
+         * ExitBehavior: xb_no() (never leave), xt_go() (leave IN A DIRECTION (slightly different))
          * timeTillNextWave: Seconds
          * 
          * There's also some sketchy hardcoded things for the Elite, which should be done
@@ -180,10 +180,10 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		{
 		case EliteBehavior.QuickPass:
 			//W (FormationType.T.ElitePass, nb_go);
-			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, -20), 0f);
+			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, 1), 0f);
 			break;
 		case EliteBehavior.HangBehind:
-			W (ft_eb(), nb_go (-15, 10, 0, 8), lb_no (), at_lt(2), xt_tm (4), xb_go(0, 20), 0);
+			W (ft_eb(), nb_go (-15, 12, 0, 8), lb_no (), at_lt(2), xt_tm (4), xb_go(0, 20), 0);
 			break;
 		case EliteBehavior.FinalBattle:
 			W (ft_ef(), nb_go (0, 20, 0, 8), lb_no(), at_hm(4), xt_no (), xb_no (), 0);
@@ -466,8 +466,16 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	 */
 	public class LoiterBehavior
 	{
-		public enum T { Nothing, SwoopOccasionally, GotoWaypoints, TargetPlayer }
+		public enum T { Nothing, SwoopOccasionally, GotoWaypoints, TargetPlayer, Patrol }
 		public T type;
+		
+		//Used for both GotoWaypoints and as the boundaries for Patrol
+		//Contains Vector3's
+		public IList waypoints;
+		//Multipurpose field.
+		//How long between patrol point switches/linger at each waypoint
+		//(waypoints not actually implemented yet)
+		public float timeEach;
 	}
 	/** What causes the wave to exit (thus executing
 		the ExitBehavior)
