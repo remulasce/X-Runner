@@ -65,7 +65,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * LoiterBehavior: lb_no() (Don't hang around)
          * AttackType: at_no() (no attack), at_ld(time) (fire down laser). at_lt() (laser fired towards player), at_hm() (homing missile)
          * ExitTrigger: xt_no() (no exit), xt_tm (time) (Delay leave), xt_im (immediate), 
-         * ExitBehavior: xb_no() (never leave), xt_go() (leave towards a position)
+         * ExitBehavior: xb_no() (never leave), xt_go() (leave IN A DIRECTION (slightly different))
          * timeTillNextWave: Seconds
          * 
          * There's also some sketchy hardcoded things for the Elite, which should be done
@@ -74,9 +74,10 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		
 		W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 3f);
 		//Elite makes a pass at you
-		E (EliteBehavior.QuickPass);
+		//E (EliteBehavior.HangBehind);
+		E (EliteBehavior.Test);
         // Scout Ship
-        W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 5f);
+        W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 15f);
 
 
 		
@@ -170,7 +171,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	
 	}
 	
-	enum EliteBehavior { QuickPass, HangBehind, FinalBattle };
+	enum EliteBehavior { QuickPass, HangBehind, FinalBattle, Test };
 	/* Calls to the Elite. These really all get put into a Wave, which gets treated specially.
 	 * It's really only coded to do the ~3 things I need the Elite to do right now.
 	 */
@@ -180,14 +181,19 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		{
 		case EliteBehavior.QuickPass:
 			//W (FormationType.T.ElitePass, nb_go);
-			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, -20), 0f);
+			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, 1), 0f);
 			break;
 		case EliteBehavior.HangBehind:
-			W (ft_eb(), nb_go (-15, 10, 0, 8), lb_no (), at_lt(2), xt_tm (4), xb_go(0, 20), 0);
+			W (ft_eb(), nb_go (-15, 12, 0, 8), lb_lz(-14, 8, 14, 8, 2), at_lt(2), xt_tm (104), xb_go(0, 20), 0);
 			break;
 		case EliteBehavior.FinalBattle:
 			W (ft_ef(), nb_go (0, 20, 0, 8), lb_no(), at_hm(4), xt_no (), xb_no (), 0);
 			break;
+		case EliteBehavior.Test:
+			W (ft_eb(), nb_go (-15, 12, -12, 12), lb_wp (new float[] { -12, 10, 12, 10, -12, -2, 12, -2, -12, 10 }, 5f), 
+				at_hm(3), xt_tm(100), xb_go(0, 1),5);
+			break;
+			
 		}
 	}
 	
@@ -243,6 +249,31 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	{
 		LoiterBehavior lb = new LoiterBehavior();
 		lb.type = LoiterBehavior.T.Nothing;
+		return lb;
+	}
+	/** LoiterBehavior: LoiterZone
+	 * Loiter to random positions between 2 points, finding a new point every pointTime */
+	LoiterBehavior lb_lz(float x1, float y1, float x2, float y2, float pointTime)
+	{
+		LoiterBehavior lb = new LoiterBehavior();
+		lb.type = LoiterBehavior.T.LoiterZone;
+		lb.waypoints.Add(new Vector3(x1, y1, 0));
+		lb.waypoints.Add(new Vector3(x2, y2, 0));
+		lb.timeEach = pointTime;
+		
+		return lb;
+	}
+	/** Goto Waypointns, lingering t time between them */
+	LoiterBehavior lb_wp(float[] waypoints, float waitTime)
+	{
+		LoiterBehavior lb = new LoiterBehavior();
+		lb.type = LoiterBehavior.T.GotoWaypoints;
+		for (int i=0; i < waypoints.Length-1; i+=2)
+		{
+			lb.waypoints.Add(new Vector3(waypoints[i], waypoints[i+1], 0));
+		}
+		lb.timeEach = waitTime;
+		
 		return lb;
 	}
 	
@@ -445,7 +476,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	 */
  	public class FormationType
 	{
-		public enum T { HorizontalLine, ElitePass, EliteStayBack, EliteBattle };
+		public enum T { HorizontalLine, ElitePass, EliteStayBack, EliteBattle, WaypointTest };
 		public T type;
 		// Subclass maybe, but you should use the helper fxns and not touch
 		// the classes themselves.
@@ -466,8 +497,16 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	 */
 	public class LoiterBehavior
 	{
-		public enum T { Nothing, SwoopOccasionally, GotoWaypoints, TargetPlayer }
+		public enum T { Nothing, SwoopOccasionally, GotoWaypoints, TargetPlayer, Patrol, LoiterZone }
 		public T type;
+		
+		//Used for both GotoWaypoints and as the boundaries for Patrol
+		//Contains Vector3's
+		public IList waypoints = new ArrayList();
+		//Multipurpose field.
+		//How long between patrol point switches/linger at each waypoint
+		//(waypoints not actually implemented yet)
+		public float timeEach;
 	}
 	/** What causes the wave to exit (thus executing
 		the ExitBehavior)
@@ -495,6 +534,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	
 	public class AttackType
 	{
+		//Target: Shoot at current player position
 		public enum T { None, LaserDrop, LaserTarget, HomingMissile, LaserAim };
 		public T type;
 		

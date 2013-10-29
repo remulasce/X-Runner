@@ -113,6 +113,10 @@ Prefab:
       propertyPath: m_Name
       value: Elite
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
   m_RootGameObject: {fileID: 292744465}
@@ -353,7 +357,8 @@ GameObject:
   - 65: {fileID: 292744467}
   - 23: {fileID: 292744466}
   - 114: {fileID: 292744470}
-  m_Layer: 8
+  - 54: {fileID: 292744471}
+  m_Layer: 14
   m_Name: Elite
   m_TagString: L2_Enemy
   m_Icon: {fileID: 0}
@@ -422,6 +427,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa1e3e49a6697f4a9a49b72a21cf47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 7
+  nextLoiterChange: 0
+--- !u!54 &292744471
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292744465}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1001 &307791157
 Prefab:
   m_ObjectHideFlags: 0
