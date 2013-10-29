@@ -10,6 +10,8 @@ public class L2_Elite_Script : MonoBehaviour {
 	
 	
 	private L2_Enemy_Spawner.Wave wave;
+	private L2_Ship_Script player;
+	
 	
 	int health = 20;
 	
@@ -24,10 +26,13 @@ public class L2_Elite_Script : MonoBehaviour {
 	public float nextLoiterChange;
 	
 	
+	float nextShot;
+	
+	
 	
 	// Use this for initialization
 	void Start () {
-		
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<L2_Ship_Script>();
 	}
 	
 	// Update is called once per frame
@@ -102,6 +107,7 @@ public class L2_Elite_Script : MonoBehaviour {
 		//Immediately do a loiter change when we switch into it.
 		this.nextLoiterChange = 0;
 		
+		this.nextShot = Random.Range(0f, 1f) * wave.at.fireInterval + Time.time;
 	}
 	
 	/// Move us, based on our entry/exit state/behavior */
@@ -138,19 +144,19 @@ public class L2_Elite_Script : MonoBehaviour {
 	{
 		switch (wave.lb.type)
 		{
-		case L2_Enemy_Spawner.LoiterBehavior.T.Patrol:
+		case L2_Enemy_Spawner.LoiterBehavior.T.LoiterZone:
 			if (Time.time > nextLoiterChange)
 			{
 				nextLoiterChange = Time.time + Random.Range(wave.lb.timeEach*2/3, wave.lb.timeEach*4/3);
 				Vector3 w1 = (Vector3)wave.lb.waypoints[0];
-				Vector3 w12 = w1 - (Vector3)wave.lb.waypoints[1];
+				Vector3 w12 =(Vector3)wave.lb.waypoints[1] - w1;
 				
 				target = w1 + Random.Range(0, 1f) * w12;
 			}
 			break;
 		}
-		//entryState = EntryState.Exiting;
 		
+		DoTargetMovement();
 	}
 	
 	void DoExitMovement()
@@ -165,9 +171,35 @@ public class L2_Elite_Script : MonoBehaviour {
 	/// </summary>
 	void DoAttack()
 	{
-		
+		if (Time.time > nextShot && !player.isDead)
+		{
+			FireOurWeapon();
+			nextShot = Time.time + Random.Range(wave.at.fireInterval * 2/3, wave.at.fireInterval * 4/3);
+		}
 	}
 	
+	//Actually fire whatever thing we have
+	void FireOurWeapon()
+	{
+        switch (wave.at.type)
+		{
+		case (L2_Enemy_Spawner.AttackType.T.None):
+			print ("Wait, what?");
+			break;
+		case (L2_Enemy_Spawner.AttackType.T.LaserDrop):
+            //Make an enemy shot
+            Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Drop"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));            
+			break;
+		case (L2_Enemy_Spawner.AttackType.T.LaserTarget):
+			//Make an enemy shot
+            Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Target"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
+			break;
+		case (L2_Enemy_Spawner.AttackType.T.HomingMissile):
+			//Make an enemy shot
+            Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
+			break;
+		}
+	}
 	
 	
 	/*

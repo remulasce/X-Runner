@@ -74,9 +74,9 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		
 		W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 3f);
 		//Elite makes a pass at you
-		E (EliteBehavior.QuickPass);
+		E (EliteBehavior.HangBehind);
         // Scout Ship
-        W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 5f);
+        W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 15f);
 
 
 		
@@ -183,7 +183,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, 1), 0f);
 			break;
 		case EliteBehavior.HangBehind:
-			W (ft_eb(), nb_go (-15, 12, 0, 8), lb_no (), at_lt(2), xt_tm (4), xb_go(0, 20), 0);
+			W (ft_eb(), nb_go (-15, 12, 0, 8), lb_lz(-14, 8, 14, 8, 2), at_lt(2), xt_tm (104), xb_go(0, 20), 0);
 			break;
 		case EliteBehavior.FinalBattle:
 			W (ft_ef(), nb_go (0, 20, 0, 8), lb_no(), at_hm(4), xt_no (), xb_no (), 0);
@@ -243,6 +243,18 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	{
 		LoiterBehavior lb = new LoiterBehavior();
 		lb.type = LoiterBehavior.T.Nothing;
+		return lb;
+	}
+	/** LoiterBehavior: LoiterZone
+	 * Loiter to random positions between 2 points, finding a new point every pointTime */
+	LoiterBehavior lb_lz(float x1, float y1, float x2, float y2, float pointTime)
+	{
+		LoiterBehavior lb = new LoiterBehavior();
+		lb.type = LoiterBehavior.T.LoiterZone;
+		lb.waypoints.Add(new Vector3(x1, y1, 0));
+		lb.waypoints.Add(new Vector3(x2, y2, 0));
+		lb.timeEach = pointTime;
+		
 		return lb;
 	}
 	
@@ -466,12 +478,12 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	 */
 	public class LoiterBehavior
 	{
-		public enum T { Nothing, SwoopOccasionally, GotoWaypoints, TargetPlayer, Patrol }
+		public enum T { Nothing, SwoopOccasionally, GotoWaypoints, TargetPlayer, Patrol, LoiterZone }
 		public T type;
 		
 		//Used for both GotoWaypoints and as the boundaries for Patrol
 		//Contains Vector3's
-		public IList waypoints;
+		public IList waypoints = new ArrayList();
 		//Multipurpose field.
 		//How long between patrol point switches/linger at each waypoint
 		//(waypoints not actually implemented yet)
@@ -503,6 +515,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	
 	public class AttackType
 	{
+		//Target: Shoot at current player position
 		public enum T { None, LaserDrop, LaserTarget, HomingMissile, LaserAim };
 		public T type;
 		
