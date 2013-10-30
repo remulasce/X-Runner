@@ -392,45 +392,48 @@ public class Player_Movement_Script : MonoBehaviour {
             else
             {
                 numberOfFramesHit = 0;
-                if (!playerGravityScript.isGravityInverted)
+                if (!isJumping)
                 {
-                    if (other.contacts[0].normal.y > 0)
+                    if (!playerGravityScript.isGravityInverted)
                     {
-                        //print ("Can Jump Now "+Time.time);
-                        canJump = true;
-                        isJumping = false;
-                        onWall = false;
-                        wallJumpsLeft = wallJumpsAllowed;
-                        if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                        if (other.contacts[0].normal.y > 0)
                         {
-                            //print("Not in air anymore"+Time.time);
-                            isInAir = false;
-                        }
+                            //print ("Can Jump Now "+Time.time);
+                            canJump = true;
+                            isJumping = false;
+                            onWall = false;
+                            wallJumpsLeft = wallJumpsAllowed;
+                            if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                            {
+                                //print("Not in air anymore"+Time.time);
+                                isInAir = false;
+                            }
 
-                        if (isJetPackActive)
-                        {
-                            this.GetComponentInChildren<ParticleSystem>().Stop();
+                            if (isJetPackActive)
+                            {
+                                this.GetComponentInChildren<ParticleSystem>().Stop();
+                            }
                         }
                     }
-                }
-                else
-                {
-                    if (other.contacts[0].normal.y < 0)
+                    else
                     {
-                        //print ("Can Jump Now "+Time.time);
-                        canJump = true;
-                        isJumping = false;
-                        onWall = false;
-                        wallJumpsLeft = wallJumpsAllowed;
-                        if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                        if (other.contacts[0].normal.y < 0)
                         {
-                            //print("Not in air anymore"+Time.time);
-                            isInAir = false;
-                        }
+                            //print ("Can Jump Now "+Time.time);
+                            canJump = true;
+                            isJumping = false;
+                            onWall = false;
+                            wallJumpsLeft = wallJumpsAllowed;
+                            if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                            {
+                                //print("Not in air anymore"+Time.time);
+                                isInAir = false;
+                            }
 
-                        if (isJetPackActive)
-                        {
-                            this.GetComponentInChildren<ParticleSystem>().Stop();
+                            if (isJetPackActive)
+                            {
+                                this.GetComponentInChildren<ParticleSystem>().Stop();
+                            }
                         }
                     }
                 }
