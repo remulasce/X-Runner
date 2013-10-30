@@ -320,7 +320,7 @@ public class Player_Movement_Script : MonoBehaviour {
 
         if (!playerGravityScript.isGravityInverted)
         {
-            if (other.contacts[0].normal.y > 0)
+            if (other.contacts[0].normal.y > 0.25)
             {
                 //print ("Can Jump Now "+Time.time);
                 canJump = true;
@@ -341,7 +341,7 @@ public class Player_Movement_Script : MonoBehaviour {
         }
         else
         {
-            if (other.contacts[0].normal.y < 0)
+            if (other.contacts[0].normal.y < 0.25)
             {
                 //print ("Can Jump Now "+Time.time);
                 canJump = true;
@@ -396,7 +396,7 @@ public class Player_Movement_Script : MonoBehaviour {
                 {
                     if (!playerGravityScript.isGravityInverted)
                     {
-                        if (other.contacts[0].normal.y > 0)
+                        if (other.contacts[0].normal.y > 0.25)
                         {
                             //print ("Can Jump Now "+Time.time);
                             canJump = true;
@@ -417,7 +417,7 @@ public class Player_Movement_Script : MonoBehaviour {
                     }
                     else
                     {
-                        if (other.contacts[0].normal.y < 0)
+                        if (other.contacts[0].normal.y < 0.25)
                         {
                             //print ("Can Jump Now "+Time.time);
                             canJump = true;
