@@ -54,7 +54,7 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
             Object.Destroy(other.gameObject);
             GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
             gDetonator.GetComponent<Detonator>().size = 5;
-            this.animation.Play("Shield_Collapse");
+            this.animation.Play("Shield_Collapse_Elite");
             StartCoroutine("BringBackShield");
         }
     }
@@ -68,7 +68,7 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
 
     IEnumerator BringBackShield()
     {        
-        yield return new WaitForSeconds(timeToRegenerateShields);        
-        this.animation.Play("Shield_Regen");
+        yield return new WaitForSeconds(timeToRegenerateShields);
+        this.animation.Play("Shield_Regen_Elite");
     }
 }

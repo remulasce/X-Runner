@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.55942607, y: 1.55942607, z: 2.33913898}
+  m_LocalScale: {x: 2.45000005, y: 2.45000005, z: 2.45000005}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!23 &2300000
@@ -148,10 +148,10 @@ Animation:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: ddf471e8ca9985f4aa9da14eb83dd544, type: 2}
+  m_Animation: {fileID: 7400000, guid: 8a978604940bf654fb6f172899f14fe6, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: ddf471e8ca9985f4aa9da14eb83dd544, type: 2}
-  - {fileID: 7400000, guid: bf736a0a2a16e2c4f9d060d529275d55, type: 2}
+  - {fileID: 7400000, guid: 8a978604940bf654fb6f172899f14fe6, type: 2}
+  - {fileID: 7400000, guid: 1543bd49fbdff62459a9a6beb6a49c16, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa1e3e49a6697f4a9a49b72a21cf47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalHealth: 100
   maxSpeed: 7
   nextLoiterChange: 0
   curWaypoint: 0
