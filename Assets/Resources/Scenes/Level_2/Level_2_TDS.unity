@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa1e3e49a6697f4a9a49b72a21cf47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalHealth: 100
+  totalHealth: 50
   currentHealth: 0
   maxSpeed: 7
   nextLoiterChange: 0
@@ -790,7 +790,7 @@ MonoBehaviour:
   iSpeed: 1
   shieldHitColor: {r: 1, g: 1, b: 1, a: 1}
   flashTime: .0500000007
-  timeToRegenerateShields: 3
+  timeToRegenerateShields: 5
   tagToCompareFor: L2_PlayerShot
 --- !u!23 &1311365488
 Renderer:
@@ -1511,6 +1511,10 @@ Prefab:
     - target: {fileID: 5400000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
       propertyPath: m_Mass
       value: 1e+07
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: totalHealth
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b24170436125e70448520c272c2d9a2d, type: 2}

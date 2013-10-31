@@ -235,16 +235,28 @@ public class L2_Elite_Script : MonoBehaviour {
 	*/
 	
 	void OnCollisionEnter(Collision col)
-	{
-        print("here");
+	{        
         if (col.gameObject.CompareTag("L2_PlayerShot"))
 		{
-			currentHealth--;
+            GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
+            currentHealth--;
 			if (currentHealth <= 0)
 			{
 				Application.LoadLevel ("Level_3_Graybox");
 			}
 		}
+
+        if (col.gameObject.CompareTag("L2_Asteroid"))
+        {
+            currentHealth -= totalHealth/4;            
+            GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
+            gDetonator.GetComponent<Detonator>().size = 5;
+            Object.Destroy(col.gameObject);
+            if (currentHealth <= 0)
+            {
+                Application.LoadLevel("Level_3_Graybox");
+            }
+        }
 	}
 
     const float eliteAwareness = 0.25f; // Used to determine if the elite will shoot back at an asteroid reflected back by the player
