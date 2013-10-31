@@ -17,6 +17,8 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
     public float flashTime = 0.01f;
     private Color initialColor;
 
+    public float timeToRegenerateShields = 3.0f;
+
     // Tag to compare to for the shield reflection
     public string tagToCompareFor = "";
 
@@ -45,12 +47,28 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
             Object.Destroy(other.gameObject);
             StartCoroutine("RevertShieldColor");
         }
+
+        // Special Case for the Elite
+        if (other.gameObject.CompareTag("L2_Asteroid"))
+        {
+            Object.Destroy(other.gameObject);
+            GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
+            gDetonator.GetComponent<Detonator>().size = 5;
+            this.animation.Play("Shield_Collapse");
+            StartCoroutine("BringBackShield");
+        }
     }
 
     IEnumerator RevertShieldColor()
-    {
+    {        
         this.mMaterial.color = shieldHitColor;
         yield return new WaitForSeconds(flashTime);
         this.mMaterial.color = initialColor;
+    }
+
+    IEnumerator BringBackShield()
+    {        
+        yield return new WaitForSeconds(timeToRegenerateShields);        
+        this.animation.Play("Shield_Regen");
     }
 }

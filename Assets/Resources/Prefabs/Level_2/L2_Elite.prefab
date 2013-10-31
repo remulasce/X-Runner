@@ -151,6 +151,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: ddf471e8ca9985f4aa9da14eb83dd544, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: ddf471e8ca9985f4aa9da14eb83dd544, type: 2}
+  - {fileID: 7400000, guid: bf736a0a2a16e2c4f9d060d529275d55, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -173,6 +174,7 @@ MonoBehaviour:
   iSpeed: 1
   shieldHitColor: {r: 1, g: 1, b: 1, a: 1}
   flashTime: .0500000007
+  timeToRegenerateShields: 3
   tagToCompareFor: L2_PlayerShot
 --- !u!114 &11400002
 MonoBehaviour:

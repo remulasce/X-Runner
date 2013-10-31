@@ -11,12 +11,10 @@ public class L2_Elite_Script : MonoBehaviour {
 	
 	private L2_Enemy_Spawner.Wave wave;
 	private L2_Ship_Script player;
-	
-	
-	int health = 20;
-	
-	
-	
+
+
+    int totalHealth = 100;
+	int currentHealth = 100;	
 	
 	//Use this to help with our movement:
 	Vector3 target = new Vector3(0,0,0);
@@ -239,21 +237,36 @@ public class L2_Elite_Script : MonoBehaviour {
 	{
 		if (col.gameObject.CompareTag("L2_PlayerShot"))
 		{
-			health--;
-			if (health <= 0)
+			currentHealth--;
+			if (currentHealth <= 0)
 			{
 				Application.LoadLevel ("Level_3_Graybox");
 			}
 		}
 	}
 
+    const float eliteAwareness = 0.25f; // Used to determine if the elite will shoot back at an asteroid reflected back by the player
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("L2_Asteroid"))
         {
-            GameObject laser = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
-            laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
-            laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 15;
+            GameObject laser;
+            float detectionVal = Random.Range(0.0f, 1.0f);
+            //Debug.Log(other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit);
+            //print(detectionVal > eliteAwareness);
+            if ((other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.PLAYER) && (detectionVal > (eliteAwareness + Mathf.Clamp((float)(totalHealth - currentHealth)/(float)totalHealth, 0, 0.85f - eliteAwareness))))
+            {
+                laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
+                laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
+                laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 15;
+            }
+            else if (other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.ENEMY)
+            {
+                laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
+                laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
+                laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 15;
+            }
         }
     }
 	

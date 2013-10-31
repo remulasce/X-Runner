@@ -27,6 +27,7 @@ public class L2_Enemy_Shot_Target_Script : L2_Enemy_Shot_Script
     {
         this.target = target;
         this.transform.LookAt(target.transform.position);
+        this.rigidbody.velocity = Vector3.zero;
         this.rigidbody.velocity = this.transform.forward * speed;
     }
 }

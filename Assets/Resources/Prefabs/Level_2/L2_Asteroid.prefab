@@ -13,7 +13,7 @@ GameObject:
   - 135: {fileID: 13500000}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: L2_Asteroid
   m_TagString: L2_Asteroid
   m_Icon: {fileID: 0}
@@ -82,8 +82,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ba3d769dc14f14fb0a0f4252419883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 10
-  extraHitVelocity: 1
+  maxVelocity: 8
+  extraHitVelocity: .200000003
+  hasReflectedOffPlayer: 0
+  numberOfTimesHit: 0
+  lastHit: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
