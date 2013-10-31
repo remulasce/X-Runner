@@ -246,6 +246,16 @@ public class L2_Elite_Script : MonoBehaviour {
 			}
 		}
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("L2_Asteroid"))
+        {
+            GameObject laser = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
+            laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
+            laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 15;
+        }
+    }
 	
 	/** Temporary(?) Elite control. It tries to follow what's in the wave. */
 	public void DoWave(L2_Enemy_Spawner.Wave w)

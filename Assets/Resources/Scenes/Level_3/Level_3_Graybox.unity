@@ -7662,7 +7662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9d9e15fd4871e42af109b78b1d7e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDisappear: 3
+  timeToDisappear: 10
   setOnWithStart: 0
 --- !u!131 &444685800
 GUITexture:
@@ -7676,8 +7676,8 @@ GUITexture:
   m_Color: {r: .443137258, g: .443137258, b: .443137258, a: 1}
   m_PixelInset:
     serializedVersion: 2
-    x: 552.539978
-    y: 12.8999996
+    x: 245.199997
+    y: -6.9000001
     width: 460
     height: 152
   m_LeftBorder: 0
@@ -15061,15 +15061,15 @@ Prefab:
       objectReference: {fileID: 2800000, guid: 2623b425bb0a7e5449887dfb17c8ef41, type: 3}
     - target: {fileID: 11400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: timeToDisappear
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.y
-      value: 12.8999996
+      value: -6.9000001
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.x
-      value: 552.539978
+      value: 245.199997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}

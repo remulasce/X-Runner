@@ -43,7 +43,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: -4.37113883e-08}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .990794659, y: 1.96640408, z: -7.83145714}
   m_LocalScale: {x: .699999988, y: .699999988, z: 2.4000001}
   m_Children:
@@ -92,7 +92,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 30
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
+  target: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,7 +156,7 @@ MonoBehaviour:
   startVelocity: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
-  radius: 1.5
+  radius: .75
   power: 5
   fireObject: {fileID: 100000, guid: 49d7999f9fb85954c9541f9a0b0486c3, type: 2}
   fireObjectLife: 1
@@ -170,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4007f1233a9b74fa9be42583fafba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 2
+  size: 2.25
   color: {r: 1, g: .423000008, b: 0, a: 1}
   explodeOnStart: 0
   duration: 1.5
