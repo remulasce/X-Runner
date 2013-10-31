@@ -37,6 +37,9 @@ public class Player_Movement_Script : MonoBehaviour {
     // Reference to all of the spawners
     public GameObject[] spawners;
 
+    // Reference to Stats
+    Stat_Counter_Script stats = null;
+
     // Values for being able to move left and right
     [System.Serializable]
     public class HorizontalMovementData
@@ -95,8 +98,9 @@ public class Player_Movement_Script : MonoBehaviour {
             }
         }
 
-        spawners = tempArray;
+        stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 
+        spawners = tempArray;
 	}
 	
 	void DoXVelocity()
@@ -370,6 +374,10 @@ public class Player_Movement_Script : MonoBehaviour {
 
         if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile")) // Then respawn player & reset camera position
         {
+            if (stats)
+            {
+                stats.numberOfDeaths++;
+            }
             Respawn();
         }
 		
