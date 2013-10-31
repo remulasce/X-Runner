@@ -55,6 +55,9 @@ public class L2_Ship_Script : MonoBehaviour
 
     public Detonator explosion;
 
+    // More stats stuff
+    public Stat_Counter_Script stats = null;
+
     [HideInInspector]
     public bool isDead = false;
     
@@ -73,6 +76,8 @@ public class L2_Ship_Script : MonoBehaviour
 
         isShielded = true;
         StartCoroutine("ResetShield");
+
+        stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 	}
 
     private bool checkLowerBoundaryX()
@@ -360,6 +365,10 @@ public class L2_Ship_Script : MonoBehaviour
     IEnumerator Respawn()
     {
         print("Respawning...");
+        if (stats)
+        {
+            stats.numberOfDeaths++;
+        }
         yield return new WaitForSeconds(spawnTime);
         this.transform.position = startPosition;
         this.rigidbody.velocity = Vector3.zero;
