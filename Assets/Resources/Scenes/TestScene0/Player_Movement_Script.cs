@@ -57,6 +57,8 @@ public class Player_Movement_Script : MonoBehaviour {
 
         [Range(-100.0f, 0.0f)]
         public float accelerationPushOffWall = 0.0f;
+
+        public bool isSliding = false;
     }
 
     public HorizontalMovementData horizontalMovement = new HorizontalMovementData();
@@ -90,7 +92,7 @@ public class Player_Movement_Script : MonoBehaviour {
                         || (spawners[j].name.Length == 13 && (i + 1).ToString().Length == 2)
                         || (spawners[j].name.Length == 12 && (i + 1).ToString().Length == 1))
                     {
-                        //print((i + 1) + " " + spawners.Length);
+                        print((i + 1) + " " + spawners[j].name);
                         tempArray[i] = spawners[j];
                         break;
                     }                    
@@ -98,9 +100,9 @@ public class Player_Movement_Script : MonoBehaviour {
             }
         }
 
-        stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
-
         spawners = tempArray;
+
+        stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 	}
 	
 	void DoXVelocity()
@@ -171,7 +173,7 @@ public class Player_Movement_Script : MonoBehaviour {
 	void DoJump()
 	{
 		//Save ourselves with a wall jump
-		if (!canJump && onWall && wallJumpsLeft > 0 && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)))
+		if (!canJump && onWall && wallJumpsLeft >= 1 && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)))
 		{
 			canJump = true;
 			wallJumpsLeft--;
@@ -179,7 +181,14 @@ public class Player_Movement_Script : MonoBehaviour {
 		}
 		if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) && canJump)
         {
-            this.rigidbody.velocity = Vector3.zero;
+            if (!horizontalMovement.isSliding)
+            {
+                this.rigidbody.velocity = Vector3.zero;
+            }
+            else
+            {
+                horizontalMovement.isSliding = false;
+            }
             if (!playerGravityScript.isGravityInverted)
             {
                 this.rigidbody.AddForce(new Vector3(0, forceValuePreJump, 0));
@@ -395,7 +404,7 @@ public class Player_Movement_Script : MonoBehaviour {
             if (numberOfFramesHit < maxWallFrameHits)
             {
                 numberOfFramesHit++;
-                print(numberOfFramesHit);
+                //print(numberOfFramesHit);
             }
             else
             {
