@@ -721,6 +721,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &26747735
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2009,6 +2011,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 979893598}
     delay: 0
     laserType: 2
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 200, z: 0}
       percentToCloseOffset: .949999988
@@ -3057,6 +3060,8 @@ MonoBehaviour:
   delayToApplyForces: .100000001
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &74410536
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4815,6 +4820,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &103618500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5086,6 +5093,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &106080811
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5934,6 +5943,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &126995354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7373,6 +7384,7 @@ MonoBehaviour:
     movementSpeed: 7
     playerOffset: 0
     accelerationPushOffWall: -15
+    isSliding: 0
   wallJumpsAllowed: 0
   wallJumpsLeft: 3
   isDead: 0
@@ -7605,6 +7617,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1747565145}
     delay: 0
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -7615,6 +7628,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 128657453}
     delay: .100000001
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -7625,6 +7639,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1576376514}
     delay: .200000003
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -7915,6 +7930,8 @@ MonoBehaviour:
   delayToApplyForces: .5
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &150076241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8130,14 +8147,14 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 995671070}
   m_GameObject: {fileID: 158324610}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &158324614
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: f5fe34cda3879154d807760061479a25, type: 2}
   m_PrefabInternal: {fileID: 995671070}
   m_GameObject: {fileID: 158324610}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: -4.37113883e-08}
   m_LocalPosition: {x: 128.780975, y: 55, z: 500}
   m_LocalScale: {x: 50, y: 50, z: .100000001}
   m_Children:
@@ -11698,6 +11715,18 @@ Prefab:
       propertyPath: postActivationParticleSystem
       value: 
       objectReference: {fileID: 979893598}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 2047753708}
@@ -13058,6 +13087,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &268669978
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18886,6 +18917,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &363548930
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18993,6 +19026,8 @@ MonoBehaviour:
   delayToApplyForces: .600000024
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &367786376
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19228,6 +19263,8 @@ MonoBehaviour:
   delayToApplyForces: .600000024
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &373158048
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19994,6 +20031,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 979893598}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &394879497
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20318,6 +20357,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &410078153
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22551,6 +22592,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &491703509
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23302,6 +23345,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1747565145}
     delay: .0500000007
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -23312,6 +23356,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 259301726}
     delay: .100000001
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -23322,6 +23367,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1422215298}
     delay: .150000006
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -23332,6 +23378,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 259301726}
     delay: .200000003
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -23342,6 +23389,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 128657453}
     delay: .25
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -23352,6 +23400,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 521863914}
     delay: .25
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -23362,6 +23411,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1875465369}
     delay: .300000012
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -23372,6 +23422,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 221672443}
     delay: 1.20000005
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -23382,6 +23433,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1947142570}
     delay: .400000006
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -23392,6 +23444,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 877333175}
     delay: 1.60000002
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -24880,6 +24933,8 @@ MonoBehaviour:
   delayToApplyForces: .400000006
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &523456795
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25792,6 +25847,8 @@ MonoBehaviour:
   delayToApplyForces: .349999994
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &559051682
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25899,6 +25956,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &562175814
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27230,6 +27289,8 @@ MonoBehaviour:
   delayToApplyForces: .400000006
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &625560754
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29379,6 +29440,8 @@ MonoBehaviour:
   delayToApplyForces: 2
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &714716560
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29978,6 +30041,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &729555775
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30145,6 +30210,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &736356316
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31922,6 +31989,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1679018177}
     delay: .0500000007
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -31932,6 +32000,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1761418589}
     delay: .100000001
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -31942,6 +32011,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 986150043}
     delay: .150000006
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -31952,6 +32022,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 221672443}
     delay: .200000003
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -31962,6 +32033,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 328382916}
     delay: .25
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -31972,6 +32044,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 877333175}
     delay: .300000012
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -31982,6 +32055,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1583980140}
     delay: .699999988
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -31992,6 +32066,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1212040638}
     delay: .800000012
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -32002,6 +32077,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1717343822}
     delay: .899999976
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -32012,6 +32088,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1511283679}
     delay: 1
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -32792,6 +32869,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &810531845
 Prefab:
   m_ObjectHideFlags: 0
@@ -34279,6 +34358,8 @@ MonoBehaviour:
   delayToApplyForces: .699999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &842715482
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36395,6 +36476,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &884926381
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -37657,11 +37740,11 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 259301726}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[1].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1747565145}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].laserSpeed
       value: 1250
@@ -37709,7 +37792,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 521863914}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].target
       value: 
@@ -37729,7 +37812,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 2092093265}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].target
       value: 
@@ -37744,12 +37827,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].laserSpeed
-      value: 1250
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 910466920}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].delay
       value: .200000003
@@ -37761,6 +37844,26 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].delay
       value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].isDetonator
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
@@ -39655,6 +39758,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &929223320
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40436,6 +40541,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &951309023
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40844,6 +40951,8 @@ MonoBehaviour:
   delayToApplyForces: .150000006
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &960135592
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40951,6 +41060,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &967894908
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43677,6 +43788,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &994934970
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43762,16 +43875,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5fe34cda3879154d807760061479a25, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5fe34cda3879154d807760061479a25, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -4.37113883e-08
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f5fe34cda3879154d807760061479a25, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2248d691629adc144a2539a721f86aee, type: 2}
+    - target: {fileID: 3300000, guid: f5fe34cda3879154d807760061479a25, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5fe34cda3879154d807760061479a25, type: 2}
   m_RootGameObject: {fileID: 158324610}
@@ -43828,6 +43945,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &995680645
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44035,6 +44154,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1003342920
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -45001,6 +45122,8 @@ MonoBehaviour:
   delayToApplyForces: .300000012
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1031654011
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -46451,6 +46574,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1062619020
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -46558,6 +46683,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1064685551
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47639,6 +47766,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1511283679}
     delay: 0
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -47649,6 +47777,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 221672443}
     delay: .5
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -47659,6 +47788,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1947142570}
     delay: 1
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -47669,6 +47799,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1576376514}
     delay: 1.5
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -47679,6 +47810,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 979893598}
     delay: 2.25
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -47791,6 +47923,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1089019809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -55767,6 +55901,8 @@ MonoBehaviour:
   delayToApplyForces: .0500000007
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1295699895
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -56013,11 +56149,11 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1428059647}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[1].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1422215298}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].laserSpeed
       value: 1250
@@ -56065,7 +56201,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 259301726}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].target
       value: 
@@ -56085,7 +56221,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 128657453}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].target
       value: 
@@ -56105,7 +56241,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1422215298}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].delay
       value: .200000003
@@ -56133,7 +56269,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1747565145}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].target
       value: 
@@ -56145,7 +56281,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 292938083}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[7].target
       value: 
@@ -56157,7 +56293,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[7].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1717343822}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[8].target
       value: 
@@ -56169,7 +56305,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[8].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1212040638}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[9].target
       value: 
@@ -56181,7 +56317,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[9].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 259301726}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].delay
       value: .5
@@ -56213,7 +56349,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[10].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1576376514}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[10].delay
       value: 1.10000002
@@ -56229,7 +56365,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[11].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1714055269}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[11].delay
       value: 1.20000005
@@ -56245,7 +56381,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[12].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1323604287}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[12].delay
       value: 1.29999995
@@ -56261,7 +56397,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[13].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 221672443}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[13].delay
       value: 1.39999998
@@ -56277,7 +56413,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[14].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 221672443}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[14].delay
       value: 1.5
@@ -56293,7 +56429,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[15].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 1552139774}
+      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[15].delay
       value: 1.60000002
@@ -56325,6 +56461,70 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[15].laserType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[0].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[2].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[3].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[5].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[6].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[7].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[8].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].isDetonator
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].isDetonator
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
@@ -60305,6 +60505,8 @@ MonoBehaviour:
   delayToApplyForces: .550000012
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1357529418
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -60412,6 +60614,8 @@ MonoBehaviour:
   delayToApplyForces: .5
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1361333617
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -61825,6 +62029,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1412873359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -63330,6 +63536,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1428059647}
     delay: 0
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63340,6 +63547,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1511283679}
     delay: .100000001
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63350,6 +63558,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1717343822}
     delay: 3
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63360,6 +63569,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1947142570}
     delay: .200000003
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63370,6 +63580,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1714055269}
     delay: .300000012
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63380,6 +63591,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 2088987887}
     delay: .400000006
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63390,6 +63602,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1172950330}
     delay: .5
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63400,6 +63613,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1212040638}
     delay: .600000024
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63410,6 +63624,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 986150043}
     delay: .699999988
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63420,6 +63635,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1761418589}
     delay: .800000012
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63430,6 +63646,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1679018177}
     delay: 1
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63440,6 +63657,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 221672443}
     delay: 1.10000002
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63450,6 +63668,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1583980140}
     delay: 1.20000005
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63460,6 +63679,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 877333175}
     delay: 1.29999995
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63470,6 +63690,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 328382916}
     delay: 1.39999998
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63480,6 +63701,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 521863914}
     delay: 1.5
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63490,6 +63712,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 2092093265}
     delay: 1.60000002
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63500,6 +63723,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 910466920}
     delay: 1.70000005
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63510,6 +63734,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 128657453}
     delay: 1.79999995
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63520,6 +63745,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1747565145}
     delay: 1.89999998
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63530,6 +63756,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1747565145}
     delay: 2
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63540,6 +63767,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 259301726}
     delay: 2.0999999
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63550,6 +63778,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1422215298}
     delay: 2.20000005
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63560,6 +63789,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1552139774}
     delay: 2.29999995
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63570,6 +63800,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1875465369}
     delay: 2.4000001
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63580,6 +63811,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1455334668}
     delay: 2.5
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63590,6 +63822,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1622628359}
     delay: 2.5999999
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63600,6 +63833,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1576376514}
     delay: 2.70000005
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63610,6 +63844,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1323604287}
     delay: 2.79999995
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -63620,6 +63855,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 292938083}
     delay: 2.9000001
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
@@ -65218,6 +65454,8 @@ MonoBehaviour:
   delayToApplyForces: .774999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1447802168
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -66775,6 +67013,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1465400948
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -70802,6 +71042,8 @@ MonoBehaviour:
   delayToApplyForces: .300000012
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1533233402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -71409,6 +71651,8 @@ MonoBehaviour:
   delayToApplyForces: .100000001
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1548739425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -72916,6 +73160,8 @@ MonoBehaviour:
   delayToApplyForces: 1.75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1552687580
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -74909,6 +75155,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1679018177}
     delay: 0
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -74919,6 +75166,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1761418589}
     delay: .25
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -74929,6 +75177,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 986150043}
     delay: .5
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -74939,6 +75188,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 221672443}
     delay: .75
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -74949,6 +75199,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 328382916}
     delay: 1
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -74959,6 +75210,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 877333175}
     delay: 1
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -74969,6 +75221,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1583980140}
     delay: 1.10000002
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -74979,6 +75232,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1212040638}
     delay: 1.20000005
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -74989,6 +75243,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1717343822}
     delay: 1.29999995
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -74999,6 +75254,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1511283679}
     delay: 1.39999998
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75009,6 +75265,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1428059647}
     delay: 1.5
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75019,6 +75276,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1947142570}
     delay: 1.60000002
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75029,6 +75287,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1172950330}
     delay: 1.70000005
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75039,6 +75298,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 2088987887}
     delay: 1.79999995
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75049,6 +75309,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1714055269}
     delay: 1.89999998
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75059,6 +75320,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1622628359}
     delay: 2
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75069,6 +75331,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1455334668}
     delay: 2.0999999
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75079,6 +75342,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1875465369}
     delay: 2.20000005
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75089,6 +75353,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1576376514}
     delay: 2.29999995
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75099,6 +75364,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1513498667}
     delay: 2.4000001
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75109,6 +75375,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 292938083}
     delay: 3
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75119,6 +75386,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1323604287}
     delay: 3.20000005
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75129,6 +75397,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1552139774}
     delay: 3.4000001
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75139,6 +75408,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 910466920}
     delay: 3.5999999
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75149,6 +75419,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 2092093265}
     delay: 3.79999995
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75159,6 +75430,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 521863914}
     delay: 4
     laserType: 0
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75169,6 +75441,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 128657453}
     delay: 2.9000001
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75179,6 +75452,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1422215298}
     delay: 3.0999999
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75189,6 +75463,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 259301726}
     delay: 3.29999995
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -75199,6 +75474,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 979893598}
     delay: 3.5
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
@@ -77323,6 +77599,8 @@ MonoBehaviour:
   delayToApplyForces: .25
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1603359218
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -77490,6 +77768,8 @@ MonoBehaviour:
   delayToApplyForces: 16
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1605324234
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -77837,6 +78117,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1614800216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78208,6 +78490,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1621830970
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79527,6 +79811,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1634101771
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79907,6 +80193,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1639370804
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80374,6 +80662,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1657889334
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80675,6 +80965,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1662485242
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -82542,6 +82834,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1697328038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -87286,9 +87580,11 @@ MonoBehaviour:
   - target: {fileID: 34221887}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1428059647}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: 0
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87296,9 +87592,11 @@ MonoBehaviour:
   - target: {fileID: 1916521621}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1422215298}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .100000001
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87306,9 +87604,11 @@ MonoBehaviour:
   - target: {fileID: 1235233894}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 259301726}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .200000003
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87316,9 +87616,11 @@ MonoBehaviour:
   - target: {fileID: 542269906}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 128657453}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .300000012
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87326,9 +87628,11 @@ MonoBehaviour:
   - target: {fileID: 810345916}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1422215298}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .400000006
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87336,9 +87640,11 @@ MonoBehaviour:
   - target: {fileID: 1235233894}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1747565145}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .5
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87346,9 +87652,11 @@ MonoBehaviour:
   - target: {fileID: 1961598420}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 292938083}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .600000024
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87356,9 +87664,11 @@ MonoBehaviour:
   - target: {fileID: 929223317}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1717343822}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .699999988
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87366,9 +87676,11 @@ MonoBehaviour:
   - target: {fileID: 1916521621}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1212040638}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .800000012
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87376,9 +87688,11 @@ MonoBehaviour:
   - target: {fileID: 34221887}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 259301726}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .899999976
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87386,9 +87700,11 @@ MonoBehaviour:
   - target: {fileID: 929223317}
     targetOffset: {x: -5, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1576376514}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: 1.10000002
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87396,9 +87712,11 @@ MonoBehaviour:
   - target: {fileID: 929223317}
     targetOffset: {x: -2, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1714055269}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: 1.20000005
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87406,9 +87724,11 @@ MonoBehaviour:
   - target: {fileID: 929223317}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1323604287}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: 1.29999995
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87416,9 +87736,11 @@ MonoBehaviour:
   - target: {fileID: 929223317}
     targetOffset: {x: 2, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 221672443}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: 1.39999998
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87426,9 +87748,11 @@ MonoBehaviour:
   - target: {fileID: 929223317}
     targetOffset: {x: 5, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 221672443}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: 1.5
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -87436,9 +87760,11 @@ MonoBehaviour:
   - target: {fileID: 137554353}
     targetOffset: {x: 11, y: 0, z: 0}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1552139774}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: 1.60000002
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -89182,6 +89508,8 @@ MonoBehaviour:
   delayToApplyForces: .774999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1779407119
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -91129,9 +91457,11 @@ MonoBehaviour:
   - target: {fileID: 626472868}
     targetOffset: {x: 0, y: 0, z: -25}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 259301726}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: 0
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -91139,9 +91469,11 @@ MonoBehaviour:
   - target: {fileID: 626472868}
     targetOffset: {x: 0, y: 0, z: -25}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 1747565145}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .100000001
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -91149,9 +91481,11 @@ MonoBehaviour:
   - target: {fileID: 626472868}
     targetOffset: {x: 0, y: 0, z: -25}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 521863914}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .200000003
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -91159,19 +91493,23 @@ MonoBehaviour:
   - target: {fileID: 626472868}
     targetOffset: {x: 0, y: 0, z: -25}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 2092093265}
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .300000012
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
       closingMagnitude: 0
   - target: {fileID: 626472868}
     targetOffset: {x: 0, y: 0, z: -25}
-    laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 910466920}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+      type: 2}
     delay: .400000006
     laserType: 0
+    isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
@@ -91655,6 +91993,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1428059647}
     delay: 0
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
@@ -91665,6 +92004,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1947142570}
     delay: .5
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: -100, z: 0}
       percentToCloseOffset: .925000012
@@ -91675,6 +92015,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1511283679}
     delay: 1
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
@@ -91685,6 +92026,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 1761418589}
     delay: 1.5
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: -100, z: 0}
       percentToCloseOffset: .925000012
@@ -91695,6 +92037,7 @@ MonoBehaviour:
     postCollisionParticleSystem: {fileID: 986150043}
     delay: 2
     laserType: 1
+    isDetonator: 0
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
@@ -94253,6 +94596,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1897953482
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -94798,6 +95143,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1912669758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -95444,6 +95791,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1931101799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -95562,6 +95911,8 @@ MonoBehaviour:
   delayToApplyForces: .774999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1933301987
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -98449,6 +98800,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1992548713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -99084,6 +99437,8 @@ MonoBehaviour:
   delayToApplyForces: .774999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1995982425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -100459,6 +100814,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 979893598}
+  detonatorPrefab: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
+  detonatorOffset: {x: 0, y: 1, z: 10}
 --- !u!54 &2047753711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -100966,6 +101323,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &2065267018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -101133,6 +101492,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &2068490528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -105806,6 +106167,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &2103125379
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -106762,6 +107125,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &2126375373
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -106869,6 +107234,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &2127884281
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -107276,6 +107643,8 @@ MonoBehaviour:
   delayToApplyForces: .774999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &2132040127
 Rigidbody:
   m_ObjectHideFlags: 0

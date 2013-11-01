@@ -9,6 +9,7 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
     public Vector3 targetOffset = Vector3.zero;
     public Vector3 nonTargetDirection = new Vector3(0, 0, 1);
     public GameObject postCollisionParticleSystem; // Sometimes, if the laser hits something, a particle system should go off.
+    public GameObject detonatorPrefab; // For the Detonator Explosions
 
     // Laser Values specific to homing onto a target
     public Vector3 initialHomingOffset = Vector3.zero;
@@ -56,6 +57,29 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
         //Debug.Log(this.transform.forward);
     }
 
+    public void InitializeWithDetonator(GameObject target, Vector3 offSet, float laserSpeed, GameObject postCollisionParticleSystem, Elite_Laser_Trigger_Script.homingTargetInformation hm)
+    {
+        this.target = target;
+        this.targetOffset = offSet;
+        this.laserSpeed = laserSpeed;
+        this.detonatorPrefab = (GameObject)Instantiate(postCollisionParticleSystem);
+
+        // Special Homing Laser Values
+        this.initialHomingOffset = hm.initialHomingOffset;
+        this.closingMagnitude = hm.closingMagnitude;
+        this.percentToCloseOffset = hm.percentToCloseOffset;
+
+        if (target)
+        {
+            this.transform.LookAt(target.transform.position + targetOffset + initialHomingOffset, new Vector3(0, 1, 0)); // Set the direction here
+        }
+        else
+        {
+            this.transform.LookAt(nonTargetDirection + initialHomingOffset, new Vector3(0, 1, 0)); // Set the direction here
+        }
+        //Debug.Log(this.transform.forward);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -99,7 +123,12 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
             return;
         }
 
-        if (postCollisionParticleSystem)
+        if (detonatorPrefab)
+        {
+            detonatorPrefab.transform.position = other.contacts[0].point;
+            detonatorPrefab.GetComponent<Detonator>().Explode();
+        }
+        else if (postCollisionParticleSystem)
         {
             postCollisionParticleSystem.transform.position = other.contacts[0].point; // Set the particle system to the collision point
             postCollisionParticleSystem.particleSystem.Play();

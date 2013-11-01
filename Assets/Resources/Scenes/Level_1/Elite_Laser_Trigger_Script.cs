@@ -34,6 +34,9 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
         public float delay;
         public laserType laserType;
 
+        // Check to see if the particle system is a denotator
+        public bool isDetonator;
+
         // Special Values for if the laserType is homing
         public homingTargetInformation homingMissileProperties;    
     };
@@ -76,18 +79,39 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
     public IEnumerator DelayLaserShot(targetInformation t)
     {
         yield return new WaitForSeconds(t.delay);
-        eliteShipLaserScript.FireLaserAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem);
+        if (t.isDetonator)
+        {
+            eliteShipLaserScript.FireLaserAtDetonator(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem);
+        }
+        else
+        {
+            eliteShipLaserScript.FireLaserAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem);
+        }
     }
 
     public IEnumerator DelayHomingLaserShot(targetInformation t)
     {
         yield return new WaitForSeconds(t.delay);
-        eliteShipLaserScript.FireHomingLaserAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem, t.homingMissileProperties);
+        if (t.isDetonator)
+        {
+            eliteShipLaserScript.FireHomingLaserAtDetonator(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem, t.homingMissileProperties);
+        }
+        else
+        {
+            eliteShipLaserScript.FireHomingLaserAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem, t.homingMissileProperties);
+        }
     }
 
     public IEnumerator DelayBigMissileShot(targetInformation t)
     {
         yield return new WaitForSeconds(t.delay);
-        eliteShipLaserScript.FireBigMissileAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem, t.homingMissileProperties);
+        if (t.isDetonator)
+        {
+            eliteShipLaserScript.FireBigMissileAtDetonator(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem, t.homingMissileProperties);
+        }
+        else
+        {
+            eliteShipLaserScript.FireBigMissileAt(t.target, t.targetOffset, t.laserSpeed, t.postCollisionParticleSystem, t.homingMissileProperties);
+        }
     }
 }
