@@ -1430,7 +1430,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &53085076
 ConstantForce:
@@ -2730,7 +2730,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
@@ -4204,7 +4204,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &238362091
 ConstantForce:
@@ -4807,7 +4807,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
@@ -5643,7 +5643,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &294637853
 ConstantForce:
@@ -6173,7 +6173,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Constraints
-      value: 64
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Mass
@@ -6193,7 +6193,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7500000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Torque.x
@@ -6569,7 +6569,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
@@ -7631,7 +7631,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &403801141
 ConstantForce:
@@ -8373,7 +8373,7 @@ GUITexture:
   m_Color: {r: .443137258, g: .443137258, b: .443137258, a: 1}
   m_PixelInset:
     serializedVersion: 2
-    x: 245.199997
+    x: 307.899994
     y: -6.9000001
     width: 460
     height: 152
@@ -9230,7 +9230,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
@@ -11440,7 +11440,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &569183442
 ConstantForce:
@@ -11468,7 +11468,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!23 &569183444
 Renderer:
@@ -11755,7 +11755,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
@@ -13651,7 +13651,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &690875918
 ConstantForce:
@@ -14025,7 +14025,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &716948196
 ConstantForce:
@@ -16453,7 +16453,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
@@ -16626,7 +16626,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.x
-      value: 245.199997
+      value: 307.899994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
@@ -16966,7 +16966,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
@@ -17854,7 +17854,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &870633631
 ConstantForce:
@@ -17989,7 +17989,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &872874858
 ConstantForce:
@@ -18429,7 +18429,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &893374567
 ConstantForce:
@@ -18457,7 +18457,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!23 &893374569
 Renderer:
@@ -21473,7 +21473,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &1024050564
 ConstantForce:
@@ -27597,7 +27597,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
@@ -27709,7 +27709,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Constraints
-      value: 64
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Mass
@@ -27729,7 +27729,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7500000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Torque.x
@@ -28603,7 +28603,7 @@ SphereCollider:
     type: 2}
   m_PrefabInternal: {fileID: 1955904183}
   m_GameObject: {fileID: 1483664309}
-  m_Material: {fileID: 13400000, guid: 5410a64fad11e8d6d00011d98d76c639, type: 2}
+  m_Material: {fileID: 13400000, guid: 67db31eead11e8d6d00011d98d76c639, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -29184,7 +29184,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
@@ -30734,7 +30734,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &1584930652
 ConstantForce:
@@ -30762,7 +30762,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!23 &1584930654
 Renderer:
@@ -37877,7 +37877,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Constraints
-      value: 64
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Mass
@@ -37897,7 +37897,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7500000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Torque.x
@@ -38375,7 +38375,7 @@ MonoBehaviour:
   constantVectorForce: {x: 0, y: 0, z: 0}
   timeToApplyCF: 0
   delayToApplyForces: 0
-  postActivationConstraints: 8
+  postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
 --- !u!75 &1912800695
 ConstantForce:
@@ -38403,7 +38403,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!23 &1912800697
 Renderer:
@@ -39548,7 +39548,7 @@ Prefab:
     - target: {fileID: 13500000, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: 5410a64fad11e8d6d00011d98d76c639,
+      objectReference: {fileID: 13400000, guid: 67db31eead11e8d6d00011d98d76c639,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
@@ -42781,7 +42781,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Constraints
-      value: 64
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Mass
@@ -42801,7 +42801,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: postActivationConstraints
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7500000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Torque.x
