@@ -116,6 +116,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &2954457
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -407,6 +409,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &13536443
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -621,6 +625,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &14487876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,6 +1116,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &42914585
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -1309,6 +1317,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &48664516
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1432,6 +1442,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &53085076
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -1567,6 +1579,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &58394125
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -2002,6 +2016,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &120070824
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -2937,6 +2953,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &192518956
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -3141,7 +3159,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 100, z: 1}
+  m_Size: {x: 1, y: 1000, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &197240937
 Transform:
@@ -3150,7 +3168,7 @@ Transform:
   m_PrefabInternal: {fileID: 1097010333}
   m_GameObject: {fileID: 197240934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 314.298126, y: 39.2108955, z: 0}
+  m_LocalPosition: {x: 305.287598, y: 39.2108955, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3196,6 +3214,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &200239543
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -3832,6 +3852,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &225494828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3936,6 +3958,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &230838044
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -4071,6 +4095,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &236437796
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -4206,6 +4232,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &238362091
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -4341,6 +4369,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &248824146
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -4864,6 +4894,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &278292377
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -5218,6 +5250,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &282311497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5378,6 +5412,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &289915295
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -5645,6 +5681,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &294637853
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -5780,6 +5818,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &296849620
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -6046,6 +6086,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &303656200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6626,6 +6668,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &347446072
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -6891,6 +6935,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &366126363
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -7012,6 +7058,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &367952799
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -7251,6 +7299,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &383512182
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -7387,6 +7437,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &385321703
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -7633,6 +7685,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &403801141
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -8029,6 +8083,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &426526300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8237,6 +8293,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &440471753
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -8434,6 +8492,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &458602988
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -8648,6 +8708,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &459184535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8756,6 +8818,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &465537932
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -9052,6 +9116,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &484811151
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -9414,6 +9480,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &491525940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9549,6 +9617,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &496475487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9605,6 +9675,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &496484141
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -10050,6 +10122,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &518006274
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -10264,6 +10338,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &518703990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10320,6 +10396,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &529463552
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -10696,6 +10774,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &541053535
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -10843,6 +10923,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &546461252
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11009,6 +11091,7 @@ MonoBehaviour:
   wallJumpsAllowed: 3
   wallJumpsLeft: 3
   isDead: 0
+  spawnTime: 1
 --- !u!23 &547519644
 Renderer:
   m_ObjectHideFlags: 0
@@ -11207,6 +11290,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &560532037
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -11442,6 +11527,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &569183442
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -11577,6 +11664,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &575950153
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -12258,6 +12347,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &614659572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12381,6 +12472,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &636410638
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12504,6 +12597,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &639526722
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -12718,6 +12813,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &644601848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12853,6 +12950,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &648660668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12909,6 +13008,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &654464569
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -13299,6 +13400,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &664019611
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -13653,6 +13756,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &690875918
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -13854,6 +13959,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &715060139
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -14027,6 +14134,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &716948196
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -14314,6 +14423,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &739767932
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -14501,6 +14612,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &746901484
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -14680,6 +14793,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &765470453
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -15055,6 +15170,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &773160927
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -15376,6 +15493,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &781214144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15539,6 +15658,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &788137698
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -15674,6 +15795,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &788912856
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -15925,6 +16048,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &805418724
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -16139,6 +16264,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &806309286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16209,6 +16336,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &815017836
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -17023,6 +17152,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &852228051
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -17210,6 +17341,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &856665654
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -17478,6 +17611,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &861593892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17613,6 +17748,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &862649748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17800,6 +17937,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &870313337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17856,6 +17995,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &870633631
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -17991,6 +18132,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &872874858
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -18260,6 +18403,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &875483428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18431,6 +18576,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &893374567
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -18784,6 +18931,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &923913417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18840,6 +18989,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &923948394
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -19054,6 +19205,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &924593517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19158,6 +19311,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &937320957
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -19293,6 +19448,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &939848625
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -19507,6 +19664,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &942167338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19627,6 +19786,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &952108821
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -19841,6 +20002,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &952805583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19976,6 +20139,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &960114827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20163,6 +20328,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &965597446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20219,6 +20386,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &975171033
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -20516,6 +20685,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &986661398
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20703,6 +20874,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &993504063
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -20890,6 +21063,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &996889134
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -21025,6 +21200,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1003654133
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -21340,6 +21517,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1023633473
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -21475,6 +21654,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1024050564
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -21928,6 +22109,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1039486191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22565,7 +22748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a03e82d666e209b488c98447116ed00c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 314.298126
+      value: 305.287598
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a03e82d666e209b488c98447116ed00c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -22667,6 +22850,10 @@ Prefab:
       propertyPath: m_Name
       value: Asteroid_Movement_Trigger_Spinning_Rocks
       objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: a03e82d666e209b488c98447116ed00c, type: 2}
+      propertyPath: m_Size.y
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a03e82d666e209b488c98447116ed00c, type: 2}
   m_RootGameObject: {fileID: 197240934}
@@ -22762,6 +22949,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1100320659
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -22963,6 +23152,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1111059704
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -23152,6 +23343,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1113235997
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -23352,6 +23545,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1115063953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23812,6 +24007,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1147035425
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -24235,6 +24432,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1173521042
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -24540,6 +24739,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1218602036
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -24812,6 +25013,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1261069818
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -25496,6 +25699,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1312767859
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -25710,6 +25915,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1322743544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25766,6 +25973,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1330404866
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -25901,6 +26110,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1333157945
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -26036,6 +26247,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1333928504
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -26250,6 +26463,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1351296772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26689,6 +26904,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1372719486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26845,6 +27062,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1378117595
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -27032,6 +27251,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1384659072
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -27384,6 +27605,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1391482726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27842,6 +28065,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1426606403
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -28029,6 +28254,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1435494601
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -28561,6 +28788,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1483664312
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28684,6 +28913,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1487108827
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -28871,6 +29102,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1495212180
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -29020,6 +29253,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1497177234
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -29296,6 +29531,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1503399858
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -29494,6 +29731,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1520804719
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -29681,6 +29920,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1545474369
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -29895,6 +30136,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1548137733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29951,6 +30194,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1548202335
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -30174,6 +30419,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1556740189
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -30477,6 +30724,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1563581943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30736,6 +30985,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1584930652
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -31002,6 +31253,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1588363993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31198,6 +31451,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1597157095
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -31419,6 +31674,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1614220461
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -31554,6 +31811,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1616362179
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -32000,6 +32259,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1640028627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32144,6 +32405,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1651176862
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -32335,6 +32598,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1659009695
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -32629,6 +32894,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1669684067
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -33278,6 +33545,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1728101383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33334,6 +33603,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1736255790
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -33576,6 +33847,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1746149237
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -33725,6 +33998,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1747277654
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -34013,6 +34288,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1766827468
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -34148,6 +34425,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1769071571
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -34609,6 +34888,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1792510041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34665,6 +34946,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1794013433
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -34800,6 +35083,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1796327361
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -34935,6 +35220,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1796422137
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -35126,6 +35413,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1809326159
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -35261,6 +35550,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1814951756
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -35530,6 +35821,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1819919239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35641,6 +35934,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1827482843
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -37301,6 +37596,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1854480463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37591,6 +37888,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1860900684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37735,6 +38034,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1862210633
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -38013,6 +38314,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1884739513
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -38377,6 +38680,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 4
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1912800695
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -38581,6 +38886,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1916385775
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -38781,6 +39088,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1924403014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38953,6 +39262,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1937862457
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -39174,6 +39485,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1945296008
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -39597,6 +39910,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1956108539
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -39811,6 +40126,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1972679308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39867,6 +40184,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1973688173
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -40002,6 +40321,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1981771248
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -40137,6 +40458,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1982341027
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -40272,6 +40595,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1983227463
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -40720,6 +41045,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &1993430040
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -41019,6 +41346,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &2015928243
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -41317,6 +41646,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &2027316060
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -41531,6 +41862,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &2038221126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41639,6 +41972,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &2041470466
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -42059,6 +42394,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &2067283402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42194,6 +42531,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &2069805261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42475,6 +42814,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &2076460067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42531,6 +42872,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &2082487995
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -42874,6 +43217,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &2093334866
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43128,6 +43473,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &2098987529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43263,6 +43610,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &2117215407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43507,6 +43856,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &2133161421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43615,6 +43966,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!75 &2139643282
 ConstantForce:
   m_ObjectHideFlags: 0

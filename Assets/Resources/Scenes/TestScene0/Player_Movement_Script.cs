@@ -70,6 +70,9 @@ public class Player_Movement_Script : MonoBehaviour {
 
     // Used for Spawning
     public bool isDead = false;
+    public float spawnTime = 1.0f;
+
+    private bool isWaitingToSpawn = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -107,6 +110,11 @@ public class Player_Movement_Script : MonoBehaviour {
 	
 	void DoXVelocity()
 	{
+        if (isDead) // Don't move the player if dead
+        {
+            return;
+        }
+        
         if (!onWall)
         {
             //this.transform.position += new Vector3(movementSpeed * Time.deltaTime, 0, 0);
@@ -280,8 +288,11 @@ public class Player_Movement_Script : MonoBehaviour {
     }
 
     // Respawn Function
-    void Respawn()
+    IEnumerator Respawn()
     {
+        isWaitingToSpawn = true;
+        yield return new WaitForSeconds(spawnTime);
+        isWaitingToSpawn = false;
         this.rigidbody.velocity = Vector3.zero;
         this.transform.position = new Vector3(this.transform.position.x, 1, 0);
         // Run through all of the spawners and see where the correct one to spawn is
@@ -297,6 +308,11 @@ public class Player_Movement_Script : MonoBehaviour {
         onWall = false;
         isInAir = true;
         isDead = false;
+
+        if (!this.renderer.enabled)
+        {
+            this.renderer.enabled = true;
+        }
     }
 	
 	//If we're below the ground, respawn us above it and (ahead) us a little.
@@ -304,9 +320,9 @@ public class Player_Movement_Script : MonoBehaviour {
 	//	have the triggers set properly.
 	void CheckDead()
 	{
-		if (isDead) // Make a better condition
+        if (isDead && !isWaitingToSpawn) // Make a better condition
 		{
-            Respawn();
+            StartCoroutine("Respawn");
 		}
 	}
 	
@@ -387,7 +403,9 @@ public class Player_Movement_Script : MonoBehaviour {
             {
                 stats.numberOfDeaths++;
             }
-            Respawn();
+            isDead = true;
+            this.renderer.enabled = false;
+            StartCoroutine("Respawn");            
         }
 		
 		//Next level stuff: Persist some stuff for the next level

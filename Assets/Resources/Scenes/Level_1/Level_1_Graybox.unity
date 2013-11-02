@@ -7388,6 +7388,7 @@ MonoBehaviour:
   wallJumpsAllowed: 0
   wallJumpsLeft: 3
   isDead: 0
+  spawnTime: 1
 --- !u!23 &137554355
 Renderer:
   m_ObjectHideFlags: 0
@@ -25175,7 +25176,7 @@ Transform:
   m_GameObject: {fileID: 527868305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 251.511139, y: 52.9660568, z: 506.470459}
-  m_LocalScale: {x: 1500, y: 1000, z: 1}
+  m_LocalScale: {x: 2000, y: 1000, z: 1}
   m_Children: []
   m_Father: {fileID: 1254231323}
 --- !u!1 &527898420
@@ -37827,12 +37828,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].laserSpeed
-      value: 1000
+      value: 1250
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
+      objectReference: {fileID: 100000, guid: 7514e3ecececf4075a101607065d0ea5, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].delay
       value: .200000003
@@ -91504,8 +91505,8 @@ MonoBehaviour:
       closingMagnitude: 0
   - target: {fileID: 626472868}
     targetOffset: {x: 0, y: 0, z: -25}
-    laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5,
+    laserSpeed: 1250
+    postCollisionParticleSystem: {fileID: 100000, guid: 7514e3ecececf4075a101607065d0ea5,
       type: 2}
     delay: .400000006
     laserType: 0
