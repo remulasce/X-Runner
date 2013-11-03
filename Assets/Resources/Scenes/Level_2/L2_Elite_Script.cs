@@ -270,7 +270,7 @@ public class L2_Elite_Script : MonoBehaviour {
 	{        
         if (col.gameObject.CompareTag("L2_PlayerShot"))
 		{
-            GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
+            GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
             currentHealth--;
 			if (currentHealth <= 0)
 			{
@@ -281,7 +281,7 @@ public class L2_Elite_Script : MonoBehaviour {
         if (col.gameObject.CompareTag("L2_Asteroid"))
         {
             currentHealth -= totalHealth/4;            
-            GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
+            GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
             gDetonator.GetComponent<Detonator>().size = 5;
             Object.Destroy(col.gameObject);
             if (currentHealth <= 0)

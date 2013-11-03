@@ -52,7 +52,7 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
         // Special Case for the Elite
         if (other.gameObject.CompareTag("L2_Asteroid"))
         {
-            GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
+            GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
             gDetonator.GetComponent<Detonator>().size = 5;
             Object.Destroy(other.gameObject);
             this.animation.Play("Shield_Collapse_Elite");

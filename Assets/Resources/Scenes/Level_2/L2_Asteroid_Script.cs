@@ -44,7 +44,7 @@ public class L2_Asteroid_Script : MonoBehaviour {
                 numberOfTimesHit++;
                 lastHit = LAST_HIT.PLAYER;
             }
-            Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
+            Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
             Object.Destroy(other.gameObject);
             hasReflectedOffPlayer = true;
         }
@@ -63,7 +63,7 @@ public class L2_Asteroid_Script : MonoBehaviour {
             }
             else
             {
-                GameObject gDetonator = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
+                GameObject gDetonator = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
                 gDetonator.transform.parent = this.gameObject.transform;
             }
             Object.Destroy(other.gameObject);
