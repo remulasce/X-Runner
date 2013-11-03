@@ -18,7 +18,8 @@ public class L2_Elite_Script : MonoBehaviour {
 	
 	//Use this to help with our movement:
 	Vector3 target = new Vector3(0,0,0);
-	public float maxSpeed = 7f;
+	//Set according to our state in SetMaxSpeed
+	public float curMaxSpeed = 7f;
 	
 	//Help with AI loitering
 	public float nextLoiterChange;
@@ -39,6 +40,8 @@ public class L2_Elite_Script : MonoBehaviour {
 	void Update () {
 		//We don't do anything without a Wave.
 		if (wave == null) { return; }
+		
+		SetMaxSpeed();
 		
 		//Entry movement decides when it ends
 		DoMovement();
@@ -90,7 +93,7 @@ public class L2_Elite_Script : MonoBehaviour {
 	{
 		//return;
 		Vector3 delta = (this.target - this.transform.position);
-		this.rigidbody.MovePosition(this.transform.position + Time.deltaTime*(delta.normalized * Mathf.Min(maxSpeed, 7.5f*delta.magnitude)));
+		this.rigidbody.MovePosition(this.transform.position + Time.deltaTime*(delta.normalized * Mathf.Min(curMaxSpeed, 7.5f*delta.magnitude)));
 	}
 	
 	
@@ -129,7 +132,22 @@ public class L2_Elite_Script : MonoBehaviour {
 			break;
 		}
 	}
-	
+	// Sets the "Max Speed" variable, based on our current state.
+	void SetMaxSpeed()
+	{
+		switch (entryState)
+		{
+		case (EntryState.Entering):
+			curMaxSpeed = wave.nb.speed;
+			break;
+		case (EntryState.Loitering):
+			curMaxSpeed = wave.lb.speed;
+			break;
+		case (EntryState.Exiting):
+			curMaxSpeed = wave.xb.speed;
+			break;
+		}
+	}		
 	void DoEntryMovement()
 	{
 		target = wave.nb.endPos;
