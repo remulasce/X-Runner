@@ -182,7 +182,7 @@ public class L2_Ship_Script : MonoBehaviour
 	// responsiveness
 	void addStartupBoost ()
 	{
-		float dx = Input.GetAxisRaw ("Horizontal");
+        float dx = Input.GetAxisRaw ("Horizontal");
 		float dy = Input.GetAxisRaw ("Vertical");
 		
 		float vx = this.rigidbody.velocity.x;
@@ -261,6 +261,8 @@ public class L2_Ship_Script : MonoBehaviour
 		//Control
 		float dx = Input.GetAxisRaw ("Horizontal");
 		float dy = Input.GetAxisRaw ("Vertical");
+
+        //Debug.Log(dx + " " + dy);
 		
         
 		//Friction will only be responsible for bringing a ship to a halt with no control-
@@ -294,7 +296,7 @@ public class L2_Ship_Script : MonoBehaviour
 	//Make a shot if we're shooting
 	void doShooting ()
 	{
-		if (Input.GetKey(KeyCode.Space) && Time.time > lastShot + reloadTime) {
+		if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime) {
 			Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 0, 180));
 			lastShot = Time.time;
 		}
