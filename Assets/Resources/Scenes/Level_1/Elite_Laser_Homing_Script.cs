@@ -62,7 +62,14 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
         this.target = target;
         this.targetOffset = offSet;
         this.laserSpeed = laserSpeed;
-        this.detonatorPrefab = (GameObject)Instantiate(postCollisionParticleSystem);
+        if (postCollisionParticleSystem)
+        {
+            this.detonatorPrefab = (GameObject)Instantiate(postCollisionParticleSystem);
+        }
+        else
+        {
+            this.detonatorPrefab = (GameObject)Instantiate(this.detonatorPrefab);
+        }
 
         // Special Homing Laser Values
         this.initialHomingOffset = hm.initialHomingOffset;

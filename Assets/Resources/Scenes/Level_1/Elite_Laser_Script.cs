@@ -51,7 +51,14 @@ public class Elite_Laser_Script : MonoBehaviour {
         this.target = target;
         this.targetOffset = offSet;
         this.laserSpeed = laserSpeed;
-        this.detonatorPrefab = (GameObject) Instantiate(postCollisionParticleSystem);
+        if (postCollisionParticleSystem)
+        {
+            this.detonatorPrefab = (GameObject)Instantiate(postCollisionParticleSystem);
+        }
+        else
+        {
+            this.detonatorPrefab = (GameObject)Instantiate(this.detonatorPrefab);
+        }
 
         if (target)
         {
