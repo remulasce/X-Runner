@@ -399,8 +399,12 @@ public class Player_Movement_Script : MonoBehaviour {
         if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !onWall) // Wall Jump Test
         {
             numberOfFramesHit = 0;
-            onWall = true;
-            this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);			
+            print(other.gameObject.name);
+            if (!other.gameObject.name.Equals("Brown_Crate"))
+            {
+                onWall = true;
+                this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
+            }		
         }
 
         if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile")) // Then respawn player & reset camera position
@@ -481,8 +485,12 @@ public class Player_Movement_Script : MonoBehaviour {
 
                 if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !onWall) // Wall Jump Test
                 {
-                    onWall = true;
-                    this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
+                    print(other.gameObject.name);
+                    if (!other.gameObject.name.Equals("Brown_Crate"))
+                    {
+                        onWall = true;
+                        this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
+                    }
                 }
             }
         }
