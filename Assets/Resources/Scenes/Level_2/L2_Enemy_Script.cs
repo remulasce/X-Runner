@@ -14,7 +14,8 @@ public class L2_Enemy_Script : MonoBehaviour {
 	
 	//Use this to help with our movement:
 	Vector3 target = new Vector3(0,0,0);
-	public float maxSpeed = 7f;
+	//This will be set in limitSpeed, then used by the movement fxns.
+	public float curMaxSpeed = 7f;
 	
 	//Shooting
 	float nextFire = 0;
@@ -162,16 +163,36 @@ public class L2_Enemy_Script : MonoBehaviour {
 	}
 	
 	//Track towards the target.
+	//Uses the curMaxSpeed field.
 	void DoTargetMovement()
 	{
 		//return;
 		Vector3 delta = (this.target - this.transform.position);
-		this.rigidbody.MovePosition(this.transform.position + Time.deltaTime*(delta.normalized * Mathf.Min(maxSpeed, 7.5f*delta.magnitude)));
+		this.rigidbody.MovePosition(this.transform.position + Time.deltaTime*(delta.normalized * Mathf.Min(curMaxSpeed, 7.5f*delta.magnitude)));
 	}
+	// Sets the "Max Speed" variable, based on our current state.
+	void SetMaxSpeed()
+	{
+		switch (state)
+		{
+		case (LifeState.Entry):
+			curMaxSpeed = wave.nb.speed;
+			break;
+		case (LifeState.Loiter):
+			curMaxSpeed = wave.lb.speed;
+			break;
+		case (LifeState.Exit):
+			curMaxSpeed = wave.xb.speed;
+			break;
+		}
+	}		
 	
 	// Update is called once per frame
 	void Update () {
-		//return;
+		//so we can assume we have a Wave
+		if (wave == null) {return;}
+		
+		SetMaxSpeed();
 		DoTargetMovement();
 		
 		switch (state)

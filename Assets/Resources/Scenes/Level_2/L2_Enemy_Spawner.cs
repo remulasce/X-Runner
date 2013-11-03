@@ -75,7 +75,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         //E(EliteBehavior.Test);
         // Scout Ship
-        W(ft_hl(1), nb_go(0, 25, 0, 0), lb_no(), at_no(), xt_im(), xb_go(45, 0), 6f);
+        W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
 
         //Elite makes a pass at you
         E(EliteBehavior.QuickPass);
@@ -194,10 +194,10 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		{
 		case EliteBehavior.QuickPass:
 			//W (FormationType.T.ElitePass, nb_go);
-			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, 1), 0f);
+			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, 1, 14), 0f);
 			break;
 		case EliteBehavior.HangBehind:
-			W (ft_eb(), nb_go (-15, 12, 0, 8), lb_lz(-14, 8, 14, 8, 2), at_lt(2), xt_tm (10), xb_go(0, 20), 0);
+			W (ft_eb(), nb_go (-15, 12, 0, 8), lb_lz(-14, 8, 14, 8, 2), at_lt(2), xt_tm (10), xb_go(0, 20, 14), 0);
 			break;
         case EliteBehavior.PreFinalBattle:
             W(ft_ef(), nb_go(-20, 2, 20, 2), lb_no(), at_ld(0.35f), xt_no(), xb_no(), 0);            
@@ -263,18 +263,26 @@ public class L2_Enemy_Spawner : MonoBehaviour {
     }
 	
 	
-	
-	
+	//		=========		ENTRY BEHAVIOR		===========
+	float nb_def_speed = 7;
 	/** eNtry Behavior: GO from point offscreen to onscreen */
-	EntryBehavior nb_go(float stx, float sty, float endx, float endy)
+	EntryBehavior nb_go(float stx, float sty, float endx, float endy, float speed)
 	{
 		EntryBehavior nb = new EntryBehavior();
 		nb.type = EntryBehavior.T.FlyIn;
 		nb.startPos = new Vector2(stx, sty);
 		nb.endPos = new Vector2(endx, endy);
+		nb.speed = speed;
 		return nb;
 	}
+	EntryBehavior nb_go(float stx, float sty, float endx, float endy)
+	{
+		return nb_go (stx, sty, endx, endy, nb_def_speed);
+	}
 	
+	
+	//		========		LOITER BEHAVIOR		===========
+	float lb_def_speed = 7;
 	/** LoiterBehavior do NOthing */
 	LoiterBehavior lb_no()
 	{
@@ -284,18 +292,24 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	}
 	/** LoiterBehavior: LoiterZone
 	 * Loiter to random positions between 2 points, finding a new point every pointTime */
-	LoiterBehavior lb_lz(float x1, float y1, float x2, float y2, float pointTime)
+	LoiterBehavior lb_lz(float x1, float y1, float x2, float y2, float pointTime, float speed)
 	{
 		LoiterBehavior lb = new LoiterBehavior();
 		lb.type = LoiterBehavior.T.LoiterZone;
 		lb.waypoints.Add(new Vector3(x1, y1, 0));
 		lb.waypoints.Add(new Vector3(x2, y2, 0));
 		lb.timeEach = pointTime;
+		lb.speed = speed;
 		
 		return lb;
 	}
+	LoiterBehavior lb_lz(float x1, float y1, float x2, float y2, float pointTime)
+	{
+		return lb_lz(x1, y1, x2, y2, pointTime, lb_def_speed);
+	}
+	
 	/** Goto Waypointns, lingering t time between them */
-	LoiterBehavior lb_wp(float[] waypoints, float waitTime)
+	LoiterBehavior lb_wp(float[] waypoints, float waitTime, float speed)
 	{
 		LoiterBehavior lb = new LoiterBehavior();
 		lb.type = LoiterBehavior.T.GotoWaypoints;
@@ -304,9 +318,18 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 			lb.waypoints.Add(new Vector3(waypoints[i], waypoints[i+1], 0));
 		}
 		lb.timeEach = waitTime;
+		lb.speed = speed;
 		
 		return lb;
 	}
+	LoiterBehavior lb_wp(float[] waypoints, float waitTime)
+	{
+		return  lb_wp(waypoints, waitTime, lb_def_speed);
+	}
+	
+	
+	
+	//		=========		ATTACK TYPE		==========
 	
 	/** AttackType "NO attack" */
 	AttackType at_no()
@@ -353,6 +376,9 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         return at;
     }
 	
+	
+	//		========		EXIT TRIGGER		=========
+	
 	/** eXit Trigger "NO exit" */
 	ExitTrigger xt_no()
 	{
@@ -377,6 +403,9 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	}
 	
 	
+	//		=======		EXIT BEHAVIOR		========
+	float xb_def_speed = 7;
+	
 	/** eXit Behavior "NOne" (shouldn't be used if we need to exit...) */
 	ExitBehavior xb_no()
 	{
@@ -387,14 +416,18 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	/** eXit Behavior GO in a direction-
 	 * This may be normalized to the enemy maxspeed.
 	 * */
-	ExitBehavior xb_go(float dx, float dy)
+	ExitBehavior xb_go(float dx, float dy, float speed)
 	{
 		ExitBehavior xb = new ExitBehavior();
 		xb.type = ExitBehavior.T.GoDir;
 		xb.dir = new Vector3(dx, dy, 0);
+		xb.speed = speed;
 		return xb;
 	}
-	
+	ExitBehavior xb_go(float dx, float dy)
+	{
+		return xb_go(dx, dy, xb_def_speed);
+	}
 	
 	/** Where we go through and actually make everything that was made
 	 * via W(...)
@@ -543,6 +576,8 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		
 		public Vector3 startPos;
 		public Vector3 endPos;
+		
+		public float speed;
 	}
 	/** What the wave does before it exits.
 	 */
@@ -558,6 +593,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		//How long between patrol point switches/linger at each waypoint
 		//(waypoints not actually implemented yet)
 		public float timeEach;
+		public float speed;
 	}
 	/** What causes the wave to exit (thus executing
 		the ExitBehavior)
@@ -581,6 +617,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		public T type;
 		
 		public Vector3 dir;
+		public float speed;
 	}	
 	
 	public class AttackType
