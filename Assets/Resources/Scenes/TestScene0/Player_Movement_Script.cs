@@ -368,10 +368,10 @@ public class Player_Movement_Script : MonoBehaviour {
                     isInAir = false;
                 }
 
-                if (isJetPackActive)
-                {
-                    this.GetComponentInChildren<ParticleSystem>().Stop();
-                }
+                //if (isJetPackActive)
+                //{
+                this.GetComponentInChildren<ParticleSystem>().Stop();
+                //}
             }
         }
         else
@@ -389,10 +389,10 @@ public class Player_Movement_Script : MonoBehaviour {
                     isInAir = false;
                 }
 
-                if (isJetPackActive)
-                {
-                    this.GetComponentInChildren<ParticleSystem>().Stop();
-                }
+                //if (isJetPackActive)
+                //{
+                this.GetComponentInChildren<ParticleSystem>().Stop();
+                //}
             }
         }
 
