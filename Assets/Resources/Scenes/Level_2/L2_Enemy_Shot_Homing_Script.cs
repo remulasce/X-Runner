@@ -3,7 +3,6 @@ using System.Collections;
 
 public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 {
-
     // Detonator
     private Detonator explosion;
 
@@ -17,19 +16,27 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
     protected new void Update()
     {
         base.Update();
-        if (!player.GetComponent<L2_Ship_Script>().isDead) // Follow the player if it has not been destroyed yet
+        if (!target)
         {
-            this.transform.LookAt(player.transform.position);
+            if (!player.GetComponent<L2_Ship_Script>().isDead) // Follow the player if it has not been destroyed yet
+            {
+                this.transform.LookAt(player.transform.position);
+                this.rigidbody.velocity = this.transform.forward * speed;
+            }
+            //Stop following if he dies
+            else
+            {
+                explosion.transform.parent = null;
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                Destroy(this.gameObject);
+            }
+        }
+        else
+        {
+            this.transform.LookAt(target.transform.position);
             this.rigidbody.velocity = this.transform.forward * speed;
         }
-		//Stop following if he dies
-		else
-		{
-            explosion.transform.parent = null;
-            explosion.transform.position = this.transform.position;
-            explosion.Explode();
-            Destroy (this.gameObject);
-		}
 	}
 
     protected void OnCollisionEnter(Collision col)

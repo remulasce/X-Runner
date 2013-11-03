@@ -99,6 +99,7 @@ MonoBehaviour:
   targetOffset: {x: 0, y: 0, z: 0}
   nonTargetDirection: {x: 0, y: 0, z: 1}
   postCollisionParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

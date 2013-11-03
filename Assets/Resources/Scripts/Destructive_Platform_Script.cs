@@ -12,6 +12,9 @@ public class Destructive_Platform_Script : MonoBehaviour {
     public RigidbodyConstraints postActivationConstraints = RigidbodyConstraints.None;
 
     public GameObject postActivationParticleSystem;
+    public GameObject detonatorPrefab;
+
+    public Vector3 detonatorOffset = new Vector3();
 
     private float startTime = 0.0f;
 
@@ -41,7 +44,13 @@ public class Destructive_Platform_Script : MonoBehaviour {
         startTime = Time.time;
 
         // If there is a particle System Attached, play it
-        if (postActivationParticleSystem)
+        if (detonatorPrefab)
+        {
+            GameObject d = (GameObject)Instantiate(detonatorPrefab);
+            d.transform.position = detonatorOffset + this.transform.position;
+            d.GetComponent<Detonator>().Explode();
+        }
+        else if (postActivationParticleSystem)
         {
             postActivationParticleSystem.particleSystem.Play();            
         }

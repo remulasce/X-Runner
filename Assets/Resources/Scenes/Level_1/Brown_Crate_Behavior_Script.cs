@@ -21,7 +21,7 @@ public class Brown_Crate_Behavior_Script : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && other.contacts[0].normal.y >= 0)
         {
             //print("In Y");
-            this.rigidbody.AddForce(new Vector3(0, forceMultiplier * 10, 0));
+            // this.rigidbody.AddForce(new Vector3(0, forceMultiplier * 10, 0));
         }
         if (other.gameObject.CompareTag("Player") && other.contacts[0].normal.x > 0.95)
         {

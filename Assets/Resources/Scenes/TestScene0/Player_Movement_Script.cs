@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Player_Movement_Script : MonoBehaviour {
 
@@ -20,6 +21,10 @@ public class Player_Movement_Script : MonoBehaviour {
     public bool isJetPackActive = false; // Will allow the player to float for longer when this is active
     public float jetPackFloatingForce = 0.0f; // This force will be added to the player's regular floating velocity
 
+    // Variable to prevent bug with player getting stuck to the wall.
+    private const int maxWallFrameHits = 10;
+    private int numberOfFramesHit = 0;
+
     // Make a reference to the camera
     public CanabaltCamera mainCamera;
 
@@ -28,6 +33,12 @@ public class Player_Movement_Script : MonoBehaviour {
 
     // Reference to gravity script
     private Player_Gravity_Script playerGravityScript;
+
+    // Reference to all of the spawners
+    public GameObject[] spawners;
+
+    // Reference to Stats
+    Stat_Counter_Script stats = null;
 
     // Values for being able to move left and right
     [System.Serializable]
@@ -46,6 +57,8 @@ public class Player_Movement_Script : MonoBehaviour {
 
         [Range(-100.0f, 0.0f)]
         public float accelerationPushOffWall = 0.0f;
+
+        public bool isSliding = false;
     }
 
     public HorizontalMovementData horizontalMovement = new HorizontalMovementData();
@@ -54,6 +67,12 @@ public class Player_Movement_Script : MonoBehaviour {
     private bool onWall = false; //For wall-jumping. If you're good, you can wall jump indefinitely.
     public int wallJumpsAllowed = 3;
 	public int wallJumpsLeft = 3;
+
+    // Used for Spawning
+    public bool isDead = false;
+    public float spawnTime = 1.0f;
+
+    private bool isWaitingToSpawn = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -61,10 +80,41 @@ public class Player_Movement_Script : MonoBehaviour {
 		//DontDestroyOnLoad(this);		not any more, because that was bogus.
         playerGravityScript = this.gameObject.GetComponent<Player_Gravity_Script>();
         wallJumpsLeft = wallJumpsAllowed;
+
+        spawners = GameObject.FindGameObjectsWithTag("Spawnpoint");
+
+        GameObject[] tempArray = new GameObject[spawners.Length];
+        for (int i = 0; i < tempArray.Length; i++)
+        {
+            for (int j = 0; j < spawners.Length; j++)
+            {                
+                if (spawners[j].name.Contains((i + 1).ToString()))
+                {
+                    /*SpawnPoint_ = Length 11 + the number of numerals afterward */
+                    if ((spawners[j].name.Length == 14 && (i + 1).ToString().Length == 3)
+                        || (spawners[j].name.Length == 13 && (i + 1).ToString().Length == 2)
+                        || (spawners[j].name.Length == 12 && (i + 1).ToString().Length == 1))
+                    {
+                        //print((i + 1) + " " + spawners[j].name);
+                        tempArray[i] = spawners[j];
+                        break;
+                    }                    
+                }
+            }
+        }
+
+        spawners = tempArray;
+
+        stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 	}
 	
 	void DoXVelocity()
 	{
+        if (isDead) // Don't move the player if dead
+        {
+            return;
+        }
+        
         if (!onWall)
         {
             //this.transform.position += new Vector3(movementSpeed * Time.deltaTime, 0, 0);
@@ -131,7 +181,7 @@ public class Player_Movement_Script : MonoBehaviour {
 	void DoJump()
 	{
 		//Save ourselves with a wall jump
-		if (!canJump && onWall && wallJumpsLeft > 0 && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)))
+		if (!canJump && onWall && wallJumpsLeft >= 1 && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)))
 		{
 			canJump = true;
 			wallJumpsLeft--;
@@ -139,7 +189,14 @@ public class Player_Movement_Script : MonoBehaviour {
 		}
 		if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) && canJump)
         {
-            this.rigidbody.velocity = Vector3.zero;
+            if (!horizontalMovement.isSliding)
+            {
+                this.rigidbody.velocity = Vector3.zero;
+            }
+            else
+            {
+                horizontalMovement.isSliding = false;
+            }
             if (!playerGravityScript.isGravityInverted)
             {
                 this.rigidbody.AddForce(new Vector3(0, forceValuePreJump, 0));
@@ -153,10 +210,16 @@ public class Player_Movement_Script : MonoBehaviour {
             isInAir = true;
             timeWhenLastJumped = Time.time;
 
-            if (isJetPackActive)
-            {
-                this.GetComponentInChildren<ParticleSystem>().Play();
-            }
+            //if (!isJetPackActive)
+            //{
+            //    this.GetComponentInChildren<ParticleSystem>().startSpeed = 4.5f;
+            //}
+            //else
+            //{
+            //    this.GetComponentInChildren<ParticleSystem>().startSpeed = 9.0f;
+            //}
+
+            this.GetComponentInChildren<ParticleSystem>().Play();
 			
 			//Application.LoadLevelAdditive("test_add_scene");
 			//Application.LoadLevel("test_add_scene");
@@ -164,10 +227,10 @@ public class Player_Movement_Script : MonoBehaviour {
 		if ((Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Space)) && isJumping)
         {
             isJumping = false;
-            if (isJetPackActive)
-            {
-                this.GetComponentInChildren<ParticleSystem>().Stop();
-            }
+            //if (isJetPackActive)
+            //{
+            this.GetComponentInChildren<ParticleSystem>().Stop();
+            //}
         }
 		
 		//Jump farther if we keep the space bar held down longer.
@@ -231,13 +294,31 @@ public class Player_Movement_Script : MonoBehaviour {
     }
 
     // Respawn Function
-    void Respawn()
+    IEnumerator Respawn()
     {
+        isWaitingToSpawn = true;
+        yield return new WaitForSeconds(spawnTime);
+        isWaitingToSpawn = false;
         this.rigidbody.velocity = Vector3.zero;
         this.transform.position = new Vector3(this.transform.position.x, 1, 0);
+        // Run through all of the spawners and see where the correct one to spawn is
+        for (int i = 0; i < spawners.Length; i++)
+        {
+            if ((spawners[i].transform.position.x > this.transform.position.x) && spawners[i].GetComponent<Spawn_Point_Script>().checkForGround())
+            {
+                this.transform.position = spawners[i].transform.position;
+                break;
+            }
+        }
         mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, mainCamera.transform.position.z);
         onWall = false;
         isInAir = true;
+        isDead = false;
+
+        if (!this.renderer.enabled)
+        {
+            this.renderer.enabled = true;
+        }
     }
 	
 	//If we're below the ground, respawn us above it and (ahead) us a little.
@@ -245,9 +326,9 @@ public class Player_Movement_Script : MonoBehaviour {
 	//	have the triggers set properly.
 	void CheckDead()
 	{
-		if (this.transform.position.y < -25) // Make a better condition
+        if (isDead && !isWaitingToSpawn) // Make a better condition
 		{
-            //Respawn();
+            StartCoroutine("Respawn");
 		}
 	}
 	
@@ -274,7 +355,7 @@ public class Player_Movement_Script : MonoBehaviour {
 
         if (!playerGravityScript.isGravityInverted)
         {
-            if (other.contacts[0].normal.y > 0)
+            if (other.contacts[0].normal.y > 0.25)
             {
                 //print ("Can Jump Now "+Time.time);
                 canJump = true;
@@ -287,15 +368,15 @@ public class Player_Movement_Script : MonoBehaviour {
                     isInAir = false;
                 }
 
-                if (isJetPackActive)
-                {
-                    this.GetComponentInChildren<ParticleSystem>().Stop();
-                }
+                //if (isJetPackActive)
+                //{
+                this.GetComponentInChildren<ParticleSystem>().Stop();
+                //}
             }
         }
         else
         {
-            if (other.contacts[0].normal.y < 0)
+            if (other.contacts[0].normal.y < 0.25)
             {
                 //print ("Can Jump Now "+Time.time);
                 canJump = true;
@@ -308,23 +389,33 @@ public class Player_Movement_Script : MonoBehaviour {
                     isInAir = false;
                 }
 
-                if (isJetPackActive)
-                {
-                    this.GetComponentInChildren<ParticleSystem>().Stop();
-                }
+                //if (isJetPackActive)
+                //{
+                this.GetComponentInChildren<ParticleSystem>().Stop();
+                //}
             }
         }
 
         if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !onWall) // Wall Jump Test
         {
-            onWall = true;
-            this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
-			
+            numberOfFramesHit = 0;
+            print(other.gameObject.name);
+            if (!other.gameObject.name.Equals("Brown_Crate"))
+            {
+                onWall = true;
+                this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
+            }		
         }
 
         if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile")) // Then respawn player & reset camera position
         {
-            Respawn();
+            if (stats)
+            {
+                stats.numberOfDeaths++;
+            }
+            isDead = true;
+            this.renderer.enabled = false;
+            StartCoroutine("Respawn");            
         }
 		
 		//Next level stuff: Persist some stuff for the next level
@@ -332,6 +423,77 @@ public class Player_Movement_Script : MonoBehaviour {
 		{
 			_Loader_L0.loader.EndLevel();
 		}
+    }
+
+    void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("Terrain"))
+        {
+            if (numberOfFramesHit < maxWallFrameHits)
+            {
+                numberOfFramesHit++;
+                //print(numberOfFramesHit);
+            }
+            else
+            {
+                numberOfFramesHit = 0;
+                if (!isJumping)
+                {
+                    if (!playerGravityScript.isGravityInverted)
+                    {
+                        if (other.contacts[0].normal.y > 0.25)
+                        {
+                            //print ("Can Jump Now "+Time.time);
+                            canJump = true;
+                            isJumping = false;
+                            onWall = false;
+                            wallJumpsLeft = wallJumpsAllowed;
+                            if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                            {
+                                //print("Not in air anymore"+Time.time);
+                                isInAir = false;
+                            }
+
+                            if (isJetPackActive)
+                            {
+                                this.GetComponentInChildren<ParticleSystem>().Stop();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (other.contacts[0].normal.y < 0.25)
+                        {
+                            //print ("Can Jump Now "+Time.time);
+                            canJump = true;
+                            isJumping = false;
+                            onWall = false;
+                            wallJumpsLeft = wallJumpsAllowed;
+                            if (isInAir && (Time.time - timeWhenLastJumped > 0.25f))
+                            {
+                                //print("Not in air anymore"+Time.time);
+                                isInAir = false;
+                            }
+
+                            if (isJetPackActive)
+                            {
+                                this.GetComponentInChildren<ParticleSystem>().Stop();
+                            }
+                        }
+                    }
+                }
+
+                if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !onWall) // Wall Jump Test
+                {
+                    print(other.gameObject.name);
+                    if (!other.gameObject.name.Equals("Brown_Crate"))
+                    {
+                        onWall = true;
+                        this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
+                    }
+                }
+            }
+        }
     }
 
     /*ADDERESS THIS LATER*/

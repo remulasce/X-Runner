@@ -55,6 +55,9 @@ public class L2_Ship_Script : MonoBehaviour
 
     public Detonator explosion;
 
+    // More stats stuff
+    public Stat_Counter_Script stats = null;
+
     [HideInInspector]
     public bool isDead = false;
     
@@ -73,6 +76,8 @@ public class L2_Ship_Script : MonoBehaviour
 
         isShielded = true;
         StartCoroutine("ResetShield");
+
+        stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 	}
 
     private bool checkLowerBoundaryX()
@@ -333,11 +338,37 @@ public class L2_Ship_Script : MonoBehaviour
                 StartCoroutine("Respawn");
             }            
         }
+
+        if (col.gameObject.CompareTag("L2_Asteroid"))
+        {
+            if (!this.isShielded)
+            {
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                isDead = true;
+                this.transform.position = new Vector3(0, 0, 1000);
+                StartCoroutine("Respawn");
+            }
+            else
+            {
+                if (!col.gameObject.GetComponent<L2_Asteroid_Script>().hasReflectedOffPlayer)
+                {
+                    col.rigidbody.velocity = Vector3.Reflect(col.rigidbody.velocity, col.contacts[0].normal);
+                    col.gameObject.GetComponent<L2_Asteroid_Script>().hasReflectedOffPlayer = true;
+                    col.gameObject.GetComponent<L2_Asteroid_Script>().lastHit = L2_Asteroid_Script.LAST_HIT.PLAYER;
+                    col.gameObject.GetComponent<L2_Asteroid_Script>().numberOfTimesHit++;
+                }
+            }
+        }
     }
 
     IEnumerator Respawn()
     {
         print("Respawning...");
+        if (stats)
+        {
+            stats.numberOfDeaths++;
+        }
         yield return new WaitForSeconds(spawnTime);
         this.transform.position = startPosition;
         this.rigidbody.velocity = Vector3.zero;
@@ -352,7 +383,7 @@ public class L2_Ship_Script : MonoBehaviour
         this.transform.GetChild(0).localScale = new Vector3(shieldSize, shieldSize, shieldSize);
         print("Shielded!");
         yield return new WaitForSeconds(shieldTime);
-        this.transform.GetChild(0).animation.Play();
+        this.transform.GetChild(0).animation.Play("Shield_Collapse");
         print("NOT Shielded...");
         isShielded = false;
     }

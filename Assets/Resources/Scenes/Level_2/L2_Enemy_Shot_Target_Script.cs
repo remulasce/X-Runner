@@ -6,6 +6,9 @@ public class L2_Enemy_Shot_Target_Script : L2_Enemy_Shot_Script
 {
     protected GameObject player;
 
+    // Specialized target
+    public GameObject target = null;
+
 	// Use this for initialization
 	protected new void Start () {
         base.Start();
@@ -19,4 +22,12 @@ public class L2_Enemy_Shot_Target_Script : L2_Enemy_Shot_Script
     {
         base.Update();
 	}
+
+    public void SetTarget(GameObject target)
+    {
+        this.target = target;
+        this.transform.LookAt(target.transform.position);
+        this.rigidbody.velocity = Vector3.zero;
+        this.rigidbody.velocity = this.transform.forward * speed;
+    }
 }
