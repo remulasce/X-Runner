@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - target: {fileID: 410078150}
-    targetOffset: {x: 24, y: 0, z: 0}
+    targetOffset: {x: 33, y: 0, z: 0}
     laserSpeed: 200
     postCollisionParticleSystem: {fileID: 0}
     delay: 0
@@ -9359,7 +9359,7 @@ Prefab:
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorPrefab
       value: 
-      objectReference: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
+      objectReference: {fileID: 100000, guid: 2c06a2a4aad0b4b4b9a0c2dcbfbd738a, type: 2}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.z
       value: 10
@@ -14442,8 +14442,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 8a0d7fecef2173146a805c93a1cdb225, type: 2}
+  detonatorOffset: {x: 13, y: 0, z: -5}
 --- !u!54 &410078153
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26559,7 +26559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].targetOffset.x
-      value: 24
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].delay
@@ -29547,7 +29547,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 100000, guid: 7514e3ecececf4075a101607065d0ea5, type: 2}
+      objectReference: {fileID: 100000, guid: 8e5132a54ae2d264db4b5850ccd92416, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].delay
       value: .200000003
@@ -39842,6 +39842,18 @@ Prefab:
     - target: {fileID: 400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: m_LocalScale.y
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 8a0d7fecef2173146a805c93a1cdb225, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
@@ -60575,7 +60587,7 @@ MonoBehaviour:
   - target: {fileID: 626472868}
     targetOffset: {x: 0, y: 0, z: -25}
     laserSpeed: 1250
-    postCollisionParticleSystem: {fileID: 100000, guid: 7514e3ecececf4075a101607065d0ea5,
+    postCollisionParticleSystem: {fileID: 100000, guid: 8e5132a54ae2d264db4b5850ccd92416,
       type: 2}
     delay: .400000006
     laserType: 0
@@ -67540,7 +67552,7 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
+  detonatorPrefab: {fileID: 100000, guid: 2c06a2a4aad0b4b4b9a0c2dcbfbd738a, type: 2}
   detonatorOffset: {x: 0, y: 1, z: 10}
 --- !u!54 &2047753711
 Rigidbody:

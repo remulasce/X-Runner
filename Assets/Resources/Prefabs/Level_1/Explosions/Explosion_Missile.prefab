@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   m_Layer: 13
-  m_Name: Detonator-Crazysparks
+  m_Name: Explosion_Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 10
-  color: {r: 1, g: .423000008, b: 0, a: .423529416}
-  explodeOnStart: 1
+  color: {r: 1, g: .423000008, b: 0, a: 1}
+  explodeOnStart: 0
   duration: 3
   detail: 1
   upwardsBias: 0
@@ -81,20 +81,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1154a16e40ae84e42b591529ea211201, type: 3}
+  m_Script: {fileID: 11500000, guid: a99a52afbdc68cd4fbc1c477cf05bbba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 1.12
+  size: 1
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
   duration: 2
   timeScale: 1
   startDetail: 1
-  detail: 9.97840977
+  detail: 1
   startColor: {r: 1, g: 1, b: 1, a: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
   startLocalPosition: {x: 0, y: 0, z: 0}
@@ -102,9 +102,12 @@ MonoBehaviour:
   startForce: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
   startVelocity: {x: 0, y: 0, z: 0}
-  velocity: {x: 600, y: 50, z: 600}
+  velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
-  sparksMaterial: {fileID: 0}
+  radius: 27.2159424
+  power: 3872.51685
+  fireObject: {fileID: 100000, guid: 49d7999f9fb85954c9541f9a0b0486c3, type: 2}
+  fireObjectLife: 30
 --- !u!1002 &11400003
 EditorExtensionImpl:
   serializedVersion: 6

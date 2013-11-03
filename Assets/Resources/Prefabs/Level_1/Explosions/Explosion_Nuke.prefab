@@ -21,7 +21,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400022}
   m_Layer: 13
-  m_Name: Detonator-MushroomCloud
+  m_Name: Explosion_Nuke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 7.82266903
+  size: 20
   explodeDelayMin: 1
   explodeDelayMax: 1
   startDuration: 2
@@ -201,7 +201,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 2.03214693
+  size: 5
   explodeDelayMin: .800000012
   explodeDelayMax: .800000012
   startDuration: 2
@@ -236,7 +236,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 1
+  size: 3
   explodeDelayMin: .744852602
   explodeDelayMax: .792426229
   startDuration: 2
@@ -272,7 +272,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 3.67247272
+  size: 7
   explodeDelayMin: .769705355
   explodeDelayMax: .82242614
   startDuration: 2
@@ -312,7 +312,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 1.44747174
+  size: 3
   explodeDelayMin: .430491537
   explodeDelayMax: .365147144
   startDuration: 2
@@ -352,7 +352,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 1.62485218
+  size: 5
   explodeDelayMin: .179999992
   explodeDelayMax: .239999995
   startDuration: 2
@@ -392,7 +392,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 1
+  size: 3.5
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
@@ -429,10 +429,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4007f1233a9b74fa9be42583fafba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 10
+  size: 7.5
   color: {r: 1, g: .423000008, b: 0, a: 0}
-  explodeOnStart: 1
-  duration: 3
+  explodeOnStart: 0
+  duration: 5
   detail: 1
   upwardsBias: 10.3910904
   destroyTime: 16.2768192
