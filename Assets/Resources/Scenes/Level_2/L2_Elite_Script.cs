@@ -27,8 +27,12 @@ public class L2_Elite_Script : MonoBehaviour {
 	
 	
 	float nextShot;
-	
-	
+
+    // Explosion for when the elite gets shot down
+    public GameObject endExplosion = null;
+
+    private bool isShotDown = false;
+		
 	
 	// Use this for initialization
 	void Start () {
@@ -251,6 +255,16 @@ public class L2_Elite_Script : MonoBehaviour {
 		}
 	}
 	*/
+
+    void DoTransition()
+    {
+        endExplosion = (GameObject)Instantiate(endExplosion);
+        endExplosion.GetComponent<Detonator>().Explode();
+
+        isShotDown = true;
+        
+        // Do the animation here
+    }
 	
 	void OnCollisionEnter(Collision col)
 	{        
