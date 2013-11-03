@@ -385,9 +385,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalHealth: 50
   currentHealth: 0
-  maxSpeed: 7
+  curMaxSpeed: 7
   nextLoiterChange: 0
   curWaypoint: 0
+  endExplosion: {fileID: 0}
 --- !u!54 &292744471
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1072,6 +1073,7 @@ MonoBehaviour:
   spawnTime: 1
   shieldTime: 3
   explosion: {fileID: 1630494970}
+  stats: {fileID: 0}
   isDead: 0
 --- !u!54 &1556197953
 Rigidbody:
