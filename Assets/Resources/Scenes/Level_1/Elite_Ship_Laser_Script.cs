@@ -18,14 +18,6 @@ public class Elite_Ship_Laser_Script : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Application.LoadLevel("Level_1_Graybox");
-        }
-    }
-
     public void FireLaserAt(GameObject target, Vector3 offSet, float laserSpeed, GameObject postCollisionParticleSystem)
     {        
         GameObject laser = (GameObject) Instantiate(Resources.Load("Prefabs/Level_1/Elite_Laser"), cannons[currentCannon].transform.position, Quaternion.identity);

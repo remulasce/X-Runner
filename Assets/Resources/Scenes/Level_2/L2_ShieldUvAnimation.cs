@@ -41,14 +41,20 @@ public class L2_ShieldUvAnimation : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(tagToCompareFor))
-        {            
-            if (other.gameObject.name.Contains("Homing"))
+        {
+            if (other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().isNotCinematic)
             {
-                other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().transform.parent = null;                
-                other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().Explode();
-            }
-            Object.Destroy(other.gameObject);
-            StartCoroutine("RevertShieldColor");
+                if (other.gameObject.name.Contains("Homing"))
+                {
+                    if (!other.gameObject.name.Contains("Cinematic"))
+                    {
+                        other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().transform.parent = null;
+                        other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().Explode();
+                    }
+                }
+                Object.Destroy(other.gameObject);
+                StartCoroutine("RevertShieldColor");
+            }            
         }
     }
 

@@ -45,7 +45,7 @@ public class CanabaltCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (this.gameObject.activeSelf)
+		if (this.gameObject.activeSelf && player)
 		{
 			Vector3 tempVector = transform.position;
 			
@@ -149,7 +149,7 @@ public class CanabaltCamera : MonoBehaviour {
                 isFlipping = false;
                 moveOffsetY = -moveOffsetY;
                 flipLerpValue = 0.0f;
-                print(moveOffsetY);
+                //print(moveOffsetY);
             }
         }
     }

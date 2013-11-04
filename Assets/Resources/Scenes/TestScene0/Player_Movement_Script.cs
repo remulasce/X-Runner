@@ -181,13 +181,13 @@ public class Player_Movement_Script : MonoBehaviour {
 	void DoJump()
 	{
 		//Save ourselves with a wall jump
-		if (!canJump && onWall && wallJumpsLeft >= 1 && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)))
+		if (!canJump && onWall && wallJumpsLeft >= 1 && (Input.GetButtonDown("Jump") /*|| Input.GetKeyDown(KeyCode.Space)*/))
 		{
 			canJump = true;
 			wallJumpsLeft--;
 			onWall = false;
 		}
-		if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) && canJump)
+		if ((Input.GetButtonDown("Jump") /*|| Input.GetKeyDown(KeyCode.Space)*/) && canJump)
         {
             if (!horizontalMovement.isSliding)
             {
@@ -224,7 +224,7 @@ public class Player_Movement_Script : MonoBehaviour {
 			//Application.LoadLevelAdditive("test_add_scene");
 			//Application.LoadLevel("test_add_scene");
         }
-		if ((Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Space)) && isJumping)
+		if ((Input.GetButtonUp("Jump")/* || Input.GetKeyUp(KeyCode.Space)*/) && isJumping)
         {
             isJumping = false;
             //if (isJetPackActive)
@@ -263,9 +263,13 @@ public class Player_Movement_Script : MonoBehaviour {
         if ((isJumping || isInAir) && !isJumping) // Player cannot move while in jump, unless the jetpack has been attained
         {
             return;
-        }        
+        }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        float dx = Input.GetAxisRaw("Horizontal");
+        //print(dx);
+
+        // Negative Case
+        if (dx < 0)
         {
             if (horizontalMovement.playerOffset > horizontalMovement.leftMovementThreshold)
             {
@@ -278,19 +282,21 @@ public class Player_Movement_Script : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        // Positive Case
+        if (dx > 0)
         {
             if (horizontalMovement.playerOffset < horizontalMovement.rightMovementThreshold)
             {
                 horizontalMovement.playerOffset += horizontalMovement.movementSpeed * Time.deltaTime;
                 this.transform.position += new Vector3(horizontalMovement.movementSpeed * Time.deltaTime, 0, 0);
             }
-            else 
+            else
             {
                 horizontalMovement.playerOffset = horizontalMovement.rightMovementThreshold;
-            }
-        }        
-        //Debug.Log("Movement Offset: " + horizontalMovement.playerOffset);
+            }           
+        }    
+    
+        // Do nothing for neutral case
     }
 
     // Respawn Function

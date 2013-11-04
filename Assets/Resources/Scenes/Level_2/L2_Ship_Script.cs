@@ -65,8 +65,9 @@ public class L2_Ship_Script : MonoBehaviour
 
     private bool isShielded = false;
 	private float lastShot = 0;
-	
-	
+
+    private bool aboutToDoTransition = false;
+    private bool isShotDown = false;
 	
 	// Use this for initialization
 	void Start ()
@@ -182,7 +183,7 @@ public class L2_Ship_Script : MonoBehaviour
 	// responsiveness
 	void addStartupBoost ()
 	{
-		float dx = Input.GetAxisRaw ("Horizontal");
+        float dx = Input.GetAxisRaw ("Horizontal");
 		float dy = Input.GetAxisRaw ("Vertical");
 		
 		float vx = this.rigidbody.velocity.x;
@@ -261,6 +262,8 @@ public class L2_Ship_Script : MonoBehaviour
 		//Control
 		float dx = Input.GetAxisRaw ("Horizontal");
 		float dy = Input.GetAxisRaw ("Vertical");
+
+        //Debug.Log(dx + " " + dy);
 		
         
 		//Friction will only be responsible for bringing a ship to a halt with no control-
@@ -289,12 +292,17 @@ public class L2_Ship_Script : MonoBehaviour
         {
             this.rigidbody.velocity = new Vector3(this.rigidbody.velocity.x, movement.maxSpeed * Mathf.Sign(this.rigidbody.velocity.y), 0);
 		}
+
+        if (Vector3.Magnitude(this.rigidbody.velocity) > movement.maxSpeed)
+        {
+            this.rigidbody.velocity = this.rigidbody.velocity.normalized * movement.maxSpeed;
+        }
 	}
 	
 	//Make a shot if we're shooting
 	void doShooting ()
 	{
-		if (Input.GetKey(KeyCode.Space) && Time.time > lastShot + reloadTime) {
+		if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime) {
 			Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 0, 180));
 			lastShot = Time.time;
 		}
@@ -302,32 +310,68 @@ public class L2_Ship_Script : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		doShooting ();
-		addControl ();
-		addStartupBoost ();        
-		slowDown ();
-		limitSpeed ();	
+        if (!isShotDown)
+        {
+            doShooting();
+            addControl();
+            addStartupBoost();
+            slowDown();
+            limitSpeed();
+        }
 	}
+
+    IEnumerator TransitionToL3()
+    {
+        yield return new WaitForSeconds(5.0f);
+        Application.LoadLevel("Level_3_Graybox");
+    }
+
+    void DoTransition()
+    {
+        isShotDown = true;
+
+        animation.Play();
+
+        StartCoroutine("TransitionToL3");
+    }
 
     void OnCollisionEnter(Collision col)
     {
-        if ((col.gameObject.CompareTag("L2_EnemyShot") && !isShielded))
+        if ((col.gameObject.CompareTag("L2_EnemyShot") && (!isShielded || aboutToDoTransition)))
         {
-            Destroy(col.gameObject);            
+            if (!aboutToDoTransition)
+            {                
+                isDead = true;
+                this.transform.position = new Vector3(0, 0, 1000);
+                StartCoroutine("Respawn");
+            }
+            else
+            {                
+                DoTransition();
+            }
+
             explosion.transform.position = this.transform.position;
             explosion.Explode();
-            isDead = true;
-            this.transform.position = new Vector3(0, 0, 1000);
-            StartCoroutine("Respawn");
+            Destroy(col.gameObject);
         }
 
         if (col.gameObject.CompareTag("L2_Enemy"))
         {
 
-            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
-            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
-            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
-            Destroy(col.gameObject);
+            if (!col.gameObject.name.Contains("Elite"))
+            {
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
+                Destroy(col.gameObject);
+            }
+            else
+            {
+                if (col.gameObject.GetComponent<L2_Elite_Script>().isShotDown)
+                {
+                    return;
+                }
+            }
 
             if (!this.isShielded)
             {
@@ -359,6 +403,35 @@ public class L2_Ship_Script : MonoBehaviour
                     col.gameObject.GetComponent<L2_Asteroid_Script>().numberOfTimesHit++;
                 }
             }
+        }        
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.name.Contains("Cinematic"))
+        {
+            aboutToDoTransition = true;
+            return;
+        }
+        
+        if (col.gameObject.CompareTag("Enemy_Shield"))
+        {
+            if (!col.gameObject.name.Contains("Elite"))
+            {
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
+                Destroy(col.gameObject);
+            }
+
+            if (!this.isShielded)
+            {
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                isDead = true;
+                this.transform.position = new Vector3(0, 0, 1000);
+                StartCoroutine("Respawn");
+            }
         }
     }
 
@@ -383,7 +456,7 @@ public class L2_Ship_Script : MonoBehaviour
         this.transform.GetChild(0).localScale = new Vector3(shieldSize, shieldSize, shieldSize);
         print("Shielded!");
         yield return new WaitForSeconds(shieldTime);
-        this.transform.GetChild(0).animation.Play("Shield_Collapse");
+        this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
         print("NOT Shielded...");
         isShielded = false;
     }
