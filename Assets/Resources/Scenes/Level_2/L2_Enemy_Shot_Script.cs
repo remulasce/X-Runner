@@ -5,7 +5,9 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 {
 	
 	public float speed;
-	
+
+    public bool isNotCinematic = true; // If NOT checked, it will not be destroyed when it goes OB
+
 	// Use this for initialization
 	protected void Start () {
         this.transform.forward = new Vector3(0, -1, 0);
@@ -15,7 +17,7 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 	//Don't keep drifting forever
 	void killIfOutBounds()
 	{
-        if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds))
+        if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds) && isNotCinematic)
         {
             Destroy(this.gameObject);
         }

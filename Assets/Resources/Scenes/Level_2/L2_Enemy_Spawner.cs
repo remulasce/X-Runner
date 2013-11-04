@@ -73,6 +73,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */
 
+        ///*
         //E(EliteBehavior.Test);
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
@@ -156,7 +157,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.1f);
-
+        //*/
         //Elite comes and stays for real.
         E(EliteBehavior.FinalBattle);
 
@@ -452,13 +453,13 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                     else if (w.ft.type == FormationType.T.AsteroidCinematic)
                     {
                         asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
-                        print("Here 1");
+                        //print("Here 1");
                     }
 
                     else if (w.ft.type == FormationType.T.AsteroidGameplay)
                     {
                         asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_GAMEPLAY;
-                        print("Here 2");
+                        //print("Here 2");
                     }
 
                     //Otherwise it's our temporary hardcoded Elite

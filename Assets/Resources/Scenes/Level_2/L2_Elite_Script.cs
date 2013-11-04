@@ -31,7 +31,7 @@ public class L2_Elite_Script : MonoBehaviour {
     // Explosion for when the elite gets shot down
     public GameObject endExplosion = null;
 
-    private bool isShotDown = false;
+    public bool isShotDown = false;
 		
 	
 	// Use this for initialization
@@ -44,6 +44,11 @@ public class L2_Elite_Script : MonoBehaviour {
 	void Update () {
 		//We don't do anything without a Wave.
 		if (wave == null) { return; }
+
+        if (isShotDown) // If the elite is shot down, prevent it from doing anything.
+        {
+            return;
+        }
 		
 		SetMaxSpeed();
 		
@@ -120,7 +125,7 @@ public class L2_Elite_Script : MonoBehaviour {
 	/// Move us, based on our entry/exit state/behavior */
 	void DoMovement()
 	{
-		switch (entryState)
+        switch (entryState)
 		{
 		case EntryState.Spawned:
 			DoInitialSpawn();
@@ -223,6 +228,11 @@ public class L2_Elite_Script : MonoBehaviour {
 	//Actually fire whatever thing we have
 	void FireOurWeapon()
 	{
+        if (isShotDown)
+        {
+            return;
+        }
+        
         switch (wave.at.type)
 		{
 		case (L2_Enemy_Spawner.AttackType.T.None):
@@ -259,11 +269,38 @@ public class L2_Elite_Script : MonoBehaviour {
     void DoTransition()
     {
         endExplosion = (GameObject)Instantiate(endExplosion);
+        endExplosion.transform.position = this.transform.position;
         endExplosion.GetComponent<Detonator>().Explode();
 
-        isShotDown = true;
-        
+        isShotDown = true;       
+
+        Object.Destroy(this.transform.FindChild("Shield_Dome_Elite").gameObject);
+
+        this.GetComponent<SphereCollider>().radius = 50; // Shot missiles at all of the asteroids in the area
+
+        GameObject.FindGameObjectWithTag("L2_Asteroid_Spawner").GetComponent<Asteroid_Spawner_Script>().state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
+
+        GameObject[] asteroids = GameObject.FindGameObjectsWithTag("L2_Asteroid");
+
+        for (int i = asteroids.Length - 1; i >= 0; i--)
+        {
+            if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), asteroids[i].collider.bounds))
+            {
+                Destroy(asteroids[i]);
+            }
+        }
+
         // Do the animation here
+        this.transform.parent.animation.Play();
+
+        StartCoroutine("ShootBigMissile");
+    }
+
+    IEnumerator ShootBigMissile()
+    {
+        yield return new WaitForSeconds(5.0f);
+        GameObject missile = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing_Cinematic"), this.transform.position, Quaternion.Euler(0, 0, 0));
+        missile.transform.localScale *= 1.5f;
     }
 	
 	void OnCollisionEnter(Collision col)
@@ -272,9 +309,9 @@ public class L2_Elite_Script : MonoBehaviour {
 		{
             GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
             currentHealth--;
-			if (currentHealth <= 0)
+            if (currentHealth <= 0 && !isShotDown)
 			{
-				Application.LoadLevel ("Level_3_Graybox");
+                DoTransition();
 			}
 		}
 
@@ -284,9 +321,9 @@ public class L2_Elite_Script : MonoBehaviour {
             GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
             gDetonator.GetComponent<Detonator>().size = 5;
             Object.Destroy(col.gameObject);
-            if (currentHealth <= 0)
+            if (currentHealth <= 0 && !isShotDown)
             {
-                Application.LoadLevel("Level_3_Graybox");
+                DoTransition();
             }
         }
 	}

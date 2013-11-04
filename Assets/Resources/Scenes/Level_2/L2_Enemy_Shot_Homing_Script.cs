@@ -26,10 +26,13 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
             //Stop following if he dies
             else
             {
-                explosion.transform.parent = null;
-                explosion.transform.position = this.transform.position;
-                explosion.Explode();
-                Destroy(this.gameObject);
+                if (isNotCinematic)
+                {
+                    explosion.transform.parent = null;
+                    explosion.transform.position = this.transform.position;
+                    explosion.Explode();
+                    Destroy(this.gameObject);
+                }
             }
         }
         else
@@ -42,13 +45,16 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
     protected void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag("L2_PlayerShot"))
-        {
-            transform.DetachChildren();
+        {            
             explosion.transform.parent = null;
             explosion.transform.position = this.transform.position;
             explosion.Explode();
             Destroy(col.gameObject);
-            Destroy(this.gameObject);
+            if (isNotCinematic)
+            {
+                transform.DetachChildren();
+                Destroy(this.gameObject);
+            }            
         }
     }
 
