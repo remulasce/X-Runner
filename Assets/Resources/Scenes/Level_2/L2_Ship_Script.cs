@@ -322,7 +322,7 @@ public class L2_Ship_Script : MonoBehaviour
 
     IEnumerator TransitionToL3()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(5.0f);
         Application.LoadLevel("Level_3_Graybox");
     }
 

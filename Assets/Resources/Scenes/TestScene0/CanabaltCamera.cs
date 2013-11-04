@@ -149,7 +149,7 @@ public class CanabaltCamera : MonoBehaviour {
                 isFlipping = false;
                 moveOffsetY = -moveOffsetY;
                 flipLerpValue = 0.0f;
-                print(moveOffsetY);
+                //print(moveOffsetY);
             }
         }
     }

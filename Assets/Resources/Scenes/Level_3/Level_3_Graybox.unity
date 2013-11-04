@@ -28722,7 +28722,7 @@ ConstantForce:
   m_Enabled: 1
   m_Force: {x: 0, y: 0, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
-  m_Torque: {x: 600, y: 0, z: 0}
+  m_Torque: {x: -600, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!54 &952108822
 Rigidbody:
@@ -56232,7 +56232,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 7500000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Torque.x
-      value: 600
+      value: -600
       objectReference: {fileID: 0}
     - target: {fileID: 7500000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_Torque.z
