@@ -442,6 +442,13 @@ public class L4_Spawner : MonoBehaviour {
 	{
 		foreach (SpawnTDS.Wave w in waveList)
 		{
+			//Set us sideways
+			//Actually not needed because the Klingon model is sideways to begin with.
+			//w.defRot = Quaternion.Euler(0, 0, -90);
+			//And Klingons.
+			w.enemyPrefabPath = "Prefabs/Level_4/L4_Klingon";
+			
+			
             if (!w.hasSpawned)
             {
                 if (w.waveDuration >= 0)

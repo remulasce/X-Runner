@@ -9,7 +9,7 @@ using System.Collections;
  * 
  */
 
-public class L4_Player_Script : MonoBehaviour {
+public class L4_Player_Script : MonoBehaviour, IPlayer {
 
     [System.Serializable]
     public class MovementData
@@ -73,6 +73,7 @@ public class L4_Player_Script : MonoBehaviour {
 	private float lastShot = 0;
 	
 	
+	public bool IsDead() { return isDead; }
 	
 	// Use this for initialization
 	void Start ()

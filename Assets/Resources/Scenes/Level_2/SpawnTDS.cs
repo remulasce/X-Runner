@@ -16,6 +16,10 @@ public class SpawnTDS : MonoBehaviour {
 	 */
 	public class Wave
 	{
+		//Hacky for L4 direct manipulation
+		public string enemyPrefabPath = "Prefabs/Level_2/L2_Enemy_Basic";
+		public Quaternion defRot = Quaternion.identity;
+		
 		public FormationType ft;
 		public EntryBehavior nb;
 		public LoiterBehavior lb;
@@ -23,7 +27,8 @@ public class SpawnTDS : MonoBehaviour {
 		public ExitTrigger xt;
 		public ExitBehavior xb;
 		public float waveDuration;
-
+		
+		
         public bool hasSpawned = false;
         public float waveSpeed = 7.0f;
 		
@@ -52,7 +57,7 @@ public class SpawnTDS : MonoBehaviour {
 				for (int i=0; i < ft.num; i++)
 				{
 					Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) - new Vector3((i - ft.num/2)*2, 0, 0);
-					GameObject e = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Basic"), pos, Quaternion.identity);
+					GameObject e = (GameObject)GameObject.Instantiate(Resources.Load(enemyPrefabPath), pos, defRot);
 					
 					e.GetComponent<L2_Enemy_Script>().SetWaveAI(this, -new Vector3((i - ft.num/2)*2, 0, 0));
 					this.enemies.Add(e);

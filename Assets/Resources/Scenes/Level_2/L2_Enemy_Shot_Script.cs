@@ -34,9 +34,18 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 	//Leave the enemy to check if it should die.
     protected void OnCollisionEnter(Collision col)
 	{
+		
+		/*
 		if (col.gameObject.CompareTag("Player"))
 		{
 			Destroy(this.gameObject);
 		}
+		*/
+		
+		//Basically, there should be nothing that this actuall collides with
+		// that does not destroy it.
+		//Anything it shouldn't collide with should have been eliminated in the
+		// editor layers.
+		Destroy (this.gameObject);
 	}
 }

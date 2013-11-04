@@ -21,7 +21,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	float nextFire = 0;
 
     // Reference to player
-    L2_Ship_Script player;    
+    IPlayer player;    
 
     // Detonator
     private Detonator explosion;
@@ -31,7 +31,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 		//This gets called after SetWaveAI, because Unity.
 		lastStateTime = Time.time;
 		nextFire = Time.time + Random.Range(0f, 1f);
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<L2_Ship_Script>();
+        player = (IPlayer)(GameObject.FindGameObjectWithTag("Player").GetComponents(typeof(IPlayer)))[0];
         explosion = this.GetComponentInChildren<Detonator>();
 	}
 	
@@ -101,7 +101,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//This will not check if we're already in the state
 	void SetLifeState(LifeState state)
 	{
-		print ("Changing State: "+state);
+		//print ("Changing State: "+state);
 		this.lastStateTime = Time.time;
 		this.state = state;	
 	}
@@ -121,7 +121,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//Actually fire whatever thing we have
 	void FireOurWeapon()
 	{
-        if (player.isDead) // Do not fire a laser when the player is dead
+        if (player.IsDead()) // Do not fire a laser when the player is dead
         {
             return;
         }
