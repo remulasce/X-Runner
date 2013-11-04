@@ -52,15 +52,25 @@ public class SpawnTDS : MonoBehaviour {
 			//Make the thing.
 			switch (ft.type)
 			{
-			//For now, all we have.
+			//Assume everything is a grid.
+			// (and therefore, that both height and width are set properly.
 			case FormationType.T.HorizontalLine:
-				for (int i=0; i < ft.num; i++)
+				//goto FormationType.T.Grid;
+			case FormationType.T.VerticalLine:
+			case FormationType.T.Grid:
+				for (int j=0; j < ft.height; j++)
 				{
-					Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) - new Vector3((i - ft.num/2)*2, 0, 0);
-					GameObject e = (GameObject)GameObject.Instantiate(Resources.Load(enemyPrefabPath), pos, defRot);
-					
-					e.GetComponent<L2_Enemy_Script>().SetWaveAI(this, -new Vector3((i - ft.num/2)*2, 0, 0));
-					this.enemies.Add(e);
+					for (int i=0; i < ft.width; i++)
+					{
+						
+						Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) - 
+							new Vector3((i - ft.width/2)*2, (j-ft.height/2)*2, 0);
+						GameObject e = (GameObject)GameObject.Instantiate(Resources.Load(enemyPrefabPath), pos, defRot);
+						
+						e.GetComponent<L2_Enemy_Script>().SetWaveAI(this, 
+							-new Vector3((i - ft.width/2)*2, (j-ft.height/2)*2, 0));
+						this.enemies.Add(e);
+					}
 				}
 				break;
 			}
@@ -75,11 +85,14 @@ public class SpawnTDS : MonoBehaviour {
 	 */
  	public class FormationType
 	{
-		public enum T { HorizontalLine, ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidGameplay };
+		public enum T { HorizontalLine, Grid, VerticalLine,
+			ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidGameplay };
 		public T type;
 		// Subclass maybe, but you should use the helper fxns and not touch
 		// the classes themselves.
-		public int num;
+		public int width = 1; //number lines.
+		public int height = 1; //default 1 so we get a line if we don't set the other.
+		
 	}
 	/* The way in which the wave enters, and where it goes.
 	 * Basically is just "from where" "to where".

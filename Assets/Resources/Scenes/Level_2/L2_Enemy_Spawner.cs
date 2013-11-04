@@ -87,10 +87,19 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_hl(5), nb_go(10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go(-45, 0), 6.5f);
 
         // First Blockade
+		
+		/* Test Grid 
         W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(13), nb_go(0, 28, 0, 8), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(11), nb_go(0, 26, 0, 6), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
+        */
+		//grid
+		W(ft_gd(13, 3), nb_go(0, 30, 0, 8), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
+        
+        //vertical line
+		
         E(EliteBehavior.HangBehind);
+        W(ft_vl(3), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
 
 
         // Second Fighter Wave
@@ -223,7 +232,23 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	{
 		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
 		ft.type = SpawnTDS.FormationType.T.HorizontalLine;
-		ft.num = num;
+		ft.width = num;
+		return ft;
+	}
+	//Vertical Line
+	SpawnTDS.FormationType ft_vl(int num)
+	{
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.type = SpawnTDS.FormationType.T.VerticalLine;
+		ft.height = num;
+		return ft;
+	}
+	//Grid
+	SpawnTDS.FormationType ft_gd(int width, int height)
+	{
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.type = SpawnTDS.FormationType.T.Grid;
+		ft.width = width; ft.height = height;
 		return ft;
 	}
 	
@@ -445,7 +470,9 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                 {
                     print("Spawning");
 					//if it's just enemies, the Wave can make them
-					if (w.ft.type == SpawnTDS.FormationType.T.HorizontalLine)
+					if (w.ft.type == SpawnTDS.FormationType.T.HorizontalLine
+						|| w.ft.type == SpawnTDS.FormationType.T.Grid
+						|| w.ft.type == SpawnTDS.FormationType.T.VerticalLine)
 					{
                     	w.Spawn();
 					}
