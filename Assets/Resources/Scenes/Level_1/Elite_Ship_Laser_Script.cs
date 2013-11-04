@@ -18,11 +18,13 @@ public class Elite_Ship_Laser_Script : MonoBehaviour {
 	
 	}
 
+    /*WARNING: MAJOR HACK ALERT to start next transition*/
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Application.LoadLevel("Level_1_Graybox");
+            Object.Destroy(GameObject.FindGameObjectWithTag("Stats"));
+            Application.LoadLevel("Title_Screen");
         }
     }
 
