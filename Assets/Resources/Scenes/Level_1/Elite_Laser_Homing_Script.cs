@@ -140,9 +140,11 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
             postCollisionParticleSystem.transform.position = other.contacts[0].point; // Set the particle system to the collision point
             postCollisionParticleSystem.particleSystem.Play();
             postCollisionParticleSystem.transform.parent = other.gameObject.transform;
-        }
+        }        
 
         Debug.Log("Homing Laser Hit: " + other.gameObject.name);
+
+        transform.DetachChildren();
 
         Object.Destroy(this.gameObject);
     }
