@@ -10,9 +10,9 @@ using System.Collections;
 
 public class L4_Spawner : MonoBehaviour {
 
-	public L2_Elite_Script elite;
-
-    public Asteroid_Spawner_Script asteroidSpawner;
+	//public L2_Elite_Script elite;
+	// We don't have these for now.
+    //public Asteroid_Spawner_Script asteroidSpawner;
 
 	void Start () 
 	{
@@ -66,12 +66,12 @@ public class L4_Spawner : MonoBehaviour {
 
         /*
          * Parameter Types
-         * FormationTypes: ft_hl(number of ships) (Horizontal), 
-         * EntryBehavior: nb_go(start, end) (go from start to end)
-         * LoiterBehavior: lb_no() (Don't hang around), lb_lz(min, max, switchTime) (loiter between two points), lb_wp(float[] points, timeToSwitch) (Go through a waypointList)
-         * AttackType: at_no() (no attack), at_ld(time) (fire down laser). at_lt() (laser fired towards player), at_hm() (homing missile)
-         * ExitTrigger: xt_no() (no exit), xt_tm (time) (Delay leave), xt_im (immediate), 
-         * ExitBehavior: xb_no() (never leave), xt_go() (leave IN A DIRECTION (slightly different))
+         * SpawnTDS.FormationTypes: ft_hl(number of ships) (Horizontal), 
+         * SpawnTDS.EntryBehavior: nb_go(start, end) (go from start to end)
+         * SpawnTDS.LoiterBehavior: lb_no() (Don't hang around), lb_lz(min, max, switchTime) (loiter between two points), lb_wp(float[] points, timeToSwitch) (Go through a waypointList)
+         * SpawnTDS.AttackType: at_no() (no attack), at_ld(time) (fire down laser). at_lt() (laser fired towards player), at_hm() (homing missile)
+         * SpawnTDS.ExitTrigger: xt_no() (no exit), xt_tm (time) (Delay leave), xt_im (immediate), 
+         * SpawnTDS.ExitBehavior: xb_no() (never leave), xt_go() (leave IN A DIRECTION (slightly different))
          * timeTillNextWave: Seconds
          * 
          * There's also some sketchy hardcoded things for the Elite, which should be done
@@ -175,18 +175,18 @@ public class L4_Spawner : MonoBehaviour {
 	}
 	
 	/** This is where I do things. Basic "define what you want and it's dealt with here */
-	void W(FormationType f, EntryBehavior en, LoiterBehavior l, AttackType a, ExitTrigger ext, ExitBehavior exb, float timeTillNextWave)
+	void W(SpawnTDS.FormationType f, SpawnTDS.EntryBehavior en, SpawnTDS.LoiterBehavior l, SpawnTDS.AttackType a, SpawnTDS.ExitTrigger ext, SpawnTDS.ExitBehavior exb, float timeTillNextWave)
 	{
 		//Start
 		// This will do things.
-		waveList.Add(new Wave(f, en, l, a, ext, exb, timeTillNextWave));
+		waveList.Add(new SpawnTDS.Wave(f, en, l, a, ext, exb, timeTillNextWave));
 	
 	}
 
     // This is specially for switching the asteroid spawner on
-    void W(FormationType f)
+    void W(SpawnTDS.FormationType f)
     {        
-        waveList.Add(new Wave(f));
+        waveList.Add(new SpawnTDS.Wave(f));
     }
 
     enum EliteBehavior { Test, QuickPass, HangBehind, FinalBattle, PreFinalBattle};
@@ -198,7 +198,7 @@ public class L4_Spawner : MonoBehaviour {
 		switch (e)
 		{
 		case EliteBehavior.QuickPass:
-			//W (FormationType.T.ElitePass, nb_go);
+			//W (SpawnTDS.FormationType.T.ElitePass, nb_go);
 			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, 1, 14), 0f);
 			break;
 		case EliteBehavior.HangBehind:
@@ -221,49 +221,49 @@ public class L4_Spawner : MonoBehaviour {
 	
 	/** Helpers so you don't have to W(new BlaType1(), new BlaType2() ....) */
 	
-	/** FormationType Horizontal Line */
-	FormationType ft_hl(int num)
+	/** SpawnTDS.FormationType Horizontal Line */
+	SpawnTDS.FormationType ft_hl(int num)
 	{
-		FormationType ft = new FormationType();
-		ft.type = FormationType.T.HorizontalLine;
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.type = SpawnTDS.FormationType.T.HorizontalLine;
 		ft.num = num;
 		return ft;
 	}
 	
 	/** Hack: Formationtype elite pass*/
-	FormationType ft_ep()
+	SpawnTDS.FormationType ft_ep()
 	{
-		FormationType ft = new FormationType();
-		ft.type = FormationType.T.ElitePass;
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.type = SpawnTDS.FormationType.T.ElitePass;
 		return ft;
 	}
 	/** Hack: Formationtype elite hide and shoot in back row*/
-	FormationType ft_eb()
+	SpawnTDS.FormationType ft_eb()
 	{
-		FormationType ft = new FormationType();
-		ft.type = FormationType.T.EliteStayBack;
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.type = SpawnTDS.FormationType.T.EliteStayBack;
 		return ft;
 	}
 	/** Hack: Elite comes and stays for final battle */
-	FormationType ft_ef()
+	SpawnTDS.FormationType ft_ef()
 	{
-		FormationType ft = new FormationType();
-		ft.type = FormationType.T.EliteBattle;
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.type = SpawnTDS.FormationType.T.EliteBattle;
 		return ft;
 	}
 
     /*Hacks to get the asteroid spawning on*/
-    FormationType ft_ac()
+    SpawnTDS.FormationType ft_ac()
     {
-        FormationType ft = new FormationType();
-        ft.type = FormationType.T.AsteroidCinematic;
+        SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+        ft.type = SpawnTDS.FormationType.T.AsteroidCinematic;
         return ft;
     }
 
-    FormationType ft_ag()
+    SpawnTDS.FormationType ft_ag()
     {
-        FormationType ft = new FormationType();
-        ft.type = FormationType.T.AsteroidGameplay;
+        SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+        ft.type = SpawnTDS.FormationType.T.AsteroidGameplay;
         return ft;
     }
 	
@@ -271,16 +271,16 @@ public class L4_Spawner : MonoBehaviour {
 	//		=========		ENTRY BEHAVIOR		===========
 	float nb_def_speed = 7;
 	/** eNtry Behavior: GO from point offscreen to onscreen */
-	EntryBehavior nb_go(float stx, float sty, float endx, float endy, float speed)
+	SpawnTDS.EntryBehavior nb_go(float stx, float sty, float endx, float endy, float speed)
 	{
-		EntryBehavior nb = new EntryBehavior();
-		nb.type = EntryBehavior.T.FlyIn;
+		SpawnTDS.EntryBehavior nb = new SpawnTDS.EntryBehavior();
+		nb.type = SpawnTDS.EntryBehavior.T.FlyIn;
 		nb.startPos = new Vector2(stx, sty);
 		nb.endPos = new Vector2(endx, endy);
 		nb.speed = speed;
 		return nb;
 	}
-	EntryBehavior nb_go(float stx, float sty, float endx, float endy)
+	SpawnTDS.EntryBehavior nb_go(float stx, float sty, float endx, float endy)
 	{
 		return nb_go (stx, sty, endx, endy, nb_def_speed);
 	}
@@ -288,19 +288,19 @@ public class L4_Spawner : MonoBehaviour {
 	
 	//		========		LOITER BEHAVIOR		===========
 	float lb_def_speed = 7;
-	/** LoiterBehavior do NOthing */
-	LoiterBehavior lb_no()
+	/** SpawnTDS.LoiterBehavior do NOthing */
+	SpawnTDS.LoiterBehavior lb_no()
 	{
-		LoiterBehavior lb = new LoiterBehavior();
-		lb.type = LoiterBehavior.T.Nothing;
+		SpawnTDS.LoiterBehavior lb = new SpawnTDS.LoiterBehavior();
+		lb.type = SpawnTDS.LoiterBehavior.T.Nothing;
 		return lb;
 	}
-	/** LoiterBehavior: LoiterZone
+	/** SpawnTDS.LoiterBehavior: LoiterZone
 	 * Loiter to random positions between 2 points, finding a new point every pointTime */
-	LoiterBehavior lb_lz(float x1, float y1, float x2, float y2, float pointTime, float speed)
+	SpawnTDS.LoiterBehavior lb_lz(float x1, float y1, float x2, float y2, float pointTime, float speed)
 	{
-		LoiterBehavior lb = new LoiterBehavior();
-		lb.type = LoiterBehavior.T.LoiterZone;
+		SpawnTDS.LoiterBehavior lb = new SpawnTDS.LoiterBehavior();
+		lb.type = SpawnTDS.LoiterBehavior.T.LoiterZone;
 		lb.waypoints.Add(new Vector3(x1, y1, 0));
 		lb.waypoints.Add(new Vector3(x2, y2, 0));
 		lb.timeEach = pointTime;
@@ -308,16 +308,16 @@ public class L4_Spawner : MonoBehaviour {
 		
 		return lb;
 	}
-	LoiterBehavior lb_lz(float x1, float y1, float x2, float y2, float pointTime)
+	SpawnTDS.LoiterBehavior lb_lz(float x1, float y1, float x2, float y2, float pointTime)
 	{
 		return lb_lz(x1, y1, x2, y2, pointTime, lb_def_speed);
 	}
 	
 	/** Goto Waypointns, lingering t time between them */
-	LoiterBehavior lb_wp(float[] waypoints, float waitTime, float speed)
+	SpawnTDS.LoiterBehavior lb_wp(float[] waypoints, float waitTime, float speed)
 	{
-		LoiterBehavior lb = new LoiterBehavior();
-		lb.type = LoiterBehavior.T.GotoWaypoints;
+		SpawnTDS.LoiterBehavior lb = new SpawnTDS.LoiterBehavior();
+		lb.type = SpawnTDS.LoiterBehavior.T.GotoWaypoints;
 		for (int i=0; i < waypoints.Length-1; i+=2)
 		{
 			lb.waypoints.Add(new Vector3(waypoints[i], waypoints[i+1], 0));
@@ -327,7 +327,7 @@ public class L4_Spawner : MonoBehaviour {
 		
 		return lb;
 	}
-	LoiterBehavior lb_wp(float[] waypoints, float waitTime)
+	SpawnTDS.LoiterBehavior lb_wp(float[] waypoints, float waitTime)
 	{
 		return  lb_wp(waypoints, waitTime, lb_def_speed);
 	}
@@ -336,47 +336,47 @@ public class L4_Spawner : MonoBehaviour {
 	
 	//		=========		ATTACK TYPE		==========
 	
-	/** AttackType "NO attack" */
-	AttackType at_no()
+	/** SpawnTDS.AttackType "NO attack" */
+	SpawnTDS.AttackType at_no()
 	{
-		AttackType at = new AttackType();
-		at.type = AttackType.T.None;
+		SpawnTDS.AttackType at = new SpawnTDS.AttackType();
+		at.type = SpawnTDS.AttackType.T.None;
 		return at;
 	}
-	/** AttackType LaserDrop (basic lasergoesdown) */
-	AttackType at_ld(float fireInterval)
+	/** SpawnTDS.AttackType LaserDrop (basic lasergoesdown) */
+	SpawnTDS.AttackType at_ld(float fireInterval)
 	{
-		AttackType at = new AttackType();
-		at.type = AttackType.T.LaserDrop;
+		SpawnTDS.AttackType at = new SpawnTDS.AttackType();
+		at.type = SpawnTDS.AttackType.T.LaserDrop;
 		at.fireInterval = fireInterval;
 		return at;
 	}
-	/* AttackType LaserAim (laser aimed at fixed location)
+	/* SpawnTDS.AttackType LaserAim (laser aimed at fixed location)
 	 * only implemented for Elite for now.
 	 */
-	AttackType at_la(float tx, float ty, float fireInterval)
+	SpawnTDS.AttackType at_la(float tx, float ty, float fireInterval)
 	{
-		AttackType at = new AttackType();
-        at.type = AttackType.T.LaserAim;
+		SpawnTDS.AttackType at = new SpawnTDS.AttackType();
+        at.type = SpawnTDS.AttackType.T.LaserAim;
         at.fireInterval = fireInterval;
 		at.target = new Vector3(tx, ty, 0);
         return at;
 	}
 	//Aim and Target should probably have switched names.
-    /** AttackType LaserTarget (laser Fired Towards Player) */
-    AttackType at_lt(float fireInterval)
+    /** SpawnTDS.AttackType LaserTarget (laser Fired Towards Player) */
+    SpawnTDS.AttackType at_lt(float fireInterval)
     {
-        AttackType at = new AttackType();
-        at.type = AttackType.T.LaserTarget;
+        SpawnTDS.AttackType at = new SpawnTDS.AttackType();
+        at.type = SpawnTDS.AttackType.T.LaserTarget;
         at.fireInterval = fireInterval;
         return at;
     }
 
-    /** AttackType HomingMissile (homing missile) */
-    AttackType at_hm(float fireInterval)
+    /** SpawnTDS.AttackType HomingMissile (homing missile) */
+    SpawnTDS.AttackType at_hm(float fireInterval)
     {
-        AttackType at = new AttackType();
-        at.type = AttackType.T.HomingMissile;
+        SpawnTDS.AttackType at = new SpawnTDS.AttackType();
+        at.type = SpawnTDS.AttackType.T.HomingMissile;
         at.fireInterval = fireInterval;
         return at;
     }
@@ -385,25 +385,25 @@ public class L4_Spawner : MonoBehaviour {
 	//		========		EXIT TRIGGER		=========
 	
 	/** eXit Trigger "NO exit" */
-	ExitTrigger xt_no()
+	SpawnTDS.ExitTrigger xt_no()
 	{
-		ExitTrigger xt = new ExitTrigger();
-		xt.type = ExitTrigger.T.DontExit;
+		SpawnTDS.ExitTrigger xt = new SpawnTDS.ExitTrigger();
+		xt.type = SpawnTDS.ExitTrigger.T.DontExit;
 		return xt;
 	}
 	/** eXit Trigger TiMed */
-	ExitTrigger xt_tm(float seconds)
+	SpawnTDS.ExitTrigger xt_tm(float seconds)
 	{
-		ExitTrigger xt = new ExitTrigger();
-		xt.type = ExitTrigger.T.ExitAfter;
+		SpawnTDS.ExitTrigger xt = new SpawnTDS.ExitTrigger();
+		xt.type = SpawnTDS.ExitTrigger.T.ExitAfter;
 		xt.exitTime = seconds;
 		return xt;
 	}
 	/** eXit Trigger IMmediately */
-	ExitTrigger xt_im()
+	SpawnTDS.ExitTrigger xt_im()
 	{
-		ExitTrigger xt = new ExitTrigger();
-		xt.type = ExitTrigger.T.ExitImmediately;
+		SpawnTDS.ExitTrigger xt = new SpawnTDS.ExitTrigger();
+		xt.type = SpawnTDS.ExitTrigger.T.ExitImmediately;
 		return xt;
 	}
 	
@@ -412,24 +412,24 @@ public class L4_Spawner : MonoBehaviour {
 	float xb_def_speed = 7;
 	
 	/** eXit Behavior "NOne" (shouldn't be used if we need to exit...) */
-	ExitBehavior xb_no()
+	SpawnTDS.ExitBehavior xb_no()
 	{
-		ExitBehavior xb = new ExitBehavior();
-		xb.type = ExitBehavior.T.No;
+		SpawnTDS.ExitBehavior xb = new SpawnTDS.ExitBehavior();
+		xb.type = SpawnTDS.ExitBehavior.T.No;
 		return xb;
 	}
 	/** eXit Behavior GO in a direction-
 	 * This may be normalized to the enemy maxspeed.
 	 * */
-	ExitBehavior xb_go(float dx, float dy, float speed)
+	SpawnTDS.ExitBehavior xb_go(float dx, float dy, float speed)
 	{
-		ExitBehavior xb = new ExitBehavior();
-		xb.type = ExitBehavior.T.GoDir;
+		SpawnTDS.ExitBehavior xb = new SpawnTDS.ExitBehavior();
+		xb.type = SpawnTDS.ExitBehavior.T.GoDir;
 		xb.dir = new Vector3(dx, dy, 0);
 		xb.speed = speed;
 		return xb;
 	}
-	ExitBehavior xb_go(float dx, float dy)
+	SpawnTDS.ExitBehavior xb_go(float dx, float dy)
 	{
 		return xb_go(dx, dy, xb_def_speed);
 	}
@@ -440,7 +440,7 @@ public class L4_Spawner : MonoBehaviour {
 	IList waveList = new ArrayList();
 	IEnumerator DoSpawning()
 	{
-		foreach (Wave w in waveList)
+		foreach (SpawnTDS.Wave w in waveList)
 		{
             if (!w.hasSpawned)
             {
@@ -448,22 +448,22 @@ public class L4_Spawner : MonoBehaviour {
                 {
                     print("Spawning");
 					//if it's just enemies, the Wave can make them
-					if (w.ft.type == FormationType.T.HorizontalLine)
+					if (w.ft.type == SpawnTDS.FormationType.T.HorizontalLine)
 					{
                     	w.Spawn();
 					}
 
                     // Asteroid Spawner Special Cases
-                    else if (w.ft.type == FormationType.T.AsteroidCinematic)
+                    else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidCinematic)
                     {
-                        asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
-                        print("Here 1");
+                        //asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
+                        //print("Here 1");
                     }
 
-                    else if (w.ft.type == FormationType.T.AsteroidGameplay)
+                    else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidGameplay)
                     {
-                        asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_GAMEPLAY;
-                        print("Here 2");
+                        //asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_GAMEPLAY;
+                        //print("Here 2");
                     }
 
                     //Otherwise it's our temporary hardcoded Elite
@@ -504,136 +504,6 @@ public class L4_Spawner : MonoBehaviour {
         StartCoroutine("DoSpawning");
     }
 	
-	
-	/** The overall wave, composed of the subtypes
-	 * Also determines how long to wait before the
-	 * 	following wave.
-	 */
-	public class Wave
-	{
-		public FormationType ft;
-		public EntryBehavior nb;
-		public LoiterBehavior lb;
-		public AttackType at;
-		public ExitTrigger xt;
-		public ExitBehavior xb;
-		public float waveDuration;
-
-        public bool hasSpawned = false;
-        public float waveSpeed = 7.0f;
-		
-		IList enemies = new ArrayList();
-		
-		public Wave(FormationType ft, EntryBehavior nb, LoiterBehavior lb, AttackType at, ExitTrigger xt, ExitBehavior xb, float timeTillNextWave)
-		{
-			this.ft = ft; this.nb = nb; this.lb = lb; this.at = at; this.xt = xt; this.xb = xb; this.waveDuration = timeTillNextWave;
-		}
-
-        public Wave(FormationType ft)
-        {
-            this.ft = ft;
-        }
-		
-		//Spawn creates all of our stuff
-		//The Enemy itself will take care of doing its own things.
-		public void Spawn()
-		{
-			
-			//Make the thing.
-			switch (ft.type)
-			{
-			//For now, all we have.
-			case FormationType.T.HorizontalLine:
-				for (int i=0; i < ft.num; i++)
-				{
-					Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) - new Vector3((i - ft.num/2)*2, 0, 0);
-					GameObject e = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Basic"), pos, Quaternion.identity);
-					
-					e.GetComponent<L2_Enemy_Script>().SetWaveAI(this, -new Vector3((i - ft.num/2)*2, 0, 0));
-					this.enemies.Add(e);
-				}
-				break;
-			}
-            
-            //Start our coroutine that will make it do later things.
-		}
-		
-	}
-	/* The composition of the wave, eg 10 enemies in line, etc.
-	 *	Is defacto responsible for determining the "center" of the wave.
-	 *  Includes sketchy hardcoded Elite behavior for now.
-	 */
- 	public class FormationType
-	{
-		public enum T { HorizontalLine, ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidGameplay };
-		public T type;
-		// Subclass maybe, but you should use the helper fxns and not touch
-		// the classes themselves.
-		public int num;
-	}
-	/* The way in which the wave enters, and where it goes.
-	 * Basically is just "from where" "to where".
-	 */
-	public class EntryBehavior
-	{
-		public enum T { FlyIn };
-		public T type;
-		
-		public Vector3 startPos;
-		public Vector3 endPos;
-		
-		public float speed;
-	}
-	/** What the wave does before it exits.
-	 */
-	public class LoiterBehavior
-	{
-		public enum T { Nothing, SwoopOccasionally, GotoWaypoints, TargetPlayer, Patrol, LoiterZone }
-		public T type;
-		
-		//Used for both GotoWaypoints and as the boundaries for Patrol
-		//Contains Vector3's
-		public IList waypoints = new ArrayList();
-		//Multipurpose field.
-		//How long between patrol point switches/linger at each waypoint
-		//(waypoints not actually implemented yet)
-		public float timeEach;
-		public float speed;
-	}
-	/** What causes the wave to exit (thus executing
-		the ExitBehavior)
-		
-		If set to exit immediately, then loiterbehavior
-		won't be done at all.
-	*/
-	public class ExitTrigger
-	{
-		public enum T { ExitImmediately, ExitAfter, DontExit };
-		public T type;
-		
-		public float exitTime;
-		public IList waypoints;
-	}
-	
-	/** How this exits, if it does. */
-	public class ExitBehavior
-	{
-		public enum T { GoDir, No };
-		public T type;
-		
-		public Vector3 dir;
-		public float speed;
-	}	
-	
-	public class AttackType
-	{
-		//Target: Shoot at current player position
-		public enum T { None, LaserDrop, LaserTarget, HomingMissile, LaserAim };
-		public T type;
-		
-		public float fireInterval;
-		public Vector3 target;
-	}
 	
 	
 }

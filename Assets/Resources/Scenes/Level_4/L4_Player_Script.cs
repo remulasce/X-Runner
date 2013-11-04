@@ -387,10 +387,10 @@ public class L4_Player_Script : MonoBehaviour {
     IEnumerator ResetShield()
     {
         this.transform.GetChild(0).localScale = new Vector3(shieldSize, shieldSize, shieldSize);
-        print("Shielded!");
+        //print("Shielded!");
         yield return new WaitForSeconds(shieldTime);
         this.transform.GetChild(0).animation.Play("Shield_Collapse");
-        print("NOT Shielded...");
+        //print("NOT Shielded...");
         isShielded = false;
     }
 }

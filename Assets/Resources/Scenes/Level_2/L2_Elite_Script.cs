@@ -9,7 +9,7 @@ public class L2_Elite_Script : MonoBehaviour {
 	float lastStateChangeTime = 0;
 	
 	
-	private L2_Enemy_Spawner.Wave wave;
+	private SpawnTDS.Wave wave;
 	private L2_Ship_Script player;
 
 
@@ -72,16 +72,16 @@ public class L2_Elite_Script : MonoBehaviour {
 		{
 			switch (wave.xt.type)
 			{
-			case L2_Enemy_Spawner.ExitTrigger.T.ExitImmediately:
+			case SpawnTDS.ExitTrigger.T.ExitImmediately:
 				SetState(EntryState.Exiting);
 				break;
-			case L2_Enemy_Spawner.ExitTrigger.T.ExitAfter:
+			case SpawnTDS.ExitTrigger.T.ExitAfter:
 				if (Time.time > this.lastStateChangeTime + wave.xt.exitTime)
 				{
 					SetState(EntryState.Exiting);
 				}
 				break;
-			case L2_Enemy_Spawner.ExitTrigger.T.DontExit:
+			case SpawnTDS.ExitTrigger.T.DontExit:
 				//nothing
 				break;
 			}
@@ -171,7 +171,7 @@ public class L2_Elite_Script : MonoBehaviour {
 	{
 		switch (wave.lb.type)
 		{
-		case L2_Enemy_Spawner.LoiterBehavior.T.LoiterZone:
+		case SpawnTDS.LoiterBehavior.T.LoiterZone:
 			if (Time.time > nextLoiterChange)
 			{
 				nextLoiterChange = Time.time + Random.Range(wave.lb.timeEach*2/3, wave.lb.timeEach*4/3);
@@ -182,7 +182,7 @@ public class L2_Elite_Script : MonoBehaviour {
 			}
 			DoTargetMovement();	
 			break;
-		case L2_Enemy_Spawner.LoiterBehavior.T.GotoWaypoints:
+		case SpawnTDS.LoiterBehavior.T.GotoWaypoints:
 			if (!AtTarget())
 			{
 				if (Time.time > nextLoiterChange)
@@ -235,18 +235,18 @@ public class L2_Elite_Script : MonoBehaviour {
         
         switch (wave.at.type)
 		{
-		case (L2_Enemy_Spawner.AttackType.T.None):
+		case (SpawnTDS.AttackType.T.None):
 			print ("Wait, what?");
 			break;
-		case (L2_Enemy_Spawner.AttackType.T.LaserDrop):
+		case (SpawnTDS.AttackType.T.LaserDrop):
             //Make an enemy shot
             Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Drop"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));            
 			break;
-		case (L2_Enemy_Spawner.AttackType.T.LaserTarget):
+		case (SpawnTDS.AttackType.T.LaserTarget):
 			//Make an enemy shot
             Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Target"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
 			break;
-		case (L2_Enemy_Spawner.AttackType.T.HomingMissile):
+		case (SpawnTDS.AttackType.T.HomingMissile):
 			//Make an enemy shot
             Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
 			break;
@@ -355,7 +355,7 @@ public class L2_Elite_Script : MonoBehaviour {
     }
 	
 	/** Temporary(?) Elite control. It tries to follow what's in the wave. */
-	public void DoWave(L2_Enemy_Spawner.Wave w)
+	public void DoWave(SpawnTDS.Wave w)
 	{
 		this.wave = w;
 		this.entryState = EntryState.Spawned;
