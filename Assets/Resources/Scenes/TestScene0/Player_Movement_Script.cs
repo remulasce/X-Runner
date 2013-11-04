@@ -266,7 +266,7 @@ public class Player_Movement_Script : MonoBehaviour {
         }
 
         float dx = Input.GetAxisRaw("Horizontal");
-        print(dx);
+        //print(dx);
 
         // Negative Case
         if (dx < 0)

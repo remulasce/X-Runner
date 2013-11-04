@@ -35,7 +35,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Shield_Dome_Elite
-  m_TagString: Untagged
+  m_TagString: L2_Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,9 +189,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalHealth: 100
   currentHealth: 0
-  maxSpeed: 7
+  curMaxSpeed: 7
   nextLoiterChange: 0
   curWaypoint: 0
+  endExplosion: {fileID: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

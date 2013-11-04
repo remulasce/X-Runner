@@ -750,7 +750,7 @@ GameObject:
   - 114: {fileID: 1311365487}
   m_Layer: 15
   m_Name: Shield_Dome_Elite
-  m_TagString: Untagged
+  m_TagString: L2_Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1522,6 +1522,10 @@ Prefab:
     - target: {fileID: 11400002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
       propertyPath: totalHealth
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_TagString
+      value: L2_Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b24170436125e70448520c272c2d9a2d, type: 2}

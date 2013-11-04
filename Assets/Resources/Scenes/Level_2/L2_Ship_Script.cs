@@ -326,10 +326,13 @@ public class L2_Ship_Script : MonoBehaviour
         if (col.gameObject.CompareTag("L2_Enemy"))
         {
 
-            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
-            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
-            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
-            Destroy(col.gameObject);
+            if (!col.gameObject.name.Contains("Elite"))
+            {
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
+                Destroy(col.gameObject);
+            }
 
             if (!this.isShielded)
             {
@@ -360,6 +363,30 @@ public class L2_Ship_Script : MonoBehaviour
                     col.gameObject.GetComponent<L2_Asteroid_Script>().lastHit = L2_Asteroid_Script.LAST_HIT.PLAYER;
                     col.gameObject.GetComponent<L2_Asteroid_Script>().numberOfTimesHit++;
                 }
+            }
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Enemy_Shield"))
+        {
+
+            if (!col.gameObject.name.Contains("Elite"))
+            {
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
+                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
+                Destroy(col.gameObject);
+            }
+
+            if (!this.isShielded)
+            {
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                isDead = true;
+                this.transform.position = new Vector3(0, 0, 1000);
+                StartCoroutine("Respawn");
             }
         }
     }
