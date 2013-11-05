@@ -7,7 +7,8 @@ public class L2_Player_Shot_Script : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		this.rigidbody.velocity = new Vector3(0, speed, 0);
+		//Negative because it somehow works better.
+		this.rigidbody.velocity = this.transform.rotation * new Vector3(0, -speed, 0); 
 	}
 	
 	//Don't keep drifting forever

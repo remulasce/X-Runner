@@ -4,7 +4,7 @@ using System.Collections;
 public class L2_Enemy_Script : MonoBehaviour {
 	
 	//Used to know how we should behave.
-	L2_Enemy_Spawner.Wave wave;
+	SpawnTDS.Wave wave;
 	Vector3 offset = new Vector3(0,0,0);
 	
 	//Where we are in our expected lifespan
@@ -21,7 +21,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	float nextFire = 0;
 
     // Reference to player
-    L2_Ship_Script player;    
+    IPlayer player;    
 
     // Detonator
     private Detonator explosion;
@@ -31,7 +31,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 		//This gets called after SetWaveAI, because Unity.
 		lastStateTime = Time.time;
 		nextFire = Time.time + Random.Range(0f, 1f);
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<L2_Ship_Script>();
+        player = (IPlayer)(GameObject.FindGameObjectWithTag("Player").GetComponents(typeof(IPlayer)))[0];
         explosion = this.GetComponentInChildren<Detonator>();
 	}
 	
@@ -40,7 +40,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//	and acta lie it.
 	//Offset is a little offset from the targetPositions, so we don't have
 	//	waves all over each other.
-	public void SetWaveAI(L2_Enemy_Spawner.Wave parent, Vector3 offset)
+	public void SetWaveAI(SpawnTDS.Wave parent, Vector3 offset)
 	{
 		//This actually gets called before Start, apparently.
 		SetLifeState(LifeState.Entry);
@@ -69,7 +69,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	{
 		switch (wave.nb.type)
 		{
-		case L2_Enemy_Spawner.EntryBehavior.T.FlyIn:
+		case SpawnTDS.EntryBehavior.T.FlyIn:
 			target = new Vector3(wave.nb.endPos.x, wave.nb.endPos.y) + offset;
 			if (AtTarget())
 			{
@@ -85,10 +85,10 @@ public class L2_Enemy_Script : MonoBehaviour {
 	{
 		switch (wave.xt.type)
 		{
-		case L2_Enemy_Spawner.ExitTrigger.T.ExitImmediately:
+		case SpawnTDS.ExitTrigger.T.ExitImmediately:
 			SetLifeState (LifeState.Exit);
 			break;
-		case L2_Enemy_Spawner.ExitTrigger.T.ExitAfter:
+		case SpawnTDS.ExitTrigger.T.ExitAfter:
 			if ((Time.time - this.lastStateTime) > wave.xt.exitTime)
 			{
 				SetLifeState(LifeState.Exit);
@@ -101,7 +101,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//This will not check if we're already in the state
 	void SetLifeState(LifeState state)
 	{
-		print ("Changing State: "+state);
+		//print ("Changing State: "+state);
 		this.lastStateTime = Time.time;
 		this.state = state;	
 	}
@@ -121,7 +121,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	//Actually fire whatever thing we have
 	void FireOurWeapon()
 	{
-        if (player.isDead) // Do not fire a laser when the player is dead
+        if (player.IsDead()) // Do not fire a laser when the player is dead
         {
             return;
         }
@@ -129,18 +129,18 @@ public class L2_Enemy_Script : MonoBehaviour {
         
         switch (wave.at.type)
 		{
-		case (L2_Enemy_Spawner.AttackType.T.None):
+		case (SpawnTDS.AttackType.T.None):
 			print ("Wait, what?");
 			break;
-		case (L2_Enemy_Spawner.AttackType.T.LaserDrop):
+		case (SpawnTDS.AttackType.T.LaserDrop):
             //Make an enemy shot
             Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Drop"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));            
 			break;
-		case (L2_Enemy_Spawner.AttackType.T.LaserTarget):
+		case (SpawnTDS.AttackType.T.LaserTarget):
 			//Make an enemy shot
             Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Target"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
 			break;
-		case (L2_Enemy_Spawner.AttackType.T.HomingMissile):
+		case (SpawnTDS.AttackType.T.HomingMissile):
 			//Make an enemy shot
             Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position - new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
 			break;
@@ -153,7 +153,7 @@ public class L2_Enemy_Script : MonoBehaviour {
 	// in waves.
 	void DoShooting()
 	{
-		if (wave.at.type == L2_Enemy_Spawner.AttackType.T.None) { return; }
+		if (wave.at.type == SpawnTDS.AttackType.T.None) { return; }
 		
 		if (Time.time > nextFire)
 		{

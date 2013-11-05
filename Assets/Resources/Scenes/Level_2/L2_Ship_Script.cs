@@ -2,7 +2,7 @@
 using System.Collections;
 
 //Movement and control for the L2 TopDownShooter
-public class L2_Ship_Script : MonoBehaviour
+public class L2_Ship_Script : MonoBehaviour, IPlayer
 {
 
     [System.Serializable]
@@ -69,6 +69,8 @@ public class L2_Ship_Script : MonoBehaviour
     private bool aboutToDoTransition = false;
     private bool isShotDown = false;
 	
+	
+	public bool IsDead() { return isDead; }
 	// Use this for initialization
 	void Start ()
     {        
