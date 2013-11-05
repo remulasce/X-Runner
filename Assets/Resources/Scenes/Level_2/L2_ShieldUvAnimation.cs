@@ -42,7 +42,7 @@ public class L2_ShieldUvAnimation : MonoBehaviour
     {
         if (other.gameObject.CompareTag(tagToCompareFor))
         {
-            if (other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().isNotCinematic)
+            if (other.gameObject.GetComponent<L2_Enemy_Shot_Script>().isNotCinematic)
             {
                 if (other.gameObject.name.Contains("Homing"))
                 {

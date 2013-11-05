@@ -322,7 +322,7 @@ public class L2_Ship_Script : MonoBehaviour
 
     IEnumerator TransitionToL3()
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(4.0f);
         Application.LoadLevel("Level_3_Graybox");
     }
 
@@ -342,16 +342,18 @@ public class L2_Ship_Script : MonoBehaviour
             if (!aboutToDoTransition)
             {                
                 isDead = true;
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
                 this.transform.position = new Vector3(0, 0, 1000);
                 StartCoroutine("Respawn");
             }
             else
-            {                
+            {
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
                 DoTransition();
             }
-
-            explosion.transform.position = this.transform.position;
-            explosion.Explode();
+            
             Destroy(col.gameObject);
         }
 
