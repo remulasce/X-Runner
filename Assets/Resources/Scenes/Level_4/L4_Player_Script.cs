@@ -301,7 +301,7 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 	//Make a shot if we're shooting
 	void doShooting ()
 	{
-		if (Input.GetKey(KeyCode.Space) && Time.time > lastShot + reloadTime) {
+		if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime) {
 			Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 0, 90));
 			lastShot = Time.time;
 		}

@@ -35,5 +35,11 @@ public class L2_Player_Shot_Script : MonoBehaviour {
 		{
 			Destroy(this.gameObject);
 		}
+
+        if (col.gameObject.CompareTag("Trench_Wall"))
+        {
+            Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
+            Object.Destroy(this.gameObject);
+        }        
 	}
 }
