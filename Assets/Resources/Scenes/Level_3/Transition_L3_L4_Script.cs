@@ -15,8 +15,8 @@ public class Transition_L3_L4_Script : MonoBehaviour {
 
     IEnumerator LoadL4()
     {
-        yield return new WaitForSeconds(10.0f);        
-        Application.LoadLevel("Title_Screen");
+        yield return new WaitForSeconds(10.0f);
+        Application.LoadLevel("Level_4_Boss");
     }
 
     IEnumerator StopFollowingShip()

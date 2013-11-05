@@ -18,7 +18,7 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
         base.Update();
         if (!target)
         {
-            if (!player.GetComponent<L2_Ship_Script>().isDead) // Follow the player if it has not been destroyed yet
+            if (!player.GetComponent<L2_Ship_Script>().isDead || !player.GetComponent<L4_Player_Script>().isDead) // Follow the player if it has not been destroyed yet
             {
                 this.transform.LookAt(player.transform.position);
                 this.rigidbody.velocity = this.transform.forward * speed;

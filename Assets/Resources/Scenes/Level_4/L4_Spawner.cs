@@ -447,7 +447,7 @@ public class L4_Spawner : MonoBehaviour {
 			//w.defRot = Quaternion.Euler(0, 0, -90);
 			//And Klingons.
 			w.enemyPrefabPath = "Prefabs/Level_4/L4_Klingon";
-			
+            w.defRot = Quaternion.Euler(new Vector3(0, 0, 180));
 			
             if (!w.hasSpawned)
             {
