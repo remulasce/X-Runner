@@ -226,7 +226,7 @@ public class L4_Spawner : MonoBehaviour {
 	{
 		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
 		ft.type = SpawnTDS.FormationType.T.HorizontalLine;
-		ft.num = num;
+		ft.width = num;
 		return ft;
 	}
 	
