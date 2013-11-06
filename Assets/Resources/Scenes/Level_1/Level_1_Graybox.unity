@@ -5101,7 +5101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 16.5
-  forceValuePostJump: 1e+06
+  forceValuePostJump: 100000
   forceValuePreJump: 50000
   isJumping: 0
   canJump: 1
@@ -5124,7 +5124,7 @@ MonoBehaviour:
   isDead: 0
   spawnTime: 1
   isInvincible: 0
-  invincibleTime: 1
+  invincibleTime: 3
 --- !u!23 &137554355
 Renderer:
   m_ObjectHideFlags: 0
@@ -65568,6 +65568,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: horizontalMovement.movementSpeed
       value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: invincibleTime
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}

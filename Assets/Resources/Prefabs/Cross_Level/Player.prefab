@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 16.5
-  forceValuePostJump: 1e+06
+  forceValuePostJump: 100000
   forceValuePreJump: 50000
   isJumping: 0
   canJump: 1
@@ -135,6 +135,8 @@ MonoBehaviour:
   wallJumpsLeft: 3
   isDead: 0
   spawnTime: 1
+  isInvincible: 0
+  invincibleTime: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
