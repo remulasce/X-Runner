@@ -110,10 +110,10 @@ public class Player_Movement_Script : MonoBehaviour {
 	
 	void DoXVelocity()
 	{
-        if (isDead) // Don't move the player if dead
-        {
-            return;
-        }
+        //if (isDead) // Don't move the player if dead
+        //{
+        //    return;
+        //}
         
         if (!onWall)
         {
@@ -342,9 +342,12 @@ public class Player_Movement_Script : MonoBehaviour {
 	void Update () {
         if (!isActive) {return;}
 
-        DoSideWaysMovement();
-		DoXVelocity();
-		DoJump();
+        if (!isDead)
+        {
+            DoSideWaysMovement();
+            DoXVelocity();
+            DoJump();
+        }
 		CheckDead();
 
         //print(rigidbody.velocity);
