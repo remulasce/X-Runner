@@ -647,6 +647,7 @@ GameObject:
   - 23: {fileID: 26747736}
   - 54: {fileID: 26747735}
   - 114: {fileID: 26747734}
+  - 114: {fileID: 26747739}
   m_Layer: 0
   m_Name: Destructive_Platform_6b
   m_TagString: Terrain
@@ -743,6 +744,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 779968485}
   m_GameObject: {fileID: 26747732}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &26747739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 779968485}
+  m_GameObject: {fileID: 26747732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &26823436
 Prefab:
   m_ObjectHideFlags: 0
@@ -2954,6 +2969,7 @@ GameObject:
   - 23: {fileID: 74410537}
   - 54: {fileID: 74410536}
   - 114: {fileID: 74410535}
+  - 114: {fileID: 74410540}
   m_Layer: 0
   m_Name: Destructive_Platform_5c
   m_TagString: Terrain
@@ -3050,6 +3066,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 490780182}
   m_GameObject: {fileID: 74410533}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &74410540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 490780182}
+  m_GameObject: {fileID: 74410533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &77338286
 Prefab:
   m_ObjectHideFlags: 0
@@ -3939,6 +3969,7 @@ GameObject:
   - 65: {fileID: 91478730}
   - 23: {fileID: 91478729}
   - 54: {fileID: 91478728}
+  - 114: {fileID: 91478732}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -4013,6 +4044,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1189377546}
   m_GameObject: {fileID: 91478726}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &91478732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1189377546}
+  m_GameObject: {fileID: 91478726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &91786495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4690,6 +4735,7 @@ GameObject:
   - 23: {fileID: 103618501}
   - 54: {fileID: 103618500}
   - 114: {fileID: 103618499}
+  - 114: {fileID: 103618504}
   m_Layer: 0
   m_Name: Destructive_Platform_6a
   m_TagString: Terrain
@@ -4786,6 +4832,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 391266777}
   m_GameObject: {fileID: 103618497}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &103618504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 391266777}
+  m_GameObject: {fileID: 103618497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &104466251
 GameObject:
   m_ObjectHideFlags: 0
@@ -4963,6 +5023,7 @@ GameObject:
   - 23: {fileID: 106080812}
   - 54: {fileID: 106080811}
   - 114: {fileID: 106080810}
+  - 114: {fileID: 106080815}
   m_Layer: 0
   m_Name: Destructive_Platform_6b
   m_TagString: Terrain
@@ -5059,6 +5120,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1368208180}
   m_GameObject: {fileID: 106080808}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &106080815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1368208180}
+  m_GameObject: {fileID: 106080808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &107666756
 GameObject:
   m_ObjectHideFlags: 0
@@ -5829,6 +5904,7 @@ GameObject:
   - 23: {fileID: 126995355}
   - 54: {fileID: 126995354}
   - 114: {fileID: 126995353}
+  - 114: {fileID: 126995358}
   m_Layer: 0
   m_Name: Destructible_Platform_4d
   m_TagString: Terrain
@@ -5925,6 +6001,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 803711359}
   m_GameObject: {fileID: 126995351}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &126995358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 803711359}
+  m_GameObject: {fileID: 126995351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &129180014
 Prefab:
   m_ObjectHideFlags: 0
@@ -6725,6 +6815,7 @@ GameObject:
   - 23: {fileID: 150076242}
   - 54: {fileID: 150076241}
   - 114: {fileID: 150076240}
+  - 114: {fileID: 150076245}
   m_Layer: 0
   m_Name: Destructible_Platform_3f
   m_TagString: Terrain
@@ -6821,6 +6912,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1783426832}
   m_GameObject: {fileID: 150076238}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &150076245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783426832}
+  m_GameObject: {fileID: 150076238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &154710732
 GameObject:
   m_ObjectHideFlags: 0
@@ -7167,6 +7272,7 @@ GameObject:
   - 65: {fileID: 164630583}
   - 23: {fileID: 164630582}
   - 54: {fileID: 164630581}
+  - 114: {fileID: 164630585}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -7241,6 +7347,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 849877026}
   m_GameObject: {fileID: 164630579}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &164630585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 849877026}
+  m_GameObject: {fileID: 164630579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &168140005
 Prefab:
   m_ObjectHideFlags: 0
@@ -8622,6 +8742,7 @@ GameObject:
   - 65: {fileID: 228889446}
   - 23: {fileID: 228889445}
   - 54: {fileID: 228889444}
+  - 114: {fileID: 228889448}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -8696,6 +8817,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 357331780}
   m_GameObject: {fileID: 228889442}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &228889448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 357331780}
+  m_GameObject: {fileID: 228889442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &235339176
 Prefab:
   m_ObjectHideFlags: 0
@@ -9562,6 +9697,7 @@ GameObject:
   - 23: {fileID: 268669979}
   - 54: {fileID: 268669978}
   - 114: {fileID: 268669977}
+  - 114: {fileID: 268669982}
   m_Layer: 0
   m_Name: Destructive_Platform_6c
   m_TagString: Terrain
@@ -9658,6 +9794,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1040111676}
   m_GameObject: {fileID: 268669975}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &268669982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1040111676}
+  m_GameObject: {fileID: 268669975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &269867212
 GameObject:
   m_ObjectHideFlags: 0
@@ -12144,7 +12294,7 @@ GameObject:
   - 23: {fileID: 333221760}
   - 114: {fileID: 333221759}
   - 111: {fileID: 333221758}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Shield_Dome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13220,6 +13370,7 @@ GameObject:
   - 23: {fileID: 363548931}
   - 54: {fileID: 363548930}
   - 114: {fileID: 363548929}
+  - 114: {fileID: 363548934}
   m_Layer: 0
   m_Name: Destructive_Platform_5a
   m_TagString: Terrain
@@ -13316,6 +13467,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1512185157}
   m_GameObject: {fileID: 363548927}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &363548934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1512185157}
+  m_GameObject: {fileID: 363548927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &367786373
 GameObject:
   m_ObjectHideFlags: 0
@@ -13329,6 +13494,7 @@ GameObject:
   - 23: {fileID: 367786377}
   - 54: {fileID: 367786376}
   - 114: {fileID: 367786375}
+  - 114: {fileID: 367786380}
   m_Layer: 0
   m_Name: Destructive_Platform_5m
   m_TagString: Terrain
@@ -13425,6 +13591,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 633067811}
   m_GameObject: {fileID: 367786373}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &367786380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 633067811}
+  m_GameObject: {fileID: 367786373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &371424981
 Prefab:
   m_ObjectHideFlags: 0
@@ -13566,6 +13746,7 @@ GameObject:
   - 23: {fileID: 373158049}
   - 54: {fileID: 373158048}
   - 114: {fileID: 373158047}
+  - 114: {fileID: 373158052}
   m_Layer: 0
   m_Name: Destructible_Platform_3g
   m_TagString: Terrain
@@ -13662,6 +13843,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1974566053}
   m_GameObject: {fileID: 373158045}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &373158052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974566053}
+  m_GameObject: {fileID: 373158045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &373754506
 Prefab:
   m_ObjectHideFlags: 0
@@ -14290,6 +14485,7 @@ GameObject:
   - 23: {fileID: 394879498}
   - 54: {fileID: 394879497}
   - 114: {fileID: 394879496}
+  - 114: {fileID: 394879501}
   m_Layer: 0
   m_Name: Destructive_Platform_5q
   m_TagString: Terrain
@@ -14386,6 +14582,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1069774150}
   m_GameObject: {fileID: 394879494}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &394879501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1069774150}
+  m_GameObject: {fileID: 394879494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &396026588
 GameObject:
   m_ObjectHideFlags: 0
@@ -14580,7 +14790,7 @@ GameObject:
   - 23: {fileID: 410078154}
   - 54: {fileID: 410078153}
   - 114: {fileID: 410078152}
-  - 114: {fileID: 410078157}
+  - 114: {fileID: 410078158}
   m_Layer: 0
   m_Name: Hangar_Destructive_Platform
   m_TagString: Terrain
@@ -14677,11 +14887,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1216876624}
   m_GameObject: {fileID: 410078150}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &410078157
+--- !u!114 &410078158
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1216876624}
   m_GameObject: {fileID: 410078150}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -16961,6 +17172,7 @@ GameObject:
   - 23: {fileID: 491703510}
   - 54: {fileID: 491703509}
   - 114: {fileID: 491703508}
+  - 114: {fileID: 491703513}
   m_Layer: 0
   m_Name: Destructive_Platform_6b
   m_TagString: Terrain
@@ -17057,6 +17269,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1581238476}
   m_GameObject: {fileID: 491703506}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &491703513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581238476}
+  m_GameObject: {fileID: 491703506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &492203803
 Prefab:
   m_ObjectHideFlags: 0
@@ -18166,6 +18392,7 @@ GameObject:
   - 23: {fileID: 523456796}
   - 54: {fileID: 523456795}
   - 114: {fileID: 523456794}
+  - 114: {fileID: 523456799}
   m_Layer: 0
   m_Name: Destructive_Platform_5i
   m_TagString: Terrain
@@ -18262,6 +18489,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 509038828}
   m_GameObject: {fileID: 523456792}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &523456799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 509038828}
+  m_GameObject: {fileID: 523456792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &526409389
 Prefab:
   m_ObjectHideFlags: 0
@@ -18469,6 +18710,7 @@ GameObject:
   - 65: {fileID: 527898424}
   - 23: {fileID: 527898423}
   - 54: {fileID: 527898422}
+  - 114: {fileID: 527898426}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -18543,6 +18785,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2089374400}
   m_GameObject: {fileID: 527898420}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &527898426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 2089374400}
+  m_GameObject: {fileID: 527898420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &534734406
 GameObject:
   m_ObjectHideFlags: 0
@@ -19096,6 +19352,7 @@ GameObject:
   - 23: {fileID: 559051683}
   - 54: {fileID: 559051682}
   - 114: {fileID: 559051681}
+  - 114: {fileID: 559051686}
   m_Layer: 0
   m_Name: Destructive_Platform_5h
   m_TagString: Terrain
@@ -19192,6 +19449,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1970859294}
   m_GameObject: {fileID: 559051679}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &559051686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1970859294}
+  m_GameObject: {fileID: 559051679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &562175811
 GameObject:
   m_ObjectHideFlags: 0
@@ -19205,6 +19476,7 @@ GameObject:
   - 23: {fileID: 562175815}
   - 54: {fileID: 562175814}
   - 114: {fileID: 562175813}
+  - 114: {fileID: 562175818}
   m_Layer: 0
   m_Name: Destructive_Platform_5r
   m_TagString: Terrain
@@ -19301,6 +19573,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1330844825}
   m_GameObject: {fileID: 562175811}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &562175818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1330844825}
+  m_GameObject: {fileID: 562175811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &565233374
 GameObject:
   m_ObjectHideFlags: 0
@@ -20506,6 +20792,7 @@ GameObject:
   - 23: {fileID: 625560755}
   - 54: {fileID: 625560754}
   - 114: {fileID: 625560753}
+  - 114: {fileID: 625560758}
   m_Layer: 0
   m_Name: Destructible_Platform_3e
   m_TagString: Terrain
@@ -20602,6 +20889,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1971767062}
   m_GameObject: {fileID: 625560751}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &625560758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1971767062}
+  m_GameObject: {fileID: 625560751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &626472868
 GameObject:
   m_ObjectHideFlags: 0
@@ -21693,6 +21994,7 @@ GameObject:
   - 65: {fileID: 685456283}
   - 23: {fileID: 685456282}
   - 54: {fileID: 685456281}
+  - 114: {fileID: 685456286}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -21767,6 +22069,20 @@ Transform:
   m_LocalScale: {x: 30.9099998, y: 4, z: 10}
   m_Children: []
   m_Father: {fileID: 1006293852}
+--- !u!114 &685456286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 901016626}
+  m_GameObject: {fileID: 685456280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &688972126
 Prefab:
   m_ObjectHideFlags: 0
@@ -22593,6 +22909,7 @@ GameObject:
   - 23: {fileID: 714716561}
   - 54: {fileID: 714716560}
   - 114: {fileID: 714716559}
+  - 114: {fileID: 714716564}
   m_Layer: 0
   m_Name: HW_Destructible_Platform_Bottom
   m_TagString: Terrain
@@ -22689,6 +23006,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1234468244}
   m_GameObject: {fileID: 714716557}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &714716564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1234468244}
+  m_GameObject: {fileID: 714716557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &714804605
 Prefab:
   m_ObjectHideFlags: 0
@@ -23212,6 +23543,7 @@ GameObject:
   - 23: {fileID: 729555776}
   - 54: {fileID: 729555775}
   - 114: {fileID: 729555774}
+  - 114: {fileID: 729555779}
   m_Layer: 0
   m_Name: Destructive_Platform_6b
   m_TagString: Terrain
@@ -23308,6 +23640,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 452537857}
   m_GameObject: {fileID: 729555772}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &729555779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 452537857}
+  m_GameObject: {fileID: 729555772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &730135285
 Prefab:
   m_ObjectHideFlags: 0
@@ -23385,6 +23731,7 @@ GameObject:
   - 23: {fileID: 736356317}
   - 54: {fileID: 736356316}
   - 114: {fileID: 736356315}
+  - 114: {fileID: 736356320}
   m_Layer: 0
   m_Name: Destructive_Platform_5p
   m_TagString: Terrain
@@ -23481,6 +23828,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1698150816}
   m_GameObject: {fileID: 736356313}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &736356320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1698150816}
+  m_GameObject: {fileID: 736356313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &736707597
 Prefab:
   m_ObjectHideFlags: 0
@@ -24373,9 +24734,9 @@ Transform:
   m_LocalPosition: {x: 185.949402, y: 22.7378483, z: 1.70380402}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1435930267}
   - {fileID: 527898421}
   - {fileID: 1479037389}
+  - {fileID: 1435930267}
   m_Father: {fileID: 0}
 --- !u!1001 &773140781
 Prefab:
@@ -24797,6 +25158,7 @@ GameObject:
   - 65: {fileID: 784525321}
   - 23: {fileID: 784525320}
   - 54: {fileID: 784525319}
+  - 114: {fileID: 784525324}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -24871,6 +25233,20 @@ Transform:
   m_LocalScale: {x: 74.8000107, y: 11, z: 10}
   m_Children: []
   m_Father: {fileID: 1163413780}
+--- !u!114 &784525324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1199894153}
+  m_GameObject: {fileID: 784525318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &785727506
 Prefab:
   m_ObjectHideFlags: 0
@@ -26024,6 +26400,7 @@ GameObject:
   - 23: {fileID: 810345918}
   - 54: {fileID: 810345917}
   - 114: {fileID: 810345922}
+  - 114: {fileID: 810345923}
   m_Layer: 0
   m_Name: Destructible_Platform_0
   m_TagString: Terrain
@@ -26120,6 +26497,20 @@ MonoBehaviour:
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
   detonatorOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &810345923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 277272283}
+  m_GameObject: {fileID: 810345916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &810531845
 Prefab:
   m_ObjectHideFlags: 0
@@ -27597,6 +27988,7 @@ GameObject:
   - 23: {fileID: 842715483}
   - 54: {fileID: 842715482}
   - 114: {fileID: 842715481}
+  - 114: {fileID: 842715486}
   m_Layer: 0
   m_Name: Destructible_Platform_3h
   m_TagString: Terrain
@@ -27693,6 +28085,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1307503555}
   m_GameObject: {fileID: 842715479}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &842715486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1307503555}
+  m_GameObject: {fileID: 842715479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &849877026
 Prefab:
   m_ObjectHideFlags: 0
@@ -28627,6 +29033,7 @@ GameObject:
   - 23: {fileID: 884926382}
   - 54: {fileID: 884926381}
   - 114: {fileID: 884926380}
+  - 114: {fileID: 884926385}
   m_Layer: 0
   m_Name: Destructive_Platform_5j
   m_TagString: Terrain
@@ -28723,6 +29130,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 729137740}
   m_GameObject: {fileID: 884926378}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &884926385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 729137740}
+  m_GameObject: {fileID: 884926378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &885317625
 GameObject:
   m_ObjectHideFlags: 0
@@ -29409,6 +29830,7 @@ GameObject:
   - 65: {fileID: 899388914}
   - 23: {fileID: 899388913}
   - 54: {fileID: 899388912}
+  - 114: {fileID: 899388916}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -29483,6 +29905,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2019654083}
   m_GameObject: {fileID: 899388910}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &899388916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 2019654083}
+  m_GameObject: {fileID: 899388910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &901016626
 Prefab:
   m_ObjectHideFlags: 0
@@ -30829,6 +31265,7 @@ GameObject:
   - 23: {fileID: 929223321}
   - 54: {fileID: 929223320}
   - 114: {fileID: 929223319}
+  - 114: {fileID: 929223324}
   m_Layer: 0
   m_Name: Destructible_Platform_1
   m_TagString: Terrain
@@ -30925,6 +31362,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1595930887}
   m_GameObject: {fileID: 929223317}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &929223324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1595930887}
+  m_GameObject: {fileID: 929223317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &931065035
 Prefab:
   m_ObjectHideFlags: 0
@@ -31576,6 +32027,7 @@ GameObject:
   - 23: {fileID: 951309024}
   - 54: {fileID: 951309023}
   - 114: {fileID: 951309022}
+  - 114: {fileID: 951309027}
   m_Layer: 0
   m_Name: Destructive_Platform_6c
   m_TagString: Terrain
@@ -31672,6 +32124,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 898119302}
   m_GameObject: {fileID: 951309020}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &951309027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 898119302}
+  m_GameObject: {fileID: 951309020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &951430901
 GameObject:
   m_ObjectHideFlags: 0
@@ -31942,6 +32408,7 @@ GameObject:
   - 23: {fileID: 960135593}
   - 54: {fileID: 960135592}
   - 114: {fileID: 960135591}
+  - 114: {fileID: 960135596}
   m_Layer: 0
   m_Name: Destructive_Platform_5d
   m_TagString: Terrain
@@ -32038,6 +32505,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 281408497}
   m_GameObject: {fileID: 960135589}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &960135596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 281408497}
+  m_GameObject: {fileID: 960135589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &967894905
 GameObject:
   m_ObjectHideFlags: 0
@@ -32051,6 +32532,7 @@ GameObject:
   - 23: {fileID: 967894909}
   - 54: {fileID: 967894908}
   - 114: {fileID: 967894907}
+  - 114: {fileID: 967894912}
   m_Layer: 0
   m_Name: Destructible_Platform_4a
   m_TagString: Terrain
@@ -32147,6 +32629,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2002108531}
   m_GameObject: {fileID: 967894905}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &967894912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2002108531}
+  m_GameObject: {fileID: 967894905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &973629062
 GameObject:
   m_ObjectHideFlags: 0
@@ -32322,6 +32818,8 @@ GameObject:
   - 33: {fileID: 981884006}
   - 23: {fileID: 981884004}
   - 114: {fileID: 981884003}
+  - 135: {fileID: 981884010}
+  - 111: {fileID: 981884009}
   - 65: {fileID: 981884005}
   - 54: {fileID: 981884008}
   m_Layer: 10
@@ -32343,20 +32841,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7e7b7a4b274f2439c108e1819e594d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadTime: .300000012
+  reloadTime: .125
   boundaryData:
     lowerHorizontalRange: .0350000001
     upperHorizontalRange: .964999974
     lowerVerticalRange: .0399999991
     upperVerticalRange: .959999979
   movement:
-    maxSpeed: 12
-    acceleration: 2500
-    startupBoost: 750
-    startupCutoff: 750
-    frictionConstant: 100
+    maxSpeed: 15
+    acceleration: 3500
+    startupBoost: 4000
+    startupCutoff: 4000
+    frictionConstant: 10
   spawnTime: 1
-  shieldTime: 1000
+  shieldTime: 3
   explosion: {fileID: 0}
   stats: {fileID: 0}
   isDead: 0
@@ -32410,6 +32908,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 333221763}
+  - {fileID: 1158630631}
   m_Father: {fileID: 427022449}
 --- !u!54 &981884008
 Rigidbody:
@@ -32426,6 +32925,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!111 &981884009
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11100002, guid: f44d82d9268cadf499aec0010dfb2390,
+    type: 2}
+  m_PrefabInternal: {fileID: 2097193614}
+  m_GameObject: {fileID: 981884002}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: af8c84c32474fed47900df46c6e83a70, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: af8c84c32474fed47900df46c6e83a70, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+--- !u!135 &981884010
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500002, guid: f44d82d9268cadf499aec0010dfb2390,
+    type: 2}
+  m_PrefabInternal: {fileID: 2097193614}
+  m_GameObject: {fileID: 981884002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &984696301
 Prefab:
   m_ObjectHideFlags: 0
@@ -32567,6 +33098,7 @@ GameObject:
   - 23: {fileID: 994934971}
   - 54: {fileID: 994934970}
   - 114: {fileID: 994934969}
+  - 114: {fileID: 994934974}
   m_Layer: 0
   m_Name: Destructive_Platform_5n
   m_TagString: Terrain
@@ -32663,6 +33195,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 24573198}
   m_GameObject: {fileID: 994934967}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &994934974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 24573198}
+  m_GameObject: {fileID: 994934967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &995671070
 Prefab:
   m_ObjectHideFlags: 0
@@ -32724,6 +33270,7 @@ GameObject:
   - 23: {fileID: 995680646}
   - 54: {fileID: 995680645}
   - 114: {fileID: 995680644}
+  - 114: {fileID: 995680649}
   m_Layer: 0
   m_Name: Destructive_Platform_6c
   m_TagString: Terrain
@@ -32820,6 +33367,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 388975624}
   m_GameObject: {fileID: 995680642}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &995680649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 388975624}
+  m_GameObject: {fileID: 995680642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &998464979
 GameObject:
   m_ObjectHideFlags: 0
@@ -32933,6 +33494,7 @@ GameObject:
   - 23: {fileID: 1003342921}
   - 54: {fileID: 1003342920}
   - 114: {fileID: 1003342919}
+  - 114: {fileID: 1003342924}
   m_Layer: 0
   m_Name: Destructive_Platform_6c
   m_TagString: Terrain
@@ -33029,6 +33591,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 192792971}
   m_GameObject: {fileID: 1003342917}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1003342924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 192792971}
+  m_GameObject: {fileID: 1003342917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1003799366
 Prefab:
   m_ObjectHideFlags: 0
@@ -33924,6 +34500,7 @@ GameObject:
   - 23: {fileID: 1031654012}
   - 54: {fileID: 1031654011}
   - 114: {fileID: 1031654010}
+  - 114: {fileID: 1031654015}
   m_Layer: 0
   m_Name: Destructive_Platform_5g
   m_TagString: Terrain
@@ -34020,6 +34597,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 57794336}
   m_GameObject: {fileID: 1031654008}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1031654015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 57794336}
+  m_GameObject: {fileID: 1031654008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1033707845
 GameObject:
   m_ObjectHideFlags: 0
@@ -35396,6 +35987,7 @@ GameObject:
   - 23: {fileID: 1062619021}
   - 54: {fileID: 1062619020}
   - 114: {fileID: 1062619019}
+  - 114: {fileID: 1062619024}
   m_Layer: 0
   m_Name: Destructive_Platform_6b
   m_TagString: Terrain
@@ -35492,6 +36084,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1521840298}
   m_GameObject: {fileID: 1062619017}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1062619024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1521840298}
+  m_GameObject: {fileID: 1062619017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1064685548
 GameObject:
   m_ObjectHideFlags: 0
@@ -35505,6 +36111,7 @@ GameObject:
   - 23: {fileID: 1064685552}
   - 54: {fileID: 1064685551}
   - 114: {fileID: 1064685550}
+  - 114: {fileID: 1064685555}
   m_Layer: 0
   m_Name: Destructive_Platform_6a
   m_TagString: Terrain
@@ -35601,6 +36208,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1149828116}
   m_GameObject: {fileID: 1064685548}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1064685555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1149828116}
+  m_GameObject: {fileID: 1064685548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1066038670
 Prefab:
   m_ObjectHideFlags: 0
@@ -36517,6 +37138,7 @@ GameObject:
   - 65: {fileID: 1086243272}
   - 23: {fileID: 1086243271}
   - 54: {fileID: 1086243270}
+  - 114: {fileID: 1086243274}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -36591,6 +37213,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1821025948}
   m_GameObject: {fileID: 1086243268}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1086243274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1821025948}
+  m_GameObject: {fileID: 1086243268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1086618693
 GameObject:
   m_ObjectHideFlags: 0
@@ -36757,6 +37393,7 @@ GameObject:
   - 23: {fileID: 1089019810}
   - 54: {fileID: 1089019809}
   - 114: {fileID: 1089019808}
+  - 114: {fileID: 1089019813}
   m_Layer: 0
   m_Name: Destructive_Platform_5o
   m_TagString: Terrain
@@ -36853,6 +37490,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1456919697}
   m_GameObject: {fileID: 1089019806}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1089019813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1456919697}
+  m_GameObject: {fileID: 1089019806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1090784729
 Prefab:
   m_ObjectHideFlags: 0
@@ -38452,6 +39103,136 @@ Prefab:
   m_RootGameObject: {fileID: 327808772}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1158630626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+  m_PrefabInternal: {fileID: 2097193614}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1158630631}
+  - 15: {fileID: 1158630630}
+  - 12: {fileID: 1158630629}
+  - 26: {fileID: 1158630628}
+  - 114: {fileID: 1158630627}
+  m_Layer: 0
+  m_Name: Smoke Trail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1158630627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f44d82d9268cadf499aec0010dfb2390,
+    type: 2}
+  m_PrefabInternal: {fileID: 2097193614}
+  m_GameObject: {fileID: 1158630626}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528d501713cdf9047933c54a317b8ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!26 &1158630628
+ParticleRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2600000, guid: f44d82d9268cadf499aec0010dfb2390,
+    type: 2}
+  m_PrefabInternal: {fileID: 2097193614}
+  m_GameObject: {fileID: 1158630626}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 74f4a47fc3b034e2d963491f4e514174, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  serializedVersion: 2
+  m_CameraVelocityScale: 0
+  m_StretchParticles: 0
+  m_LengthScale: 0
+  m_VelocityScale: 0
+  m_MaxParticleSize: .788849711
+  UV Animation:
+    x Tile: 1
+    y Tile: 1
+    cycles: 1
+--- !u!12 &1158630629
+ParticleAnimator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1200000, guid: f44d82d9268cadf499aec0010dfb2390,
+    type: 2}
+  m_PrefabInternal: {fileID: 2097193614}
+  m_GameObject: {fileID: 1158630626}
+  Does Animate Color?: 1
+  colorAnimation[0]:
+    serializedVersion: 2
+    rgba: 2323711
+  colorAnimation[1]:
+    serializedVersion: 2
+    rgba: 2789425987
+  colorAnimation[2]:
+    serializedVersion: 2
+    rgba: 2051228483
+  colorAnimation[3]:
+    serializedVersion: 2
+    rgba: 1413167931
+  colorAnimation[4]:
+    serializedVersion: 2
+    rgba: 2960685
+  worldRotationAxis: {x: 0, y: 0, z: 0}
+  localRotationAxis: {x: 0, y: 0, z: 0}
+  sizeGrow: .889508128
+  rndForce: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 0}
+  damping: 1
+  stopSimulation: 0
+  autodestruct: 0
+--- !u!15 &1158630630
+EllipsoidParticleEmitter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1500000, guid: f44d82d9268cadf499aec0010dfb2390,
+    type: 2}
+  m_PrefabInternal: {fileID: 2097193614}
+  m_GameObject: {fileID: 1158630626}
+  serializedVersion: 2
+  m_Enabled: 1
+  m_Emit: 0
+  minSize: 1
+  maxSize: 1
+  minEnergy: 2
+  maxEnergy: 2
+  minEmission: 60
+  maxEmission: 60
+  worldVelocity: {x: 0, y: 0, z: 0}
+  localVelocity: {x: 0, y: 0, z: 0}
+  rndVelocity: {x: 0, y: 0, z: 0}
+  emitterVelocityScale: 0
+  tangentVelocity: {x: 0, y: 0, z: 0}
+  angularVelocity: 0
+  rndAngularVelocity: 0
+  rndRotation: 1
+  Simulate in Worldspace?: 1
+  m_OneShot: 0
+  m_Ellipsoid: {x: 0, y: 0, z: 0}
+  m_MinEmitterRange: 0
+--- !u!4 &1158630631
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+  m_PrefabInternal: {fileID: 2097193614}
+  m_GameObject: {fileID: 1158630626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.1460648, y: 6.88998127, z: 0}
+  m_LocalScale: {x: .300000012, y: .300000012, z: .200000003}
+  m_Children: []
+  m_Father: {fileID: 981884007}
 --- !u!1 &1161018114
 GameObject:
   m_ObjectHideFlags: 0
@@ -38534,8 +39315,8 @@ Transform:
   m_LocalPosition: {x: 59.378727, y: 46.4624786, z: -2.91640854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 164630580}
   - {fileID: 784525323}
+  - {fileID: 164630580}
   - {fileID: 1086243269}
   m_Father: {fileID: 0}
 --- !u!1001 &1164794701
@@ -40984,6 +41765,7 @@ GameObject:
   - 65: {fileID: 1233885785}
   - 23: {fileID: 1233885784}
   - 54: {fileID: 1233885783}
+  - 114: {fileID: 1233885787}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -41058,6 +41840,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1306490563}
   m_GameObject: {fileID: 1233885781}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1233885787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1306490563}
+  m_GameObject: {fileID: 1233885781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1234017452
 GameObject:
   m_ObjectHideFlags: 0
@@ -41365,6 +42161,7 @@ GameObject:
   - 65: {fileID: 1239989933}
   - 23: {fileID: 1239989932}
   - 54: {fileID: 1239989931}
+  - 114: {fileID: 1239989935}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -41439,6 +42236,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1608372380}
   m_GameObject: {fileID: 1239989929}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1239989935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1608372380}
+  m_GameObject: {fileID: 1239989929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1242624402
 Prefab:
   m_ObjectHideFlags: 0
@@ -42619,6 +43430,7 @@ GameObject:
   - 23: {fileID: 1295699896}
   - 54: {fileID: 1295699895}
   - 114: {fileID: 1295699894}
+  - 114: {fileID: 1295699899}
   m_Layer: 0
   m_Name: Destructive_Platform_5b
   m_TagString: Terrain
@@ -42715,6 +43527,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 51964180}
   m_GameObject: {fileID: 1295699892}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1295699899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 51964180}
+  m_GameObject: {fileID: 1295699892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1298103261
 Prefab:
   m_ObjectHideFlags: 0
@@ -46267,6 +47093,7 @@ GameObject:
   - 23: {fileID: 1357529419}
   - 54: {fileID: 1357529418}
   - 114: {fileID: 1357529417}
+  - 114: {fileID: 1357529422}
   m_Layer: 0
   m_Name: Destructive_Platform_5l
   m_TagString: Terrain
@@ -46363,6 +47190,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2098826893}
   m_GameObject: {fileID: 1357529415}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1357529422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2098826893}
+  m_GameObject: {fileID: 1357529415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1361333614
 GameObject:
   m_ObjectHideFlags: 0
@@ -46376,6 +47217,7 @@ GameObject:
   - 23: {fileID: 1361333618}
   - 54: {fileID: 1361333617}
   - 114: {fileID: 1361333616}
+  - 114: {fileID: 1361333621}
   m_Layer: 0
   m_Name: Destructive_Platform_5k
   m_TagString: Terrain
@@ -46472,6 +47314,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1550144338}
   m_GameObject: {fileID: 1361333614}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1361333621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1550144338}
+  m_GameObject: {fileID: 1361333614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1362545101
 Prefab:
   m_ObjectHideFlags: 0
@@ -46968,6 +47824,7 @@ GameObject:
   - 65: {fileID: 1381477106}
   - 23: {fileID: 1381477105}
   - 54: {fileID: 1381477104}
+  - 114: {fileID: 1381477108}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -47042,6 +47899,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 863070610}
   m_GameObject: {fileID: 1381477102}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1381477108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 863070610}
+  m_GameObject: {fileID: 1381477102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1383788761
 GameObject:
   m_ObjectHideFlags: 0
@@ -47811,6 +48682,7 @@ GameObject:
   - 23: {fileID: 1412873360}
   - 54: {fileID: 1412873359}
   - 114: {fileID: 1412873358}
+  - 114: {fileID: 1412873363}
   m_Layer: 0
   m_Name: Destructive_Platform_6c
   m_TagString: Terrain
@@ -47907,6 +48779,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1487561523}
   m_GameObject: {fileID: 1412873356}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1412873363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1487561523}
+  m_GameObject: {fileID: 1412873356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1415521075
 GameObject:
   m_ObjectHideFlags: 0
@@ -47919,6 +48805,7 @@ GameObject:
   - 65: {fileID: 1415521079}
   - 23: {fileID: 1415521078}
   - 54: {fileID: 1415521077}
+  - 114: {fileID: 1415521081}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -47993,6 +48880,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 873899026}
   m_GameObject: {fileID: 1415521075}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1415521081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 873899026}
+  m_GameObject: {fileID: 1415521075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1416703089
 Prefab:
   m_ObjectHideFlags: 0
@@ -48669,6 +49570,7 @@ GameObject:
   - 65: {fileID: 1435930270}
   - 23: {fileID: 1435930269}
   - 54: {fileID: 1435930268}
+  - 114: {fileID: 1435930272}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -48743,6 +49645,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1228834148}
   m_GameObject: {fileID: 1435930266}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1435930272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1228834148}
+  m_GameObject: {fileID: 1435930266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1436980873
 Prefab:
   m_ObjectHideFlags: 0
@@ -48984,6 +49900,7 @@ GameObject:
   - 23: {fileID: 1447802169}
   - 54: {fileID: 1447802168}
   - 114: {fileID: 1447802167}
+  - 114: {fileID: 1447802172}
   m_Layer: 0
   m_Name: Destructive_Platform_6d
   m_TagString: Terrain
@@ -49080,6 +49997,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1585199889}
   m_GameObject: {fileID: 1447802165}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1447802172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1585199889}
+  m_GameObject: {fileID: 1447802165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1453936419
 GameObject:
   m_ObjectHideFlags: 0
@@ -49497,6 +50428,7 @@ GameObject:
   - 23: {fileID: 1465400949}
   - 54: {fileID: 1465400948}
   - 114: {fileID: 1465400947}
+  - 114: {fileID: 1465400952}
   m_Layer: 0
   m_Name: Destructible_Platform_3c
   m_TagString: Terrain
@@ -49593,6 +50525,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1621032768}
   m_GameObject: {fileID: 1465400945}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1465400952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1621032768}
+  m_GameObject: {fileID: 1465400945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1471695190
 GameObject:
   m_ObjectHideFlags: 0
@@ -49901,6 +50847,7 @@ GameObject:
   - 65: {fileID: 1479037392}
   - 23: {fileID: 1479037391}
   - 54: {fileID: 1479037390}
+  - 114: {fileID: 1479037394}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -49975,6 +50922,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2116944725}
   m_GameObject: {fileID: 1479037388}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1479037394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 2116944725}
+  m_GameObject: {fileID: 1479037388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1479111781
 GameObject:
   m_ObjectHideFlags: 0
@@ -51011,6 +51972,7 @@ GameObject:
   - 65: {fileID: 1526576699}
   - 23: {fileID: 1526576698}
   - 54: {fileID: 1526576697}
+  - 114: {fileID: 1526576701}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -51085,6 +52047,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1475508958}
   m_GameObject: {fileID: 1526576695}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1526576701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1475508958}
+  m_GameObject: {fileID: 1526576695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1526634995
 Prefab:
   m_ObjectHideFlags: 0
@@ -51326,6 +52302,7 @@ GameObject:
   - 23: {fileID: 1533233403}
   - 54: {fileID: 1533233402}
   - 114: {fileID: 1533233401}
+  - 114: {fileID: 1533233406}
   m_Layer: 0
   m_Name: Destructible_Platform_3d
   m_TagString: Terrain
@@ -51422,6 +52399,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 349191507}
   m_GameObject: {fileID: 1533233399}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1533233406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 349191507}
+  m_GameObject: {fileID: 1533233399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1533302929
 Prefab:
   m_ObjectHideFlags: 0
@@ -51855,6 +52846,7 @@ GameObject:
   - 23: {fileID: 1548739426}
   - 54: {fileID: 1548739425}
   - 114: {fileID: 1548739424}
+  - 114: {fileID: 1548739429}
   m_Layer: 0
   m_Name: Destructible_Platform_3b
   m_TagString: Terrain
@@ -51951,6 +52943,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 777678073}
   m_GameObject: {fileID: 1548739422}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1548739429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 777678073}
+  m_GameObject: {fileID: 1548739422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1549163743
 Prefab:
   m_ObjectHideFlags: 0
@@ -52260,6 +53266,7 @@ GameObject:
   - 23: {fileID: 1552687581}
   - 54: {fileID: 1552687580}
   - 114: {fileID: 1552687579}
+  - 114: {fileID: 1552687584}
   m_Layer: 0
   m_Name: HW_Destructible_Platform_Side
   m_TagString: Terrain
@@ -52356,6 +53363,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1334109531}
   m_GameObject: {fileID: 1552687577}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1552687584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1334109531}
+  m_GameObject: {fileID: 1552687577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1555842172
 GameObject:
   m_ObjectHideFlags: 0
@@ -52976,39 +53997,39 @@ Transform:
   - {fileID: 562175812}
   - {fileID: 1639370802}
   - {fileID: 1897953480}
+  - {fileID: 1064685549}
   - {fileID: 103618498}
   - {fileID: 1621830968}
-  - {fileID: 1064685549}
   - {fileID: 1992548711}
+  - {fileID: 1062619018}
   - {fileID: 729555773}
   - {fileID: 26747733}
-  - {fileID: 106080809}
-  - {fileID: 1062619018}
   - {fileID: 491703507}
-  - {fileID: 1634101769}
-  - {fileID: 1003342918}
-  - {fileID: 995680643}
-  - {fileID: 951309021}
-  - {fileID: 268669976}
+  - {fileID: 106080809}
   - {fileID: 1412873357}
-  - {fileID: 2132040125}
-  - {fileID: 1995982423}
+  - {fileID: 268669976}
+  - {fileID: 995680643}
+  - {fileID: 1634101769}
+  - {fileID: 951309021}
+  - {fileID: 1003342918}
   - {fileID: 1933301985}
+  - {fileID: 2132040125}
   - {fileID: 1779407117}
   - {fileID: 1447802166}
+  - {fileID: 1995982423}
+  - {fileID: 1662485240}
+  - {fileID: 2068490526}
   - {fileID: 1697328036}
   - {fileID: 2127884279}
-  - {fileID: 1662485240}
   - {fileID: 2065267016}
-  - {fileID: 2068490526}
-  - {fileID: 1930038772}
-  - {fileID: 228889443}
-  - {fileID: 1381477103}
-  - {fileID: 91478727}
-  - {fileID: 1233885782}
-  - {fileID: 1526576696}
-  - {fileID: 1239989930}
   - {fileID: 899388911}
+  - {fileID: 91478727}
+  - {fileID: 1239989930}
+  - {fileID: 1381477103}
+  - {fileID: 228889443}
+  - {fileID: 1526576696}
+  - {fileID: 1233885782}
+  - {fileID: 1930038772}
   - {fileID: 714716558}
   - {fileID: 1552687578}
   - {fileID: 1605324232}
@@ -54439,6 +55460,7 @@ GameObject:
   - 23: {fileID: 1603359219}
   - 54: {fileID: 1603359218}
   - 114: {fileID: 1603359217}
+  - 114: {fileID: 1603359222}
   m_Layer: 0
   m_Name: Destructive_Platform_5f
   m_TagString: Terrain
@@ -54535,6 +55557,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 101911200}
   m_GameObject: {fileID: 1603359215}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1603359222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 101911200}
+  m_GameObject: {fileID: 1603359215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1605145774
 Prefab:
   m_ObjectHideFlags: 0
@@ -54612,6 +55648,7 @@ GameObject:
   - 23: {fileID: 1605324235}
   - 54: {fileID: 1605324234}
   - 114: {fileID: 1605324233}
+  - 114: {fileID: 1605324238}
   m_Layer: 0
   m_Name: HW_Destructible_Platform_Top
   m_TagString: Terrain
@@ -54708,6 +55745,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2115624085}
   m_GameObject: {fileID: 1605324231}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1605324238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2115624085}
+  m_GameObject: {fileID: 1605324231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1608343427
 GameObject:
   m_ObjectHideFlags: 0
@@ -55027,6 +56078,7 @@ GameObject:
   - 23: {fileID: 1614800217}
   - 54: {fileID: 1614800216}
   - 114: {fileID: 1614800215}
+  - 114: {fileID: 1614800220}
   m_Layer: 0
   m_Name: Destructible_Platform_4e
   m_TagString: Terrain
@@ -55123,6 +56175,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 315039917}
   m_GameObject: {fileID: 1614800213}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1614800220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 315039917}
+  m_GameObject: {fileID: 1614800213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1615709399
 Prefab:
   m_ObjectHideFlags: 0
@@ -55360,6 +56426,7 @@ GameObject:
   - 23: {fileID: 1621830971}
   - 54: {fileID: 1621830970}
   - 114: {fileID: 1621830969}
+  - 114: {fileID: 1621830974}
   m_Layer: 0
   m_Name: Destructive_Platform_6a
   m_TagString: Terrain
@@ -55456,6 +56523,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 805225345}
   m_GameObject: {fileID: 1621830967}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1621830974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 805225345}
+  m_GameObject: {fileID: 1621830967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1631396824
 Prefab:
   m_ObjectHideFlags: 0
@@ -55569,6 +56650,7 @@ GameObject:
   - 23: {fileID: 1634101772}
   - 54: {fileID: 1634101771}
   - 114: {fileID: 1634101770}
+  - 114: {fileID: 1634101775}
   m_Layer: 0
   m_Name: Destructive_Platform_6c
   m_TagString: Terrain
@@ -55665,6 +56747,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 169029734}
   m_GameObject: {fileID: 1634101768}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1634101775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 169029734}
+  m_GameObject: {fileID: 1634101768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1634508781
 Prefab:
   m_ObjectHideFlags: 0
@@ -55955,6 +57051,7 @@ GameObject:
   - 23: {fileID: 1639370805}
   - 54: {fileID: 1639370804}
   - 114: {fileID: 1639370803}
+  - 114: {fileID: 1639370808}
   m_Layer: 0
   m_Name: Destructive_Platform_5s
   m_TagString: Terrain
@@ -56051,6 +57148,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1330611124}
   m_GameObject: {fileID: 1639370801}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1639370808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1330611124}
+  m_GameObject: {fileID: 1639370801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1645002241
 GameObject:
   m_ObjectHideFlags: 0
@@ -56428,6 +57539,7 @@ GameObject:
   - 23: {fileID: 1657889335}
   - 54: {fileID: 1657889334}
   - 114: {fileID: 1657889333}
+  - 114: {fileID: 1657889338}
   m_Layer: 0
   m_Name: Destructible_Platform_4f
   m_TagString: Terrain
@@ -56524,6 +57636,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1972994069}
   m_GameObject: {fileID: 1657889331}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1657889338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1972994069}
+  m_GameObject: {fileID: 1657889331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1658820612
 GameObject:
   m_ObjectHideFlags: 0
@@ -56731,6 +57857,7 @@ GameObject:
   - 23: {fileID: 1662485243}
   - 54: {fileID: 1662485242}
   - 114: {fileID: 1662485241}
+  - 114: {fileID: 1662485246}
   m_Layer: 0
   m_Name: Destructive_Platform_6e
   m_TagString: Terrain
@@ -56827,6 +57954,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1355352488}
   m_GameObject: {fileID: 1662485239}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1662485246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1355352488}
+  m_GameObject: {fileID: 1662485239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1678547096
 GameObject:
   m_ObjectHideFlags: 0
@@ -57508,6 +58649,7 @@ GameObject:
   - 23: {fileID: 1697328039}
   - 54: {fileID: 1697328038}
   - 114: {fileID: 1697328037}
+  - 114: {fileID: 1697328042}
   m_Layer: 0
   m_Name: Destructive_Platform_6e
   m_TagString: Terrain
@@ -57604,6 +58746,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 334652463}
   m_GameObject: {fileID: 1697328035}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1697328042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 334652463}
+  m_GameObject: {fileID: 1697328035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1698150816
 Prefab:
   m_ObjectHideFlags: 0
@@ -59618,6 +60774,7 @@ GameObject:
   - 23: {fileID: 1779407120}
   - 54: {fileID: 1779407119}
   - 114: {fileID: 1779407118}
+  - 114: {fileID: 1779407123}
   m_Layer: 0
   m_Name: Destructive_Platform_6d
   m_TagString: Terrain
@@ -59714,6 +60871,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1008185093}
   m_GameObject: {fileID: 1779407116}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1779407123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1008185093}
+  m_GameObject: {fileID: 1779407116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1779877781
 Prefab:
   m_ObjectHideFlags: 0
@@ -63514,6 +64685,7 @@ GameObject:
   - 23: {fileID: 1897953483}
   - 54: {fileID: 1897953482}
   - 114: {fileID: 1897953481}
+  - 114: {fileID: 1897953486}
   m_Layer: 0
   m_Name: Destructive_Platform_5t
   m_TagString: Terrain
@@ -63610,6 +64782,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1942302059}
   m_GameObject: {fileID: 1897953479}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1897953486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1942302059}
+  m_GameObject: {fileID: 1897953479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1900002002
 Prefab:
   m_ObjectHideFlags: 0
@@ -64073,6 +65259,7 @@ GameObject:
   - 23: {fileID: 1912669759}
   - 54: {fileID: 1912669758}
   - 114: {fileID: 1912669757}
+  - 114: {fileID: 1912669762}
   m_Layer: 0
   m_Name: Destructible_Platform_4b
   m_TagString: Terrain
@@ -64169,6 +65356,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 373754506}
   m_GameObject: {fileID: 1912669755}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1912669762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 373754506}
+  m_GameObject: {fileID: 1912669755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1915517126
 GameObject:
   m_ObjectHideFlags: 0
@@ -64653,6 +65854,7 @@ GameObject:
   - 65: {fileID: 1930038775}
   - 23: {fileID: 1930038774}
   - 54: {fileID: 1930038773}
+  - 114: {fileID: 1930038777}
   m_Layer: 0
   m_Name: Gray_Crate
   m_TagString: Terrain
@@ -64727,6 +65929,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 28208623}
   m_GameObject: {fileID: 1930038771}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1930038777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 81be3b051ca4ef043b82021e27c5e026,
+    type: 2}
+  m_PrefabInternal: {fileID: 28208623}
+  m_GameObject: {fileID: 1930038771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1931101797
 GameObject:
   m_ObjectHideFlags: 0
@@ -64740,6 +65956,7 @@ GameObject:
   - 23: {fileID: 1931101800}
   - 54: {fileID: 1931101799}
   - 114: {fileID: 1931101798}
+  - 114: {fileID: 1931101804}
   m_Layer: 0
   m_Name: Destructible_Platform_2
   m_TagString: Terrain
@@ -64836,6 +66053,20 @@ Transform:
   m_LocalScale: {x: 24.444479, y: 15, z: 10}
   m_Children: []
   m_Father: {fileID: 1580173294}
+--- !u!114 &1931101804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1888859568}
+  m_GameObject: {fileID: 1931101797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &1933301984
 GameObject:
   m_ObjectHideFlags: 0
@@ -64849,6 +66080,7 @@ GameObject:
   - 23: {fileID: 1933301988}
   - 54: {fileID: 1933301987}
   - 114: {fileID: 1933301986}
+  - 114: {fileID: 1933301991}
   m_Layer: 0
   m_Name: Destructive_Platform_6d
   m_TagString: Terrain
@@ -64945,6 +66177,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 693725724}
   m_GameObject: {fileID: 1933301984}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1933301991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 693725724}
+  m_GameObject: {fileID: 1933301984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1933427664
 Prefab:
   m_ObjectHideFlags: 0
@@ -66646,6 +67892,7 @@ GameObject:
   - 23: {fileID: 1992548714}
   - 54: {fileID: 1992548713}
   - 114: {fileID: 1992548712}
+  - 114: {fileID: 1992548717}
   m_Layer: 0
   m_Name: Destructive_Platform_6a
   m_TagString: Terrain
@@ -66742,6 +67989,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2124725811}
   m_GameObject: {fileID: 1992548710}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1992548717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2124725811}
+  m_GameObject: {fileID: 1992548710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &1993823063
 Prefab:
   m_ObjectHideFlags: 0
@@ -67295,6 +68556,7 @@ GameObject:
   - 23: {fileID: 1995982426}
   - 54: {fileID: 1995982425}
   - 114: {fileID: 1995982424}
+  - 114: {fileID: 1995982429}
   m_Layer: 0
   m_Name: Destructive_Platform_6d
   m_TagString: Terrain
@@ -67391,6 +68653,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 625422639}
   m_GameObject: {fileID: 1995982422}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1995982429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 625422639}
+  m_GameObject: {fileID: 1995982422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &2002108531
 Prefab:
   m_ObjectHideFlags: 0
@@ -68656,6 +69932,7 @@ GameObject:
   - 23: {fileID: 2047753712}
   - 54: {fileID: 2047753711}
   - 114: {fileID: 2047753710}
+  - 114: {fileID: 2047753715}
   m_Layer: 0
   m_Name: Destructible_Platform_Window
   m_TagString: Terrain
@@ -68752,6 +70029,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 257344369}
   m_GameObject: {fileID: 2047753708}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2047753715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 257344369}
+  m_GameObject: {fileID: 2047753708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &2049899962
 Prefab:
   m_ObjectHideFlags: 0
@@ -69181,6 +70472,7 @@ GameObject:
   - 23: {fileID: 2065267019}
   - 54: {fileID: 2065267018}
   - 114: {fileID: 2065267017}
+  - 114: {fileID: 2065267022}
   m_Layer: 0
   m_Name: Destructive_Platform_6e
   m_TagString: Terrain
@@ -69277,6 +70569,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1733057267}
   m_GameObject: {fileID: 2065267015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2065267022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1733057267}
+  m_GameObject: {fileID: 2065267015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &2066716588
 Prefab:
   m_ObjectHideFlags: 0
@@ -69354,6 +70660,7 @@ GameObject:
   - 23: {fileID: 2068490529}
   - 54: {fileID: 2068490528}
   - 114: {fileID: 2068490527}
+  - 114: {fileID: 2068490532}
   m_Layer: 0
   m_Name: Destructive_Platform_6e
   m_TagString: Terrain
@@ -69450,6 +70757,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2004200327}
   m_GameObject: {fileID: 2068490525}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2068490532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2004200327}
+  m_GameObject: {fileID: 2068490525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &2071622572
 GameObject:
   m_ObjectHideFlags: 0
@@ -71821,6 +73142,7 @@ GameObject:
   - 23: {fileID: 2103125380}
   - 54: {fileID: 2103125379}
   - 114: {fileID: 2103125378}
+  - 114: {fileID: 2103125383}
   m_Layer: 0
   m_Name: Destructible_Platform_4c
   m_TagString: Terrain
@@ -71917,6 +73239,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 828188390}
   m_GameObject: {fileID: 2103125376}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2103125383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 828188390}
+  m_GameObject: {fileID: 2103125376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &2105619107
 Prefab:
   m_ObjectHideFlags: 0
@@ -72743,6 +74079,7 @@ GameObject:
   - 23: {fileID: 2126375374}
   - 54: {fileID: 2126375373}
   - 114: {fileID: 2126375372}
+  - 114: {fileID: 2126375377}
   m_Layer: 0
   m_Name: Destructive_Platform_5e
   m_TagString: Terrain
@@ -72839,6 +74176,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 577239742}
   m_GameObject: {fileID: 2126375370}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2126375377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 577239742}
+  m_GameObject: {fileID: 2126375370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &2127884278
 GameObject:
   m_ObjectHideFlags: 0
@@ -72852,6 +74203,7 @@ GameObject:
   - 23: {fileID: 2127884282}
   - 54: {fileID: 2127884281}
   - 114: {fileID: 2127884280}
+  - 114: {fileID: 2127884285}
   m_Layer: 0
   m_Name: Destructive_Platform_6e
   m_TagString: Terrain
@@ -72948,6 +74300,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 614941046}
   m_GameObject: {fileID: 2127884278}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2127884285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 614941046}
+  m_GameObject: {fileID: 2127884278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &2129089843
 GameObject:
   m_ObjectHideFlags: 0
@@ -73261,6 +74627,7 @@ GameObject:
   - 23: {fileID: 2132040128}
   - 54: {fileID: 2132040127}
   - 114: {fileID: 2132040126}
+  - 114: {fileID: 2132040131}
   m_Layer: 0
   m_Name: Destructive_Platform_6d
   m_TagString: Terrain
@@ -73357,6 +74724,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 371979808}
   m_GameObject: {fileID: 2132040124}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2132040131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d81962ddb40712b40969534556fbdcd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 371979808}
+  m_GameObject: {fileID: 2132040124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1 &2132109617
 GameObject:
   m_ObjectHideFlags: 0

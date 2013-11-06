@@ -6,4 +6,5 @@ using System.Collections;
 public interface IPlayer {
 
 	bool IsDead();
+    Vector3 GetPosition();
 }
