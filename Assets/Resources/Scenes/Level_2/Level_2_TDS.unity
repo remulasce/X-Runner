@@ -594,7 +594,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 2.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &307791157
 Prefab:
@@ -709,7 +709,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
       propertyPath: m_Radius
-      value: 3
+      value: 2.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
@@ -1745,10 +1745,6 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
-      propertyPath: maxTimeToSpawnAsteroid
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -1756,6 +1752,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
       propertyPath: state
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
+      propertyPath: maxTimeToSpawnAsteroid
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}

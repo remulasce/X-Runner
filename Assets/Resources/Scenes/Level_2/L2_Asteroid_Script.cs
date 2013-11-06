@@ -13,6 +13,9 @@ public class L2_Asteroid_Script : MonoBehaviour {
     public enum LAST_HIT { NONE, PLAYER, ENEMY };
     public LAST_HIT lastHit = LAST_HIT.NONE;
 
+    // Special bool to prevent the elite from shooting at an asteroid a zillion times
+    public bool targetedByEnemy = false;
+
     // Grab References to the player and the elite.
     public Vector3 elitePosition = Vector3.zero;
     public GameObject player = null;
@@ -43,17 +46,17 @@ public class L2_Asteroid_Script : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("L2_PlayerShot"))
         {
+            targetedByEnemy = false;
             if (lastHit != LAST_HIT.PLAYER)
-            {
-                if (lastHit == LAST_HIT.ENEMY || (lastHit == LAST_HIT.NONE && Random.Range(0, 0) == 0))
+            {                
+                if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x) 
+                    || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x))) 
+                    || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                    ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
                 {
-                    if (((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x) ||
-                        this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x) &&
-                        this.transform.position.y < elitePosition.y)
-                    {
-                        this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * maxVelocity;                        
-                    }
+                    this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + extraHitVelocity);
                 }
+
                 numberOfTimesHit++;
                 lastHit = LAST_HIT.PLAYER;                
                 print(lastHit);
@@ -65,16 +68,17 @@ public class L2_Asteroid_Script : MonoBehaviour {
 
         if (other.gameObject.CompareTag("L2_EnemyShot"))
         {
+            targetedByEnemy = false;
             if (lastHit != LAST_HIT.ENEMY)
             {
-                if (lastHit == LAST_HIT.PLAYER || (lastHit == LAST_HIT.NONE && Random.Range(0, 0) == 0))
+                if (lastHit == LAST_HIT.PLAYER)
                 {
-                    if (((this.rigidbody.velocity.x > 0 && player.transform.position.x > elitePosition.x) ||
-                        this.rigidbody.velocity.x < 0 && player.transform.position.x < elitePosition.x) &&
-                        this.transform.position.y < elitePosition.y)
+                    if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x > elitePosition.x) 
+                        || this.rigidbody.velocity.x < 0 && player.transform.position.x < elitePosition.x))) 
+                        || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                        ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
                     {
-                        this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * maxVelocity;
-                        
+                        this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * (maxVelocity + extraHitVelocity);                        
                     }
                 }
                 numberOfTimesHit++;

@@ -335,32 +335,46 @@ public class L2_Elite_Script : MonoBehaviour {
         }
 	}
 
-    const float eliteAwareness = 0.1f; // Used to determine if the elite will shoot back at an asteroid reflected back by the player
+    const float eliteAwareness = 0.65f; // Used to determine if the elite will shoot back at an asteroid reflected back by the player.
+    // The highetr the value, the lower the chace the asteroid will be shot back
 
-    void OnTriggerEnter(Collider other)
-    {
+    const int maxReflects = 12; // Will allow the player to have a shot if this number of reflects has passed.
+
+    void OnTriggerStay(Collider other)
+    {        
         if (other.gameObject.CompareTag("L2_Asteroid"))
         {
+            if (other.gameObject.GetComponent<L2_Asteroid_Script>().targetedByEnemy) // Do no action if the asteroid has already been hit by the enemy
+            {
+                return;
+            }
+            
             GameObject laser;
             float detectionVal = Random.Range(0.0f, 1.0f);
             //Debug.Log(other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit);
-            if (other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.PLAYER)
-            {
-                Debug.LogWarning(detectionVal + " " + eliteAwareness + Mathf.Clamp((float)(totalHealth - currentHealth) / (float)totalHealth, 0, 1.0f - eliteAwareness));
-            }
+            //if (other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.PLAYER)
+            //{
+            //    Debug.LogWarning(detectionVal + " " + (eliteAwareness + Mathf.Clamp((float)(totalHealth - currentHealth) / (float)totalHealth, 0, 1.0f - eliteAwareness)));
+            //    Debug.LogWarning(other.gameObject.GetComponent<L2_Asteroid_Script>().numberOfTimesHit < maxReflects /*Just Give the Player the shot when maxReflects have been done*/);
+            //}
 
-            if ((other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.PLAYER) && (detectionVal > (eliteAwareness + Mathf.Clamp((float)(totalHealth - currentHealth)/(float)totalHealth, 0, 1.0f - eliteAwareness))))
+            if (((other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.PLAYER) 
+                && (detectionVal > (eliteAwareness + Mathf.Clamp((float)(totalHealth - currentHealth)/(float)totalHealth, 0, 1.0f - eliteAwareness)))))
             {
-                laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
-                laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
-                laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 15;
+                if (other.gameObject.GetComponent<L2_Asteroid_Script>().numberOfTimesHit < maxReflects /*Just Give the Player the shot when maxReflects have been done*/)
+                {
+                    laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
+                    laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
+                    laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 15;
+                    other.gameObject.GetComponent<L2_Asteroid_Script>().targetedByEnemy = true;
+                }
             }
-            else if (other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.ENEMY ||
-                other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.NONE)
+            else if (other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.NONE)
             {
                 laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
                 laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
                 laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 15;
+                other.gameObject.GetComponent<L2_Asteroid_Script>().targetedByEnemy = true;
             }
         }
     }

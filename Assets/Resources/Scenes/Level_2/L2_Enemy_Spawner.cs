@@ -205,7 +205,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
             W(ft_ef(), nb_go(-20, 2, 20, 2), lb_no(), at_ld(0.35f), xt_no(), xb_no(), 0);            
             break;
 		case EliteBehavior.FinalBattle:
-			W (ft_ef(), nb_go (0, 20, 0, 4), lb_lz(-13, 4, 13, 4, 2.0f)/*lb_no()*/, at_hm(4), xt_no (), xb_no (), 0);            
+			W (ft_ef(), nb_go (0, 20, 0, 0), lb_lz(-13, 7, 13, 7, 2.5f)/*lb_no()*/, at_hm(4), xt_no (), xb_no (), 0);            
 			break;
 		case EliteBehavior.Test:
 			W (ft_eb(), nb_go (-15, 12, -12, 12), lb_wp (new float[] { -12, 10, 12, 10, -12, -2, 12, -2, -12, 10 }, 5f), 
