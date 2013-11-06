@@ -14660,7 +14660,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].laserSpeed
       value: 1000
@@ -14671,7 +14671,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].targetOffset.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].target
@@ -14679,7 +14679,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].targetOffset.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].targetOffset.z
@@ -14692,14 +14692,14 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].target
       value: 
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].targetOffset.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].targetOffset.z
@@ -14712,14 +14712,14 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].target
       value: 
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].targetOffset.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].targetOffset.z
@@ -14732,18 +14732,18 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].delay
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
-      propertyPath: targets.Array.data[3].delay
       value: .200000003
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
-      propertyPath: targets.Array.data[4].delay
+      propertyPath: targets.Array.data[3].delay
       value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[4].delay
+      value: .400000006
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: m_Name
@@ -14760,7 +14760,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].target
       value: 
@@ -14772,7 +14772,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[7].target
       value: 
@@ -14784,7 +14784,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[7].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[8].target
       value: 
@@ -14796,7 +14796,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[8].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[9].target
       value: 
@@ -14808,26 +14808,26 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[9].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].delay
-      value: .400000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
-      propertyPath: targets.Array.data[6].delay
       value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
-      propertyPath: targets.Array.data[7].delay
+      propertyPath: targets.Array.data[6].delay
       value: .600000024
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
-      propertyPath: targets.Array.data[8].delay
+      propertyPath: targets.Array.data[7].delay
       value: .699999988
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
-      propertyPath: targets.Array.data[9].delay
+      propertyPath: targets.Array.data[8].delay
       value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[9].delay
+      value: .899999976
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[10].target
@@ -14840,7 +14840,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[10].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[10].delay
       value: 1
@@ -14856,7 +14856,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[11].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[11].delay
       value: 1.10000002
@@ -14872,7 +14872,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[12].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[12].delay
       value: 1.20000005
@@ -14888,7 +14888,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[13].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[13].delay
       value: 1.29999995
@@ -14904,7 +14904,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[14].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[14].delay
       value: 1.39999998
@@ -14920,38 +14920,38 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[15].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[15].delay
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[10].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[11].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[12].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[13].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[14].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[15].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].delay
@@ -14959,31 +14959,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].targetOffset.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].targetOffset.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[7].targetOffset.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[8].targetOffset.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[9].targetOffset.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[8].targetOffset.z
@@ -15036,7 +15036,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[1].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[1].laserType
       value: 0
@@ -15119,19 +15119,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[1].targetOffset.x
-      value: 11.6499996
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[5].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[6].homingMissileProperties.percentToCloseOffset
@@ -15139,7 +15139,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[7].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[7].homingMissileProperties.percentToCloseOffset
@@ -15147,7 +15147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[8].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[8].homingMissileProperties.percentToCloseOffset
@@ -15155,7 +15155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[9].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[9].homingMissileProperties.percentToCloseOffset
@@ -15191,7 +15191,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[16].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[16].laserSpeed
@@ -15200,7 +15200,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[16].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[16].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15211,7 +15211,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[17].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[17].laserSpeed
@@ -15220,7 +15220,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[17].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[17].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15231,7 +15231,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[18].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[18].laserSpeed
@@ -15240,7 +15240,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[18].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[18].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15251,7 +15251,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[19].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[19].laserSpeed
@@ -15260,7 +15260,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[19].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[19].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15271,7 +15271,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[20].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[20].laserSpeed
@@ -15280,7 +15280,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[20].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[20].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15291,7 +15291,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[21].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[21].laserSpeed
@@ -15300,7 +15300,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[21].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[21].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15311,7 +15311,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[22].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[22].laserSpeed
@@ -15320,7 +15320,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[22].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[22].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15331,7 +15331,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[23].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[23].laserSpeed
@@ -15340,7 +15340,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[23].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[23].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15351,7 +15351,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[24].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[24].laserSpeed
@@ -15360,7 +15360,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[24].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[24].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15371,16 +15371,16 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[25].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[25].laserSpeed
-      value: 2301
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[25].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[25].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15391,7 +15391,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[26].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[26].laserSpeed
@@ -15400,7 +15400,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[26].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[26].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15411,7 +15411,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[27].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[27].laserSpeed
@@ -15420,7 +15420,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[27].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[27].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15431,7 +15431,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[28].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[28].laserSpeed
@@ -15440,7 +15440,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[28].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[28].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15451,7 +15451,7 @@ Prefab:
       objectReference: {fileID: 137554353}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[29].targetOffset.x
-      value: 11.6499996
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[29].laserSpeed
@@ -15460,7 +15460,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[29].postCollisionParticleSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f, type: 2}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[29].homingMissileProperties.percentToCloseOffset
       value: .949999988
@@ -15640,6 +15640,90 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[29].isDetonator
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[1].targetOffset.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[10].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[11].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[12].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[13].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[14].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[15].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[16].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[17].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[18].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[19].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[20].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[21].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[22].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[23].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[24].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[25].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[26].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[27].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[28].targetOffset.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: targets.Array.data[29].targetOffset.y
+      value: -6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
@@ -41668,23 +41752,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].homingMissileProperties.closingMagnitude
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[1].homingMissileProperties.closingMagnitude
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].homingMissileProperties.closingMagnitude
-      value: 31
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].homingMissileProperties.closingMagnitude
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].homingMissileProperties.closingMagnitude
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].homingMissileProperties.percentToCloseOffset
@@ -51752,9 +51836,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 0
     laserType: 0
     isDetonator: 1
@@ -51763,9 +51848,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 0, y: -5, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: .100000001
     laserType: 0
     isDetonator: 1
@@ -51774,20 +51860,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
-    delay: 3
-    laserType: 0
-    isDetonator: 1
-    homingMissileProperties:
-      initialHomingOffset: {x: 0, y: 0, z: 0}
-      percentToCloseOffset: .949999988
-      closingMagnitude: 0
-  - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
-    laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: .200000003
     laserType: 0
     isDetonator: 1
@@ -51796,9 +51872,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: .300000012
     laserType: 0
     isDetonator: 1
@@ -51807,9 +51884,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: .400000006
     laserType: 0
     isDetonator: 1
@@ -51818,9 +51896,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: .5
     laserType: 0
     isDetonator: 1
@@ -51829,9 +51908,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: .600000024
     laserType: 0
     isDetonator: 1
@@ -51840,9 +51920,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: .699999988
     laserType: 0
     isDetonator: 1
@@ -51851,9 +51932,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: .800000012
     laserType: 0
     isDetonator: 1
@@ -51862,9 +51944,22 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
+    delay: .899999976
+    laserType: 0
+    isDetonator: 1
+    homingMissileProperties:
+      initialHomingOffset: {x: 0, y: 0, z: 0}
+      percentToCloseOffset: .949999988
+      closingMagnitude: 0
+  - target: {fileID: 137554353}
+    targetOffset: {x: 5, y: -6, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1
     laserType: 0
     isDetonator: 1
@@ -51873,9 +51968,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1.10000002
     laserType: 0
     isDetonator: 1
@@ -51884,9 +51980,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1.20000005
     laserType: 0
     isDetonator: 1
@@ -51895,9 +51992,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1.29999995
     laserType: 0
     isDetonator: 1
@@ -51906,9 +52004,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1.39999998
     laserType: 0
     isDetonator: 1
@@ -51917,9 +52016,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1.5
     laserType: 0
     isDetonator: 1
@@ -51928,9 +52028,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1.60000002
     laserType: 0
     isDetonator: 1
@@ -51939,9 +52040,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1.70000005
     laserType: 0
     isDetonator: 1
@@ -51950,9 +52052,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1.79999995
     laserType: 0
     isDetonator: 1
@@ -51961,9 +52064,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 1.89999998
     laserType: 0
     isDetonator: 1
@@ -51972,9 +52076,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2
     laserType: 0
     isDetonator: 1
@@ -51983,9 +52088,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2.0999999
     laserType: 0
     isDetonator: 1
@@ -51994,9 +52100,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2.20000005
     laserType: 0
     isDetonator: 1
@@ -52005,9 +52112,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2.29999995
     laserType: 0
     isDetonator: 1
@@ -52016,9 +52124,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2.4000001
     laserType: 0
     isDetonator: 1
@@ -52027,9 +52136,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
-    laserSpeed: 2301
-    postCollisionParticleSystem: {fileID: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
+    laserSpeed: 1000
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2.5
     laserType: 0
     isDetonator: 1
@@ -52038,9 +52148,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2.5999999
     laserType: 0
     isDetonator: 1
@@ -52049,9 +52160,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2.70000005
     laserType: 0
     isDetonator: 1
@@ -52060,9 +52172,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2.79999995
     laserType: 0
     isDetonator: 1
@@ -52071,9 +52184,10 @@ MonoBehaviour:
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 137554353}
-    targetOffset: {x: 11.6499996, y: 0, z: 0}
+    targetOffset: {x: 5, y: -6, z: 0}
     laserSpeed: 1000
-    postCollisionParticleSystem: {fileID: 0}
+    postCollisionParticleSystem: {fileID: 100000, guid: 3e0a064b0e8b3de49906eef49881e09f,
+      type: 2}
     delay: 2.9000001
     laserType: 0
     isDetonator: 1
@@ -67056,7 +67170,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 35
+      closingMagnitude: 25
   - target: {fileID: 137554353}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 200
@@ -67067,7 +67181,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: -100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 35
+      closingMagnitude: 25
   - target: {fileID: 137554353}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 200
@@ -67078,7 +67192,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 31
+      closingMagnitude: 25
   - target: {fileID: 137554353}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 200
@@ -67089,7 +67203,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: -100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 35
+      closingMagnitude: 25
   - target: {fileID: 137554353}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 200
@@ -67100,7 +67214,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 35
+      closingMagnitude: 25
 --- !u!65 &1847976527
 BoxCollider:
   m_ObjectHideFlags: 0

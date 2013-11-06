@@ -757,15 +757,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.y
-      value: -381.100006
+      value: -401.600006
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.x
-      value: -203.199997
+      value: -339.929993
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: setOnWithStart
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_PixelInset.width
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_PixelInset.height
+      value: 240
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
@@ -815,10 +835,10 @@ GUITexture:
   m_Color: {r: .443137258, g: .443137258, b: .443137258, a: 1}
   m_PixelInset:
     serializedVersion: 2
-    x: -203.199997
-    y: -381.100006
-    width: 460
-    height: 152
+    x: -339.929993
+    y: -401.600006
+    width: 720
+    height: 240
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -831,7 +851,7 @@ Transform:
   m_GameObject: {fileID: 715736865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .5, y: .5, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1226512243

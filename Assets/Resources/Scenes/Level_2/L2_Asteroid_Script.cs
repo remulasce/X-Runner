@@ -13,6 +13,8 @@ public class L2_Asteroid_Script : MonoBehaviour {
     public enum LAST_HIT { NONE, PLAYER, ENEMY };
     public LAST_HIT lastHit = LAST_HIT.NONE;
 
+    // Grab References to the player and the elite.
+
 	// Use this for initialization
 	void Start () {
 	
