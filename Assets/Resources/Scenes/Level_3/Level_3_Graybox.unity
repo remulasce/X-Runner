@@ -7795,10 +7795,6 @@ Prefab:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 984399179}
-    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
-      propertyPath: movementSpeed
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 13600000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_IsTrigger
       value: 0
@@ -7810,18 +7806,6 @@ Prefab:
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: isJetPackActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
-      propertyPath: jetPackFloatingForce
-      value: 15000
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
-      propertyPath: forceValuePreJump
-      value: 55000
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
-      propertyPath: forceValuePostJump
-      value: 55000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: horizontalMovement.accelerationPushOffWall
@@ -7838,6 +7822,22 @@ Prefab:
     - target: {fileID: 5400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_Interpolate
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: movementSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: forceValuePreJump
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: forceValuePostJump
+      value: 70000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: jetPackFloatingForce
+      value: 20000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
@@ -16773,16 +16773,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2569d3d0a8ca99c4292089419043ab7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 7
-  forceValuePostJump: 55000
-  forceValuePreJump: 55000
+  movementSpeed: 9
+  forceValuePostJump: 70000
+  forceValuePreJump: 50000
   isJumping: 0
   canJump: 1
   isActive: 1
   timeJumpThreshold: .5
   isInAir: 0
   isJetPackActive: 0
-  jetPackFloatingForce: 15000
+  jetPackFloatingForce: 20000
   mainCamera: {fileID: 984399179}
   spawners: []
   horizontalMovement:

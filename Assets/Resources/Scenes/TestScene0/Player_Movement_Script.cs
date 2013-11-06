@@ -110,10 +110,10 @@ public class Player_Movement_Script : MonoBehaviour {
 	
 	void DoXVelocity()
 	{
-        //if (isDead) // Don't move the player if dead
-        //{
-        //    return;
-        //}
+        if (isDead) // Don't move the player if dead
+        {
+            return;
+        }
         
         if (!onWall)
         {
@@ -189,6 +189,11 @@ public class Player_Movement_Script : MonoBehaviour {
 		}
 		if ((Input.GetButtonDown("Jump") /*|| Input.GetKeyDown(KeyCode.Space)*/) && canJump)
         {
+            if (isDead)
+            {
+                return;
+            }
+
             if (!horizontalMovement.isSliding)
             {
                 this.rigidbody.velocity = Vector3.zero;
@@ -260,6 +265,11 @@ public class Player_Movement_Script : MonoBehaviour {
 
     void DoSideWaysMovement()
     {
+        if (isDead)
+        {
+            return;
+        }
+        
         if ((isJumping || isInAir) && !isJumping) // Player cannot move while in jump, unless the jetpack has been attained
         {
             return;
@@ -342,12 +352,9 @@ public class Player_Movement_Script : MonoBehaviour {
 	void Update () {
         if (!isActive) {return;}
 
-        if (!isDead)
-        {
-            DoSideWaysMovement();
-            DoXVelocity();
-            DoJump();
-        }
+        DoSideWaysMovement();
+        DoXVelocity();
+        DoJump();        
 		CheckDead();
 
         //print(rigidbody.velocity);
