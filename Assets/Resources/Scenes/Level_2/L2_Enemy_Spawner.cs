@@ -74,7 +74,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */
 
-        ///*
+        /*
         //E(EliteBehavior.Test);
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);

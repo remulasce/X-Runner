@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa1e3e49a6697f4a9a49b72a21cf47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalHealth: 15
+  totalHealth: 25
   currentHealth: 0
   curMaxSpeed: 7
   nextLoiterChange: 0
@@ -594,7 +594,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.75
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &307791157
 Prefab:
@@ -705,7 +705,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
       propertyPath: totalHealth
-      value: 15
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_Radius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b24170436125e70448520c272c2d9a2d, type: 2}

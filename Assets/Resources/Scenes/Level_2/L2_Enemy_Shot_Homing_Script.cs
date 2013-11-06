@@ -26,6 +26,11 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
             {
                 this.transform.LookAt(player.GetPosition());
                 this.rigidbody.velocity = this.transform.forward * speed;
+
+                if (!isNotCinematic)
+                {
+                    this.speed += 0.05f;                
+                }
             }
             //Stop following if he dies
             else

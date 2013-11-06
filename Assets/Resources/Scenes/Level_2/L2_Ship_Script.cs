@@ -357,7 +357,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                 explosion.Explode();
                 DoTransition();
             }
-            
+
+            col.gameObject.transform.DetachChildren();
             Destroy(col.gameObject);
         }
 

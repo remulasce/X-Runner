@@ -57,6 +57,13 @@ public class L2_Elite_Script : MonoBehaviour {
 		DoAttack();
 		//Exit trigger switch decides when to exit
 		CheckExitTrigger();
+
+        // Send positon information to asteroids.
+        GameObject[] asteroids = GameObject.FindGameObjectsWithTag("L2_Asteroid");
+        foreach (GameObject g in asteroids)
+        {
+            g.GetComponent<L2_Asteroid_Script>().elitePosition = this.transform.position;
+        }
 	}
 	
 	void SetState(EntryState s)
@@ -328,7 +335,7 @@ public class L2_Elite_Script : MonoBehaviour {
         }
 	}
 
-    const float eliteAwareness = 0.25f; // Used to determine if the elite will shoot back at an asteroid reflected back by the player
+    const float eliteAwareness = 0.1f; // Used to determine if the elite will shoot back at an asteroid reflected back by the player
 
     void OnTriggerEnter(Collider other)
     {
@@ -337,7 +344,11 @@ public class L2_Elite_Script : MonoBehaviour {
             GameObject laser;
             float detectionVal = Random.Range(0.0f, 1.0f);
             //Debug.Log(other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit);
-            //print(detectionVal > eliteAwareness);
+            if (other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.PLAYER)
+            {
+                Debug.LogWarning(detectionVal + " " + eliteAwareness + Mathf.Clamp((float)(totalHealth - currentHealth) / (float)totalHealth, 0, 1.0f - eliteAwareness));
+            }
+
             if ((other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.PLAYER) && (detectionVal > (eliteAwareness + Mathf.Clamp((float)(totalHealth - currentHealth)/(float)totalHealth, 0, 1.0f - eliteAwareness))))
             {
                 laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
