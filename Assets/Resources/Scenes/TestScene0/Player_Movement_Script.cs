@@ -72,6 +72,10 @@ public class Player_Movement_Script : MonoBehaviour {
     public bool isDead = false;
     public float spawnTime = 1.0f;
 
+    // Used for temporary invincibility
+    public bool isInvincible = false;
+    public float invincibleTime = 1.0f;
+
     private bool isWaitingToSpawn = false;
 	
 	// Use this for initialization
@@ -309,6 +313,13 @@ public class Player_Movement_Script : MonoBehaviour {
         // Do nothing for neutral case
     }
 
+    IEnumerator EndInvincibility()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(invincibleTime);
+        isInvincible = false;
+    }
+
     // Respawn Function
     IEnumerator Respawn()
     {
@@ -335,6 +346,8 @@ public class Player_Movement_Script : MonoBehaviour {
         {
             this.renderer.enabled = true;
         }
+
+        StartCoroutine("EndInvincibility");
     }
 	
 	//If we're below the ground, respawn us above it and (ahead) us a little.
@@ -344,7 +357,14 @@ public class Player_Movement_Script : MonoBehaviour {
 	{
         if (isDead && !isWaitingToSpawn) // Make a better condition
 		{
-            StartCoroutine("Respawn");
+            if (!isInvincible)
+            {
+                StartCoroutine("Respawn");
+            }
+            else
+            {
+                isDead = false;
+            }
 		}
 	}
 	

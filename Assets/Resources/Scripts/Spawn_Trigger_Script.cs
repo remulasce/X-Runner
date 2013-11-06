@@ -19,6 +19,7 @@ public class Spawn_Trigger_Script : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<Player_Movement_Script>().isInvincible = false;
             other.gameObject.GetComponent<Player_Movement_Script>().isDead = true;
             if (stats)
             {
