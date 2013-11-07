@@ -72,6 +72,10 @@ public class Player_Movement_Script : MonoBehaviour {
     public bool isDead = false;
     public float spawnTime = 1.0f;
 
+    // Used for temporary invincibility
+    public bool isInvincible = false;
+    public float invincibleTime = 1.0f;
+
     private bool isWaitingToSpawn = false;
 	
 	// Use this for initialization
@@ -189,6 +193,11 @@ public class Player_Movement_Script : MonoBehaviour {
 		}
 		if ((Input.GetButtonDown("Jump") /*|| Input.GetKeyDown(KeyCode.Space)*/) && canJump)
         {
+            if (isDead)
+            {
+                return;
+            }
+
             if (!horizontalMovement.isSliding)
             {
                 this.rigidbody.velocity = Vector3.zero;
@@ -260,6 +269,11 @@ public class Player_Movement_Script : MonoBehaviour {
 
     void DoSideWaysMovement()
     {
+        if (isDead)
+        {
+            return;
+        }
+        
         if ((isJumping || isInAir) && !isJumping) // Player cannot move while in jump, unless the jetpack has been attained
         {
             return;
@@ -299,6 +313,13 @@ public class Player_Movement_Script : MonoBehaviour {
         // Do nothing for neutral case
     }
 
+    IEnumerator EndInvincibility()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(invincibleTime);
+        isInvincible = false;
+    }
+
     // Respawn Function
     IEnumerator Respawn()
     {
@@ -325,6 +346,8 @@ public class Player_Movement_Script : MonoBehaviour {
         {
             this.renderer.enabled = true;
         }
+
+        StartCoroutine("EndInvincibility");
     }
 	
 	//If we're below the ground, respawn us above it and (ahead) us a little.
@@ -334,7 +357,14 @@ public class Player_Movement_Script : MonoBehaviour {
 	{
         if (isDead && !isWaitingToSpawn) // Make a better condition
 		{
-            StartCoroutine("Respawn");
+            if (!isInvincible)
+            {
+                StartCoroutine("Respawn");
+            }
+            else
+            {
+                isDead = false;
+            }
 		}
 	}
 	
@@ -343,8 +373,8 @@ public class Player_Movement_Script : MonoBehaviour {
         if (!isActive) {return;}
 
         DoSideWaysMovement();
-		DoXVelocity();
-		DoJump();
+        DoXVelocity();
+        DoJump();        
 		CheckDead();
 
         //print(rigidbody.velocity);

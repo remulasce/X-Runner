@@ -71,6 +71,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 	
 	
 	public bool IsDead() { return isDead; }
+    public Vector3 GetPosition() { return transform.position; }
+
 	// Use this for initialization
 	void Start ()
     {        
@@ -355,7 +357,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                 explosion.Explode();
                 DoTransition();
             }
-            
+
+            col.gameObject.transform.DetachChildren();
             Destroy(col.gameObject);
         }
 

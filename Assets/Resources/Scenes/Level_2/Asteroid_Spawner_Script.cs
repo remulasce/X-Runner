@@ -39,7 +39,7 @@ public class Asteroid_Spawner_Script : MonoBehaviour {
         lastSpawnedAsteroidTime = Time.time;
         timeToSpawnAsteroid = Random.Range(maxTimeToSpawnAsteroid/2, maxTimeToSpawnAsteroid);
         GameObject asteroid = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid_Cinematic"), this.transform.position, Quaternion.Euler(0, 0, 0));
-        asteroid.transform.localScale *= Random.Range(0.5f, 1.5f); // Make the asteroid bigger so it looks like it is in the foreground
+        asteroid.transform.localScale *= Random.Range(0.25f, 1.0f); // Make the asteroid bigger so it looks like it is in the foreground
         asteroid.transform.position = new Vector3((asteroid.transform.localScale.x / 2.0f) + Random.Range(0, screenLength - (asteroid.transform.localScale.x * 1.5f)), 50f, 0);
         asteroid.transform.position += new Vector3(-screenLength / 2.0f, 0, 0.1f);
         asteroid.rigidbody.mass = asteroid.rigidbody.mass * asteroid.transform.localScale.x;

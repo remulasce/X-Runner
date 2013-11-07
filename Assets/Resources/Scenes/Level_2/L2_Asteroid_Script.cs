@@ -13,9 +13,16 @@ public class L2_Asteroid_Script : MonoBehaviour {
     public enum LAST_HIT { NONE, PLAYER, ENEMY };
     public LAST_HIT lastHit = LAST_HIT.NONE;
 
+    // Special bool to prevent the elite from shooting at an asteroid a zillion times
+    public bool targetedByEnemy = false;
+
+    // Grab References to the player and the elite.
+    public Vector3 elitePosition = Vector3.zero;
+    public GameObject player = null;
+
 	// Use this for initialization
 	void Start () {
-	
+        player = GameObject.FindGameObjectWithTag("Player");
 	}
 
     void killIfOutBounds()
@@ -39,10 +46,20 @@ public class L2_Asteroid_Script : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("L2_PlayerShot"))
         {
+            targetedByEnemy = false;
             if (lastHit != LAST_HIT.PLAYER)
-            {
+            {                
+                if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x) 
+                    || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x))) 
+                    || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                    ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+                {
+                    this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + extraHitVelocity);
+                }
+
                 numberOfTimesHit++;
-                lastHit = LAST_HIT.PLAYER;
+                lastHit = LAST_HIT.PLAYER;                
+                print(lastHit);
             }
             Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
             Object.Destroy(other.gameObject);
@@ -51,10 +68,22 @@ public class L2_Asteroid_Script : MonoBehaviour {
 
         if (other.gameObject.CompareTag("L2_EnemyShot"))
         {
+            targetedByEnemy = false;
             if (lastHit != LAST_HIT.ENEMY)
             {
+                if (lastHit == LAST_HIT.PLAYER)
+                {
+                    if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x > elitePosition.x) 
+                        || this.rigidbody.velocity.x < 0 && player.transform.position.x < elitePosition.x))) 
+                        || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                        ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+                    {
+                        this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * (maxVelocity + extraHitVelocity);                        
+                    }
+                }
                 numberOfTimesHit++;
                 lastHit = LAST_HIT.ENEMY;
+                print(lastHit);
             }
             if (other.gameObject.name.Contains("Homing"))
             {

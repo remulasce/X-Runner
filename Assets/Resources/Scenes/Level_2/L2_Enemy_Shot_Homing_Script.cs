@@ -6,10 +6,13 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
     // Detonator
     private Detonator explosion;
 
+    private IPlayer player;
+
 	// Use this for initialization
 	protected new void Start () {
         base.Start();
         explosion = this.GetComponentInChildren<Detonator>();
+        player = (IPlayer)(GameObject.FindGameObjectWithTag("Player").GetComponents(typeof(IPlayer)))[0];
 	}
 	
 	// Update is called once per frame
@@ -18,10 +21,16 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
         base.Update();
         if (!target)
         {
-            if (!player.GetComponent<L2_Ship_Script>().isDead || !player.GetComponent<L4_Player_Script>().isDead) // Follow the player if it has not been destroyed yet
+            //if (!player.GetComponent<L2_Ship_Script>().isDead || !player.GetComponent<L4_Player_Script>().isDead) // Follow the player if it has not been destroyed yet
+            if (!player.IsDead())
             {
-                this.transform.LookAt(player.transform.position);
+                this.transform.LookAt(player.GetPosition());
                 this.rigidbody.velocity = this.transform.forward * speed;
+
+                if (!isNotCinematic)
+                {
+                    this.speed += 0.05f;                
+                }
             }
             //Stop following if he dies
             else

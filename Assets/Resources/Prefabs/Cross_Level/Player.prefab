@@ -113,15 +113,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 16.5
-  forceValuePostJump: 55000
-  forceValuePreJump: 70000
+  forceValuePostJump: 100000
+  forceValuePreJump: 50000
   isJumping: 0
   canJump: 1
   isActive: 1
   timeJumpThreshold: .5
   isInAir: 0
   isJetPackActive: 0
-  jetPackFloatingForce: 60000
+  jetPackFloatingForce: 42000
   mainCamera: {fileID: 0}
   spawners: []
   horizontalMovement:
@@ -135,6 +135,8 @@ MonoBehaviour:
   wallJumpsLeft: 3
   isDead: 0
   spawnTime: 1
+  isInvincible: 0
+  invincibleTime: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa1e3e49a6697f4a9a49b72a21cf47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalHealth: 50
+  totalHealth: 25
   currentHealth: 0
   curMaxSpeed: 7
   nextLoiterChange: 0
@@ -703,6 +703,14 @@ Prefab:
       propertyPath: m_Emit
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: totalHealth
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_Radius
+      value: 2.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
   m_RootGameObject: {fileID: 292744465}
@@ -753,15 +761,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.y
-      value: -381.100006
+      value: -401.600006
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.x
-      value: -203.199997
+      value: -339.929993
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: setOnWithStart
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_PixelInset.width
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_PixelInset.height
+      value: 240
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
@@ -811,10 +839,10 @@ GUITexture:
   m_Color: {r: .443137258, g: .443137258, b: .443137258, a: 1}
   m_PixelInset:
     serializedVersion: 2
-    x: -203.199997
-    y: -381.100006
-    width: 460
-    height: 152
+    x: -339.929993
+    y: -401.600006
+    width: 720
+    height: 240
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -827,7 +855,7 @@ Transform:
   m_GameObject: {fileID: 715736865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .5, y: .5, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1226512243
@@ -1717,10 +1745,6 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
-      propertyPath: maxTimeToSpawnAsteroid
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -1728,6 +1752,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
       propertyPath: state
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
+      propertyPath: maxTimeToSpawnAsteroid
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
@@ -1836,3 +1864,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elite: {fileID: 292744470}
   asteroidSpawner: {fileID: 1226512244}
+  musicManager: {fileID: 0}

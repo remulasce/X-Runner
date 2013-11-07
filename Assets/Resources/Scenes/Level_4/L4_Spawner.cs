@@ -77,7 +77,19 @@ public class L4_Spawner : MonoBehaviour {
          * There's also some sketchy hardcoded things for the Elite, which should be done
          * 	  with care.
          */
-
+		
+		/*
+		W (ft_vl (3), nb_go (-2, 14, 0, 6), lb_no(), at_ld (1), xt_tm(3), xb_go(-4, 8), 4);
+		
+		W (ft_vl(6), nb_go (2, 14, 2, 0), lb_no (), at_ld (2), xt_no (), xb_no(), 2);
+		
+		W (ft_vl(6), nb_go (4, 14, 4, 2), lb_no (), at_ld (3), xt_no (), xb_no (), 1);
+		W (ft_vl(4), nb_go (10, 14, 6, -2), lb_no (), at_hm(2), xt_no (), xb_no (), 4);
+		*/
+		//W (ft_ag);
+		
+		
+		
         //E(EliteBehavior.Test);
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
@@ -170,6 +182,8 @@ public class L4_Spawner : MonoBehaviour {
 
         // 1-on-1 Elite battle
 		//Not any different for now
+        
+        
         
 		print ("Done making spawn list");
 	}

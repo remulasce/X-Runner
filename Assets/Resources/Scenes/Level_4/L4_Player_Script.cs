@@ -74,6 +74,7 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 	
 	
 	public bool IsDead() { return isDead; }
+    public Vector3 GetPosition() { return transform.position; }
 	
 	// Use this for initialization
 	void Start ()
