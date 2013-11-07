@@ -32,12 +32,17 @@ public class L2_Elite_Script : MonoBehaviour {
     public GameObject endExplosion = null;
 
     public bool isShotDown = false;
+
+    // Handle to the music manager to start the next transition, when it is in
+    Music_Manager_Script musicManager;
 		
 	
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<L2_Ship_Script>();
         currentHealth = totalHealth;
+
+        musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
 	}
 	
 	// Update is called once per frame
@@ -301,6 +306,8 @@ public class L2_Elite_Script : MonoBehaviour {
         this.transform.parent.animation.Play();
 
         StartCoroutine("ShootBigMissile");
+
+        musicManager.FadeOutSongs(2, new int[] { 3 });
     }
 
     IEnumerator ShootBigMissile()

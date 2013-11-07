@@ -10,12 +10,16 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
     public Asteroid_Spawner_Script asteroidSpawner;
 
+    public Music_Manager_Script musicManager;
+
 	void Start () 
 	{
 		//Spawn fills the spawnList
 		Spawn();
 		//DoSpawning goes through the spawnList and does the spawning
 		StartCoroutine(DoSpawning());
+
+        musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
 	}
 	
 	/** SpawnAPI:
@@ -74,7 +78,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */
 
-        /*
+        ///*
         //E(EliteBehavior.Test);
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
@@ -454,12 +458,15 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                     else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidCinematic)
                     {
                         asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
+                        musicManager.FadeInSongs(2, new int[] { 1 });
                         //print("Here 1");
                     }
 
                     else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidGameplay)
                     {
                         asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_GAMEPLAY;
+                        musicManager.FadeOutSongs(2, new int[] { 0, 1 });
+                        musicManager.FadeInTransitions(2, new int[] { 2 }, 2, new int[] { 3 }, 6.76f);
                         //print("Here 2");
                     }
 
