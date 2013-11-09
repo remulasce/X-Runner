@@ -78,12 +78,10 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */
 
-        ///*
+        /*
         //E(EliteBehavior.Test);
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
-
-
 
         // Inital Fighter Wave
         W(ft_hl(5), nb_go(-10, 15, 0, 0, 15), lb_no(), at_ld(4.0f), xt_im(), xb_go(45, 0, 5), 1.0f);
@@ -96,45 +94,37 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         //vertical line
 
         // First Blockade
-        W(ft_vl(7),    nb_go(-25, 3, -8, 1, 5), lb_no(), at_no(), xt_no(), xb_go(45, 0, 10), 0f);
-        W(ft_vl(7),    nb_go(25, 3, 8, 1, 5),   lb_no(), at_no(), xt_no(), xb_go(45, 0, 10), 0f);
-        W(ft_hl(9),    nb_go(0, -25, 0, -7, 5), lb_no(), at_no(), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_vl(7),    nb_go(-25, 3, -8, 1, 5), lb_no(), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_vl(7),    nb_go(25, 3, 8, 1, 5),   lb_no(), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_hl(9),    nb_go(0, -25, 0, -7, 5), lb_no(), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
         W(ft_gd(7, 5), nb_go(0, 25, 0, 3, 5),   lb_no(), at_ld(20), xt_no(), xb_no(), 0f);
 
-        E(EliteBehavior.CircleStrafe);
-        
-        //*/        
-        W(ft_hl(7), nb_go(-8, 20, -8, -30, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), -0.1f);
-        W(ft_hl(7), nb_go(8, 20, 8, -30, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0.0f);
-        E(EliteBehavior.QuickStrafe);
-
-        // Second Blockade
-        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), -0.1f);
-        W(ft_hl(15), nb_go(0, 28, 0, 8), lb_no(), at_lt(7.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(13), nb_go(0, 26, 0, 6), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(11), nb_go(0, 24, 0, 4), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
+        E(EliteBehavior.CircleStrafe);        
+               
+        W(ft_hl(5), nb_go(-8, 20, -8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), -0.1f);
+        W(ft_hl(5), nb_go(8, 20, 8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0.0f);
+        (EliteBehavior.QuickStrafe);        
 
         // Begin spawning the cinematic asteroids (no physics, background stuff).
         W(ft_ac());
 
-        // Giant Vertical Wave
-        W(ft_hl(15), nb_go(0, 40, 0, -60), lb_no(), at_no(), xt_im(), xb_go(0, -60), -.01f);
-        W(ft_hl(15), nb_go(0, 38, 0, -62), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 36, 0, -64), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 34, 0, -66), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 32, 0, -68), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 30, 0, -70), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 28, 0, -72), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 26, 0, -74), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 24, 0, -76), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 22, 0, -78), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 20, 0, -80), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 18, 0, -82), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 16, 0, -84), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0.1f);
-        W(ft_hl(15), nb_go(0, 14, 0, -86), lb_no(), at_no(), xt_im(), xb_go(0, -60), 8f);
+        // Second Blockade
+        W(ft_gd(15, 1), nb_go(0, 40, 0, -100, 15), lb_no(), at_lt(17.5f), xt_no(), xb_no(), 2f);
+        W(ft_gd(15, 2), nb_go(0, 40, 0, -100, 15), lb_no(), at_lt(17.5f), xt_no(), xb_no(), 2f);
+        W(ft_gd(15, 3), nb_go(0, 40, 0, -100, 15), lb_no(), at_lt(17.5f), xt_no(), xb_no(), 2f);
 
+        //Elite quick visit
+        E(EliteBehavior.HangBehind);         
+
+        W(ft_gd(15, 4), nb_go(0, 40, 0, 6, 15), lb_lz(0, 8, 0, 0, 5.0f, 4.0f), at_lt(10), xt_no(), xb_no(), 0f);
+        
+        //*/
+
+        // Giant Vertical Wave
+        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 5.0f), lb_no(), at_hm(12), xt_im(), xb_go(0, -1, 10f), -.000000001f);
+        
         // Filler Wave 1
-        W(ft_hl(4), nb_go(15, 15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), 0f);
+        W(ft_hl(4), nb_go(15, 15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), -0.01f);
         W(ft_hl(4), nb_go(-15, 15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), 1.5f);
 
         //Elite quick visit
@@ -216,11 +206,11 @@ public class L2_Enemy_Spawner : MonoBehaviour {
             break;
 
         case EliteBehavior.QuickStrafe: // Wave 4
-            W(ft_ep(), nb_go(0, 20, 0, -30, 15), lb_no(), at_lt(0.5f), xt_im(), xb_go(0, 1, 20), 0f);
+            W(ft_ep(), nb_go(0, 20, 0, -25, 15), lb_no(), at_hm(0.5f), xt_im(), xb_go(0, 1, 20), 0f);
             break;
 
         case EliteBehavior.HangBehind: // Wave 5
-            W(ft_eb(), nb_go(0, -15, 0, -10, 10.0f), lb_lz(-13, -10, 13, -10, 2.0f), at_lt(2), xt_no(), xb_go(0, 20, 14), 0);
+            W(ft_ep(), nb_go(0, 40, 0, -10, 15), lb_lz(-13, -9, 13, -9, 2.5f), at_lt(1.5f), xt_tm(17.5f), xb_go(0, 1, 20), 1f);
             break;
 
         case EliteBehavior.DownStrafe: // Wave 6
@@ -491,15 +481,21 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                     else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidCinematic)
                     {
                         asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
-                        musicManager.FadeInSongs(2, new int[] { 1 });
+                        if (musicManager)
+                        {
+                            musicManager.FadeInSongs(2, new int[] { 1 });
+                        }
                         //print("Here 1");
                     }
 
                     else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidGameplay)
                     {
                         asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_GAMEPLAY;
-                        musicManager.FadeOutSongs(2, new int[] { 0, 1 });
-                        musicManager.FadeInTransitions(2, new int[] { 2 }, 2, new int[] { 3 }, 6.76f);
+                        if (musicManager)
+                        {
+                            musicManager.FadeOutSongs(2, new int[] { 0, 1 });
+                            musicManager.FadeInTransitions(2, new int[] { 2 }, 2, new int[] { 3 }, 6.76f);
+                        }
                         //print("Here 2");
                     }
 
