@@ -78,7 +78,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */
 
-        /*
+        ///*
         
         //E(EliteBehavior.Test);
         // Scout Ship
@@ -108,7 +108,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          
         //----------------------------------------------------------------------------------------------
          
-        /*
+        
 
         W(ft_hl(5), nb_go(-8, 20, -8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), -0.1f);
         W(ft_hl(5), nb_go(8, 20, 8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0.0f);
@@ -210,9 +210,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_hl(2), nb_go(-10, 40, -10, 10, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-12, 40, -12, 6, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
-
-        //*/
+        W(ft_vl(4), nb_go(-12, 40, -12, 6, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);        
 
         //----------------------------------------------------------------------------------------------
 
@@ -271,34 +269,94 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_hl(7), nb_go(-8, -45, -8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
         W(ft_hl(7), nb_go( 8, -45,  8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
 
+        //*/
 
         //----------------------------------------------------------------------------------------------
 
-        // Filler Wave 1        
+        const int numDiamondWaves = 12;
+        const float diamondWaveDelay = 2.5f;
 
-        W(ft_hl(4), nb_go(15, 15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), -0.01f);
-        W(ft_hl(4), nb_go(-15, 15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), 1.5f);        
+        //Elite quick visit during the diamond waves
+        E(EliteBehavior.PreFinalBattle);   
 
-        //Elite quick visit
-        E(EliteBehavior.PreFinalBattle);        
+        // Diamond Waves
+        for (int i = 0; i < numDiamondWaves; i++)
+        {
+            float xVal = Random.Range(-12f, 12f);
+            float yNegation = Random.Range(-1.0f, 1.0f);
+            if (i % 4 == 0)
+            {
+                /*
+                Formation Type (D = Down Laser, T = Target Laser, H = Homing Missile
+                    D
+                  T H T
+                    D
+                */
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation) + 2, xVal, -8 * Mathf.Sign(yNegation) + 2, 3.5f), lb_no(), at_ld(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Upper Ship
+                W(ft_hl(1), nb_go(xVal - 2, 20 * Mathf.Sign(yNegation), xVal - 2, -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_lt(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Right Ship
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation), xVal,     -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_hm(3.5f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Ship
+                W(ft_hl(1), nb_go(xVal + 2, 20 * Mathf.Sign(yNegation), xVal + 2, -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_lt(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Left Ship
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation) - 2, xVal, -8 * Mathf.Sign(yNegation) - 2, 3.5f), lb_no(), at_ld(6.0f), xt_im(), xb_go(-xVal, 0, 20), diamondWaveDelay); // Lower Ship
+            }
 
-        // Filler Wave 2
-        W(ft_hl(3), nb_go(20, 8, 0, 2), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(20, 8, 0, -2), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(-20, 8, 5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(-20, 8, -5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
+            if (i % 4 == 1)
+            {
+                /*
+                Formation Type (D = Down Laser, T = Target Laser, H = Homing Missile
+                    T
+                  D H D
+                    T
+                */
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation) + 2, xVal, -8 * Mathf.Sign(yNegation) + 2, 3.5f), lb_no(), at_lt(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Upper Ship
+                W(ft_hl(1), nb_go(xVal - 2, 20 * Mathf.Sign(yNegation), xVal - 2, -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_ld(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Right Ship
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation), xVal,     -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_hm(3.5f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Ship
+                W(ft_hl(1), nb_go(xVal + 2, 20 * Mathf.Sign(yNegation), xVal + 2, -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_ld(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Left Ship
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation) - 2, xVal, -8 * Mathf.Sign(yNegation) - 2, 3.5f), lb_no(), at_lt(6.0f), xt_im(), xb_go(-xVal, 0, 20), diamondWaveDelay); // Lower Ship
+            }
+
+            if (i % 4 == 2)
+            {
+                /*
+                Formation Type (D = Down Laser, T = Target Laser, H = Homing Missile
+                    D
+                  D H D
+                    D
+                */
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation) + 2, xVal, -8 * Mathf.Sign(yNegation) + 2, 3.5f), lb_no(), at_ld(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Upper Ship
+                W(ft_hl(1), nb_go(xVal - 2, 20 * Mathf.Sign(yNegation), xVal - 2, -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_ld(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Right Ship
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation), xVal,     -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_hm(3.5f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Ship
+                W(ft_hl(1), nb_go(xVal + 2, 20 * Mathf.Sign(yNegation), xVal + 2, -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_ld(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Left Ship
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation) - 2, xVal, -8 * Mathf.Sign(yNegation) - 2, 3.5f), lb_no(), at_ld(6.0f), xt_im(), xb_go(-xVal, 0, 20), diamondWaveDelay); // Lower Ship
+            }
+
+            if (i % 4 == 3)
+            {
+                /*
+                Formation Type (D = Down Laser, T = Target Laser, H = Homing Missile
+                    T
+                  T H T
+                    T
+                */
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation) + 2, xVal, -8 * Mathf.Sign(yNegation) + 2, 3.5f), lb_no(), at_lt(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Upper Ship
+                W(ft_hl(1), nb_go(xVal - 2, 20 * Mathf.Sign(yNegation), xVal - 2, -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_lt(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Right Ship
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation), xVal,     -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_hm(3.5f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Ship
+                W(ft_hl(1), nb_go(xVal + 2, 20 * Mathf.Sign(yNegation), xVal + 2, -8 * Mathf.Sign(yNegation), 3.5f), lb_no(), at_lt(6.0f), xt_im(), xb_go(-xVal, 0, 20), 0); // Middle Left Ship
+                W(ft_hl(1), nb_go(xVal,     20 * Mathf.Sign(yNegation) - 2, xVal, -8 * Mathf.Sign(yNegation) - 2, 3.5f), lb_no(), at_lt(6.0f), xt_im(), xb_go(-xVal, 0, 20), diamondWaveDelay); // Lower Ship
+            }
+        }
+
+        //----------------------------------------------------------------------------------------------
 
         /*MAYBE HAVE THESE FINAL BLOCKADE WAVES MOVE INTO EACH OTHER IN AN ATTEMPT TO CRUSH THE PLAYER IN BETWEEN ON EXIT*/
 
         // Final Blockade Bottom
-        W(ft_hl(11), nb_go(0, -30, 0, -6, 3), lb_no(), at_hm(12.0f), xt_no(), xb_no(), -0.1f);
-        W(ft_hl(9), nb_go(0, -28, 0, -4, 3), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(7), nb_go(0, -26, 0, -2, 3), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 1.5f);
+        W(ft_hl(11), nb_go(0, -30, 0, -6, 3), lb_no(), at_no(), xt_tm(15.0f), xb_go(0, 1, 10), -0.1f);
+        W(ft_hl(9), nb_go(0, -28, 0, -4, 3), lb_no(), at_no(), xt_tm(15.0f), xb_go(0, 1, 10), 0f);
+        W(ft_hl(7), nb_go(0, -26, 0, -2, 3), lb_no(), at_hm(12.0f), xt_tm(15.0f), xb_go(0, 1, 10), 1.5f);
 
         // Final Blockade Top
-        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(15.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 28, 0, 8), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 26, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 0f);
+        W(ft_gd(15, 3), nb_go(0, 30, 0, 8), lb_no(), at_ld(10.0f), xt_tm(15.0f), xb_go(0, -1, 10), 0f);
+        
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.1f);
