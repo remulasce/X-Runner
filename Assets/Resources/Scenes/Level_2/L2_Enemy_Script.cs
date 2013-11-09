@@ -25,6 +25,10 @@ public class L2_Enemy_Script : MonoBehaviour {
 
     // Detonator
     private Detonator explosion;
+
+    //Help with AI loitering
+    public float nextLoiterChange;
+    public int curWaypoint = 0;
 	
 	// Use this for initialization
 	void Start () {
@@ -83,19 +87,18 @@ public class L2_Enemy_Script : MonoBehaviour {
 	
 	void DoLoiter()
 	{
-		switch (wave.xt.type)
-		{
-		case SpawnTDS.ExitTrigger.T.ExitImmediately:
-			SetLifeState (LifeState.Exit);
-			break;
-		case SpawnTDS.ExitTrigger.T.ExitAfter:
-			if ((Time.time - this.lastStateTime) > wave.xt.exitTime)
-			{
-				SetLifeState(LifeState.Exit);
-			}
-			break;
-		}
-		//No need to check for "Dont Exit" case.
+        switch (wave.xt.type)
+        {
+            case SpawnTDS.ExitTrigger.T.ExitImmediately:
+                SetLifeState(LifeState.Exit);
+                break;
+            case SpawnTDS.ExitTrigger.T.ExitAfter:
+                if ((Time.time - this.lastStateTime) > wave.xt.exitTime)
+                {
+                    SetLifeState(LifeState.Exit);
+                }
+                break;
+        }
 	}
 	
 	//This will not check if we're already in the state
