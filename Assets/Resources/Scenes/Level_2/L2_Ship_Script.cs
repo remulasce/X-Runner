@@ -437,7 +437,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                 Destroy(col.gameObject);
             }
 
-            if (!this.isShielded)
+            if (!this.isShielded && !col.gameObject.name.Contains("Elite"))
             {
                 explosion.transform.position = this.transform.position;
                 explosion.Explode();

@@ -115,9 +115,6 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         E(EliteBehavior.QuickStrafe);
         
         //----------------------------------------------------------------------------------------------
-        
-        // Begin spawning the cinematic asteroids (no physics, background stuff).
-        W(ft_ac());
 
         // Second Blockade + Suicidal Ships
         W(ft_gd(15, 1), nb_go(0, 40, 0, -100, 15), lb_no(), at_no(), xt_no(), xb_no(), 2f);
@@ -144,8 +141,11 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         E(EliteBehavior.DownStrafe);
 
+        // Begin spawning the cinematic asteroids (no physics, background stuff).
+        W(ft_ac());
+
         // Giant Vertical Wave
-        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 3.0f), lb_no(), at_hm(12f), xt_im(), xb_go(0, -1, 17.5f), -.000000001f);        
+        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 3.0f), lb_no(), at_hm(21f), xt_im(), xb_go(0, -1, 15f), -.000000001f);        
 
         //----------------------------------------------------------------------------------------------
 
@@ -218,7 +218,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         //----------------------------------------------------------------------------------------------
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the previous blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -1.5f);
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.001f);
 
         // Traversal Wave
 
@@ -354,18 +354,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
             }
         }
 
-        //----------------------------------------------------------------------------------------------
-
-        /*MAYBE HAVE THESE FINAL BLOCKADE WAVES MOVE INTO EACH OTHER IN AN ATTEMPT TO CRUSH THE PLAYER IN BETWEEN ON EXIT*/
-
-        // Final Blockade Bottom
-        W(ft_hl(11), nb_go(0, -30, 0, -6, 3), lb_no(), at_no(), xt_tm(7.0f), xb_go(0, 1, 10), -0.1f);
-        W(ft_hl(9), nb_go(0, -28, 0, -4, 3), lb_no(), at_no(), xt_tm(7.0f), xb_go(0, 1, 10), 0f);
-        W(ft_hl(7), nb_go(0, -26, 0, -2, 3), lb_no(), at_hm(12.0f), xt_tm(7.0f), xb_go(0, 1, 10), 1.5f);
-
-        // Final Blockade Top
-        W(ft_gd(15, 3), nb_go(0, 30, 0, 8), lb_no(), at_ld(10.0f), xt_tm(5.5f), xb_go(0, -1, 10), 0f);
-        
+        //----------------------------------------------------------------------------------------------        
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.1f);
@@ -407,7 +396,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		{
 		
         case EliteBehavior.PreFinalBattle:
-                W(ft_ef(), nb_go(-20, 0, 20, 0, 10), lb_wp(new float[] { -20, 0, 20, 0 }, 2.0f, 10), at_lt(0.65f), xt_tm(55), xb_go(0, 1, 30), 0);
+                W(ft_ef(), nb_go(-20, 0, 20, 0, 10), lb_wp(new float[] { -20, 0, 20, 0 }, 0.0f, 10f), at_lt(0.65f), xt_tm(60), xb_go(0, 1, 30), 0);
             break;
 		case EliteBehavior.FinalBattle:
 			W (ft_ef(), nb_go (0, 20, 0, 0), lb_lz(-13, 7, 13, 7, 2.5f)/*lb_no()*/, at_hm(4), xt_no (), xb_no (), 0);            
@@ -439,7 +428,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
             break;
 
         case EliteBehavior.FollowWave: // Wave 9
-            W(ft_ep(), nb_go(0, -15, 0, 10, 3.0f), lb_lz(-13, 10, 13, 10, 3.0f, 5.0f), at_hm(3.25f), xt_tm(52.5f), xb_go(-1, -1, 20), 6.5f);
+            W(ft_ep(), nb_go(0, -15, 0, 10, 3.0f), lb_lz(-13, 10, 13, 10, 3.0f, 5.0f), at_hm(3.25f), xt_tm(55f), xb_go(-1, -1, 20), 6.5f);
             break;    
 			
 		}
