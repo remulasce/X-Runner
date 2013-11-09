@@ -78,7 +78,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */
 
-        /*
+        ///*
         //E(EliteBehavior.Test);
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
@@ -103,7 +103,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                
         W(ft_hl(5), nb_go(-8, 20, -8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), -0.1f);
         W(ft_hl(5), nb_go(8, 20, 8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0.0f);
-        (EliteBehavior.QuickStrafe);        
+        E(EliteBehavior.QuickStrafe);
 
         // Begin spawning the cinematic asteroids (no physics, background stuff).
         W(ft_ac());
@@ -116,12 +116,25 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         //Elite quick visit
         E(EliteBehavior.HangBehind);         
 
-        W(ft_gd(15, 4), nb_go(0, 40, 0, 6, 15), lb_lz(0, 8, 0, 0, 5.0f, 4.0f), at_lt(10), xt_no(), xb_no(), 0f);
+        W(ft_gd(15, 4), nb_go(0, 40, 0, 6, 15), lb_lz(0, 8, 0, 0, 5.0f, 4.0f), at_lt(15), xt_no(), xb_no(), 0f);
+
+        //*/                
+
+        // Navigation Dodging Practice + Elite Strafe
         
-        //*/
+        W(ft_vl(4), nb_go(30,  5, -14,  5, 10), lb_lz(-14, 0, 0, 0, 3.0f, 5.0f), at_hm(10), xt_no(), xb_go(45, 0, 10), -0.1f);
+        W(ft_vl(4), nb_go(30, -5, -14, -5, 10), lb_lz(-14, 0, 0, 0, 3.0f, 5.0f), at_hm(10), xt_no(), xb_go(45, 0, 10), 0f);
+
+        W(ft_vl(4), nb_go(-30,  5, 14,  5, 10), lb_lz(0, 0, 14, 0, 3.0f, 5.0f), at_hm(10), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_vl(4), nb_go(-30, -5, 14, -5, 10), lb_lz(0, 0, 14, 0, 3.0f, 5.0f), at_hm(10), xt_no(), xb_go(45, 0, 10), 0f);        
+
+        W(ft_hl(5), nb_go( 8, -30,  8, 10, 10), lb_lz(0, 10, 0, 0, 3.0f, 5.0f), at_ld(10), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_hl(5), nb_go(-8, -30, -8, 10, 10), lb_lz(0, 10, 0, 0, 3.0f, 5.0f), at_ld(10), xt_no(), xb_go(45, 0, 10), 3.5f);
+
+        E(EliteBehavior.DownStrafe);
 
         // Giant Vertical Wave
-        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 5.0f), lb_no(), at_hm(12), xt_im(), xb_go(0, -1, 10f), -.000000001f);
+        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 5.0f), lb_no(), at_hm(10.5f), xt_im(), xb_go(0, -1, 13.5f), -.000000001f);
         
         // Filler Wave 1
         W(ft_hl(4), nb_go(15, 15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), -0.01f);
@@ -136,10 +149,12 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_hl(3), nb_go(-20, 8, 5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
         W(ft_hl(3), nb_go(-20, 8, -5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
 
+        /*MAYBE HAVE THESE FINAL BLOCKADE WAVES MOVE INTO EACH OTHER IN AN ATTEMPT TO CRUSH THE PLAYER IN BETWEEN ON EXIT*/
+
         // Final Blockade Bottom
-        W(ft_hl(11), nb_go(0, -30, 0, -6), lb_no(), at_hm(12.0f), xt_no(), xb_no(), -0.1f);
-        W(ft_hl(9), nb_go(0, -28, 0, -4), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(7), nb_go(0, -26, 0, -2), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 1.5f);
+        W(ft_hl(11), nb_go(0, -30, 0, -6, 3), lb_no(), at_hm(12.0f), xt_no(), xb_no(), -0.1f);
+        W(ft_hl(9), nb_go(0, -28, 0, -4, 3), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(7), nb_go(0, -26, 0, -2, 3), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 1.5f);
 
         // Final Blockade Top
         W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(15.0f), xt_no(), xb_no(), 0f);
@@ -206,15 +221,15 @@ public class L2_Enemy_Spawner : MonoBehaviour {
             break;
 
         case EliteBehavior.QuickStrafe: // Wave 4
-            W(ft_ep(), nb_go(0, 20, 0, -25, 15), lb_no(), at_hm(0.5f), xt_im(), xb_go(0, 1, 20), 0f);
+            W(ft_ep(), nb_go(0, 20, 0, -25, 15), lb_no(), at_hm(0.5f), xt_im(), xb_go(0, 1, 20), 5);
             break;
 
         case EliteBehavior.HangBehind: // Wave 5
-            W(ft_ep(), nb_go(0, 40, 0, -10, 15), lb_lz(-13, -9, 13, -9, 2.5f), at_lt(1.5f), xt_tm(17.5f), xb_go(0, 1, 20), 1f);
+            W(ft_ep(), nb_go(0, 40, 0, -10, 15), lb_lz(-13, -9, 13, -9, 2.5f), at_lt(1.75f), xt_tm(22.5f), xb_go(0, 1, 20), 1f);
             break;
 
         case EliteBehavior.DownStrafe: // Wave 6
-            W(ft_eb(), nb_go(0, -15, 0, -10, 10.0f), lb_lz(-13, -10, 13, -10, 2.0f), at_lt(2), xt_no(), xb_go(0, 20, 14), 0);
+            W(ft_ep(), nb_go(0, 20, 0, -25, 15), lb_no(), at_hm(0.5f), xt_im(), xb_go(0, -1, 20), 0f);
             break;
 
         case EliteBehavior.FollowWave: // Wave 9
