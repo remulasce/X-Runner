@@ -83,46 +83,33 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
 
+
+
+        // Inital Fighter Wave
+        W(ft_hl(5), nb_go(-10, 15, 0, 0, 15), lb_no(), at_ld(4.0f), xt_im(), xb_go(45, 0, 5), 1.0f);
+
         //Elite makes a pass at you
         E(EliteBehavior.QuickPass);
 
-        // Inital Fighter Wave
-        W(ft_hl(5), nb_go(-10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go(45, 0), 1f);
-        W(ft_hl(5), nb_go(10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go(-45, 0), 6.5f);
-
-        // First Blockade
-		
-		/* Test Grid 
-        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(13), nb_go(0, 28, 0, 8), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(11), nb_go(0, 26, 0, 6), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
-        */
-		//grid
-		W(ft_gd(13, 3), nb_go(0, 30, 0, 8), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
+        W(ft_hl(5), nb_go(10, 15, 0, 0, 15), lb_no(), at_ld(4.0f), xt_im(), xb_go(-45, 0, 5), 6.5f);                
         
         //vertical line
-		
-        E(EliteBehavior.HangBehind);
-        W(ft_vl(3), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
 
+        // First Blockade
+        W(ft_vl(7),    nb_go(-25, 3, -8, 1, 5), lb_no(), at_no(), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_vl(7),    nb_go(25, 3, 8, 1, 5),   lb_no(), at_no(), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_hl(9),    nb_go(0, -25, 0, -7, 5), lb_no(), at_no(), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_gd(7, 5), nb_go(0, 25, 0, 3, 5),   lb_no(), at_ld(20), xt_no(), xb_no(), 0f);
 
-        // Second Fighter Wave
-        W(ft_hl(3), nb_go(15, -15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), -1f);
-        W(ft_hl(3), nb_go(-15, -15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 3f);
-
-        W(ft_hl(3), nb_go(-15, 15, 0, -5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 0f);
-        W(ft_hl(3), nb_go(15, 15, 0, -7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 1.5f);
-        E(EliteBehavior.QuickPass);
-
-
-        // Third Fighter Wave
-        W(ft_hl(3), nb_go(25, 8, 0, 2), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(25, 8, 0, -2), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(-25, 8, 5, 0), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(-25, 8, -5, 0), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
+        E(EliteBehavior.CircleStrafe);
+        
+        //*/        
+        W(ft_hl(7), nb_go(-8, 20, -8, -30, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), -0.1f);
+        W(ft_hl(7), nb_go(8, 20, 8, -30, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0.0f);
+        E(EliteBehavior.QuickStrafe);
 
         // Second Blockade
-        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), -.01f);
+        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), -0.1f);
         W(ft_hl(15), nb_go(0, 28, 0, 8), lb_no(), at_lt(7.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(13), nb_go(0, 26, 0, 6), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
         W(ft_hl(11), nb_go(0, 24, 0, 4), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
@@ -199,7 +186,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         waveList.Add(new SpawnTDS.Wave(f));
     }
 
-    enum EliteBehavior { Test, QuickPass, HangBehind, FinalBattle, PreFinalBattle};
+    enum EliteBehavior { Test, QuickPass, HangBehind, FinalBattle, PreFinalBattle, CircleStrafe, QuickStrafe, DownStrafe, FollowWave};
 	/* Calls to the Elite. These really all get put into a Wave, which gets treated specially.
 	 * It's really only coded to do the ~3 things I need the Elite to do right now.
 	 */
@@ -207,13 +194,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	{
 		switch (e)
 		{
-		case EliteBehavior.QuickPass:
-			//W (SpawnTDS.FormationType.T.ElitePass, nb_go);
-			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, 1, 14), 0f);
-			break;
-		case EliteBehavior.HangBehind:
-			W (ft_eb(), nb_go (-15, 12, 0, 8), lb_lz(-14, 8, 14, 8, 2), at_lt(2), xt_tm (10), xb_go(0, 20, 14), 0);
-			break;
+		
         case EliteBehavior.PreFinalBattle:
             W(ft_ef(), nb_go(-20, 2, 20, 2), lb_no(), at_ld(0.35f), xt_no(), xb_no(), 0);            
             break;
@@ -221,9 +202,34 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 			W (ft_ef(), nb_go (0, 20, 0, 0), lb_lz(-13, 7, 13, 7, 2.5f)/*lb_no()*/, at_hm(4), xt_no (), xb_no (), 0);            
 			break;
 		case EliteBehavior.Test:
-			W (ft_eb(), nb_go (-15, 12, -12, 12), lb_wp (new float[] { -12, 10, 12, 10, -12, -2, 12, -2, -12, 10 }, 5f), 
-				at_hm(3), xt_tm(100), xb_go(0, 1),5);
+			W (ft_eb(), nb_go (-15, 12, -12, 12), lb_wp (new float[] { -12, 10, 12, 10, -12, -2, 12, -2, -12, 15 }, 2.5f), 
+				at_hm(3), xt_no(), xb_go(0, 1), 5);
 			break;
+
+        // Cases for the L2 Redesign
+        case EliteBehavior.QuickPass: // Wave 2
+            W(ft_ep(), nb_go(0, 30, 0, 6, 15), lb_no(), at_lt(0.40f), xt_tm(10.0f), xb_go(1, 0, 15), 0f);
+            break;
+
+        case EliteBehavior.CircleStrafe: // Wave 3
+            W(ft_ep(), nb_go(-20, 10, -14, 10, 15), lb_wp (new float[] { 14, 10, -14, 10, -14, -10, 14, -10 }, 0.0f, 20f), at_lt(1), xt_tm(15), xb_go(0, 1, 20), 0f);
+            break;
+
+        case EliteBehavior.QuickStrafe: // Wave 4
+            W(ft_ep(), nb_go(0, 20, 0, -30, 15), lb_no(), at_lt(0.5f), xt_im(), xb_go(0, 1, 20), 0f);
+            break;
+
+        case EliteBehavior.HangBehind: // Wave 5
+            W(ft_eb(), nb_go(0, -15, 0, -10, 10.0f), lb_lz(-13, -10, 13, -10, 2.0f), at_lt(2), xt_no(), xb_go(0, 20, 14), 0);
+            break;
+
+        case EliteBehavior.DownStrafe: // Wave 6
+            W(ft_eb(), nb_go(0, -15, 0, -10, 10.0f), lb_lz(-13, -10, 13, -10, 2.0f), at_lt(2), xt_no(), xb_go(0, 20, 14), 0);
+            break;
+
+        case EliteBehavior.FollowWave: // Wave 9
+            W(ft_eb(), nb_go(0, -15, 0, -10, 10.0f), lb_lz(-13, -10, 13, -10, 2.0f), at_lt(2), xt_no(), xb_go(0, 20, 14), 0);
+            break;    
 			
 		}
 	}

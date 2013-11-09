@@ -69,6 +69,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
     private bool aboutToDoTransition = false;
     private bool isShotDown = false;
 	
+    // Special case bool for elite
+    private bool wasHitByElite = false;
 	
 	public bool IsDead() { return isDead; }
     public Vector3 GetPosition() { return transform.position; }
@@ -380,12 +382,16 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                 }
             }
 
-            if (!this.isShielded)
+            if (!this.isShielded || col.gameObject.name.Contains("Elite"))
             {
                 explosion.transform.position = this.transform.position;
                 explosion.Explode();
                 isDead = true;
                 this.transform.position = new Vector3(0, 0, 1000);
+                if (col.gameObject.name.Contains("Elite"))
+                {
+                    wasHitByElite = true;
+                }
                 StartCoroutine("Respawn");
             }            
         }
@@ -463,8 +469,15 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         this.transform.GetChild(0).localScale = new Vector3(shieldSize, shieldSize, shieldSize);
         print("Shielded!");
         yield return new WaitForSeconds(shieldTime);
-        this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
-        print("NOT Shielded...");
-        isShielded = false;
+        if (!wasHitByElite)
+        {
+            this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
+            print("NOT Shielded...");
+            isShielded = false;
+        }
+        else
+        {
+            wasHitByElite = false;
+        }
     }
 }

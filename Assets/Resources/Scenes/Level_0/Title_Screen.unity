@@ -1114,6 +1114,10 @@ Prefab:
       propertyPath: playOnStart
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b43cb591cff9fa04e8a714c34d756307, type: 2}
+      propertyPath: triggerType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b43cb591cff9fa04e8a714c34d756307, type: 2}
   m_RootGameObject: {fileID: 1502745819}
@@ -2024,7 +2028,7 @@ MonoBehaviour:
   postTransitionLevelChoice: 0
   postTransitionDelay: 0
   postTransitionMusicChoices: 
-  triggerType: 0
+  triggerType: 4
   tagToCompareFor: Player
 --- !u!4 &1502745821
 Transform:
