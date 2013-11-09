@@ -160,60 +160,60 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         // Blocks - Each Alternate between furing homing and target missiles
 
         // Horizontal Line Block
-        W(ft_hl(4), nb_go(10, 40, 10, 4, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(4), nb_go(10, 30, 10, 4, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-14, 40, -14, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_vl(4), nb_go(-14, 30, -14, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // S Block
-        W(ft_hl(2), nb_go(4, 40, 4, 4, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(6, 40, 6, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(4, 30, 4, 4, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(6, 30, 6, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(3), nb_go( 0, 40,  0, 4, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-2, 40, -2, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(3), nb_go( 0, 30,  0, 4, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-2, 30, -2, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // S Block
-        W(ft_hl(2), nb_go(2, 40,  0, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(0, 40, -2, 8, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(2, 30,  0, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(0, 30, -2, 8, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-4, 40, -4, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_vl(4), nb_go(-4, 30, -4, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // T Block
-        W(ft_hl(1), nb_go(4, 40, 4, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(3), nb_go(4, 40, 4, 8, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(1), nb_go(4, 30, 4, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(3), nb_go(4, 30, 4, 8, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(3), nb_go(12, 40, 12, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(14, 40, 14, 8, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(3), nb_go(12, 30, 12, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(14, 30, 14, 8, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(3), nb_go(-8,  40, -8,  4, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-10, 40, -10, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(3), nb_go(-8,  30, -8,  4, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-10, 30, -10, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(2), nb_go(-8, 40, -8, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-6, 40, -6, 8, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-6, 40, -6, 10, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(-8, 30, -8, 6, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-6, 30, -6, 8, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-6, 30, -6, 10, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // S Block
-        W(ft_hl(2), nb_go(10, 40, 10, 8, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(12, 40, 12, 10, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(10, 30, 10, 8, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(12, 30, 12, 10, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // T Block
-        W(ft_hl(1), nb_go(8, 40, 8, 8, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(3), nb_go(8, 40, 8, 10, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(1), nb_go(8, 30, 8, 8, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(3), nb_go(8, 30, 8, 10, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Horizontal Line Block
-        W(ft_hl(4), nb_go(0, 40, 0, 10, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(4), nb_go(0, 30, 0, 10, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Square Block
-        W(ft_hl(2), nb_go(-10, 40, -10, 8, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(-10, 40, -10, 10, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(-10, 30, -10, 8, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(-10, 30, -10, 10, 20), lb_no(), at_lt(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-12, 40, -12, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);        
+        W(ft_vl(4), nb_go(-12, 30, -12, 6, 20), lb_no(), at_hm(10.5f), xt_no(), xb_go(45, 0, 10), 0.25f);        
 
         //----------------------------------------------------------------------------------------------
 
