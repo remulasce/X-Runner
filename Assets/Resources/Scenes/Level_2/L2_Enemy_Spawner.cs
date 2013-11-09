@@ -134,7 +134,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         E(EliteBehavior.DownStrafe);
 
         // Giant Vertical Wave
-        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 5.0f), lb_no(), at_hm(10.5f), xt_im(), xb_go(0, -1, 13.5f), -.000000001f);
+        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 6.0f), lb_no(), at_hm(10f), xt_im(), xb_go(0, -1, 13.5f), -.000000001f);
         
         // Filler Wave 1
         W(ft_hl(4), nb_go(15, 15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), -0.01f);
@@ -225,7 +225,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
             break;
 
         case EliteBehavior.HangBehind: // Wave 5
-            W(ft_ep(), nb_go(0, 40, 0, -10, 15), lb_lz(-13, -9, 13, -9, 2.5f), at_lt(1.75f), xt_tm(22.5f), xb_go(0, 1, 20), 1f);
+            W(ft_ep(), nb_go(0, 40, 0, -10, 15), lb_lz(-13, -9, 13, -9, 2.5f), at_lt(1.75f), xt_tm(19.5f), xb_go(0, 1, 20), 1f);
             break;
 
         case EliteBehavior.DownStrafe: // Wave 6
