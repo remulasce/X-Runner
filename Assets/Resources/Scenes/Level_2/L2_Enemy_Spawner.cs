@@ -120,9 +120,9 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_ac());
 
         // Second Blockade + Suicidal Ships
-        W(ft_gd(15, 1), nb_go(0, 40, 0, -100, 15), lb_no(), at_lt(17.5f), xt_no(), xb_no(), 2f);
-        W(ft_gd(15, 2), nb_go(0, 40, 0, -100, 15), lb_no(), at_lt(17.5f), xt_no(), xb_no(), 2f);
-        W(ft_gd(15, 3), nb_go(0, 40, 0, -100, 15), lb_no(), at_lt(17.5f), xt_no(), xb_no(), 2f);
+        W(ft_gd(15, 1), nb_go(0, 40, 0, -100, 15), lb_no(), at_no(), xt_no(), xb_no(), 2f);
+        W(ft_gd(15, 2), nb_go(0, 40, 0, -100, 15), lb_no(), at_no(), xt_no(), xb_no(), 2f);
+        W(ft_gd(15, 3), nb_go(0, 40, 0, -100, 15), lb_no(), at_no(), xt_no(), xb_no(), 2f);
 
         //Elite quick visit
         E(EliteBehavior.HangBehind);         
@@ -145,11 +145,14 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         E(EliteBehavior.DownStrafe);
 
         // Giant Vertical Wave
-        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 6.0f), lb_no(), at_hm(10f), xt_im(), xb_go(0, -1, 13.5f), -.000000001f);        
+        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 3.0f), lb_no(), at_hm(12f), xt_im(), xb_go(0, -1, 17.5f), -.000000001f);        
 
         //----------------------------------------------------------------------------------------------
 
         // Tetris Wave
+
+        // SUPER HACK ALERT -- this is done to block the ships from coming in until all of the ships from the previous blockade are destroyed
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.1f);
 
         // Meat Shield
         W(ft_gd(15, 3), nb_go(0, 40, 0, 0, 20), lb_lz(0, 8, 0, 0, 5.0f, 4.0f), at_no(), xt_no(), xb_no(), 1f); 
@@ -157,69 +160,72 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         // Blocks - Each Alternate between furing homing and target missiles
 
         // Horizontal Line Block
-        W(ft_hl(4), nb_go(10, 40, 10, 4, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(4), nb_go(10, 40, 10, 4, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-14, 40, -14, 6, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_vl(4), nb_go(-14, 40, -14, 6, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // S Block
-        W(ft_hl(2), nb_go(4, 40, 4, 4, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(6, 40, 6, 6, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(4, 40, 4, 4, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(6, 40, 6, 6, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(3), nb_go( 0, 40,  0, 4, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-2, 40, -2, 6, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(3), nb_go( 0, 40,  0, 4, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-2, 40, -2, 6, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // S Block
-        W(ft_hl(2), nb_go(2, 40,  0, 6, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(0, 40, -2, 8, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(2, 40,  0, 6, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(0, 40, -2, 8, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-4, 40, -4, 6, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_vl(4), nb_go(-4, 40, -4, 6, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // T Block
-        W(ft_hl(1), nb_go(4, 40, 4, 6, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(3), nb_go(4, 40, 4, 8, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(1), nb_go(4, 40, 4, 6, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(3), nb_go(4, 40, 4, 8, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(3), nb_go(12, 40, 12, 6, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(14, 40, 14, 8, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(3), nb_go(12, 40, 12, 6, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(14, 40, 14, 8, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(3), nb_go(-8,  40, -8,  4, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-10, 40, -10, 6, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(3), nb_go(-8,  40, -8,  4, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-10, 40, -10, 6, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(2), nb_go(-8, 40, -8, 6, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-6, 40, -6, 8, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-6, 40, -6, 10, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(-8, 40, -8, 6, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-6, 40, -6, 8, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-6, 40, -6, 10, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // S Block
-        W(ft_hl(2), nb_go(10, 40, 10, 8, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(12, 40, 12, 10, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(10, 40, 10, 8, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(12, 40, 12, 10, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // T Block
-        W(ft_hl(1), nb_go(8, 40, 8, 8, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(3), nb_go(8, 40, 8, 10, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(1), nb_go(8, 40, 8, 8, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(3), nb_go(8, 40, 8, 10, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Horizontal Line Block
-        W(ft_hl(4), nb_go(0, 40, 0, 10, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(4), nb_go(0, 40, 0, 10, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Square Block
-        W(ft_hl(2), nb_go(-10, 40, -10, 8, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(-10, 40, -10, 10, 20), lb_no(), at_lt(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(-10, 40, -10, 8, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(-10, 40, -10, 10, 20), lb_no(), at_lt(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-12, 40, -12, 6, 20), lb_no(), at_hm(17.5f), xt_no(), xb_go(45, 0, 10), 0.25f);        
+        W(ft_vl(4), nb_go(-12, 40, -12, 6, 20), lb_no(), at_hm(11.5f), xt_no(), xb_go(45, 0, 10), 0.25f);        
 
         //----------------------------------------------------------------------------------------------
+
+        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the previous blockade are destroyed
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -1.5f);
 
         // Traversal Wave
 
         // Each Row Will have a space between it
 
         E(EliteBehavior.FollowWave);
-        W(ft_hl(6), nb_go(-10, -15, -10, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(6), nb_go(-10, -15, -10, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0f);
         W(ft_hl(6), nb_go(8,   -15,   8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
 
         W(ft_hl(5), nb_go(-10, -17, -10, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
@@ -247,29 +253,32 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         W(ft_hl(7), nb_go( 0,  -31,   0, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(3), nb_go(-12, -33, -12, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(3), nb_go( 12, -33,  12, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(3), nb_go(-12, -33, -12, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(3), nb_go( 12, -33,  12, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
         W(ft_hl(5), nb_go(  0, -33,   0, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(4), nb_go(-12, -35, -12, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(4), nb_go( 10, -35,  10, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(4), nb_go(-12, -35, -12, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(4), nb_go( 10, -35,  10, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(6), nb_go(-10, -37, -10, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(6), nb_go(  8, -37,   8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(6), nb_go(-10, -37, -10, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(6), nb_go(  8, -37,   8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(6), nb_go(-10, -39, -10, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(6), nb_go(  8, -39,   8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(6), nb_go(-10, -39, -10, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(6), nb_go(  8, -39,   8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(7), nb_go(-8, -41, -8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(7), nb_go( 8, -41,  8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go(-8, -41, -8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go( 8, -41,  8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(7), nb_go(-8, -43, -8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(7), nb_go( 8, -43,  8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go(-8, -43, -8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go( 8, -43,  8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(7), nb_go(-8, -45, -8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(7), nb_go( 8, -45,  8, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go(-8, -45, -8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go( 8, -45,  8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
 
         //*/
+
+        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.1f);
 
         //----------------------------------------------------------------------------------------------
 
@@ -350,12 +359,12 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         /*MAYBE HAVE THESE FINAL BLOCKADE WAVES MOVE INTO EACH OTHER IN AN ATTEMPT TO CRUSH THE PLAYER IN BETWEEN ON EXIT*/
 
         // Final Blockade Bottom
-        W(ft_hl(11), nb_go(0, -30, 0, -6, 3), lb_no(), at_no(), xt_tm(15.0f), xb_go(0, 1, 10), -0.1f);
-        W(ft_hl(9), nb_go(0, -28, 0, -4, 3), lb_no(), at_no(), xt_tm(15.0f), xb_go(0, 1, 10), 0f);
-        W(ft_hl(7), nb_go(0, -26, 0, -2, 3), lb_no(), at_hm(12.0f), xt_tm(15.0f), xb_go(0, 1, 10), 1.5f);
+        W(ft_hl(11), nb_go(0, -30, 0, -6, 3), lb_no(), at_no(), xt_tm(7.0f), xb_go(0, 1, 10), -0.1f);
+        W(ft_hl(9), nb_go(0, -28, 0, -4, 3), lb_no(), at_no(), xt_tm(7.0f), xb_go(0, 1, 10), 0f);
+        W(ft_hl(7), nb_go(0, -26, 0, -2, 3), lb_no(), at_hm(12.0f), xt_tm(7.0f), xb_go(0, 1, 10), 1.5f);
 
         // Final Blockade Top
-        W(ft_gd(15, 3), nb_go(0, 30, 0, 8), lb_no(), at_ld(10.0f), xt_tm(15.0f), xb_go(0, -1, 10), 0f);
+        W(ft_gd(15, 3), nb_go(0, 30, 0, 8), lb_no(), at_ld(10.0f), xt_tm(5.5f), xb_go(0, -1, 10), 0f);
         
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
@@ -398,7 +407,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		{
 		
         case EliteBehavior.PreFinalBattle:
-            W(ft_ef(), nb_go(-20, 2, 20, 2), lb_no(), at_ld(0.35f), xt_no(), xb_no(), 0);            
+                W(ft_ef(), nb_go(-20, 0, 20, 0, 10), lb_wp(new float[] { -20, 0, 20, 0 }, 2.0f, 10), at_lt(0.65f), xt_tm(55), xb_go(0, 1, 30), 0);
             break;
 		case EliteBehavior.FinalBattle:
 			W (ft_ef(), nb_go (0, 20, 0, 0), lb_lz(-13, 7, 13, 7, 2.5f)/*lb_no()*/, at_hm(4), xt_no (), xb_no (), 0);            
@@ -430,7 +439,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
             break;
 
         case EliteBehavior.FollowWave: // Wave 9
-            W(ft_eb(), nb_go(0, -15, 0, 10, 3.0f), lb_lz(-13, 10, 13, 10, 3.0f, 5.0f), at_hm(3.25f), xt_tm(32.5f), xb_go(-1, -1, 20), 6.5f);
+            W(ft_ep(), nb_go(0, -15, 0, 10, 3.0f), lb_lz(-13, 10, 13, 10, 3.0f, 5.0f), at_hm(3.25f), xt_tm(52.5f), xb_go(-1, -1, 20), 6.5f);
             break;    
 			
 		}
