@@ -43,6 +43,9 @@ public class Player_Movement_Script : MonoBehaviour {
     // Reference to all of the spawners
     public GameObject[] spawners;
 
+    // Place to spawn at: If 0, then spawn at the closest spawnpoint in front of the player's death
+    public int placeToSpawn = 0;
+
     // Reference to Stats
     Stat_Counter_Script stats = null;
 
@@ -330,11 +333,27 @@ public class Player_Movement_Script : MonoBehaviour {
         isWaitingToSpawn = false;
         this.rigidbody.velocity = Vector3.zero;
         this.transform.position = new Vector3(this.transform.position.x, 1, 0);
+
+        print(placeToSpawn);
+
+        // Run through all of the spawners and see where the correct one to spawn is
+        if (placeToSpawn > 0)
+        {
+            for (int i = 0; i < spawners.Length; i++)
+            {
+                if (spawners[i].name.Equals("SpawnPoint_" + placeToSpawn.ToString()) && spawners[i].GetComponent<Spawn_Point_Script>().checkForGround())
+                { // This is the check for a specific spawnpoint.  If it is not touching the ground, look for another spawnpoint that is.
+                    this.transform.position = spawners[i].transform.position;
+                    break;
+                }
+            }
+        }
+
         // Run through all of the spawners and see where the correct one to spawn is
         for (int i = 0; i < spawners.Length; i++)
         {
-            if ((spawners[i].transform.position.x > this.transform.position.x) && spawners[i].GetComponent<Spawn_Point_Script>().checkForGround())
-            {
+            if ((spawners[i].transform.position.x > this.transform.position.x) && spawners[i].GetComponent<Spawn_Point_Script>().checkForGround() && this.placeToSpawn == 0)
+            { // This is a regular check
                 this.transform.position = spawners[i].transform.position;
                 break;
             }

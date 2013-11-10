@@ -5,6 +5,8 @@ public class Spawn_Trigger_Script : MonoBehaviour {
 
     public Stat_Counter_Script stats = null;
 
+    public int placeToSpawnAt = 0;
+
 	// Use this for initialization
 	void Start () {
         stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
@@ -19,8 +21,12 @@ public class Spawn_Trigger_Script : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Player_Movement_Script>().isInvincible = false;
-            other.gameObject.GetComponent<Player_Movement_Script>().isDead = true;
+            if (!other.gameObject.GetComponent<Player_Movement_Script>().isDead)
+            {
+                other.gameObject.GetComponent<Player_Movement_Script>().isInvincible = false;
+                other.gameObject.GetComponent<Player_Movement_Script>().isDead = true;
+                other.gameObject.GetComponent<Player_Movement_Script>().placeToSpawn = this.placeToSpawnAt;
+            }
             if (stats)
             {
                 stats.numberOfDeaths++;
