@@ -17,7 +17,7 @@ public class Sliding_Script : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Player_Movement_Script>().horizontalMovement.isSliding = true;
+            other.gameObject.GetComponent<Player_Movement_Script>().isSliding = true;
         }
     }
 }

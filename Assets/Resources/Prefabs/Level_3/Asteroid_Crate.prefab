@@ -115,6 +115,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfWallJumpsAllowed: 0
+  numberOfWallJumpsAllowed: 1
+  unlimitedWallJumps: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

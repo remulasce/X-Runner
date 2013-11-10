@@ -28,6 +28,9 @@ public class Player_Movement_Script : MonoBehaviour {
     // Make a reference to the camera
     public CanabaltCamera mainCamera;
 
+    // Make a boolean to determine if the player is sliding to stop input
+    public bool isSliding = false;
+
     // ray cast distance for ground check
     private float rayCastDistance = 3.0f;
 
@@ -56,9 +59,7 @@ public class Player_Movement_Script : MonoBehaviour {
         public float playerOffset = 0.0f;
 
         [Range(-100.0f, 0.0f)]
-        public float accelerationPushOffWall = 0.0f;
-
-        public bool isSliding = false;
+        public float accelerationPushOffWall = 0.0f;        
     }
 
     public HorizontalMovementData horizontalMovement = new HorizontalMovementData();
@@ -184,7 +185,9 @@ public class Player_Movement_Script : MonoBehaviour {
 	
 	void DoJump()
 	{
-		//Save ourselves with a wall jump
+		
+        
+        //Save ourselves with a wall jump
 		if (!canJump && onWall && wallJumpsLeft >= 1 && (Input.GetButtonDown("Jump") /*|| Input.GetKeyDown(KeyCode.Space)*/))
 		{
 			canJump = true;
@@ -193,19 +196,11 @@ public class Player_Movement_Script : MonoBehaviour {
 		}
 		if ((Input.GetButtonDown("Jump") /*|| Input.GetKeyDown(KeyCode.Space)*/) && canJump)
         {
-            if (isDead)
+            if (isDead || isSliding)
             {
                 return;
-            }
+            }           
 
-            if (!horizontalMovement.isSliding)
-            {
-                this.rigidbody.velocity = Vector3.zero;
-            }
-            else
-            {
-                horizontalMovement.isSliding = false;
-            }
             if (!playerGravityScript.isGravityInverted)
             {
                 this.rigidbody.AddForce(new Vector3(0, forceValuePreJump, 0));
@@ -269,7 +264,7 @@ public class Player_Movement_Script : MonoBehaviour {
 
     void DoSideWaysMovement()
     {
-        if (isDead)
+        if (isDead || isSliding)
         {
             return;
         }
@@ -371,10 +366,11 @@ public class Player_Movement_Script : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (!isActive) {return;}
-
+        
         DoSideWaysMovement();
         DoXVelocity();
-        DoJump();        
+        DoJump();            
+        
 		CheckDead();
 
         //print(rigidbody.velocity);
@@ -435,7 +431,7 @@ public class Player_Movement_Script : MonoBehaviour {
         if (other.contacts[0].normal.x < -0.8 && other.gameObject.CompareTag("Terrain") && !onWall) // Wall Jump Test
         {
             numberOfFramesHit = 0;
-            print(other.gameObject.name);
+            //print(other.gameObject.name);
             if (!other.gameObject.name.Equals("Brown_Crate"))
             {
                 onWall = true;
