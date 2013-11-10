@@ -28,8 +28,11 @@ public class Player_Movement_Script : MonoBehaviour {
     // Make a reference to the camera
     public CanabaltCamera mainCamera;
 
-    // Make a boolean to determine if the player is sliding to stop input
+    // Make a boolean to determine if the player is sliding to stop jump and movement input
     public bool isSliding = false;
+
+    // Make a boolean to prevent the jump from overriding the current momentum
+    public bool isFrictionLess = false;
 
     // ray cast distance for ground check
     private float rayCastDistance = 3.0f;
@@ -199,7 +202,11 @@ public class Player_Movement_Script : MonoBehaviour {
             if (isDead || isSliding)
             {
                 return;
-            }           
+            }
+            else if (!isFrictionLess)
+            {
+                this.rigidbody.velocity = Vector3.zero;
+            }
 
             if (!playerGravityScript.isGravityInverted)
             {

@@ -26,6 +26,7 @@ public class Player_Gravity_Trigger_Script : MonoBehaviour {
             other.GetComponent<Player_Movement_Script>().canJump = false;
             other.GetComponent<Player_Movement_Script>().isJumping = false;
             other.GetComponentInChildren<ParticleSystem>().Stop();
+            other.GetComponentInChildren<ParticleSystem>().startSpeed *= -1; // Flip the particles to the proper gravity
 
             // Make sure to start making the camera lerp towards the proper position.
             Camera.main.GetComponent<CanabaltCamera>().flipSpeed = this.cameraFlipSpeed;

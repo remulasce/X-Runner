@@ -21,7 +21,7 @@ public class Jetpack_powerUp_Script : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Player_Movement_Script>().isJetPackActive = true;
-            other.gameObject.GetComponentInChildren<ParticleSystem>().startSpeed = jetPackSpeed;
+            other.gameObject.GetComponentInChildren<ParticleSystem>().startSpeed = jetPackSpeed * Mathf.Sign(other.gameObject.GetComponentInChildren<ParticleSystem>().startSpeed);
             other.gameObject.GetComponentInChildren<ParticleSystem>().startColor = jetPackNewColor; // Set the default color to something a bit more sci-fi ish            
             Object.Destroy(this.gameObject);
         }

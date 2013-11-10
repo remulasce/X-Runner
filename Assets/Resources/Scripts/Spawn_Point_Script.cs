@@ -18,7 +18,7 @@ public class Spawn_Point_Script : MonoBehaviour {
 
     public bool checkForGround()
     {
-        Ray ray = new Ray(this.transform.position, new Vector3(0, -1, 0));
+        Ray ray = new Ray(this.transform.position, -this.transform.up);
         RaycastHit hit;
 
         if (invertedGravity)
