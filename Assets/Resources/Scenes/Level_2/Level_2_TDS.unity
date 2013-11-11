@@ -1125,7 +1125,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: maxReloadOffset
-      value: .200000003
+      value: .119499996
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: numShotsFiredThreshold
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   isDead: 0
   numShotsFiredThreshold: 20
   reloadTimeMultiplier: 1.00999999
-  maxReloadOffset: .200000003
+  maxReloadOffset: .119499996
 --- !u!54 &1556197953
 Rigidbody:
   m_ObjectHideFlags: 0

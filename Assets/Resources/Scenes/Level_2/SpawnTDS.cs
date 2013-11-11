@@ -95,7 +95,9 @@ public class SpawnTDS : MonoBehaviour {
  	public class FormationType
 	{
 		public enum T { HorizontalLine, Grid, VerticalLine,
-			ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidGameplay };
+			ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidGameplay,
+            L4_Space, L4_Trench, L4_MissileRun, L4_Finale
+        };
 		public T type;
 		// Subclass maybe, but you should use the helper fxns and not touch
 		// the classes themselves.

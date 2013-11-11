@@ -84,6 +84,7 @@ public class L4_Spawner : MonoBehaviour {
         //W(ft_hl(9),    nb_go(0, -25, 0, -7, 5), lb_wp(new float[] {-4, -7,  4, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
         //W(ft_gd(7, 5), nb_go(0, 25, 0, 3, 5),   lb_wp(new float[] { 4,  3,  4, 3 }, 5.0f, 5.0f), at_ld(20), xt_no(), xb_no(), 0f);
 
+        ///*
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 
@@ -94,21 +95,48 @@ public class L4_Spawner : MonoBehaviour {
         W(ft_hl(1), nb_go(32,  0,  2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
         W(ft_hl(1), nb_go(30, -2,  0, -2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 3);
 
-        const int numDiamondWaves = 10;
+        const int numBoxWaves = 10;
         const float waveDelayOne = 1f;
 
-
-        // Diamond Waves
-        for (int i = 0; i < numDiamondWaves; i++)
+        // Small Squads
+        for (int i = 0; i < numBoxWaves; i++)
         {
             float yVal = Random.Range(-7f, 7f);
 
-            W(ft_gd(3, 3), nb_go(30, yVal, -30, yVal, 17.5f), lb_no(), at_hm(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);    
+            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 17.5f), lb_no(), at_hm(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);    
         }
 
         //----------------------------------------------------------------------------------------------        
 
-        W(ft_gd(25, 14), nb_go(60f, 0, -1000, 0, 12), lb_no(), at_no(), xt_no(), xb_no(), 0f);
+        // Big Wave
+        W(ft_gd(20, 14), nb_go(60f, 0, 0f, 0, 12), lb_no(), at_no(), xt_im(), xb_go(-1, 0, 18), 8f);
+
+        // Come from behind waves
+        //*/
+        const int numBehindWaves = 6;
+        const float waveDelayTwo = 2.9f;        
+
+        for (int i = 0; i < numBehindWaves; i++)
+        {
+            float rowVal = Random.Range(0, 13);
+            int negVal = 1;
+            if (i % 2 == 0)
+            {
+                negVal *= -1;
+            }
+
+            for (int j = 0; j < 13; j++)
+            {
+                if (j != rowVal && j != rowVal + 1 && j != rowVal - 1)
+                {
+                    W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i/2)), 12 - (2 * j), 16.5f), lb_no(), at_lt(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                }
+            }
+            // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
+            W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), waveDelayTwo);
+        }
+
+        // Have a bit of a delay before spawning ships again
         
 		print ("Done making spawn list");
 	}

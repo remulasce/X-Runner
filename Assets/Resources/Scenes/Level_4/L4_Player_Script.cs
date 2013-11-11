@@ -397,6 +397,22 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
                 }
             }
         }
+
+        if (col.gameObject.CompareTag("Trench_Wall"))
+        {            
+            if (!this.isShielded)
+            {
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                isDead = true;
+                this.transform.position = new Vector3(0, 0, 1000);
+                StartCoroutine("Respawn");
+            }
+            else // Push the object above the wall
+            {
+                this.transform.position = new Vector3(this.transform.position.x, col.gameObject.transform.position.y + col.gameObject.transform.localScale.y, this.transform.position.z);
+            }
+        }
     }
 
     IEnumerator Respawn()
