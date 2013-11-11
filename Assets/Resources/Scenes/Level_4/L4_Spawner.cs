@@ -2,17 +2,15 @@
 using System.Collections;
 
 
-/* Copy-Paste job from L2:
- * Removed all Elite references
- * 
- * Changed the other thing
- */
 
+/** This is an enemy spawner! */
 public class L4_Spawner : MonoBehaviour {
+	
+	public L2_Elite_Script elite;
 
-	//public L2_Elite_Script elite;
-	// We don't have these for now.
-    //public Asteroid_Spawner_Script asteroidSpawner;
+    public Asteroid_Spawner_Script asteroidSpawner;
+
+    public Music_Manager_Script musicManager;
 
 	void Start () 
 	{
@@ -20,6 +18,8 @@ public class L4_Spawner : MonoBehaviour {
 		Spawn();
 		//DoSpawning goes through the spawnList and does the spawning
 		StartCoroutine(DoSpawning());
+
+        musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
 	}
 	
 	/** SpawnAPI:
@@ -76,114 +76,39 @@ public class L4_Spawner : MonoBehaviour {
          * 
          * There's also some sketchy hardcoded things for the Elite, which should be done
          * 	  with care.
-         */
-		
-		/*
-		W (ft_vl (3), nb_go (-2, 14, 0, 6), lb_no(), at_ld (1), xt_tm(3), xb_go(-4, 8), 4);
-		
-		W (ft_vl(6), nb_go (2, 14, 2, 0), lb_no (), at_ld (2), xt_no (), xb_no(), 2);
-		
-		W (ft_vl(6), nb_go (4, 14, 4, 2), lb_no (), at_ld (3), xt_no (), xb_no (), 1);
-		W (ft_vl(4), nb_go (10, 14, 6, -2), lb_no (), at_hm(2), xt_no (), xb_no (), 4);
-		*/
-		//W (ft_ag);
-		
-		
-		
-        //E(EliteBehavior.Test);
-        // Scout Ship
-        W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
-
-        //Elite makes a pass at you
-        E(EliteBehavior.QuickPass);
-
-        // Inital Fighter Wave
-        W(ft_hl(5), nb_go(-10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go(45, 0), 1f);
-        W(ft_hl(5), nb_go(10, 15, 0, 0), lb_no(), at_ld(7.0f), xt_im(), xb_go(-45, 0), 6.5f);
-
+         */              
+           
         // First Blockade
-        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(13), nb_go(0, 28, 0, 8), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(11), nb_go(0, 26, 0, 6), lb_no(), at_ld(10.0f), xt_no(), xb_no(), 0f);
-        E(EliteBehavior.HangBehind);
-
-
-        // Second Fighter Wave
-        W(ft_hl(3), nb_go(15, -15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), -1f);
-        W(ft_hl(3), nb_go(-15, -15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 3f);
-
-        W(ft_hl(3), nb_go(-15, 15, 0, -5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 0f);
-        W(ft_hl(3), nb_go(15, 15, 0, -7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_go(45, 0), 1.5f);
-        E(EliteBehavior.QuickPass);
-
-
-        // Third Fighter Wave
-        W(ft_hl(3), nb_go(25, 8, 0, 2), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(25, 8, 0, -2), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(-25, 8, 5, 0), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(-25, 8, -5, 0), lb_no(), at_hm(6.0f), xt_tm(3.0f), xb_no(), 0f);
-
-        // Second Blockade
-        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(7.0f), xt_no(), xb_no(), -.01f);
-        W(ft_hl(15), nb_go(0, 28, 0, 8), lb_no(), at_lt(7.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(13), nb_go(0, 26, 0, 6), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(11), nb_go(0, 24, 0, 4), lb_no(), at_ld(7.0f), xt_no(), xb_no(), 0f);
-
-        // Begin spawning the cinematic asteroids (no physics, background stuff).
-        W(ft_ac());
-
-        // Giant Vertical Wave
-        W(ft_hl(15), nb_go(0, 40, 0, -60), lb_no(), at_no(), xt_im(), xb_go(0, -60), -.01f);
-        W(ft_hl(15), nb_go(0, 38, 0, -62), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 36, 0, -64), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 34, 0, -66), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 32, 0, -68), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 30, 0, -70), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 28, 0, -72), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 26, 0, -74), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 24, 0, -76), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 22, 0, -78), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 20, 0, -80), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 18, 0, -82), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 16, 0, -84), lb_no(), at_no(), xt_im(), xb_go(0, -60), 0f);
-        W(ft_hl(15), nb_go(0, 14, 0, -86), lb_no(), at_no(), xt_im(), xb_go(0, -60), 8f);
-
-        // Filler Wave 1
-        W(ft_hl(4), nb_go(15, 15, 0, 5), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(4), nb_go(-15, 15, 0, 7.5f), lb_no(), at_lt(15.0f), xt_tm(3.0f), xb_no(), 1.5f);
-
-        //Elite quick visit
-        E(EliteBehavior.PreFinalBattle);        
-
-        // Filler Wave 2
-        W(ft_hl(3), nb_go(20, 8, 0, 2), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(20, 8, 0, -2), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(-20, 8, 5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
-        W(ft_hl(3), nb_go(-20, 8, -5, 0), lb_no(), at_hm(7.0f), xt_tm(3.0f), xb_no(), 0f);
-
-        // Final Blockade Bottom
-        W(ft_hl(11), nb_go(0, -30, 0, -6), lb_no(), at_hm(12.0f), xt_no(), xb_no(), -0.1f);
-        W(ft_hl(9), nb_go(0, -28, 0, -4), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(7), nb_go(0, -26, 0, -2), lb_no(), at_hm(12.0f), xt_no(), xb_no(), 1.5f);
-
-        // Final Blockade Top
-        W(ft_hl(15), nb_go(0, 30, 0, 10), lb_no(), at_lt(15.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 28, 0, 8), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 0f);
-        W(ft_hl(15), nb_go(0, 26, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 0f);
+        //W(ft_vl(7),    nb_go(-25, 3, -8, 1, 5), lb_wp(new float[] {-10, 1, -6, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
+        //W(ft_vl(7),    nb_go(25, 3, 8, 1, 5),   lb_wp(new float[] { 6,  1, 10, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
+        //W(ft_hl(9),    nb_go(0, -25, 0, -7, 5), lb_wp(new float[] {-4, -7,  4, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
+        //W(ft_gd(7, 5), nb_go(0, 25, 0, 3, 5),   lb_wp(new float[] { 4,  3,  4, 3 }, 5.0f, 5.0f), at_ld(20), xt_no(), xb_no(), 0f);
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.1f);
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 
-        //Elite comes and stays for real.
-        E(EliteBehavior.FinalBattle);
+        // Scout Diamond Wave
+        W(ft_hl(1), nb_go(30,  2,  0,  2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(28,  0, -2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(30,  0,  0,  0, 10.5f), lb_no(), at_hm(2.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(32,  0,  2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(30, -2,  0, -2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 3);
 
-        // Game Asteroid Spawning
-        W(ft_ag());
+        const int numDiamondWaves = 10;
+        const float waveDelayOne = 1f;
 
-        // 1-on-1 Elite battle
-		//Not any different for now
-        
-        
+
+        // Diamond Waves
+        for (int i = 0; i < numDiamondWaves; i++)
+        {
+            float yVal = Random.Range(-7f, 7f);
+
+            W(ft_gd(3, 3), nb_go(30, yVal, -30, yVal, 17.5f), lb_no(), at_hm(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);    
+        }
+
+        //----------------------------------------------------------------------------------------------        
+
+        W(ft_gd(25, 14), nb_go(60f, 0, -1000, 0, 12), lb_no(), at_no(), xt_no(), xb_no(), 0f);
         
 		print ("Done making spawn list");
 	}
@@ -202,45 +127,32 @@ public class L4_Spawner : MonoBehaviour {
     {        
         waveList.Add(new SpawnTDS.Wave(f));
     }
-
-    enum EliteBehavior { Test, QuickPass, HangBehind, FinalBattle, PreFinalBattle};
-	/* Calls to the Elite. These really all get put into a Wave, which gets treated specially.
-	 * It's really only coded to do the ~3 things I need the Elite to do right now.
-	 */
-	void E(EliteBehavior e)
-	{
-		switch (e)
-		{
-		case EliteBehavior.QuickPass:
-			//W (SpawnTDS.FormationType.T.ElitePass, nb_go);
-			W (ft_ep (), nb_go (-15, 14, 5, -4), lb_no(), at_la(0, -5, 1), xt_im(), xb_go (0, 1, 14), 0f);
-			break;
-		case EliteBehavior.HangBehind:
-			W (ft_eb(), nb_go (-15, 12, 0, 8), lb_lz(-14, 8, 14, 8, 2), at_lt(2), xt_tm (10), xb_go(0, 20, 14), 0);
-			break;
-        case EliteBehavior.PreFinalBattle:
-            W(ft_ef(), nb_go(-20, 2, 20, 2), lb_no(), at_ld(0.35f), xt_no(), xb_no(), 0);            
-            break;
-		case EliteBehavior.FinalBattle:
-			W (ft_ef(), nb_go (0, 20, 0, 4), lb_lz(-13, 4, 13, 4, 2.0f)/*lb_no()*/, at_hm(4), xt_no (), xb_no (), 0);            
-			break;
-		case EliteBehavior.Test:
-			W (ft_eb(), nb_go (-15, 12, -12, 12), lb_wp (new float[] { -12, 10, 12, 10, -12, -2, 12, -2, -12, 10 }, 5f), 
-				at_hm(3), xt_tm(100), xb_go(0, 1),5);
-			break;
-			
-		}
-	}
 	
 	
 	/** Helpers so you don't have to W(new BlaType1(), new BlaType2() ....) */
 	
-	/** SpawnTDS.FormationType Horizontal Line */
+	/** SpawnTDS.SpawnTDS.FormationType Horizontal Line */
 	SpawnTDS.FormationType ft_hl(int num)
 	{
 		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
 		ft.type = SpawnTDS.FormationType.T.HorizontalLine;
 		ft.width = num;
+		return ft;
+	}
+	//Vertical Line
+	SpawnTDS.FormationType ft_vl(int num)
+	{
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.type = SpawnTDS.FormationType.T.VerticalLine;
+		ft.height = num;
+		return ft;
+	}
+	//Grid
+	SpawnTDS.FormationType ft_gd(int width, int height)
+	{
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.type = SpawnTDS.FormationType.T.Grid;
+		ft.width = width; ft.height = height;
 		return ft;
 	}
 	
@@ -456,20 +368,18 @@ public class L4_Spawner : MonoBehaviour {
 	{
 		foreach (SpawnTDS.Wave w in waveList)
 		{
-			//Set us sideways
-			//Actually not needed because the Klingon model is sideways to begin with.
-			//w.defRot = Quaternion.Euler(0, 0, -90);
-			//And Klingons.
-			w.enemyPrefabPath = "Prefabs/Level_4/L4_Klingon";
-            w.defRot = Quaternion.Euler(new Vector3(0, 0, 180));
-			
+            w.enemyPrefabPath = "Prefabs/Level_4/L4_Klingon";
+            w.defRot = Quaternion.Euler(0, 0, 180);
+            
             if (!w.hasSpawned)
             {
                 if (w.waveDuration >= 0)
                 {
                     print("Spawning");
 					//if it's just enemies, the Wave can make them
-					if (w.ft.type == SpawnTDS.FormationType.T.HorizontalLine)
+					if (w.ft.type == SpawnTDS.FormationType.T.HorizontalLine
+						|| w.ft.type == SpawnTDS.FormationType.T.Grid
+						|| w.ft.type == SpawnTDS.FormationType.T.VerticalLine)
 					{
                     	w.Spawn();
 					}
@@ -477,21 +387,25 @@ public class L4_Spawner : MonoBehaviour {
                     // Asteroid Spawner Special Cases
                     else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidCinematic)
                     {
-                        //asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
+                        asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
+                        if (musicManager)
+                        {
+                            musicManager.FadeInSongs(2, new int[] { 1 });
+                        }
                         //print("Here 1");
                     }
 
                     else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidGameplay)
                     {
-                        //asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_GAMEPLAY;
+                        asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_GAMEPLAY;
+                        if (musicManager)
+                        {
+                            musicManager.FadeOutSongs(2, new int[] { 0, 1 });
+                            musicManager.FadeInTransitions(2, new int[] { 2 }, 2, new int[] { 3 }, 6.76f);
+                        }
                         //print("Here 2");
-                    }
-
-                    //Otherwise it's our temporary hardcoded Elite
-                    else
-                    {
-                        //elite.DoWave(w);
-                    }
+                    }                    
+                    
                     w.hasSpawned = true;
                     yield return new WaitForSeconds(w.waveDuration);
                 }
@@ -501,7 +415,7 @@ public class L4_Spawner : MonoBehaviour {
 
                     if (ships.Length > 1) // Have to count the Elite as somthing separate
                     {
-                        
+                        print(ships.Length);
                         StartCoroutine("RestartSpawning");
                         break;
                     }
@@ -524,6 +438,7 @@ public class L4_Spawner : MonoBehaviour {
         print("Attempting to spawn again...");
         StartCoroutine("DoSpawning");
     }
+	
 	
 	
 	

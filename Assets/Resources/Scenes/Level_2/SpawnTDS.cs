@@ -66,10 +66,19 @@ public class SpawnTDS : MonoBehaviour {
 						Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) - 
 							new Vector3((i - ft.width/2)*2, (j-ft.height/2)*2, 0);
 						GameObject e = (GameObject)GameObject.Instantiate(Resources.Load(enemyPrefabPath), pos, defRot);
-						
-						e.GetComponent<L2_Enemy_Script>().SetWaveAI(this, 
-							-new Vector3((i - ft.width/2)*2, (j-ft.height/2)*2, 0));
-						this.enemies.Add(e);
+
+                        if (e.GetComponent<L2_Enemy_Script>())
+                        {
+                            e.GetComponent<L2_Enemy_Script>().SetWaveAI(this,
+                                -new Vector3((i - ft.width / 2) * 2, (j - ft.height / 2) * 2, 0));
+                            this.enemies.Add(e);
+                        }
+                        else
+                        {
+                            e.GetComponent<L4_Enemy_Script>().SetWaveAI(this,
+                                -new Vector3((i - ft.width / 2) * 2, (j - ft.height / 2) * 2, 0));
+                            this.enemies.Add(e);
+                        }
 					}
 				}
 				break;

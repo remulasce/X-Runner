@@ -75,6 +75,15 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 	
 	public bool IsDead() { return isDead; }
     public Vector3 GetPosition() { return transform.position; }
+
+    // Variables used to control how many bullets are fired at any given time
+    public int numShotsFiredThreshold = 50;
+    [Range(1, 2)]
+    public float reloadTimeMultiplier = 1f;
+    private int numShotsFired = 0;
+    private float baseReloadTime = 0;
+    [Range(0, 0.5f)]
+    public float maxReloadOffset = 0.0f;
 	
 	// Use this for initialization
 	void Start ()
@@ -85,7 +94,9 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
         isShielded = true;
         StartCoroutine("ResetShield");
 
-        //stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
+        baseReloadTime = reloadTime;
+
+        stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 	}
 
     private bool checkLowerBoundaryX()
@@ -303,9 +314,27 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 	void doShooting ()
 	{
 		if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime) {
-			Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 0, 90));
+            if (numShotsFired > numShotsFiredThreshold)
+            {
+                if (reloadTime < maxReloadOffset)
+                {
+                    reloadTime *= reloadTimeMultiplier;
+                }
+                else
+                {
+                    reloadTime = maxReloadOffset;
+                }
+            }
+            GameObject g = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(90, 0, -90));
+            g.GetComponent<L2_Player_Shot_Script>().speed = 70;
 			lastShot = Time.time;
+            numShotsFired++;
 		}
+        if (Input.GetButtonUp("Jump"))
+        {
+            numShotsFired = 0;
+            reloadTime = baseReloadTime;
+        }
 	}
 	// Update is called once per frame
 	void Update ()
@@ -332,9 +361,9 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
         if (col.gameObject.CompareTag("L2_Enemy"))
         {
 
-            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
-            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
-            col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
+            col.gameObject.GetComponent<L4_Enemy_Script>().GetExplosion().transform.parent = null;
+            col.gameObject.GetComponent<L4_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
+            col.gameObject.GetComponent<L4_Enemy_Script>().GetExplosion().Explode();
             Destroy(col.gameObject);
 
             if (!this.isShielded)
@@ -383,6 +412,7 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
         isDead = false;
         print("Respawned!");
         isShielded = true;
+        numShotsFired = 0;
         StartCoroutine("ResetShield");
     }
 

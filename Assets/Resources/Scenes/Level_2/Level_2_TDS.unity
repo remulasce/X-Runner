@@ -1119,6 +1119,18 @@ Prefab:
       propertyPath: reloadTime
       value: .119499996
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: reloadTimeMultiplier
+      value: 1.00999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: maxReloadOffset
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: numShotsFiredThreshold
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}
@@ -1467,6 +1479,9 @@ MonoBehaviour:
   explosion: {fileID: 1630494970}
   stats: {fileID: 0}
   isDead: 0
+  numShotsFiredThreshold: 20
+  reloadTimeMultiplier: 1.00999999
+  maxReloadOffset: .200000003
 --- !u!54 &1556197953
 Rigidbody:
   m_ObjectHideFlags: 0

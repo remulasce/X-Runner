@@ -8,9 +8,13 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 
     public bool isNotCinematic = true; // If NOT checked, it will not be destroyed when it goes OB
 
+    public bool shootsLeft = false;
+
 	// Use this for initialization
-	protected void Start () {
+	protected void Start () {      
+        
         this.transform.forward = new Vector3(0, -1, 0);
+        
         this.rigidbody.velocity = transform.forward * speed;
 	}
 	

@@ -75,6 +75,15 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 	public bool IsDead() { return isDead; }
     public Vector3 GetPosition() { return transform.position; }
 
+    // Variables used to control how many bullets are fired at any given time
+    public int numShotsFiredThreshold = 50;
+    [Range(1, 2)]
+    public float reloadTimeMultiplier = 1f;
+    private int numShotsFired = 0;
+    private float baseReloadTime = 0;
+    [Range(0, 0.5f)]
+    public float maxReloadOffset = 0.0f;
+
 	// Use this for initialization
 	void Start ()
     {        
@@ -83,6 +92,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 
         isShielded = true;
         StartCoroutine("ResetShield");
+
+        baseReloadTime = reloadTime;
 
         stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 	}
@@ -308,10 +319,28 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 	//Make a shot if we're shooting
 	void doShooting ()
 	{
-		if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime) {
-			Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 0, 180));
-			lastShot = Time.time;
-		}
+        if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime)
+        {
+            if (numShotsFired > numShotsFiredThreshold)
+            {
+                if (reloadTime < maxReloadOffset)
+                {
+                    reloadTime *= reloadTimeMultiplier;
+                }
+                else
+                {
+                    reloadTime = maxReloadOffset;
+                }
+            }
+            GameObject g = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 90, 00));            
+            lastShot = Time.time;
+            numShotsFired++;
+        }
+        if (Input.GetButtonUp("Jump"))
+        {
+            numShotsFired = 0;
+            reloadTime = baseReloadTime;
+        }
 	}
 	// Update is called once per frame
 	void Update ()
@@ -461,6 +490,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         isDead = false;
         print("Respawned!");
         isShielded = true;
+        numShotsFired = 0;
         StartCoroutine("ResetShield");
     }
 
