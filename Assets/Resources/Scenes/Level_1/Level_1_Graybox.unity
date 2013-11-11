@@ -5264,25 +5264,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2569d3d0a8ca99c4292089419043ab7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 16.5
-  forceValuePostJump: 100000
-  forceValuePreJump: 50000
+  movementSpeed: 9
+  forceValuePostJump: 50000
+  forceValuePreJump: 53000
   isJumping: 0
   canJump: 1
   isActive: 1
   timeJumpThreshold: .5
   isInAir: 0
   isJetPackActive: 0
-  jetPackFloatingForce: 42000
+  jetPackFloatingForce: 8500
   mainCamera: {fileID: 1911888144}
+  isSliding: 0
+  isFrictionLess: 0
   spawners: []
+  placeToSpawn: 0
   horizontalMovement:
     leftMovementThreshold: -5
     rightMovementThreshold: 7.5
     movementSpeed: 8.5
     playerOffset: 0
     accelerationPushOffWall: -15
-    isSliding: 0
   wallJumpsAllowed: 0
   wallJumpsLeft: 3
   isDead: 0
@@ -5331,7 +5333,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 1796701900}
   m_GameObject: {fileID: 137554353}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &137554358
 Transform:
   m_ObjectHideFlags: 0
@@ -5339,8 +5341,8 @@ Transform:
   m_PrefabInternal: {fileID: 1796701900}
   m_GameObject: {fileID: 137554353}
   m_LocalRotation: {x: -.499999851, y: -.500000179, z: .5, w: .50000006}
-  m_LocalPosition: {x: 44.4723091, y: -1.69414067, z: -.19941029}
-  m_LocalScale: {x: .176863015, y: .176863015, z: .176863015}
+  m_LocalPosition: {x: 44.4723091, y: -2.21806836, z: -.199410528}
+  m_LocalScale: {x: 1, y: 9.99999975e-05, z: 1}
   m_Children:
   - {fileID: 2086955351}
   m_Father: {fileID: 0}
@@ -5367,8 +5369,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 7
-  m_Height: 17
+  m_Radius: .725000024
+  m_Height: 16000
   m_Direction: 1
   m_Center: {x: -9.53674316e-07, y: 5.42058842e-10, z: -6.10351562e-05}
 --- !u!1 &139450061
@@ -24862,7 +24864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab871d38f2bb684bafb08906373dea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetPackSpeed: 9
+  jetPackSpeed: 6
   jetPackNewColor: {r: 1, g: 1, b: .607843161, a: 1}
 --- !u!23 &724946893
 Renderer:
@@ -34179,6 +34181,9 @@ MonoBehaviour:
   explosion: {fileID: 0}
   stats: {fileID: 0}
   isDead: 0
+  numShotsFiredThreshold: 50
+  reloadTimeMultiplier: 1
+  maxReloadOffset: 0
 --- !u!23 &981884004
 Renderer:
   m_ObjectHideFlags: 0
@@ -58484,6 +58489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 146481163}
+  placeToSpawnAt: 0
 --- !u!1 &1570888486
 GameObject:
   m_ObjectHideFlags: 0
@@ -66318,11 +66324,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.69414067
+      value: -2.21806836
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -.19941029
+      value: -.199410528
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -66367,6 +66373,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: invincibleTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
@@ -77525,9 +77535,9 @@ Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
   m_PrefabInternal: {fileID: 1796701900}
   m_GameObject: {fileID: 2086955350}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: -.707106829}
-  m_LocalPosition: {x: 1.45548058, y: 4.33088962e-06, z: 6.01489353}
-  m_LocalScale: {x: 5.65409279, y: 5.65409231, z: 5.65409279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .409792989, y: -.00165292481, z: -.231095582}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 137554358}
 --- !u!199 &2086955352
@@ -77612,7 +77622,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 6
+      scalar: 2.5
       maxCurve:
         serializedVersion: 2
         m_Curve:

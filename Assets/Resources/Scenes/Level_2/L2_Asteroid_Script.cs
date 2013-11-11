@@ -48,13 +48,16 @@ public class L2_Asteroid_Script : MonoBehaviour {
         {
             targetedByEnemy = false;
             if (lastHit != LAST_HIT.PLAYER)
-            {                
-                if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x) 
-                    || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x))) 
-                    || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
-                    ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+            {
+                if (!player.GetComponent<L2_Ship_Script>().isDead) // Fixes a bug where asteroids just sit still in space
                 {
-                    this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + extraHitVelocity);
+                    if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x)
+                        || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x)))
+                        || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                        ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+                    {
+                        this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + extraHitVelocity);
+                    }
                 }
 
                 numberOfTimesHit++;
