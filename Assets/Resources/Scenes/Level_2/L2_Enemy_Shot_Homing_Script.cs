@@ -53,6 +53,7 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 
     protected void OnCollisionEnter(Collision col)
     {
+        base.OnCollisionEnter(col);
         if (col.gameObject.CompareTag("L2_PlayerShot"))
         {            
             explosion.transform.parent = null;
