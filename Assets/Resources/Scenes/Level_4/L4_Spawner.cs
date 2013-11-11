@@ -78,13 +78,8 @@ public class L4_Spawner : MonoBehaviour {
          * 	  with care.
          */              
            
-        // First Blockade
-        //W(ft_vl(7),    nb_go(-25, 3, -8, 1, 5), lb_wp(new float[] {-10, 1, -6, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
-        //W(ft_vl(7),    nb_go(25, 3, 8, 1, 5),   lb_wp(new float[] { 6,  1, 10, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
-        //W(ft_hl(9),    nb_go(0, -25, 0, -7, 5), lb_wp(new float[] {-4, -7,  4, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
-        //W(ft_gd(7, 5), nb_go(0, 25, 0, 3, 5),   lb_wp(new float[] { 4,  3,  4, 3 }, 5.0f, 5.0f), at_ld(20), xt_no(), xb_no(), 0f);
 
-        /*
+        ///*
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 

@@ -62,7 +62,7 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
             Destroy(col.gameObject);
             if (isNotCinematic)
             {
-                transform.DetachChildren();
+                //transform.DetachChildren();
                 Destroy(this.gameObject);
             }            
         }
