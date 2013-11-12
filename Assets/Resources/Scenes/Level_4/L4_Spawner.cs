@@ -76,13 +76,104 @@ public class L4_Spawner : MonoBehaviour {
          * 
          * There's also some sketchy hardcoded things for the Elite, which should be done
          * 	  with care.
-         */              
+         */
+
+        ///*
+        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
+
+        // Scout Diamond Wave
+        W(ft_hl(1), nb_go(30, 2, 0, 2, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(28, 0, -2, 0, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(30, 0, 0, 0, 12.5f), lb_no(), at_hm(2.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(32, 0, 2, 0, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(30, -2, 0, -2, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 3);
+
+        const int numBoxWaves = 10;
+        const float waveDelayOne = 0.85f;
+
+        // Small Squads
+        for (int i = 0; i < numBoxWaves; i++)
+        {
+            float yVal = Random.Range(-7f, 7f);
+
+            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 17.5f), lb_no(), at_hm(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);
+        }
+
+        //----------------------------------------------------------------------------------------------
+         
+        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.5f);
+
+        const int hackVal = 3;
+
+        // Fade in the space song
+        W(ft_space());
+
+        //Look at capital ship
+        W(ft_lookat_cap(.7f, 2, .45f, 1000), nb_go(0, 0, 0, 0, 0), lb_no(), at_no(), xt_no(), xb_no(), 4f);
+
+        // Big Wave
+        W(ft_gd(22, 14), nb_go(50f, 0, 10f, 0, 12), lb_no(), at_no(), xt_im(), xb_go(-1, 0, 18), 8f);
+
+        // Come from behind waves
+
+        const int numBehindWaves = 6;
+        const float waveDelayTwo = 2.9f;
+
+        for (int i = 0; i < numBehindWaves; i++)
+        {
+            float rowVal = Random.Range(0, 13);
+            int negVal = 1;
+            if (i % 2 == 0)
+            {
+                negVal *= -1;
+            }
+
+            for (int j = 0; j < 13; j++)
+            {
+                if (j != rowVal && j != rowVal + 1 && j != rowVal - 1)
+                {
+                    W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_lt(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                }
+            }
+            // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
+            W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), waveDelayTwo);
+        }
+
+        // Fade in the trench song
+        W(ft_trench());
+
+        //Glance at cap ship before entering
+        //Wait for everything to be dead first, though.
+        W(ft_lookat_cap(.5f, .5f, .25f, 500), nb_go(0, 0, 0, 0, 0), lb_no(), at_no(), xt_no(), xb_no(), 0f);
+
+        // Have a bit of a delay before spawning ships again
+        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 29f);
+
+        // Fade in the space song
+        W(ft_missileRun());
+
+        // Spawn the Tie Bomber Wave
+        W(ft_gd(40 * hackVal, 2), nb_go(22, 30, 22, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 19.5f), 12f);
+
+        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(0.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 4f);
+
+        // Fade in the grand finale (everything)
+        W(ft_finale());
+
+        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 12f);
+
+        // Fade out everything
+        W(ft_endMusic());
            
         
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 		
-		
+		/*
 		//test
 		//W (ft_lookat_cap(.5f, .5f, .25f, 2000), nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),5f);
 		
@@ -99,8 +190,7 @@ public class L4_Spawner : MonoBehaviour {
         W(ft_hl(1), nb_go(30, -2,  0, -2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 5);
 		
 		
-		//Look at capital ship
-		W (ft_lookat_cap(.7f, 3, .45f, 2000), nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),5f);
+
 		
 		
         const int numBoxWaves = 10;
@@ -179,8 +269,7 @@ public class L4_Spawner : MonoBehaviour {
 		//One final, last-ditch guy tries to stop you
 		W (ft_hl(1), nb_go (25, 0, 0, 0), lb_no (), at_lt(.75f), xt_no (), xb_no (), 0);
 		
-        //*/
-		 
+        //*/		 
 		 
 		
 		print ("Done making spawn list");
@@ -284,10 +373,54 @@ public class L4_Spawner : MonoBehaviour {
         return ft;
     }
 
+    SpawnTDS.FormationType ft_ac2()
+    {
+        SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+        ft.type = SpawnTDS.FormationType.T.AsteroidCinematic2;
+        return ft;
+    }
+
     SpawnTDS.FormationType ft_ag()
     {
         SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
         ft.type = SpawnTDS.FormationType.T.AsteroidGameplay;
+        return ft;
+    }
+
+
+    /*Hacks for music*/
+    SpawnTDS.FormationType ft_space()
+    {
+        SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+        ft.type = SpawnTDS.FormationType.T.L4_Space;
+        return ft;
+    }
+
+    SpawnTDS.FormationType ft_trench()
+    {
+        SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+        ft.type = SpawnTDS.FormationType.T.L4_Trench;
+        return ft;
+    }
+
+    SpawnTDS.FormationType ft_missileRun()
+    {
+        SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+        ft.type = SpawnTDS.FormationType.T.L4_MissileRun;
+        return ft;
+    }
+
+    SpawnTDS.FormationType ft_finale()
+    {
+        SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+        ft.type = SpawnTDS.FormationType.T.L4_Finale;
+        return ft;
+    }
+
+    SpawnTDS.FormationType ft_endMusic()
+    {
+        SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+        ft.type = SpawnTDS.FormationType.T.L4_Fade_Out;
         return ft;
     }
 	
@@ -511,10 +644,50 @@ public class L4_Spawner : MonoBehaviour {
 						GameObject.FindGameObjectWithTag("MainCamera").GetComponent<L4_Camera>()
 							.LookAtCapShip(w.ft.args[0],w.ft.args[1],w.ft.args[2]);
 					}
+
+                    else if (w.ft.type == SpawnTDS.FormationType.T.L4_Space)
+                    {
+                        if (musicManager)
+                        {
+                            musicManager.FadeInSongs(4, new int[] { 1 });
+                        }
+                    }
+
                     else if (w.ft.type == SpawnTDS.FormationType.T.L4_Trench)
-					{
-						StartTrench();
-					}
+                    {
+                        if (musicManager)
+                        {
+                            musicManager.FadeOutSongs(4, new int[] { 1 });
+                            musicManager.FadeInSongs(4, new int[] { 2 });
+                        }
+                        StartTrench(); // Make sure to start the trench scene
+                    }
+
+                    else if (w.ft.type == SpawnTDS.FormationType.T.L4_MissileRun)
+                    {
+                        if (musicManager)
+                        {
+                            musicManager.FadeOutSongs(4, new int[] { 2 });
+                            musicManager.FadeInSongs(4, new int[] { 3 });
+                        }
+                    }
+
+                    else if (w.ft.type == SpawnTDS.FormationType.T.L4_Finale)
+                    {
+                        if (musicManager)
+                        {
+                            musicManager.FadeInSongs(4, new int[] { 1, 2 });
+                        }
+                    }
+
+                    else if (w.ft.type == SpawnTDS.FormationType.T.L4_Fade_Out)
+                    {
+                        if (musicManager)
+                        {
+                            musicManager.FadeOutSongs(4, new int[] { 0, 1, 2, 3 });
+                        }
+                    } 
+
                     w.hasSpawned = true;
                     yield return new WaitForSeconds(w.waveDuration);
                 }
@@ -532,9 +705,8 @@ public class L4_Spawner : MonoBehaviour {
                     {
                         yield return new WaitForSeconds(-w.waveDuration);
                         print("Spawning");
-                        w.waveDuration = 0;
-						StartCoroutine("RestartSpawning");
-                        //w.hasSpawned = true;                        
+                        w.Spawn();
+                        w.hasSpawned = true;                  
                     }
                 }
             }

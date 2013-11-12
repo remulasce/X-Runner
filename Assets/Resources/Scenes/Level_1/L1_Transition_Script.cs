@@ -29,8 +29,8 @@ public class L1_Transition_Script : MonoBehaviour {
 	
 	public void onFinishTransition()
 	{
-		//Application.LoadLevel("Level_2_TDS");
-		Application.LoadLevel("Level_4_Boss");
+		Application.LoadLevel("Level_2_TDS");
+		//Application.LoadLevel("Level_4_Boss");
 	}
 	
 }

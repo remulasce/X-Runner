@@ -48,41 +48,41 @@ public class SpawnTDS : MonoBehaviour {
 		//The Enemy itself will take care of doing its own things.
 		public void Spawn()
 		{
-			
-			//Make the thing.
-			switch (ft.type)
-			{
-			//Assume everything is a grid.
-			// (and therefore, that both height and width are set properly.
-			case FormationType.T.HorizontalLine:
-				//goto FormationType.T.Grid;
-			case FormationType.T.VerticalLine:
-			case FormationType.T.Grid:
-				for (int j=0; j < ft.height; j++)
-				{
-					for (int i=0; i < ft.width; i++)
-					{
-						
-						Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) - 
-							new Vector3((i - ft.width/2)*2, (j-ft.height/2)*2, 0);
-						GameObject e = (GameObject)GameObject.Instantiate(Resources.Load(enemyPrefabPath), pos, defRot);
 
-                        if (e.GetComponent<L2_Enemy_Script>())
+            //Make the thing.
+            switch (ft.type)
+            {
+                //Assume everything is a grid.
+                // (and therefore, that both height and width are set properly.
+                case FormationType.T.HorizontalLine:
+                //goto FormationType.T.Grid;
+                case FormationType.T.VerticalLine:
+                case FormationType.T.Grid:
+                    for (int j = 0; j < ft.height; j++)
+                    {
+                        for (int i = 0; i < ft.width; i++)
                         {
-                            e.GetComponent<L2_Enemy_Script>().SetWaveAI(this,
-                                -new Vector3((i - ft.width / 2) * 2, (j - ft.height / 2) * 2, 0));
-                            this.enemies.Add(e);
+
+                            Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) -
+                                    new Vector3((i - ft.width / 2) * 2, (j - ft.height / 2) * 2, 0);
+                            GameObject e = (GameObject)GameObject.Instantiate(Resources.Load(enemyPrefabPath), pos, defRot);
+
+                            if (e.GetComponent<L2_Enemy_Script>())
+                            {
+                                e.GetComponent<L2_Enemy_Script>().SetWaveAI(this,
+                                    -new Vector3((i - ft.width / 2) * 2, (j - ft.height / 2) * 2, 0));
+                                this.enemies.Add(e);
+                            }
+                            else
+                            {
+                                e.GetComponent<L4_Enemy_Script>().SetWaveAI(this,
+                                    -new Vector3((i - ft.width / 2) * 2, (j - ft.height / 2) * 2, 0));
+                                this.enemies.Add(e);
+                            }
                         }
-                        else
-                        {
-                            e.GetComponent<L4_Enemy_Script>().SetWaveAI(this,
-                                -new Vector3((i - ft.width / 2) * 2, (j - ft.height / 2) * 2, 0));
-                            this.enemies.Add(e);
-                        }
-					}
-				}
-				break;
-			}
+                    }
+                    break;
+            }
             
             //Start our coroutine that will make it do later things.
 		}
@@ -95,8 +95,8 @@ public class SpawnTDS : MonoBehaviour {
  	public class FormationType
 	{
 		public enum T { HorizontalLine, Grid, VerticalLine,
-			ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidGameplay,
-            L4_Space, L4_Trench, L4_MissileRun, L4_Finale, L4_Lookat_Cap
+			ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidCinematic2, AsteroidGameplay,
+            L4_Space, L4_Trench, L4_MissileRun, L4_Finale, L4_Lookat_Cap, L4_Fade_Out
         };
 		public T type;
 		// Subclass maybe, but you should use the helper fxns and not touch
