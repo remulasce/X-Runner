@@ -785,8 +785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .25
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .100000001
   isHoming: 0
   totalHealth: 5
@@ -2608,7 +2608,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .100000001
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -2616,7 +2616,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -3685,7 +3685,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .100000001
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -3693,7 +3693,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -4778,7 +4778,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .25
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -4786,7 +4786,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -4955,7 +4955,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -4963,7 +4963,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -5722,8 +5722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -6243,8 +6243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -6508,7 +6508,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -6516,7 +6516,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -7316,7 +7316,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -7324,7 +7324,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -8657,7 +8657,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .100000001
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -8665,7 +8665,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -8740,8 +8740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -8974,8 +8974,8 @@ GameObject:
   - 4: {fileID: 235477947}
   - 114: {fileID: 235477946}
   m_Layer: 0
-  m_Name: Background
-  m_TagString: Untagged
+  m_Name: Trench
+  m_TagString: L4_Trench
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8991,7 +8991,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f688168c8572d42aec8a5348417829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 20
+  started: 0
 --- !u!4 &235477947
 Transform:
   m_ObjectHideFlags: 0
@@ -9016,7 +9017,6 @@ Transform:
   - {fileID: 839920155}
   - {fileID: 960871497}
   - {fileID: 1422604794}
-  - {fileID: 330116872}
   - {fileID: 60854861}
   - {fileID: 114878950}
   - {fileID: 869718243}
@@ -10816,8 +10816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .25
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .100000001
   isHoming: 0
   totalHealth: 5
@@ -13387,7 +13387,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .25
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -13395,7 +13395,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -13746,8 +13746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -13873,6 +13873,7 @@ GameObject:
   - 64: {fileID: 330116870}
   - 23: {fileID: 330116869}
   - 111: {fileID: 330116873}
+  - 114: {fileID: 330116874}
   m_Layer: 0
   m_Name: Stars
   m_TagString: Untagged
@@ -13925,10 +13926,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 330116868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 241.270508, y: 80.8197403, z: 226.387695}
+  m_LocalPosition: {x: 2541.27051, y: 80.8197403, z: 227.313599}
   m_LocalScale: {x: 6000, y: 6000, z: 6000}
   m_Children: []
-  m_Father: {fileID: 235477947}
+  m_Father: {fileID: 0}
 --- !u!111 &330116873
 Animation:
   m_ObjectHideFlags: 0
@@ -13946,6 +13947,19 @@ Animation:
   m_UserAABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
+--- !u!114 &330116874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 330116868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f688168c8572d42aec8a5348417829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  started: 1
 --- !u!1001 &330931430
 Prefab:
   m_ObjectHideFlags: 0
@@ -16541,7 +16555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .25
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -16549,7 +16563,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -16781,8 +16795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .25
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .100000001
   isHoming: 0
   totalHealth: 5
@@ -17819,7 +17833,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -17827,7 +17841,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -18153,7 +18167,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .25
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -18161,7 +18175,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -18414,7 +18428,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -18422,7 +18436,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -21561,8 +21575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -22268,8 +22282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .100000001
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: 0
   isHoming: 0
   totalHealth: 5
@@ -22439,8 +22453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -22836,8 +22850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -23465,8 +23479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .25
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .100000001
   isHoming: 0
   totalHealth: 5
@@ -24861,8 +24875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -25838,7 +25852,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -25846,7 +25860,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -26344,8 +26358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .25
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .100000001
   isHoming: 0
   totalHealth: 5
@@ -26446,8 +26460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .100000001
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: 0
   isHoming: 0
   totalHealth: 5
@@ -30746,7 +30760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -30754,7 +30768,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -32051,7 +32065,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .25
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -32059,7 +32073,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -32647,7 +32661,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -32655,7 +32669,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -33257,7 +33271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -33265,7 +33279,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -33497,8 +33511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -33646,7 +33660,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .100000001
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -33654,7 +33668,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -37352,7 +37366,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .25
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -37360,7 +37374,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -38646,8 +38660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .100000001
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: 0
   isHoming: 0
   totalHealth: 5
@@ -38861,8 +38875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -38963,8 +38977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -39469,7 +39483,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -39477,7 +39491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -40751,7 +40765,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -40759,7 +40773,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -40859,7 +40873,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -40867,7 +40881,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -41595,8 +41609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .25
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .100000001
   isHoming: 0
   totalHealth: 5
@@ -42218,7 +42232,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -42230,7 +42244,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
@@ -42435,8 +42449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -43806,8 +43820,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -45279,8 +45293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .100000001
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: 0
   isHoming: 0
   totalHealth: 5
@@ -46965,8 +46979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -47402,7 +47416,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .25
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -47410,7 +47424,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -47987,7 +48001,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -47995,7 +48009,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -50051,8 +50065,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -50839,7 +50853,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .25
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -50847,7 +50861,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -52491,7 +52505,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -52499,7 +52513,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -52712,7 +52726,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .25
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -52720,7 +52734,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -56352,8 +56366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .25
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .100000001
   isHoming: 0
   totalHealth: 5
@@ -56883,8 +56897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -59181,8 +59195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -59982,8 +59996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -63933,8 +63947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -64624,7 +64638,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -64632,7 +64646,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -65038,8 +65052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .25
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .100000001
   isHoming: 0
   totalHealth: 5
@@ -65565,7 +65579,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -65573,7 +65587,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -66188,7 +66202,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -66196,7 +66210,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -67454,7 +67468,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -67462,7 +67476,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -68284,8 +68298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -68593,7 +68607,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -68601,7 +68615,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -68726,7 +68740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -68734,7 +68748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -69307,7 +69321,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -69315,7 +69329,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -70013,8 +70027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -75494,8 +75508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -76054,7 +76068,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -76062,7 +76076,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -77274,8 +77288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -77485,7 +77499,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -77493,7 +77507,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -78114,8 +78128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -78921,7 +78935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .075000003
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -78929,7 +78943,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -79656,7 +79670,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: shootTime
-      value: .100000001
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
@@ -79664,7 +79678,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
-      value: 95
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -81035,8 +81049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .100000001
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: 0
   isHoming: 0
   totalHealth: 5
@@ -81791,8 +81805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .075000003
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .25
   isHoming: 0
   totalHealth: 5
@@ -82169,8 +82183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a746bab813a12e4ea18d04fde13e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTime: .25
-  laserSpeed: 95
+  shootTime: .5
+  laserSpeed: 30
   homeInTime: .100000001
   isHoming: 0
   totalHealth: 5
