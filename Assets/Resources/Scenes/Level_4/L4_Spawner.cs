@@ -79,7 +79,7 @@ public class L4_Spawner : MonoBehaviour {
          */              
            
 		//Test homing missiles
-		W (ft_hl (1), nb_go (4, 2, 4, 2), lb_no (), at_hm (1), xt_no (), xb_no (), 10);
+		//W (ft_hl (1), nb_go (4, 2, 4, 2), lb_no (), at_hm (1), xt_no (), xb_no (), 10);
 		
 		
         ///*
