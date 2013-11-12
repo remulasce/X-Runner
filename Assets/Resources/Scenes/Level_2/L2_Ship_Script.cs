@@ -84,6 +84,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
     [Range(0, 0.5f)]
     public float maxReloadOffset = 0.0f;
 
+    Music_Manager_Script musicManager;
+
 	// Use this for initialization
 	void Start ()
     {        
@@ -94,6 +96,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         StartCoroutine("ResetShield");
 
         baseReloadTime = reloadTime;
+
+        musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
 
         stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 	}
@@ -368,6 +372,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         animation.Play();
 
         StartCoroutine("TransitionToL3");
+
+        musicManager.FadeOutSongs(2, new int[] { 6 });
     }
 
     void OnCollisionEnter(Collision col)

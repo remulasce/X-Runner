@@ -239,9 +239,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45e2960f364dfd4885a3d5b9b5c30fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   isNotCinematic: 0
+  shootsLeft: 0
   target: {fileID: 0}
+  homingRotationSpeed: 10
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

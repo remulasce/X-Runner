@@ -23,6 +23,8 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
     // Tag to compare to for the shield reflection
     public string tagToCompareFor = "";
 
+    public Music_Manager_Script musicManager;
+
     // Use this for initialization
     void Start()
     {
@@ -31,6 +33,8 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
         mTime = 0.0f;
 
         initialColor = this.mMaterial.color;
+
+        musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
     }
 
     // Update is called once per frame
@@ -57,6 +61,9 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
             Object.Destroy(other.gameObject);
             this.animation.Play("Shield_Collapse_Elite");
             StartCoroutine("BringBackShield");
+
+            // Fade in the hit song
+            musicManager.QuickFadeInSongs(2, new int[] { 5 });
         }
     }
 
@@ -71,5 +78,7 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
     {        
         yield return new WaitForSeconds(timeToRegenerateShields);
         this.animation.Play("Shield_Regen_Elite");
+        // Fade in the hit song
+        musicManager.QuickFadeOuts(2, new int[] { 5 });
     }
 }

@@ -307,7 +307,8 @@ public class L2_Elite_Script : MonoBehaviour {
 
         StartCoroutine("ShootBigMissile");
 
-        musicManager.FadeOutSongs(2, new int[] { 3 });
+        musicManager.FadeOutSongs(2, new int[] { 4, 5 });
+        musicManager.FadeInTransitions(2, new int[] { 6 }, 3, new int[] {}, 15.211f);
     }
 
     IEnumerator ShootBigMissile()
@@ -331,7 +332,7 @@ public class L2_Elite_Script : MonoBehaviour {
 
         if (col.gameObject.CompareTag("L2_Asteroid"))
         {
-            currentHealth -= totalHealth;            
+            currentHealth -= totalHealth;       
             GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
             gDetonator.GetComponent<Detonator>().size = 5;
             Object.Destroy(col.gameObject);

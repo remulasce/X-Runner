@@ -15,13 +15,13 @@ public class Transition_L3_L4_Script : MonoBehaviour {
 
     IEnumerator LoadL4()
     {
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(6.7f);
         Application.LoadLevel("Level_4_Boss");
     }
 
     IEnumerator StopFollowingShip()
     {
-        yield return new WaitForSeconds(8.0f);
+        yield return new WaitForSeconds(5.5f);
         Camera.main.GetComponent<CanabaltCamera>().player = null;
     }
     

@@ -78,6 +78,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */        
         
+        ///*
         //E(EliteBehavior.Test);
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
@@ -219,6 +220,9 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         // Traversal Wave
 
+        // Turn on the asteroid sound loop.
+        W(ft_ac2());
+
         // Each Row Will have a space between it
 
         E(EliteBehavior.FollowWave);
@@ -270,15 +274,15 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_hl(7), nb_go( 8, -43,  8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
 
         W(ft_hl(7), nb_go(-8, -45, -8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(7), nb_go( 8, -45,  8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-
-        //*/
+        W(ft_hl(7), nb_go( 8, -45,  8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);        
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.1f);
 
         //----------------------------------------------------------------------------------------------
 
+        //*/
+         
         const int numDiamondWaves = 8;
         const float diamondWaveDelay = 2f;
 
@@ -482,11 +486,18 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 		return ft;
 	}
 
-    /*Hacks to get the asteroid spawning on*/
+    /*Hacks to get the asteroid spawning/music on*/
     SpawnTDS.FormationType ft_ac()
     {
         SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
         ft.type = SpawnTDS.FormationType.T.AsteroidCinematic;
+        return ft;
+    }
+
+    SpawnTDS.FormationType ft_ac2()
+    {
+        SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+        ft.type = SpawnTDS.FormationType.T.AsteroidCinematic2;
         return ft;
     }
 
@@ -696,13 +707,22 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                         //print("Here 1");
                     }
 
+                    else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidCinematic2)
+                    {                        
+                        if (musicManager)
+                        {
+                            musicManager.FadeInSongs(2, new int[] { 2 });
+                        }
+                        //print("Here 1");
+                    }
+
                     else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidGameplay)
                     {
                         asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_GAMEPLAY;
                         if (musicManager)
                         {
-                            musicManager.FadeOutSongs(2, new int[] { 0, 1 });
-                            musicManager.FadeInTransitions(2, new int[] { 2 }, 2, new int[] { 3 }, 6.76f);
+                            musicManager.FadeOutSongs(2, new int[] { 0, 1, 2 });
+                            musicManager.FadeInTransitions(2, new int[] { 3 }, 2, new int[] { 4 }, 6.76f);
                         }
                         //print("Here 2");
                     }
