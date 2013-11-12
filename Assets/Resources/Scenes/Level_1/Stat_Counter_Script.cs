@@ -17,6 +17,12 @@ public class Stat_Counter_Script : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//Don't make 2 stat counters
+		if (GameObject.FindGameObjectsWithTag("Stats").Length == 2)
+		{
+			Destroy(this);
+		}
+		
         texts = this.GetComponentsInChildren<GUIText>();
         stars = this.GetComponentsInChildren<GUITexture>();
         DontDestroyOnLoad(this.gameObject);

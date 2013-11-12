@@ -82,17 +82,27 @@ public class L4_Spawner : MonoBehaviour {
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 		
+		
+		//test
+		//W (ft_lookat_cap(.5f, .5f, .25f, 2000), nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),5f);
+		
 		//Start Trench portion (test)
 		//W(ft_st(),nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),0f);
+		
 		
 		
         // Scout Diamond Wave
         W(ft_hl(1), nb_go(30,  2,  0,  2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
         W(ft_hl(1), nb_go(28,  0, -2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(30,  0,  0,  0, 10.5f), lb_no(), at_hm(2.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(30,  0,  0,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
         W(ft_hl(1), nb_go(32,  0,  2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(30, -2,  0, -2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 3);
-
+        W(ft_hl(1), nb_go(30, -2,  0, -2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 5);
+		
+		
+		//Look at capital ship
+		W (ft_lookat_cap(.7f, 3, .45f, 2000), nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),5f);
+		
+		
         const int numBoxWaves = 10;
         const float waveDelayOne = 2f;
 
@@ -101,20 +111,20 @@ public class L4_Spawner : MonoBehaviour {
         {
             float yVal = Random.Range(-7f, 7f);
 
-            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 17.5f), lb_no(), at_hm(30.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);    
+            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 14.5f), lb_no(), at_hm(30.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);    
         }
 
         //----------------------------------------------------------------------------------------------        
 
         // Big Wave
-        W(ft_gd(20, 14), nb_go(60f, 0, 0f, 0, 12), lb_no(), at_no(), xt_im(), xb_go(-1, 0, 18), 8f);
+        W(ft_gd(20, 14), nb_go(60f, 0, 0f, 0, 12), lb_no(), at_no(), xt_im(), xb_go(-1, 0, 18), 5f);
 
         // Come from behind waves
         
-        const int numBehindWaves = 6;
-        const float waveDelayTwo = 2.9f;  
+        const int numBehindWaves = 5;
+        const float waveDelayTwo = 3.3f;  
        
-
+		print ("come from behind waves");
         for (int i = 0; i < numBehindWaves; i++)
         {
             float rowVal = Random.Range(0, 13);
@@ -128,28 +138,47 @@ public class L4_Spawner : MonoBehaviour {
             {
                 if (j != rowVal && j != rowVal + 1 && j != rowVal - 1)
                 {
-                    W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i/2)), 12 - (2 * j), 10f + i), lb_no(), at_lt(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                    W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i/2)), 12 - (2 * j), 10f + i), lb_no(), at_lt(8.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 12+i), 0);
                 }
             }
-            // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
             W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), waveDelayTwo);
         }
+		 
+		W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 5f);
+		
+		//Glance at cap ship before entering
+		//Wait for everything to be dead first, though.
+		W (ft_lookat_cap(.5f, .5f, .25f, 1000), nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),0f);
+		
+		//W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 10f);
+		W(ft_hl(1), nb_go(30,  2,  0,  2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(28,  0, -2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(30,  0,  0,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(32,  0,  2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(30, -2,  0, -2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
+		
 		
 		//Start Trench portion
-		W(ft_st(),nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),0f);
+		W(ft_st(),nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),10f);
 		
 
-        // Have a bit of a delay before spawning ships again
-        
-
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 29f);
+		//THis should be some sort of trigger instead, but whatever.
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 53f);
 
-        // Spawn the Tie Bomber Wave
-        W(ft_gd(40, 2), nb_go(22, 30, 22, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 19.5f), 12f);
+        // Spawn the Tie Bomber Waves
+        W(ft_gd(40, 2), nb_go(22, 30, 22, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 19.5f), 7.5f);
 
-        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(0.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 0f);
-
+        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 5f);
+		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(1.15f), xb_go(0, 1, 17.5f), 6f);
+		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 6f);
+		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 6f);
+		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 4f);
+		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(-1, 0, 17.5f), 6f);
+		
+		//One final, last-ditch guy tries to stop you
+		W (ft_hl(1), nb_go (25, 0, 0, 0), lb_no (), at_lt(.75f), xt_no (), xb_no (), 0);
+		
         //*/
 		 
 		 
@@ -162,7 +191,7 @@ public class L4_Spawner : MonoBehaviour {
 	{
 		print("starting trench");
 		GameObject.FindGameObjectWithTag("L4_Trench").GetComponent<L4_Background>().StartTrench();
-		GameObject.FindGameObjectWithTag("L4_Trench").GetComponent<Transform>().position = new Vector3(550, 0, .9f);
+		GameObject.FindGameObjectWithTag("L4_Trench").GetComponent<Transform>().position = new Vector3(780, 0, .9f);
 	}
 	
 	/** This is where I do things. Basic "define what you want and it's dealt with here */
@@ -182,6 +211,15 @@ public class L4_Spawner : MonoBehaviour {
 	
 	
 	/** Helpers so you don't have to W(new BlaType1(), new BlaType2() ....) */
+	
+	/** Look ahead at enemy capital ship */
+	SpawnTDS.FormationType ft_lookat_cap(float transitionInTime, float ponderTime, float transitionOutTime, float distancefromplayer)
+	{
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.args = new float[] { transitionInTime, ponderTime, transitionOutTime, distancefromplayer};
+		ft.type = SpawnTDS.FormationType.T.L4_Lookat_Cap;
+		return ft;
+	}
 	
 	/** Start Trench formation */
 	SpawnTDS.FormationType ft_st()
@@ -256,6 +294,8 @@ public class L4_Spawner : MonoBehaviour {
 	
 	//		=========		ENTRY BEHAVIOR		===========
 	float nb_def_speed = 7;
+	
+	
 	/** eNtry Behavior: GO from point offscreen to onscreen */
 	SpawnTDS.EntryBehavior nb_go(float stx, float sty, float endx, float endy, float speed)
 	{
@@ -465,6 +505,12 @@ public class L4_Spawner : MonoBehaviour {
                         }
                         //print("Here 2");
                     }                    
+					else if (w.ft.type == SpawnTDS.FormationType.T.L4_Lookat_Cap)
+					{
+						GameObject.FindGameObjectWithTag("L4_Trench").GetComponent<Transform>().position = new Vector3(w.ft.args[3], 0, .9f);
+						GameObject.FindGameObjectWithTag("MainCamera").GetComponent<L4_Camera>()
+							.LookAtCapShip(w.ft.args[0],w.ft.args[1],w.ft.args[2]);
+					}
                     else if (w.ft.type == SpawnTDS.FormationType.T.L4_Trench)
 					{
 						StartTrench();
@@ -486,8 +532,9 @@ public class L4_Spawner : MonoBehaviour {
                     {
                         yield return new WaitForSeconds(-w.waveDuration);
                         print("Spawning");
-                        w.Spawn();
-                        w.hasSpawned = true;                        
+                        w.waveDuration = 0;
+						StartCoroutine("RestartSpawning");
+                        //w.hasSpawned = true;                        
                     }
                 }
             }
