@@ -8,8 +8,9 @@ public class Stat_Counter_Script : MonoBehaviour {
 
     public bool endGame = false;
 
-    // Rating can be from 1 to 5
-    private int rating = 5;
+    // From index 0 - 3 (stars 2 - 5), determine which stars will show for which ratings
+    public int[] deathThresholds = new int[4];
+    public float[] timeThresholds = new float[4];    
 
     GUIText[] texts;
     GUITexture[] stars;
@@ -68,7 +69,115 @@ public class Stat_Counter_Script : MonoBehaviour {
             }
             foreach (GUITexture s in stars)
             {
-                s.enabled = true;
+                if (s.name.Contains("1"))
+                {                    
+                    s.enabled = true;
+                }
+
+                else if (s.name.Contains("2"))
+                {
+                    if (s.name.Contains("Survival"))
+                    {
+                        if (this.numberOfDeaths < deathThresholds[0])
+                        {                            
+                            s.enabled = true;
+                        }
+                        else
+                        {
+                            s.enabled = false;
+                        }
+                    }
+                    else
+                    {
+                        if (this.secondsSinceStart < timeThresholds[0])
+                        {                            
+                            s.enabled = true;
+                        }
+                        else
+                        {
+                            s.enabled = false;
+                        }
+                    }
+                }
+
+                else if (s.name.Contains("3"))
+                {
+                    if (s.name.Contains("Survival"))
+                    {
+                        if (this.numberOfDeaths < deathThresholds[1])
+                        {
+                            s.enabled = true;
+                        }
+                        else
+                        {
+                            s.enabled = false;
+                        }
+                    }
+                    else
+                    {
+                        if (this.secondsSinceStart < timeThresholds[1])
+                        {
+                            s.enabled = true;
+                        }
+                        else
+                        {
+                            s.enabled = false;
+                        }
+                    }
+                }
+
+                else if (s.name.Contains("4"))
+                {
+                    if (s.name.Contains("Survival"))
+                    {
+                        if (this.numberOfDeaths < deathThresholds[2])
+                        {
+                            s.enabled = true;
+                        }
+                        else
+                        {
+                            s.enabled = false;
+                        }
+                    }
+                    else
+                    {
+                        if (this.secondsSinceStart < timeThresholds[2])
+                        {
+                            s.enabled = true;
+                        }
+                        else
+                        {
+                            s.enabled = false;
+                        }
+                    }
+                }
+
+                else if (s.name.Contains("5"))
+                {
+                    if (s.name.Contains("Survival"))
+                    {
+                        if (this.numberOfDeaths < deathThresholds[3])
+                        {
+                            s.enabled = true;
+                        }
+                        else
+                        {
+                            s.enabled = false;
+                        }
+                    }
+                    else
+                    {
+                        if (this.secondsSinceStart < timeThresholds[3])
+                        {
+                            s.enabled = true;
+                        }
+                        else
+                        {
+                            s.enabled = false;
+                        }
+                    }
+                }
+                    
             }
         }
 	}

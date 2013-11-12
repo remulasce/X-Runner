@@ -62456,6 +62456,12 @@ MonoBehaviour:
   numberOfDeaths: 0
   secondsSinceStart: 0
   endGame: 0
+  deathThresholds: 6400000032000000190000000a000000
+  timeThresholds:
+  - 1200
+  - 1050
+  - 900
+  - 750
 --- !u!4 &1587437478
 Transform:
   m_ObjectHideFlags: 0
@@ -65291,7 +65297,7 @@ GameObject:
   - 4: {fileID: 1653994412}
   - 131: {fileID: 1653994413}
   m_Layer: 0
-  m_Name: Star_Speed_4
+  m_Name: Star_Speed_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72270,7 +72276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 235477945}
-  speed: 10
+  speed: 0
   endGame: 1
 --- !u!65 &1890967547
 BoxCollider:
