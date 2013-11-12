@@ -240,6 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
+  isNotCinematic: 1
+  shootsLeft: 0
   target: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -309,7 +311,7 @@ MonoBehaviour:
   autoCreateShockwave: 1
   autoCreateSmoke: 1
   autoCreateGlow: 1
-  autoCreateLight: 1
+  autoCreateLight: 0
   autoCreateForce: 1
   autoCreateHeatwave: 0
 --- !u!114 &11400006

@@ -79,7 +79,7 @@ public class L4_Spawner : MonoBehaviour {
          */              
            
 
-        ///*
+        /*
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 
@@ -133,6 +133,15 @@ public class L4_Spawner : MonoBehaviour {
 
         // Have a bit of a delay before spawning ships again
         //*/
+
+        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
+        //W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 25f);
+
+        // Spawn the Tie Bomber Wave
+        W(ft_gd(40, 2), nb_go(22, 30, 22, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 19.5f), 12f);
+
+        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(0.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 0f);        
+
 		print ("Done making spawn list");
 	}
 	
