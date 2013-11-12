@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   m_Layer: 13
-  m_Name: Explosion_Missile
+  m_Name: R_E_Medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4007f1233a9b74fa9be42583fafba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 10
+  size: 20
   color: {r: 1, g: .423000008, b: 0, a: 1}
   explodeOnStart: 0
   duration: 3
@@ -87,7 +87,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 1
+  size: 7.5
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
