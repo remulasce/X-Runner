@@ -3,6 +3,8 @@ using System.Collections;
 
 public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 {
+	public float homingRotationSpeed = 10;
+	
     // Detonator
     private Detonator explosion;
 
@@ -24,7 +26,17 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
             //if (!player.GetComponent<L2_Ship_Script>().isDead || !player.GetComponent<L4_Player_Script>().isDead) // Follow the player if it has not been destroyed yet
             if (!player.IsDead())
             {
-                this.transform.LookAt(player.GetPosition());
+				//this.transform.LookAt(player.GetPosition());
+				
+				
+				Quaternion pRot = this.transform.rotation;
+				this.transform.LookAt(player.GetPosition());
+				Quaternion finalRot = this.transform.rotation;
+				
+				this.transform.rotation = Quaternion.Lerp(pRot, finalRot, Mathf.Min(1,Time.deltaTime * homingRotationSpeed));
+				
+				
+				
                 this.rigidbody.velocity = this.transform.forward * speed;
 
                 if (!isNotCinematic)
