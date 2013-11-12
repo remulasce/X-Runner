@@ -1131,6 +1131,18 @@ Prefab:
       propertyPath: numShotsFiredThreshold
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.acceleration
+      value: 5500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.haltBoost
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: movement.frictionConstant
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}
@@ -1470,10 +1482,11 @@ MonoBehaviour:
     upperVerticalRange: .959999979
   movement:
     maxSpeed: 15
-    acceleration: 3500
+    acceleration: 5500
     startupBoost: 4000
+    haltBoost: 2500
     startupCutoff: 4000
-    frictionConstant: 10
+    frictionConstant: 9
   spawnTime: 1
   shieldTime: 3
   explosion: {fileID: 1630494970}
