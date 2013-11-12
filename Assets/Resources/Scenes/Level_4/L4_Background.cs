@@ -13,6 +13,7 @@ using System.Collections;
 public class L4_Background : MonoBehaviour {
 	
 	public float speed = 4;
+	public bool started = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,15 @@ public class L4_Background : MonoBehaviour {
 	
 	// We move the base Background object to move everything that is a child of it.
 	void Update () {
-		this.transform.Translate(-speed * Time.deltaTime, 0, 0);
+		if (started)
+		{
+			this.transform.Translate(-speed * Time.deltaTime, 0, 0);
+		}
+	}
+	
+	public void StartTrench()
+	{
+		started = true;
+		//this.transform.position = 
 	}
 }
