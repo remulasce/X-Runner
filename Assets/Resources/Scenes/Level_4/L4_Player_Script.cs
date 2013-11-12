@@ -20,6 +20,8 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 
         //When we're far from maxvelocity, we add some extra force to get us going
         public float startupBoost = 00;
+		//If we want to change directions, we bring ourselves to zero really fast
+		public float haltBoost = 00;
         //At what speed we should stop applying the startup boost.
         public float startupCutoff = 00;
 		//Friction will only be applied when not accelerating in the current direction,
@@ -193,7 +195,16 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
         }
 
         //----------------------------------------
-
+		
+		if (dx * rigidbody.velocity.x < 0)
+		{
+			this.rigidbody.AddForce(movement.haltBoost * new Vector3(Mathf.Sign(dx), 0, 0) * Time.deltaTime);
+		}
+		if (dy * rigidbody.velocity.y < 0)
+		{
+			this.rigidbody.AddForce(movement.haltBoost * new Vector3(0, Mathf.Sign(dy), 0) * Time.deltaTime);
+		}
+		
         this.rigidbody.AddForce(movement.acceleration * new Vector3(dx, dy, 0) * Time.deltaTime);
 	}
 	

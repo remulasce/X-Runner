@@ -2566,8 +2566,9 @@ MonoBehaviour:
     upperVerticalRange: .959999979
   movement:
     maxSpeed: 20
-    acceleration: 2500
+    acceleration: 5000
     startupBoost: 5000
+    haltBoost: 8000
     startupCutoff: 10000
     frictionConstant: 10
   spawnTime: 1
@@ -62227,6 +62228,8 @@ MonoBehaviour:
   numberOfDeaths: 0
   secondsSinceStart: 0
   endGame: 0
+  deathThresholds: 
+  timeThresholds: []
 --- !u!4 &1587437478
 Transform:
   m_ObjectHideFlags: 0
