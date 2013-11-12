@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  maxTimeToSpawnAsteroid: 1
+  maxTimeToSpawnAsteroid: .5
   lastSpawnedAsteroidTime: 0
   screenLength: 30
   screenWidth: 22
@@ -1787,7 +1787,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
       propertyPath: maxTimeToSpawnAsteroid
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cf48782eda1f144e84f69b492e6513a, type: 2}
