@@ -85,6 +85,8 @@ public class L4_Spawner : MonoBehaviour {
 		//Start Trench portion (test)
 		//W(ft_st(),nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),0f);
 		
+		//Look at capital ship (test)
+		W (ft_lookat_cap(.75f, 3, .5f), nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),5f);
 		
         // Scout Diamond Wave
         W(ft_hl(1), nb_go(30,  2,  0,  2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
@@ -128,7 +130,7 @@ public class L4_Spawner : MonoBehaviour {
             {
                 if (j != rowVal && j != rowVal + 1 && j != rowVal - 1)
                 {
-                    W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i/2)), 12 - (2 * j), 10f + i), lb_no(), at_lt(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                    W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i/2)), 12 - (2 * j), 10f + i), lb_no(), at_lt(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 12+i), 0);
                 }
             }
             // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
@@ -140,10 +142,11 @@ public class L4_Spawner : MonoBehaviour {
 		
 
         // Have a bit of a delay before spawning ships again
-        
+		
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 29f);
+		//THis should be some sort of trigger instead, but whatever.
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 46f);
 
         // Spawn the Tie Bomber Wave
         W(ft_gd(40, 2), nb_go(22, 30, 22, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 19.5f), 12f);
@@ -162,7 +165,7 @@ public class L4_Spawner : MonoBehaviour {
 	{
 		print("starting trench");
 		GameObject.FindGameObjectWithTag("L4_Trench").GetComponent<L4_Background>().StartTrench();
-		GameObject.FindGameObjectWithTag("L4_Trench").GetComponent<Transform>().position = new Vector3(550, 0, .9f);
+		GameObject.FindGameObjectWithTag("L4_Trench").GetComponent<Transform>().position = new Vector3(900, 0, .9f);
 	}
 	
 	/** This is where I do things. Basic "define what you want and it's dealt with here */
@@ -182,6 +185,14 @@ public class L4_Spawner : MonoBehaviour {
 	
 	
 	/** Helpers so you don't have to W(new BlaType1(), new BlaType2() ....) */
+	
+	/** Look ahead at enemy capital ship */
+	SpawnTDS.FormationType ft_lookat_cap()
+	{
+		SpawnTDS.FormationType ft = new SpawnTDS.FormationType();
+		ft.type = SpawnTDS.FormationType.T.L4_Lookat_Cap;
+		return ft;
+	}
 	
 	/** Start Trench formation */
 	SpawnTDS.FormationType ft_st()
@@ -465,6 +476,10 @@ public class L4_Spawner : MonoBehaviour {
                         }
                         //print("Here 2");
                     }                    
+					else if (w.ft.type == SpawnTDS.FormationType.T.L4_Lookat_Cap)
+					{
+						GameObject.FindGameObjectWithTag("MainCamera").GetComponent<L4_Camera>().LookAtCapShip();
+					}
                     else if (w.ft.type == SpawnTDS.FormationType.T.L4_Trench)
 					{
 						StartTrench();
