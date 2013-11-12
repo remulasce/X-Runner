@@ -78,16 +78,7 @@ public class L4_Spawner : MonoBehaviour {
          * 	  with care.
          */              
            
-<<<<<<< HEAD
 
-        /*
-=======
-		//Test homing missiles
-		//W (ft_hl (1), nb_go (4, 2, 4, 2), lb_no (), at_hm (1), xt_no (), xb_no (), 10);
-		
-		
-        ///*
->>>>>>> c4c8ea8cfa6ec6574662c3c866c68b6e1dd6ee07
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 
@@ -143,7 +134,7 @@ public class L4_Spawner : MonoBehaviour {
         //*/
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        //W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 25f);
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 25f);
 
         // Spawn the Tie Bomber Wave
         W(ft_gd(40, 2), nb_go(22, 30, 22, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 19.5f), 12f);
@@ -152,6 +143,7 @@ public class L4_Spawner : MonoBehaviour {
 
 		print ("Done making spawn list");
 	}
+
 	
 	/** This is where I do things. Basic "define what you want and it's dealt with here */
 	void W(SpawnTDS.FormationType f, SpawnTDS.EntryBehavior en, SpawnTDS.LoiterBehavior l, SpawnTDS.AttackType a, SpawnTDS.ExitTrigger ext, SpawnTDS.ExitBehavior exb, float timeTillNextWave)
