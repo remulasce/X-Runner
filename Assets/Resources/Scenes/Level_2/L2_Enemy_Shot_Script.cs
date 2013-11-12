@@ -52,7 +52,7 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 		// editor layers.
         if (col.gameObject.CompareTag("Trench_Wall"))
         {
-            Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
+            GameObject g = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));           
         }
 
 		Object.Destroy (this.gameObject);
