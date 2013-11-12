@@ -214,7 +214,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 24
   m_CollisionDetection: 0
 --- !u!65 &6500000
 BoxCollider:
@@ -243,7 +243,7 @@ MonoBehaviour:
   isNotCinematic: 1
   shootsLeft: 0
   target: {fileID: 0}
-  homingRotationSpeed: 5
+  homingRotationSpeed: 4
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

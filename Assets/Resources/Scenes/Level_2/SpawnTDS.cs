@@ -104,6 +104,8 @@ public class SpawnTDS : MonoBehaviour {
 		public int width = 1; //number lines.
 		public int height = 1; //default 1 so we get a line if we don't set the other.
 		
+		//Hack. Mainly for L4 Look At Capital Ship.
+		public float[] args;
 	}
 	/* The way in which the wave enters, and where it goes.
 	 * Basically is just "from where" "to where".
