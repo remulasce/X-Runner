@@ -95,8 +95,8 @@ public class SpawnTDS : MonoBehaviour {
  	public class FormationType
 	{
 		public enum T { HorizontalLine, Grid, VerticalLine,
-			ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidCinematic2, AsteroidGameplay,
-            L4_Space, L4_Trench, L4_MissileRun, L4_Finale, L4_Fade_Out
+			ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidGameplay,
+            L4_Space, L4_Trench, L4_MissileRun, L4_Finale, L4_Lookat_Cap
         };
 		public T type;
 		// Subclass maybe, but you should use the helper fxns and not touch
@@ -104,6 +104,8 @@ public class SpawnTDS : MonoBehaviour {
 		public int width = 1; //number lines.
 		public int height = 1; //default 1 so we get a line if we don't set the other.
 		
+		//Hack. Mainly for L4 Look At Capital Ship.
+		public float[] args;
 	}
 	/* The way in which the wave enters, and where it goes.
 	 * Basically is just "from where" "to where".

@@ -55,6 +55,6 @@ public class Asteroid_Spawner_Script : MonoBehaviour {
         asteroid.transform.position = new Vector3((asteroid.transform.localScale.x / 2.0f) + Random.Range(0, screenLength - (asteroid.transform.localScale.x * 1.5f)), 50f, 0);
         asteroid.transform.position += new Vector3(-screenLength / 2.0f, 0, 0);
         asteroid.rigidbody.mass = asteroid.rigidbody.mass * asteroid.transform.localScale.x;
-        asteroid.rigidbody.AddForce(new Vector3(0, -1, 0) * Random.Range(1500, 5000));
+        asteroid.rigidbody.AddForce(new Vector3(Random.Range(-1f, 1f), -1, 0) * Random.Range(1500, 5000));
     }
 }

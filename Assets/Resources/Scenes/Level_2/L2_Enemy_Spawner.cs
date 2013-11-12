@@ -142,8 +142,6 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         // Giant Vertical Wave
         W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 3.5f), lb_no(), at_hm(21f), xt_im(), xb_go(0, -1, 17f), 6f);
 
-        // Begin spawning the cinematic asteroids (no physics, background stuff).
-        W(ft_ac());
 
         //----------------------------------------------------------------------------------------------
 
@@ -285,7 +283,10 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          
         const int numDiamondWaves = 8;
         const float diamondWaveDelay = 2f;
-
+		
+		// Begin spawning the cinematic asteroids (no physics, background stuff).
+        W(ft_ac());
+		
         //Elite quick visit during the diamond waves
         E(EliteBehavior.PreFinalBattle);   
 
