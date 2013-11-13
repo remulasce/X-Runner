@@ -65,18 +65,21 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 
     protected void OnCollisionEnter(Collision col)
     {
-        base.OnCollisionEnter(col);
-        if (col.gameObject.CompareTag("L2_PlayerShot"))
-        {            
-            explosion.transform.parent = null;
-            explosion.transform.position = this.transform.position;
-            explosion.Explode();
-            Destroy(col.gameObject);
-            if (isNotCinematic)
+        if (isNotCinematic)
+        {
+            base.OnCollisionEnter(col);
+            if (col.gameObject.CompareTag("L2_PlayerShot"))
             {
-                //transform.DetachChildren();
-                Destroy(this.gameObject);
-            }            
+                explosion.transform.parent = null;
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                Destroy(col.gameObject);
+                if (isNotCinematic)
+                {
+                    //transform.DetachChildren();
+                    Destroy(this.gameObject);
+                }
+            }
         }
     }
 
