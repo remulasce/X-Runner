@@ -16,10 +16,16 @@ public class DetonatorSound : DetonatorComponent {
 	private AudioSource _soundComponent;
 	private bool _delayedExplosionStarted = false;
 	private float _explodeDelay;
+
+    void Awake() // Make sure to initialize the audioSource
+    {
+        Init();
+    }
 	
 	override public void Init()
 	{
 		_soundComponent = (AudioSource)gameObject.AddComponent ("AudioSource");
+        _soundComponent.rolloffMode = AudioRolloffMode.Linear;
 	}
 
 	void Update()

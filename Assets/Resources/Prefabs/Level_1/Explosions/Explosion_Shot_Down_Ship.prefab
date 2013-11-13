@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 7.81802464
   color: {r: .30207172, g: .661617994, b: .843283594, a: .4627451}
-  explodeOnStart: 1
+  explodeOnStart: 0
   duration: 3.2971828
   detail: 1
   upwardsBias: 1.95347905
@@ -383,7 +383,7 @@ MonoBehaviour:
   farSounds:
   - {fileID: 8300000, guid: 8f03951fee9bec9478d1ec979ba44677, type: 3}
   - {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
-  distanceThreshold: 50
+  distanceThreshold: 500
   minVolume: .400000006
   maxVolume: 1
   rolloffFactor: .5
