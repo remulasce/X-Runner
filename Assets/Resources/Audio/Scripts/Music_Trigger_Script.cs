@@ -21,6 +21,8 @@ public class Music_Trigger_Script : MonoBehaviour {
 
     GameObject audioSourceManager;
 
+    private bool isTriggered = false;
+
 	// Use this for initialization
 	void Start () {
         audioSourceManager = GameObject.FindGameObjectWithTag("AudioSourceManager");
@@ -63,31 +65,36 @@ public class Music_Trigger_Script : MonoBehaviour {
     {
         if (other.gameObject.CompareTag(tagToCompareFor))
         {
-            if (!playOnStart)
+            if (!playOnStart && !isTriggered)
             {
                 if (triggerType == TRIGGER_TYPE.FADE_IN)
                 {
                     audioSourceManager.GetComponent<Music_Manager_Script>().FadeInSongs(levelChoice, musicChoices);
+                    isTriggered = true;
                 }
 
                 if (triggerType == TRIGGER_TYPE.FADE_OUT)
                 {
                     audioSourceManager.GetComponent<Music_Manager_Script>().FadeOutSongs(levelChoice, musicChoices);
+                    isTriggered = true;
                 }
 
                 if (triggerType == TRIGGER_TYPE.TRANSITION_FADE_IN)
                 {
                     audioSourceManager.GetComponent<Music_Manager_Script>().FadeInTransitions(levelChoice, musicChoices, postTransitionLevelChoice, postTransitionMusicChoices, postTransitionDelay);
+                    isTriggered = true;
                 }
 
                 if (triggerType == TRIGGER_TYPE.START_PLAYING)
                 {
                     audioSourceManager.GetComponent<Music_Manager_Script>().StartSongs(levelChoice, musicChoices);
+                    isTriggered = true;
                 }
 
                 if (triggerType == TRIGGER_TYPE.QUICK_FADE_IN)
                 {
                     audioSourceManager.GetComponent<Music_Manager_Script>().QuickFadeInSongs(levelChoice, musicChoices);
+                    isTriggered = true;
                 }
             }
         }
