@@ -105,16 +105,14 @@ public class L4_Spawner : MonoBehaviour {
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.5f);
 
-        const int hackVal = 3;
-
         // Fade in the space song
         W(ft_space());
 
         //Look at capital ship
-        W(ft_lookat_cap(.7f, 2, .45f, 1000), nb_go(0, 0, 0, 0, 0), lb_no(), at_no(), xt_no(), xb_no(), 4f);
+        W(ft_lookat_cap(.7f, 2, .45f, 1500), nb_go(0, 0, 0, 0, 0), lb_no(), at_no(), xt_no(), xb_no(), 4f);
 
         // Big Wave
-        W(ft_gd(22, 14), nb_go(50f, 0, 10f, 0, 12), lb_no(), at_no(), xt_im(), xb_go(-1, 0, 18), 8f);
+        W(ft_gd(20, 14), nb_go(40f, 0, 10f, 0, 12), lb_no(), at_hm(10.0f), xt_im(), xb_go(-1, 0, 18), 6f);
 
         // Come from behind waves
 
@@ -134,145 +132,56 @@ public class L4_Spawner : MonoBehaviour {
             {
                 if (j != rowVal && j != rowVal + 1 && j != rowVal - 1)
                 {
-                    W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_lt(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                    if (i != (numBehindWaves - 1))
+                    {
+                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(7.0f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                    }
+                    else
+                    {
+                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(11.0f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                    }
                 }
             }
             // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
             W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), waveDelayTwo);
         }
 
+        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 2);
+
         // Fade in the trench song
         W(ft_trench());
 
         //Glance at cap ship before entering
         //Wait for everything to be dead first, though.
-        W(ft_lookat_cap(.5f, .5f, .25f, 500), nb_go(0, 0, 0, 0, 0), lb_no(), at_no(), xt_no(), xb_no(), 0f);
+        W(ft_lookat_cap(.5f, 1f, .5f, 750), nb_go(0, 0, 0, 0, 0), lb_no(), at_no(), xt_no(), xb_no(), 0f);
 
         // Have a bit of a delay before spawning ships again
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 29f);
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 36.5f);
 
         // Fade in the space song
         W(ft_missileRun());
 
         // Spawn the Tie Bomber Wave
-        W(ft_gd(40 * hackVal, 2), nb_go(22, 30, 22, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 19.5f), 12f);
-
-        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(0.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 4f);
+        W(ft_gd(60, 2), nb_go(40, 30, 40, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 18.5f), 13.25f);
 
         // Fade in the grand finale (everything)
         W(ft_finale());
+
+        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(0.75f), xt_tm(3.75f), xb_go(0, 1, 17.5f), 6f);
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 12f);
 
         // Fade out everything
-        W(ft_endMusic());
-           
+        W(ft_endMusic());           
         
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 		
-		/*
-		//test
-		//W (ft_lookat_cap(.5f, .5f, .25f, 2000), nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),5f);
-		
-		//Start Trench portion (test)
-		//W(ft_st(),nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),0f);
-		
-		
-		
-        // Scout Diamond Wave
-        W(ft_hl(1), nb_go(30,  2,  0,  2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(28,  0, -2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(30,  0,  0,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(32,  0,  2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(30, -2,  0, -2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 5);
-		
-		
-
-		
-		
-        const int numBoxWaves = 10;
-        const float waveDelayOne = 2f;
-
-        // Small Squads
-        for (int i = 0; i < numBoxWaves; i++)
-        {
-            float yVal = Random.Range(-7f, 7f);
-
-            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 14.5f), lb_no(), at_hm(30.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);    
-        }
-
-        //----------------------------------------------------------------------------------------------        
-
-        // Big Wave
-        W(ft_gd(20, 14), nb_go(60f, 0, 0f, 0, 12), lb_no(), at_no(), xt_im(), xb_go(-1, 0, 18), 5f);
-
-        // Come from behind waves
-        
-        const int numBehindWaves = 5;
-        const float waveDelayTwo = 3.3f;  
-       
-		print ("come from behind waves");
-        for (int i = 0; i < numBehindWaves; i++)
-        {
-            float rowVal = Random.Range(0, 13);
-            int negVal = 1;
-            if (i % 2 == 0)
-            {
-                negVal *= -1;
-            }
-
-            for (int j = 0; j < 13; j++)
-            {
-                if (j != rowVal && j != rowVal + 1 && j != rowVal - 1)
-                {
-                    W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i/2)), 12 - (2 * j), 10f + i), lb_no(), at_lt(8.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 12+i), 0);
-                }
-            }
-            W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), waveDelayTwo);
-        }
-		 
-		W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 5f);
-		
-		//Glance at cap ship before entering
-		//Wait for everything to be dead first, though.
-		W (ft_lookat_cap(.5f, .5f, .25f, 1000), nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),0f);
-		
-		//W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 10f);
-		W(ft_hl(1), nb_go(30,  2,  0,  2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(28,  0, -2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(30,  0,  0,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(32,  0,  2,  0, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(30, -2,  0, -2, 10.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-		
-		
-		//Start Trench portion
-		W(ft_st(),nb_go(0,0,0,0,0),lb_no (),at_no (),xt_no (),xb_no (),10f);
-		
-
-        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-		//THis should be some sort of trigger instead, but whatever.
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 53f);
-
-        // Spawn the Tie Bomber Waves
-        W(ft_gd(40, 2), nb_go(22, 30, 22, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 19.5f), 7.5f);
-
-        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 5f);
-		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(1.15f), xb_go(0, 1, 17.5f), 6f);
-		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 6f);
-		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 6f);
-		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(0, 1, 17.5f), 4f);
-		W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(1.75f), xt_tm(2.15f), xb_go(-1, 0, 17.5f), 6f);
-		
-		//One final, last-ditch guy tries to stop you
-		W (ft_hl(1), nb_go (25, 0, 0, 0), lb_no (), at_lt(.75f), xt_no (), xb_no (), 0);
-		
-        //*/		 
-		 
-		
-		print ("Done making spawn list");
+    	print ("Done making spawn list");
+        //*/
 	}
 
 	
