@@ -84,6 +84,9 @@ public class Player_Movement_Script : MonoBehaviour {
     public float invincibleTime = 1.0f;
 
     private bool isWaitingToSpawn = false;
+
+    // Array of Audio Sources
+    AudioSource[] audios;
 	
 	// Use this for initialization
 	void Start () {
@@ -115,6 +118,8 @@ public class Player_Movement_Script : MonoBehaviour {
         }
 
         spawners = tempArray;
+
+        audios = this.GetComponents<AudioSource>();
 
         stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 	}
@@ -224,27 +229,30 @@ public class Player_Movement_Script : MonoBehaviour {
             isInAir = true;
             timeWhenLastJumped = Time.time;
 
-            //if (!isJetPackActive)
-            //{
-            //    this.GetComponentInChildren<ParticleSystem>().startSpeed = 4.5f;
-            //}
-            //else
-            //{
-            //    this.GetComponentInChildren<ParticleSystem>().startSpeed = 9.0f;
-            //}
+            // 0 is where the jump is
+            audios[0].Play();
+
+            // 1 = regular float jump loop, 2 = jetpack jump loop
+            audios[1].Play();
+            if (isJetPackActive)
+            {
+                audios[2].Play();
+            }
 
             this.GetComponentInChildren<ParticleSystem>().Play();
 			
-			//Application.LoadLevelAdditive("test_add_scene");
-			//Application.LoadLevel("test_add_scene");
         }
 		if ((Input.GetButtonUp("Jump")/* || Input.GetKeyUp(KeyCode.Space)*/) && isJumping)
         {
             isJumping = false;
-            //if (isJetPackActive)
-            //{
             this.GetComponentInChildren<ParticleSystem>().Stop();
-            //}
+
+            // 1 = regular float jump loop, 2 = jetpack jump loop
+            audios[1].Stop();
+            if (isJetPackActive)
+            {
+                audios[2].Stop();
+            }
         }
 		
 		//Jump farther if we keep the space bar held down longer.
@@ -430,6 +438,13 @@ public class Player_Movement_Script : MonoBehaviour {
                 //{
                 this.GetComponentInChildren<ParticleSystem>().Stop();
                 //}
+
+                // 1 = regular float jump loop, 2 = jetpack jump loop
+                audios[1].Stop();
+                if (isJetPackActive)
+                {
+                    audios[2].Stop();
+                }
             }
         }
         else
@@ -451,6 +466,13 @@ public class Player_Movement_Script : MonoBehaviour {
                 //{
                 this.GetComponentInChildren<ParticleSystem>().Stop();
                 //}
+
+                // 1 = regular float jump loop, 2 = jetpack jump loop
+                audios[1].Stop();
+                if (isJetPackActive)
+                {
+                    audios[2].Stop();
+                }
             }
         }
 
@@ -516,6 +538,13 @@ public class Player_Movement_Script : MonoBehaviour {
                             {
                                 this.GetComponentInChildren<ParticleSystem>().Stop();
                             }
+
+                            // 1 = regular float jump loop, 2 = jetpack jump loop
+                            audios[1].Stop();
+                            if (isJetPackActive)
+                            {
+                                audios[2].Stop();
+                            }
                         }
                     }
                     else
@@ -537,6 +566,13 @@ public class Player_Movement_Script : MonoBehaviour {
                             {
                                 this.GetComponentInChildren<ParticleSystem>().Stop();
                             }
+
+                            // 1 = regular float jump loop, 2 = jetpack jump loop
+                            audios[1].Stop();
+                            if (isJetPackActive)
+                            {
+                                audios[2].Stop();
+                            }
                         }
                     }
                 }
@@ -548,6 +584,7 @@ public class Player_Movement_Script : MonoBehaviour {
                     {
                         onWall = true;
                         this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
+                        audios[3].Play();
                     }
                 }
             }

@@ -24,9 +24,13 @@ public class Brown_Crate_Behavior_Script : MonoBehaviour
             // this.rigidbody.AddForce(new Vector3(0, forceMultiplier * 10, 0));
         }
         if (other.gameObject.CompareTag("Player") && other.contacts[0].normal.x > 0.95 && other.contacts[0].normal.y >= 0.75)
-        {
-            //print("In X");
+        {            
             this.rigidbody.AddForce(new Vector3(other.gameObject.GetComponent<Player_Movement_Script>().movementSpeed * other.rigidbody.mass * forceMultiplier, 0, 0));            
+        }
+
+        if (this.rigidbody.velocity.magnitude > 10)
+        {
+            audio.Play();
         }
     }
 }

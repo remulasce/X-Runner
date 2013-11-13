@@ -334,7 +334,7 @@ public class L2_Elite_Script : MonoBehaviour {
         {
             currentHealth -= totalHealth;       
             GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
-            gDetonator.GetComponent<Detonator>().size = 5;
+            gDetonator.GetComponent<Detonator>().size = 10;
             Object.Destroy(col.gameObject);
             if (currentHealth <= 0 && !isShotDown)
             {

@@ -41,6 +41,15 @@ public class L2_Player_Shot_Script : MonoBehaviour {
             GameObject g = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
             //g.transform.parent = col.gameObject.transform.parent;
             Object.Destroy(this.gameObject);
-        }        
+        }
+        if (col.gameObject.CompareTag("L2_EnemyShot"))
+        {
+            if (col.gameObject.name.Contains("Cinematic"))
+            {
+                GameObject g = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.contacts[0].point, Quaternion.Euler(0, 0, 0));
+                //g.transform.parent = col.gameObject.transform.parent;
+                Object.Destroy(this.gameObject);
+            }
+        }
 	}
 }
