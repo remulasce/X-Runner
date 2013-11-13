@@ -1117,15 +1117,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: reloadTime
-      value: .119499996
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: reloadTimeMultiplier
-      value: 1.00999999
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: maxReloadOffset
-      value: .119499996
+      value: .25
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: numShotsFiredThreshold
@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7e7b7a4b274f2439c108e1819e594d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadTime: .119499996
+  reloadTime: .100000001
   boundaryData:
     lowerHorizontalRange: .0350000001
     upperHorizontalRange: .964999974
@@ -1494,8 +1494,8 @@ MonoBehaviour:
   stats: {fileID: 0}
   isDead: 0
   numShotsFiredThreshold: 20
-  reloadTimeMultiplier: 1.00999999
-  maxReloadOffset: .119499996
+  reloadTimeMultiplier: 1.5
+  maxReloadOffset: .25
 --- !u!54 &1556197953
 Rigidbody:
   m_ObjectHideFlags: 0
