@@ -482,6 +482,7 @@ public class Player_Movement_Script : MonoBehaviour {
             //print(other.gameObject.name);
             if (!other.gameObject.name.Equals("Brown_Crate"))
             {
+                audios[3].Play();
                 onWall = true;
                 this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
             }		
@@ -582,9 +583,9 @@ public class Player_Movement_Script : MonoBehaviour {
                     print(other.gameObject.name);
                     if (!other.gameObject.name.Equals("Brown_Crate"))
                     {
-                        onWall = true;
-                        this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
                         audios[3].Play();
+                        onWall = true;
+                        this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);                        
                     }
                 }
             }

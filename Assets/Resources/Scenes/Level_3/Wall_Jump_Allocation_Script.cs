@@ -19,12 +19,15 @@ public class Wall_Jump_Allocation_Script : MonoBehaviour {
 	}
 
     void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player") && (!isAllocated || unlimitedWallJumps))
-        {
-            other.gameObject.GetComponent<Player_Movement_Script>().wallJumpsAllowed = numberOfWallJumpsAllowed;
-            other.gameObject.GetComponent<Player_Movement_Script>().wallJumpsLeft = numberOfWallJumpsAllowed;
-            isAllocated = true;
+    {       
+        if (other.gameObject.CompareTag("Player"))
+        {            
+            if (!isAllocated || unlimitedWallJumps)
+            {
+                other.gameObject.GetComponent<Player_Movement_Script>().wallJumpsAllowed = numberOfWallJumpsAllowed;                
+                other.gameObject.GetComponent<Player_Movement_Script>().wallJumpsLeft = numberOfWallJumpsAllowed;
+                isAllocated = true;
+            }
         }
     }
 }
