@@ -5944,9 +5944,9 @@ MonoBehaviour:
   spawners: []
   placeToSpawn: 0
   horizontalMovement:
-    leftMovementThreshold: -5
-    rightMovementThreshold: 7.5
-    movementSpeed: 8.5
+    leftMovementThreshold: 0
+    rightMovementThreshold: 0
+    movementSpeed: 0
     playerOffset: 0
     accelerationPushOffWall: -15
   wallJumpsAllowed: 0
@@ -30500,7 +30500,7 @@ AudioSource:
   m_GameObject: {fileID: 724946890}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: ce83a76aabf87954da0fbf2e116c8440, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2c77dc04a55a80343b7ac41ea622c9c9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -81182,7 +81182,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: horizontalMovement.movementSpeed
-      value: 8.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: invincibleTime
@@ -81232,6 +81232,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 027845c7ca06b7147bd249e335ec2ed7, type: 3}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: horizontalMovement.leftMovementThreshold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: horizontalMovement.rightMovementThreshold
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
   m_RootGameObject: {fileID: 137554353}
@@ -93352,6 +93360,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 5.61068439
       objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 2dad327c60a03704da90b8f836f2532e, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c77dc04a55a80343b7ac41ea622c9c9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dad327c60a03704da90b8f836f2532e, type: 2}
   m_RootGameObject: {fileID: 724946890}
