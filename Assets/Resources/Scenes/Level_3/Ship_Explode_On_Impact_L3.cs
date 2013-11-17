@@ -15,7 +15,10 @@ public class Ship_Explode_On_Impact_L3 : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        this.GetComponent<Detonator>().Explode();
-        this.gameObject.renderer.enabled = false;
+        if (!other.gameObject.CompareTag("L3_Ejection_Trigger"))
+        {
+            this.GetComponent<Detonator>().Explode();
+            this.gameObject.renderer.enabled = false;
+        }        
     }
 }
