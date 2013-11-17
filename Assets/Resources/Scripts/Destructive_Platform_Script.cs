@@ -18,6 +18,8 @@ public class Destructive_Platform_Script : MonoBehaviour {
 
     private float startTime = 0.0f;
 
+    private bool isPlayed = false;
+
 	// Use this for initialization
 	void Start () {
         forceToApply.Normalize();
@@ -37,22 +39,27 @@ public class Destructive_Platform_Script : MonoBehaviour {
     }
 
     public IEnumerator ApplyForceDelay()
-    {
+    {        
         yield return new WaitForSeconds(delayToApplyForces);
-        this.rigidbody.constraints = postActivationConstraints;
-        this.rigidbody.AddForceAtPosition(forceToApply * forceMagnitude * -UnityEngine.Physics.gravity.y, pointToApplyForce + this.transform.position);
-        startTime = Time.time;
+        if (!isPlayed)
+        {
+            isPlayed = true;
+            this.rigidbody.constraints = postActivationConstraints;
+            this.rigidbody.AddForceAtPosition(forceToApply * forceMagnitude * -UnityEngine.Physics.gravity.y, pointToApplyForce + this.transform.position);
+            startTime = Time.time;
 
-        // If there is a particle System Attached, play it
-        if (detonatorPrefab)
-        {
-            GameObject d = (GameObject)Instantiate(detonatorPrefab);
-            d.transform.position = detonatorOffset + this.transform.position;
-            d.GetComponent<Detonator>().Explode();
-        }
-        else if (postActivationParticleSystem)
-        {
-            postActivationParticleSystem.particleSystem.Play();            
+            // If there is a particle System Attached, play it
+            if (detonatorPrefab)
+            {
+                GameObject d = (GameObject)Instantiate(detonatorPrefab);
+                d.transform.position = detonatorOffset + this.transform.position;
+                d.GetComponent<Detonator>().Explode();
+                print("here");
+            }
+            else if (postActivationParticleSystem)
+            {
+                postActivationParticleSystem.particleSystem.Play();
+            }
         }
 
         audio.Play();

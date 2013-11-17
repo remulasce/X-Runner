@@ -949,6 +949,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 994934967}
@@ -1059,8 +1067,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &26747735
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1351,7 +1359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayed: 0
-  velocityMagnitude: 5
+  velocityMagnitude: 3
 --- !u!82 &34221894
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2023,6 +2031,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1295699892}
@@ -2424,6 +2444,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1031654008}
@@ -3550,8 +3582,8 @@ MonoBehaviour:
   delayToApplyForces: .100000001
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &74410536
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4886,6 +4918,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1603359215}
@@ -4944,8 +4988,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &103618500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5290,8 +5334,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &106080811
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5939,8 +5983,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -4.5}
 --- !u!54 &126995354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7076,8 +7120,8 @@ MonoBehaviour:
   delayToApplyForces: .5
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 7.5, z: -5}
 --- !u!54 &150076241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7750,6 +7794,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1634101768}
@@ -8978,6 +9034,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1003342917}
@@ -11707,8 +11775,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &268669978
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12474,6 +12542,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d2e614fdd2ac92e4fb150b1aa7d2c3a7, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 810345916}
@@ -12706,6 +12786,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 960135589}
@@ -13586,6 +13678,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1614800213}
@@ -14343,6 +14447,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b26b24a7a3a7d774995cf21a65dfcf48, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1697328035}
@@ -14839,6 +14955,22 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ca7701b6145e1cb42bf7fab0dcc6514d, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1533233399}
@@ -15519,8 +15651,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &363548930
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15915,8 +16047,8 @@ MonoBehaviour:
   delayToApplyForces: .600000024
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &367786376
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16385,6 +16517,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 2132040124}
@@ -16495,8 +16639,8 @@ MonoBehaviour:
   delayToApplyForces: .600000024
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 7.5, z: -5}
 --- !u!54 &373158048
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16693,6 +16837,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1912669755}
@@ -17240,6 +17396,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 995680642}
@@ -17312,6 +17480,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 103618497}
@@ -17370,8 +17550,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &394879497
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21166,6 +21346,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 729555772}
@@ -22127,6 +22319,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 74410533}
@@ -22185,8 +22389,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &491703509
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22647,6 +22851,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 523456792}
@@ -23125,8 +23341,8 @@ MonoBehaviour:
   delayToApplyForces: .400000006
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &523456795
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24299,7 +24515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayed: 0
-  velocityMagnitude: 5
+  velocityMagnitude: 3
 --- !u!82 &542269913
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24571,8 +24787,8 @@ MonoBehaviour:
   delayToApplyForces: .349999994
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &559051682
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24755,8 +24971,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &562175814
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25598,6 +25814,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 2126375370}
@@ -26338,6 +26566,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b26b24a7a3a7d774995cf21a65dfcf48, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 2127884278}
@@ -26954,6 +27194,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1995982422}
@@ -27012,8 +27264,8 @@ MonoBehaviour:
   delayToApplyForces: .400000006
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 7.5, z: -5}
 --- !u!54 &625560754
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27536,6 +27788,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 367786373}
@@ -27642,7 +27906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayed: 0
-  velocityMagnitude: 5
+  velocityMagnitude: 3
 --- !u!82 &633642512
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30574,6 +30838,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1933301984}
@@ -31543,7 +31819,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: 0}
 --- !u!54 &714716560
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32506,6 +32782,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 884926378}
@@ -32564,8 +32852,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &729555775
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33113,7 +33401,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &736356316
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34570,6 +34858,22 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ca7701b6145e1cb42bf7fab0dcc6514d, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1548739422}
@@ -34646,6 +34950,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 26747732}
@@ -35139,6 +35455,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 126995351}
@@ -35211,6 +35539,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1621830967}
@@ -35589,8 +35929,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 10, z: -3}
 --- !u!114 &810345923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36263,6 +36603,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 2103125376}
@@ -37309,8 +37661,8 @@ MonoBehaviour:
   delayToApplyForces: .699999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 7.5, z: -5}
 --- !u!54 &842715482
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -39110,8 +39462,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &884926381
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -39630,6 +39982,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 951309020}
@@ -41030,8 +41394,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 10, z: -3}
 --- !u!54 &929223320
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42270,8 +42634,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &951309023
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42826,8 +43190,8 @@ MonoBehaviour:
   delayToApplyForces: .150000006
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &960135592
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43486,8 +43850,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -4.5}
 --- !u!54 &967894908
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44405,7 +44769,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &994934970
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44688,8 +45052,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &995680645
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -45260,8 +45624,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1003342920
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -45552,6 +45916,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1779407116}
@@ -46070,8 +46446,8 @@ MonoBehaviour:
   delayToApplyForces: .300000012
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &1031654011
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -46693,6 +47069,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 268669975}
@@ -47838,8 +48226,8 @@ MonoBehaviour:
   delayToApplyForces: .449999988
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1062619020
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48144,8 +48532,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1064685551
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48982,6 +49370,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 394879494}
@@ -49507,7 +49907,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &1089019809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52277,6 +52677,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1064685548}
@@ -55864,7 +56276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayed: 0
-  velocityMagnitude: 5
+  velocityMagnitude: 3
 --- !u!82 &1209386900
 AudioSource:
   m_ObjectHideFlags: 0
@@ -57916,6 +58328,10 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 82070ed8eee8dad44a067b3d45347219, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 714716557}
@@ -58022,7 +58438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayed: 0
-  velocityMagnitude: 5
+  velocityMagnitude: 3
 --- !u!82 &1235233901
 AudioSource:
   m_ObjectHideFlags: 0
@@ -59661,8 +60077,8 @@ MonoBehaviour:
   delayToApplyForces: .0500000007
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &1295699895
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -60583,6 +60999,22 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ca7701b6145e1cb42bf7fab0dcc6514d, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 842715479}
@@ -62881,6 +63313,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1639370801}
@@ -62953,6 +63393,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 562175811}
@@ -63569,6 +64021,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b26b24a7a3a7d774995cf21a65dfcf48, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1662485239}
@@ -63687,8 +64151,8 @@ MonoBehaviour:
   delayToApplyForces: .550000012
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &1357529418
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64191,8 +64655,8 @@ MonoBehaviour:
   delayToApplyForces: .5
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &1361333617
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64549,6 +65013,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 106080808}
@@ -66623,8 +67099,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1412873359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -68976,7 +69452,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1447802168
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -69569,6 +70045,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1089019806}
@@ -70109,8 +70593,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 7.5, z: -5}
 --- !u!54 &1465400948
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -71555,6 +72039,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1412873356}
@@ -72756,6 +73252,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 363548927}
@@ -73296,6 +73804,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1062619017}
@@ -74189,8 +74709,8 @@ MonoBehaviour:
   delayToApplyForces: .300000012
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 7.5, z: -5}
 --- !u!54 &1533233402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -74744,8 +75264,8 @@ MonoBehaviour:
   delayToApplyForces: .100000001
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 7.5, z: -5}
 --- !u!54 &1548739425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -74942,6 +75462,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1361333614}
@@ -76301,6 +76833,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 491703506}
@@ -76929,6 +77473,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1447802165}
@@ -77253,6 +77809,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d2e614fdd2ac92e4fb150b1aa7d2c3a7, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 929223317}
@@ -77355,8 +77923,8 @@ MonoBehaviour:
   delayToApplyForces: .25
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &1603359218
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -77783,8 +78351,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -4.5}
 --- !u!54 &1614800216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78397,6 +78965,22 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ca7701b6145e1cb42bf7fab0dcc6514d, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1465400945}
@@ -78455,8 +79039,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1621830970
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79171,8 +79755,8 @@ MonoBehaviour:
   delayToApplyForces: .524999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1634101771
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79534,7 +80118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayed: 0
-  velocityMagnitude: 5
+  velocityMagnitude: 3
 --- !u!82 &1636636869
 AudioSource:
   m_ObjectHideFlags: 0
@@ -79968,7 +80552,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &1639370804
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80356,8 +80940,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -4.5}
 --- !u!54 &1657889334
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80636,8 +81220,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1662485242
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -82126,8 +82710,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1697328038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -82324,6 +82908,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 736356313}
@@ -83045,6 +83637,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b26b24a7a3a7d774995cf21a65dfcf48, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 2065267015}
@@ -84758,7 +85362,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1779407119
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -85284,6 +85888,22 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ca7701b6145e1cb42bf7fab0dcc6514d, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 150076238}
@@ -90232,6 +90852,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1931101797}
@@ -90605,7 +91237,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &1897953482
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -91837,8 +92469,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -4.5}
 --- !u!54 &1912669758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -92229,7 +92861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayed: 0
-  velocityMagnitude: 5
+  velocityMagnitude: 3
 --- !u!82 &1916521628
 AudioSource:
   m_ObjectHideFlags: 0
@@ -93190,8 +93822,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+  detonatorOffset: {x: 5, y: 5, z: 0}
 --- !u!54 &1931101799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -93386,7 +94018,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1933301987
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -94009,6 +94641,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1897953479}
@@ -94655,7 +95295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayed: 0
-  velocityMagnitude: 5
+  velocityMagnitude: 3
 --- !u!82 &1961598427
 AudioSource:
   m_ObjectHideFlags: 0
@@ -95326,6 +95966,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 559051679}
@@ -95398,6 +96050,22 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ca7701b6145e1cb42bf7fab0dcc6514d, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 625560751}
@@ -95470,6 +96138,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1657889331}
@@ -95542,6 +96222,22 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ca7701b6145e1cb42bf7fab0dcc6514d, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 373158045}
@@ -96340,8 +97036,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1992548713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -97176,8 +97872,8 @@ MonoBehaviour:
   delayToApplyForces: .774999976
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &1995982425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -97746,6 +98442,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 967894905}
@@ -98170,6 +98878,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b26b24a7a3a7d774995cf21a65dfcf48, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 2068490525}
@@ -100357,7 +101077,7 @@ MonoBehaviour:
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &2065267018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -100752,8 +101472,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &2068490528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -100984,7 +101704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayed: 0
-  velocityMagnitude: 5
+  velocityMagnitude: 3
 --- !u!82 &2071622579
 AudioSource:
   m_ObjectHideFlags: 0
@@ -103315,6 +104035,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1357529415}
@@ -103425,8 +104157,8 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -4.5}
 --- !u!54 &2103125379
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -104262,6 +104994,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5ef62ca5064a43542a43d28c14e813ff, type: 3}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.z
+      value: -3.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
   m_RootGameObject: {fileID: 1992548710}
@@ -104320,8 +105064,8 @@ MonoBehaviour:
   delayToApplyForces: .200000003
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorOffset: {x: 0, y: 5, z: -3.75}
 --- !u!54 &2126375373
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -104557,7 +105301,7 @@ MonoBehaviour:
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &2127884281
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -104969,7 +105713,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 0, z: 0}
+  detonatorOffset: {x: 0, y: 5, z: -3.25}
 --- !u!54 &2132040127
 Rigidbody:
   m_ObjectHideFlags: 0
