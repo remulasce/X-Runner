@@ -29,6 +29,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: D_Explosion
@@ -136,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4007f1233a9b74fa9be42583fafba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 4
-  color: {r: .961538434, g: .665680468, b: 0, a: .549019635}
+  size: 5
+  color: {r: 0, g: .76259923, b: .961538434, a: .549019635}
   explodeOnStart: 0
   duration: 1.25
   detail: 2
@@ -161,6 +162,45 @@ MonoBehaviour:
   autoCreateLight: 0
   autoCreateForce: 0
   autoCreateHeatwave: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b0ca7171ed55c4eaaf9aba39d05e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 1
+  detonatorControlled: 1
+  startSize: 1
+  size: 1
+  explodeDelayMin: 0
+  explodeDelayMax: 0
+  startDuration: 2
+  duration: 2
+  timeScale: 1
+  startDetail: 1
+  detail: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  startLocalPosition: {x: 0, y: 0, z: 0}
+  localPosition: {x: 0, y: 0, z: 0}
+  startForce: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 0}
+  startVelocity: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  detailThreshold: 0
+  nearSounds:
+  - {fileID: 8300000, guid: 84c821d8c4e432f47852f73724d79569, type: 3}
+  farSounds:
+  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
+  distanceThreshold: 100
+  minVolume: .00999999978
+  maxVolume: .100000001
+  rolloffFactor: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

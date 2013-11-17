@@ -112,7 +112,7 @@ public class L4_Spawner : MonoBehaviour {
         W(ft_lookat_cap(.7f, 2, .45f, 1500), nb_go(0, 0, 0, 0, 0), lb_no(), at_no(), xt_no(), xb_no(), 4f);
 
         // Big Wave
-        W(ft_gd(20, 14), nb_go(40f, 0, 10f, 0, 12), lb_no(), at_hm(10.0f), xt_im(), xb_go(-1, 0, 18), 6f);
+        W(ft_gd(20, 14), nb_go(40f, 0, 10f, 0, 12), lb_no(), at_no(), xt_im(), xb_go(-1, 0, 18), 6f);
 
         // Come from behind waves
 
