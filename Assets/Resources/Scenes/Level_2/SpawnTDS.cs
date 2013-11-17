@@ -95,7 +95,7 @@ public class SpawnTDS : MonoBehaviour {
  	public class FormationType
 	{
 		public enum T { HorizontalLine, Grid, VerticalLine,
-			ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidCinematic2, AsteroidGameplay,
+			ElitePass, EliteStayBack, EliteBattle, WaypointTest, AsteroidCinematic, AsteroidCinematic2, AsteroidGameplay, AsteroidTutorial,
             L4_Space, L4_Trench, L4_MissileRun, L4_Finale, L4_Lookat_Cap, L4_Fade_Out
         };
 		public T type;

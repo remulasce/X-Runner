@@ -20,6 +20,8 @@ public class L2_Asteroid_Script : MonoBehaviour {
     public Vector3 elitePosition = Vector3.zero;
     public GameObject player = null;
 
+    public bool isCinematic = false;
+
     AudioSource[] audios;
     /*
      even # = player pings
@@ -52,75 +54,81 @@ public class L2_Asteroid_Script : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("L2_PlayerShot"))
-        {
-            targetedByEnemy = false;
-            if (lastHit != LAST_HIT.PLAYER)
+
+            if (other.gameObject.CompareTag("L2_PlayerShot"))
             {
-                if (!player.GetComponent<L2_Ship_Script>().isDead) // Fixes a bug where asteroids just sit still in space
+                targetedByEnemy = false;
+                if (lastHit != LAST_HIT.PLAYER)
                 {
-                    // Make sure to instantiate the prefab object for this
-                    GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
-                    sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[numberOfTimesHit]);
-                    sound.transform.position = this.transform.position;
-
-                    if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x)
-                        || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x)))
-                        || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
-                        ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+                    if (!player.GetComponent<L2_Ship_Script>().isDead) // Fixes a bug where asteroids just sit still in space
                     {
-                        this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + extraHitVelocity);
-                    }
-                }
+                        if (!isCinematic)
+                        {
+                            // Make sure to instantiate the prefab object for this
+                            GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
+                            sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[Mathf.Clamp(numberOfTimesHit, 0, 8)]);
+                            sound.transform.position = this.transform.position;
+                        
 
-                numberOfTimesHit++;
-                lastHit = LAST_HIT.PLAYER;                
-                print(lastHit);
-            }
-            Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
-            Object.Destroy(other.gameObject);
-            hasReflectedOffPlayer = true;
-        }
+                            if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x)
+                                || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x)))
+                                || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                                ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+                            {
+                                this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + extraHitVelocity);
+                            }
+                        }
+                    }
 
-        if (other.gameObject.CompareTag("L2_EnemyShot"))
-        {
-            targetedByEnemy = false;
-            if (lastHit != LAST_HIT.ENEMY)
-            {
-                if (lastHit == LAST_HIT.PLAYER)
-                {
-                    if (numberOfTimesHit > 0)
-                    {
-                        // Make sure to instantiate the prefab object for this
-                        GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
-                        sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[numberOfTimesHit]);
-                        sound.transform.position = this.transform.position;
-                    }
-                    if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x > elitePosition.x) 
-                        || this.rigidbody.velocity.x < 0 && player.transform.position.x < elitePosition.x))) 
-                        || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
-                        ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
-                    {
-                        this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * (maxVelocity + extraHitVelocity);                        
-                    }
                     numberOfTimesHit++;
+                    lastHit = LAST_HIT.PLAYER;
+                    print(lastHit);
                 }
-                
-                lastHit = LAST_HIT.ENEMY;
-                print(lastHit);
+                Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
+                Object.Destroy(other.gameObject);
+                hasReflectedOffPlayer = true;
             }
-            if (other.gameObject.name.Contains("Homing"))
+
+            if (other.gameObject.CompareTag("L2_EnemyShot"))
             {
-                other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().transform.parent = this.gameObject.transform;
-                other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().Explode();
+                targetedByEnemy = false;
+                if (lastHit != LAST_HIT.ENEMY)
+                {
+                    if (lastHit == LAST_HIT.PLAYER)
+                    {
+                        if (numberOfTimesHit > 0)
+                        {
+                            // Make sure to instantiate the prefab object for this
+                            GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
+                            sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[Mathf.Clamp(numberOfTimesHit, 1, 7)]);
+                            sound.transform.position = this.transform.position;
+                        }
+                        if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x > elitePosition.x)
+                            || this.rigidbody.velocity.x < 0 && player.transform.position.x < elitePosition.x)))
+                            || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                            ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+                        {
+                            this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * (maxVelocity + extraHitVelocity);
+                        }
+                        numberOfTimesHit++;
+                    }
+
+                    lastHit = LAST_HIT.ENEMY;
+                    print(lastHit);
+                }
+                if (other.gameObject.name.Contains("Homing"))
+                {
+                    other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().transform.parent = this.gameObject.transform;
+                    other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().Explode();
+                }
+                else
+                {
+                    GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
+                    gDetonator.transform.parent = this.gameObject.transform;
+                }
+                Object.Destroy(other.gameObject);
+                hasReflectedOffPlayer = false;
             }
-            else
-            {
-                GameObject gDetonator = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
-                gDetonator.transform.parent = this.gameObject.transform;
-            }
-            Object.Destroy(other.gameObject);
-            hasReflectedOffPlayer = false;
-        }
+        
     }
 }

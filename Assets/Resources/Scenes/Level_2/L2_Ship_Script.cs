@@ -398,7 +398,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 
         animation.Play();
 
-
+        audios[0].volume = 0;
         audios[2].Play();
         audios[3].Play();
 

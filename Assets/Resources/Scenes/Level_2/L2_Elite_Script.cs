@@ -298,7 +298,7 @@ public class L2_Elite_Script : MonoBehaviour {
         {
             if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), asteroids[i].collider.bounds))
             {
-                Destroy(asteroids[i]);
+                Object.Destroy(asteroids[i]);
             }
         }
 

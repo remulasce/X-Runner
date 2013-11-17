@@ -66,8 +66,11 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
             this.animation.Play("Shield_Collapse_Elite");
             StartCoroutine("BringBackShield");
 
-            // Fade in the hit song
-            musicManager.QuickFadeInSongs(2, new int[] { 5 });
+            if (this.name.Contains("Elite")) // Hack
+            {
+                // Fade in the hit song
+                musicManager.QuickFadeInSongs(2, new int[] { 5 });
+            }
         }
     }
 
