@@ -490,13 +490,16 @@ public class Player_Movement_Script : MonoBehaviour {
 
         if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile")) // Then respawn player & reset camera position
         {
-            if (stats)
+            if (!isDead)
             {
-                stats.numberOfDeaths++;
+                if (stats)
+                {
+                    stats.numberOfDeaths++;
+                }
+                isDead = true;
+                this.renderer.enabled = false;
+                StartCoroutine("Respawn");
             }
-            isDead = true;
-            this.renderer.enabled = false;
-            StartCoroutine("Respawn");            
         }
 		
 		//Next level stuff: Persist some stuff for the next level

@@ -30,6 +30,7 @@ public class Camera_Shake_Trigger_Script : MonoBehaviour {
         //print(other.gameObject.tag);
         if (other.gameObject.CompareTag(objectToCompareTagWith.tag))
         {
+            audio.Play();
             mainCamera.BeginShake(shakeDuration, shakePower);
         }
     }
