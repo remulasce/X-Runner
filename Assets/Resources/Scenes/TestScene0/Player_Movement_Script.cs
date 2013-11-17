@@ -376,6 +376,8 @@ public class Player_Movement_Script : MonoBehaviour {
             this.renderer.enabled = true;
         }
 
+        audios[4].Play();
+
         StartCoroutine("EndInvincibility");
     }
 	

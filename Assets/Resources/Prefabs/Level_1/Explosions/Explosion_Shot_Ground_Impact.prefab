@@ -18,7 +18,7 @@ GameObject:
   - 114: {fileID: 11400014}
   - 114: {fileID: 11400016}
   m_Layer: 13
-  m_Name: Explosion_Mega
+  m_Name: Explosion_Shot_Ground_Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,15 +52,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4007f1233a9b74fa9be42583fafba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 4
-  color: {r: .543298721, g: .721568644, b: .597921848, a: .388235301}
+  size: 7.81802464
+  color: {r: .30207172, g: .661617994, b: .843283594, a: .4627451}
   explodeOnStart: 0
-  duration: 5
+  duration: 3.2971828
   detail: 1
-  upwardsBias: 0
-  destroyTime: 10
+  upwardsBias: 1.95347905
+  destroyTime: 7
   useWorldSpace: 1
-  direction: {x: 0, y: .239999995, z: 0}
+  direction: {x: 0, y: 75.1568909, z: .187326342}
   fireballAMaterial: {fileID: 0}
   fireballBMaterial: {fileID: 0}
   smokeAMaterial: {fileID: 0}
@@ -71,7 +71,7 @@ MonoBehaviour:
   heatwaveMaterial: {fileID: 0}
   autoCreateFireball: 1
   autoCreateSparks: 1
-  autoCreateShockwave: 0
+  autoCreateShockwave: 1
   autoCreateSmoke: 1
   autoCreateGlow: 1
   autoCreateLight: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 5
+  size: .94599247
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
@@ -107,7 +107,7 @@ MonoBehaviour:
   startLocalPosition: {x: 0, y: 0, z: 0}
   localPosition: {x: 0, y: 0, z: 0}
   startForce: {x: 0, y: 0, z: 0}
-  force: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 20.2409, z: 0}
   startVelocity: {x: 0, y: 0, z: 0}
   velocity: {x: 200, y: 200, z: 200}
   detailThreshold: 0
@@ -133,11 +133,11 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 20
+  size: 5
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
-  duration: 5
+  duration: .864852667
   timeScale: 1
   startDetail: 1
   detail: 1
@@ -170,11 +170,11 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 2
+  size: 1.0519073
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
-  duration: 1
+  duration: 4
   timeScale: 1
   startDetail: 1
   detail: 14.7874298
@@ -185,7 +185,7 @@ MonoBehaviour:
   startForce: {x: 0, y: 0, z: 0}
   force: {x: 0, y: -9.81000042, z: 0}
   startVelocity: {x: 0, y: 0, z: 0}
-  velocity: {x: 1000, y: 1000, z: 1000}
+  velocity: {x: 300, y: 300, z: 300}
   detailThreshold: 0
   sparksMaterial: {fileID: 0}
 --- !u!1002 &11400007
@@ -202,10 +202,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745312967000e3c449713c45a6a516f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  on: 0
+  on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 10
+  size: 4.98109627
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
@@ -241,7 +241,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 20
+  size: 1.87737787
   explodeDelayMin: .0299999882
   explodeDelayMax: .119999975
   startDuration: 2
@@ -281,7 +281,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 15
+  size: 1
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
@@ -321,7 +321,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 6
+  size: 1.01489055
   explodeDelayMin: .0599999949
   explodeDelayMax: .114655629
   startDuration: 2
@@ -378,13 +378,28 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: fd49783f139340c46a45f43e8022902e, type: 3}
+  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: ecc49abad802b7f4da8c71a85cf0b87b, type: 3}
+  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
+  - {fileID: 8300000, guid: 5fe720f1eb0d7d545862dc3ea58ae09e, type: 3}
+  - {fileID: 8300000, guid: 540e0b5b890ba914dad7dc18b589b78b, type: 3}
+  - {fileID: 8300000, guid: ed9e129cff5fe784e8d5ab7d9d6840b2, type: 3}
+  - {fileID: 8300000, guid: 07901fef6bc3d3445b4da937ab00d1c5, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: 8f03951fee9bec9478d1ec979ba44677, type: 3}
+  - {fileID: 8300000, guid: ecc49abad802b7f4da8c71a85cf0b87b, type: 3}
+  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
+  - {fileID: 8300000, guid: 5fe720f1eb0d7d545862dc3ea58ae09e, type: 3}
+  - {fileID: 8300000, guid: 540e0b5b890ba914dad7dc18b589b78b, type: 3}
+  - {fileID: 8300000, guid: ed9e129cff5fe784e8d5ab7d9d6840b2, type: 3}
+  - {fileID: 8300000, guid: 07901fef6bc3d3445b4da937ab00d1c5, type: 3}
+  - {fileID: 8300000, guid: 1792989a5a33779428d2dbe9a9430605, type: 3}
+  - {fileID: 8300000, guid: 395ebd3d6fca1ec40a6b3c7415c1edb7, type: 3}
   - {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
-  distanceThreshold: 100
-  minVolume: 1
-  maxVolume: 1
+  - {fileID: 8300000, guid: 8f03951fee9bec9478d1ec979ba44677, type: 3}
+  distanceThreshold: 50
+  minVolume: .300000012
+  maxVolume: .449999988
   rolloffFactor: .349999994
 --- !u!1002 &11400017
 EditorExtensionImpl:

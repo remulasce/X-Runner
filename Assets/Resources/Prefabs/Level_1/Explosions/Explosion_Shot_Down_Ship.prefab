@@ -378,15 +378,17 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: 1792989a5a33779428d2dbe9a9430605, type: 3}
-  - {fileID: 8300000, guid: 395ebd3d6fca1ec40a6b3c7415c1edb7, type: 3}
+  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: ecc49abad802b7f4da8c71a85cf0b87b, type: 3}
+  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: 8f03951fee9bec9478d1ec979ba44677, type: 3}
-  - {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
-  distanceThreshold: 50
-  minVolume: .400000006
+  - {fileID: 8300000, guid: ecc49abad802b7f4da8c71a85cf0b87b, type: 3}
+  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
+  distanceThreshold: 100
+  minVolume: .899999976
   maxVolume: 1
-  rolloffFactor: .5
+  rolloffFactor: .349999994
 --- !u!1002 &11400017
 EditorExtensionImpl:
   serializedVersion: 6
