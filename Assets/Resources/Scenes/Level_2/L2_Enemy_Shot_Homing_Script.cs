@@ -68,19 +68,20 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
         if (isNotCinematic)
         {
             base.OnCollisionEnter(col);
-            if (col.gameObject.CompareTag("L2_PlayerShot"))
+        }
+        if (col.gameObject.CompareTag("L2_PlayerShot"))
+        {
+            explosion.transform.parent = null;
+            explosion.transform.position = this.transform.position;
+            explosion.Explode();
+            Destroy(col.gameObject);
+            if (isNotCinematic)
             {
-                explosion.transform.parent = null;
-                explosion.transform.position = this.transform.position;
-                explosion.Explode();
-                Destroy(col.gameObject);
-                if (isNotCinematic)
-                {
-                    //transform.DetachChildren();
-                    Destroy(this.gameObject);
-                }
+                //transform.DetachChildren();
+                Destroy(this.gameObject);
             }
         }
+        
     }
 
     public Detonator GetExplosion()

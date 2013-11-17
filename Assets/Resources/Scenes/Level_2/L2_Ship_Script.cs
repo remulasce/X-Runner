@@ -88,6 +88,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 
     Music_Manager_Script musicManager;
 
+    AudioSource[] audios;
+
 	// Use this for initialization
 	void Start ()
     {        
@@ -98,6 +100,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         StartCoroutine("ResetShield");
 
         baseReloadTime = reloadTime;
+
+        audios = this.gameObject.GetComponents<AudioSource>();
 
         musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
 
@@ -207,7 +211,15 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 		{
 			this.rigidbody.AddForce(movement.haltBoost * new Vector3(0, Mathf.Sign(dy), 0) * Time.deltaTime);
 		}
-		
+
+        if ((Mathf.Abs(dx) > 0 || Mathf.Abs(dy) > 0) && !audios[0].isPlaying)
+        {
+            audios[0].Play();
+        }
+        else if ((dx == 0 && dy == 0) && audios[0].isPlaying)
+        {
+            audios[0].Stop();
+        }		
 		
         this.rigidbody.AddForce(movement.acceleration * new Vector3(dx, dy, 0) * Time.deltaTime);
 	}
@@ -511,8 +523,9 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         isDead = false;
         print("Respawned!");
         isShielded = true;
-        numShotsFired = 0;
+        numShotsFired = 0;        
         StartCoroutine("ResetShield");
+        audios[1].Play();
     }
 
     IEnumerator ResetShield()

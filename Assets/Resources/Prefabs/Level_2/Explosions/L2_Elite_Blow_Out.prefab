@@ -71,7 +71,7 @@ MonoBehaviour:
   autoCreateSmoke: 1
   autoCreateGlow: 1
   autoCreateLight: 1
-  autoCreateForce: 1
+  autoCreateForce: 0
   autoCreateHeatwave: 0
 --- !u!1002 &11400001
 EditorExtensionImpl:
@@ -188,11 +188,9 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: 1792989a5a33779428d2dbe9a9430605, type: 3}
-  - {fileID: 8300000, guid: 395ebd3d6fca1ec40a6b3c7415c1edb7, type: 3}
+  - {fileID: 8300000, guid: 84c821d8c4e432f47852f73724d79569, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: 8f03951fee9bec9478d1ec979ba44677, type: 3}
-  - {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
+  - {fileID: 8300000, guid: 84c821d8c4e432f47852f73724d79569, type: 3}
   distanceThreshold: 50
   minVolume: .600000024
   maxVolume: .200000003
