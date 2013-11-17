@@ -20,6 +20,8 @@ public class L2_ShieldUvAnimation : MonoBehaviour
     // Tag to compare to for the shield reflection
     public string tagToCompareFor = "";
 
+    AudioSource[] audios;
+
     // Use this for initialization
     void Start()
     {
@@ -28,6 +30,8 @@ public class L2_ShieldUvAnimation : MonoBehaviour
         mTime = 0.0f;
 
         initialColor = this.mMaterial.color;
+
+        audios = this.gameObject.GetComponents<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,7 +55,7 @@ public class L2_ShieldUvAnimation : MonoBehaviour
                         other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().transform.parent = null;
                         other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().Explode();
                     }
-                }
+                }                
                 Object.Destroy(other.gameObject);
                 StartCoroutine("RevertShieldColor");
             }            
@@ -60,8 +64,19 @@ public class L2_ShieldUvAnimation : MonoBehaviour
 
     IEnumerator RevertShieldColor()
     {
+        audios[0].Play();
         this.mMaterial.color = shieldHitColor;
         yield return new WaitForSeconds(flashTime);
         this.mMaterial.color = initialColor;
     }
+
+    public void PlayShieldUp()
+    {
+        audios[1].Play();
+    }
+
+    public void PlayShieldDown()
+    {
+        audios[2].Play();
+    }    
 }

@@ -11,11 +11,21 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
     public bool shootsLeft = false;
 
 	// Use this for initialization
-	protected void Start () {      
+	protected void Start () {
+
+        if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds) && isNotCinematic)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
         
         this.transform.forward = new Vector3(0, -1, 0);
         
         this.rigidbody.velocity = transform.forward * speed;
+
+        GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
+        sound.GetComponent<Audio_SFX_Object_Script>().StartSound(this.gameObject.GetComponent<AudioSource>());
+        sound.transform.position = this.transform.position;
 	}
 	
 	//Don't keep drifting forever

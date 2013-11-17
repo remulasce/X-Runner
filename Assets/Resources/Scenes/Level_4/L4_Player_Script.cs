@@ -86,6 +86,8 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
     private float baseReloadTime = 0;
     [Range(0, 0.5f)]
     public float maxReloadOffset = 0.0f;
+
+    AudioSource[] audios;
 	
 	// Use this for initialization
 	void Start ()
@@ -97,6 +99,8 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
         StartCoroutine("ResetShield");
 
         baseReloadTime = reloadTime;
+
+        audios = this.gameObject.GetComponents<AudioSource>();
 
         stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>();
 	}
@@ -204,6 +208,15 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 		{
 			this.rigidbody.AddForce(movement.haltBoost * new Vector3(0, Mathf.Sign(dy), 0) * Time.deltaTime);
 		}
+
+        if ((Mathf.Abs(dx) > 0 || Mathf.Abs(dy) > 0) && !audios[0].isPlaying)
+        {
+            audios[0].Play();
+        }
+        else if ((dx == 0 && dy == 0) && audios[0].isPlaying)
+        {
+            audios[0].Stop();
+        }
 		
         this.rigidbody.AddForce(movement.acceleration * new Vector3(dx, dy, 0) * Time.deltaTime);
 	}
@@ -440,6 +453,7 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
         print("Respawned!");
         isShielded = true;
         numShotsFired = 0;
+        audios[1].Play();
         StartCoroutine("ResetShield");
     }
 

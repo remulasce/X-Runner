@@ -42,7 +42,6 @@ public class Elite_Laser_Script : MonoBehaviour {
         {
             this.transform.LookAt(nonTargetDirection, new Vector3(0,1,0)); // Set the direction here
         }
-        //Debug.Log(this.transform.forward);
     }
 
     // Use this for initialization from another object

@@ -88,6 +88,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 
     Music_Manager_Script musicManager;
 
+    AudioSource[] audios;
+
 	// Use this for initialization
 	void Start ()
     {        
@@ -98,6 +100,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         StartCoroutine("ResetShield");
 
         baseReloadTime = reloadTime;
+
+        audios = this.gameObject.GetComponents<AudioSource>();
 
         musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
 
@@ -207,7 +211,15 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 		{
 			this.rigidbody.AddForce(movement.haltBoost * new Vector3(0, Mathf.Sign(dy), 0) * Time.deltaTime);
 		}
-		
+
+        if ((Mathf.Abs(dx) > 0 || Mathf.Abs(dy) > 0) && !audios[0].isPlaying)
+        {
+            audios[0].Play();
+        }
+        else if ((dx == 0 && dy == 0) && audios[0].isPlaying)
+        {
+            audios[0].Stop();
+        }		
 		
         this.rigidbody.AddForce(movement.acceleration * new Vector3(dx, dy, 0) * Time.deltaTime);
 	}
@@ -335,27 +347,30 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 	//Make a shot if we're shooting
 	void doShooting ()
 	{
-        if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime)
+        if (!isDead)
         {
-            if (numShotsFired > numShotsFiredThreshold)
+            if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime)
             {
-                if (reloadTime < maxReloadOffset)
+                if (numShotsFired > numShotsFiredThreshold)
                 {
-                    reloadTime *= reloadTimeMultiplier;
+                    if (reloadTime < maxReloadOffset)
+                    {
+                        reloadTime *= reloadTimeMultiplier;
+                    }
+                    else
+                    {
+                        reloadTime = maxReloadOffset;
+                    }
                 }
-                else
-                {
-                    reloadTime = maxReloadOffset;
-                }
+                GameObject g = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 90, 00));
+                lastShot = Time.time;
+                numShotsFired++;
             }
-            GameObject g = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 90, 00));            
-            lastShot = Time.time;
-            numShotsFired++;
-        }
-        if (Input.GetButtonUp("Jump"))
-        {
-            numShotsFired = 0;
-            reloadTime = baseReloadTime;
+            if (Input.GetButtonUp("Jump"))
+            {
+                numShotsFired = 0;
+                reloadTime = baseReloadTime;
+            }
         }
 	}
 	// Update is called once per frame
@@ -382,6 +397,13 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         isShotDown = true;
 
         animation.Play();
+
+
+        audios[2].Play();
+        audios[3].Play();
+
+        this.rigidbody.velocity = this.rigidbody.velocity.normalized * movement.maxSpeed;
+
 
         StartCoroutine("TransitionToL3");
 
@@ -508,8 +530,9 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         isDead = false;
         print("Respawned!");
         isShielded = true;
-        numShotsFired = 0;
+        numShotsFired = 0;        
         StartCoroutine("ResetShield");
+        audios[1].Play();
     }
 
     IEnumerator ResetShield()

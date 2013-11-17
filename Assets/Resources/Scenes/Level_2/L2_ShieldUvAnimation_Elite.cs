@@ -25,6 +25,8 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
 
     public Music_Manager_Script musicManager;
 
+    AudioSource[] audios;
+
     // Use this for initialization
     void Start()
     {
@@ -33,6 +35,8 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
         mTime = 0.0f;
 
         initialColor = this.mMaterial.color;
+
+        audios = this.gameObject.GetComponents<AudioSource>();
 
         musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
     }
@@ -68,7 +72,8 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
     }
 
     IEnumerator RevertShieldColor()
-    {        
+    {
+        audios[0].Play();
         this.mMaterial.color = shieldHitColor;
         yield return new WaitForSeconds(flashTime);
         this.mMaterial.color = initialColor;
@@ -81,4 +86,14 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
         // Fade in the hit song
         musicManager.QuickFadeOuts(2, new int[] { 5 });
     }
+
+    public void PlayShieldUp()
+    {
+        audios[1].Play();
+    }
+
+    public void PlayShieldDown()
+    {
+        audios[2].Play();
+    }  
 }

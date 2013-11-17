@@ -78,8 +78,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */        
         
-        /*
-        //E(EliteBehavior.Test);
+        ///*        
         // Scout Ship
         W(ft_hl(1), nb_go(0, 25, 0, 0, 4), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 6f);
         
@@ -139,9 +138,11 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         E(EliteBehavior.DownStrafe);
 
+        // Begin spawning the cinematic asteroids (no physics, background stuff).
+        W(ft_ac());
+
         // Giant Vertical Wave
         W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 3.5f), lb_no(), at_hm(21f), xt_im(), xb_go(0, -1, 17f), 6f);
-
 
         //----------------------------------------------------------------------------------------------
 
@@ -283,9 +284,6 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          
         const int numDiamondWaves = 8;
         const float diamondWaveDelay = 2f;
-		
-		// Begin spawning the cinematic asteroids (no physics, background stuff).
-        W(ft_ac());
 		
         //Elite quick visit during the diamond waves
         E(EliteBehavior.PreFinalBattle);   
