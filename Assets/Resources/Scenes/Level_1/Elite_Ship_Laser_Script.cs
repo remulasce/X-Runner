@@ -86,4 +86,9 @@ public class Elite_Ship_Laser_Script : MonoBehaviour {
             currentCannon = 0;
         }
     }
+
+    public void PlayLeave()
+    {
+        audio.Play();
+    }
 }

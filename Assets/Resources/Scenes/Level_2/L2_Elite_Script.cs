@@ -298,7 +298,13 @@ public class L2_Elite_Script : MonoBehaviour {
         {
             if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), asteroids[i].collider.bounds))
             {
-                Destroy(asteroids[i]);
+                Object.Destroy(asteroids[i]);
+            }
+            else
+            {
+                GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), asteroids[i].transform.position, Quaternion.Euler(0, 0, 0));
+                gDetonator.GetComponent<Detonator>().size = 2 * asteroids[i].transform.localScale.x;
+                Object.Destroy(asteroids[i]);
             }
         }
 
@@ -310,7 +316,7 @@ public class L2_Elite_Script : MonoBehaviour {
         StartCoroutine("ShootBigMissile");
 
         musicManager.FadeOutSongs(2, new int[] { 4, 5 });
-        musicManager.FadeInTransitions(2, new int[] { 6 }, 3, new int[] {}, 15.211f);
+        musicManager.FadeInTransitions(2, new int[] { 6 }, 3, new int[] {}, 0.0f);
     }
 
     IEnumerator ShootBigMissile()

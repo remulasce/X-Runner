@@ -82,6 +82,15 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
                 Destroy(this.gameObject);
             }
         }
+
+        if (col.gameObject.CompareTag("Player") && !isNotCinematic)
+        {
+            explosion.transform.parent = null;
+            explosion.transform.position = this.transform.position;
+            explosion.Explode();
+            //transform.DetachChildren();
+            Destroy(this.gameObject);
+        }
         
     }
 
