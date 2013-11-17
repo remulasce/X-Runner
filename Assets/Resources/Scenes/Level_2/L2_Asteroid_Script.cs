@@ -20,9 +20,17 @@ public class L2_Asteroid_Script : MonoBehaviour {
     public Vector3 elitePosition = Vector3.zero;
     public GameObject player = null;
 
+    AudioSource[] audios;
+    /*
+     even # = player pings
+     odd # = enemy pings
+     */
+
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        audios = this.gameObject.GetComponents<AudioSource>();
 	}
 
     void killIfOutBounds()
@@ -51,6 +59,11 @@ public class L2_Asteroid_Script : MonoBehaviour {
             {
                 if (!player.GetComponent<L2_Ship_Script>().isDead) // Fixes a bug where asteroids just sit still in space
                 {
+                    // Make sure to instantiate the prefab object for this
+                    GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
+                    sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[numberOfTimesHit]);
+                    sound.transform.position = this.transform.position;
+
                     if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x)
                         || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x)))
                         || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
@@ -76,6 +89,13 @@ public class L2_Asteroid_Script : MonoBehaviour {
             {
                 if (lastHit == LAST_HIT.PLAYER)
                 {
+                    if (numberOfTimesHit > 0)
+                    {
+                        // Make sure to instantiate the prefab object for this
+                        GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
+                        sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[numberOfTimesHit]);
+                        sound.transform.position = this.transform.position;
+                    }
                     if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x > elitePosition.x) 
                         || this.rigidbody.velocity.x < 0 && player.transform.position.x < elitePosition.x))) 
                         || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
@@ -83,8 +103,9 @@ public class L2_Asteroid_Script : MonoBehaviour {
                     {
                         this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * (maxVelocity + extraHitVelocity);                        
                     }
+                    numberOfTimesHit++;
                 }
-                numberOfTimesHit++;
+                
                 lastHit = LAST_HIT.ENEMY;
                 print(lastHit);
             }

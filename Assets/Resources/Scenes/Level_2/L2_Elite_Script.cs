@@ -345,10 +345,10 @@ public class L2_Elite_Script : MonoBehaviour {
         }
 	}
 
-    const float eliteAwareness = 0.65f; // Used to determine if the elite will shoot back at an asteroid reflected back by the player.
+    const float eliteAwareness = 0.00f;//0.65f; // Used to determine if the elite will shoot back at an asteroid reflected back by the player.
     // The highetr the value, the lower the chace the asteroid will be shot back
 
-    const int maxReflects = 12; // Will allow the player to have a shot if this number of reflects has passed.
+    const int maxReflects = 8; // Will allow the player to have a shot if this number of reflects has passed.
 
     void OnTriggerStay(Collider other)
     {        
