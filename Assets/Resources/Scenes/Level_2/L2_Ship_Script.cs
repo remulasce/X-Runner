@@ -335,27 +335,30 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 	//Make a shot if we're shooting
 	void doShooting ()
 	{
-        if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime)
+        if (!isDead)
         {
-            if (numShotsFired > numShotsFiredThreshold)
+            if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime)
             {
-                if (reloadTime < maxReloadOffset)
+                if (numShotsFired > numShotsFiredThreshold)
                 {
-                    reloadTime *= reloadTimeMultiplier;
+                    if (reloadTime < maxReloadOffset)
+                    {
+                        reloadTime *= reloadTimeMultiplier;
+                    }
+                    else
+                    {
+                        reloadTime = maxReloadOffset;
+                    }
                 }
-                else
-                {
-                    reloadTime = maxReloadOffset;
-                }
+                GameObject g = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 90, 00));
+                lastShot = Time.time;
+                numShotsFired++;
             }
-            GameObject g = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 90, 00));            
-            lastShot = Time.time;
-            numShotsFired++;
-        }
-        if (Input.GetButtonUp("Jump"))
-        {
-            numShotsFired = 0;
-            reloadTime = baseReloadTime;
+            if (Input.GetButtonUp("Jump"))
+            {
+                numShotsFired = 0;
+                reloadTime = baseReloadTime;
+            }
         }
 	}
 	// Update is called once per frame

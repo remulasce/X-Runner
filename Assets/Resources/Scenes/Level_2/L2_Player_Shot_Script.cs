@@ -3,12 +3,15 @@ using System.Collections;
 
 public class L2_Player_Shot_Script : MonoBehaviour {
 	
-	public float speed;
+	public float speed;    
 	
 	// Use this for initialization
 	void Start () {
 		//Negative because it somehow works better.
-		this.rigidbody.velocity = this.transform.rotation * new Vector3(0, speed, 0); 
+		this.rigidbody.velocity = this.transform.rotation * new Vector3(0, speed, 0);
+        GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
+        sound.GetComponent<Audio_SFX_Object_Script>().StartSound(this.gameObject.GetComponent<AudioSource>());
+        sound.transform.position = this.transform.position;
 	}
 	
 	//Don't keep drifting forever

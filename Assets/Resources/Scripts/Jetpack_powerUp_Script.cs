@@ -23,7 +23,7 @@ public class Jetpack_powerUp_Script : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !soundHasPlayed)
         {
             audio.Play();
             other.gameObject.GetComponent<Player_Movement_Script>().isJetPackActive = true;
