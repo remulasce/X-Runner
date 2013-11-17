@@ -305,6 +305,8 @@ public class L2_Elite_Script : MonoBehaviour {
         // Do the animation here
         this.transform.parent.animation.Play();
 
+        audio.Play();
+
         StartCoroutine("ShootBigMissile");
 
         musicManager.FadeOutSongs(2, new int[] { 4, 5 });

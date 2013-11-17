@@ -398,6 +398,13 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 
         animation.Play();
 
+
+        audios[2].Play();
+        audios[3].Play();
+
+        this.rigidbody.velocity = this.rigidbody.velocity.normalized * movement.maxSpeed;
+
+
         StartCoroutine("TransitionToL3");
 
         musicManager.FadeOutSongs(2, new int[] { 6 });
