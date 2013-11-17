@@ -290,7 +290,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         const float diamondWaveDelay = 2f;
 		
         //Elite quick visit during the diamond waves
-        //E(EliteBehavior.PreFinalBattle);   
+        E(EliteBehavior.PreFinalBattle);   
 
         // Diamond Waves
         for (int i = 0; i < numDiamondWaves; i++)

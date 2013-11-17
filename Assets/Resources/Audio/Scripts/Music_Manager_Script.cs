@@ -25,10 +25,8 @@ public class Music_Manager_Script : MonoBehaviour {
         {
             for (int i = 0; i < values.Length; i++)
             {
-                if (!Level_0_Compositions[values[i]].isPlaying)
-                {
-                    Level_0_Compositions[values[i]].Play();
-                }                
+                Level_0_Compositions[values[i]].Stop();
+                Level_0_Compositions[values[i]].Play();         
             }
         }
 
@@ -36,10 +34,8 @@ public class Music_Manager_Script : MonoBehaviour {
         {
             for (int i = 0; i < values.Length; i++)
             {
-                if (!Level_1_Compositions[values[i]].isPlaying)
-                {
-                    Level_1_Compositions[values[i]].Play();
-                }                
+                Level_1_Compositions[values[i]].Stop();
+                Level_1_Compositions[values[i]].Play();        
             }
         }
 
@@ -47,10 +43,8 @@ public class Music_Manager_Script : MonoBehaviour {
         {
             for (int i = 0; i < values.Length; i++)
             {
-                if (!Level_2_Compositions[values[i]].isPlaying)
-                {
-                    Level_2_Compositions[values[i]].Play();
-                }                
+                Level_2_Compositions[values[i]].Stop();
+                Level_2_Compositions[values[i]].Play();             
             }
         }
 
@@ -58,10 +52,8 @@ public class Music_Manager_Script : MonoBehaviour {
         {
             for (int i = 0; i < values.Length; i++)
             {
-                if (!Level_3_Compositions[values[i]].isPlaying)
-                {
-                    Level_3_Compositions[values[i]].Play();
-                }                
+                Level_3_Compositions[values[i]].Stop();
+                Level_3_Compositions[values[i]].Play();             
             }
         }
 
@@ -69,10 +61,8 @@ public class Music_Manager_Script : MonoBehaviour {
         {
             for (int i = 0; i < values.Length; i++)
             {
-                if (!Level_4_Compositions[values[i]].isPlaying)
-                {
-                    Level_4_Compositions[values[i]].Play();
-                }                
+                Level_4_Compositions[values[i]].Stop();
+                Level_4_Compositions[values[i]].Play();              
             }
         }
     }

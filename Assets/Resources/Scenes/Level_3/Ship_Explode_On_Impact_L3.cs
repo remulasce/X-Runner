@@ -19,6 +19,7 @@ public class Ship_Explode_On_Impact_L3 : MonoBehaviour {
         {
             this.GetComponent<Detonator>().Explode();
             this.gameObject.renderer.enabled = false;
+            audio.Stop();
         }        
     }
 }

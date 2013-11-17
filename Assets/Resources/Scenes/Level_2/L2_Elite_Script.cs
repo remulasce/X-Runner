@@ -316,7 +316,7 @@ public class L2_Elite_Script : MonoBehaviour {
         StartCoroutine("ShootBigMissile");
 
         musicManager.FadeOutSongs(2, new int[] { 4, 5 });
-        musicManager.FadeInTransitions(2, new int[] { 6 }, 3, new int[] {}, 15.211f);
+        musicManager.FadeInTransitions(2, new int[] { 6 }, 3, new int[] {}, 0.0f);
     }
 
     IEnumerator ShootBigMissile()
