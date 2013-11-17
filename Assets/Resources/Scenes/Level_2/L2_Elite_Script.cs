@@ -300,6 +300,12 @@ public class L2_Elite_Script : MonoBehaviour {
             {
                 Object.Destroy(asteroids[i]);
             }
+            else
+            {
+                GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), asteroids[i].transform.position, Quaternion.Euler(0, 0, 0));
+                gDetonator.GetComponent<Detonator>().size = 2 * asteroids[i].transform.localScale.x;
+                Object.Destroy(asteroids[i]);
+            }
         }
 
         // Do the animation here

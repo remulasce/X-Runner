@@ -469,6 +469,10 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         {
             if (!this.isShielded)
             {
+                // Asteroid Explosion
+                GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), col.transform.position, Quaternion.Euler(0, 0, 0));
+                gDetonator.GetComponent<Detonator>().size = 2 * col.transform.localScale.x;
+
                 explosion.transform.position = this.transform.position;
                 explosion.Explode();
                 isDead = true;

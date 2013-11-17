@@ -70,7 +70,7 @@ MonoBehaviour:
   autoCreateGlow: 1
   autoCreateLight: 1
   autoCreateForce: 0
-  autoCreateHeatwave: 1
+  autoCreateHeatwave: 0
 --- !u!1002 &11400001
 EditorExtensionImpl:
   serializedVersion: 6
@@ -101,7 +101,7 @@ MonoBehaviour:
   startLocalPosition: {x: 0, y: 0, z: 0}
   localPosition: {x: 0, y: 0, z: 0}
   startForce: {x: 0, y: 0, z: 0}
-  force: {x: 0, y: 20.2409, z: 0}
+  force: {x: 0, y: 0, z: 0}
   startVelocity: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
