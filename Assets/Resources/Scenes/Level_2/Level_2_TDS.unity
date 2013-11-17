@@ -1812,7 +1812,7 @@ MonoBehaviour:
   explosion: {fileID: 1630494970}
   stats: {fileID: 0}
   isDead: 0
-  numShotsFiredThreshold: 20
+  numShotsFiredThreshold: 40
   reloadTimeMultiplier: 1.5
   maxReloadOffset: .25
 --- !u!54 &1556197953
@@ -2058,7 +2058,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 75
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -2636,9 +2636,9 @@ Prefab:
       propertyPath: explosion
       value: 
       objectReference: {fileID: 1630494970}
-    - target: {fileID: 8200012, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
-      propertyPath: MaxDistance
-      value: 100
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: numShotsFiredThreshold
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
