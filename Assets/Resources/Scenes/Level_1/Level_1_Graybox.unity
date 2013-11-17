@@ -1347,7 +1347,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: .5}
+  m_Size: {x: 1, y: .25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &34221891
 MeshFilter:
@@ -25003,7 +25003,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: .5}
+  m_Size: {x: 1, y: .25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &542269911
 MeshFilter:
@@ -28477,7 +28477,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: .5}
+  m_Size: {x: 1, y: .25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &633642510
 MeshFilter:
@@ -45257,8 +45257,8 @@ Transform:
   m_PrefabInternal: {fileID: 2097193614}
   m_GameObject: {fileID: 981884002}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 10, y: 80.6269531, z: 0}
-  m_LocalScale: {x: .352597177, y: .176298589, z: .293830931}
+  m_LocalPosition: {x: 10, y: .0226907693, z: 0}
+  m_LocalScale: {x: .600000024, y: .300000012, z: .5}
   m_Children:
   - {fileID: 333221763}
   - {fileID: 1158630631}
@@ -57281,7 +57281,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: .5}
+  m_Size: {x: 1, y: .25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1209386898
 MeshFilter:
@@ -59442,7 +59442,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: .5}
+  m_Size: {x: 1, y: .25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1235233899
 MeshFilter:
@@ -81320,7 +81320,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: .5}
+  m_Size: {x: 1, y: .25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1636636867
 MeshFilter:
@@ -94255,7 +94255,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: .5}
+  m_Size: {x: 1, y: .25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1916521626
 MeshFilter:
@@ -96688,7 +96688,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: .5}
+  m_Size: {x: 1, y: .25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1961598425
 MeshFilter:
@@ -103193,7 +103193,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: .5}
+  m_Size: {x: 1, y: .25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2071622577
 MeshFilter:
@@ -105391,7 +105391,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 80.6269531
+      value: .0226907693
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: m_LocalPosition.z
@@ -105415,11 +105415,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: m_LocalScale.x
-      value: .352597177
+      value: .600000024
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: m_LocalScale.y
-      value: .176298589
+      value: .300000012
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -105447,7 +105447,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 74f4a47fc3b034e2d963491f4e514174, type: 2}
     - target: {fileID: 400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: m_LocalScale.z
-      value: .293830931
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 11100002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
       propertyPath: m_AnimatePhysics
