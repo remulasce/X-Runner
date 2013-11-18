@@ -131,13 +131,17 @@ MonoBehaviour:
   nearSounds:
   - {fileID: 8300000, guid: 1792989a5a33779428d2dbe9a9430605, type: 3}
   - {fileID: 8300000, guid: 395ebd3d6fca1ec40a6b3c7415c1edb7, type: 3}
+  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
   farSounds:
   - {fileID: 8300000, guid: 8f03951fee9bec9478d1ec979ba44677, type: 3}
   - {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
-  distanceThreshold: 50
-  minVolume: .600000024
-  maxVolume: .200000003
-  rolloffFactor: .25
+  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
+  distanceThreshold: 45
+  minVolume: .200000003
+  maxVolume: .400000006
+  rolloffFactor: .75
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
