@@ -833,6 +833,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .75
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: keyboardTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 826c7795b1d4ec145a4a668ee7ea7209, type: 3}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: controllerTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 826c7795b1d4ec145a4a668ee7ea7209, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
   m_RootGameObject: {fileID: 1390033005}
@@ -1675,6 +1683,7 @@ GameObject:
   - 33: {fileID: 38922313}
   - 64: {fileID: 38922312}
   - 23: {fileID: 38922311}
+  - 114: {fileID: 38922315}
   m_Layer: 0
   m_Name: GUI_TUTORIAL_FloatJump
   m_TagString: Untagged
@@ -1734,6 +1743,20 @@ Transform:
   m_LocalScale: {x: 1.60063195, y: .533543825, z: .533543825}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &38922315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1691624123}
+  m_GameObject: {fileID: 38922310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexture: {fileID: 2800000, guid: f6175f90ae0312e4a8875a701072b223, type: 3}
+  controllerTexture: {fileID: 2800000, guid: f8154c0ca60b47a4bbd358354fb986fc, type: 3}
 --- !u!1001 &40603440
 Prefab:
   m_ObjectHideFlags: 0
@@ -19166,6 +19189,7 @@ GameObject:
   - 33: {fileID: 412301704}
   - 64: {fileID: 412301703}
   - 23: {fileID: 412301702}
+  - 114: {fileID: 412301706}
   m_Layer: 0
   m_Name: GUI_TUTORIAL_Jump
   m_TagString: Untagged
@@ -19225,6 +19249,20 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &412301706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a,
+    type: 2}
+  m_PrefabInternal: {fileID: 735289165}
+  m_GameObject: {fileID: 412301701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexture: {fileID: 2800000, guid: 27484155a958f9548a85ad57ae3345a6, type: 3}
+  controllerTexture: {fileID: 2800000, guid: ea7ce76043d141a488678893e25a4065, type: 3}
 --- !u!1001 &412327963
 Prefab:
   m_ObjectHideFlags: 0
@@ -28830,6 +28868,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .75
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: keyboardTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: controllerTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
   m_RootGameObject: {fileID: 1616655795}
@@ -33975,6 +34021,14 @@ Prefab:
       propertyPath: m_Name
       value: GUI_TUTORIAL_Jump
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: keyboardTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 27484155a958f9548a85ad57ae3345a6, type: 3}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: controllerTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: ea7ce76043d141a488678893e25a4065, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
   m_RootGameObject: {fileID: 412301701}
@@ -49657,6 +49711,7 @@ GameObject:
   - 33: {fileID: 1062945981}
   - 64: {fileID: 1062945980}
   - 23: {fileID: 1062945979}
+  - 114: {fileID: 1062945983}
   m_Layer: 0
   m_Name: GUI_TUTORIAL_WallJump
   m_TagString: Untagged
@@ -49716,6 +49771,20 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1062945983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1713876165}
+  m_GameObject: {fileID: 1062945978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexture: {fileID: 2800000, guid: 2623b425bb0a7e5449887dfb17c8ef41, type: 3}
+  controllerTexture: {fileID: 2800000, guid: 00ca01b529027df4581ae4bd8efc1405, type: 3}
 --- !u!1001 &1063184477
 Prefab:
   m_ObjectHideFlags: 0
@@ -64586,6 +64655,7 @@ GameObject:
   - 33: {fileID: 1328303991}
   - 64: {fileID: 1328303990}
   - 23: {fileID: 1328303989}
+  - 114: {fileID: 1328303993}
   m_Layer: 0
   m_Name: GUI_TUTORIAL_WallJump_Pictoral
   m_TagString: Untagged
@@ -64645,6 +64715,20 @@ Transform:
   m_LocalScale: {x: .899999976, y: 1, z: .75}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1328303993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1961516258}
+  m_GameObject: {fileID: 1328303988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexture: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
+  controllerTexture: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
 --- !u!1001 &1330611124
 Prefab:
   m_ObjectHideFlags: 0
@@ -67317,6 +67401,7 @@ GameObject:
   - 33: {fileID: 1390033008}
   - 64: {fileID: 1390033007}
   - 23: {fileID: 1390033006}
+  - 114: {fileID: 1390033010}
   m_Layer: 0
   m_Name: GUI_TUTORIAL_WallJump_Pictoral
   m_TagString: Untagged
@@ -67376,6 +67461,20 @@ Transform:
   m_LocalScale: {x: 2.5999999, y: 1, z: .75}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1390033010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a,
+    type: 2}
+  m_PrefabInternal: {fileID: 21331809}
+  m_GameObject: {fileID: 1390033005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexture: {fileID: 2800000, guid: 826c7795b1d4ec145a4a668ee7ea7209, type: 3}
+  controllerTexture: {fileID: 2800000, guid: 826c7795b1d4ec145a4a668ee7ea7209, type: 3}
 --- !u!1 &1390235287
 GameObject:
   m_ObjectHideFlags: 0
@@ -77375,6 +77474,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .75
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: keyboardTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: controllerTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
   m_RootGameObject: {fileID: 2146834069}
@@ -80298,6 +80405,7 @@ GameObject:
   - 33: {fileID: 1616655798}
   - 64: {fileID: 1616655797}
   - 23: {fileID: 1616655796}
+  - 114: {fileID: 1616655800}
   m_Layer: 0
   m_Name: GUI_TUTORIAL_WallJump_Pictoral
   m_TagString: Untagged
@@ -80357,6 +80465,20 @@ Transform:
   m_LocalScale: {x: .899999976, y: 1, z: .75}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1616655800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a,
+    type: 2}
+  m_PrefabInternal: {fileID: 639787315}
+  m_GameObject: {fileID: 1616655795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexture: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
+  controllerTexture: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
 --- !u!1 &1618565209
 GameObject:
   m_ObjectHideFlags: 0
@@ -84336,6 +84458,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .533543825
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: keyboardTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: f6175f90ae0312e4a8875a701072b223, type: 3}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: controllerTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: f8154c0ca60b47a4bbd358354fb986fc, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
   m_RootGameObject: {fileID: 38922310}
@@ -85230,6 +85360,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9c04f61facd2c7c43b90bf9d58dc233b, type: 2}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: keyboardTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 2623b425bb0a7e5449887dfb17c8ef41, type: 3}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: controllerTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 00ca01b529027df4581ae4bd8efc1405, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
   m_RootGameObject: {fileID: 1062945978}
@@ -97289,6 +97427,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .75
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: keyboardTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
+    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: controllerTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
   m_RootGameObject: {fileID: 1328303988}
@@ -108346,6 +108492,7 @@ GameObject:
   - 33: {fileID: 2146834072}
   - 64: {fileID: 2146834071}
   - 23: {fileID: 2146834070}
+  - 114: {fileID: 2146834074}
   m_Layer: 0
   m_Name: GUI_TUTORIAL_WallJump_Pictoral
   m_TagString: Untagged
@@ -108405,3 +108552,17 @@ Transform:
   m_LocalScale: {x: .899999976, y: 1, z: .75}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &2146834074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1552626511}
+  m_GameObject: {fileID: 2146834069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexture: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
+  controllerTexture: {fileID: 2800000, guid: 26f2b62b391b65d49a349b606b68e3eb, type: 3}
