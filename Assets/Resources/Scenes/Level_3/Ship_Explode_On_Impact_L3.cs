@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Ship_Explode_On_Impact_L3 : MonoBehaviour {
 
+    AudioSource[] audios;
+
 	// Use this for initialization
 	void Start () {
-	
+        audios = this.gameObject.GetComponents<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -21,5 +23,10 @@ public class Ship_Explode_On_Impact_L3 : MonoBehaviour {
             this.gameObject.renderer.enabled = false;
             audio.Stop();
         }        
+    }
+
+    void PlayEjection()
+    {
+        audios[1].Play();
     }
 }
