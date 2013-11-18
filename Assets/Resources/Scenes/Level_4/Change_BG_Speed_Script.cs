@@ -8,6 +8,8 @@ public class Change_BG_Speed_Script : MonoBehaviour {
 
     public bool endGame = false;
 
+    public Fireworks_Script fireworksScript = null;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -24,7 +26,11 @@ public class Change_BG_Speed_Script : MonoBehaviour {
         {
             background.GetComponent<L4_Background>().speed = this.speed;
             if (endGame)
-            {
+            {                
+                if (fireworksScript)
+                {
+                    fireworksScript.isEnabled = true;
+                }
                 GameObject.FindGameObjectWithTag("Stats").GetComponent<Stat_Counter_Script>().endGame = true;
             }
         }

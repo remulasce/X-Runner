@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class L4_End_Trigger_Script : MonoBehaviour {
+public class L4_End_Trigger_Script : MonoBehaviour {    
 
 	// Use this for initialization
 	void Start () {
