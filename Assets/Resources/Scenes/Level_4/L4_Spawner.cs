@@ -90,14 +90,14 @@ public class L4_Spawner : MonoBehaviour {
         W(ft_hl(1), nb_go(30, -2, 0, -2, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 3);
 
         const int numBoxWaves = 10;
-        const float waveDelayOne = 0.85f;
+        const float waveDelayOne = 1.40f;
 
         // Small Squads
         for (int i = 0; i < numBoxWaves; i++)
         {
             float yVal = Random.Range(-7f, 7f);
 
-            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 17.5f), lb_no(), at_hm(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);
+            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 14.5f), lb_no(), at_hm(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);
         }
 
         //----------------------------------------------------------------------------------------------
@@ -117,7 +117,7 @@ public class L4_Spawner : MonoBehaviour {
         // Come from behind waves
 
         const int numBehindWaves = 6;
-        const float waveDelayTwo = 2.9f;
+        const float waveDelayTwo = 3.5f;
 
         for (int i = 0; i < numBehindWaves; i++)
         {
@@ -134,11 +134,11 @@ public class L4_Spawner : MonoBehaviour {
                 {
                     if (i != (numBehindWaves - 1))
                     {
-                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(7.0f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
                     }
                     else
                     {
-                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(11.0f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(11.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
                     }
                 }
             }
@@ -158,18 +158,18 @@ public class L4_Spawner : MonoBehaviour {
 
         // Have a bit of a delay before spawning ships again
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 36.5f);
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 42.5f);
 
         // Fade in the space song
         W(ft_missileRun());
 
         // Spawn the Tie Bomber Wave
-        W(ft_gd(60, 2), nb_go(40, 30, 40, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 18.5f), 13.25f);
+        W(ft_gd(60, 2), nb_go(40, 30, 40, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 17.5f), 15.25f);
 
         // Fade in the grand finale (everything)
         W(ft_finale());
 
-        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(0.75f), xt_tm(3.75f), xb_go(0, 1, 17.5f), 6f);
+        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(0.75f), xt_tm(4.25f), xb_go(0, 1, 17.5f), 6f);
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 12f);

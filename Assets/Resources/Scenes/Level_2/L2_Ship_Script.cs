@@ -362,7 +362,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                         reloadTime = maxReloadOffset;
                     }
                 }
-                GameObject g = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(0, 90, 00));
+                GameObject g = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position + new Vector3(0, 0.75f, 0), Quaternion.Euler(0, 90, 00));
                 lastShot = Time.time;
                 numShotsFired++;
             }

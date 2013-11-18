@@ -349,7 +349,7 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
                     reloadTime = maxReloadOffset;
                 }
             }
-            GameObject g = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position, Quaternion.Euler(90, 0, -90));
+            GameObject g = (GameObject) Instantiate(Resources.Load("Prefabs/Level_2/L2_Player_Shot"), this.transform.position + new Vector3(1.5f, 0, 0), Quaternion.Euler(90, 0, -90));
             g.GetComponent<L2_Player_Shot_Script>().speed = 70;
 			lastShot = Time.time;
             numShotsFired++;
