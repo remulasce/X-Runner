@@ -25,7 +25,7 @@ public class Level_Load_Script : MonoBehaviour {
     {
         yield return new WaitForEndOfFrame();
         Music_Manager_Script musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
-        musicManager.QuickFadeOuts(0, new int[] { 0 });
+        musicManager.QuickFadeOuts(0, new int[] { 0, 1 });
     }
 
     
