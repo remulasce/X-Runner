@@ -210,10 +210,22 @@ public class Music_Manager_Script : MonoBehaviour {
         yield return new WaitForSeconds(postTransitionDelay);
         if (postTransitionLevelChoice == 0)
         {
+            bool isSongPlayable = true;
+            for (int j = 0; j < Level_1_Compositions.Length; j++)
+            {
+                if (Level_1_Compositions[j].isPlaying)
+                {
+                    isSongPlayable = false; // Prevent song from L0 from being played if one from L1 is being played (prevents a weird bug)
+                }
+            }
+            
             for (int i = 0; i < postTransitionMusicChoices.Length; i++)
             {
-                Level_0_Compositions[postTransitionMusicChoices[i]].Play();
-                Level_0_Compositions[postTransitionMusicChoices[i]].animation.Play("Quick_Fade_In");                
+                if (isSongPlayable)
+                {
+                    Level_0_Compositions[postTransitionMusicChoices[i]].Play();
+                    Level_0_Compositions[postTransitionMusicChoices[i]].animation.Play("Quick_Fade_In");
+                }
             }
 
             // Run through the rest of the songs, if any of them need to loop, play them too
@@ -221,7 +233,10 @@ public class Music_Manager_Script : MonoBehaviour {
             {
                 if (Level_0_Compositions[i].loop)
                 {
-                    Level_0_Compositions[i].Play();
+                    if (isSongPlayable)
+                    {
+                        Level_0_Compositions[i].Play();
+                    }
                 }                
             }
         }

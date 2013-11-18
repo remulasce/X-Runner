@@ -76,7 +76,7 @@ public class Input_Check_Script_Gui_Wall : MonoBehaviour {
                 if (isMouseKeyboard())
                 {
                     m_State = eInputState.MouseKeyboard;
-                    Debug.Log("Mouse & Keyboard being used");
+                    Debug.Log("Keyboard being used");
                     if (keyboardTexture)
                     {
                         if (guiTexture)
@@ -113,13 +113,7 @@ public class Input_Check_Script_Gui_Wall : MonoBehaviour {
         Event.current.isMouse)
         {
             return true;
-        }
-        // mouse movement
-        if (Input.GetAxis("Mouse X") != 0.0f ||
-        Input.GetAxis("Mouse Y") != 0.0f)
-        {
-            return true;
-        }
+        }        
         return false;
     }
 
