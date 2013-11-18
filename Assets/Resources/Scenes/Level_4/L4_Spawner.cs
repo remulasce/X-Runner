@@ -78,7 +78,7 @@ public class L4_Spawner : MonoBehaviour {
          * 	  with care.
          */
 
-        /*
+        ///*
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 
