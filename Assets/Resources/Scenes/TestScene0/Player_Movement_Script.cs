@@ -87,6 +87,11 @@ public class Player_Movement_Script : MonoBehaviour {
 
     // Array of Audio Sources
     AudioSource[] audios;
+
+    public AudioSource GetAudios(int index)
+    {
+        return audios[index];
+    }
 	
 	// Use this for initialization
 	void Start () {

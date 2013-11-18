@@ -29,7 +29,10 @@ public class Player_Gravity_Trigger_Script : MonoBehaviour {
             other.GetComponent<Player_Movement_Script>().isInAir = true;
             other.GetComponent<Player_Movement_Script>().canJump = false;
             other.GetComponent<Player_Movement_Script>().isJumping = false;
+            other.GetComponent<Player_Movement_Script>().GetAudios(1).Stop();
+            other.GetComponent<Player_Movement_Script>().GetAudios(2).Stop();
             other.GetComponentInChildren<ParticleSystem>().Stop();
+            
 
             // Do rotation
 
