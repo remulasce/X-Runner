@@ -61,7 +61,9 @@ public class Destructive_Platform_Script : MonoBehaviour {
                 postActivationParticleSystem.particleSystem.Play();
             }
         }
-
-        audio.Play();
+        if (audio)
+        {
+            audio.Play();
+        }
     }
 }
