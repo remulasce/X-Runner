@@ -21,7 +21,7 @@ public class On_Crash_Script : MonoBehaviour {
 
     void FireMissile()
     {
-        GameObject laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_1/Elite_Laser_Homing"), this.transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_1/Frendly_Laser_Homing"), this.transform.position + new Vector3(0, 0, 0), Quaternion.identity);
         Elite_Laser_Trigger_Script.homingTargetInformation hm = new Elite_Laser_Trigger_Script.homingTargetInformation();
         hm.closingMagnitude = 0;
         hm.initialHomingOffset = new Vector3(1000, 0, 0);
