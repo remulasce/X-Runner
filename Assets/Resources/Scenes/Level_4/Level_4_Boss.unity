@@ -25154,6 +25154,10 @@ Prefab:
       propertyPath: destroyTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 7be93646d7e116b4e95415b36b9d970d, type: 2}
+      propertyPath: maxVolume
+      value: .25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7be93646d7e116b4e95415b36b9d970d, type: 2}
   m_RootGameObject: {fileID: 2141605346}
@@ -85872,7 +85876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1798473154
 Transform:
   m_ObjectHideFlags: 0
@@ -102318,7 +102322,7 @@ MonoBehaviour:
   farSounds:
   - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
   distanceThreshold: 25
-  maxVolume: .100000001
+  maxVolume: .25
   rolloffFactor: .100000001
   priority: 128
 --- !u!1 &2142113176
