@@ -21,8 +21,9 @@ public class L4_End_Trigger_Script : MonoBehaviour {
         {
             Object.Destroy(GameObject.FindGameObjectWithTag("Stats"));
 
-            musicManager.QuickFadeOuts(4, new int[] { 5, 6 });
-            musicManager.QuickFadeOuts(0, new int[] { 0, 1 });
+            musicManager.QuickFadeOuts(4, new int[] { 5, 6 });            
+            musicManager.StopAllSongs();
+            musicManager.StartSongs(0, new int[] { 0 });
 
             Application.LoadLevel("Title_Screen");
         }

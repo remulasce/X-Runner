@@ -202,6 +202,34 @@ public class Music_Manager_Script : MonoBehaviour {
         }
     }
 
+    public void StopAllSongs()
+    {
+        for (int i = 0; i < Level_0_Compositions.Length; i++)
+        {
+            Level_0_Compositions[i].Stop();            
+        }
+
+        for (int i = 0; i < Level_1_Compositions.Length; i++)
+        {
+            Level_1_Compositions[i].Stop();
+        }
+
+        for (int i = 0; i < Level_2_Compositions.Length; i++)
+        {
+            Level_2_Compositions[i].Stop();
+        }
+
+        for (int i = 0; i < Level_3_Compositions.Length; i++)
+        {
+            Level_3_Compositions[i].Stop();
+        }
+
+        for (int i = 0; i < Level_4_Compositions.Length; i++)
+        {
+            Level_4_Compositions[i].Stop();
+        }
+    }
+
     //---------------------------------------------------------------------
 
     // Coroutine for playing the delayed song
