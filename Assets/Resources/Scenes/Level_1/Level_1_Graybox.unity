@@ -9773,7 +9773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665bfd9c03eb81a4f889b45ef2661ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 100000, guid: 2c06a2a4aad0b4b4b9a0c2dcbfbd738a, type: 2}
+  explosionPrefab: {fileID: 100000, guid: 9428a87330547414caf2ceef0533dc97, type: 2}
   missileImpactPrefab: {fileID: 100000, guid: 263fe3cfb03d5654488a748c4a528f27, type: 2}
 --- !u!1 &202999973
 GameObject:
@@ -13314,7 +13314,7 @@ Prefab:
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorPrefab
       value: 
-      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.z
       value: -3
@@ -18736,7 +18736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665bfd9c03eb81a4f889b45ef2661ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 100000, guid: 2c06a2a4aad0b4b4b9a0c2dcbfbd738a, type: 2}
+  explosionPrefab: {fileID: 100000, guid: 9428a87330547414caf2ceef0533dc97, type: 2}
   missileImpactPrefab: {fileID: 100000, guid: 263fe3cfb03d5654488a748c4a528f27, type: 2}
 --- !u!1 &394879494
 GameObject:
@@ -28149,7 +28149,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.y
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.z
@@ -37827,7 +37827,7 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
   detonatorOffset: {x: 0, y: 10, z: -3}
 --- !u!114 &810345923
 MonoBehaviour:
@@ -43493,7 +43493,7 @@ MonoBehaviour:
   delayToApplyForces: 0
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+  detonatorPrefab: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
   detonatorOffset: {x: 0, y: 10, z: -3}
 --- !u!54 &929223320
 Rigidbody:
@@ -66630,10 +66630,10 @@ Prefab:
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorPrefab
       value: 
-      objectReference: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.y
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.z
@@ -77545,7 +77545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665bfd9c03eb81a4f889b45ef2661ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 100000, guid: 2c06a2a4aad0b4b4b9a0c2dcbfbd738a, type: 2}
+  explosionPrefab: {fileID: 100000, guid: 9428a87330547414caf2ceef0533dc97, type: 2}
   missileImpactPrefab: {fileID: 100000, guid: 263fe3cfb03d5654488a748c4a528f27, type: 2}
 --- !u!1 &1527806635
 GameObject:
@@ -81043,7 +81043,7 @@ Prefab:
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorPrefab
       value: 
-      objectReference: {fileID: 100000, guid: 021ccfa825b5b3044905836d178253a4, type: 2}
+      objectReference: {fileID: 100000, guid: 67b6667833c4075408e54c2bc1624cca, type: 2}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.z
       value: -3
@@ -84717,8 +84717,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
-  detonatorOffset: {x: 0, y: 5, z: -3.25}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 2, z: -3.25}
 --- !u!54 &1662485242
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -87154,7 +87154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.y
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.z
@@ -103296,10 +103296,10 @@ Prefab:
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorPrefab
       value: 
-      objectReference: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.y
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: detonatorOffset.z
@@ -105534,7 +105534,7 @@ MonoBehaviour:
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 5, z: -3.25}
+  detonatorOffset: {x: 0, y: 2, z: -3.25}
 --- !u!54 &2065267018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -105929,8 +105929,8 @@ MonoBehaviour:
   delayToApplyForces: .75
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
-  detonatorPrefab: {fileID: 100000, guid: 44b761ab7250a93439b4d69edba527f8, type: 2}
-  detonatorOffset: {x: 0, y: 5, z: -3.25}
+  detonatorPrefab: {fileID: 0}
+  detonatorOffset: {x: 0, y: 2, z: -3.25}
 --- !u!54 &2068490528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -109797,7 +109797,7 @@ MonoBehaviour:
   postActivationConstraints: 8
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 0}
-  detonatorOffset: {x: 0, y: 5, z: -3.25}
+  detonatorOffset: {x: 0, y: 2, z: -3.25}
 --- !u!54 &2127884281
 Rigidbody:
   m_ObjectHideFlags: 0

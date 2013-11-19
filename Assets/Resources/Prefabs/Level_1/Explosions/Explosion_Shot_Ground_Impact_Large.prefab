@@ -90,7 +90,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 5
+  size: 2
   explodeDelayMin: 0
   explodeDelayMax: 0
   startDuration: 2
@@ -101,11 +101,11 @@ MonoBehaviour:
   startColor: {r: 1, g: 1, b: 1, a: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
   startLocalPosition: {x: 0, y: 0, z: 0}
-  localPosition: {x: 0, y: 0, z: 0}
+  localPosition: {x: 0, y: 5, z: 0}
   startForce: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
   startVelocity: {x: 0, y: 0, z: 0}
-  velocity: {x: 10, y: 2, z: 0}
+  velocity: {x: 6.5, y: 2, z: 0}
   detailThreshold: 0
   sparksMaterial: {fileID: 0}
 --- !u!1002 &11400003
@@ -134,7 +134,7 @@ MonoBehaviour:
   on: 1
   detonatorControlled: 1
   startSize: 1
-  size: 1.87737787
+  size: 1.25
   explodeDelayMin: .0299999882
   explodeDelayMax: .119999975
   startDuration: 2
@@ -145,7 +145,7 @@ MonoBehaviour:
   startColor: {r: 1, g: 1, b: 1, a: 1}
   color: {r: 1, g: .889996409, b: .809352517, a: .219607845}
   startLocalPosition: {x: 0, y: 0, z: 0}
-  localPosition: {x: 0, y: 0, z: 0}
+  localPosition: {x: 0, y: 3, z: 0}
   startForce: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
   startVelocity: {x: 0, y: 0, z: 0}
@@ -245,7 +245,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c25078bfce97b4449a6e66cbe3ffc03d, type: 3}
   - {fileID: 8300000, guid: 448f7feb0bc209d4c893e3a196374dce, type: 3}
   distanceThreshold: 100
-  maxVolume: 1
+  maxVolume: .75
   rolloffFactor: .349999994
   priority: 128
 --- !u!1002 &11400017
