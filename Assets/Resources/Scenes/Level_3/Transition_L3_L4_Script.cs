@@ -21,7 +21,7 @@ public class Transition_L3_L4_Script : MonoBehaviour {
 
     IEnumerator StopFollowingShip()
     {
-        yield return new WaitForSeconds(5.5f);
+        yield return new WaitForSeconds(5f);
         Camera.main.GetComponent<CanabaltCamera>().player = null;
     }
     
