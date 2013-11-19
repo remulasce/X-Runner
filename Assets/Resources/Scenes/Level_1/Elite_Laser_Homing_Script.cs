@@ -19,6 +19,8 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
 
     private bool isHoming = true; // When this is set to false, the homing ability of the missile turns off.
 
+    private bool dontExplodeInitially = false;
+
     // Use this for initialization
     void Start()
     {
@@ -57,6 +59,31 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
         //Debug.Log(this.transform.forward);
     }
 
+    public void Initialize(GameObject target, Vector3 offSet, float laserSpeed, GameObject postCollisionParticleSystem, Elite_Laser_Trigger_Script.homingTargetInformation hm, bool dei)
+    {
+        this.target = target;
+        this.targetOffset = offSet;
+        this.laserSpeed = laserSpeed;
+        this.postCollisionParticleSystem = postCollisionParticleSystem;
+
+        // Special Homing Laser Values
+        this.initialHomingOffset = hm.initialHomingOffset;
+        this.closingMagnitude = hm.closingMagnitude;
+        this.percentToCloseOffset = hm.percentToCloseOffset;
+
+        if (target)
+        {
+            this.transform.LookAt(target.transform.position + targetOffset + initialHomingOffset, new Vector3(0, 1, 0)); // Set the direction here
+        }
+        else
+        {
+            this.transform.LookAt(nonTargetDirection + initialHomingOffset, new Vector3(0, 1, 0)); // Set the direction here
+        }
+        //Debug.Log(this.transform.forward);
+        dontExplodeInitially = dei;
+        this.gameObject.GetComponent<BoxCollider>().isTrigger = dontExplodeInitially;
+    }
+
     public void InitializeWithDetonator(GameObject target, Vector3 offSet, float laserSpeed, GameObject postCollisionParticleSystem, Elite_Laser_Trigger_Script.homingTargetInformation hm)
     {
         this.target = target;
@@ -85,6 +112,39 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
             this.transform.LookAt(nonTargetDirection + initialHomingOffset, new Vector3(0, 1, 0)); // Set the direction here
         }
         //Debug.Log(this.transform.forward);
+    }
+
+    public void InitializeWithDetonator(GameObject target, Vector3 offSet, float laserSpeed, GameObject postCollisionParticleSystem, Elite_Laser_Trigger_Script.homingTargetInformation hm, bool dei)
+    {
+        this.target = target;
+        this.targetOffset = offSet;
+        this.laserSpeed = laserSpeed;
+        if (postCollisionParticleSystem)
+        {
+            this.detonatorPrefab = (GameObject)Instantiate(postCollisionParticleSystem);
+        }
+        else
+        {
+            this.detonatorPrefab = (GameObject)Instantiate(this.detonatorPrefab);
+        }
+
+        // Special Homing Laser Values
+        this.initialHomingOffset = hm.initialHomingOffset;
+        this.closingMagnitude = hm.closingMagnitude;
+        this.percentToCloseOffset = hm.percentToCloseOffset;
+
+        if (target)
+        {
+            this.transform.LookAt(target.transform.position + targetOffset + initialHomingOffset, new Vector3(0, 1, 0)); // Set the direction here
+        }
+        else
+        {
+            this.transform.LookAt(nonTargetDirection + initialHomingOffset, new Vector3(0, 1, 0)); // Set the direction here
+        }
+        //Debug.Log(this.transform.forward);
+
+        dontExplodeInitially = dei;
+        this.gameObject.GetComponent<BoxCollider>().isTrigger = dontExplodeInitially;
     }
 
     // Update is called once per frame
@@ -130,6 +190,11 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
             return;
         }
 
+        if (dontExplodeInitially)
+        {            
+            return;
+        }
+
         if (detonatorPrefab)
         {
             detonatorPrefab.transform.position = other.contacts[0].point;
@@ -147,5 +212,17 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
         transform.DetachChildren();
 
         Object.Destroy(this.gameObject);
+    }
+
+    IEnumerator SetBackToRegular()
+    {
+        yield return new WaitForSeconds(1.0f);
+        this.gameObject.GetComponent<BoxCollider>().isTrigger = false;
+        dontExplodeInitially = false;
+    }
+
+    void OnTriggerExit()
+    {
+        StartCoroutine("SetBackToRegular");        
     }
 }

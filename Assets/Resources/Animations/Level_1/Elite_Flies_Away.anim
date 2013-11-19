@@ -20,14 +20,29 @@ AnimationClip:
   m_PositionCurves:
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: {x: 128.781006, y: 55, z: 500}
+        inSlope: {x: -2.03450527e-05, y: -.540444136, z: 0}
+        outSlope: {x: -2.03450527e-05, y: -.540444136, z: 0}
+        tangentMode: -559038737
+      - time: 1.5
+        value: {x: 128.780975, y: 438.463348, z: 500}
+        inSlope: {x: -2.03450527e-05, y: 914.740601, z: 0}
+        outSlope: {x: -2.03450527e-05, y: 255.642227, z: 0}
+        tangentMode: -559038737
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: 
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: -559038737
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: 
@@ -55,7 +70,17 @@ AnimationClip:
   m_EditorCurves:
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 128.781006
+        inSlope: -2.03450527e-05
+        outSlope: -2.03450527e-05
+        tangentMode: 10
+      - time: 1.5
+        value: 128.780975
+        inSlope: -2.03450527e-05
+        outSlope: -2.03450527e-05
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalPosition.x
@@ -64,7 +89,17 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 55
+        inSlope: -.540444136
+        outSlope: -.540444136
+        tangentMode: 0
+      - time: 1.5
+        value: 438.463348
+        inSlope: 914.740601
+        outSlope: 255.642227
+        tangentMode: 1
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalPosition.y
@@ -73,7 +108,17 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 500
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.5
+        value: 500
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalPosition.z
@@ -82,7 +127,12 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalScale.z
@@ -91,7 +141,12 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalScale.y
@@ -100,7 +155,12 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalScale.x
@@ -146,7 +206,12 @@ AnimationClip:
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: localEulerAnglesBaked.x
@@ -155,7 +220,12 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: localEulerAnglesBaked.y
@@ -164,7 +234,12 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: localEulerAnglesBaked.z
