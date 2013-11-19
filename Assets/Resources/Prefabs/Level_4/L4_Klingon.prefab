@@ -194,9 +194,13 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
+  - {fileID: 8300000, guid: 557582df63962b247aabeb6d8c1aa875, type: 3}
+  - {fileID: 8300000, guid: 915f0523b0652274497877b394d00da7, type: 3}
+  - {fileID: 8300000, guid: 953d3383566eb9d40b7a2aea24abdb55, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
+  - {fileID: 8300000, guid: 557582df63962b247aabeb6d8c1aa875, type: 3}
+  - {fileID: 8300000, guid: 915f0523b0652274497877b394d00da7, type: 3}
+  - {fileID: 8300000, guid: 953d3383566eb9d40b7a2aea24abdb55, type: 3}
   distanceThreshold: 100
   minVolume: .00999999978
   maxVolume: .100000001

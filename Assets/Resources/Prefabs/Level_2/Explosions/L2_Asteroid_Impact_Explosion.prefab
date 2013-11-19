@@ -129,13 +129,13 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: 953d3383566eb9d40b7a2aea24abdb55, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: 953d3383566eb9d40b7a2aea24abdb55, type: 3}
   distanceThreshold: 50
-  minVolume: 1
-  maxVolume: 1
-  rolloffFactor: .25
+  minVolume: .100000001
+  maxVolume: .25
+  rolloffFactor: .100000001
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
