@@ -1561,7 +1561,7 @@ Transform:
   m_GameObject: {fileID: 661228594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.45000005, y: 2.45000005, z: 2.45000005}
+  m_LocalScale: {x: 3.25, y: 3.25, z: 3.25}
   m_Children: []
   m_Father: {fileID: 2000436727}
 --- !u!1 &676146225
@@ -1884,13 +1884,17 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
+  - {fileID: 8300000, guid: 6620ba1f7e21f4e4bb214f596513b514, type: 3}
+  - {fileID: 8300000, guid: 772adb4523cc7e642aa2cd0db6694594, type: 3}
+  - {fileID: 8300000, guid: dd7d7a9f23abae54cbb6f61c03fc5ff4, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
+  - {fileID: 8300000, guid: 6620ba1f7e21f4e4bb214f596513b514, type: 3}
+  - {fileID: 8300000, guid: 772adb4523cc7e642aa2cd0db6694594, type: 3}
+  - {fileID: 8300000, guid: dd7d7a9f23abae54cbb6f61c03fc5ff4, type: 3}
   distanceThreshold: 100
-  minVolume: .00999999978
-  maxVolume: .00999999978
-  rolloffFactor: .5
+  maxVolume: .75
+  rolloffFactor: .400000006
+  priority: 128
 --- !u!114 &1263665518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3108,9 +3112,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eb4696d726a5cc3458fa965c1bdc5223, type: 3}
   - {fileID: 8300000, guid: 1efd08260cb799941aa14e733043cd15, type: 3}
   distanceThreshold: 100
-  minVolume: 1
   maxVolume: 1
   rolloffFactor: .5
+  priority: 128
 --- !u!1 &1671747125
 GameObject:
   m_ObjectHideFlags: 0

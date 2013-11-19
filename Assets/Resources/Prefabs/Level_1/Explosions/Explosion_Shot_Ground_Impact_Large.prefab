@@ -235,23 +235,19 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: 8ea23798c9a7b77418b21ad999f4ff40, type: 3}
-  - {fileID: 8300000, guid: 466cd2fd7e0e9ef43870c1d8110c7b5c, type: 3}
-  - {fileID: 8300000, guid: 642c695b4ef764a40b10f1013e538bdb, type: 3}
-  - {fileID: 8300000, guid: a7813885beaf5c44c85b149d674ce3dd, type: 3}
-  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
   - {fileID: 8300000, guid: a5e99fc30ac341449ac05c4631b51f98, type: 3}
+  - {fileID: 8300000, guid: 6d16a3b6a2f66dd4b9b1e033b8da4ae3, type: 3}
+  - {fileID: 8300000, guid: c25078bfce97b4449a6e66cbe3ffc03d, type: 3}
+  - {fileID: 8300000, guid: 448f7feb0bc209d4c893e3a196374dce, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: 8ea23798c9a7b77418b21ad999f4ff40, type: 3}
-  - {fileID: 8300000, guid: 466cd2fd7e0e9ef43870c1d8110c7b5c, type: 3}
-  - {fileID: 8300000, guid: 642c695b4ef764a40b10f1013e538bdb, type: 3}
-  - {fileID: 8300000, guid: a7813885beaf5c44c85b149d674ce3dd, type: 3}
-  - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
   - {fileID: 8300000, guid: a5e99fc30ac341449ac05c4631b51f98, type: 3}
+  - {fileID: 8300000, guid: 6d16a3b6a2f66dd4b9b1e033b8da4ae3, type: 3}
+  - {fileID: 8300000, guid: c25078bfce97b4449a6e66cbe3ffc03d, type: 3}
+  - {fileID: 8300000, guid: 448f7feb0bc209d4c893e3a196374dce, type: 3}
   distanceThreshold: 100
-  minVolume: .5
-  maxVolume: .699999988
+  maxVolume: 1
   rolloffFactor: .349999994
+  priority: 128
 --- !u!1002 &11400017
 EditorExtensionImpl:
   serializedVersion: 6
