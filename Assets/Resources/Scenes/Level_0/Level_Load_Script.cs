@@ -3,8 +3,11 @@ using System.Collections;
 
 public class Level_Load_Script : MonoBehaviour {
 
+    AudioSource[] audios;
+
 	// Use this for initialization
 	void Start () {
+        audios = this.gameObject.GetComponents<AudioSource>();
         GameObject stats = GameObject.FindGameObjectWithTag("Stats");
         if (stats)
         {
@@ -16,6 +19,7 @@ public class Level_Load_Script : MonoBehaviour {
 	void Update () {
         if (Input.GetButton("Jump"))
         {
+            audios[0].Play();
             StartCoroutine("FadeOutIntroSong");
             Application.LoadLevel("Level_1_Graybox");
         }
