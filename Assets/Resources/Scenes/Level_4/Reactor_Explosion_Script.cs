@@ -36,8 +36,8 @@ public class Reactor_Explosion_Script : MonoBehaviour {
         if (other.gameObject.CompareTag("L1_Elite_Missile"))
         {            
             foreach (ExplosionData e in explosions)
-            {
-                StartCoroutine("SetOffExplosion", e);
+            {                
+                StartCoroutine("SetOffExplosion", e);                
             }
         }
     }

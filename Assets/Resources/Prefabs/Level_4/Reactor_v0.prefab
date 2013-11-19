@@ -424,42 +424,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosions:
-  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
-    offset: {x: 0, y: 5, z: -10}
+  - explosion: {fileID: 100000, guid: ee1bbc16abd9e4440a437ca2a1235bfb, type: 2}
+    offset: {x: 0, y: -10, z: -20}
     delay: 0
   - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
-    offset: {x: -5, y: 9, z: -5}
-    delay: .100000001
-  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
-    offset: {x: 5, y: 7, z: -5}
-    delay: .200000003
-  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
-    offset: {x: 10, y: 2, z: -10}
+    offset: {x: 0, y: -10, z: -20}
     delay: .300000012
   - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
-    offset: {x: 5, y: -3, z: -10}
-    delay: .400000006
+    offset: {x: 10, y: -10, z: -20}
+    delay: .600000024
   - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
-    offset: {x: 6, y: -4, z: -7}
-    delay: .5
-  - explosion: {fileID: 100000, guid: 1cecd6eca0b206245bf1d2ae45db83e9, type: 2}
-    offset: {x: 0, y: -5, z: -15}
-    delay: .699999988
-  - explosion: {fileID: 100000, guid: 1cecd6eca0b206245bf1d2ae45db83e9, type: 2}
-    offset: {x: -15, y: -5, z: 0}
-    delay: .850000024
-  - explosion: {fileID: 100000, guid: 1cecd6eca0b206245bf1d2ae45db83e9, type: 2}
-    offset: {x: 15, y: -5, z: 0}
-    delay: 1
-  - explosion: {fileID: 100000, guid: 1290519460084614485e3ebebaaf897b, type: 2}
-    offset: {x: -10, y: 0, z: 0}
-    delay: 1.29999995
-  - explosion: {fileID: 100000, guid: 1290519460084614485e3ebebaaf897b, type: 2}
-    offset: {x: 10, y: 0, z: 0}
-    delay: 1.60000002
-  - explosion: {fileID: 100000, guid: 169935d60a60c684a8cfcefbfaa63eb9, type: 2}
-    offset: {x: 0, y: 0, z: -30}
+    offset: {x: -10, y: -5, z: -30}
+    delay: .899999976
+  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
+    offset: {x: -10, y: -5, z: -25}
+    delay: 1.20000005
+  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
+    offset: {x: -20, y: -5, z: -16}
+    delay: 1.5
+  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
+    offset: {x: -10, y: 0, z: -15.5}
+    delay: 1.79999995
+  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
+    offset: {x: 25, y: 10, z: -7.75}
     delay: 2
+  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
+    offset: {x: -25, y: -10, z: -14}
+    delay: 2.20000005
+  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
+    offset: {x: 15, y: 0, z: -5.75}
+    delay: 2.4000001
+  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
+    offset: {x: -15, y: 0, z: -9.75}
+    delay: 2.5999999
+  - explosion: {fileID: 100000, guid: 8b2efd6c917f92f49ae7fd247d45bfbe, type: 2}
+    offset: {x: 0, y: 0, z: -20}
+    delay: 2.79999995
+  - explosion: {fileID: 100000, guid: 1cecd6eca0b206245bf1d2ae45db83e9, type: 2}
+    offset: {x: 15, y: 15, z: -15}
+    delay: 3.20000005
+  - explosion: {fileID: 100000, guid: 1cecd6eca0b206245bf1d2ae45db83e9, type: 2}
+    offset: {x: -15, y: 15, z: -15}
+    delay: 3.5999999
+  - explosion: {fileID: 100000, guid: 1cecd6eca0b206245bf1d2ae45db83e9, type: 2}
+    offset: {x: 7, y: 7, z: -12.5}
+    delay: 4
+  - explosion: {fileID: 100000, guid: 1cecd6eca0b206245bf1d2ae45db83e9, type: 2}
+    offset: {x: -10, y: 6, z: -9}
+    delay: 4
+  - explosion: {fileID: 100000, guid: 1290519460084614485e3ebebaaf897b, type: 2}
+    offset: {x: -10, y: 10, z: -6}
+    delay: 4.25
+  - explosion: {fileID: 100000, guid: 1290519460084614485e3ebebaaf897b, type: 2}
+    offset: {x: -10, y: -10, z: -6.75}
+    delay: 4.5
+  - explosion: {fileID: 100000, guid: 1290519460084614485e3ebebaaf897b, type: 2}
+    offset: {x: 10, y: -10, z: -8}
+    delay: 4.75
+  - explosion: {fileID: 100000, guid: 1290519460084614485e3ebebaaf897b, type: 2}
+    offset: {x: 10, y: 10, z: -5}
+    delay: 5
+  - explosion: {fileID: 100000, guid: 169935d60a60c684a8cfcefbfaa63eb9, type: 2}
+    offset: {x: 0, y: 0, z: -35}
+    delay: 5.5
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

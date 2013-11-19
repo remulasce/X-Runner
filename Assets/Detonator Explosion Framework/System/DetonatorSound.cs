@@ -9,9 +9,10 @@ public class DetonatorSound : DetonatorComponent {
 	public AudioClip[] farSounds;
 	
 	public float distanceThreshold = 50f; //threshold in m between playing nearSound and farSound
-	public float minVolume = .4f;
+	//public float minVolume = .4f;
 	public float maxVolume = 1f;
 	public float rolloffFactor = 0.5f;
+    public int priority = 128;
 	
 	private AudioSource _soundComponent;
 	private bool _delayedExplosionStarted = false;
@@ -26,7 +27,8 @@ public class DetonatorSound : DetonatorComponent {
 	{
 		_soundComponent = (AudioSource)gameObject.AddComponent ("AudioSource");
         _soundComponent.rolloffMode = AudioRolloffMode.Linear;
-        _soundComponent.priority = 128; // Not too high, but more important sounds get played first
+        _soundComponent.volume = maxVolume;
+        _soundComponent.priority = this.priority; // Not too high, but more important sounds get played first
 	}
 
 	void Update()

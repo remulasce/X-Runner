@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400004}
   m_Layer: 13
-  m_Name: R_E_Small
+  m_Name: R_E_SetOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,13 +72,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4007f1233a9b74fa9be42583fafba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 7.5
+  size: 20
   color: {r: 1, g: .423000008, b: 0, a: .423529416}
   explodeOnStart: 0
   duration: 1
   detail: 5
   upwardsBias: 0
-  destroyTime: 2
+  destroyTime: 10
   useWorldSpace: 1
   direction: {x: 0, y: 0, z: 0}
   fireballAMaterial: {fileID: 0}
@@ -129,17 +129,13 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: 6620ba1f7e21f4e4bb214f596513b514, type: 3}
-  - {fileID: 8300000, guid: 772adb4523cc7e642aa2cd0db6694594, type: 3}
-  - {fileID: 8300000, guid: dd7d7a9f23abae54cbb6f61c03fc5ff4, type: 3}
+  - {fileID: 8300000, guid: ba37c01d63981734aa8972f93ab9b324, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: 6620ba1f7e21f4e4bb214f596513b514, type: 3}
-  - {fileID: 8300000, guid: 772adb4523cc7e642aa2cd0db6694594, type: 3}
-  - {fileID: 8300000, guid: dd7d7a9f23abae54cbb6f61c03fc5ff4, type: 3}
+  - {fileID: 8300000, guid: ba37c01d63981734aa8972f93ab9b324, type: 3}
   distanceThreshold: 300
-  minVolume: 1
-  maxVolume: 1
-  rolloffFactor: .25
+  maxVolume: .75
+  rolloffFactor: 1
+  priority: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

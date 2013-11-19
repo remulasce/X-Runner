@@ -382,10 +382,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 84c821d8c4e432f47852f73724d79569, type: 3}
   farSounds:
   - {fileID: 8300000, guid: 84c821d8c4e432f47852f73724d79569, type: 3}
-  distanceThreshold: 50
-  minVolume: .600000024
-  maxVolume: .200000003
+  distanceThreshold: 300
+  minVolume: 1
+  maxVolume: 1
   rolloffFactor: .25
+  priority: 128
 --- !u!1002 &11400017
 EditorExtensionImpl:
   serializedVersion: 6
@@ -426,6 +427,7 @@ MonoBehaviour:
   minVolume: 1
   maxVolume: 1
   rolloffFactor: .5
+  priority: 12
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

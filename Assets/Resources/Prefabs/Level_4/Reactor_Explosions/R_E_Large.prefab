@@ -193,9 +193,9 @@ MonoBehaviour:
   farSounds:
   - {fileID: 8300000, guid: 3c2b0b313835edd4bb60e5bf50e0f5a8, type: 3}
   - {fileID: 8300000, guid: 21191fb6819129e4ab721e028c7eb4d7, type: 3}
-  distanceThreshold: 50
-  minVolume: .600000024
-  maxVolume: .200000003
+  distanceThreshold: 300
+  minVolume: 1
+  maxVolume: 1
   rolloffFactor: .25
 --- !u!114 &11400008
 MonoBehaviour:
