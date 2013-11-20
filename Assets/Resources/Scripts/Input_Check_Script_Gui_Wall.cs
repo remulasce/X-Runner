@@ -80,6 +80,8 @@ public class Input_Check_Script_Gui_Wall : MonoBehaviour {
                 }
             }
         }
+
+        numberOfJoysticksConnected = Input.GetJoystickNames().Length;
     }
 
     void OnGUI()

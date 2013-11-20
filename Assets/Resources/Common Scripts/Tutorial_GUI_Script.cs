@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Tutorial_GUI_Script : MonoBehaviour {
 
-    public float timeToDisappear = 1.0f;
+    public float timeToDisappear = 0.0f;
 
     private float startTime = 0.0f;
 
@@ -19,7 +19,12 @@ public class Tutorial_GUI_Script : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {        
+	void Update () {
+        if (timeToDisappear == 0.0f)
+        {
+            return;
+        }
+
         if (Time.time - startTime > timeToDisappear && this.enabled)
         {
             this.gameObject.GetComponent<GUITexture>().enabled = false;
