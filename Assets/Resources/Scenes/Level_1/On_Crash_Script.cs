@@ -26,7 +26,7 @@ public class On_Crash_Script : MonoBehaviour {
         hm.closingMagnitude = 0;
         hm.initialHomingOffset = new Vector3(550, 0, 0);
         hm.percentToCloseOffset = 0.975f;
-        laser.GetComponent<Elite_Laser_Homing_Script>().InitializeWithDetonator(GameObject.FindGameObjectWithTag("L1_Elite"), Vector3.zero, 185.0f, missileImpactPrefab, hm, true);
+        laser.GetComponent<Elite_Laser_Homing_Script>().InitializeWithDetonator(GameObject.FindGameObjectWithTag("L1_Elite"), Vector3.zero, 192.5f, missileImpactPrefab, hm, true);
     }
 
     void OnCollisionEnter(Collision other)
