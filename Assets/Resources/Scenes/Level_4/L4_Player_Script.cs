@@ -87,6 +87,8 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
     [Range(0, 0.5f)]
     public float maxReloadOffset = 0.0f;
 
+    public Fireworks_Script fireworks = null;
+
     AudioSource[] audios;
 	
 	// Use this for initialization
@@ -337,7 +339,12 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 	//Make a shot if we're shooting
 	void doShooting ()
 	{
-		if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime) {
+        if (fireworks.isEnabled)
+        {
+            return;
+        }
+        
+        if (Input.GetButton("Jump") && Time.time > lastShot + reloadTime) {
             if (numShotsFired > numShotsFiredThreshold)
             {
                 if (reloadTime < maxReloadOffset)

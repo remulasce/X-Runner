@@ -12,7 +12,10 @@ public class Fireworks_Script : MonoBehaviour {
 
     public bool isEnabled = false;
 
+    public GameObject ship;
+
     private float startTime = 0.0f;
+    private int numFireWorksSpawned = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -28,12 +31,17 @@ public class Fireworks_Script : MonoBehaviour {
                 SpawnFirework();
             }
         }
+
+        if (isEnabled && Input.GetButtonDown("Jump") && numFireWorksSpawned > 2)
+        {
+            ship.animation.Play();
+        }
 	}
 
     void SpawnFirework()
     {
         GameObject firework = (GameObject)Instantiate(Resources.Load("Prefabs/Level_4/Firework"));
-        firework.transform.position = new Vector3(Random.Range(-spawningArea.x, spawningArea.x), Random.Range(-spawningArea.y, spawningArea.y), Random.Range(-spawningArea.z, spawningArea.z));
+        firework.transform.position = this.transform.position + new Vector3(Random.Range(-spawningArea.x, spawningArea.x), Random.Range(-spawningArea.y, spawningArea.y), Random.Range(-spawningArea.z, spawningArea.z));
         firework.GetComponent<Detonator>().size = Random.Range(sizes.x, sizes.y);
         firework.GetComponent<Detonator>().color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), 1);
         firework.GetComponent<DetonatorFireball>().color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), 1);
@@ -44,5 +52,8 @@ public class Fireworks_Script : MonoBehaviour {
         firework.GetComponent<DetonatorLight>().color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), 1);
         firework.GetComponent<Detonator>().Explode();
         startTime = Time.time;
+        numFireWorksSpawned++;
     }
+
+    
 }

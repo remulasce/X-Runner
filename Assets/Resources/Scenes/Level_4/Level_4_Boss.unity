@@ -3323,7 +3323,7 @@ Transform:
   - {fileID: 458521604}
   - {fileID: 874991015}
   - {fileID: 1666813869}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2130099616}
 --- !u!114 &57080269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3357,6 +3357,7 @@ MonoBehaviour:
   numShotsFiredThreshold: 80
   reloadTimeMultiplier: 1.75
   maxReloadOffset: .0900000036
+  fireworks: {fileID: 1980851182}
 --- !u!54 &57080270
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35719,7 +35720,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 748311835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2095.86475, y: -5.65895653, z: -39.5924759}
+  m_LocalPosition: {x: 2069.44873, y: -5.65895653, z: -39.5924759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -70053,7 +70054,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2130099616}
     m_Modifications:
     - target: {fileID: 400000, guid: 644a8029965322b4682665652571c001, type: 2}
       propertyPath: m_LocalPosition.x
@@ -70091,6 +70092,30 @@ Prefab:
       propertyPath: explosion
       value: 
       objectReference: {fileID: 2124624972}
+    - target: {fileID: 2300000, guid: 644a8029965322b4682665652571c001, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3111dbc49865c10438769bd7a736048a, type: 2}
+    - target: {fileID: 2300002, guid: 644a8029965322b4682665652571c001, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ee8eddd1873512842b9dfc27b84afd80, type: 2}
+    - target: {fileID: 2600000, guid: 644a8029965322b4682665652571c001, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74f4a47fc3b034e2d963491f4e514174, type: 2}
+    - target: {fileID: 2300004, guid: 644a8029965322b4682665652571c001, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3111dbc49865c10438769bd7a736048a, type: 2}
+    - target: {fileID: 2300006, guid: 644a8029965322b4682665652571c001, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3111dbc49865c10438769bd7a736048a, type: 2}
+    - target: {fileID: 11400000, guid: 644a8029965322b4682665652571c001, type: 2}
+      propertyPath: fireworks
+      value: 
+      objectReference: {fileID: 1980851182}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 644a8029965322b4682665652571c001, type: 2}
   m_RootGameObject: {fileID: 57080264}
@@ -83383,7 +83408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1798473154
 Transform:
   m_ObjectHideFlags: 0
@@ -86882,7 +86907,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1890967544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1904.5918, y: -5.90302277, z: -39.1226158}
+  m_LocalPosition: {x: 2009.6499, y: -5.90302277, z: -39.1226158}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -86898,7 +86923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 235477945}
-  speed: 10
+  speed: 2
   endGame: 1
   fireworksScript: {fileID: 1980851182}
 --- !u!65 &1890967547
@@ -91632,9 +91657,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 1980851183}
   - 114: {fileID: 1980851182}
+  - 65: {fileID: 1980851184}
   m_Layer: 0
   m_Name: Fireworks_Spawner
-  m_TagString: Untagged
+  m_TagString: L4_Fireworks_Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91651,9 +91677,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeIntervalToSpawnFirework: 1
-  spawningArea: {x: 20, y: 20, z: 10}
+  spawningArea: {x: 35, y: 20, z: 30}
   sizes: {x: 3, y: 15}
   isEnabled: 0
+  ship: {fileID: 2130099615}
 --- !u!4 &1980851183
 Transform:
   m_ObjectHideFlags: 0
@@ -91661,10 +91688,22 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1980851181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2167.92822, y: -29.8670959, z: 807.515503}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2026.04736, y: 0, z: 20}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 235477947}
+--- !u!65 &1980851184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980851181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1981359566
 GameObject:
   m_ObjectHideFlags: 0
@@ -98474,6 +98513,52 @@ Prefab:
   m_RootGameObject: {fileID: 947464102}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &2130099615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2130099616}
+  - 111: {fileID: 2130099617}
+  m_Layer: 0
+  m_Name: Ship_Fly_Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2130099616
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2130099615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 57080268}
+  m_Father: {fileID: 0}
+--- !u!111 &2130099617
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2130099615}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d6324c34bd3850f438c843110ac117d7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: d6324c34bd3850f438c843110ac117d7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &2133107666
 GameObject:
   m_ObjectHideFlags: 0
