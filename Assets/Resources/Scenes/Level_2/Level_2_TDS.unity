@@ -408,6 +408,38 @@ Prefab:
       propertyPath: endExplosion
       value: 
       objectReference: {fileID: 100000, guid: 57be637385d488c4cb77f4a745d14c1b, type: 2}
+    - target: {fileID: 2300000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3111dbc49865c10438769bd7a736048a, type: 2}
+    - target: {fileID: 2600000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74f4a47fc3b034e2d963491f4e514174, type: 2}
+    - target: {fileID: 2300002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc6ff5a8188f1cb4b89b7a3852d3496a, type: 2}
+    - target: {fileID: 400002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.45000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.45000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.45000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3111dbc49865c10438769bd7a736048a, type: 2}
+    - target: {fileID: 2300006, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3111dbc49865c10438769bd7a736048a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
   m_RootGameObject: {fileID: 292744465}
@@ -3428,6 +3460,30 @@ Prefab:
       propertyPath: MaxDistance
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ee8eddd1873512842b9dfc27b84afd80, type: 2}
+    - target: {fileID: 400002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.34173203
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.34173203
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.34173203
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74f4a47fc3b034e2d963491f4e514174, type: 2}
+    - target: {fileID: 2300000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fe38bee21442027418fc23bf91e770c1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}
