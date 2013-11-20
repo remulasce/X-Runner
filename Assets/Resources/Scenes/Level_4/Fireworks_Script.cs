@@ -32,7 +32,7 @@ public class Fireworks_Script : MonoBehaviour {
             }
         }
 
-        if (isEnabled && Input.GetButtonDown("Jump") && numFireWorksSpawned > 2)
+        if (isEnabled && Input.GetButtonDown("Jump") && numFireWorksSpawned > 2 && !ship.animation.isPlaying)
         {
             ship.animation.Play();
         }

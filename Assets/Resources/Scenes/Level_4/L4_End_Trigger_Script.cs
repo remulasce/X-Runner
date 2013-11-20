@@ -19,16 +19,10 @@ public class L4_End_Trigger_Script : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Object.Destroy(GameObject.FindGameObjectWithTag("Stats"));
-
-            if (musicManager)
+            if (!other.gameObject.transform.parent.animation.isPlaying)
             {
-                musicManager.QuickFadeOuts(4, new int[] { 5, 6 });
-                musicManager.StopAllSongs();
-                musicManager.StartSongs(0, new int[] { 0 });
+                other.gameObject.transform.parent.animation.Play();
             }
-
-            Application.LoadLevel("Title_Screen");
         }
     }
 }

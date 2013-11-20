@@ -26,9 +26,9 @@ AnimationClip:
         inSlope: {x: 120, y: 0, z: 0}
         outSlope: {x: -0, y: 0, z: 0}
         tangentMode: -559038737
-      - time: 1.01666665
+      - time: 1.5
         value: {x: 111.322937, y: 0, z: 0}
-        inSlope: {x: 316.139069, y: 0, z: 0}
+        inSlope: {x: 211.668457, y: 0, z: 0}
         outSlope: {x: 360, y: 0, z: 0}
         tangentMode: -559038737
       m_PreInfinity: 2
@@ -99,9 +99,9 @@ AnimationClip:
         inSlope: 120
         outSlope: -0
         tangentMode: 1
-      - time: 1.01666665
+      - time: 1.5
         value: 111.322937
-        inSlope: 316.139069
+        inSlope: 211.668457
         outSlope: 360
         tangentMode: 1
       m_PreInfinity: 2
@@ -247,4 +247,18 @@ AnimationClip:
     path: 
     classID: 4
     script: {fileID: 0}
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: PlayTakeOff
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.5
+    functionName: LoadL0
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
