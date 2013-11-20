@@ -91,4 +91,9 @@ public class Elite_Ship_Laser_Script : MonoBehaviour {
     {
         audio.Play();
     }
+
+    public void ActivateShield()
+    {
+        this.gameObject.transform.FindChild("Shield_Dome_Elite").animation.Play();
+    }
 }

@@ -24,9 +24,9 @@ public class On_Crash_Script : MonoBehaviour {
         GameObject laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_1/Frendly_Laser_Homing"), this.transform.position + new Vector3(0, 0, 0), Quaternion.identity);
         Elite_Laser_Trigger_Script.homingTargetInformation hm = new Elite_Laser_Trigger_Script.homingTargetInformation();
         hm.closingMagnitude = 0;
-        hm.initialHomingOffset = new Vector3(1000, 0, 0);
-        hm.percentToCloseOffset = 0.99f;
-        laser.GetComponent<Elite_Laser_Homing_Script>().InitializeWithDetonator(GameObject.FindGameObjectWithTag("L1_Missile_Target_Friendly"), Vector3.zero, 85.0f, missileImpactPrefab, hm, true);
+        hm.initialHomingOffset = new Vector3(550, 0, 0);
+        hm.percentToCloseOffset = 0.975f;
+        laser.GetComponent<Elite_Laser_Homing_Script>().InitializeWithDetonator(GameObject.FindGameObjectWithTag("L1_Elite"), Vector3.zero, 185.0f, missileImpactPrefab, hm, true);
     }
 
     void OnCollisionEnter(Collision other)

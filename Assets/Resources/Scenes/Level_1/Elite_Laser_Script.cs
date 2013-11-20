@@ -84,7 +84,7 @@ public class Elite_Laser_Script : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile")) // Do not want enemy lasers to hit and destroy each other
+        if (other.gameObject.CompareTag("L1_Elite_Laser") || other.gameObject.CompareTag("L1_Elite_Missile") || other.gameObject.CompareTag("Enemy_Shield")) // Do not want enemy lasers to hit and destroy each other
         {
             return;
         }

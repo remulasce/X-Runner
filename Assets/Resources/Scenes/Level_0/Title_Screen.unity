@@ -4784,6 +4784,10 @@ Prefab:
       propertyPath: timeToDisappear
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: setOnWithStart
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
   m_RootGameObject: {fileID: 2048016658}
@@ -5891,7 +5895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDisappear: 0
-  setOnWithStart: 0
+  setOnWithStart: 1
 --- !u!131 &2048016661
 GUITexture:
   m_ObjectHideFlags: 0

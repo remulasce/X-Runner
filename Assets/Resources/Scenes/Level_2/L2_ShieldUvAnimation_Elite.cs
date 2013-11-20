@@ -52,7 +52,13 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(tagToCompareFor))
-        {            
+        {
+            if (other.gameObject.CompareTag("L1_Missile_Friendly"))
+            {
+                GameObject explosion = (GameObject) Instantiate(other.gameObject.GetComponent<Elite_Laser_Homing_Script>().detonatorPrefab);
+                explosion.transform.position = other.transform.position;
+                explosion.GetComponent<Detonator>().Explode();
+            }
             Object.Destroy(other.gameObject);
             StartCoroutine("RevertShieldColor");
         }
