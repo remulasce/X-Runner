@@ -11454,6 +11454,7 @@ Transform:
   - {fileID: 1102882049}
   - {fileID: 593719131}
   - {fileID: 1101619535}
+  - {fileID: 55192844}
   - {fileID: 830063488}
   - {fileID: 992734662}
   - {fileID: 1817676483}
@@ -11603,6 +11604,7 @@ Transform:
   - {fileID: 1046886785}
   - {fileID: 1050919434}
   - {fileID: 921720942}
+  - {fileID: 754318323}
   - {fileID: 1254415715}
   - {fileID: 1100982310}
   - {fileID: 735662665}
@@ -11660,6 +11662,7 @@ Transform:
   - {fileID: 994957680}
   - {fileID: 1987583541}
   - {fileID: 499577504}
+  - {fileID: 1896118630}
   - {fileID: 939765158}
   - {fileID: 559528662}
   - {fileID: 518673657}
@@ -11875,6 +11878,7 @@ Transform:
   - {fileID: 1429134294}
   - {fileID: 1281051520}
   - {fileID: 1496922998}
+  - {fileID: 1363519494}
   - {fileID: 1753908581}
   - {fileID: 723727028}
   - {fileID: 915705300}
@@ -12025,10 +12029,12 @@ Transform:
   - {fileID: 309863231}
   - {fileID: 2134016}
   - {fileID: 316845188}
+  - {fileID: 1802328989}
   - {fileID: 670395885}
   - {fileID: 1753094806}
   - {fileID: 2048826202}
   - {fileID: 1313643462}
+  - {fileID: 1854336020}
   - {fileID: 1734600861}
   - {fileID: 1032614139}
   - {fileID: 541821329}
@@ -12046,12 +12052,6 @@ Transform:
   - {fileID: 236786917}
   - {fileID: 1399755139}
   - {fileID: 47372553}
-  - {fileID: 1896118630}
-  - {fileID: 1363519494}
-  - {fileID: 1802328989}
-  - {fileID: 55192844}
-  - {fileID: 754318323}
-  - {fileID: 1854336020}
   - {fileID: 2032969134}
   - {fileID: 2077371961}
   - {fileID: 2111255362}
@@ -24423,7 +24423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 7be93646d7e116b4e95415b36b9d970d, type: 2}
       propertyPath: maxVolume
-      value: .25
+      value: .75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7be93646d7e116b4e95415b36b9d970d, type: 2}
@@ -98352,11 +98352,11 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 1
   nearSounds:
-  - {fileID: 8300000, guid: 1efd08260cb799941aa14e733043cd15, type: 3}
-  - {fileID: 8300000, guid: eb4696d726a5cc3458fa965c1bdc5223, type: 3}
+  - {fileID: 8300000, guid: 3c2b0b313835edd4bb60e5bf50e0f5a8, type: 3}
+  - {fileID: 8300000, guid: 21191fb6819129e4ab721e028c7eb4d7, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: 1efd08260cb799941aa14e733043cd15, type: 3}
-  - {fileID: 8300000, guid: eb4696d726a5cc3458fa965c1bdc5223, type: 3}
+  - {fileID: 8300000, guid: 3c2b0b313835edd4bb60e5bf50e0f5a8, type: 3}
+  - {fileID: 8300000, guid: 21191fb6819129e4ab721e028c7eb4d7, type: 3}
   distanceThreshold: 100
   maxVolume: 1
   rolloffFactor: .5
@@ -99508,11 +99508,11 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   detailThreshold: 0
   nearSounds:
-  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: b06d0b74cf62d8f4e98e2ea7a4109f68, type: 3}
   farSounds:
-  - {fileID: 8300000, guid: bdb724ac4dd04994a95a48932764c206, type: 3}
+  - {fileID: 8300000, guid: b06d0b74cf62d8f4e98e2ea7a4109f68, type: 3}
   distanceThreshold: 25
-  maxVolume: .25
+  maxVolume: .75
   rolloffFactor: .100000001
   priority: 128
 --- !u!1 &2142113176

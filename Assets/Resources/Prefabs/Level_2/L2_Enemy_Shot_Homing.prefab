@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 2.25
-  color: {r: .572413921, g: 0, b: 1, a: 1}
+  color: {r: 1, g: 0, b: 0, a: 1}
   explodeOnStart: 0
   duration: 1.5
   detail: 1
@@ -483,7 +483,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 557582df63962b247aabeb6d8c1aa875, type: 3}
   - {fileID: 8300000, guid: 915f0523b0652274497877b394d00da7, type: 3}
   distanceThreshold: 50
-  maxVolume: .75
+  maxVolume: .550000012
   rolloffFactor: .75
   priority: 128
 --- !u!1001 &100100000

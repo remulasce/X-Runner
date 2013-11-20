@@ -404,6 +404,10 @@ Prefab:
       propertyPath: timeToRegenerateShields
       value: 4.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b24170436125e70448520c272c2d9a2d, type: 2}
+      propertyPath: endExplosion
+      value: 
+      objectReference: {fileID: 100000, guid: 57be637385d488c4cb77f4a745d14c1b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b24170436125e70448520c272c2d9a2d, type: 2}
   m_RootGameObject: {fileID: 292744465}
@@ -996,7 +1000,7 @@ MonoBehaviour:
   curMaxSpeed: 7
   nextLoiterChange: 0
   curWaypoint: 0
-  endExplosion: {fileID: 100000, guid: 993e280945dbb7b459082e1ccfc16dbf, type: 2}
+  endExplosion: {fileID: 100000, guid: 57be637385d488c4cb77f4a745d14c1b, type: 2}
   isShotDown: 0
 --- !u!54 &292744471
 Rigidbody:
@@ -1561,7 +1565,7 @@ Transform:
   m_GameObject: {fileID: 661228594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.25, y: 3.25, z: 3.25}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_Children: []
   m_Father: {fileID: 2000436727}
 --- !u!1 &676146225
@@ -1892,7 +1896,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 772adb4523cc7e642aa2cd0db6694594, type: 3}
   - {fileID: 8300000, guid: dd7d7a9f23abae54cbb6f61c03fc5ff4, type: 3}
   distanceThreshold: 100
-  maxVolume: .75
+  maxVolume: .349999994
   rolloffFactor: .400000006
   priority: 128
 --- !u!114 &1263665518
@@ -1908,7 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 4
-  color: {r: .908488035, g: 0, b: .961538434, a: .549019635}
+  color: {r: .961538434, g: .0596816652, b: 0, a: .549019635}
   explodeOnStart: 0
   duration: 1.25
   detail: 2
@@ -2653,7 +2657,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 5e870902a147d144caaca60bc6ae3c04, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .75
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
