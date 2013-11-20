@@ -97,7 +97,7 @@ public class L4_Spawner : MonoBehaviour {
         {
             float yVal = Random.Range(-7f, 7f);
 
-            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 14.5f), lb_no(), at_hm(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);
+            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 14.5f), lb_no(), at_lt(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);
         }
 
         //----------------------------------------------------------------------------------------------
@@ -164,12 +164,12 @@ public class L4_Spawner : MonoBehaviour {
         W(ft_missileRun());
 
         // Spawn the Tie Bomber Wave
-        W(ft_gd(60, 2), nb_go(40, 30, 40, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 17.5f), 15.25f);
+        W(ft_gd(60, 2), nb_go(40, 30, 40, 10, 20), lb_no(), at_ld(5.0f), xt_im(), xb_go(-1, 0, 17.5f), 15.25f);
 
         // Fade in the grand finale (everything)
         W(ft_finale());
 
-        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(0.75f), xt_tm(4.25f), xb_go(0, 1, 17.5f), 6f);
+        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(2.5f), xt_tm(4.25f), xb_go(0, 1, 17.5f), 6f);
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 12f);

@@ -14999,7 +14999,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 297142299}
-  m_LocalRotation: {x: .143318549, y: .0899476781, z: -.0130472332, w: .985494316}
+  m_LocalRotation: {x: .386088312, y: .0837933868, z: -.0352063105, w: .917973399}
   m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -24423,7 +24423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 7be93646d7e116b4e95415b36b9d970d, type: 2}
       propertyPath: maxVolume
-      value: .75
+      value: .524999976
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7be93646d7e116b4e95415b36b9d970d, type: 2}
@@ -99512,7 +99512,7 @@ MonoBehaviour:
   farSounds:
   - {fileID: 8300000, guid: b06d0b74cf62d8f4e98e2ea7a4109f68, type: 3}
   distanceThreshold: 25
-  maxVolume: .75
+  maxVolume: .524999976
   rolloffFactor: .100000001
   priority: 128
 --- !u!1 &2142113176
