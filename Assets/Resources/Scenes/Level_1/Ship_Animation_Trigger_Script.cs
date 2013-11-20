@@ -4,6 +4,7 @@ using System.Collections;
 public class Ship_Animation_Trigger_Script : MonoBehaviour {
 
     public GameObject eliteShip;
+    public string animationName;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +21,7 @@ public class Ship_Animation_Trigger_Script : MonoBehaviour {
         Debug.Log(other.gameObject.tag);
         if (eliteShip && other.gameObject.CompareTag("Player"))
         {
-            eliteShip.animation.Play();
+            eliteShip.animation.Play(animationName);
         }
     }
 }

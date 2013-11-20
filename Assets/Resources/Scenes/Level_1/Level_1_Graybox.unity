@@ -7800,8 +7800,8 @@ GameObject:
   - 65: {fileID: 158324612}
   - 23: {fileID: 158324611}
   - 114: {fileID: 158324615}
-  - 111: {fileID: 158324616}
   - 82: {fileID: 158324617}
+  - 111: {fileID: 158324616}
   m_Layer: 0
   m_Name: Elite_Ship
   m_TagString: L1_Elite
@@ -7856,7 +7856,7 @@ Transform:
   m_PrefabInternal: {fileID: 995671070}
   m_GameObject: {fileID: 158324610}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: -4.37113883e-08}
-  m_LocalPosition: {x: 128.780975, y: 55, z: 500}
+  m_LocalPosition: {x: -838.827881, y: 55, z: 500}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 82088180}
@@ -7889,6 +7889,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: e894cbd06b1f78c4e824634cc645fe3f, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: e894cbd06b1f78c4e824634cc645fe3f, type: 2}
+  - {fileID: 7400000, guid: 00bdad24febf91c4fbd8aa3d21c53a54, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -18933,7 +18934,7 @@ GameObject:
   - 65: {fileID: 396026591}
   - 114: {fileID: 396026590}
   m_Layer: 0
-  m_Name: Ship_Animation_Trigger
+  m_Name: Ship_Animation_Trigger_Leave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18946,10 +18947,10 @@ Transform:
   m_PrefabInternal: {fileID: 1847835397}
   m_GameObject: {fileID: 396026588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 451.996063, y: 0, z: 4.72853518}
+  m_LocalPosition: {x: 705.106934, y: 7.29848385, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1580173294}
+  m_Father: {fileID: 0}
 --- !u!114 &396026590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18962,6 +18963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eliteShip: {fileID: 158324610}
+  animationName: Elite_END
 --- !u!65 &396026591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47302,7 +47304,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: f5fe34cda3879154d807760061479a25, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 128.780975
+      value: -838.827881
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5fe34cda3879154d807760061479a25, type: 2}
       propertyPath: m_LocalPosition.y
@@ -55227,6 +55229,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbadd6b22ae51df45b96af89be8c25b0, type: 2}
   m_RootGameObject: {fileID: 1136603572}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &1154977013
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 108.255501
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.29848385
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+      propertyPath: m_Name
+      value: Ship_Animation_Trigger_Fly_in
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+  m_RootGameObject: {fileID: 1535364799}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &1155662889
@@ -77965,6 +78011,60 @@ Transform:
   m_LocalScale: {x: .710393786, y: .710393786, z: 1.0457108}
   m_Children: []
   m_Father: {fileID: 613919318}
+--- !u!1 &1535364799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+  m_PrefabInternal: {fileID: 1154977013}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1535364800}
+  - 65: {fileID: 1535364802}
+  - 114: {fileID: 1535364801}
+  m_Layer: 0
+  m_Name: Ship_Animation_Trigger_Fly_in
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1535364800
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
+  m_PrefabInternal: {fileID: 1154977013}
+  m_GameObject: {fileID: 1535364799}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 108.255501, y: 7.29848385, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &1535364801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1535364799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c9b1940019b6b4db08ac028f6edc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eliteShip: {fileID: 158324610}
+  animationName: Elite_START
+--- !u!65 &1535364802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1154977013}
+  m_GameObject: {fileID: 1535364799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 100, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1536980732
 GameObject:
   m_ObjectHideFlags: 0
@@ -79932,7 +80032,6 @@ Transform:
   - {fileID: 1552687578}
   - {fileID: 1605324232}
   - {fileID: 1862952103}
-  - {fileID: 396026589}
   - {fileID: 1748569534}
   - {fileID: 510072678}
   - {fileID: 795758188}
@@ -93346,19 +93445,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1580173294}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 451.996063
+      value: 705.106934
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 7.29848385
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.72853518
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -93378,7 +93477,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}
       propertyPath: m_Name
-      value: Ship_Animation_Trigger
+      value: Ship_Animation_Trigger_Leave
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6b56ffb9d90ce14aae4a9d45e7cb64d, type: 2}

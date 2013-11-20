@@ -6,6 +6,8 @@ public class Input_Check_Script_Gui_Wall : MonoBehaviour {
     public Texture keyboardTexture;
     public Texture controllerTexture;
 
+    private int numberOfJoysticksConnected = 0;
+
     GUITexture guiTexture;
 
     void Start()
@@ -24,6 +26,8 @@ public class Input_Check_Script_Gui_Wall : MonoBehaviour {
                 m_State = eInputState.Controller;
             }
         }
+
+        numberOfJoysticksConnected = Input.GetJoystickNames().Length;
     }
 
     // Credits: http://answers.unity3d.com/questions/131899/how-do-i-check-what-input-device-is-currently-beei.html
@@ -49,8 +53,37 @@ public class Input_Check_Script_Gui_Wall : MonoBehaviour {
     // Unity member methods //
     //*************************//
 
-    void OnGUI()
+    void Update()
     {
+        if (numberOfJoysticksConnected != Input.GetJoystickNames().Length)
+        {
+            if (numberOfJoysticksConnected < Mathf.Clamp(Input.GetJoystickNames().Length, 0, 1)) // Back to 0 controllers
+            {
+                if (guiTexture)
+                {
+                    guiTexture.texture = controllerTexture;
+                }
+                else
+                {
+                    this.renderer.material.mainTexture = controllerTexture;
+                }
+            }
+            else if (numberOfJoysticksConnected > Mathf.Clamp(Input.GetJoystickNames().Length, 0, 1)) // Back to 1 controller
+            {
+                if (guiTexture)
+                {
+                    guiTexture.texture = keyboardTexture;
+                }
+                else
+                {
+                    this.renderer.material.mainTexture = keyboardTexture;
+                }
+            }
+        }
+    }
+
+    void OnGUI()
+    {        
         switch (m_State)
         {
             case eInputState.MouseKeyboard:
