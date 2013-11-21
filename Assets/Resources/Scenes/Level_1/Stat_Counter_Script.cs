@@ -59,6 +59,17 @@ public class Stat_Counter_Script : MonoBehaviour {
         {
             foreach (GUIText t in texts)
             {
+                if (t.name.Equals("EXIT")) // Special Case for controller for this text
+                {
+                    if (Input.GetJoystickNames().Length == 0)
+                    {
+                        t.text = "Press Space To Exit";
+                    }
+                    else
+                    {
+                        t.text = "Press 'A' To Exit";
+                    }
+                }
                 if (t.name.Contains("Deaths"))
                 {
                     t.text = "Deaths: " + numberOfDeaths;
