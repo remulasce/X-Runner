@@ -16294,6 +16294,7 @@ GameObject:
   - 82: {fileID: 547519649}
   - 82: {fileID: 547519648}
   - 82: {fileID: 547519652}
+  - 114: {fileID: 547519653}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -16383,7 +16384,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: b4ee995c09e5bb84083b227ccb90838b, type: 2}
+  - {fileID: 2100000, guid: 526df06c48d8dd44290b7a75723ed961, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -16717,6 +16718,17 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &547519653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 547519640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d121894dd7a6ef446a1b6e972370bbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &550178828
 GameObject:
   m_ObjectHideFlags: 0
@@ -35631,7 +35643,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b4ee995c09e5bb84083b227ccb90838b, type: 2}
+      objectReference: {fileID: 2100000, guid: 526df06c48d8dd44290b7a75723ed961, type: 2}
     - target: {fileID: 19900000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
