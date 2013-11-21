@@ -17,12 +17,12 @@ AnimationClip:
         value: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: -559038737
+        tangentMode: 0
       - time: 6.36666679
         value: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: -559038737
+        tangentMode: 111
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: L2_Player_Ship
@@ -74,22 +74,6 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 1
-        value: {x: .600000024, y: .300000012, z: .5}
-        inSlope: {x: -.0891067907, y: -.0445533954, z: -.0742556602}
-        outSlope: {x: -.0891067907, y: -.0445533954, z: -.0742556602}
-        tangentMode: -559038737
-      - time: 6
-        value: {x: .154466063, y: .0772330314, z: .128721729}
-        inSlope: {x: -.0891067907, y: -.0445533954, z: -.0742556602}
-        outSlope: {x: -.0891067907, y: -.0445533954, z: -.0742556602}
-        tangentMode: -559038737
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: L2_Player_Ship
-  - curve:
-      serializedVersion: 2
-      m_Curve:
       - time: 0
         value: {x: 1.70000005, y: 1.70000005, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
@@ -98,6 +82,17 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: FakePlayer
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: .600000024, y: .600000024, z: .600000024}
+        inSlope: {x: 3.02503813e-27, y: 0, z: 0}
+        outSlope: {x: 3.02503813e-27, y: 0, z: 0}
+        tangentMode: -559038737
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: L2_Player_Ship
   m_FloatCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -267,63 +262,6 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 1
-        value: .600000024
-        inSlope: -.0891067907
-        outSlope: -.0891067907
-        tangentMode: 10
-      - time: 6
-        value: .154466063
-        inSlope: -.0891067907
-        outSlope: -.0891067907
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalScale.x
-    path: L2_Player_Ship
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 1
-        value: .300000012
-        inSlope: -.0445533954
-        outSlope: -.0445533954
-        tangentMode: 10
-      - time: 6
-        value: .0772330314
-        inSlope: -.0445533954
-        outSlope: -.0445533954
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalScale.y
-    path: L2_Player_Ship
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 1
-        value: .5
-        inSlope: -.0742556602
-        outSlope: -.0742556602
-        tangentMode: 10
-      - time: 6
-        value: .128721729
-        inSlope: -.0742556602
-        outSlope: -.0742556602
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalScale.z
-    path: L2_Player_Ship
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
       - time: 0
         value: 1.70000005
         inSlope: 0
@@ -436,6 +374,48 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalRotation.w
+    path: L2_Player_Ship
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .600000024
+        inSlope: 3.02503813e-27
+        outSlope: 3.02503813e-27
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.x
+    path: L2_Player_Ship
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .600000024
+        inSlope: 3.76185302e-19
+        outSlope: 3.75598996e-39
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.y
+    path: L2_Player_Ship
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .600000024
+        inSlope: 3.76188404e-19
+        outSlope: 3.75598996e-39
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.z
     path: L2_Player_Ship
     classID: 4
     script: {fileID: 0}
