@@ -407,6 +407,7 @@ public class Player_Movement_Script : MonoBehaviour {
 	//Just checks and sets the InAir thing in the running animation
 	void DoUpdateRun()
 	{
+		if (this.GetComponent<Player_Run>() == null) { return; }
 		if (this.isJumping) { this.GetComponent<Player_Run>().InAir(); }
 		else { this.GetComponent<Player_Run>().OnGround(); }
 	}
