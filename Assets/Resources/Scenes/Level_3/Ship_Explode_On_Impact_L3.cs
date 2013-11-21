@@ -20,8 +20,9 @@ public class Ship_Explode_On_Impact_L3 : MonoBehaviour {
         if (!other.gameObject.CompareTag("L3_Ejection_Trigger"))
         {
             this.GetComponent<Detonator>().Explode();
-            this.gameObject.renderer.enabled = false;
             audio.Stop();
+			this.gameObject.renderer.enabled = false;
+            
         }        
     }
 
