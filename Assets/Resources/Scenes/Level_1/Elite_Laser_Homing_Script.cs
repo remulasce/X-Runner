@@ -209,9 +209,10 @@ public class Elite_Laser_Homing_Script : MonoBehaviour {
 
         Debug.Log("Homing Laser Hit: " + other.gameObject.name);
 
-        transform.DetachChildren();
+        
 
         Object.Destroy(this.gameObject);
+		//transform.DetachChildren();
     }
 
     IEnumerator SetBackToRegular()

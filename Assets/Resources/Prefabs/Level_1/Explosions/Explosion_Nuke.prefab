@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 679.315613, y: -12.3385773, z: 4.39357758}
+  m_LocalPosition: {x: 118.324036, y: -69.330246, z: 4.96442938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -533,9 +533,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8f03951fee9bec9478d1ec979ba44677, type: 3}
   - {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
   distanceThreshold: 100
-  minVolume: 1
   maxVolume: 1
   rolloffFactor: .349999994
+  priority: 128
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
