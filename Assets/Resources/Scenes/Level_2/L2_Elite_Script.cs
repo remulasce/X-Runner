@@ -34,8 +34,7 @@ public class L2_Elite_Script : MonoBehaviour {
     public bool isShotDown = false;
 
     // Handle to the music manager to start the next transition, when it is in
-    Music_Manager_Script musicManager;
-		
+    Music_Manager_Script musicManager;		
 	
 	// Use this for initialization
 	void Start () {

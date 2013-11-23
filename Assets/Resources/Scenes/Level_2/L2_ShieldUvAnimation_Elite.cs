@@ -25,6 +25,8 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
 
     public Music_Manager_Script musicManager;
 
+    public AudioClip soundHit = null;
+
     AudioSource[] audios;
 
     // Use this for initialization
@@ -37,6 +39,8 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
         initialColor = this.mMaterial.color;
 
         audios = this.gameObject.GetComponents<AudioSource>();
+
+
 
         musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
     }
@@ -67,11 +71,16 @@ public class L2_ShieldUvAnimation_Elite : MonoBehaviour
         if (other.gameObject.CompareTag("L2_Asteroid"))
         {
             GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
-            gDetonator.GetComponent<Detonator>().size = 2 * other.transform.localScale.x;
+            gDetonator.GetComponent<Detonator>().size = 1.1f * other.transform.localScale.x;
+            if (soundHit)
+            {
+                audios[3].Play();
+            }
+
             Object.Destroy(other.gameObject);
             this.animation.Play("Shield_Collapse_Elite");
             StartCoroutine("BringBackShield");
-
+            
             if (this.name.Contains("Elite")) // Hack
             {
                 // Fade in the hit song
