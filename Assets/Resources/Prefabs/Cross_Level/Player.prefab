@@ -19,6 +19,7 @@ GameObject:
   - 82: {fileID: 8200004}
   - 82: {fileID: 8200006}
   - 82: {fileID: 8200008}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -50,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 498.027954, y: 80.3671799, z: -1.60293297e-07}
+  m_LocalPosition: {x: 42.5932579, y: -1.44390321, z: -.199410528}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -61,8 +62,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -1.17730713, y: .440391541, z: 0}
+  m_LocalRotation: {x: .682949841, y: -.183247268, z: -.183247238, w: .682949841}
+  m_LocalPosition: {x: -.495166779, y: .440391541, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -78,7 +79,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: b4ee995c09e5bb84083b227ccb90838b, type: 2}
+  - {fileID: 2100000, guid: 526df06c48d8dd44290b7a75723ed961, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -407,33 +408,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2569d3d0a8ca99c4292089419043ab7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 9
-  forceValuePostJump: 50000
-  forceValuePreJump: 53000
+  movementSpeed: 16.5
+  forceValuePostJump: 100000
+  forceValuePreJump: 50000
   isJumping: 0
   canJump: 1
   isActive: 1
   timeJumpThreshold: .5
   isInAir: 0
   isJetPackActive: 0
-  jetPackFloatingForce: 8500
+  jetPackFloatingForce: 12500
   mainCamera: {fileID: 0}
   isSliding: 0
   isFrictionLess: 0
   spawners: []
   placeToSpawn: 0
   horizontalMovement:
-    leftMovementThreshold: -5
-    rightMovementThreshold: 7.5
-    movementSpeed: 2.5
+    leftMovementThreshold: 0
+    rightMovementThreshold: 0
+    movementSpeed: 0
     playerOffset: 0
-    accelerationPushOffWall: -10
-  wallJumpsAllowed: 3
+    accelerationPushOffWall: -15
+  wallJumpsAllowed: 0
   wallJumpsLeft: 3
   isDead: 0
   spawnTime: 1
   isInvincible: 0
-  invincibleTime: 1
+  invincibleTime: 3
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -446,6 +447,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGravityInverted: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d121894dd7a6ef446a1b6e972370bbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -509,7 +521,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 4
+      scalar: 2.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
