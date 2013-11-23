@@ -16211,6 +16211,7 @@ GameObject:
   - 82: {fileID: 547519649}
   - 82: {fileID: 547519648}
   - 82: {fileID: 547519652}
+  - 114: {fileID: 547519654}
   - 114: {fileID: 547519653}
   m_Layer: 0
   m_Name: Player
@@ -16261,16 +16262,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2569d3d0a8ca99c4292089419043ab7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 9
-  forceValuePostJump: 50000
-  forceValuePreJump: 53000
+  movementSpeed: 16.5
+  forceValuePostJump: 100000
+  forceValuePreJump: 50000
   isJumping: 0
   canJump: 1
   isActive: 0
   timeJumpThreshold: .5
   isInAir: 0
   isJetPackActive: 0
-  jetPackFloatingForce: 8500
+  jetPackFloatingForce: 12500
   mainCamera: {fileID: 984399179}
   isSliding: 0
   isFrictionLess: 0
@@ -16281,13 +16282,13 @@ MonoBehaviour:
     rightMovementThreshold: 0
     movementSpeed: 0
     playerOffset: 0
-    accelerationPushOffWall: -10
-  wallJumpsAllowed: 3
+    accelerationPushOffWall: -15
+  wallJumpsAllowed: 0
   wallJumpsLeft: 3
   isDead: 0
   spawnTime: 1
   isInvincible: 0
-  invincibleTime: 1
+  invincibleTime: 3
 --- !u!23 &547519644
 Renderer:
   m_ObjectHideFlags: 0
@@ -16640,6 +16641,18 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 547519640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d121894dd7a6ef446a1b6e972370bbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &547519654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 08452011b09d8104b9f034ac3655954b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1158315009}
   m_GameObject: {fileID: 547519640}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -43694,7 +43707,7 @@ Light:
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .25
+  m_Intensity: .5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -54600,7 +54613,7 @@ Light:
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .449999988
+  m_Intensity: .5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -58176,8 +58189,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
   m_PrefabInternal: {fileID: 1158315009}
   m_GameObject: {fileID: 1841218129}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -1.17730713, y: .440391541, z: 0}
+  m_LocalRotation: {x: .682949841, y: -.183247268, z: -.183247238, w: .682949841}
+  m_LocalPosition: {x: -.581710815, y: .290730476, z: -1.49011612e-08}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 547519646}
@@ -58263,7 +58276,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 4
+      scalar: 2.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
