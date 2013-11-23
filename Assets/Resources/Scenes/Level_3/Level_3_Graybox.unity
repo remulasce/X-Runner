@@ -16262,16 +16262,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2569d3d0a8ca99c4292089419043ab7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 16.5
-  forceValuePostJump: 100000
-  forceValuePreJump: 50000
+  movementSpeed: 9
+  forceValuePostJump: 50000
+  forceValuePreJump: 53000
   isJumping: 0
   canJump: 1
   isActive: 0
   timeJumpThreshold: .5
   isInAir: 0
   isJetPackActive: 0
-  jetPackFloatingForce: 12500
+  jetPackFloatingForce: 8500
   mainCamera: {fileID: 984399179}
   isSliding: 0
   isFrictionLess: 0
@@ -35542,6 +35542,22 @@ Prefab:
     - target: {fileID: 8200006, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_Volume
       value: .649999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: movementSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: jetPackFloatingForce
+      value: 8500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: forceValuePostJump
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: forceValuePreJump
+      value: 53000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
