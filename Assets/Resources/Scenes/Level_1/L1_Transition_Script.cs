@@ -38,7 +38,7 @@ public class L1_Transition_Script : MonoBehaviour {
 	}
 	IEnumerator CloudSpawn()
 	{
-		Instantiate(Resources.Load("Prefabs/Level_1/Cloud"), fakeShip.transform.position-new Vector3(0,-40,-10), Quaternion.AngleAxis(270, new Vector3(1,0,0)));
+		Instantiate(Resources.Load("Prefabs/Level_1/Cloud"), fakeShip.transform.position-new Vector3(0,-40,-10), Quaternion.AngleAxis(90, new Vector3(1,0,0)));
 		yield return new WaitForSeconds(1f);
 		Instantiate(Resources.Load("Prefabs/Level_1/Cloud"), fakeShip.transform.position-new Vector3(0,-40,1), Quaternion.AngleAxis(270, new Vector3(1,0,0)));
 		yield return new WaitForSeconds(.5f);
