@@ -961,7 +961,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.25
+  m_Radius: 3.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &307791157
 Prefab:
@@ -1637,7 +1637,6 @@ MonoBehaviour:
   timeToRegenerateShields: 5
   tagToCompareFor: L2_PlayerShot
   musicManager: {fileID: 0}
-  soundHit: {fileID: 8300000, guid: 6d16a3b6a2f66dd4b9b1e033b8da4ae3, type: 3}
 --- !u!111 &661228599
 Animation:
   m_ObjectHideFlags: 0
@@ -2471,7 +2470,6 @@ MonoBehaviour:
   timeToRegenerateShields: 4.5
   tagToCompareFor: L2_PlayerShot
   musicManager: {fileID: 0}
-  soundHit: {fileID: 8300000, guid: 6d16a3b6a2f66dd4b9b1e033b8da4ae3, type: 3}
 --- !u!23 &1311365488
 Renderer:
   m_ObjectHideFlags: 0
@@ -2708,7 +2706,7 @@ AudioSource:
   m_GameObject: {fileID: 1311365485}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 6d16a3b6a2f66dd4b9b1e033b8da4ae3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 21191fb6819129e4ab721e028c7eb4d7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -380,7 +380,7 @@ public class L2_Elite_Script : MonoBehaviour {
                 {
                     laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
                     laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
-                    laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 15;
+                    laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 20;
                     other.gameObject.GetComponent<L2_Asteroid_Script>().targetedByEnemy = true;
                 }
             }
@@ -388,7 +388,7 @@ public class L2_Elite_Script : MonoBehaviour {
             {
                 laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
                 laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
-                laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 15;
+                laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 20;
                 other.gameObject.GetComponent<L2_Asteroid_Script>().targetedByEnemy = true;
             }
         }
