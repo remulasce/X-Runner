@@ -1006,6 +1006,18 @@ Prefab:
       propertyPath: other
       value: 
       objectReference: {fileID: 1352180552}
+    - target: {fileID: 400000, guid: 38113fd0a91adaa4a9092a5dc85b0325, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38113fd0a91adaa4a9092a5dc85b0325, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38113fd0a91adaa4a9092a5dc85b0325, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38113fd0a91adaa4a9092a5dc85b0325, type: 2}
   m_RootGameObject: {fileID: 153611053}
