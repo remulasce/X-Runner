@@ -134,11 +134,11 @@ public class L4_Spawner : MonoBehaviour {
                 {
                     if (i != (numBehindWaves - 1))
                     {
-                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 13.5f), lb_no(), at_hm(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
                     }
                     else
                     {
-                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(11.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 13.5f), lb_no(), at_hm(11.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
                     }
                 }
             }
