@@ -9,12 +9,21 @@ public class Movie_Script : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        texture.Play();
-        audio.Play();
         StartCoroutine("SwitchToTitle");
-
         musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
 	}
+
+    void OnGUI()
+    {
+        if (!texture.isPlaying)
+        {
+            texture.Play();
+        }
+        if (!audio.isPlaying)
+        {
+            audio.Play();
+        }
+    }
 
     IEnumerator SwitchToTitle()
     {
