@@ -97,7 +97,7 @@ public class L4_Spawner : MonoBehaviour {
         {
             float yVal = Random.Range(-6f, 6f);
 
-            W(ft_gd(4 + (i / 4), 4 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 10.5f), lb_no(), at_hm(6.0f)/*at_lt(12.0f)*/, xt_im(), xb_go(0, 1, 1000), waveDelayOne);
+            W(ft_gd(4 + (i / 4), 4 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 10.5f), lb_no(), at_lt(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);
         }
 
         //----------------------------------------------------------------------------------------------
