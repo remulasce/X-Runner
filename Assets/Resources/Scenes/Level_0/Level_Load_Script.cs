@@ -9,6 +9,7 @@ public class Level_Load_Script : MonoBehaviour {
 	void Start () {
         audios = this.gameObject.GetComponents<AudioSource>();
         GameObject stats = GameObject.FindGameObjectWithTag("Stats");
+        StartCoroutine("StartMovie");
         if (stats)
         {
             Object.Destroy(stats);
@@ -29,7 +30,15 @@ public class Level_Load_Script : MonoBehaviour {
     {
         yield return new WaitForEndOfFrame();
         Music_Manager_Script musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
-        musicManager.QuickFadeOuts(0, new int[] { 0, 1 });
+        musicManager.QuickFadeOuts(0, new int[] { 0, 1 });        
+    }
+
+    IEnumerator StartMovie()
+    {
+        yield return new WaitForSeconds(15.85f + 24f);
+        Music_Manager_Script musicManager = GameObject.FindGameObjectWithTag("AudioSourceManager").GetComponent<Music_Manager_Script>();
+        musicManager.QuickFadeOuts(0, new int[] { 0, 1 });        
+        Application.LoadLevel("Title_Movie");
     }
 
     
