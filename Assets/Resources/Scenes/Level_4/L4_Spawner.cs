@@ -130,7 +130,7 @@ public class L4_Spawner : MonoBehaviour {
 
             for (int j = 0; j < 13; j++)
             {
-                if (j != rowVal && j != rowVal + 1 && j != rowVal - 1)
+                if (j != rowVal && j != rowVal + 1 && j != rowVal - 1 && (j != rowVal + (2 * Mathf.Sign(negVal)) || (i / 3 >= 1))) // Make a hole 2 - 4 rows big, then 2 - 3 rows big after 3 waves
                 {
                     if (i != (numBehindWaves - 1))
                     {
@@ -141,13 +141,14 @@ public class L4_Spawner : MonoBehaviour {
                         W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(11.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
                     }
                 }
+                
             }
             // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
             W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), waveDelayTwo);
         }
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 2);
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 2.5f);
 
         // Fade in the trench song
         W(ft_trench());
