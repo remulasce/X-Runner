@@ -483,7 +483,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
             {
                 if (!col.gameObject.GetComponent<L2_Asteroid_Script>().hasReflectedOffPlayer)
                 {
-                    col.rigidbody.velocity = Vector3.Reflect(col.rigidbody.velocity, col.contacts[0].normal);
+                    col.rigidbody.velocity = Vector3.Reflect(col.rigidbody.velocity, col.contacts[0].normal) * col.gameObject.GetComponent<L2_Asteroid_Script>().maxVelocity/1.25f;
                     col.gameObject.GetComponent<L2_Asteroid_Script>().hasReflectedOffPlayer = true;
                     col.gameObject.GetComponent<L2_Asteroid_Script>().lastHit = L2_Asteroid_Script.LAST_HIT.PLAYER;
                     col.gameObject.GetComponent<L2_Asteroid_Script>().numberOfTimesHit++;
@@ -540,8 +540,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
     }
 
     IEnumerator ResetShield()
-    {
-        this.transform.GetChild(1).localScale = new Vector3(shieldSize, shieldSize, shieldSize);
+    {        
 		this.transform.FindChild("Shield_Dome").animation.Play("Shield_Regen");
         print("Shielded!");
         yield return new WaitForSeconds(shieldTime);

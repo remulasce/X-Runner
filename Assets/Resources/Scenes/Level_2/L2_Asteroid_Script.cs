@@ -60,25 +60,22 @@ public class L2_Asteroid_Script : MonoBehaviour {
                 targetedByEnemy = false;
                 if (lastHit != LAST_HIT.PLAYER)
                 {
-                    if (!player.GetComponent<L2_Ship_Script>().isDead) // Fixes a bug where asteroids just sit still in space
+                    if (!isCinematic)
                     {
-                        if (!isCinematic)
-                        {
-                            // Make sure to instantiate the prefab object for this
-                            GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
-                            sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[Mathf.Clamp(numberOfTimesHit, 0, 8)]);
-                            sound.transform.position = this.transform.position;
+                        // Make sure to instantiate the prefab object for this
+                        GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
+                        sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[Mathf.Clamp(numberOfTimesHit, 0, 8)]);
+                        sound.transform.position = this.transform.position;
                         
 
-                            if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x)
-                                || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x)))
-                                || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
-                                ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
-                            {
-                                this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + extraHitVelocity);
-                            }
+                        if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x)
+                            || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x)))
+                            || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                            ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+                        {
+                            this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + extraHitVelocity);
                         }
-                    }
+                    }                    
 
                     numberOfTimesHit++;
                     lastHit = LAST_HIT.PLAYER;
@@ -96,21 +93,24 @@ public class L2_Asteroid_Script : MonoBehaviour {
                 {
                     if (lastHit == LAST_HIT.PLAYER)
                     {
-                        if (numberOfTimesHit > 0)
+                        if (!player.GetComponent<L2_Ship_Script>().isDead) // Fixes a bug where asteroids just sit still in space
                         {
-                            // Make sure to instantiate the prefab object for this
-                            GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
-                            sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[Mathf.Clamp(numberOfTimesHit, 1, 7)]);
-                            sound.transform.position = this.transform.position;
+                            if (numberOfTimesHit > 0)
+                            {
+                                // Make sure to instantiate the prefab object for this
+                                GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
+                                sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[Mathf.Clamp(numberOfTimesHit, 1, 7)]);
+                                sound.transform.position = this.transform.position;
+                            }
+                            if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x > elitePosition.x)
+                                || this.rigidbody.velocity.x < 0 && player.transform.position.x < elitePosition.x)))
+                                || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                                ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+                            {
+                                this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * (maxVelocity + extraHitVelocity);
+                            }
+                            numberOfTimesHit++;
                         }
-                        if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x > elitePosition.x)
-                            || this.rigidbody.velocity.x < 0 && player.transform.position.x < elitePosition.x)))
-                            || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
-                            ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
-                        {
-                            this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * (maxVelocity + extraHitVelocity);
-                        }
-                        numberOfTimesHit++;
                     }
 
                     lastHit = LAST_HIT.ENEMY;
