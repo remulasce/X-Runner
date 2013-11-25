@@ -52,11 +52,18 @@ public class L2_ShieldUvAnimation : MonoBehaviour
                 {
                     if (!other.gameObject.name.Contains("Cinematic"))
                     {
+                        other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().isDestroyed = true;
                         other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().transform.parent = null;
                         other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().Explode();
+                        other.gameObject.transform.position = new Vector3(0, 0, -100);
+                        other.gameObject.audio.enabled = false;
+                        Object.Destroy(other.gameObject, 5.0f);
                     }
-                }                
-                Object.Destroy(other.gameObject);
+                }
+                else
+                {
+                    Object.Destroy(other.gameObject);
+                }
                 StartCoroutine("RevertShieldColor");
             }            
         }

@@ -382,7 +382,10 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
     {
         if ((col.gameObject.CompareTag("L2_EnemyShot") && !isShielded))
         {
-            Destroy(col.gameObject);            
+            if (!col.gameObject.name.Contains("Homing"))
+            {
+                Destroy(col.gameObject);
+            }
             explosion.transform.position = this.transform.position;
             explosion.Explode();
             isDead = true;
@@ -392,7 +395,6 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 
         if (col.gameObject.CompareTag("L2_Enemy"))
         {
-
             col.gameObject.GetComponent<L4_Enemy_Script>().GetExplosion().transform.parent = null;
             col.gameObject.GetComponent<L4_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
             col.gameObject.GetComponent<L4_Enemy_Script>().GetExplosion().Explode();

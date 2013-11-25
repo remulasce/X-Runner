@@ -10,6 +10,8 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 
     private IPlayer player;
 
+    public bool isDestroyed = false;
+
 	// Use this for initialization
 	protected new void Start () {
         base.Start();
@@ -47,12 +49,15 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
             //Stop following if he dies
             else
             {
-                if (isNotCinematic)
+                if (isNotCinematic && !isDestroyed)
                 {
+                    isDestroyed = true;
                     explosion.transform.parent = null;
                     explosion.transform.position = this.transform.position;
                     explosion.Explode();
-                    Destroy(this.gameObject);
+                    this.gameObject.transform.position = new Vector3(0, 0, -100);
+                    this.gameObject.audio.enabled = false;
+                    Object.Destroy(this.gameObject, 5.0f);
                 }
             }
         }
@@ -64,31 +69,31 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 	}
 
     protected void OnCollisionEnter(Collision col)
-    {
-        if (isNotCinematic)
-        {
-            base.OnCollisionEnter(col);
-        }
+    {        
         if (col.gameObject.CompareTag("L2_PlayerShot"))
         {
+            isDestroyed = true;
             explosion.transform.parent = null;
             explosion.transform.position = this.transform.position;
             explosion.Explode();
             Destroy(col.gameObject);
             if (isNotCinematic)
             {
-                //transform.DetachChildren();
-                Destroy(this.gameObject);
+                this.gameObject.transform.position = new Vector3(0, 0, -100);
+                this.gameObject.audio.enabled = false;
+                Object.Destroy(this.gameObject, 5.0f);
             }
         }
 
         if (col.gameObject.CompareTag("Player") && !isNotCinematic)
         {
+            isDestroyed = true;
             explosion.transform.parent = null;
             explosion.transform.position = this.transform.position;
             explosion.Explode();
-            //transform.DetachChildren();
-            Destroy(this.gameObject);
+            this.gameObject.transform.position = new Vector3(0, 0, -1000);
+            this.gameObject.audio.enabled = false;
+            Object.Destroy(this.gameObject, 5.0f);
         }
         
     }

@@ -412,8 +412,12 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 
     void OnCollisionEnter(Collision col)
     {
-        if ((col.gameObject.CompareTag("L2_EnemyShot") && (!isShielded || aboutToDoTransition)))
+        if ((col.gameObject.CompareTag("L2_EnemyShot") && !isShielded))
         {
+            if (!col.gameObject.name.Contains("Homing"))
+            {
+                Destroy(col.gameObject);
+            }
             if (!aboutToDoTransition)
             {                
                 isDead = true;
@@ -428,9 +432,6 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                 explosion.Explode();
                 DoTransition();
             }
-
-            //col.gameObject.transform.DetachChildren();
-            Destroy(col.gameObject);
         }
 
         if (col.gameObject.CompareTag("L2_Enemy"))

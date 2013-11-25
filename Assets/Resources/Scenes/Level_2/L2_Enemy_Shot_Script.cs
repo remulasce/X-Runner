@@ -31,7 +31,7 @@ public class L2_Enemy_Shot_Script : MonoBehaviour
 	//Don't keep drifting forever
 	void killIfOutBounds()
 	{
-        if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds) && isNotCinematic)
+        if (!GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds) && isNotCinematic && !this.name.Contains("Homing"))
         {
             Destroy(this.gameObject);
         }

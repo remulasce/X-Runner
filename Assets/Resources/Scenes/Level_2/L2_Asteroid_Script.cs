@@ -54,8 +54,7 @@ public class L2_Asteroid_Script : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-
-            if (other.gameObject.CompareTag("L2_PlayerShot"))
+        if (other.gameObject.CompareTag("L2_PlayerShot"))
             {
                 targetedByEnemy = false;
                 if (lastHit != LAST_HIT.PLAYER)
@@ -118,15 +117,20 @@ public class L2_Asteroid_Script : MonoBehaviour {
                 }
                 if (other.gameObject.name.Contains("Homing"))
                 {
-                    other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().transform.parent = this.gameObject.transform;
+                    other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().isDestroyed = true;
+                    other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().transform.parent = other.gameObject.transform;
                     other.gameObject.GetComponent<L2_Enemy_Shot_Homing_Script>().GetExplosion().Explode();
+                    other.gameObject.transform.position = new Vector3(0, 0, -100);
+                    other.gameObject.audio.enabled = false;
+                    Object.Destroy(other.gameObject, 5.0f);
                 }
                 else
                 {
                     GameObject gDetonator = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/Explosions/L2_Asteroid_Impact_Explosion"), other.transform.position, Quaternion.Euler(0, 0, 0));
                     gDetonator.transform.parent = this.gameObject.transform;
+                    Object.Destroy(other.gameObject);
                 }
-                Object.Destroy(other.gameObject);
+                
                 hasReflectedOffPlayer = false;
             }
         
