@@ -89,21 +89,21 @@ public class L4_Spawner : MonoBehaviour {
         W(ft_hl(1), nb_go(32, 0, 2, 0, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
         W(ft_hl(1), nb_go(30, -2, 0, -2, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 3);
 
-        const int numBoxWaves = 10;
-        const float waveDelayOne = 1.40f;
+        const int numBoxWaves = 9;
+        const float waveDelayOne = 1.525f;
 
         // Small Squads
         for (int i = 0; i < numBoxWaves; i++)
         {
-            float yVal = Random.Range(-7f, 7f);
+            float yVal = Random.Range(-6f, 6f);
 
-            W(ft_gd(3 + (i / 4), 3 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 14.5f), lb_no(), at_lt(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);
+            W(ft_gd(4 + (i / 4), 4 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 10.5f), lb_no(), at_lt(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);
         }
 
         //----------------------------------------------------------------------------------------------
          
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 3f);
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 3.5f);
 
         // Fade in the space song
         W(ft_space());
@@ -134,11 +134,11 @@ public class L4_Spawner : MonoBehaviour {
                 {
                     if (i != (numBehindWaves - 1))
                     {
-                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 13.5f), lb_no(), at_hm(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(7.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
                     }
                     else
                     {
-                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 13.5f), lb_no(), at_hm(11.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
+                        W(ft_hl(2 + i), nb_go(-40, 12 - (2 * j), 14 - (2 * (i / 2)), 12 - (2 * j), 16.5f), lb_no(), at_hm(11.5f), xt_tm(waveDelayTwo / 6), xb_go(0, negVal, 20), 0);
                     }
                 }
             }
