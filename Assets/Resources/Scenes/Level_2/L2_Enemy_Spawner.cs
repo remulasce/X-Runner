@@ -713,8 +713,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
                     // Asteroid Spawner Special Cases
                     else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidCinematic)
-                    {
-                        asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
+                    {                        
                         if (musicManager)
                         {
                             musicManager.FadeInSongs(2, new int[] { 1 });
@@ -723,7 +722,8 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                     }
 
                     else if (w.ft.type == SpawnTDS.FormationType.T.AsteroidCinematic2)
-                    {                        
+                    {
+                        asteroidSpawner.state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
                         if (musicManager)
                         {
                             musicManager.FadeInSongs(2, new int[] { 2 });
