@@ -503,6 +503,15 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         
         if (col.gameObject.CompareTag("Enemy_Shield"))
         {
+			if (!this.isShielded && !col.gameObject.name.Contains("Elite"))
+            {
+				explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                isDead = true;
+                this.transform.position = new Vector3(0, 0, 1000);
+				StartCoroutine("Respawn");
+            }
+			/*
             if (!col.gameObject.name.Contains("Elite"))
             {
                 col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
@@ -510,15 +519,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                 col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
                 Destroy(col.gameObject);
             }
+			 */
 
-            if (!this.isShielded && !col.gameObject.name.Contains("Elite"))
-            {
-                explosion.transform.position = this.transform.position;
-                explosion.Explode();
-                isDead = true;
-                this.transform.position = new Vector3(0, 0, 1000);
-                StartCoroutine("Respawn");
-            }
         }
     }
 
