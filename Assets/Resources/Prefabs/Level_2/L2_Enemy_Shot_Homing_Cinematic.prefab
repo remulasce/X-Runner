@@ -477,9 +477,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 30
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -493,9 +493,9 @@ AudioSource:
       tangentMode: 0
     - time: 1
       value: 0
-      inSlope: 0
+      inSlope: Infinity
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 7
     m_PreInfinity: 2
     m_PostInfinity: 2
   panLevelCustomCurve:
@@ -546,6 +546,7 @@ MonoBehaviour:
   shootsLeft: 0
   target: {fileID: 0}
   homingRotationSpeed: 10
+  isDestroyed: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
