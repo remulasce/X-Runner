@@ -2028,6 +2028,18 @@ Prefab:
       propertyPath: shieldTime
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: reloadTime
+      value: .0250000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: maxReloadOffset
+      value: .0799999982
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: numShotsFiredThreshold
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}
@@ -2953,7 +2965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7e7b7a4b274f2439c108e1819e594d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadTime: .100000001
+  reloadTime: .0250000004
   boundaryData:
     lowerHorizontalRange: .0350000001
     upperHorizontalRange: .964999974
@@ -2971,9 +2983,9 @@ MonoBehaviour:
   explosion: {fileID: 1630494970}
   stats: {fileID: 0}
   isDead: 0
-  numShotsFiredThreshold: 40
+  numShotsFiredThreshold: 4
   reloadTimeMultiplier: 1.5
-  maxReloadOffset: .25
+  maxReloadOffset: .0799999982
 --- !u!54 &1556197953
 Rigidbody:
   m_ObjectHideFlags: 0
