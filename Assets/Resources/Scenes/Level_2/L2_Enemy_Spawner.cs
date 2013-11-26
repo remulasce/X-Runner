@@ -96,17 +96,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         //Elite makes a pass at you + Wingmen
         E(EliteBehavior.QuickPass);
 
-        W(ft_hl(5), nb_go(10, 15, 0, 0, 15), lb_no(), at_ld(4.0f), xt_im(), xb_go(-45, 0, 5), 6.5f);                
-         
-        //----------------------------------------------------------------------------------------------        
-         
-        // First Blockade
-        W(ft_vl(7),    nb_go(-25, 3, -8, 1, 5), lb_wp(new float[] {-10, 1, -6, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
-        W(ft_vl(7),    nb_go(25, 3, 8, 1, 5),   lb_wp(new float[] { 6,  1, 10, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
-        W(ft_hl(9),    nb_go(0, -25, 0, -7, 5), lb_wp(new float[] {-4, -7,  4, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
-        W(ft_gd(7, 5), nb_go(0, 25, 0, 3, 5),   lb_wp(new float[] { 4,  3,  4, 3 }, 5.0f, 5.0f), at_ld(20), xt_no(), xb_no(), 0f);
-
-        E(EliteBehavior.CircleStrafe);        
+        W(ft_hl(5), nb_go(10, 15, 0, 0, 15), lb_no(), at_ld(4.0f), xt_im(), xb_go(-45, 0, 5), 6.5f); 
          
         //----------------------------------------------------------------------------------------------      
         
@@ -141,6 +131,19 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_hl(5), nb_go(-8, -30, -8, 10, 10), lb_lz(0, 10, 0, 0, 3.0f, 5.0f), at_ld(10), xt_tm(5f), xb_go(0, -1, 20), 3.5f);
 
         E(EliteBehavior.DownStrafe);
+
+        //----------------------------------------------------------------------------------------------        
+
+        // Blocking In Blockade
+        W(ft_vl(7), nb_go(-25, 3, -8, 1, 5), lb_wp(new float[] { -10, 1, -6, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_vl(7), nb_go(25, 3, 8, 1, 5), lb_wp(new float[] { 6, 1, 10, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_hl(9), nb_go(0, -25, 0, -7, 5), lb_wp(new float[] { -4, -7, 4, 1 }, 5.0f, 5.0f), at_ld(25), xt_no(), xb_go(45, 0, 10), 0f);
+        W(ft_gd(7, 5), nb_go(0, 25, 0, 3, 5), lb_wp(new float[] { 4, 3, 4, 3 }, 5.0f, 5.0f), at_ld(20), xt_no(), xb_no(), 0f);
+
+        E(EliteBehavior.CircleStrafe);
+
+        // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the previous blockade are destroyed
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.001f);
 
         // Begin spawning the cinematic asteroids (no physics, background stuff).
         W(ft_ac());
