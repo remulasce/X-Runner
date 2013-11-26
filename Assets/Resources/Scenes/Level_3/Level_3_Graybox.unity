@@ -7824,11 +7824,11 @@ Prefab:
         type: 2}
     - target: {fileID: 11400002, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
       propertyPath: numberOfWallJumpsAllowed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
       propertyPath: unlimitedWallJumps
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
@@ -33572,8 +33572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfWallJumpsAllowed: 1
-  unlimitedWallJumps: 1
+  numberOfWallJumpsAllowed: 0
+  unlimitedWallJumps: 0
 --- !u!75 &1079507609
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -34874,8 +34874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfWallJumpsAllowed: 1
-  unlimitedWallJumps: 1
+  numberOfWallJumpsAllowed: 0
+  unlimitedWallJumps: 0
 --- !u!114 &1129668101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38697,7 +38697,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e6c461c8430c9694bb84ec9a17b12941, type: 2}
       propertyPath: zoomPosition
-      value: -35
+      value: -40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6c461c8430c9694bb84ec9a17b12941, type: 2}
@@ -39700,8 +39700,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfWallJumpsAllowed: 1
-  unlimitedWallJumps: 1
+  numberOfWallJumpsAllowed: 0
+  unlimitedWallJumps: 0
 --- !u!75 &1263463967
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -45276,11 +45276,11 @@ Prefab:
         type: 2}
     - target: {fileID: 11400002, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
       propertyPath: numberOfWallJumpsAllowed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
       propertyPath: unlimitedWallJumps
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
@@ -52549,11 +52549,11 @@ Prefab:
         type: 2}
     - target: {fileID: 11400002, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
       propertyPath: numberOfWallJumpsAllowed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
       propertyPath: unlimitedWallJumps
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
@@ -53502,11 +53502,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: unlimitedWallJumps
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7500000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: m_RelativeTorque.x
@@ -56785,7 +56785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c98bbd21e821345b5c6a5458204b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomPosition: -35
+  zoomPosition: -40
   zoomSpeed: .449999988
   mainCamera: {fileID: 984399179}
 --- !u!65 &1785488728
@@ -57994,8 +57994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfWallJumpsAllowed: 1
-  unlimitedWallJumps: 1
+  numberOfWallJumpsAllowed: 0
+  unlimitedWallJumps: 0
 --- !u!75 &1835952093
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -63789,11 +63789,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: unlimitedWallJumps
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
       propertyPath: numberOfWallJumpsAllowed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11ec9563d0e9c9d47a79647a5c36706d, type: 2}
@@ -64721,8 +64721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd83ef7c3edf0a449d906cdcd371792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfWallJumpsAllowed: 1
-  unlimitedWallJumps: 1
+  numberOfWallJumpsAllowed: 0
+  unlimitedWallJumps: 0
 --- !u!114 &2018458807
 MonoBehaviour:
   m_ObjectHideFlags: 0
