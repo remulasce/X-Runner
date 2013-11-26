@@ -269,7 +269,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &3127454
 Renderer:
@@ -491,6 +491,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 2032969133}
@@ -558,6 +562,10 @@ Prefab:
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.y
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -1235,7 +1243,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &20249354
 Renderer:
@@ -1378,7 +1386,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.79734421
+      value: 9.79734421
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2321,7 +2329,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &36318482
 Renderer:
@@ -3551,6 +3559,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 2111255361}
@@ -4132,6 +4144,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 98671764}
@@ -4623,6 +4639,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 399768741}
@@ -4913,6 +4933,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 544069509}
@@ -5135,7 +5159,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &98671768
 Renderer:
@@ -5281,7 +5305,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &104354964
 Renderer:
@@ -5652,7 +5676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.06217551
+      value: 1.93782449
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6118,6 +6142,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 20249350}
@@ -6365,7 +6393,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &128623406
 Renderer:
@@ -6465,6 +6493,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -7303,7 +7335,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &153593514
 Renderer:
@@ -7354,11 +7386,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -388.929932
+      value: -384.929932
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.9263878
+      value: 4.92638779
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7710,6 +7742,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1835348874}
@@ -7781,6 +7817,10 @@ Prefab:
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -7960,7 +8000,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &161670461
 Renderer:
@@ -8286,6 +8326,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -8833,6 +8877,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 478583368}
@@ -9279,6 +9327,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: isHoming
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -10324,6 +10376,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1349411499}
@@ -10571,7 +10627,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &217368722
 Renderer:
@@ -10822,6 +10878,10 @@ Prefab:
       propertyPath: m_Center.y
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 104354960}
@@ -10885,6 +10945,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -10951,7 +11015,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &226353882
 Renderer:
@@ -11053,7 +11117,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &227121894
 Renderer:
@@ -13237,7 +13301,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &253909137
 Renderer:
@@ -13408,7 +13472,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &256039096
 Renderer:
@@ -14518,7 +14582,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &278148291
 Renderer:
@@ -15247,7 +15311,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &300741267
 Renderer:
@@ -16286,6 +16350,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1701876778}
@@ -16531,6 +16599,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -16944,7 +17016,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &326652449
 Renderer:
@@ -18285,7 +18357,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -372.092896
+      value: -373.092896
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
@@ -19995,7 +20067,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &399768745
 Renderer:
@@ -20253,6 +20325,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 256039092}
@@ -20475,7 +20551,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &407023135
 Renderer:
@@ -21147,6 +21223,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -21937,6 +22017,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1097889210}
@@ -22384,6 +22468,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 2138358395}
@@ -22558,7 +22646,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &447900280
 Renderer:
@@ -22746,6 +22834,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -23510,7 +23602,7 @@ Transform:
   m_PrefabInternal: {fileID: 363647506}
   m_GameObject: {fileID: 462873741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -372.092896, y: 8.92638779, z: -33.1685944}
+  m_LocalPosition: {x: -373.092896, y: 8.92638779, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -23734,6 +23826,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 253909133}
@@ -23797,6 +23893,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -24237,7 +24337,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &478583372
 Renderer:
@@ -24638,6 +24738,10 @@ Prefab:
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -25604,7 +25708,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &496159513
 Renderer:
@@ -26182,6 +26286,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 2109889912}
@@ -26422,11 +26530,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -343.806396
+      value: -334.806396
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 11.0969429
+      value: .0969429016
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -26915,7 +27023,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &525399193
 Renderer:
@@ -27433,7 +27541,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.00786996
+      value: .00786995888
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -27790,7 +27898,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &544069513
 Renderer:
@@ -28005,7 +28113,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &546984842
 Renderer:
@@ -28512,7 +28620,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &557153524
 Renderer:
@@ -28614,7 +28722,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &558090234
 Renderer:
@@ -29240,6 +29348,10 @@ Prefab:
       propertyPath: m_Center.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 278148287}
@@ -29305,7 +29417,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &575917404
 Renderer:
@@ -29700,6 +29812,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -30765,7 +30881,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &610491682
 Renderer:
@@ -31204,6 +31320,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -31824,6 +31944,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1590129655}
@@ -31887,6 +32011,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -32020,6 +32148,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -32484,7 +32616,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &660479038
 Renderer:
@@ -32586,7 +32718,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &661811669
 Renderer:
@@ -34532,6 +34664,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 982648982}
@@ -35257,7 +35393,7 @@ Transform:
   m_PrefabInternal: {fileID: 1533997030}
   m_GameObject: {fileID: 738179807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -377.929932, y: -8.07361221, z: -33.1685944}
+  m_LocalPosition: {x: -377.929932, y: -4.07361221, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -36126,6 +36262,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1048274691}
@@ -36244,7 +36384,7 @@ Transform:
   m_PrefabInternal: {fileID: 536721973}
   m_GameObject: {fileID: 756114157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -392.55542, y: 1.00786996, z: -33.1685944}
+  m_LocalPosition: {x: -392.55542, y: .00786995888, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -36382,7 +36522,7 @@ Transform:
   m_PrefabInternal: {fileID: 1108774868}
   m_GameObject: {fileID: 759438912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -438.55542, y: 3.8986094, z: -33.1685944}
+  m_LocalPosition: {x: -438.55542, y: 1.89860916, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -36488,6 +36628,10 @@ Prefab:
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.y
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -36963,7 +37107,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &772424026
 Renderer:
@@ -37522,6 +37666,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 976849206}
@@ -37629,6 +37777,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -39001,6 +39153,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 407023131}
@@ -39596,6 +39752,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -40207,6 +40367,10 @@ Prefab:
       propertyPath: isHoming
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 2038100234}
@@ -40429,7 +40593,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &835319898
 Renderer:
@@ -40596,6 +40760,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 968190080}
@@ -40661,7 +40829,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &841079626
 Renderer:
@@ -45042,6 +45210,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1643263174}
@@ -45719,7 +45891,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &953303994
 Renderer:
@@ -46490,7 +46662,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &968190084
 Renderer:
@@ -46592,7 +46764,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &971259967
 Renderer:
@@ -46931,7 +47103,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &976682973
 Renderer:
@@ -47033,7 +47205,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &976849210
 Renderer:
@@ -47248,7 +47420,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &982648986
 Renderer:
@@ -47664,7 +47836,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &993109658
 Renderer:
@@ -47873,6 +48045,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -49292,6 +49468,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 153593510}
@@ -49400,6 +49580,10 @@ Prefab:
       propertyPath: isHoming
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 525399189}
@@ -49507,6 +49691,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -50198,6 +50386,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1786776192}
@@ -50307,7 +50499,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1041817721
 Renderer:
@@ -50767,7 +50959,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1048274695
 Renderer:
@@ -51138,6 +51330,10 @@ Prefab:
       propertyPath: isHoming
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1622183428}
@@ -51360,7 +51556,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1057143575
 Renderer:
@@ -52976,7 +53172,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1097889214
 Renderer:
@@ -53552,7 +53748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.8986094
+      value: 1.89860916
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -54430,7 +54626,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1121894115
 Renderer:
@@ -54758,7 +54954,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1127613151
 Renderer:
@@ -55752,6 +55948,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1767535066}
@@ -55911,6 +56111,10 @@ Prefab:
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -56346,7 +56550,7 @@ Transform:
   m_PrefabInternal: {fileID: 1673999753}
   m_GameObject: {fileID: 1162657598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -305.55542, y: -1.06220603, z: -33.1685944}
+  m_LocalPosition: {x: -305.55542, y: 1.93779397, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -56858,7 +57062,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1178554230
 Renderer:
@@ -57233,6 +57437,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1930887659}
@@ -57428,6 +57636,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -58013,6 +58225,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -60108,7 +60324,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1260081271
 Renderer:
@@ -60994,6 +61210,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -62717,6 +62937,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 2002605416}
@@ -62826,7 +63050,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1322555038
 Renderer:
@@ -62997,7 +63221,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1323499039
 Renderer:
@@ -63141,6 +63365,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -63767,6 +63995,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 496159509}
@@ -64082,6 +64314,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 841079622}
@@ -64147,7 +64383,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1349411503
 Renderer:
@@ -64528,7 +64764,7 @@ Transform:
   m_PrefabInternal: {fileID: 1564853218}
   m_GameObject: {fileID: 1363519493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -402.806396, y: -5.07361221, z: -33.1685944}
+  m_LocalPosition: {x: -408.806396, y: -3.53875732, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -64743,6 +64979,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -65311,6 +65551,10 @@ Prefab:
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -67020,11 +67264,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -334.55542
+      value: -334.766846
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.07531404
+      value: 6.07531404
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -67180,7 +67424,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1429898735
 Renderer:
@@ -67435,7 +67679,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1437385702
 Renderer:
@@ -67966,7 +68210,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1453293568
 Renderer:
@@ -69531,7 +69775,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1487543579
 Renderer:
@@ -69763,6 +70007,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -70430,6 +70678,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1920056724}
@@ -70943,7 +71195,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1527338890
 Renderer:
@@ -71054,7 +71306,7 @@ Transform:
   m_PrefabInternal: {fileID: 154923164}
   m_GameObject: {fileID: 1529917280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -388.929932, y: 10.9263878, z: -33.1685944}
+  m_LocalPosition: {x: -384.929932, y: 4.92638779, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -71362,7 +71614,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.07361221
+      value: -4.07361221
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -71744,7 +71996,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1540538369
 Renderer:
@@ -73069,11 +73321,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -402.806396
+      value: -408.806396
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.07361221
+      value: -3.53875732
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -74324,7 +74576,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1590129659
 Renderer:
@@ -74755,7 +75007,7 @@ Transform:
   m_PrefabInternal: {fileID: 1427986053}
   m_GameObject: {fileID: 1599035171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -334.55542, y: 3.07531404, z: -33.1685944}
+  m_LocalPosition: {x: -334.766846, y: 6.07531404, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -74995,6 +75247,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -75976,7 +76232,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1622183432
 Renderer:
@@ -76307,6 +76563,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1709905087}
@@ -76510,7 +76770,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1626840238
 Renderer:
@@ -76859,6 +77119,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 2133107666}
@@ -76999,6 +77263,10 @@ Prefab:
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -77396,7 +77664,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1643263178
 Renderer:
@@ -77980,6 +78248,10 @@ Prefab:
       propertyPath: isHoming
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 227121890}
@@ -78473,6 +78745,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 447900276}
@@ -78491,7 +78767,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.06220603
+      value: 1.93779397
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -78689,6 +78965,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -79367,7 +79647,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1701876782
 Renderer:
@@ -79924,7 +80204,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1709905091
 Renderer:
@@ -80206,6 +80486,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -80566,6 +80850,10 @@ Prefab:
       propertyPath: isHoming
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1756313596}
@@ -80637,6 +80925,10 @@ Prefab:
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -80797,6 +81089,10 @@ Prefab:
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -81089,7 +81385,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1744186083
 Renderer:
@@ -81260,7 +81556,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1749869726
 Renderer:
@@ -81814,7 +82110,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1756313600
 Renderer:
@@ -82072,6 +82368,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 36318478}
@@ -82137,7 +82437,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1767535070
 Renderer:
@@ -82307,6 +82607,10 @@ Prefab:
       propertyPath: isHoming
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1969031411}
@@ -82439,6 +82743,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -83021,6 +83329,10 @@ Prefab:
       propertyPath: homeInTime
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1178554226}
@@ -83218,7 +83530,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1786776196
 Renderer:
@@ -83508,7 +83820,7 @@ Transform:
   m_PrefabInternal: {fileID: 2063130904}
   m_GameObject: {fileID: 1802328988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -409.806396, y: 8.92638779, z: -33.1685944}
+  m_LocalPosition: {x: -408.806396, y: 7.46124268, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -83830,7 +84142,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1811657836
 Renderer:
@@ -83932,7 +84244,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1811686438
 Renderer:
@@ -84752,7 +85064,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1835348878
 Renderer:
@@ -84863,7 +85175,7 @@ Transform:
   m_PrefabInternal: {fileID: 22260496}
   m_GameObject: {fileID: 1837418956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -348.806396, y: 5.79734421, z: -33.1685944}
+  m_LocalPosition: {x: -348.806396, y: 9.79734421, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -85233,7 +85545,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1852603453
 Renderer:
@@ -85739,7 +86051,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1862968548
 Renderer:
@@ -86199,7 +86511,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1877931651
 Renderer:
@@ -86976,6 +87288,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -87828,6 +88144,10 @@ Prefab:
       propertyPath: homeInTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1626840234}
@@ -87960,6 +88280,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -88183,7 +88507,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1920056728
 Renderer:
@@ -88762,7 +89086,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1930887663
 Renderer:
@@ -89229,7 +89553,7 @@ Transform:
   m_PrefabInternal: {fileID: 509315225}
   m_GameObject: {fileID: 1941159706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -343.806396, y: 11.0969429, z: -33.1685944}
+  m_LocalPosition: {x: -334.806396, y: .0969429016, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -89896,6 +90220,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -90818,7 +91146,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &1969031415
 Renderer:
@@ -91439,6 +91767,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -92228,6 +92560,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1811686434}
@@ -92839,7 +93175,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2002605420
 Renderer:
@@ -93180,6 +93516,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -93698,7 +94038,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2025367775
 Renderer:
@@ -93913,7 +94253,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2032969137
 Renderer:
@@ -94222,7 +94562,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2038100238
 Renderer:
@@ -94879,7 +95219,7 @@ Transform:
   m_PrefabInternal: {fileID: 108296348}
   m_GameObject: {fileID: 2052743276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -361.55542, y: -1.06217551, z: -33.1685944}
+  m_LocalPosition: {x: -361.55542, y: 1.93782449, z: -33.1685944}
   m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 235477947}
@@ -95159,6 +95499,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -95554,11 +95898,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -409.806396
+      value: -408.806396
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.92638779
+      value: 7.46124268
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -95963,6 +96307,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: homeInTime
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: totalHealth
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -96437,7 +96785,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2077371964
 Renderer:
@@ -97653,7 +98001,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2109889916
 Renderer:
@@ -97755,7 +98103,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2111255365
 Renderer:
@@ -98671,7 +99019,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2133107670
 Renderer:
@@ -98773,7 +99121,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: 0
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2133336049
 Renderer:
@@ -99264,7 +99612,7 @@ MonoBehaviour:
   laserSpeed: 70
   homeInTime: .100000001
   isHoming: 0
-  totalHealth: 5
+  totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
 --- !u!23 &2138358399
 Renderer:

@@ -442,7 +442,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
             break;
 
         case EliteBehavior.FollowWave: // Wave 9
-            W(ft_ep(), nb_go(0, -15, 0, 10, 3.0f), lb_lz(-13, 10, 13, 10, 3.0f, 5.0f), at_hm(3.25f), xt_tm(52f), xb_go(-1, -1, 20), 2.5f);
+            W(ft_ep(), nb_go(0, -15, 0, 10, 3.0f), lb_lz(-13, 10, 13, 10, 3.0f, 5.0f), at_lt(3.25f), xt_tm(52f), xb_go(-1, -1, 20), 2.5f);
             break;    
 			
 		}
