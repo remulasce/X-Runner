@@ -412,13 +412,13 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 
     void OnCollisionEnter(Collision col)
     {
-        if ((col.gameObject.CompareTag("L2_EnemyShot") && !isShielded))
+        if ((col.gameObject.CompareTag("L2_EnemyShot")))
         {
-            if (!col.gameObject.name.Contains("Homing"))
+            if (!col.gameObject.name.Contains("Homing") && !isShielded)
             {
                 Destroy(col.gameObject);
             }
-            if (!aboutToDoTransition)
+            if (!aboutToDoTransition && !isShielded)
             {                
                 isDead = true;
                 explosion.transform.position = this.transform.position;
@@ -426,7 +426,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                 this.transform.position = new Vector3(0, 0, 1000);
                 StartCoroutine("Respawn");
             }
-            else
+            else if (aboutToDoTransition)
             {
                 explosion.transform.position = this.transform.position;
                 explosion.Explode();
