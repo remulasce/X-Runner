@@ -74,6 +74,83 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &415348712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+  m_PrefabInternal: {fileID: 1455975968}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 415348716}
+  - 131: {fileID: 415348715}
+  - 114: {fileID: 415348714}
+  - 114: {fileID: 415348713}
+  m_Layer: 0
+  m_Name: GUI_TUTORIAL_START
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &415348713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: e9a7ca4310afb8d47a6c08296db26da4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1455975968}
+  m_GameObject: {fileID: 415348712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexture: {fileID: 2800000, guid: bc368663a92ac71449b431a091c95de7, type: 3}
+  controllerTexture: {fileID: 2800000, guid: eaa180139c65a9d45b82aef13cf3ce60, type: 3}
+--- !u!114 &415348714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: e9a7ca4310afb8d47a6c08296db26da4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1455975968}
+  m_GameObject: {fileID: 415348712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d9e15fd4871e42af109b78b1d7e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDisappear: 0
+  setOnWithStart: 1
+--- !u!131 &415348715
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1455975968}
+  m_GameObject: {fileID: 415348712}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: bc368663a92ac71449b431a091c95de7, type: 3}
+  m_Color: {r: .443137258, g: .443137258, b: .443137258, a: 1}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 180
+    y: 91.5999985
+    width: 720
+    height: 240
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!4 &415348716
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+  m_PrefabInternal: {fileID: 1455975968}
+  m_GameObject: {fileID: 415348712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &777401223
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +560,86 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1001 &1455975968
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: bc368663a92ac71449b431a091c95de7, type: 3}
+    - target: {fileID: 11400002, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: keyboardTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: bc368663a92ac71449b431a091c95de7, type: 3}
+    - target: {fileID: 11400002, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: controllerTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: eaa180139c65a9d45b82aef13cf3ce60, type: 3}
+    - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_PixelInset.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_PixelInset.y
+      value: 91.5999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_PixelInset.width
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_PixelInset.height
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: m_Name
+      value: GUI_TUTORIAL_START
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: timeToDisappear
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+      propertyPath: setOnWithStart
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
+  m_RootGameObject: {fileID: 415348712}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1502745819
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,34 +739,34 @@ Prefab:
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: bc368663a92ac71449b431a091c95de7, type: 3}
+      objectReference: {fileID: 2800000, guid: 3aeee4da33a709741a729cc7ccef4d19, type: 3}
     - target: {fileID: 11400002, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: keyboardTexture
       value: 
-      objectReference: {fileID: 2800000, guid: bc368663a92ac71449b431a091c95de7, type: 3}
+      objectReference: {fileID: 2800000, guid: 3aeee4da33a709741a729cc7ccef4d19, type: 3}
     - target: {fileID: 11400002, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: controllerTexture
       value: 
-      objectReference: {fileID: 2800000, guid: eaa180139c65a9d45b82aef13cf3ce60, type: 3}
+      objectReference: {fileID: 2800000, guid: 13a8c66ecea39924982574dab8d163f2, type: 3}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.x
-      value: 180
+      value: 16.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.y
-      value: 49.7999992
+      value: 11.1999998
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.width
-      value: 720
+      value: 455
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_PixelInset.height
-      value: 240
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: m_Name
-      value: GUI_TUTORIAL_START
+      value: GUI_TUTORIAL_START_Controller
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e9a7ca4310afb8d47a6c08296db26da4, type: 2}
       propertyPath: timeToDisappear
@@ -698,7 +855,7 @@ GameObject:
   - 114: {fileID: 2048016660}
   - 114: {fileID: 2048016659}
   m_Layer: 0
-  m_Name: GUI_TUTORIAL_START
+  m_Name: GUI_TUTORIAL_START_Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,8 +873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyboardTexture: {fileID: 2800000, guid: bc368663a92ac71449b431a091c95de7, type: 3}
-  controllerTexture: {fileID: 2800000, guid: eaa180139c65a9d45b82aef13cf3ce60, type: 3}
+  keyboardTexture: {fileID: 2800000, guid: 3aeee4da33a709741a729cc7ccef4d19, type: 3}
+  controllerTexture: {fileID: 2800000, guid: 13a8c66ecea39924982574dab8d163f2, type: 3}
 --- !u!114 &2048016660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,14 +897,14 @@ GUITexture:
   m_PrefabInternal: {fileID: 1691107540}
   m_GameObject: {fileID: 2048016658}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: bc368663a92ac71449b431a091c95de7, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3aeee4da33a709741a729cc7ccef4d19, type: 3}
   m_Color: {r: .443137258, g: .443137258, b: .443137258, a: 1}
   m_PixelInset:
     serializedVersion: 2
-    x: 180
-    y: 49.7999992
-    width: 720
-    height: 240
+    x: 16.7999992
+    y: 11.1999998
+    width: 455
+    height: 130
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
