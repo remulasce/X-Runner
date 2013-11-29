@@ -271,6 +271,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &3127454
 Renderer:
   m_ObjectHideFlags: 0
@@ -1237,8 +1238,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6
-  m_Center: {x: 2, y: 0, z: 0}
+  m_Radius: 9.5
+  m_Center: {x: 3, y: 0, z: 0}
 --- !u!114 &20249353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,6 +1258,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &20249354
 Renderer:
   m_ObjectHideFlags: 0
@@ -2343,6 +2345,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &36318482
 Renderer:
   m_ObjectHideFlags: 0
@@ -3341,6 +3344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 474597086}
+  - {fileID: 1223032937}
   - {fileID: 458521604}
   - {fileID: 874991015}
   m_Father: {fileID: 2130099616}
@@ -3553,7 +3557,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 4
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -3574,6 +3578,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -4160,6 +4168,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 98671764}
@@ -4655,6 +4667,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 399768741}
@@ -4927,7 +4943,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 4
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -4948,6 +4964,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -5173,6 +5193,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &98671768
 Renderer:
   m_ObjectHideFlags: 0
@@ -5319,6 +5340,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &104354964
 Renderer:
   m_ObjectHideFlags: 0
@@ -6136,7 +6158,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 6
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -6160,7 +6182,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -6411,6 +6433,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &128623406
 Renderer:
   m_ObjectHideFlags: 0
@@ -6492,7 +6515,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -7337,8 +7360,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
-  m_Center: {x: 5, y: 0, z: 0}
+  m_Radius: 16
+  m_Center: {x: 5.5, y: 0, z: 0}
 --- !u!114 &153593513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7357,6 +7380,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &153593514
 Renderer:
   m_ObjectHideFlags: 0
@@ -7810,6 +7834,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1835348874}
@@ -8047,7 +8075,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 15
-  m_Center: {x: 3.5, y: 0, z: 0}
+  m_Center: {x: 5, y: 0, z: 0}
 --- !u!114 &161670460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8066,6 +8094,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &161670461
 Renderer:
   m_ObjectHideFlags: 0
@@ -8373,7 +8402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -8397,7 +8426,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 4.0999999
+      value: 6.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -9378,7 +9407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 11.4399996
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -9402,7 +9431,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 3.3599999
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -10701,6 +10730,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &217368722
 Renderer:
   m_ObjectHideFlags: 0
@@ -10954,6 +10984,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 104354960}
@@ -11000,7 +11034,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 4
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -11021,6 +11055,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -11089,6 +11127,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &226353882
 Renderer:
   m_ObjectHideFlags: 0
@@ -11191,6 +11230,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &227121894
 Renderer:
   m_ObjectHideFlags: 0
@@ -11527,6 +11567,7 @@ Transform:
   - {fileID: 286898486}
   - {fileID: 1529917281}
   - {fileID: 236167331}
+  - {fileID: 1024249615}
   - {fileID: 865057083}
   - {fileID: 1437725082}
   - {fileID: 1983414029}
@@ -11570,6 +11611,7 @@ Transform:
   - {fileID: 2035676878}
   - {fileID: 1655382751}
   - {fileID: 1304676774}
+  - {fileID: 1016574226}
   - {fileID: 1051078306}
   - {fileID: 898752447}
   - {fileID: 808290400}
@@ -11806,6 +11848,7 @@ Transform:
   - {fileID: 1303822459}
   - {fileID: 932353768}
   - {fileID: 803631136}
+  - {fileID: 904827339}
   - {fileID: 2013708864}
   - {fileID: 924061131}
   - {fileID: 988109564}
@@ -11821,6 +11864,7 @@ Transform:
   - {fileID: 138787036}
   - {fileID: 302301070}
   - {fileID: 486022845}
+  - {fileID: 560681987}
   - {fileID: 832251299}
   - {fileID: 215276108}
   - {fileID: 1150782953}
@@ -12009,6 +12053,7 @@ Transform:
   - {fileID: 1346499459}
   - {fileID: 1447653804}
   - {fileID: 2124708336}
+  - {fileID: 2075944626}
   - {fileID: 1678677965}
   - {fileID: 60384453}
   - {fileID: 501019046}
@@ -12112,6 +12157,7 @@ Transform:
   - {fileID: 923097545}
   - {fileID: 1341120642}
   - {fileID: 623044075}
+  - {fileID: 379215215}
   - {fileID: 1472719601}
   - {fileID: 1162377766}
   - {fileID: 841397889}
@@ -12189,10 +12235,7 @@ Transform:
   - {fileID: 236786917}
   - {fileID: 1399755139}
   - {fileID: 47372553}
-  - {fileID: 904827339}
-  - {fileID: 1024249615}
-  - {fileID: 2075944626}
-  - {fileID: 379215215}
+  - {fileID: 2032969134}
   - {fileID: 2077371961}
   - {fileID: 2111255362}
   - {fileID: 98671765}
@@ -12202,6 +12245,7 @@ Transform:
   - {fileID: 1811657833}
   - {fileID: 1835348875}
   - {fileID: 1429898732}
+  - {fileID: 1527338887}
   - {fileID: 478583369}
   - {fileID: 976682970}
   - {fileID: 1349411500}
@@ -12256,6 +12300,7 @@ Transform:
   - {fileID: 1920056725}
   - {fileID: 953303991}
   - {fileID: 1709905088}
+  - {fileID: 2133107667}
   - {fileID: 971259964}
   - {fileID: 227121891}
   - {fileID: 447900277}
@@ -12277,9 +12322,6 @@ Transform:
   - {fileID: 835319895}
   - {fileID: 1260081268}
   - {fileID: 1127613148}
-  - {fileID: 1527338887}
-  - {fileID: 2133107667}
-  - {fileID: 2032969134}
   m_Father: {fileID: 0}
 --- !u!1001 &235542060
 Prefab:
@@ -13379,6 +13421,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &253909137
 Renderer:
   m_ObjectHideFlags: 0
@@ -13530,8 +13573,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 10
+  m_Center: {x: 4, y: 0, z: 0}
 --- !u!114 &256039095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13550,6 +13593,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &256039096
 Renderer:
   m_ObjectHideFlags: 0
@@ -13698,6 +13742,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
   m_RootGameObject: {fileID: 1304676773}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &257943431
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 235477947}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 127.133545
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -10.9921303
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5.83140564
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+  m_RootGameObject: {fileID: 1016574225}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &258651175
@@ -14660,6 +14748,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &278148291
 Renderer:
   m_ObjectHideFlags: 0
@@ -15389,6 +15478,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &300741267
 Renderer:
   m_ObjectHideFlags: 0
@@ -16430,6 +16520,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1701876778}
@@ -16658,7 +16752,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -16682,7 +16776,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 1
+      value: 2.70000005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -17078,7 +17172,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 12
   m_Center: {x: 3.5, y: 0, z: 0}
 --- !u!114 &326652448
 MonoBehaviour:
@@ -17098,6 +17192,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &326652449
 Renderer:
   m_ObjectHideFlags: 0
@@ -20218,6 +20313,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &399768745
 Renderer:
   m_ObjectHideFlags: 0
@@ -20456,7 +20552,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -20477,6 +20573,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -20682,8 +20782,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 10
+  m_Center: {x: 4, y: 0, z: 0}
 --- !u!114 &407023134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20702,6 +20802,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &407023135
 Renderer:
   m_ObjectHideFlags: 0
@@ -21376,6 +21477,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -22148,7 +22253,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -22172,7 +22277,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 4.67000008
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -22805,6 +22910,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &447900280
 Renderer:
   m_ObjectHideFlags: 0
@@ -22974,7 +23080,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -22995,6 +23101,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -24055,6 +24165,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 217368718}
@@ -24496,6 +24610,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &478583372
 Renderer:
   m_ObjectHideFlags: 0
@@ -25867,6 +25982,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &496159513
 Renderer:
   m_ObjectHideFlags: 0
@@ -26446,6 +26562,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -27162,8 +27282,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
-  m_Center: {x: 4.67000008, y: 0, z: 0}
+  m_Radius: 17
+  m_Center: {x: 6, y: 0, z: 0}
 --- !u!114 &525399192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27182,6 +27302,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &525399193
 Renderer:
   m_ObjectHideFlags: 0
@@ -28037,8 +28158,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 15
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!114 &544069512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28057,6 +28178,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &544069513
 Renderer:
   m_ObjectHideFlags: 0
@@ -28252,7 +28374,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 12
   m_Center: {x: 3.5, y: 0, z: 0}
 --- !u!114 &546984841
 MonoBehaviour:
@@ -28272,6 +28394,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &546984842
 Renderer:
   m_ObjectHideFlags: 0
@@ -28779,6 +28902,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &557153524
 Renderer:
   m_ObjectHideFlags: 0
@@ -28861,8 +28985,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 13
-  m_Center: {x: 4, y: 0, z: 0}
+  m_Radius: 14
+  m_Center: {x: 5, y: 0, z: 0}
 --- !u!114 &558090233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28881,6 +29005,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &558090234
 Renderer:
   m_ObjectHideFlags: 0
@@ -29058,6 +29183,75 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 919878786}
   m_GameObject: {fileID: 559528661}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &560681986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+  m_PrefabInternal: {fileID: 964731338}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 560681987}
+  - 33: {fileID: 560681990}
+  - 65: {fileID: 560681989}
+  - 23: {fileID: 560681988}
+  m_Layer: 0
+  m_Name: Trench_Wall
+  m_TagString: Trench_Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560681987
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+  m_PrefabInternal: {fileID: 964731338}
+  m_GameObject: {fileID: 560681986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 126.944824, y: 19.0078697, z: 5.83140564}
+  m_LocalScale: {x: 2, y: 2, z: 10}
+  m_Children: []
+  m_Father: {fileID: 235477947}
+--- !u!23 &560681988
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 5002492bf96a35040bff36d529f7a7dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 964731338}
+  m_GameObject: {fileID: 560681986}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 1647167679380bd4a93b84ba4d3aa891, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+--- !u!65 &560681989
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 5002492bf96a35040bff36d529f7a7dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 964731338}
+  m_GameObject: {fileID: 560681986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &560681990
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 5002492bf96a35040bff36d529f7a7dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 964731338}
+  m_GameObject: {fileID: 560681986}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &562847646
 Prefab:
@@ -29556,8 +29750,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 9
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 10.5
+  m_Center: {x: 3, y: 0, z: 0}
 --- !u!114 &575917403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29576,6 +29770,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &575917404
 Renderer:
   m_ObjectHideFlags: 0
@@ -29973,6 +30168,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -31020,8 +31219,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 12
+  m_Center: {x: 6, y: 0, z: 0}
 --- !u!114 &610491681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31040,6 +31239,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &610491682
 Renderer:
   m_ObjectHideFlags: 0
@@ -31481,6 +31681,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -32105,6 +32309,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1590129655}
@@ -32151,7 +32359,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -32175,7 +32383,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 5
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -32313,6 +32521,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -32759,8 +32971,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6
-  m_Center: {x: 1, y: 0, z: 0}
+  m_Radius: 8
+  m_Center: {x: 2.70000005, y: 0, z: 0}
 --- !u!114 &660479037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32779,6 +32991,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &660479038
 Renderer:
   m_ObjectHideFlags: 0
@@ -32861,8 +33074,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 15
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!114 &661811668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32881,6 +33094,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &661811669
 Renderer:
   m_ObjectHideFlags: 0
@@ -34829,6 +35043,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 982648982}
@@ -36427,6 +36645,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1048274691}
@@ -36793,6 +37015,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -37270,6 +37496,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &772424026
 Renderer:
   m_ObjectHideFlags: 0
@@ -37809,7 +38036,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -37833,7 +38060,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -37946,6 +38173,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -39300,7 +39531,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -39321,6 +39552,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -39900,7 +40135,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -39921,6 +40156,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -40514,7 +40753,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -40538,7 +40777,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 4.67000008
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -40744,7 +40983,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 13
+  m_Radius: 15
   m_Center: {x: 9, y: 0, z: 0}
 --- !u!114 &835319897
 MonoBehaviour:
@@ -40764,6 +41003,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &835319898
 Renderer:
   m_ObjectHideFlags: 0
@@ -40911,7 +41151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 4
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -40932,6 +41172,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -41000,6 +41244,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &841079626
 Renderer:
   m_ObjectHideFlags: 0
@@ -45474,7 +45719,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -45498,7 +45743,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 1
+      value: 2.70000005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -46179,6 +46424,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &953303994
 Renderer:
   m_ObjectHideFlags: 0
@@ -46888,6 +47134,50 @@ Prefab:
   m_RootGameObject: {fileID: 486022844}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &964731338
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 235477947}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 126.944824
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 19.0078697
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5.83140564
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+  m_RootGameObject: {fileID: 560681986}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &968190080
 GameObject:
   m_ObjectHideFlags: 0
@@ -46930,8 +47220,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 15
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!114 &968190083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46950,6 +47240,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &968190084
 Renderer:
   m_ObjectHideFlags: 0
@@ -47052,6 +47343,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &971259967
 Renderer:
   m_ObjectHideFlags: 0
@@ -47371,8 +47663,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 11.4399996
-  m_Center: {x: 3.3599999, y: 0, z: 0}
+  m_Radius: 13
+  m_Center: {x: 4, y: 0, z: 0}
 --- !u!114 &976682972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47391,6 +47683,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &976682973
 Renderer:
   m_ObjectHideFlags: 0
@@ -47473,8 +47766,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 13
-  m_Center: {x: 4, y: 0, z: 0}
+  m_Radius: 14
+  m_Center: {x: 5, y: 0, z: 0}
 --- !u!114 &976849209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47493,6 +47786,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &976849210
 Renderer:
   m_ObjectHideFlags: 0
@@ -47708,6 +48002,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &982648986
 Renderer:
   m_ObjectHideFlags: 0
@@ -48124,6 +48419,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &993109658
 Renderer:
   m_ObjectHideFlags: 0
@@ -48314,7 +48610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -49740,7 +50036,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -49764,7 +50060,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 5
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -49856,7 +50152,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -49880,13 +50176,82 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 4.67000008
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 525399189}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1016574225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+  m_PrefabInternal: {fileID: 257943431}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1016574226}
+  - 33: {fileID: 1016574229}
+  - 65: {fileID: 1016574228}
+  - 23: {fileID: 1016574227}
+  m_Layer: 0
+  m_Name: Trench_Wall
+  m_TagString: Trench_Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1016574226
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 5002492bf96a35040bff36d529f7a7dd, type: 2}
+  m_PrefabInternal: {fileID: 257943431}
+  m_GameObject: {fileID: 1016574225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 127.133545, y: -10.9921303, z: 5.83140564}
+  m_LocalScale: {x: 2, y: 2, z: 10}
+  m_Children: []
+  m_Father: {fileID: 235477947}
+--- !u!23 &1016574227
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 5002492bf96a35040bff36d529f7a7dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 257943431}
+  m_GameObject: {fileID: 1016574225}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 1647167679380bd4a93b84ba4d3aa891, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+--- !u!65 &1016574228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 5002492bf96a35040bff36d529f7a7dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 257943431}
+  m_GameObject: {fileID: 1016574225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1016574229
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 5002492bf96a35040bff36d529f7a7dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 257943431}
+  m_GameObject: {fileID: 1016574225}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1019316814
 Prefab:
   m_ObjectHideFlags: 0
@@ -49993,6 +50358,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -50848,8 +51217,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 2, y: 0, z: 0}
+  m_Radius: 12
+  m_Center: {x: 6, y: 0, z: 0}
 --- !u!114 &1041817720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50868,6 +51237,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1041817721
 Renderer:
   m_ObjectHideFlags: 0
@@ -51328,6 +51698,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1048274695
 Renderer:
   m_ObjectHideFlags: 0
@@ -51679,7 +52050,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_TagString
@@ -51703,7 +52074,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 6
+      value: 7.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -51909,8 +52280,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
-  m_Center: {x: 5, y: 0, z: 0}
+  m_Radius: 16
+  m_Center: {x: 5.5, y: 0, z: 0}
 --- !u!114 &1057143574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51929,6 +52300,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1057143575
 Renderer:
   m_ObjectHideFlags: 0
@@ -53525,8 +53897,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 4.67000008, y: 0, z: 0}
+  m_Radius: 13
+  m_Center: {x: 5.5, y: 0, z: 0}
 --- !u!114 &1097889213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53545,6 +53917,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1097889214
 Renderer:
   m_ObjectHideFlags: 0
@@ -54999,6 +55372,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1121894115
 Renderer:
   m_ObjectHideFlags: 0
@@ -55307,8 +55681,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 15
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!114 &1127613150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55327,6 +55701,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1127613151
 Renderer:
   m_ObjectHideFlags: 0
@@ -57415,8 +57790,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 11
-  m_Center: {x: 4, y: 0, z: 0}
+  m_Radius: 12
+  m_Center: {x: 6, y: 0, z: 0}
 --- !u!114 &1178554229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57435,6 +57810,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1178554230
 Renderer:
   m_ObjectHideFlags: 0
@@ -57812,6 +58188,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1930887659}
@@ -57990,7 +58370,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 9
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -58010,6 +58390,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -58579,7 +58963,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -59285,6 +59669,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 621858582}
   m_GameObject: {fileID: 1222839276}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1223032936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1223032937}
+  m_Layer: 0
+  m_Name: Turret_Pass_Target
+  m_TagString: L4_TurretPassTarget
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1223032937
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223032936}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: 0, y: 2.6500001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 57080268}
 --- !u!1001 &1223346236
 Prefab:
   m_ObjectHideFlags: 0
@@ -60681,8 +61091,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 12
+  m_Center: {x: 6, y: 0, z: 0}
 --- !u!114 &1260081270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60701,6 +61111,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1260081271
 Renderer:
   m_ObjectHideFlags: 0
@@ -61568,7 +61979,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -61592,7 +62003,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -63298,7 +63709,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -63319,6 +63730,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -63431,6 +63846,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1322555038
 Renderer:
   m_ObjectHideFlags: 0
@@ -63602,6 +64018,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1323499039
 Renderer:
   m_ObjectHideFlags: 0
@@ -63727,7 +64144,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 9
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -63747,6 +64164,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -64378,6 +64799,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 496159509}
@@ -64697,6 +65122,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 841079622}
@@ -64764,6 +65193,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1349411503
 Renderer:
   m_ObjectHideFlags: 0
@@ -65362,6 +65792,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -67805,6 +68239,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1429898735
 Renderer:
   m_ObjectHideFlags: 0
@@ -68040,8 +68475,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 9
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 10.5
+  m_Center: {x: 3, y: 0, z: 0}
 --- !u!114 &1437385701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68060,6 +68495,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1437385702
 Renderer:
   m_ObjectHideFlags: 0
@@ -68571,8 +69007,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 12
+  m_Center: {x: 6, y: 0, z: 0}
 --- !u!114 &1453293567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68591,6 +69027,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1453293568
 Renderer:
   m_ObjectHideFlags: 0
@@ -70156,6 +70593,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1487543579
 Renderer:
   m_ObjectHideFlags: 0
@@ -70390,6 +70828,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -71556,8 +71998,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 11
-  m_Center: {x: 4.0999999, y: 0, z: 0}
+  m_Radius: 14
+  m_Center: {x: 6.5, y: 0, z: 0}
 --- !u!114 &1527338889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71576,6 +72018,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1527338890
 Renderer:
   m_ObjectHideFlags: 0
@@ -72357,8 +72800,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 3.3599999, y: 0, z: 0}
+  m_Radius: 12
+  m_Center: {x: 5, y: 0, z: 0}
 --- !u!114 &1540538368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72377,6 +72820,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1540538369
 Renderer:
   m_ObjectHideFlags: 0
@@ -75001,6 +75445,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1590129659
 Renderer:
   m_ObjectHideFlags: 0
@@ -75674,6 +76119,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -76637,8 +77086,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 12
-  m_Center: {x: 6, y: 0, z: 0}
+  m_Radius: 14
+  m_Center: {x: 7.5, y: 0, z: 0}
 --- !u!114 &1622183431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76657,6 +77106,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1622183432
 Renderer:
   m_ObjectHideFlags: 0
@@ -77195,6 +77645,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1626840238
 Renderer:
   m_ObjectHideFlags: 0
@@ -77524,7 +77975,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -77548,7 +77999,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 4.0999999
+      value: 6.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -78073,8 +78524,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6
-  m_Center: {x: 1, y: 0, z: 0}
+  m_Radius: 8
+  m_Center: {x: 2.70000005, y: 0, z: 0}
 --- !u!114 &1643263177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78093,6 +78544,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1643263178
 Renderer:
   m_ObjectHideFlags: 0
@@ -79180,6 +79632,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 447900276}
@@ -79379,7 +79835,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -79403,7 +79859,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -80084,6 +80540,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1701876782
 Renderer:
   m_ObjectHideFlags: 0
@@ -80641,6 +81098,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1709905091
 Renderer:
   m_ObjectHideFlags: 0
@@ -80925,6 +81383,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -81267,7 +81729,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 11.4399996
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -81291,7 +81753,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 3.3599999
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -81826,6 +82288,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1744186083
 Renderer:
   m_ObjectHideFlags: 0
@@ -81997,6 +82460,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1749869726
 Renderer:
   m_ObjectHideFlags: 0
@@ -82531,8 +82995,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 11.4399996
-  m_Center: {x: 3.3599999, y: 0, z: 0}
+  m_Radius: 13
+  m_Center: {x: 4, y: 0, z: 0}
 --- !u!114 &1756313599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82551,6 +83015,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1756313600
 Renderer:
   m_ObjectHideFlags: 0
@@ -82811,6 +83276,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 36318478}
@@ -82878,6 +83347,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1767535070
 Renderer:
   m_ObjectHideFlags: 0
@@ -83193,7 +83663,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 3.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -83758,7 +84228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -83782,7 +84252,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -83983,6 +84453,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1786776196
 Renderer:
   m_ObjectHideFlags: 0
@@ -84575,7 +85046,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 12
+  m_Radius: 13
   m_Center: {x: 5, y: 0, z: 0}
 --- !u!114 &1811657835
 MonoBehaviour:
@@ -84595,6 +85066,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1811657836
 Renderer:
   m_ObjectHideFlags: 0
@@ -84697,6 +85169,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1811686438
 Renderer:
   m_ObjectHideFlags: 0
@@ -85517,6 +85990,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1835348878
 Renderer:
   m_ObjectHideFlags: 0
@@ -85998,6 +86472,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1852603453
 Renderer:
   m_ObjectHideFlags: 0
@@ -86504,6 +86979,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1862968548
 Renderer:
   m_ObjectHideFlags: 0
@@ -86964,6 +87440,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1877931651
 Renderer:
   m_ObjectHideFlags: 0
@@ -87743,6 +88220,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -88643,6 +89124,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1626840234}
@@ -88779,6 +89264,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -89004,6 +89493,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1920056728
 Renderer:
   m_ObjectHideFlags: 0
@@ -89583,6 +90073,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &1930887663
 Renderer:
   m_ObjectHideFlags: 0
@@ -90720,6 +91211,10 @@ Prefab:
       propertyPath: totalHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: trackPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
   m_RootGameObject: {fileID: 1487543575}
@@ -91643,6 +92138,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &1969031415
 Renderer:
   m_ObjectHideFlags: 0
@@ -92245,7 +92741,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -92269,7 +92765,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Center.x
-      value: 3.3599999
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -93656,8 +94152,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 12
+  m_Center: {x: 6, y: 0, z: 0}
 --- !u!114 &2002605419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93676,6 +94172,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &2002605420
 Renderer:
   m_ObjectHideFlags: 0
@@ -93998,7 +94495,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -94543,6 +95040,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &2025367775
 Renderer:
   m_ObjectHideFlags: 0
@@ -94758,6 +95256,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &2032969137
 Renderer:
   m_ObjectHideFlags: 0
@@ -95047,8 +95546,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
-  m_Center: {x: 4.67000008, y: 0, z: 0}
+  m_Radius: 17
+  m_Center: {x: 6, y: 0, z: 0}
 --- !u!114 &2038100237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95067,6 +95566,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &2038100238
 Renderer:
   m_ObjectHideFlags: 0
@@ -95985,7 +96485,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -96006,6 +96506,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -96793,7 +97297,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: m_Radius
-      value: 4
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: laserSpeed
@@ -96814,6 +97318,10 @@ Prefab:
     - target: {fileID: 11400000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
       propertyPath: totalHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
+      propertyPath: m_Center.x
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d599350d8568a4eb4e88e26161c884, type: 2}
@@ -97359,6 +97867,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &2077371964
 Renderer:
   m_ObjectHideFlags: 0
@@ -98575,6 +99084,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &2109889916
 Renderer:
   m_ObjectHideFlags: 0
@@ -98657,8 +99167,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 15
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!114 &2111255364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98677,6 +99187,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &2111255365
 Renderer:
   m_ObjectHideFlags: 0
@@ -99573,8 +100084,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 11
-  m_Center: {x: 4.0999999, y: 0, z: 0}
+  m_Radius: 14
+  m_Center: {x: 6.5, y: 0, z: 0}
 --- !u!114 &2133107669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99593,6 +100104,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &2133107670
 Renderer:
   m_ObjectHideFlags: 0
@@ -99695,6 +100207,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 0
 --- !u!23 &2133336049
 Renderer:
   m_ObjectHideFlags: 0
@@ -100186,6 +100699,7 @@ MonoBehaviour:
   isHoming: 0
   totalHealth: 3
   explosionPrefab: {fileID: 100000, guid: 1d71294722b8cda4391bc28f28e81ce7, type: 2}
+  trackPlayer: 1
 --- !u!23 &2138358399
 Renderer:
   m_ObjectHideFlags: 0

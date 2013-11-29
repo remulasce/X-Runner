@@ -18,6 +18,9 @@ public class Turret_Script : MonoBehaviour {
 
     public GameObject explosionPrefab;
 
+    // If enabled, turrets will shoot slightly ahaead of the player in an attempt to hit after dodging initally.
+    public bool trackPlayer = true;
+
 	// Use this for initialization
 	void Start () {
         startTime = Time.time;
@@ -63,6 +66,11 @@ public class Turret_Script : MonoBehaviour {
                     laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
                     laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = laserSpeed;
                     startTime = Time.time;
+                }
+                if (this.transform.localEulerAngles.y < 180 && this.transform.localEulerAngles.z < 180 && trackPlayer)
+                {
+                    //print(GameObject.FindGameObjectWithTag("L4_TurretPassTarget"));
+                    laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(GameObject.FindGameObjectWithTag("L4_TurretPassTarget"));
                 }
                 laser.transform.parent = this.transform.parent;
             }            

@@ -472,7 +472,7 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
         this.transform.FindChild("Shield_Dome").animation.Play("Shield_Regen");
         //print("Shielded!");
         yield return new WaitForSeconds(shieldTime);
-        this.transform.GetChild(1).animation.Play("Shield_Collapse");
+        this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
         //print("NOT Shielded...");
         isShielded = false;
     }

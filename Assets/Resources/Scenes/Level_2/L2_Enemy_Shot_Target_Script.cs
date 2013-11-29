@@ -13,8 +13,16 @@ public class L2_Enemy_Shot_Target_Script : L2_Enemy_Shot_Script
 	protected new void Start () {
         base.Start();
         player = GameObject.FindGameObjectWithTag("Player");
-        this.transform.LookAt(player.transform.position);
-        this.rigidbody.velocity = this.transform.forward * speed;
+        if (!target)
+        {
+            this.transform.LookAt(player.transform.position);
+            this.rigidbody.velocity = this.transform.forward * speed;
+        }
+        else
+        {
+            this.transform.LookAt(target.transform.position);
+            this.rigidbody.velocity = this.transform.forward * speed;
+        }
 	}
 	
 	// Update is called once per frame
@@ -25,9 +33,9 @@ public class L2_Enemy_Shot_Target_Script : L2_Enemy_Shot_Script
 
     public void SetTarget(GameObject target)
     {
-        this.target = target;
+        this.target = target;        
         this.transform.LookAt(target.transform.position);
         this.rigidbody.velocity = Vector3.zero;
-        this.rigidbody.velocity = this.transform.forward * speed;
+        this.rigidbody.velocity = this.transform.forward * speed;        
     }
 }
