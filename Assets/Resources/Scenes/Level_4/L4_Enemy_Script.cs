@@ -26,6 +26,8 @@ public class L4_Enemy_Script : MonoBehaviour
 
     // Detonator
     private Detonator explosion;
+	// For Explosion parenting
+	private Transform trench;
 
     //Help with AI loitering
     public float nextLoiterChange;
@@ -39,6 +41,7 @@ public class L4_Enemy_Script : MonoBehaviour
         nextFire = Time.time + Random.Range(0f, 1f);
         player = (IPlayer)(GameObject.FindGameObjectWithTag("Player").GetComponents(typeof(IPlayer)))[0];
         explosion = this.GetComponentInChildren<Detonator>();
+		trench = GameObject.FindGameObjectWithTag("L4_Trench").transform;
     }
 
     //Set how we're going to behave.
@@ -227,7 +230,7 @@ public class L4_Enemy_Script : MonoBehaviour
     {
         if (col.gameObject.CompareTag("L2_PlayerShot"))
         {
-            explosion.transform.parent = null;
+            explosion.transform.parent = trench;
             explosion.transform.position = this.transform.position;
             explosion.Explode();
             Destroy(this.gameObject);

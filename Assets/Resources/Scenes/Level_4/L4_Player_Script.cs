@@ -387,6 +387,8 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
                 Destroy(col.gameObject);
             }
             explosion.transform.position = this.transform.position;
+			
+			
             explosion.Explode();
             isDead = true;
             this.transform.position = new Vector3(0, 0, 1000);
@@ -437,6 +439,7 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
             if (!this.isShielded)
             {
                 explosion.transform.position = this.transform.position;
+				explosion.transform.parent = col.gameObject.transform.parent;
                 explosion.Explode();
                 isDead = true;
                 this.transform.position = new Vector3(0, 0, 1000);
