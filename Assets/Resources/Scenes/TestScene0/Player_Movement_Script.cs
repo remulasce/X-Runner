@@ -74,7 +74,9 @@ public class Player_Movement_Script : MonoBehaviour {
     private bool onWall = false; //For wall-jumping. If you're good, you can wall jump indefinitely.
     public int wallJumpsAllowed = 3;
 	public int wallJumpsLeft = 3;
-
+	public float wallJumpForceDelay = .5f;	// How long the player must wait before wall jumping is allowed
+	private float wallHitTime;	//for use with wall-jump delay
+	
     // Used for Spawning
     public bool isDead = false;
     public float spawnTime = 1.0f;
@@ -204,7 +206,8 @@ public class Player_Movement_Script : MonoBehaviour {
 		
         
         //Save ourselves with a wall jump
-		if (!canJump && onWall && wallJumpsLeft >= 1 && (Input.GetButtonDown("Jump") /*|| Input.GetKeyDown(KeyCode.Space)*/))
+		if (!canJump && onWall && wallJumpsLeft >= 1 && (Time.time - wallHitTime) > wallJumpForceDelay &&
+			(Input.GetButtonDown("Jump") /*|| Input.GetKeyDown(KeyCode.Space)*/))
 		{
 			canJump = true;
 			wallJumpsLeft--;
@@ -501,6 +504,7 @@ public class Player_Movement_Script : MonoBehaviour {
             {
                 audios[3].Play();
                 onWall = true;
+				wallHitTime = Time.time;
                 this.rigidbody.AddForce(new Vector3(horizontalMovement.accelerationPushOffWall, 0, 0), ForceMode.VelocityChange);
             }		
         }
