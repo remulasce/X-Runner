@@ -452,7 +452,15 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
             }
             else if (col.gameObject.CompareTag("Trench_Wall")) // Push the object above the wall
             {
-                this.transform.position = new Vector3(this.transform.position.x, col.gameObject.transform.position.y + col.gameObject.transform.localScale.y, this.transform.position.z);
+                if (GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds))
+                {
+                    this.transform.position = new Vector3(this.transform.position.x, col.gameObject.transform.position.y + col.gameObject.transform.localScale.y, this.transform.position.z);
+                }
+                else
+                {
+                    this.transform.position = new Vector3(this.transform.position.x + col.gameObject.transform.localScale.x, col.gameObject.transform.position.y - (2 * col.gameObject.transform.localScale.y), this.transform.position.z);
+                }
+                
             }
         }
     }
