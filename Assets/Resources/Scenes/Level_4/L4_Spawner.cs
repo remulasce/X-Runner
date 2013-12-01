@@ -170,9 +170,9 @@ public class L4_Spawner : MonoBehaviour {
         // Fade in the grand finale (everything)
         W(ft_finale());
 
-        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(1.75f), xb_go(0, 1, 17.5f), 2.25f);
+        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(1.5f), xb_go(0, 1, 17.5f), 2.25f);
 
-        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(1.75f), xb_go(0, 1, 17.5f), 3.75f);
+        W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(1.5f), xb_go(0, 1, 17.5f), 3.75f);
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 12f);
