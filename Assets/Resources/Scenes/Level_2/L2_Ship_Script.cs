@@ -384,6 +384,12 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
             slowDown();
             limitSpeed();
         }
+
+        // Check for if the shield is still up when it should not be
+        if (!this.transform.FindChild("Shield_Dome").animation["Shield_Collapse"].enabled && !this.isShielded && this.transform.FindChild("Shield_Dome").localScale.x == shieldSize)
+        {
+            this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
+        }
 	}
 
     IEnumerator TransitionToL3()
