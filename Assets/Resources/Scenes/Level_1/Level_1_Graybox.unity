@@ -5937,7 +5937,7 @@ MonoBehaviour:
     accelerationPushOffWall: -15
   wallJumpsAllowed: 0
   wallJumpsLeft: 3
-  wallJumpForceDelay: .300000012
+  wallJumpForceDelay: .200000003
   isDead: 0
   spawnTime: 1
   isInvincible: 0
@@ -59228,10 +59228,6 @@ Prefab:
     - target: {fileID: 13600000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_Height
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
-      propertyPath: wallJumpForceDelay
-      value: .300000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
