@@ -407,7 +407,7 @@ Transform:
   m_GameObject: {fileID: 191739762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.34173203, y: 2.34173203, z: 2.34173203}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children: []
   m_Father: {fileID: 1556197951}
 --- !u!114 &191739767
@@ -2029,6 +2029,34 @@ Prefab:
       propertyPath: movement.maxSpeed
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ee8eddd1873512842b9dfc27b84afd80, type: 2}
+    - target: {fileID: 2300000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aad2cdb99d9679546981bc12b49850b7, type: 2}
+    - target: {fileID: 2300004, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3db765dfdba12e4181f5541b8d03f46, type: 2}
+    - target: {fileID: 2600000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74f4a47fc3b034e2d963491f4e514174, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}

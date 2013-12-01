@@ -94,7 +94,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 	void Start ()
     {        
         startPosition = this.transform.position;
-        shieldSize = this.transform.GetChild(0).localScale.x;
+        shieldSize = 2.5f;
 
         isShielded = true;
         StartCoroutine("ResetShield");

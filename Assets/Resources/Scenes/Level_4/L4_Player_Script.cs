@@ -95,7 +95,7 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 	void Start ()
     {        
         startPosition = this.transform.position;
-        shieldSize = this.transform.GetChild(0).localScale.x;
+        shieldSize = 2.5f;
 
         isShielded = true;
         StartCoroutine("ResetShield");
@@ -376,6 +376,12 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 		addStartupBoost ();        
 		slowDown ();
 		limitSpeed ();	
+
+        // Check for if the shield is still up when it should not be
+        if (!this.transform.FindChild("Shield_Dome").animation["Shield_Collapse"].enabled && !this.isShielded)
+        {
+            this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
+        }
 	}
 
     void OnCollisionEnter(Collision col)
@@ -386,8 +392,7 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
             {
                 Destroy(col.gameObject);
             }
-            explosion.transform.position = this.transform.position;
-			
+            explosion.transform.position = this.transform.position;			
 			
             explosion.Explode();
             isDead = true;
