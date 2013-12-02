@@ -52,10 +52,11 @@ public class Asteroid_Spawner_Script : MonoBehaviour {
         timeToSpawnAsteroid = Random.Range(maxTimeToSpawnAsteroid / 2, maxTimeToSpawnAsteroid);
         GameObject asteroid = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Asteroid"), this.transform.position, Quaternion.Euler(0, 0, 0));
         asteroid.transform.localScale *= Random.Range(1.75f, 2.60f); // Make the asteroid bigger so it looks like it is in the foreground
-        asteroid.transform.position = new Vector3((asteroid.transform.localScale.x / 2.0f) + Random.Range(0, screenLength - (asteroid.transform.localScale.x * 1.5f)), 50f, 0);
+        asteroid.transform.position = new Vector3((asteroid.transform.localScale.x / 2.0f) + Random.Range(0, screenLength - (asteroid.transform.localScale.x * 1.5f)), 20f, 0);
         asteroid.transform.position += new Vector3(-screenLength / 2.0f, 0, 0);
         asteroid.rigidbody.mass = asteroid.rigidbody.mass * asteroid.transform.localScale.x;
-        asteroid.rigidbody.AddForce(new Vector3(Random.Range(-0.15f, 0.15f), -1, 0) * Random.Range(1500, 4500)); // Still makes the asteroids go sideways, but not as much
+        asteroid.rigidbody.AddForce(new Vector3(Random.Range(-0.5f, 0.5f), -1, 0) * Random.Range(1500, 4500)); // Still makes the asteroids go sideways, but not as much
+		//Increased the sideways again, after moving Y spawn pos from 50 to 20, so more don't go offscreen.
     }
 
     public void SpawnSpecial() // For the cutscene

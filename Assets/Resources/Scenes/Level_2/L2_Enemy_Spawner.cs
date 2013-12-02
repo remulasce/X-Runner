@@ -82,7 +82,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */        
         
-        ///*        
+        //*        
         // Scout Ship
         W(ft_hl(1), nb_go(2, 25, 2, 0, 5), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 0f);
         W(ft_hl(1), nb_go(-2, 25, -2, 0, 5), lb_no(), at_no(), xt_im(), xb_go(-45, 0, 10), 6f);
@@ -371,14 +371,17 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_at());
 
         // Wait about 4 seconds before starting the real thing
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 2f);
-
-        // Game Asteroid Spawning
-        W(ft_ag());
-
-        //*/
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 3f);
+		
+		//*/
         //Elite comes and stays for real.
         E(EliteBehavior.FinalBattle);
+		
+		// Wait for Elite to get into game area, so he doesn't get an asteroid spawned on top of him.
+        W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 3f);
+		
+        // Game Asteroid Spawning
+        W(ft_ag());
 
         // 1-on-1 Elite battle
 		//Not any different for now

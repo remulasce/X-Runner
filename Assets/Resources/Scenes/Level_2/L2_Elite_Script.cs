@@ -354,7 +354,11 @@ public class L2_Elite_Script : MonoBehaviour {
     // The highetr the value, the lower the chace the asteroid will be shot back
 
     const int maxReflects = 8; // Will allow the player to have a shot if this number of reflects has passed.
-
+	
+	//Also don't allow Elite too fire too fast at asteroids in general
+	const float reflectRate = 2f;
+	float lastReflect;
+	
     void OnTriggerStay(Collider other)
     {        
         if (other.gameObject.CompareTag("L2_Asteroid"))
@@ -363,6 +367,12 @@ public class L2_Elite_Script : MonoBehaviour {
             {
                 return;
             }
+			
+			//Reflected too recently, nothing we can do.
+			if (Time.time < lastReflect + 1/reflectRate)
+			{
+				return;
+			}
             
             GameObject laser;
             float detectionVal = Random.Range(0.0f, 1.0f);
