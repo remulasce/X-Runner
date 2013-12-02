@@ -431,7 +431,7 @@ MonoBehaviour:
     accelerationPushOffWall: -15
   wallJumpsAllowed: 0
   wallJumpsLeft: 3
-  wallJumpForceDelay: .200000003
+  wallJumpForceDelay: .150000006
   isDead: 0
   spawnTime: 1
   isInvincible: 0
@@ -459,6 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d121894dd7a6ef446a1b6e972370bbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frametime: .0299999993
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

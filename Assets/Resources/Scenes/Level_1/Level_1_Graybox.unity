@@ -5992,7 +5992,7 @@ MonoBehaviour:
     accelerationPushOffWall: -15
   wallJumpsAllowed: 0
   wallJumpsLeft: 3
-  wallJumpForceDelay: .200000003
+  wallJumpForceDelay: .150000006
   isDead: 0
   spawnTime: 1
   isInvincible: 0
@@ -6386,6 +6386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d121894dd7a6ef446a1b6e972370bbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frametime: .0299999993
 --- !u!1 &137884038
 GameObject:
   m_ObjectHideFlags: 0
@@ -61641,7 +61642,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: wallJumpForceDelay
-      value: .200000003
+      value: .150000006
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -91359,7 +91360,7 @@ MonoBehaviour:
   numberOfDeaths: 0
   secondsSinceStart: 0
   endGame: 0
-  deathThresholds: 3c000000230000001400000005000000
+  deathThresholds: 3c000000230000001400000008000000
   timeThresholds:
   - 625
   - 575
