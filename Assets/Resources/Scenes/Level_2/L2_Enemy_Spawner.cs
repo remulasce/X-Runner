@@ -297,7 +297,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         E(EliteBehavior.PreFinalBattle);   
 
         // Diamond Waves
-        for (int i = 0; i < numDiamondWaves; i++)
+        for (int i = 0; i < numDiamondWaves && true; i++)
         {
             float xVal = Random.Range(-12f, 12f);
             float yNegation = Random.Range(-0.2f, 1.0f);

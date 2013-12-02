@@ -392,6 +392,7 @@ public class L2_Elite_Script : MonoBehaviour {
                     laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
                     laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 20;
                     other.gameObject.GetComponent<L2_Asteroid_Script>().targetedByEnemy = true;
+					lastReflect = Time.time;
                 }
             }
             else if (other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.NONE)
@@ -400,6 +401,7 @@ public class L2_Elite_Script : MonoBehaviour {
                 laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
                 laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 20;
                 other.gameObject.GetComponent<L2_Asteroid_Script>().targetedByEnemy = true;
+				lastReflect = Time.time;
             }
         }
     }
