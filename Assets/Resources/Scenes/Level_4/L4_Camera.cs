@@ -6,6 +6,8 @@ public class L4_Camera : MonoBehaviour {
 	
 	private int lookatState = 0;
 	private Quaternion finalRot;
+	//So we don't "rotate" our star cylinder
+	public L4_StarCylinder starCylinder;
 	
 	//these aren't defaults, they get immediately overwritten
 	// by LookAtCapShip(). Set them in the spawner.
@@ -28,9 +30,11 @@ public class L4_Camera : MonoBehaviour {
 		{
 		// 
 		case 0:
+			starCylinder.started = true;
 			this.transform.rotation = Quaternion.identity;
 			break;
 		case 1:
+			starCylinder.started = false;
 			this.transform.rotation = Quaternion.Lerp(Quaternion.identity, finalRot, (Time.time-statestarttime)/transitionInTime);
 			if (Time.time > statestarttime + transitionInTime) { lookatState = 2; statestarttime = Time.time; }
 			break;
