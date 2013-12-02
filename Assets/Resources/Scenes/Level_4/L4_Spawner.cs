@@ -78,7 +78,7 @@ public class L4_Spawner : MonoBehaviour {
          * 	  with care.
          */
 
-        ///*
+        /*
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
 		///*
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
@@ -105,7 +105,7 @@ public class L4_Spawner : MonoBehaviour {
          
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 3.5f);
-		 //*/
+        
         // Fade in the space song
         W(ft_space());
 
@@ -150,7 +150,9 @@ public class L4_Spawner : MonoBehaviour {
 		 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 2.5f);
-
+		
+		*/
+		
         // Fade in the trench song
         W(ft_trench());
 
@@ -160,10 +162,13 @@ public class L4_Spawner : MonoBehaviour {
 
         // Have a bit of a delay before spawning ships again
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 42.5f);
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 40f);
 
         // Fade in the space song
         W(ft_missileRun());
+		
+		//TIE Bomber introduction
+		W (ft_gd (4, 1), nb_go(0, 10, 0, 10, 20), lb_no(), at_ld(2.0f), xt_tm(2), xb_go(0, 1, 17.5f), 2f);
 
         // Spawn the Tie Bomber Wave
         W(ft_gd(60, 2), nb_go(40, 30, 40, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 17.5f), 15.25f);
