@@ -5,7 +5,7 @@ public class Player_Run : MonoBehaviour {
 	
 	int framenum = 0;
 	float framewidth = .059f;
-	float frametime = .03f;
+	public float frametime = .03f;
 	int maxframe = 15;
 	
 	float nextframe;
