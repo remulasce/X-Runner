@@ -10,9 +10,11 @@ public class Player_Run : MonoBehaviour {
 	
 	float nextframe;
 	
-	float airYpos = .5f;
+	float airYpos = .0f;
 	
 	bool inAir = false;
+	bool falling = false;
+	bool wallReady = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -21,8 +23,7 @@ public class Player_Run : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-		if (!inAir)
+		if (!inAir && !wallReady)
 		{
 			if (Time.time > nextframe)
 			{
@@ -40,8 +41,22 @@ public class Player_Run : MonoBehaviour {
 		this.renderer.material.SetTextureOffset("_MainTex", new Vector2(0, airYpos));
 	}
 	
+	public void Falling()
+	{
+		falling = true;
+		this.renderer.material.SetTextureOffset("_MainTex", new Vector2(framewidth*2, airYpos));
+	}
+	
+	public void WallJumpReady()
+	{
+		print ("WallJumpReady");
+		wallReady = true;
+		this.renderer.material.SetTextureOffset("_MainTex", new Vector2(framewidth, airYpos));
+	}
+	
 	public void OnGround()
 	{
 		inAir = false;
+		wallReady = false;
 	}
 }

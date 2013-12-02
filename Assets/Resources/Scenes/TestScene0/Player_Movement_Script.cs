@@ -408,10 +408,14 @@ public class Player_Movement_Script : MonoBehaviour {
 	}
 	
 	//Just checks and sets the InAir thing in the running animation
+	//Now also sets the WallJump midair crouch
 	void DoUpdateRun()
 	{
 		if (this.GetComponent<Player_Run>() == null) { return; }
-		if (this.isJumping) { this.GetComponent<Player_Run>().InAir(); }
+		if (this.isInAir && !this.canJump && onWall && Time.time > this.wallHitTime + wallJumpForceDelay) {
+			this.GetComponent<Player_Run>().WallJumpReady(); return; }
+		if (this.isJumping) { this.GetComponent<Player_Run>().InAir(); return; }
+		if (this.isInAir) { this.GetComponent<Player_Run>().Falling(); return;}
 		else { this.GetComponent<Player_Run>().OnGround(); }
 	}
 	

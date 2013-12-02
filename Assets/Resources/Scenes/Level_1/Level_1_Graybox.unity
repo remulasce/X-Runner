@@ -5992,7 +5992,7 @@ MonoBehaviour:
     accelerationPushOffWall: -15
   wallJumpsAllowed: 0
   wallJumpsLeft: 3
-  wallJumpForceDelay: .150000006
+  wallJumpForceDelay: .200000003
   isDead: 0
   spawnTime: 1
   isInvincible: 0
@@ -6010,7 +6010,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 526df06c48d8dd44290b7a75723ed961, type: 2}
+  - {fileID: 2100000, guid: 7a3ab424504f0fd4895aa3dd3a13f8b2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -61641,8 +61641,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: wallJumpForceDelay
-      value: .150000006
+      value: .200000003
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a3ab424504f0fd4895aa3dd3a13f8b2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
   m_RootGameObject: {fileID: 137554353}
