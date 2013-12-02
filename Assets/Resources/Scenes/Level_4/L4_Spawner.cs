@@ -168,47 +168,35 @@ public class L4_Spawner : MonoBehaviour {
         W(ft_missileRun());
 		
 		//TIE Bomber introduction
-		W (ft_gd (4, 1), nb_go(4, 13, 4, 10, 20), lb_no(), at_ld(1.0f), xt_tm(2.0f), xb_go(-1, 1, 17.5f), 1.5f); //1.6 .9 1.2
-        W(ft_hl(12), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(2.0f), xt_tm(4f), xb_go(-1, 1, 27.5f), 1.43f); //1.93
-		W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 3.44f); //.5
-		//W(ft_hl(12), nb_go(0, 12, 0, 12, 20), lb_no(), at_ld(2.0f), xt_tm(2.0f), xb_go(-1, 1, 27.5f), 1.94f);
-        //W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), .53f);
-		W(ft_hl(12), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(2.0f), xt_tm(1.2f), xb_go(-1, 1, 27.5f), 1.0f);
-		W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), .63f);
-        W(ft_hl(12), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(2.0f), xt_tm(1f), xb_go(-1, 1, 27.5f), 0.8f);
-		W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.04f);
-        W(ft_hl(14), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(2.0f), xt_tm(1f), xb_go(-1, 1, 27.5f), 0.86f);
-		W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.07f);
-        W(ft_hl(14), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(2.0f), xt_tm(.75f), xb_go(-1, 1, 27.5f), .53f);
-		W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.37f);
-        W(ft_hl(14), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(2.0f), xt_tm(.75f), xb_go(-1, 1, 27.5f), .4f);
-		W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.07f);
-		
+        W(ft_gd(5, 1), nb_go(4, 13, 4, 10, 20), lb_no(), at_ld(1.0f), xt_tm(2.0f), xb_go(-1, 1, 17.5f), 1.5f);
+        W(ft_gd(50, 1), nb_go(32, 13, 32, 10, 5), lb_no(), at_ld(6.0f), xt_tm(1.0f), xb_go(-1, 0, 17.5f), 0.0f);
+        W(ft_hl(11), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(4f), xb_go(-1, 1, 27.5f), 1.43f);
+        W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 3.44f);
+        W(ft_hl(11), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(1.2f), xb_go(-1, 1, 27.5f), 1.0f);
+        W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), .63f);
+        W(ft_hl(11), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(1f), xb_go(-1, 1, 27.5f), 0.8f);
+        W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.04f);
+        W(ft_hl(13), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(1f), xb_go(-1, 1, 27.5f), 0.86f);
+        W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.07f);
+        W(ft_hl(13), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(.75f), xb_go(-1, 1, 27.5f), .53f);
+        W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.37f);
+        W(ft_hl(13), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(.75f), xb_go(-1, 1, 27.5f), .4f);
+        W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.07f);
+
 		//Platforms
-        W(ft_hl(14), nb_go(0, 13, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(.5f), xb_go(0, 1, 17.5f), 1.9f);
-        W(ft_hl(14), nb_go(0, 13, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(.5f), xb_go(0, 1, 17.5f), 1.03f);
-        W(ft_hl(14), nb_go(0, 13, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(.5f), xb_go(0, 1, 17.5f), 1.07f);
-        W(ft_hl(14), nb_go(0, 13, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(1.5f), xb_go(0, 1, 17.5f), 2.16f); //1.2
-        //W(ft_hl(16), nb_go(0, 11, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(.25f), xb_go(0, 1, 17.5f), .96f);
-        W(ft_hl(16), nb_go(0, 13, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(2.5f), xb_go(0, 1, 17.5f), 2.74f); //.9
-        //W(ft_hl(16), nb_go(0, 11, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(.5f), xb_go(0, 1, 17.5f), 1.84f);
-		
-		
-		
-		
-		//T
-		W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), .2f);
-		//Final Area
-        W(ft_hl(10), nb_go(0, 13, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(1.0f), xb_go(0, 1, 17.5f), 2.33f);
+        W(ft_hl(13), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(.5f), xb_go(0, 1, 17.5f), 2.0f);
+        W(ft_hl(13), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(.5f), xb_go(0, 1, 17.5f), 2.0f);
+        W(ft_hl(13), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(.5f), xb_go(0, 1, 17.5f), 1.07f);
+        W(ft_hl(13), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(3.5f), xt_tm(1.5f), xb_go(0, 1, 17.5f), 2.16f); 
+        W(ft_hl(15), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(3.5f), xt_tm(2.5f), xb_go(0, 1, 17.5f), 2.74f);
+        W(ft_hl(15), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(3.5f), xt_tm(2.5f), xb_go(0, 1, 17.5f), 2.74f); 
 		
 		
         // Spawn the Tie Bomber Wave
         //W(ft_gd(60, 2), nb_go(40, 30, 40, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 17.5f), .5f);
 
         // Fade in the grand finale (everything)
-        W(ft_finale());
-		
-		
+        W(ft_finale());		
 
         //W(ft_hl(15), nb_go(0, 25, 0, 11, 20), lb_no(), at_ld(2.0f), xt_tm(1.5f), xb_go(0, 1, 17.5f), .53f);
 
