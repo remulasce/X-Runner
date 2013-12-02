@@ -1242,6 +1242,18 @@ Prefab:
       propertyPath: m_TagString
       value: L2_Enemy_Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: 7e59b28cf4d87694eba388d97ffca02a, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d3b5d9203dc67a04a98ea3e038152835, type: 2}
+    - target: {fileID: 2300000, guid: 7e59b28cf4d87694eba388d97ffca02a, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9abdda784907e234cb8858f5e4d4881e, type: 2}
+    - target: {fileID: 2300004, guid: 7e59b28cf4d87694eba388d97ffca02a, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9abdda784907e234cb8858f5e4d4881e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e59b28cf4d87694eba388d97ffca02a, type: 2}
   m_RootGameObject: {fileID: 2000436721}
@@ -1288,7 +1300,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 392bdb89efa341745b278c8432e6add0, type: 2}
+  - {fileID: 2100000, guid: 9abdda784907e234cb8858f5e4d4881e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1780,7 +1792,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 392bdb89efa341745b278c8432e6add0, type: 2}
+  - {fileID: 2100000, guid: d3b5d9203dc67a04a98ea3e038152835, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3860,7 +3872,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 392bdb89efa341745b278c8432e6add0, type: 2}
+  - {fileID: 2100000, guid: 9abdda784907e234cb8858f5e4d4881e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
