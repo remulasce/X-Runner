@@ -766,7 +766,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
                     if (ships.Length > 1) // Have to count the Elite as somthing separate
                     {
-                        print(ships.Length);
+                        //print(ships.Length);
                         StartCoroutine("RestartSpawning");
                         break;
                     }
@@ -786,7 +786,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
     IEnumerator RestartSpawning()
     {
         yield return new WaitForSeconds(0.5f);
-        print("Attempting to spawn again...");
+        //print("Attempting to spawn again...");
         StartCoroutine("DoSpawning");
     }
 	

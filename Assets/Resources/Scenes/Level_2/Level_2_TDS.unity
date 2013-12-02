@@ -2057,6 +2057,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 74f4a47fc3b034e2d963491f4e514174, type: 2}
+    - target: {fileID: 13500002, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Radius
+      value: 1.28999996
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}
@@ -3140,7 +3144,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 1.28999996
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!111 &1556197955
 Animation:

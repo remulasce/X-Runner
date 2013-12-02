@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 //Movement and control for the L2 TopDownShooter
 public class L2_Ship_Script : MonoBehaviour, IPlayer
@@ -90,6 +91,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 
     AudioSource[] audios;
 
+    List<bool> hitsOnElite = new List<bool>();
+
 	// Use this for initialization
 	void Start ()
     {        
@@ -100,6 +103,8 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         StartCoroutine("ResetShield");
 
         baseReloadTime = reloadTime;
+
+        hitsOnElite.Add(true);
 
         audios = this.gameObject.GetComponents<AudioSource>();
 
@@ -385,11 +390,15 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
             limitSpeed();
         }
 
-        // Check for if the shield is still up when it should not be
-        if (!this.transform.FindChild("Shield_Dome").animation["Shield_Collapse"].enabled && !this.isShielded && this.transform.FindChild("Shield_Dome").localScale.x == shieldSize)
-        {
-            this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
-        }
+        //// Check for if the shield is still up when it should not be
+        //if ( (!this.transform.FindChild("Shield_Dome").animation["Shield_Collapse"].enabled) && 
+        //    (!this.isShielded  || (hitsOnElite.Count == 0 && this.isShielded))
+        //    && this.transform.FindChild("Shield_Dome").localScale.x >= (shieldSize - 0.1f) )
+        //{
+        //    this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
+        //    print("NOT Shielded Update Loop...");
+        //    this.isShielded = false;
+        //}
 	}
 
     IEnumerator TransitionToL3()
@@ -440,7 +449,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
             }
         }
 
-        if (col.gameObject.CompareTag("L2_Enemy"))
+        if (col.gameObject.CompareTag("L2_Enemy") || col.gameObject.CompareTag("L2_Enemy_Tutorial"))
         {
 
             if (!col.gameObject.name.Contains("Elite"))
@@ -466,7 +475,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                 this.transform.position = new Vector3(0, 0, 1000);
                 if (col.gameObject.name.Contains("Elite"))
                 {
-                    wasHitByElite = true;
+                    hitsOnElite.Add(true);
                 }
                 StartCoroutine("Respawn");
             }            
@@ -509,24 +518,32 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         
         if (col.gameObject.CompareTag("Enemy_Shield"))
         {
-			if (!this.isShielded && !col.gameObject.name.Contains("Elite"))
-            {
-				explosion.transform.position = this.transform.position;
-                explosion.Explode();
-                isDead = true;
-                this.transform.position = new Vector3(0, 0, 1000);
-				StartCoroutine("Respawn");
-            }
-			/*
-            if (!col.gameObject.name.Contains("Elite"))
-            {
-                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
-                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
-                col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
-                Destroy(col.gameObject);
-            }
-			 */
-
+            explosion.transform.position = this.transform.position;
+            explosion.Explode();
+            isDead = true;
+            this.transform.position = new Vector3(0, 0, 1000);
+            hitsOnElite.Add(true);
+            StartCoroutine("Respawn");            
+            
+            //if (!this.isShielded || col.gameObject.name.Contains("Elite"))
+            //{
+            //    explosion.transform.position = this.transform.position;
+            //    explosion.Explode();
+            //    isDead = true;
+            //    this.transform.position = new Vector3(0, 0, 1000);
+            //    StartCoroutine("Respawn");
+            //}			
+            
+            //if (!col.gameObject.name.Contains("Elite"))
+            //{
+            //    if (col.gameObject.GetComponent<L2_Enemy_Script>())
+            //    {
+            //        col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
+            //        col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
+            //        col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
+            //        Destroy(col.gameObject);
+            //    }
+            //} 			
         }
     }
 
@@ -553,7 +570,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
 		this.transform.FindChild("Shield_Dome").animation.Play("Shield_Regen");
         print("Shielded!");
         yield return new WaitForSeconds(shieldTime);
-        if (!wasHitByElite)
+        if (hitsOnElite.Count == 0 && this.transform.FindChild("Shield_Dome").localScale.x >= (shieldSize - 0.1f))
         {
             this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
             print("NOT Shielded...");
@@ -561,7 +578,13 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         }
         else
         {
-            wasHitByElite = false;
+            hitsOnElite.RemoveAt(0);
+            if (hitsOnElite.Count == 0 && this.transform.FindChild("Shield_Dome").localScale.x >= (shieldSize - 0.1f))
+            {
+                this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
+                print("NOT Shielded Interior...");
+                isShielded = false;
+            }
         }
     }
 }

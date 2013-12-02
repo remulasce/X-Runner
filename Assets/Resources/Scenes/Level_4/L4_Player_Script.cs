@@ -376,12 +376,6 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
 		addStartupBoost ();        
 		slowDown ();
 		limitSpeed ();	
-
-        // Check for if the shield is still up when it should not be
-        if (!this.transform.FindChild("Shield_Dome").animation["Shield_Collapse"].enabled && !this.isShielded && this.transform.FindChild("Shield_Dome").localScale.x == shieldSize)
-        {
-            this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
-        }
 	}
 
     void OnCollisionEnter(Collision col)
