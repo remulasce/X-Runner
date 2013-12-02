@@ -28,6 +28,7 @@ public class Reactor_Explosion_Script : MonoBehaviour {
         yield return new WaitForSeconds(e.delay);
         GameObject explosion = (GameObject) Instantiate(e.explosion);
         explosion.transform.position = this.transform.position + e.offset;
+        explosion.transform.parent = this.transform.parent;
         explosion.GetComponent<Detonator>().Explode();
     }
 
