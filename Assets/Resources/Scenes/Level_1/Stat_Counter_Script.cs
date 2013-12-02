@@ -5,13 +5,18 @@ public class Stat_Counter_Script : MonoBehaviour {
 
     public int numberOfDeaths = 0;
     public float secondsSinceStart = 0;
-
+	
+	//hack hack setter hack
+	private float lastDeaths = 0;
+	
     public bool endGame = false;
 
     // From index 0 - 3 (stars 2 - 5), determine which stars will show for which ratings
     public int[] deathThresholds = new int[4];
     public float[] timeThresholds = new float[4];    
-
+	
+	float lastDeath;
+	
     GUIText[] texts;
     GUITexture[] stars;
 
@@ -26,11 +31,19 @@ public class Stat_Counter_Script : MonoBehaviour {
         texts = this.GetComponentsInChildren<GUIText>();
         stars = this.GetComponentsInChildren<GUITexture>();
         DontDestroyOnLoad(this.gameObject);
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {        
-
+		//hackity
+		if (numberOfDeaths != lastDeaths)
+		{
+			lastDeath = Time.time;
+			lastDeaths = numberOfDeaths;
+		}
+		
+		
         if (!endGame)
         {
             secondsSinceStart += Time.deltaTime; // Update the time
@@ -38,13 +51,25 @@ public class Stat_Counter_Script : MonoBehaviour {
             {
                 if (t.name.Contains("Deaths"))
                 {
+					if (Time.time < lastDeath + 1.25f)
+					{
+						t.color = Color.red;
+					}
+					else if (Time.time < lastDeath + 2.25f)
+					{
+						t.color = Color.gray * (Time.time-1.25f - lastDeath) + Color.red * (1- (Time.time-1.25f - lastDeath));
+					}
+					else
+					{
+						t.color = Color.gray;
+					}
                     t.text = "Deaths: " + numberOfDeaths;
                 }
                 else if (t.name.Contains("Time"))
                 {
                     // Make a better time tracking algorithm sometime
-                    t.text = "Time: " + secondsSinceStart;
-                }
+                    t.text = "Time: " + Mathf.Round(secondsSinceStart*10)/10;
+				}
                 else
                 {
                     t.enabled = false;
@@ -63,11 +88,11 @@ public class Stat_Counter_Script : MonoBehaviour {
                 {
                     if (Input.GetJoystickNames().Length == 0)
                     {
-                        t.text = "Press Space To Exit";
+                        t.text = "Press Escape To Exit";
                     }
                     else
                     {
-                        t.text = "Press 'A' To Exit";
+                        t.text = "Press Escape To Exit";
                     }
                 }
                 if (t.name.Contains("Deaths"))
