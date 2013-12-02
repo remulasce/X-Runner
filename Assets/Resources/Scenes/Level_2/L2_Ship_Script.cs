@@ -578,12 +578,15 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         }
         else
         {
-            hitsOnElite.RemoveAt(0);
-            if (hitsOnElite.Count == 0 && this.transform.FindChild("Shield_Dome").localScale.x >= (shieldSize - 0.1f))
+            if (hitsOnElite.Count > 0)
             {
-                this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
-                print("NOT Shielded Interior...");
-                isShielded = false;
+                hitsOnElite.RemoveAt(0);
+                if (hitsOnElite.Count == 0 && this.transform.FindChild("Shield_Dome").localScale.x >= (shieldSize - 0.1f))
+                {
+                    this.transform.FindChild("Shield_Dome").animation.Play("Shield_Collapse");
+                    print("NOT Shielded Interior...");
+                    isShielded = false;
+                }
             }
         }
     }
