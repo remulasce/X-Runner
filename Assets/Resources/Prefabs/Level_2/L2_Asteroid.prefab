@@ -613,14 +613,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ba3d769dc14f14fb0a0f4252419883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 12
-  extraHitVelocity: .5
+  maxVelocity: 10
+  extraHitVelocity: .349999994
   hasReflectedOffPlayer: 0
   numberOfTimesHit: 0
   lastHit: 0
   targetedByEnemy: 0
   elitePosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
+  isCinematic: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

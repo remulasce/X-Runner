@@ -82,7 +82,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
          * 	  with care.
          */        
         
-        ///*        
+        /*        
         // Scout Ship
         W(ft_hl(1), nb_go(2, 25, 2, 0, 5), lb_no(), at_no(), xt_im(), xb_go(45, 0, 10), 0f);
         W(ft_hl(1), nb_go(-2, 25, -2, 0, 5), lb_no(), at_no(), xt_im(), xb_go(-45, 0, 10), 6f);
@@ -290,7 +290,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         //*/
 
-        const int numDiamondWaves = 8;
+        const int numDiamondWaves = 0;// 8;
         const float diamondWaveDelay = 2f;
 		
         //Elite quick visit during the diamond waves
