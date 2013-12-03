@@ -356,7 +356,7 @@ public class L2_Elite_Script : MonoBehaviour {
     const int maxReflects = 8; // Will allow the player to have a shot if this number of reflects has passed.
 	
 	//Also don't allow Elite too fire too fast at asteroids in general
-	const float reflectRate = 2f;
+	const float reflectRate = 10f;
 	float lastReflect;
 	
     void OnTriggerStay(Collider other)
