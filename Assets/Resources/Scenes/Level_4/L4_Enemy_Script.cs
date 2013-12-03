@@ -38,7 +38,7 @@ public class L4_Enemy_Script : MonoBehaviour
     {
         //This gets called after SetWaveAI, because Unity.
         lastStateTime = Time.time;
-        nextFire = Time.time + Random.Range(0f, 1f);
+        nextFire = 10000;//Time.time + Random.Range(0f, 1f);
         player = (IPlayer)(GameObject.FindGameObjectWithTag("Player").GetComponents(typeof(IPlayer)))[0];
         explosion = this.GetComponentInChildren<Detonator>();
 		trench = GameObject.FindGameObjectWithTag("L4_Trench").transform;
@@ -55,7 +55,7 @@ public class L4_Enemy_Script : MonoBehaviour
         SetLifeState(LifeState.Entry);
         this.wave = parent;
         this.offset = offset;
-        this.nextFire = Time.time + Random.Range(0f, this.wave.at.fireInterval);
+        this.nextFire = 10000;//Time.time + Random.Range(0f, this.wave.at.fireInterval);
     }
 
 
@@ -112,6 +112,10 @@ public class L4_Enemy_Script : MonoBehaviour
         //print ("Changing State: "+state);
         this.lastStateTime = Time.time;
         this.state = state;
+		if (state == LifeState.Loiter)
+		{
+			this.nextFire = Time.time + Random.Range(0f, this.wave.at.fireInterval);
+		}
     }
 
     void DoExit()
