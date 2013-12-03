@@ -5,6 +5,9 @@ public class Level_Load_Script : MonoBehaviour {
 
     AudioSource[] audios;
 
+    public GUIText time = null;
+    public float timeTrailer = 15.85f + 24f;
+
 	// Use this for initialization
 	void Start () {
         audios = this.gameObject.GetComponents<AudioSource>();
@@ -23,6 +26,11 @@ public class Level_Load_Script : MonoBehaviour {
             audios[0].Play();
             StartCoroutine("FadeOutIntroSong");
             Application.LoadLevel("Level_1_Graybox");
+        }
+        if (time)
+        {
+            timeTrailer -= Time.deltaTime;
+            time.text = "Time to Trailer: " + Mathf.Round(timeTrailer).ToString();
         }
 	}
 
