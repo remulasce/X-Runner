@@ -88,11 +88,11 @@ public class Stat_Counter_Script : MonoBehaviour {
                 {
                     if (Input.GetJoystickNames().Length == 0)
                     {
-                        t.text = "Press Space To Exit";
+                        t.text = "Press Space To Play Again";
                     }
                     else
                     {
-                        t.text = "Press 'A' To Exit";
+                        t.text = "Press 'A' To Play Again";
                     }
                 }
                 if (t.name.Contains("Deaths"))

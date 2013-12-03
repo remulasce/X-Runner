@@ -6,6 +6,7 @@ public class GlobalKeywatcher : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad(this);
+        Application.targetFrameRate = 60;
 	}
 	
 	// Update is called once per frame

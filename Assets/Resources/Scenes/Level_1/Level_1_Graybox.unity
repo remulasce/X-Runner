@@ -6387,6 +6387,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frametime: .0299999993
+  inAir: 0
+  falling: 0
+  wallReady: 0
 --- !u!1 &137884038
 GameObject:
   m_ObjectHideFlags: 0
@@ -17788,7 +17791,7 @@ GUIText:
   m_GameObject: {fileID: 373774001}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Press Space to Exit
+  m_Text: Press Space to PLAY AGAIN
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -103999,7 +104002,7 @@ GUIText:
   m_GameObject: {fileID: 2058046122}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Press ESC to QUIT
+  m_Text: Press ESC to QUIT GAME
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
