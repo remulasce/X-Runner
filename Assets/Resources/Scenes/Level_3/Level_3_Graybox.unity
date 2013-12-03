@@ -5636,7 +5636,7 @@ ConstantForce:
   m_Enabled: 1
   m_Force: {x: 0, y: 0, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
-  m_Torque: {x: 0, y: 0, z: -4999999910000}
+  m_Torque: {x: 0, y: 0, z: -4.99999993e+14}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!114 &224614794
 MonoBehaviour:
@@ -40323,7 +40323,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 7500000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
       propertyPath: m_Torque.z
-      value: -4999999910000
+      value: -4.99999993e+14
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
       propertyPath: m_Constraints
