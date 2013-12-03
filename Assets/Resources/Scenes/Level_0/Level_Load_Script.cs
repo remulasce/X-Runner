@@ -8,6 +8,8 @@ public class Level_Load_Script : MonoBehaviour {
     public GUIText time = null;
     public float timeTrailer = 15.85f + 24f;
 
+    private float timeToSecond = 0.0f;
+
 	// Use this for initialization
 	void Start () {
         audios = this.gameObject.GetComponents<AudioSource>();
@@ -30,7 +32,13 @@ public class Level_Load_Script : MonoBehaviour {
         if (time)
         {
             timeTrailer -= Time.deltaTime;
+            timeToSecond += Time.deltaTime;
             time.text = "Time to Trailer: " + Mathf.Round(timeTrailer).ToString();
+            if (timeToSecond >= 1.0f)
+            {
+                timeToSecond = 0.0f;
+                audios[1].Play();
+            }
         }
 	}
 
