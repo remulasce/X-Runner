@@ -141,7 +141,7 @@ public class Player_Movement_Script : MonoBehaviour {
         if (!onWall)
         {
             //this.transform.position += new Vector3(movementSpeed * Time.deltaTime, 0, 0);
-			this.rigidbody.MovePosition(this.transform.position + new Vector3(movementSpeed * Time.deltaTime, 0, 0));
+			this.transform.position = (this.transform.position + new Vector3(movementSpeed * Time.deltaTime, 0, 0));
         }
 
         RaycastHit hit;

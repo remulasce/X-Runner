@@ -113,7 +113,7 @@ public class L2_Elite_Script : MonoBehaviour {
 	{
 		//return;
 		Vector3 delta = (this.target - this.transform.position);
-		this.rigidbody.MovePosition(this.transform.position + Time.deltaTime*(delta.normalized * Mathf.Min(curMaxSpeed, 7.5f*delta.magnitude)));
+		this.transform.position = (this.transform.position + Time.deltaTime*(delta.normalized * Mathf.Min(curMaxSpeed, 7.5f*delta.magnitude)));
 	}
 	
 	

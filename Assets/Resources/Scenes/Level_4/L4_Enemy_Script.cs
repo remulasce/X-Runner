@@ -180,7 +180,7 @@ public class L4_Enemy_Script : MonoBehaviour
     {
         //return;
         Vector3 delta = (this.target - this.transform.position);
-        this.rigidbody.MovePosition(this.transform.position + Time.deltaTime * (delta.normalized * Mathf.Min(curMaxSpeed, 7.5f * delta.magnitude)));
+        this.transform.position = (this.transform.position + Time.deltaTime * (delta.normalized * Mathf.Min(curMaxSpeed, 7.5f * delta.magnitude)));
     }
     // Sets the "Max Speed" variable, based on our current state.
     void SetMaxSpeed()
