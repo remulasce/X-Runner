@@ -12,9 +12,9 @@ public class Player_Run : MonoBehaviour {
 	
 	float airYpos = .0f;
 	
-	bool inAir = false;
-	bool falling = false;
-	bool wallReady = false;
+	public bool inAir = false;
+	public bool falling = false;
+	public bool wallReady = false;
 	
 	// Use this for initialization
 	void Start () {

@@ -16626,6 +16626,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frametime: .0399999991
+  inAir: 1
+  falling: 0
+  wallReady: 0
 --- !u!1 &550178828
 GameObject:
   m_ObjectHideFlags: 0
@@ -35800,6 +35803,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
       propertyPath: frametime
       value: .0399999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: falling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
+      propertyPath: inAir
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08452011b09d8104b9f034ac3655954b, type: 2}
