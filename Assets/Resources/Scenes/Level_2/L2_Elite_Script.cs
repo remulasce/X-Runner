@@ -367,12 +367,6 @@ public class L2_Elite_Script : MonoBehaviour {
             {
                 return;
             }
-			
-			//Reflected too recently, nothing we can do.
-			if (Time.time < lastReflect + 1/reflectRate)
-			{
-				return;
-			}
             
             GameObject laser;
             float detectionVal = Random.Range(0.0f, 1.0f);
@@ -386,6 +380,12 @@ public class L2_Elite_Script : MonoBehaviour {
             if (((other.gameObject.GetComponent<L2_Asteroid_Script>().lastHit == L2_Asteroid_Script.LAST_HIT.PLAYER) 
                 && (detectionVal > (eliteAwareness + Mathf.Clamp((float)(totalHealth - currentHealth)/(float)totalHealth, 0, 1.0f - eliteAwareness)))))
             {
+                //Reflected too recently, nothing we can do.
+                if (Time.time < lastReflect + 1 / reflectRate)
+                {
+                    return;
+                }
+
                 if (other.gameObject.GetComponent<L2_Asteroid_Script>().numberOfTimesHit < maxReflects /*Just Give the Player the shot when maxReflects have been done*/)
                 {
                     laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
