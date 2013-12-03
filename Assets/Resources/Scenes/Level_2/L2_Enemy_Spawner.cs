@@ -150,7 +150,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_ac());
 
         // Giant Vertical Wave
-        W(ft_gd(15, 15), nb_go(0, 28f, 0, 8, 3.5f), lb_no(), at_hm(21f), xt_im(), xb_go(0, -1, 17f), 6f);
+        W(ft_gd(15, 15), nb_go(0, 27.5f, 0, 8, 3.5f), lb_no(), at_hm(21f), xt_im(), xb_go(0, -1, 17f), 6f);
 
         //----------------------------------------------------------------------------------------------
 
