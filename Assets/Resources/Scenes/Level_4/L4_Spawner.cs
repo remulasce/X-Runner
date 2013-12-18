@@ -84,11 +84,11 @@ public class L4_Spawner : MonoBehaviour {
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1f);
 
         // Scout Diamond Wave
-        W(ft_hl(1), nb_go(30, 2, 0, 2, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(28, 0, -2, 0, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(30, 0, 0, 0, 12.5f), lb_no(), at_hm(2.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(32, 0, 2, 0, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(1), nb_go(30, -2, 0, -2, 12.5f), lb_no(), at_lt(3.0f), xt_im(), xb_go(0, 1, 20), 3);
+        W(ft_hl(1), nb_go(30, 2, 0, 2, 12.5f), lb_no(), at_lt(1.0f), xt_tm(0.5f), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(28, 0, -2, 0, 12.5f), lb_no(), at_lt(1.0f), xt_tm(0.5f), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(30, 0, 0, 0, 12.5f), lb_no(), at_hm(0.75f), xt_tm(0.5f), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(32, 0, 2, 0, 12.5f), lb_no(), at_lt(1.0f), xt_tm(0.5f), xb_go(0, 1, 20), 0);
+        W(ft_hl(1), nb_go(30, -2, 0, -2, 12.5f), lb_no(), at_lt(1.0f), xt_tm(0.5f), xb_go(0, 1, 20), 3);
 
         const int numBoxWaves = 9;
         const float waveDelayOne = 1.525f;
@@ -98,7 +98,7 @@ public class L4_Spawner : MonoBehaviour {
         {
             float yVal = Random.Range(-6f, 6f);
 
-            W(ft_gd(4 + (i / 4), 4 + (i / 4)), nb_go(30, yVal - (i / 4), -30, yVal - (i / 4), 10.5f), lb_no(), at_lt(12.0f), xt_im(), xb_go(0, 1, 1000), waveDelayOne);
+            W(ft_gd(4 + (i / 4), 4 + (i / 4)), nb_go(30, yVal - (i / 4), 30, yVal - (i / 4), 10.5f), lb_no(), at_lt((numBoxWaves * 2) - i), xt_im(), xb_go(-1, 0, 10.5f), waveDelayOne);
         }
 
         //----------------------------------------------------------------------------------------------
@@ -162,36 +162,32 @@ public class L4_Spawner : MonoBehaviour {
 
         // Have a bit of a delay before spawning ships again
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
-        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 39.75f); //40 40.5
+        W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 43.0f); //40 40.5
 
         // Fade in the space song
         W(ft_missileRun());
 		
-		//TIE Bomber introduction
-        W(ft_gd(5, 1), nb_go(4, 13, 4, 12, 20), lb_no(), at_ld(1.0f), xt_tm(2.0f), xb_go(-1, 0, 27.5f), 1.75f);
-        W(ft_gd(40, 1), nb_go(31, 13, 28, 10, 5), lb_no(), at_ld(2.0f), xt_tm(1.0f), xb_go(-1, .0f, 20f), 1.43f-.25f);//1.43
-        //W(ft_hl(11), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(3.5f), xb_go(-1, 1, 27.5f), 1.43f);
+		//TIE Bomber introduction        
+        W(ft_gd(39, 1), nb_go(19.5f, 13, 20f, 10, 20), lb_no(), at_ld(2.5f), xt_tm(0.0f), xb_go(-1, 0f, 17.5f), 0.5f);        
         W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 3.44f);
-        //W(ft_hl(11), nb_go(0, 13, 0, 12, 20), lb_no(), at_ld(4.0f), xt_tm(1.2f), xb_go(-1, 1, 27.5f), 1.94f);
-        //W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), .53f);
-		W(ft_hl(11), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2.1f), xt_tm(1.2f), xb_go(-1, 1, 27.5f), 1.0f);
+		W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2.25f), xt_tm(1.2f), xb_go(-1, 1, 27.5f), 1.0f);
         W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), .63f);
-        W(ft_hl(11), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(1.5f), xt_tm(1f), xb_go(-1, 1, 27.5f), 0.8f);
+        W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2.25f), xt_tm(1f), xb_go(-1, 1, 27.5f), 0.8f);
         W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.04f);
-        W(ft_hl(13), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(1.5f), xt_tm(1f), xb_go(-1, 1, 27.5f), 0.86f);
+        W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2.00f), xt_tm(1f), xb_go(-1, 1, 27.5f), 0.86f);
         W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.07f);
-        W(ft_hl(13), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(1.5f), xt_tm(.75f), xb_go(-1, 1, 27.5f), .53f);
+        W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2.00f), xt_tm(.75f), xb_go(-1, 1, 27.5f), .53f);
         W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.37f);
-        W(ft_hl(13), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(1.5f), xt_tm(.75f), xb_go(-1, 1, 27.5f), .4f);
+        W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2.00f), xt_tm(.75f), xb_go(-1, 1, 27.5f), .4f);
         W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 1.07f);
 
 		//Platforms
-        W(ft_hl(13), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2f), xt_tm(.45f), xb_go(0, 1, 17.5f), 1.9f);
-        W(ft_hl(13), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2f), xt_tm(.45f), xb_go(1, 1, 17.5f), 1.03f);
-        W(ft_hl(13), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2f), xt_tm(.45f), xb_go(-1, 1, 17.5f), 1.07f);
-        W(ft_hl(13), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(1.85f), xt_tm(1.5f), xb_go(1, 1, 17.5f), 2.16f);         
-        W(ft_hl(15), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(1.75f), xt_tm(2f), xb_go(-1, 1, 17.5f), 3.2f);
-        W(ft_hl(18), nb_go(-1, 13, -1, 12, 20), lb_no(), at_ld(3.0f), xt_tm(1.0f), xb_go(-1, 1, 17.5f), 0f);
+        W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(1.75f), xt_tm(.45f), xb_go(0, 1, 17.5f), 1.9f);
+        W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(1.75f), xt_tm(.45f), xb_go(1, 1, 17.5f), 1.03f);
+        W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(1.75f), xt_tm(.45f), xb_go(-1, 1, 17.5f), 1.07f);
+        W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2.25f), xt_tm(1.5f), xb_go(1, 1, 17.5f), 2.16f);         
+        W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2.75f), xt_tm(2f), xb_go(-1, 1, 17.5f), 3.2f);
+        W(ft_hl(18), nb_go(-1, 13, -1, 12, 20), lb_no(), at_ld(2.25f), xt_tm(1.0f), xb_go(-1, 1, 17.5f), 0f);
 				
         // Spawn the Tie Bomber Wave
         //W(ft_gd(60, 2), nb_go(40, 30, 40, 10, 20), lb_no(), at_ld(3.0f), xt_im(), xb_go(-1, 0, 17.5f), .5f);

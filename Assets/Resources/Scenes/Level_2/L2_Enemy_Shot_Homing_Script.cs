@@ -16,8 +16,16 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 	protected new void Start () {
         base.Start();
         explosion = this.GetComponentInChildren<Detonator>();
-        player = (IPlayer)(GameObject.FindGameObjectWithTag("Player").GetComponents(typeof(IPlayer)))[0];        
+        player = (IPlayer)(GameObject.FindGameObjectWithTag("Player").GetComponents(typeof(IPlayer)))[0];
+        StartCoroutine("StartEngineLoop");
 	}
+
+    IEnumerator StartEngineLoop()
+    {
+        yield return new WaitForSeconds(0.25f);
+        AudioSource[] audios = this.gameObject.GetComponents<AudioSource>();
+        audios[1].Play();
+    }
 	
 	// Update is called once per frame
     protected new void Update()
