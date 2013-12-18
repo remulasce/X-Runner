@@ -686,11 +686,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 220.784027
+      value: 252.160538
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.171442
+      value: 12.4446507
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -722,11 +722,11 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 3b9424a82d8b0e14f9766d971029f0fc, type: 2}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.5999999
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalScale.z
-      value: .75
+      value: .870000005
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: keyboardTexture
@@ -736,6 +736,10 @@ Prefab:
       propertyPath: controllerTexture
       value: 
       objectReference: {fileID: 2800000, guid: 826c7795b1d4ec145a4a668ee7ea7209, type: 3}
+    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
   m_RootGameObject: {fileID: 1390033005}
@@ -1591,8 +1595,8 @@ Transform:
   m_PrefabInternal: {fileID: 1691624123}
   m_GameObject: {fileID: 38922310}
   m_LocalRotation: {x: .00220844778, y: -.707103252, z: .707103431, w: -.00220844778}
-  m_LocalPosition: {x: 220.944107, y: 10.4925079, z: 4.78000069}
-  m_LocalScale: {x: 1.60063195, y: .533543825, z: .533543825}
+  m_LocalPosition: {x: 221.901596, y: 11.7284718, z: 4.78000069}
+  m_LocalScale: {x: 2.20000005, y: .800000012, z: .800000012}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!114 &38922315
@@ -2105,6 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 410078150}
     targetOffset: {x: 35, y: 0, z: 0}
@@ -2117,6 +2122,7 @@ MonoBehaviour:
       initialHomingOffset: {x: 0, y: 200, z: 0}
       percentToCloseOffset: .949999988
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &55613999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3705,15 +3711,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.x
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.y
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.z
-      value: 6
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Animation
@@ -3738,6 +3744,10 @@ Prefab:
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
+      propertyPath: m_TagString
+      value: L1_CrashingShip
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
@@ -6485,6 +6495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 2103125376}
     targetOffset: {x: 0, y: 2, z: 0}
@@ -6519,6 +6530,7 @@ MonoBehaviour:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &139450064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9098,9 +9110,10 @@ GameObject:
   - 82: {fileID: 198011909}
   - 114: {fileID: 198011910}
   - 114: {fileID: 198011911}
+  - 54: {fileID: 198011903}
   m_Layer: 0
   m_Name: CrashingShip_Hangar_Mid
-  m_TagString: Untagged
+  m_TagString: L1_CrashingShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9117,6 +9130,21 @@ Transform:
   m_Children:
   - {fileID: 1462050889}
   m_Father: {fileID: 0}
+--- !u!54 &198011903
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198011901}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &198011904
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9206,7 +9234,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 20, z: 6}
+  m_Size: {x: 16, y: 16, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &198011909
 AudioSource:
@@ -12111,6 +12139,10 @@ Prefab:
     - target: {fileID: 8200000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
       propertyPath: rolloffMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
+      propertyPath: detonatorOffset.x
+      value: 7.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81962ddb40712b40969534556fbdcd2, type: 2}
@@ -18471,13 +18503,29 @@ GameObject:
   - 82: {fileID: 392144373}
   - 114: {fileID: 392144374}
   - 114: {fileID: 392144375}
+  - 54: {fileID: 392144366}
   m_Layer: 0
   m_Name: CrashingShip_Hangar_Right
-  m_TagString: Untagged
+  m_TagString: L1_CrashingShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &392144366
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392144365}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!111 &392144367
 Animation:
   m_ObjectHideFlags: 0
@@ -18508,8 +18556,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 20, z: 6}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 16, y: 16, z: 2.5}
+  m_Center: {x: 2.70000005, y: -2.51999998, z: -3.72000003}
 --- !u!4 &392144371
 Transform:
   m_ObjectHideFlags: 0
@@ -22548,6 +22596,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.20000005
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3db765dfdba12e4181f5541b8d03f46, type: 2}
+    - target: {fileID: 2300002, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aad2cdb99d9679546981bc12b49850b7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
   m_RootGameObject: {fileID: 2057784734}
@@ -24241,6 +24297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: L1_CrashingShip
   targets:
   - target: {fileID: 198011901}
     targetOffset: {x: 5, y: 0, z: 0}
@@ -24278,6 +24335,7 @@ MonoBehaviour:
       initialHomingOffset: {x: -50, y: -100, z: 0}
       percentToCloseOffset: .949999988
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &503485065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24298,7 +24356,7 @@ Transform:
   m_PrefabInternal: {fileID: 1759080997}
   m_GameObject: {fileID: 503485063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 425.748932, y: 0, z: 0}
+  m_LocalPosition: {x: 355.625397, y: 0, z: 26.5171509}
   m_LocalScale: {x: 1, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -24485,6 +24543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 1931101797}
     targetOffset: {x: -2, y: 0, z: 0}
@@ -24596,6 +24655,7 @@ MonoBehaviour:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &510072680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26275,15 +26335,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.x
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.y
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.z
-      value: 6
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Animation
@@ -26308,6 +26368,22 @@ Prefab:
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
+      propertyPath: m_TagString
+      value: L1_CrashingShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
+      propertyPath: m_Center.x
+      value: 2.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
+      propertyPath: m_Center.z
+      value: -3.72000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
+      propertyPath: m_Center.y
+      value: -2.51999998
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
@@ -35967,15 +36043,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.x
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.y
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.z
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Animation
@@ -36008,6 +36084,10 @@ Prefab:
     - target: {fileID: 400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
+      propertyPath: m_TagString
+      value: L1_CrashingShip
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
@@ -37370,6 +37450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 1381477102}
     targetOffset: {x: 0, y: 2, z: 0}
@@ -37481,6 +37562,7 @@ MonoBehaviour:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &795758190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50838,7 +50920,7 @@ Transform:
   m_PrefabInternal: {fileID: 1713876165}
   m_GameObject: {fileID: 1062945978}
   m_LocalRotation: {x: .00220844778, y: -.707103252, z: .707103431, w: -.00220844778}
-  m_LocalPosition: {x: 174.709641, y: 1.56688714, z: 4.79387856}
+  m_LocalPosition: {x: 164.847992, y: 1.56688714, z: 4.79387856}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52173,6 +52255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 2103125376}
     targetOffset: {x: 0, y: 0, z: 0}
@@ -52204,7 +52287,7 @@ MonoBehaviour:
     laserType: 1
     isDetonator: 1
     homingMissileProperties:
-      initialHomingOffset: {x: 0, y: 100, z: 0}
+      initialHomingOffset: {x: 0, y: 10, z: 0}
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 1603359215}
@@ -52215,7 +52298,7 @@ MonoBehaviour:
     laserType: 1
     isDetonator: 1
     homingMissileProperties:
-      initialHomingOffset: {x: 0, y: 100, z: 0}
+      initialHomingOffset: {x: 0, y: 10, z: 0}
       percentToCloseOffset: .949999988
       closingMagnitude: 0
   - target: {fileID: 562175811}
@@ -52226,9 +52309,10 @@ MonoBehaviour:
     laserType: 1
     isDetonator: 1
     homingMissileProperties:
-      initialHomingOffset: {x: 0, y: 100, z: 0}
+      initialHomingOffset: {x: 0, y: 10, z: 0}
       percentToCloseOffset: .949999988
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &1086618696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53214,6 +53298,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.20000005
       objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aad2cdb99d9679546981bc12b49850b7, type: 2}
+    - target: {fileID: 2300000, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3db765dfdba12e4181f5541b8d03f46, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
   m_RootGameObject: {fileID: 1462050888}
@@ -64763,11 +64855,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].homingMissileProperties.initialHomingOffset.y
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].homingMissileProperties.initialHomingOffset.y
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].homingMissileProperties.percentToCloseOffset
@@ -64775,7 +64867,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].homingMissileProperties.initialHomingOffset.y
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].homingMissileProperties.percentToCloseOffset
@@ -68138,8 +68230,8 @@ Transform:
   m_PrefabInternal: {fileID: 21331809}
   m_GameObject: {fileID: 1390033005}
   m_LocalRotation: {x: .00220844778, y: -.707103252, z: .707103431, w: -.00220844778}
-  m_LocalPosition: {x: 220.784027, y: 12.171442, z: 4.69999981}
-  m_LocalScale: {x: 2.5999999, y: 1, z: .75}
+  m_LocalPosition: {x: 252.160538, y: 12.4446507, z: 4.69999981}
+  m_LocalScale: {x: 3, y: 1, z: .870000005}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!114 &1390033010
@@ -70338,6 +70430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 137554353}
     targetOffset: {x: 5, y: -6, z: 0}
@@ -70579,6 +70672,7 @@ MonoBehaviour:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: .949999988
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &1426980515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76206,13 +76300,29 @@ GameObject:
   - 82: {fileID: 1527582329}
   - 114: {fileID: 1527582330}
   - 114: {fileID: 1527582331}
+  - 54: {fileID: 1527582322}
   m_Layer: 0
   m_Name: CrashingShip_Hangar_Left
-  m_TagString: Untagged
+  m_TagString: L1_CrashingShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &1527582322
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1527582321}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!111 &1527582323
 Animation:
   m_ObjectHideFlags: 0
@@ -76243,7 +76353,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 3}
+  m_Size: {x: 16, y: 16, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1527582327
 Transform:
@@ -79118,6 +79228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 1621830967}
     targetOffset: {x: 0, y: 0, z: 0}
@@ -79449,6 +79560,7 @@ MonoBehaviour:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .949999988
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &1581282642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85038,11 +85150,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 220.944107
+      value: 221.901596
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.4925079
+      value: 11.7284718
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -85074,15 +85186,15 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 587f6e7c49fe34348a36eb0a3d8b4e6f, type: 2}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.60063195
+      value: 2.20000005
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalScale.y
-      value: .533543825
+      value: .800000012
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalScale.z
-      value: .533543825
+      value: .800000012
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: keyboardTexture
@@ -86066,7 +86178,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 174.709641
+      value: 164.847992
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -86113,91 +86225,6 @@ Prefab:
   m_RootGameObject: {fileID: 1062945978}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1715713363
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-  m_PrefabInternal: {fileID: 1782361592}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1715713368}
-  - 33: {fileID: 1715713367}
-  - 64: {fileID: 1715713366}
-  - 23: {fileID: 1715713365}
-  - 114: {fileID: 1715713364}
-  m_Layer: 0
-  m_Name: GUI_TUTORIAL_FloatJump
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1715713364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1782361592}
-  m_GameObject: {fileID: 1715713363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87ae08f3d85898c4a9f8e57a0d26fcf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyboardTexture: {fileID: 2800000, guid: f6175f90ae0312e4a8875a701072b223, type: 3}
-  controllerTexture: {fileID: 2800000, guid: f8154c0ca60b47a4bbd358354fb986fc, type: 3}
---- !u!23 &1715713365
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: abeebff734040e140a5ff258d1a4461a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1782361592}
-  m_GameObject: {fileID: 1715713363}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 587f6e7c49fe34348a36eb0a3d8b4e6f, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
---- !u!64 &1715713366
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: abeebff734040e140a5ff258d1a4461a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1782361592}
-  m_GameObject: {fileID: 1715713363}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1715713367
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: abeebff734040e140a5ff258d1a4461a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1782361592}
-  m_GameObject: {fileID: 1715713363}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1715713368
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-  m_PrefabInternal: {fileID: 1782361592}
-  m_GameObject: {fileID: 1715713363}
-  m_LocalRotation: {x: .00220844778, y: -.707103252, z: .707103431, w: -.00220844778}
-  m_LocalPosition: {x: 147.873611, y: 2.09547806, z: 4.78000069}
-  m_LocalScale: {x: 1.82472038, y: .608239889, z: .608239889}
-  m_Children: []
-  m_Father: {fileID: 0}
 --- !u!1 &1718347215
 GameObject:
   m_ObjectHideFlags: 0
@@ -87213,6 +87240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 34221887}
     targetOffset: {x: 0, y: 0, z: 0}
@@ -87390,6 +87418,7 @@ MonoBehaviour:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &1748569536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87736,7 +87765,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 425.748932
+      value: 355.625397
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -87744,7 +87773,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 26.5171509
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -88449,6 +88478,14 @@ Prefab:
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[12].homingMissileProperties.percentToCloseOffset
       value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: tagToCompare
+      value: L1_CrashingShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
@@ -89438,74 +89475,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!1001 &1782361592
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 147.873611
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.09547806
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 4.78000069
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: .00220844778
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -.707103252
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: .707103431
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -.00220844778
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_Name
-      value: GUI_TUTORIAL_FloatJump
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 587f6e7c49fe34348a36eb0a3d8b4e6f, type: 2}
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.82472038
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .608239889
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .608239889
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: keyboardTexture
-      value: 
-      objectReference: {fileID: 2800000, guid: f6175f90ae0312e4a8875a701072b223, type: 3}
-    - target: {fileID: 11400000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-      propertyPath: controllerTexture
-      value: 
-      objectReference: {fileID: 2800000, guid: f8154c0ca60b47a4bbd358354fb986fc, type: 3}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: abeebff734040e140a5ff258d1a4461a, type: 2}
-  m_RootGameObject: {fileID: 1715713363}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1782600129
 GameObject:
   m_ObjectHideFlags: 0
@@ -92010,6 +91979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 626472868}
     targetOffset: {x: 0, y: 0, z: -25}
@@ -92067,6 +92037,7 @@ MonoBehaviour:
       initialHomingOffset: {x: 0, y: 0, z: 0}
       percentToCloseOffset: 0
       closingMagnitude: 0
+  activated: 0
 --- !u!65 &1834276215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92525,6 +92496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff4eb0b5775d4468290b97a352fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagToCompare: Player
   targets:
   - target: {fileID: 137554353}
     targetOffset: {x: 0, y: 0, z: 0}
@@ -92581,6 +92553,7 @@ MonoBehaviour:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
       closingMagnitude: 32
+  activated: 0
 --- !u!65 &1847976527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103546,7 +103519,7 @@ MonoBehaviour:
   postActivationConstraints: 0
   postActivationParticleSystem: {fileID: 0}
   detonatorPrefab: {fileID: 100000, guid: 2c06a2a4aad0b4b4b9a0c2dcbfbd738a, type: 2}
-  detonatorOffset: {x: 0, y: 1, z: 10}
+  detonatorOffset: {x: 7.5, y: 1, z: 10}
 --- !u!54 &2047753711
 Rigidbody:
   m_ObjectHideFlags: 0

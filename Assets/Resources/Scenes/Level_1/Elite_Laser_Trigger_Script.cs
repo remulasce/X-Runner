@@ -12,6 +12,8 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
     public GameObject postCollisionParticleSystem; // Sometimes, if the laser hits something, a particle system should go off.
      * */
 
+    public string tagToCompare = "Player";
+
     public enum laserType { REGULAR, HOMING, BIG_MISSILE };
 
     [System.Serializable]
@@ -43,6 +45,8 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
 
     public targetInformation[] targets; // Will be settable from the inspector
 
+    public bool activated = false;
+
     private Elite_Ship_Laser_Script eliteShipLaserScript;
     // Use this for initialization
 	void Start () {
@@ -56,8 +60,9 @@ public class Elite_Laser_Trigger_Script : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(tagToCompare) && !activated)
         {
+            activated = true;
             for (int i = 0; i < targets.Length; i++)
             {
                 if (targets[i].laserType == laserType.REGULAR)
