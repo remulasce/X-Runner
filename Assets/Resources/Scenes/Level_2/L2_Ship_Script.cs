@@ -502,8 +502,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                     col.rigidbody.velocity = col.rigidbody.velocity.normalized;
                     col.rigidbody.velocity = Vector3.Reflect(col.rigidbody.velocity, col.contacts[0].normal) * (col.gameObject.GetComponent<L2_Asteroid_Script>().maxVelocity + (col.gameObject.GetComponent<L2_Asteroid_Script>().extraHitVelocity * col.gameObject.GetComponent<L2_Asteroid_Script>().numberOfTimesHit));
                     col.gameObject.GetComponent<L2_Asteroid_Script>().hasReflectedOffPlayer = true;
-                    col.gameObject.GetComponent<L2_Asteroid_Script>().lastHit = L2_Asteroid_Script.LAST_HIT.PLAYER;
-                    col.gameObject.GetComponent<L2_Asteroid_Script>().numberOfTimesHit++;
+                    col.gameObject.GetComponent<L2_Asteroid_Script>().lastHit = L2_Asteroid_Script.LAST_HIT.PLAYER;                    
                 }
             }
         }        
