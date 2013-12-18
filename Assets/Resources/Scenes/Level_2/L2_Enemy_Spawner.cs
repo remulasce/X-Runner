@@ -102,8 +102,8 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         //----------------------------------------------------------------------------------------------      
         
         // Double Strafe Wave
-        W(ft_hl(5), nb_go(-8, 20, -8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), -0.1f);
-        W(ft_hl(5), nb_go(8, 20, 8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0.0f);
+        W(ft_hl(5), nb_go(-8, 20, -8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), -0.1f, true);
+        W(ft_hl(5), nb_go(8, 20, 8, -25, 15), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0.0f, true);
         E(EliteBehavior.QuickStrafe);
         
         //----------------------------------------------------------------------------------------------  
@@ -398,6 +398,14 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 	
 	}
 
+    void W(SpawnTDS.FormationType f, SpawnTDS.EntryBehavior en, SpawnTDS.LoiterBehavior l, SpawnTDS.AttackType a, SpawnTDS.ExitTrigger ext, SpawnTDS.ExitBehavior exb, float timeTillNextWave, bool boundsCheck)
+    {
+        //Start
+        // This will do things.
+        waveList.Add(new SpawnTDS.Wave(f, en, l, a, ext, exb, timeTillNextWave, boundsCheck));
+
+    }
+
     // This is specially for switching the asteroid spawner on
     void W(SpawnTDS.FormationType f)
     {        
@@ -417,7 +425,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
                 W(ft_ef(), nb_go(-20, 0, 20, 0, 10), lb_no(), at_lt(0.75f), xt_im(), xb_go(-1, 0, 10), 0);
             break;
 		case EliteBehavior.FinalBattle:
-			W (ft_ef(), nb_go (0, 20, 0, 5, 4), lb_lz(-13, 7, 13, 7, 2.5f)/*lb_no()*/, at_hm(2.25f), xt_no (), xb_no (), 0);            
+			W (ft_ef(), nb_go (0, 20, 0, 5, 4), lb_lz(-13, 7, 13, 7, 1.75f), at_hm(2.25f), xt_no (), xb_no (), 0);            
 			break;
 		case EliteBehavior.Test:
 			W (ft_eb(), nb_go (-15, 12, -12, 12), lb_wp (new float[] { -12, 10, 12, 10, -12, -2, 12, -2, -12, 15 }, 2.5f), 

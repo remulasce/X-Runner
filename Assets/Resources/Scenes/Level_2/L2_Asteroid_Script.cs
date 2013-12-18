@@ -56,25 +56,34 @@ public class L2_Asteroid_Script : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("L2_PlayerShot"))
             {
+                if (!isCinematic) // Make sure that the cinematic asteroid cannot be moved by laser fire
+                {
+                    if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x)
+                       || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x)))
+                       || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
+                       ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
+                    {
+                        this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + (extraHitVelocity * numberOfTimesHit));
+                    }
+                }
+            
                 targetedByEnemy = false;
                 if (lastHit != LAST_HIT.PLAYER)
-                {
-                    if (!isCinematic)
+                {                    
+                    if (!isCinematic) // Make sure that the cinematic asteroid cannot be moved by laser fire
                     {
                         // Make sure to instantiate the prefab object for this
                         GameObject sound = (GameObject)Instantiate(Resources.Load("Prefabs/Cross_Level/Audio_SFX_Object"));
                         sound.GetComponent<Audio_SFX_Object_Script>().StartSound(audios[Mathf.Clamp(numberOfTimesHit, 0, 8)]);
-                        sound.transform.position = this.transform.position;
-                        
+                        sound.transform.position = this.transform.position;                       
+                    }
 
-                        if ((((((this.rigidbody.velocity.x > 0 && player.transform.position.x < elitePosition.x)
-                            || this.rigidbody.velocity.x < 0 && player.transform.position.x > elitePosition.x)))
-                            || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
-                            ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
-                        {
-                            this.rigidbody.velocity = Vector3.Normalize(elitePosition - player.transform.position) * (maxVelocity + extraHitVelocity);
-                        }
-                    }                    
+                    if (numberOfTimesHit == 8)
+                    {
+                        this.rigidbody.mass = 10000;
+                        this.rigidbody.velocity = this.rigidbody.velocity.normalized * (maxVelocity + (extraHitVelocity * numberOfTimesHit));
+                        this.rigidbody.angularVelocity *= 10000;                        
+                    }
 
                     numberOfTimesHit++;
                     lastHit = LAST_HIT.PLAYER;
@@ -92,7 +101,7 @@ public class L2_Asteroid_Script : MonoBehaviour {
                 {
                     if (lastHit == LAST_HIT.PLAYER)
                     {
-                        if (!player.GetComponent<L2_Ship_Script>().isDead) // Fixes a bug where asteroids just sit still in space
+                        if (!player.GetComponent<L2_Ship_Script>().isDead && numberOfTimesHit < 8) // Fixes a bug where asteroids just sit still in space, also makes it so elite cannot shoot an asteroid back more than 4 times
                         {
                             if (numberOfTimesHit > 0)
                             {
@@ -106,7 +115,7 @@ public class L2_Asteroid_Script : MonoBehaviour {
                                 || numberOfTimesHit > 2) && this.transform.position.y < (elitePosition.y + 1)
                                 ) // Do Reflecting always if # of hits > 2 && the y position is not too high over the elite
                             {
-                                this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * (maxVelocity + extraHitVelocity);
+                                this.rigidbody.velocity = Vector3.Normalize(player.transform.position - elitePosition) * (maxVelocity + (extraHitVelocity * numberOfTimesHit));
                             }
                             numberOfTimesHit++;
                         }

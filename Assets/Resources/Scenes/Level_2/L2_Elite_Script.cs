@@ -287,7 +287,7 @@ public class L2_Elite_Script : MonoBehaviour {
 
         Object.Destroy(this.transform.FindChild("Shield_Dome_Elite").gameObject);
 
-        this.GetComponent<SphereCollider>().radius = 50; // Shot missiles at all of the asteroids in the area
+        this.GetComponent<CapsuleCollider>().radius = 50; // Shot missiles at all of the asteroids in the area
 
         GameObject.FindGameObjectWithTag("L2_Asteroid_Spawner").GetComponent<Asteroid_Spawner_Script>().state = Asteroid_Spawner_Script.ENABLE_STATE.ON_CINEMATIC;
 
@@ -390,7 +390,7 @@ public class L2_Elite_Script : MonoBehaviour {
                 {
                     laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
                     laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
-                    laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 20;
+                    laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 30;
                     other.gameObject.GetComponent<L2_Asteroid_Script>().targetedByEnemy = true;
 					lastReflect = Time.time;
                 }
@@ -399,7 +399,7 @@ public class L2_Elite_Script : MonoBehaviour {
             {
                 laser = (GameObject)Instantiate(Resources.Load("Prefabs/Level_2/L2_Enemy_Shot_Homing"), this.transform.position, Quaternion.Euler(0, 0, 0));
                 laser.GetComponent<L2_Enemy_Shot_Target_Script>().SetTarget(other.gameObject);
-                laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 20;
+                laser.GetComponent<L2_Enemy_Shot_Target_Script>().speed = 30;
                 other.gameObject.GetComponent<L2_Asteroid_Script>().targetedByEnemy = true;
 				lastReflect = Time.time;
             }

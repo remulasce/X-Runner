@@ -29,6 +29,10 @@ public class L2_Enemy_Script : MonoBehaviour {
     //Help with AI loitering
     public float nextLoiterChange;
     public int curWaypoint = 0;
+
+    //Used to make the ships go away faster
+    private bool isOnScreen = false;
+    public bool boundsCheck = false; // If true, only the magnitude check will be enabled for de-spawning
 	
 	// Use this for initialization
 	void Start () {
@@ -60,6 +64,10 @@ public class L2_Enemy_Script : MonoBehaviour {
 		{
 			Destroy(this.gameObject);
 		}
+        else if (isOnScreen && !GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds))
+        {
+            Destroy(this.gameObject);
+        }
 	}
 	
 	/** "At" means "Close Enough", so manually move all the way if
@@ -210,6 +218,12 @@ public class L2_Enemy_Script : MonoBehaviour {
 			DoExit();
 			break;
 		}
+
+        // Check to see if ship is on screen yet
+        if (!isOnScreen && !boundsCheck && GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), this.collider.bounds))
+        {
+            isOnScreen = true;
+        }
 		
 		DoShooting();
 		

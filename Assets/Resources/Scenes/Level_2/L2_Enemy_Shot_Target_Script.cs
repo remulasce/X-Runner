@@ -8,6 +8,7 @@ public class L2_Enemy_Shot_Target_Script : L2_Enemy_Shot_Script
 
     // Specialized target
     public GameObject target = null;
+    protected bool isTargetSet = false;
 
 	// Use this for initialization
 	protected new void Start () {
@@ -36,6 +37,7 @@ public class L2_Enemy_Shot_Target_Script : L2_Enemy_Shot_Script
         this.target = target;        
         this.transform.LookAt(target.transform.position);
         this.rigidbody.velocity = Vector3.zero;
-        this.rigidbody.velocity = this.transform.forward * speed;        
+        this.rigidbody.velocity = this.transform.forward * speed;
+        isTargetSet = true;
     }
 }

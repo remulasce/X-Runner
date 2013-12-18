@@ -25,8 +25,18 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
         base.Update();
         if (!target)
         {
+            if (isTargetSet && !isDestroyed) // If asteroid or other target is destroyed, we do not want the missile to follow the player
+            {
+                isDestroyed = true;
+                explosion.transform.parent = null;
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                this.gameObject.transform.position = new Vector3(0, 0, -100);
+                this.gameObject.audio.enabled = false;
+                Object.Destroy(this.gameObject, 5.0f);
+            }
             //if (!player.GetComponent<L2_Ship_Script>().isDead || !player.GetComponent<L4_Player_Script>().isDead) // Follow the player if it has not been destroyed yet
-            if (!player.IsDead())
+            else if (!player.IsDead())
             {
 				//this.transform.LookAt(player.GetPosition());
 				
@@ -46,6 +56,7 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
                     this.speed += 0.05f;                
                 }
             }
+
             //Stop following if he dies
             else
             {

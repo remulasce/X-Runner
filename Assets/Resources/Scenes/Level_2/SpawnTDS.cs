@@ -27,8 +27,8 @@ public class SpawnTDS : MonoBehaviour {
 		public ExitTrigger xt;
 		public ExitBehavior xb;
 		public float waveDuration;
-		
-		
+
+        public bool boundsCheck = false;
         public bool hasSpawned = false;
         public float waveSpeed = 7.0f;
 		
@@ -38,6 +38,11 @@ public class SpawnTDS : MonoBehaviour {
 		{
 			this.ft = ft; this.nb = nb; this.lb = lb; this.at = at; this.xt = xt; this.xb = xb; this.waveDuration = timeTillNextWave;
 		}
+
+        public Wave(FormationType ft, EntryBehavior nb, LoiterBehavior lb, AttackType at, ExitTrigger xt, ExitBehavior xb, float timeTillNextWave, bool boundsCheck)
+        {
+            this.ft = ft; this.nb = nb; this.lb = lb; this.at = at; this.xt = xt; this.xb = xb; this.waveDuration = timeTillNextWave; this.boundsCheck = boundsCheck;
+        }
 
         public Wave(FormationType ft)
         {
@@ -65,12 +70,14 @@ public class SpawnTDS : MonoBehaviour {
 
                             Vector3 pos = new Vector3(nb.startPos.x, nb.startPos.y) -
                                     new Vector3((i - ft.width / 2) * 2, (j - ft.height / 2) * 2, 0);
-                            GameObject e = (GameObject)GameObject.Instantiate(Resources.Load(enemyPrefabPath), pos, defRot);
+                            GameObject e = (GameObject)GameObject.Instantiate(Resources.Load(enemyPrefabPath), pos, defRot);                            
 
                             if (e.GetComponent<L2_Enemy_Script>())
                             {
                                 e.GetComponent<L2_Enemy_Script>().SetWaveAI(this,
                                     -new Vector3((i - ft.width / 2) * 2, (j - ft.height / 2) * 2, 0));
+
+                                e.GetComponent<L2_Enemy_Script>().boundsCheck = this.boundsCheck;
                                 this.enemies.Add(e);
                             }
                             else

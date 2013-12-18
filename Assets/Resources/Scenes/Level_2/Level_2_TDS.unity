@@ -634,7 +634,7 @@ GameObject:
   - 4: {fileID: 273060997}
   - 33: {fileID: 273060996}
   - 23: {fileID: 273060995}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   - 65: {fileID: 292744467}
   - 114: {fileID: 292744470}
   - 54: {fileID: 292744471}
-  - 135: {fileID: 292744472}
+  - 136: {fileID: 292744468}
   - 82: {fileID: 292744466}
   m_Layer: 14
   m_Name: Elite
@@ -901,6 +901,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &292744468
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292744465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.85000002
+  m_Height: 6
+  m_Direction: 1
+  m_Center: {x: 0, y: -.75, z: 0}
 --- !u!4 &292744469
 Transform:
   m_ObjectHideFlags: 0
@@ -932,7 +945,7 @@ MonoBehaviour:
   curMaxSpeed: 7
   nextLoiterChange: 0
   curWaypoint: 0
-  endExplosion: {fileID: 100000, guid: 57be637385d488c4cb77f4a745d14c1b, type: 2}
+  endExplosion: {fileID: 100000, guid: 993e280945dbb7b459082e1ccfc16dbf, type: 2}
   isShotDown: 0
 --- !u!54 &292744471
 Rigidbody:
@@ -950,19 +963,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!135 &292744472
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500002, guid: b24170436125e70448520c272c2d9a2d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 292744465}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &307791157
 Prefab:
   m_ObjectHideFlags: 0
@@ -1021,7 +1021,7 @@ GameObject:
   - 4: {fileID: 327133420}
   - 33: {fileID: 327133422}
   - 23: {fileID: 327133421}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,7 +1158,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 449363652}
   - 95: {fileID: 449363653}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2073,6 +2073,18 @@ Prefab:
       propertyPath: m_Radius
       value: 1.28999996
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f44d82d9268cadf499aec0010dfb2390, type: 2}
   m_RootGameObject: {fileID: 1556197947}
@@ -2571,7 +2583,7 @@ MonoBehaviour:
   iSpeed: 1
   shieldHitColor: {r: 1, g: 1, b: 1, a: 1}
   flashTime: .0500000007
-  timeToRegenerateShields: 4
+  timeToRegenerateShields: 7.5
   tagToCompareFor: L2_PlayerShot
   musicManager: {fileID: 0}
 --- !u!23 &1311365488
