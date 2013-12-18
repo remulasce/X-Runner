@@ -147,6 +147,18 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: ff940f03ecbe2274caf85cce7fd0f2ab,
         type: 2}
+    - target: {fileID: 5400000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
+      propertyPath: m_Radius
+      value: .495000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
   m_RootGameObject: {fileID: 49616118}
@@ -807,8 +819,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -1320,7 +1332,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: .495000005
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &49616125
 MeshFilter:
@@ -2389,6 +2401,14 @@ Prefab:
       propertyPath: detonatorOffset.y
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1885042331}
@@ -2490,8 +2510,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -3000,8 +3020,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -3392,8 +3412,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -3623,6 +3643,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1361347536}
@@ -3724,8 +3752,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -4157,6 +4185,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.y
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -4646,8 +4682,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -5720,7 +5756,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: .495000005
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &224614799
 MeshFilter:
@@ -5808,6 +5844,14 @@ Prefab:
     - target: {fileID: 11400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: detonatorOffset.y
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -6522,6 +6566,14 @@ Prefab:
       propertyPath: detonatorOffset.y
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 147577316}
@@ -6602,6 +6654,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -7373,8 +7433,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -7803,6 +7863,14 @@ Prefab:
       propertyPath: unlimitedWallJumps
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
+      propertyPath: m_Radius
+      value: .495000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4db08fa91a81b324e81e8203b6ca8ccf, type: 2}
   m_RootGameObject: {fileID: 1835952090}
@@ -8074,8 +8142,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -8365,6 +8433,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 425720486}
@@ -8516,6 +8592,14 @@ Prefab:
     - target: {fileID: 11400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: detonatorOffset.y
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -8939,6 +9023,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 734553387}
@@ -9054,6 +9146,14 @@ Prefab:
     - target: {fileID: 6500000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Size.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -9742,8 +9842,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -10023,8 +10123,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -10160,6 +10260,14 @@ Prefab:
       propertyPath: m_Force.y
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 355447297}
@@ -10231,6 +10339,14 @@ Prefab:
     - target: {fileID: 7500000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Force.y
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -10333,8 +10449,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -11689,8 +11805,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -12054,8 +12170,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -12718,8 +12834,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -12993,6 +13109,14 @@ Prefab:
     - target: {fileID: 7500000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Force.y
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -14396,8 +14520,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -15437,8 +15561,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -15712,6 +15836,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1669722232}
@@ -15925,6 +16057,14 @@ Prefab:
       propertyPath: m_Force.y
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1110894279}
@@ -15997,6 +16137,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: -1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -16099,8 +16247,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -16725,8 +16873,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -17386,8 +17534,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -18799,6 +18947,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: -2000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1206871490}
@@ -18956,6 +19112,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: 2000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1964094629}
@@ -19109,8 +19273,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -19330,6 +19494,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -20029,8 +20201,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -20617,8 +20789,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -21338,6 +21510,14 @@ Prefab:
       propertyPath: detonatorOffset.y
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1630335293}
@@ -21631,8 +21811,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -21776,6 +21956,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -22018,8 +22206,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -23153,6 +23341,14 @@ Prefab:
       propertyPath: m_Constraints
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 2050300111}
@@ -23590,8 +23786,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -23902,6 +24098,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 071bb614166132f4cb9b4c7fd8fdaa21, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1453794260}
@@ -24341,8 +24545,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -24805,8 +25009,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
@@ -25427,7 +25631,7 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
@@ -25682,8 +25886,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
@@ -25894,6 +26098,14 @@ Prefab:
     - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Constraints
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -26349,8 +26561,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
@@ -28680,6 +28892,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1528438221}
@@ -29325,6 +29545,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: -2000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1574678005}
@@ -29426,8 +29654,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -29659,6 +29887,14 @@ Prefab:
     - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Constraints
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -32031,6 +32267,14 @@ Prefab:
       propertyPath: m_Force.y
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 131732098}
@@ -32103,6 +32347,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -32325,6 +32577,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 822493425}
@@ -32796,6 +33056,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: -2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -33271,8 +33539,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -34464,8 +34732,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -34912,6 +35180,14 @@ Prefab:
       propertyPath: detonatorOffset.y
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1853541987}
@@ -35228,6 +35504,14 @@ Prefab:
     - target: {fileID: 11400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: detonatorOffset.y
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -37010,8 +37294,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -37231,8 +37515,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -37466,8 +37750,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
@@ -37632,8 +37916,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -38212,6 +38496,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: -1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -39569,6 +39861,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1074177658}
@@ -40269,6 +40569,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: -1100
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1564901580}
@@ -40350,6 +40658,18 @@ Prefab:
     - target: {fileID: 11400004, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
       propertyPath: specialForceToApply.x
       value: 320000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
+      propertyPath: m_Radius
+      value: .495000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6725b98168cdb942a37da7a485a6b69, type: 2}
@@ -40593,8 +40913,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
@@ -41937,8 +42257,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -42349,6 +42669,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: -1100
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 295133476}
@@ -42416,6 +42744,14 @@ Prefab:
     - target: {fileID: 11400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: detonatorOffset.y
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -42488,6 +42824,14 @@ Prefab:
     - target: {fileID: 7500000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Force.y
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -42703,6 +43047,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 2119643553}
@@ -42779,6 +43131,10 @@ Prefab:
     - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -42881,8 +43237,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -43162,6 +43518,14 @@ Prefab:
     - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Constraints
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -44173,6 +44537,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1453132365}
@@ -44745,6 +45117,14 @@ Prefab:
       propertyPath: detonatorOffset.y
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1731295506}
@@ -45293,6 +45673,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: -2000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 350555138}
@@ -45567,8 +45955,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -45748,8 +46136,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -46244,6 +46632,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1839100502}
@@ -46591,6 +46987,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: -2000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 524416172}
@@ -46808,8 +47212,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
@@ -47299,6 +47703,14 @@ Prefab:
     - target: {fileID: 7500000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Force.y
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -47832,8 +48244,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -48509,8 +48921,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -48675,8 +49087,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -49962,8 +50374,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -50349,8 +50761,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -50542,6 +50954,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -50759,6 +51179,14 @@ Prefab:
     - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Constraints
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -51902,8 +52330,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -52255,6 +52683,14 @@ Prefab:
     - target: {fileID: 7500000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: m_Force.y
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -53240,8 +53676,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -54603,6 +55039,14 @@ Prefab:
       propertyPath: specialForceToApply.x
       value: -1100
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 451469998}
@@ -54731,6 +55175,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.y
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -55414,8 +55866,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -55669,8 +56121,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -56027,6 +56479,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 767210008}
@@ -58259,7 +58719,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: .495000005
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1835952098
 MeshFilter:
@@ -58389,8 +58849,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -60014,8 +60474,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -60180,8 +60640,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -60671,6 +61131,14 @@ Prefab:
       propertyPath: m_Constraints
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1478074650}
@@ -60861,8 +61329,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -61445,8 +61913,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -62138,6 +62606,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -62882,6 +63358,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 690849130}
@@ -63091,6 +63575,14 @@ Prefab:
       propertyPath: m_Force.y
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 1527438380}
@@ -63272,6 +63764,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a7bb811673a8a63438732be27f3c96bf, type: 2}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 360752446}
@@ -63489,8 +63989,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -64050,6 +64550,14 @@ Prefab:
     - target: {fileID: 11400004, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
       propertyPath: specialForceToApply.x
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
@@ -65977,8 +66485,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
@@ -67931,6 +68439,14 @@ Prefab:
       propertyPath: m_Force.y
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdc003dc5926c6429eb8a5d5a7d3b9a, type: 2}
   m_RootGameObject: {fileID: 550178828}
@@ -68225,8 +68741,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -68406,8 +68922,8 @@ Rigidbody:
   m_Mass: 1e+09
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
