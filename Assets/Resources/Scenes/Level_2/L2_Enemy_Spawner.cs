@@ -94,7 +94,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         //----------------------------------------------------------------------------------------------
         
-        //Elite makes a pass at you + Wingmen
+        //Elite makes a pass at you
         E(EliteBehavior.QuickPass);
 
         W(ft_hl(5), nb_go(10, 15, 0, 0, 15), lb_no(), at_ld(4.0f), xt_im(), xb_go(-45, 0, 5), 6.5f); 
@@ -116,20 +116,20 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         //Elite quick visit
         E(EliteBehavior.HangBehind);         
 
-        W(ft_gd(15, 4), nb_go(0, 40, 0, 6, 15), lb_lz(0, 8, 0, 0, 5.0f, 4.0f), at_lt(9.5f), xt_no(), xb_no(), 0f);           
+        W(ft_gd(15, 4), nb_go(0, 40, 0, 6, 15), lb_lz(0, 8, 0, 0, 5.0f, 4.0f), at_lt(11.5f), xt_no(), xb_no(), 0f);           
         
         //----------------------------------------------------------------------------------------------
 
         // Navigation Dodging Practice + Elite Strafe
         
-        W(ft_vl(4), nb_go(30,  5, -14,  5, 10), lb_lz(-14, 0, 0, 0, 3.0f, 5.0f), at_hm(10), xt_tm(5f), xb_go(1, 0, 20), -0.1f);
-        W(ft_vl(4), nb_go(30, -5, -14, -5, 10), lb_lz(-14, 0, 0, 0, 3.0f, 5.0f), at_hm(10), xt_tm(5f), xb_go(1, 0, 20), 0f);
+        W(ft_vl(4), nb_go(30,  5, -14,  5, 10), lb_lz(-14, 0, 0, 0, 3.0f, 5.0f), at_hm(9), xt_tm(5f), xb_go(1, 0, 20), -0.1f);
+        W(ft_vl(4), nb_go(30, -5, -14, -5, 10), lb_lz(-14, 0, 0, 0, 3.0f, 5.0f), at_hm(9), xt_tm(5f), xb_go(1, 0, 20), 0f);
 
-        W(ft_vl(4), nb_go(-30,  5, 14,  5, 10), lb_lz(0, 0, 14, 0, 3.0f, 5.0f), at_hm(10), xt_tm(5f), xb_go(-1, 0, 20), 0f);
-        W(ft_vl(4), nb_go(-30, -5, 14, -5, 10), lb_lz(0, 0, 14, 0, 3.0f, 5.0f), at_hm(10), xt_tm(5f), xb_go(-1, 0, 20), 0f);        
+        W(ft_vl(4), nb_go(-30,  5, 14,  5, 10), lb_lz(0, 0, 14, 0, 3.0f, 5.0f), at_hm(9), xt_tm(5f), xb_go(-1, 0, 20), 0f);
+        W(ft_vl(4), nb_go(-30, -5, 14, -5, 10), lb_lz(0, 0, 14, 0, 3.0f, 5.0f), at_hm(9), xt_tm(5f), xb_go(-1, 0, 20), 0f);        
 
-        W(ft_hl(5), nb_go( 8, -30,  8, 10, 10), lb_lz(0, 10, 0, 0, 3.0f, 5.0f), at_ld(10), xt_tm(5f), xb_go(0, -1, 20), 0f);
-        W(ft_hl(5), nb_go(-8, -30, -8, 10, 10), lb_lz(0, 10, 0, 0, 3.0f, 5.0f), at_ld(10), xt_tm(5f), xb_go(0, -1, 20), 3.5f);
+        W(ft_hl(5), nb_go( 8, -30,  8, 10, 10), lb_lz(0, 10, 0, 0, 3.0f, 5.0f), at_lt(10), xt_tm(5f), xb_go(0, -1, 20), 0f);
+        W(ft_hl(5), nb_go(-8, -30, -8, 10, 10), lb_lz(0, 10, 0, 0, 3.0f, 5.0f), at_lt(10), xt_tm(5f), xb_go(0, -1, 20), 3.5f);
 
         E(EliteBehavior.DownStrafe);
 
@@ -150,7 +150,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         W(ft_ac());
 
         // Giant Vertical Wave
-        W(ft_gd(15, 15), nb_go(0, 27.5f, 0, 8, 3.5f), lb_no(), at_hm(21f), xt_im(), xb_go(0, -1, 17f), 6f);
+        W(ft_gd(15, 15), nb_go(0, 27.25f, 0, 8, 3.5f), lb_no(), at_hm(21f), xt_im(), xb_go(0, -1, 17f), 6f);
 
         //----------------------------------------------------------------------------------------------
 
@@ -165,60 +165,60 @@ public class L2_Enemy_Spawner : MonoBehaviour {
         // Blocks - Each Alternate between furing homing and target missiles
 
         // Horizontal Line Block
-        W(ft_hl(4), nb_go(10, 30, 10, 4, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(4), nb_go(10, 30, 10, 4, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-14, 30, -14, 6, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_vl(4), nb_go(-14, 30, -14, 6, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // S Block
-        W(ft_hl(2), nb_go(4, 30, 4, 4, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(6, 30, 6, 6, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(4, 30, 4, 4, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(6, 30, 6, 6, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(3), nb_go( 0, 30,  0, 4, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-2, 30, -2, 6, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(3), nb_go( 0, 30,  0, 4, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-2, 30, -2, 6, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // S Block
-        W(ft_hl(2), nb_go(2, 30,  0, 6, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(0, 30, -2, 8, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(2, 30,  0, 6, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(0, 30, -2, 8, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-4, 30, -4, 6, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_vl(4), nb_go(-4, 30, -4, 6, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // T Block
-        W(ft_hl(1), nb_go(4, 30, 4, 6, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(3), nb_go(4, 30, 4, 8, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(1), nb_go(4, 30, 4, 6, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(3), nb_go(4, 30, 4, 8, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(3), nb_go(12, 30, 12, 6, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(14, 30, 14, 8, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(3), nb_go(12, 30, 12, 6, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(14, 30, 14, 8, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(3), nb_go(-8,  30, -8,  4, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-10, 30, -10, 6, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(3), nb_go(-8,  30, -8,  4, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-10, 30, -10, 6, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // L Block
-        W(ft_hl(2), nb_go(-8, 30, -8, 6, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-6, 30, -6, 8, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(1), nb_go(-6, 30, -6, 10, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(-8, 30, -8, 6, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-6, 30, -6, 8, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(1), nb_go(-6, 30, -6, 10, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // S Block
-        W(ft_hl(2), nb_go(10, 30, 10, 8, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(12, 30, 12, 10, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(10, 30, 10, 8, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(12, 30, 12, 10, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // T Block
-        W(ft_hl(1), nb_go(8, 30, 8, 8, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(3), nb_go(8, 30, 8, 10, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(1), nb_go(8, 30, 8, 8, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(3), nb_go(8, 30, 8, 10, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Horizontal Line Block
-        W(ft_hl(4), nb_go(0, 30, 0, 10, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(4), nb_go(0, 30, 0, 10, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Square Block
-        W(ft_hl(2), nb_go(-10, 30, -10, 8, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
-        W(ft_hl(2), nb_go(-10, 30, -10, 10, 20), lb_no(), at_lt(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
+        W(ft_hl(2), nb_go(-10, 30, -10, 8, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.10f);
+        W(ft_hl(2), nb_go(-10, 30, -10, 10, 20), lb_no(), at_lt(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);
 
         // Vertical Line Block
-        W(ft_vl(4), nb_go(-12, 30, -12, 6, 20), lb_no(), at_hm(9.0f), xt_no(), xb_go(45, 0, 10), 0.25f);        
+        W(ft_vl(4), nb_go(-12, 30, -12, 6, 20), lb_no(), at_hm(13.0f), xt_no(), xb_go(45, 0, 10), 0.25f);        
 
         //----------------------------------------------------------------------------------------------
 
@@ -259,29 +259,29 @@ public class L2_Enemy_Spawner : MonoBehaviour {
 
         W(ft_hl(7), nb_go(0, -29, 0, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(7), nb_go( 0,  -31,   0, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(5), nb_go( 0,  -31,   0, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(3), nb_go(-12, -33, -12, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(3), nb_go( 12, -33,  12, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(5), nb_go(  0, -33,   0, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(3), nb_go(-12, -33, -12, 10, 2.0f), lb_no(), at_ld(15.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(3), nb_go( 12, -33,  12, 10, 2.0f), lb_no(), at_ld(15.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(3), nb_go(  0, -33,   0, 10, 2.0f), lb_no(), at_no(), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(4), nb_go(-12, -35, -12, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(4), nb_go( 10, -35,  10, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(4), nb_go(-12, -35, -12, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(4), nb_go( 10, -35,  10, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(6), nb_go(-10, -37, -10, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(6), nb_go(  8, -37,   8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(6), nb_go(-10, -37, -10, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(6), nb_go(  8, -37,   8, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(6), nb_go(-10, -39, -10, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(6), nb_go(  8, -39,   8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(6), nb_go(-10, -39, -10, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(6), nb_go(  8, -39,   8, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(7), nb_go(-8, -41, -8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(7), nb_go( 8, -41,  8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go(-8, -41, -8, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go( 8, -41,  8, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(7), nb_go(-8, -43, -8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(7), nb_go( 8, -43,  8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go(-8, -43, -8, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go( 8, -43,  8, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
 
-        W(ft_hl(7), nb_go(-8, -45, -8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);
-        W(ft_hl(7), nb_go( 8, -45,  8, 10, 2.0f), lb_no(), at_ld(10.0f), xt_im(), xb_go(0, 1, 20), 0);        
+        W(ft_hl(7), nb_go(-8, -45, -8, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);
+        W(ft_hl(7), nb_go( 8, -45,  8, 10, 2.0f), lb_no(), at_ld(13.0f), xt_im(), xb_go(0, 1, 20), 0);        
 
         // SUPER HACK ALERT -- this is done to block the elite coming in until all of the ships from the final blockade are destroyed
         W(ft_hl(1), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), -0.1f);
@@ -454,7 +454,7 @@ public class L2_Enemy_Spawner : MonoBehaviour {
             break;
 
         case EliteBehavior.FollowWave: // Wave 9
-            W(ft_ep(), nb_go(0, -15, 0, 10, 3.0f), lb_lz(-13, 10, 13, 10, 3.0f, 5.0f), at_lt(3.25f), xt_tm(52f), xb_go(-1, -1, 20), 2.5f);
+            W(ft_ep(), nb_go(0, -15, 0, 10, 3.0f), lb_lz(-13, 10, 13, 10, 3.0f, 5.0f), at_lt(3.00f), xt_tm(48f), xb_go(-1, -1, 20), 2.5f);
             break;    
 			
 		}

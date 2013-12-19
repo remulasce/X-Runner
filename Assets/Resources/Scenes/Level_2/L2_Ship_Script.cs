@@ -467,7 +467,7 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
                 }
             }
 
-            if (!this.isShielded || col.gameObject.name.Contains("Elite"))
+            if (!this.isShielded || col.gameObject.name.Contains("Elite") && !isDead)
             {
                 explosion.transform.position = this.transform.position;
                 explosion.Explode();
@@ -518,32 +518,35 @@ public class L2_Ship_Script : MonoBehaviour, IPlayer
         
         if (col.gameObject.CompareTag("Enemy_Shield"))
         {
-            explosion.transform.position = this.transform.position;
-            explosion.Explode();
-            isDead = true;
-            this.transform.position = new Vector3(0, 0, 1000);
-            hitsOnElite.Add(true);
-            StartCoroutine("Respawn");            
-            
-            //if (!this.isShielded || col.gameObject.name.Contains("Elite"))
-            //{
-            //    explosion.transform.position = this.transform.position;
-            //    explosion.Explode();
-            //    isDead = true;
-            //    this.transform.position = new Vector3(0, 0, 1000);
-            //    StartCoroutine("Respawn");
-            //}			
-            
-            //if (!col.gameObject.name.Contains("Elite"))
-            //{
-            //    if (col.gameObject.GetComponent<L2_Enemy_Script>())
-            //    {
-            //        col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
-            //        col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
-            //        col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
-            //        Destroy(col.gameObject);
-            //    }
-            //} 			
+            if (!isDead)
+            {
+                explosion.transform.position = this.transform.position;
+                explosion.Explode();
+                isDead = true;
+                this.transform.position = new Vector3(0, 0, 1000);
+                hitsOnElite.Add(true);
+                StartCoroutine("Respawn");
+
+                //if (!this.isShielded || col.gameObject.name.Contains("Elite"))
+                //{
+                //    explosion.transform.position = this.transform.position;
+                //    explosion.Explode();
+                //    isDead = true;
+                //    this.transform.position = new Vector3(0, 0, 1000);
+                //    StartCoroutine("Respawn");
+                //}			
+
+                //if (!col.gameObject.name.Contains("Elite"))
+                //{
+                //    if (col.gameObject.GetComponent<L2_Enemy_Script>())
+                //    {
+                //        col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.parent = null;
+                //        col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().transform.position = col.gameObject.transform.position;
+                //        col.gameObject.GetComponent<L2_Enemy_Script>().GetExplosion().Explode();
+                //        Destroy(col.gameObject);
+                //    }
+                //} 			
+            }
         }
     }
 

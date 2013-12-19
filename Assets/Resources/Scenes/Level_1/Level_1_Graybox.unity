@@ -3711,11 +3711,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.x
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.y
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.z
@@ -9234,7 +9234,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16, y: 16, z: 2.5}
+  m_Size: {x: 20, y: 20, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &198011909
 AudioSource:
@@ -18556,8 +18556,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16, y: 16, z: 2.5}
-  m_Center: {x: 2.70000005, y: -2.51999998, z: -3.72000003}
+  m_Size: {x: 20, y: 20, z: 2.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &392144371
 Transform:
   m_ObjectHideFlags: 0
@@ -18565,7 +18565,7 @@ Transform:
   m_PrefabInternal: {fileID: 548787047}
   m_GameObject: {fileID: 392144365}
   m_LocalRotation: {x: -.5, y: -.5, z: -.5, w: .5}
-  m_LocalPosition: {x: 229.604614, y: 10.8627987, z: 14.8127518}
+  m_LocalPosition: {x: 229.604614, y: 10.8627987, z: 17.7081509}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2057784735}
@@ -22558,7 +22558,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.22087288
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22566,7 +22566,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.76023054
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 04540b14b2bf0084fa544169bfc4a7ea, type: 3}
       propertyPath: m_LocalRotation.x
@@ -24309,7 +24309,7 @@ MonoBehaviour:
     isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
-      percentToCloseOffset: .949999988
+      percentToCloseOffset: .959999979
       closingMagnitude: 0
   - target: {fileID: 1527582321}
     targetOffset: {x: 5, y: 0, z: 0}
@@ -24321,7 +24321,7 @@ MonoBehaviour:
     isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: 50, y: -100, z: 0}
-      percentToCloseOffset: .949999988
+      percentToCloseOffset: .959999979
       closingMagnitude: 0
   - target: {fileID: 392144365}
     targetOffset: {x: 5, y: 0, z: 0}
@@ -24333,7 +24333,7 @@ MonoBehaviour:
     isDetonator: 1
     homingMissileProperties:
       initialHomingOffset: {x: -50, y: -100, z: 0}
-      percentToCloseOffset: .949999988
+      percentToCloseOffset: .959999979
       closingMagnitude: 0
   activated: 0
 --- !u!65 &503485065
@@ -26291,7 +26291,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 14.8127518
+      value: 17.7081509
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -26335,11 +26335,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.x
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.y
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.z
@@ -26375,15 +26375,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Center.x
-      value: 2.70000005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Center.z
-      value: -3.72000003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Center.y
-      value: -2.51999998
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
@@ -36043,11 +36043,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.x
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.y
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 01693957fc2248f498da5e8200887d4a, type: 2}
       propertyPath: m_Size.z
@@ -57401,23 +57401,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].homingMissileProperties.closingMagnitude
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[1].homingMissileProperties.closingMagnitude
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].homingMissileProperties.closingMagnitude
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[3].homingMissileProperties.closingMagnitude
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[4].homingMissileProperties.closingMagnitude
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].homingMissileProperties.percentToCloseOffset
@@ -76353,7 +76353,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16, y: 16, z: 2.5}
+  m_Size: {x: 20, y: 20, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1527582327
 Transform:
@@ -88229,7 +88229,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[0].homingMissileProperties.percentToCloseOffset
-      value: .949999988
+      value: .959999979
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[1].homingMissileProperties.initialHomingOffset.y
@@ -88237,11 +88237,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[1].homingMissileProperties.percentToCloseOffset
-      value: .949999988
+      value: .959999979
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].homingMissileProperties.percentToCloseOffset
-      value: .949999988
+      value: .959999979
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cc274b43591a6014289dcf86782a8e4d, type: 2}
       propertyPath: targets.Array.data[2].homingMissileProperties.initialHomingOffset.y
@@ -92508,7 +92508,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 32
+      closingMagnitude: 30
   - target: {fileID: 137554353}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 200
@@ -92519,7 +92519,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: -100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 32
+      closingMagnitude: 30
   - target: {fileID: 137554353}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 200
@@ -92530,7 +92530,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 32
+      closingMagnitude: 30
   - target: {fileID: 137554353}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 200
@@ -92541,7 +92541,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: -100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 32
+      closingMagnitude: 30
   - target: {fileID: 137554353}
     targetOffset: {x: 0, y: 0, z: 0}
     laserSpeed: 200
@@ -92552,7 +92552,7 @@ MonoBehaviour:
     homingMissileProperties:
       initialHomingOffset: {x: 0, y: 100, z: 0}
       percentToCloseOffset: .925000012
-      closingMagnitude: 32
+      closingMagnitude: 30
   activated: 0
 --- !u!65 &1847976527
 BoxCollider:
@@ -103932,7 +103932,7 @@ Transform:
   m_PrefabInternal: {fileID: 449769796}
   m_GameObject: {fileID: 2057784734}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 2.22087288, y: 0, z: -4.76023054}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.20000005, y: 2.20000005, z: 2.20000005}
   m_Children:
   - {fileID: 287420214}
