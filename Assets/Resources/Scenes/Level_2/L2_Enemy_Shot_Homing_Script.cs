@@ -22,7 +22,7 @@ public class L2_Enemy_Shot_Homing_Script : L2_Enemy_Shot_Target_Script
 
     IEnumerator StartEngineLoop()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.15f);
         AudioSource[] audios = this.gameObject.GetComponents<AudioSource>();
         audios[1].Play();
     }

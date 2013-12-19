@@ -26,9 +26,9 @@ public class DetonatorSound : DetonatorComponent {
 	override public void Init()
 	{
 		_soundComponent = (AudioSource)gameObject.AddComponent ("AudioSource");
-        _soundComponent.rolloffMode = AudioRolloffMode.Linear;
+        _soundComponent.rolloffMode = AudioRolloffMode.Linear;        
         _soundComponent.volume = maxVolume;
-        _soundComponent.priority = this.priority; // Not too high, but more important sounds get played first
+        _soundComponent.priority = this.priority; // Not too high, but more important sounds get played first        
 	}
 
 	void Update()

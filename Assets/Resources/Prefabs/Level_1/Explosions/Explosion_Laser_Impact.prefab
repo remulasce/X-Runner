@@ -117,9 +117,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
   - {fileID: 8300000, guid: 1792989a5a33779428d2dbe9a9430605, type: 3}
   - {fileID: 8300000, guid: 395ebd3d6fca1ec40a6b3c7415c1edb7, type: 3}
-  distanceThreshold: 75
-  maxVolume: .75
-  rolloffFactor: .400000006
+  distanceThreshold: 10000
+  maxVolume: 1
+  rolloffFactor: 1
   priority: 128
 --- !u!1001 &100100000
 Prefab:

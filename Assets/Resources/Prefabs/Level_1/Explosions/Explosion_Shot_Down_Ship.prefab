@@ -389,10 +389,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ba8ca7de2e2ec764b9f5bc200a277bdd, type: 3}
   - {fileID: 8300000, guid: 6d16a3b6a2f66dd4b9b1e033b8da4ae3, type: 3}
   - {fileID: 8300000, guid: a5e99fc30ac341449ac05c4631b51f98, type: 3}
-  distanceThreshold: 100
-  minVolume: .899999976
+  distanceThreshold: 500
   maxVolume: 1
   rolloffFactor: .349999994
+  priority: 128
 --- !u!1002 &11400017
 EditorExtensionImpl:
   serializedVersion: 6

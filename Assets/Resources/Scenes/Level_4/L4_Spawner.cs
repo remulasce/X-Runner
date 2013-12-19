@@ -168,7 +168,7 @@ public class L4_Spawner : MonoBehaviour {
         W(ft_missileRun());
 		
 		//TIE Bomber introduction        
-        W(ft_gd(39, 1), nb_go(19.5f, 13, 20f, 10, 20), lb_no(), at_ld(2.5f), xt_tm(0.0f), xb_go(-1, 0f, 17.5f), 0.5f);        
+        W(ft_gd(39, 1), nb_go(23f, 13, 20f, 10, 20), lb_no(), at_ld(2.5f), xt_tm(0.0f), xb_go(-1, 0f, 17.5f), 0.5f);        
         W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), 3.44f);
 		W(ft_hl(18), nb_go(0, 15, 0, 12, 20), lb_no(), at_ld(2.25f), xt_tm(1.2f), xb_go(-1, 1, 27.5f), 1.0f);
         W(ft_hl(0), nb_go(0, 2600, 0, 6), lb_no(), at_hm(15.0f), xt_no(), xb_no(), .63f);
