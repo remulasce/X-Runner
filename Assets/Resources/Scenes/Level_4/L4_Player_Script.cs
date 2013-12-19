@@ -486,5 +486,11 @@ public class L4_Player_Script : MonoBehaviour, IPlayer {
         //print("NOT Shielded...");
         isShielded = false;
     }
+
+    public void TurnOnShield() // Turn on the shield for capital ship looks
+    {
+        isShielded = true;
+        StartCoroutine("ResetShield");
+    }
 }
 

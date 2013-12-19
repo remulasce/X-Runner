@@ -14,13 +14,17 @@ public class L4_Camera : MonoBehaviour {
 	float transitionInTime = .75f;
 	float ponderTime = 4f;
 	float transitionOutTime = .5f;
+
+    public L4_Player_Script player = null;
 	
 	public float statestarttime = 0;
+
+    private bool isShieldUp = false;
 	
 	// Use this for initialization
 	void Start () {
 		finalRot = Quaternion.AngleAxis(90,new Vector3(0,1,0));
-		//Quaternion.LookRotation(
+        starCylinder.started = true;		
 	}
 	
 	// Update is called once per frame
@@ -29,14 +33,17 @@ public class L4_Camera : MonoBehaviour {
 		switch (lookatState)
 		{
 		// 
-		case 0:
-			starCylinder.started = true;
+		case 0:			
 			this.transform.rotation = Quaternion.identity;
 			break;
 		case 1:
-			starCylinder.started = false;
+            if (!isShieldUp)
+            {
+                player.TurnOnShield(); // Will turn on shield for regular time
+                isShieldUp = true;
+            }
 			this.transform.rotation = Quaternion.Lerp(Quaternion.identity, finalRot, (Time.time-statestarttime)/transitionInTime);
-			if (Time.time > statestarttime + transitionInTime) { lookatState = 2; statestarttime = Time.time; }
+            if (Time.time > statestarttime + transitionInTime) { lookatState = 2; statestarttime = Time.time; isShieldUp = false; }
 			break;
 		case 2:
 			if (Time.time > statestarttime + ponderTime) { lookatState = 3; statestarttime = Time.time; }
