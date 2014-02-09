@@ -1,6 +1,10 @@
 X-Runner
 ========
 
+Trailer:
+https://www.youtube.com/watch?v=7eiUrN4GJ14
+
+
 X-Runner is a platformer-topdown shooter hybrid
 It was made for Intermediate Games class at USC
 
